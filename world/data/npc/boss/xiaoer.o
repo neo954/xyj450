@@ -1,9 +1,9 @@
 #/d/city/npc/xiaoer.c
-dbase (["gin":340,"combat_exp":1000,"attitude":"friendly","shen_type":1,"max_sen":340,"kee":352,"id":"xiao er","default_actions":,"unit":"Î»","vendor_goods":(["jiudai":"/d/moon/obj/jiudai","huasheng":"/d/ourhome/obj/huasheng","gourou":"/d/ourhome/obj/gourou","zhinan":"/d/obj/misc/xiaqi-zhinan","jitui":"/d/ourhome/obj/jitui",]),"age":26,"shop_title":"µêĞ¡¶ş","max_kee":352,"startroom":"/d/city/kezhan","eff_kee":352,"limbs":({"Í·²¿","¾±²¿","ĞØ¿Ú","ºóĞÄ","×ó¼ç","ÓÒ¼ç","×ó±Û","ÓÒ±Û","×óÊÖ","ÓÒÊÖ","Ñü¼ä","Ğ¡¸¹","×óÍÈ","ÓÒÍÈ","×ó½Å","ÓÒ½Å",}),"shop_id":({"waiter","xiaoer","xiao","er",}),"race":"ÈËÀà","per":14,"spi":20,"can_speak":1,"actions":,"con":21,"cor":18,"int":25,"cps":25,"str":20,"eff_sen":340,"kar":25,"gender":"ÄĞĞÔ","eff_gin":340,"name":"µêĞ¡¶ş","max_gin":340,"sen":340,])
+dbase (["eff_gin":460,"vendor_goods":(["huasheng":"/d/ourhome/obj/huasheng","jiudai":"/d/moon/obj/jiudai","jitui":"/d/ourhome/obj/jitui","gourou":"/d/ourhome/obj/gourou","zhinan":"/d/obj/misc/xiaqi-zhinan",]),"per":14,"int":24,"shop_id":({"waiter","xiaoer","xiao","er",}),"can_speak":1,"race":"äººç±»","eff_sen":460,"max_kee":352,"name":"åº—å°äºŒ","spi":30,"limbs":({"å¤´éƒ¨","é¢ˆéƒ¨","èƒ¸å£","åå¿ƒ","å·¦è‚©","å³è‚©","å·¦è‡‚","å³è‡‚","å·¦æ‰‹","å³æ‰‹","è…°é—´","å°è…¹","å·¦è…¿","å³è…¿","å·¦è„š","å³è„š",}),"shop_title":"åº—å°äºŒ","actions":,"kee":352,"id":"xiao er","default_actions":,"str":22,"max_gin":460,"cps":14,"gender":"ç”·æ€§","gin":460,"kar":13,"combat_exp":1000,"cor":27,"attitude":"friendly","startroom":"/d/city/kezhan","max_sen":460,"shen_type":1,"eff_kee":352,"con":21,"sen":460,"age":26,"unit":"ä½",])
 skills (["unarmed":10,])
 learned (["unarmed":0,])
 autoload ({"/obj/money/silver:1",})
 SAVE_NAME "xiaoer"
 price_ratio 10
 minimum_bid 1000
-close_time 908172466
+close_time 1602847223

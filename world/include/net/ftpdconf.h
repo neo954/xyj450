@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /* ftpdconf.h: ftpd configuration */
 /* modified by none on 96/10/14 */
 
@@ -23,7 +23,7 @@
    system the user should type: ftp tmi.lp.mud.org 5554
    (depending on the hostname of the MUD and the port # set below).
 */
-#define FTPD_PORT 6906 
+#define FTPD_PORT 6906
 
 /* time in seconds that an ftp connection should be idle before it times out;
  * this is used as the default for all connections--see MAX_FTPD_IDLE
@@ -35,7 +35,7 @@
  * FTPD_TIMEOUT and may manually adjust it up to the limit of MAX_FTPD_IDLE
  */
 #define MAX_FTPD_IDLE 7200
- 
+
 /* HOME_DIR: given a username give the home directory path */
 /*#define HOME_DIR(name)  user_cwd(name) on TMI-2 */
 #define HOME_DIR(name)  user_path(name) /* added by none */
@@ -49,7 +49,7 @@
 #define THE_MUD_NAME    "西游记"
 
 /* Maximum number of simultaneous ftp users. */
-#define FTPD_MAX_USERS 4 
+#define FTPD_MAX_USERS 4
 
 /* the version # of the driver (__VERSION__ on MudOS muds) */
 #define THE_VERSION __VERSION__
@@ -92,9 +92,9 @@
  * and are manually generated, so don't change them)
  */
 /*#define VALID_READ       0              // rely on valid_read()*/
-#define VALID_READ      1
-#define RESTRICTED_READ  1              // ditto, but limited to public dirs
-#define WRITE_LIMIT_READ 2              // access limited by write access
+// #define VALID_READ      1
+// #define RESTRICTED_READ  1              // ditto, but limited to public dirs
+// #define WRITE_LIMIT_READ 2              // access limited by write access
 /*#endif*/
 
 /* define as (ie set to) one of the flags above */

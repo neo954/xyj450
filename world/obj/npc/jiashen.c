@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // jia-shen.c 假身
 #include <ansi.h>
 
@@ -74,12 +74,12 @@ void copy_status(object me,object ob)
 
    inv = all_inventory(ob);
         for(i=0; i<sizeof(inv); i++) {
-                if( inv[i]->query("weapon_prop") 
+                if( inv[i]->query("weapon_prop")
                 &&  inv[i]->query("equipped") ) {
                         carry_object(base_name(inv[i]))->wield();
                         me->set("weapon", base_name(inv[i]));
                 }
-                else if( inv[i]->query("armor_prop") 
+                else if( inv[i]->query("armor_prop")
                 &&  inv[i]->query("equipped") ) {
                         carry_object(base_name(inv[i]))->wear();
                         me->set("armor", base_name(inv[i]));
@@ -129,11 +129,13 @@ void die()
 int heal_up()
 {
    object me=this_object();
-   object who=present(me->query("leader"),environment(me) );
-        if( environment() && (!is_fighting() || !objectp(who) || !who->is_fighting() )  ) {
-                call_out("die", 1);
-                return 1;
-        }
+   object who;
+
+   if (environment() && (!is_fighting() || !objectp(who = present(me->query("leader"), environment(me))) || !who->is_fighting()))
+   {
+           call_out("die", 1);
+           return 1;
+   }
    if( (int)me->query("time") > 10 ) {
      call_out("die",1);
      return 1;
@@ -164,4 +166,3 @@ void invocation(object who)
    set("leader", (string)who->query("id"));
         set_leader(who);
 }
-
