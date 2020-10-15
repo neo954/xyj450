@@ -4,14 +4,14 @@ inherit NPC;
 
 void create()
 {
-	set_name("¿àÁ¦", ({ "worker" }) );
-	set("gender", "ÄĞĞÔ" );
-	set("long", "Ò»¸ö¿àÁ¦´ò°çµÄºº×ÓÔÚÕâÀïµÈÈËÀ´¹ÍÓÃ(employment)¡£\n");
+	set_name("è‹¦åŠ›", ({ "worker" }) );
+	set("gender", "ç”·æ€§" );
+	set("long", "ä¸€ä¸ªè‹¦åŠ›æ‰“æ‰®çš„æ±‰å­åœ¨è¿™é‡Œç­‰äººæ¥é›‡ç”¨(employment)ã€‚\n");
 	set("attitude", "friendly");
 	set("inquiry", ([
-		"employment": "Ğ¡ÈËµÄ¹¤×ÊÒ»ÌìÖ»ÒªÒ»°ÙÎÄÇ®£¬´óÈËÖ»¹Ü·Ô¸À¡£",
-		"name": "Ğ¡ÈËµÄÃû×ÖÄÑÌıµÃ½ô£¬²»¸ÒÀÍ´óÈË¹ıÎÊ¡£",
-		"home": "Ğ¡ÈËÊÇÇÇÒõÏØÑ©Í¤ÕòÈËÊÏ¡£",
+		"employment": "å°äººçš„å·¥èµ„ä¸€å¤©åªè¦ä¸€ç™¾æ–‡é’±ï¼Œå¤§äººåªç®¡å©å’ã€‚",
+		"name": "å°äººçš„åå­—éš¾å¬å¾—ç´§ï¼Œä¸æ•¢åŠ³å¤§äººè¿‡é—®ã€‚",
+		"home": "å°äººæ˜¯ä¹”é˜´å¿é›ªäº­é•‡äººæ°ã€‚",
 	]) );
 	set("age", 27);
 	set("str", 27);
@@ -25,11 +25,11 @@ int accept_order(object me, string verb)
 	if( (string)me->query("id") == (string)query("boss_id") ) {
 		switch(verb) {
 			case "kill":
-				command("say Ğ¡ÈË¼ÒÓĞÀÏÄ¸ÆŞĞ¡£¬Õâ¸ö .... Õâ¸ö ....");
+				command("say å°äººå®¶æœ‰è€æ¯å¦»å°ï¼Œè¿™ä¸ª .... è¿™ä¸ª ....");
 				return 0;
 			case "fight":
-				command("say Ğ¡ÈË²»»áÎä¹¦\£¬" + RANK_D->query_respect(me)
-					+ "ÄúËµĞ¦ÁË¡£\n");
+				command("say å°äººä¸ä¼šæ­¦åŠŸ\ï¼Œ" + RANK_D->query_respect(me)
+					+ "æ‚¨è¯´ç¬‘äº†ã€‚\n");
 				return 0;
 			default:
 				return 1;
@@ -46,24 +46,24 @@ int accept_info(object me, string command)
 int accept_object(object me, object obj)
 {
 	if( query("boss_id") ) {
-		command("say ¶Ô²»Æğ£¬Ğ¡µÄÒÑ¾­ÓĞÈË¹ÍÁË¡£");
+		command("say å¯¹ä¸èµ·ï¼Œå°çš„å·²ç»æœ‰äººé›‡äº†ã€‚");
 		return 0;
 	}
 
 	if( (int)obj->value() < 100 ) {
-		command("say Ò»°ÙÎÄÇ®Ò»Ìì£¬Ò»¸ö×Ó¶ùÒ²²»ÄÜÉÙ¡£");
+		command("say ä¸€ç™¾æ–‡é’±ä¸€å¤©ï¼Œä¸€ä¸ªå­å„¿ä¹Ÿä¸èƒ½å°‘ã€‚");
 		return 0;
 	}
 	set("boss_id", me->query("id"));
 	call_out("end_duty", (obj->value()/100) * 1440 );
-	command("say Ğ»Ğ»" + RANK_D->query_respect(me) +"£¡ÓĞÊ²Ã´ÊÂÖ»¹Ü·Ô¸À£¡\n");
+	command("say è°¢è°¢" + RANK_D->query_respect(me) +"ï¼æœ‰ä»€ä¹ˆäº‹åªç®¡å©å’ï¼\n");
 	command("follow " + me->query("id"));
 	return 1;
 }
 
 void end_duty()
 {
-	command("tell " + query("boss_id") + " Ğ¡µÄÏÂ¹¤Ê±¼äµ½ÁË¡£");
+	command("tell " + query("boss_id") + " å°çš„ä¸‹å·¥æ—¶é—´åˆ°äº†ã€‚");
 	command("bow");
 	delete("boss_id");
 }

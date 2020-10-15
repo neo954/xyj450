@@ -1,12 +1,12 @@
 inherit COMBINED_ITEM;
 void create()
 {
-	set_name("°ë¸ÉµÄÑªµÎ", ({ "blood", "dry blood" }) );
+	set_name("åŠå¹²çš„è¡€æ»´", ({ "blood", "dry blood" }) );
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ì²");
-		set("base_unit", "µÎ");
+		set("unit", "æ»©");
+		set("base_unit", "æ»´");
 		set("base_weight", 1);
 		set("base_value", 1);
 	}

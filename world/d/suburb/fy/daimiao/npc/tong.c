@@ -6,10 +6,10 @@ inherit F_MASTER;
 inherit F_QUEST;
 void create()
 {
-        set_name("Í­»¤ÎÀ", ({ "tong wei", "master tong", "master", "tong"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("é“œæŠ¤å«", ({ "tong wei", "master tong", "master", "tong"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 32);
-        set("long", "ÕâÊÇÎ÷·½Éñ½ÌÎå´ó»¤ÎÀÖ®Ò»¡£\n");
+        set("long", "è¿™æ˜¯è¥¿æ–¹ç¥æ•™äº”å¤§æŠ¤å«ä¹‹ä¸€ã€‚\n");
         set("combat_exp", 30000);
         set("attitude", "friendly");
         set_skill("unarmed", 70);
@@ -26,11 +26,11 @@ void create()
         set("force",100);
         set("force_factor",10);
         set("max_force",100);
-	create_family("Î÷·½Éñ½Ì", 7, "½ÌÖÚ");
+	create_family("è¥¿æ–¹ç¥æ•™", 7, "æ•™ä¼—");
         set("chat_chance", 1);
         set("chat_msg", ({
-                "Í­»¤ÎÀÏòÄãºÈµÀ£ºÄãµÄÃû×Ö£¿£¿\n",
-                "Í­»¤ÎÀÏòÄãºÈµÀ£ºÄãÕâ¸ö¼éÏ¸£¡\n",
+                "é“œæŠ¤å«å‘ä½ å–é“ï¼šä½ çš„åå­—ï¼Ÿï¼Ÿ\n",
+                "é“œæŠ¤å«å‘ä½ å–é“ï¼šä½ è¿™ä¸ªå¥¸ç»†ï¼\n",
         }) );
 	
 	setup();
@@ -50,8 +50,8 @@ int do_gogo(string arg)
         if( arg == "north" )
         {
                 if( me->query("class") != "bandit") {
-        command("say ·ÇÎ÷·½Éñ½Ì½ÌÖÚ²»¿ÉÈëÄÚ¡£");
-        write("Õâ¸ö·½ÏòµÄÂ·±»µ²×¡ÁË ¡£\n");
+        command("say éè¥¿æ–¹ç¥æ•™æ•™ä¼—ä¸å¯å…¥å†…ã€‚");
+        write("è¿™ä¸ªæ–¹å‘çš„è·¯è¢«æŒ¡ä½äº† ã€‚\n");
         return 1;
                 }
                 else

@@ -4,12 +4,12 @@ inherit NPC;
 #include <ansi.h>
 void create()
 {
-	set_name("ÒÒ³ÉÏÉ", ({ "xian" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("ä¹™æˆä»™", ({ "xian" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 45);
-	set("title",HIY  "ÉúËÀÒÑ²·" NOR);
+	set("title",HIY  "ç”Ÿæ­»å·²åœ" NOR);
 	set("long",
-		"ÕâÎ»£¢ÉúËÀÒÑ²·£¢µÄÒÒ³ÉÏÉÕıÂúÑÛ¹îÃÜµÄÍü×ÅÄã\n");
+		"è¿™ä½ï¼‚ç”Ÿæ­»å·²åœï¼‚çš„ä¹™æˆä»™æ­£æ»¡çœ¼è¯¡å¯†çš„å¿˜ç€ä½ \n");
 	set("combat_exp", 500000);
 	set("attitude", "friendly");
 	set("per",30);
@@ -38,13 +38,13 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(3) ) {
 		case 0:
-message_vision("$NÏò$nËµµÀ£ºÄãÓ¡ÌÃ·¢ºÚ£¬É²ÆøÍ¸ÌìÍ¥£¬ÈıÌì£¡ÈıÌìÖ®ÄÚÒ»¶¨ºáÊ¬½ÖÍ·¡£\n",this_object(),ob);
+message_vision("$Nå‘$nè¯´é“ï¼šä½ å°å ‚å‘é»‘ï¼Œåˆ¹æ°”é€å¤©åº­ï¼Œä¸‰å¤©ï¼ä¸‰å¤©ä¹‹å†…ä¸€å®šæ¨ªå°¸è¡—å¤´ã€‚\n",this_object(),ob);
 			break;
 		case 1:
-message_vision("$N¶Ô$nÒõĞ¦Ò»Éù£ºÄã»¹ÊÇÈ¥¶©¿Ú¹×²Ä°É£¡\n",this_object(),ob);
+message_vision("$Nå¯¹$né˜´ç¬‘ä¸€å£°ï¼šä½ è¿˜æ˜¯å»è®¢å£æ£ºæå§ï¼\n",this_object(),ob);
 			break;
 		case 2:
-message_vision("$NÍûÁË$nÒ»ÑÛ£¬Ò»¼Ò´óĞ¡ÀÏÉÙ¶¼ÍæÁË£®£®£®£®\n",this_object(),ob);
+message_vision("$Næœ›äº†$nä¸€çœ¼ï¼Œä¸€å®¶å¤§å°è€å°‘éƒ½ç©äº†ï¼ï¼ï¼ï¼\n",this_object(),ob);
 			break;
 	}
 }

@@ -4,13 +4,13 @@ inherit EQUIP;
 
 void create()
 {
-	set_name("°ËØÔµÀÅÛ", ({ "robe" }) );
+	set_name("å…«å¦é“è¢", ({ "robe" }) );
 	set_weight(3000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¼ş");
-                set("long", "Ò»¼şĞØÇ°ĞåÓĞ°ËØÔµÄ»ÆÉ«µÀÅÛ¡£\n");
+		set("unit", "ä»¶");
+                set("long", "ä¸€ä»¶èƒ¸å‰ç»£æœ‰å…«å¦çš„é»„è‰²é“è¢ã€‚\n");
 		set("value", 8000);
 		set("material", "cloth");
 		set("armor_type", "cloth");

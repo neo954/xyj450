@@ -6,11 +6,11 @@ void create()
 {
 	object ob;
 
-	set_name("·èÀÏÍ·×Ó", ({ "mad bad ugly dirty oldman", "man", "oldman" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("ç–¯è€å¤´å­", ({ "mad bad ugly dirty oldman", "man", "oldman" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 67);
 	set("long",
-		"Õâ¸öÀÏÍ·×ÓÕı¶ÔÖøÄãö·ÑÀÁÑ×ì£¬Ëû¿´ÆğÀ´ÒÑ¾­ÍêÈ«·èÁË¡£\n");
+		"è¿™ä¸ªè€å¤´å­æ­£å¯¹è‘—ä½ é¾‡ç‰™è£‚å˜´ï¼Œä»–çœ‹èµ·æ¥å·²ç»å®Œå…¨ç–¯äº†ã€‚\n");
 
 	set("str", 30);
 	set("cor", 30);

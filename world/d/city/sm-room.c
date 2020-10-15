@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //self-made fabao room
@@ -47,28 +47,28 @@ void init()
 
 void create ()
 {
-        set ("short", "·¨±¦Á¶ÖÆ³¡");
+        set ("short", "æ³•å®ç‚¼åˆ¶åœº");
         set ("long", @LONG
-ÕâÀïÊÇ³¤°²³ÇÀïµÚÒ»¼ä·¨±¦Á¶ÖÆ³¡£¬Ä¿Ç°Ö»ÓĞ±¾¼Ò£¬ÉĞÎŞ·Ö
-µê£¬ÓÉÓÚÊÇ¶ÀÕ¼ÊÂÒµ£¬ËùÒÔÊÕ·ÑÆÄ¸ß£¬Ç½±ßÓĞ¸ö¹«¸æ( post )£¬
-À´¸æËßÄãÁ¶ÖÆ·¨±¦µÄÒ»Ğ©ÊÂÒË¡£
+è¿™é‡Œæ˜¯é•¿å®‰åŸé‡Œç¬¬ä¸€é—´æ³•å®ç‚¼åˆ¶åœºï¼Œç›®å‰åªæœ‰æœ¬å®¶ï¼Œå°šæ— åˆ†
+åº—ï¼Œç”±äºæ˜¯ç‹¬å äº‹ä¸šï¼Œæ‰€ä»¥æ”¶è´¹é¢‡é«˜ï¼Œå¢™è¾¹æœ‰ä¸ªå…¬å‘Š( post )ï¼Œ
+æ¥å‘Šè¯‰ä½ ç‚¼åˆ¶æ³•å®çš„ä¸€äº›äº‹å®œã€‚
 LONG);
 
         set("item_desc", ([ "post" : 
-             "make_fabao     Á¶ÖÆ·¨±¦\n" +
-             "dispose        ×¢Ïû·¨±¦\n" +
-             "list           ÁĞ¾Ù¿ÉÖÆ·¨±¦ÖÖÀà\n" +
-             "upgrade        ·¨±¦Éı¼¶\n" +
-             "cost ·¨±¦      ·¨±¦Á¶ÖÆ¼°Éı¼¶ÊÕ·Ñ±ê×¼\n" +
-             "change_name    ¸ø·¨±¦¸ÄÖĞÎÄÃû\n" +
-             "change_id      ¸ø·¨±¦¸ÄÓ¢ÎÄÃû\n" +
-             "change_desc    ¸ø·¨±¦¸ÄÃèÊö\n" +
-             "change_unit    ¸ø·¨±¦¸Äµ¥Î»Ãû³Æ\n\n" +
-             HIY+"Éı¼¶ÔİĞĞ°ì·¨£º\n"+NOR+
-             "    Ã¿Îå´Î upgrade ¼ÓÒ»¸öĞÇ£¬×î¸ßÎªÎåĞÇ£¬\n"+
-             "    ÊÕ·ÑÒÔ¼ÓÒ»ĞÇÎª¼ÆËã±ê×¼¡£±ÈÈçÉıÁ½ĞÇÒª\n" + 
-             "    100 ÄêµÀĞĞ£¬ÉıÈıĞÇÒª 500Äê£¬ÄÇÃ´ÉıÁ½\n" +
-             "    ĞÇºó£¬Ã¿´Î upgrade ¾ÍĞèÒª 80 ÄêµÀĞĞ¡£\n", ]));
+             "make_fabao     ç‚¼åˆ¶æ³•å®\n" +
+             "dispose        æ³¨æ¶ˆæ³•å®\n" +
+             "list           åˆ—ä¸¾å¯åˆ¶æ³•å®ç§ç±»\n" +
+             "upgrade        æ³•å®å‡çº§\n" +
+             "cost æ³•å®      æ³•å®ç‚¼åˆ¶åŠå‡çº§æ”¶è´¹æ ‡å‡†\n" +
+             "change_name    ç»™æ³•å®æ”¹ä¸­æ–‡å\n" +
+             "change_id      ç»™æ³•å®æ”¹è‹±æ–‡å\n" +
+             "change_desc    ç»™æ³•å®æ”¹æè¿°\n" +
+             "change_unit    ç»™æ³•å®æ”¹å•ä½åç§°\n\n" +
+             HIY+"å‡çº§æš‚è¡ŒåŠæ³•ï¼š\n"+NOR+
+             "    æ¯äº”æ¬¡ upgrade åŠ ä¸€ä¸ªæ˜Ÿï¼Œæœ€é«˜ä¸ºäº”æ˜Ÿï¼Œ\n"+
+             "    æ”¶è´¹ä»¥åŠ ä¸€æ˜Ÿä¸ºè®¡ç®—æ ‡å‡†ã€‚æ¯”å¦‚å‡ä¸¤æ˜Ÿè¦\n" + 
+             "    100 å¹´é“è¡Œï¼Œå‡ä¸‰æ˜Ÿè¦ 500å¹´ï¼Œé‚£ä¹ˆå‡ä¸¤\n" +
+             "    æ˜Ÿåï¼Œæ¯æ¬¡ upgrade å°±éœ€è¦ 80 å¹´é“è¡Œã€‚\n", ]));
 
         set("exits", 
         ([ //sizeof() == 1 
@@ -88,26 +88,26 @@ int do_sm()
    int  fabao_num;
    
    if( me->query("balance") < 500000 )
-      return notify_fail("ÄãÒøĞĞ´æ¿î²»×ã¡£\n");
+      return notify_fail("ä½ é“¶è¡Œå­˜æ¬¾ä¸è¶³ã€‚\n");
       
    if( me->query("combat_exp") < 20000)
-     return notify_fail("ÄãµÄµÀĞĞ²»¹»£¬²»ÄÜ×ÔÔì·¨±¦¡£\n");
+     return notify_fail("ä½ çš„é“è¡Œä¸å¤Ÿï¼Œä¸èƒ½è‡ªé€ æ³•å®ã€‚\n");
    
    if( me->query("max_force") < 300 )
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬²»ÄÜ×ÔÔì·¨±¦¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼Œä¸èƒ½è‡ªé€ æ³•å®ã€‚\n");
      
    if( me->query("max_mana") < 300)
-     return notify_fail("ÄãµÄ·¨Á¦²»¹»£¬²»ÄÜ×ÔÔì·¨±¦¡£\n");
+     return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿï¼Œä¸èƒ½è‡ªé€ æ³•å®ã€‚\n");
    
    if( me->query("force") < (me->query("max_force")+100) )
-     return notify_fail("ÄãµÄÕæÆø²»×ã£¬²»ÄÜ×ÔÔì·¨±¦¡£\n");
+     return notify_fail("ä½ çš„çœŸæ°”ä¸è¶³ï¼Œä¸èƒ½è‡ªé€ æ³•å®ã€‚\n");
    
    if( me->query("mana") < (me->query("max_mana")+100) )
-     return notify_fail("ÄãµÄÄ§Á¦²»×ã£¬²»ÄÜ×ÔÔì·¨±¦¡£\n");
+     return notify_fail("ä½ çš„é­”åŠ›ä¸è¶³ï¼Œä¸èƒ½è‡ªé€ æ³•å®ã€‚\n");
    
 //   if( me->query("kee") != me->query("max_kee") ||
 //       me->query("sen") != me->query("max_sen") ) 
-//     return notify_fail("ÄãµÄ¾«Æø²»×ã£¬²»ÄÜ×ÔÔì·¨±¦¡£\n");
+//     return notify_fail("ä½ çš„ç²¾æ°”ä¸è¶³ï¼Œä¸èƒ½è‡ªé€ æ³•å®ã€‚\n");
 
     fabao_num = 0;     
    if( me->query("fabao/weapon") )     fabao_num++;
@@ -115,19 +115,19 @@ int do_sm()
    if( me->query("fabao/armor2") )     fabao_num++;
    
    if( fabao_num >= MAX_FABAO )
-     return notify_fail("Äã²»ÄÜÔÙÁ¶ÖÆ·¨±¦ÁË£¬ÇëÓÃ dispose ×¢Ïû²»ÒªµÄ·¨±¦¡£\n");
+     return notify_fail("ä½ ä¸èƒ½å†ç‚¼åˆ¶æ³•å®äº†ï¼Œè¯·ç”¨ dispose æ³¨æ¶ˆä¸è¦çš„æ³•å®ã€‚\n");
      
-   write("ÄúÒªÔìÄÄÀà·¨±¦£º\n");
+   write("æ‚¨è¦é€ å“ªç±»æ³•å®ï¼š\n");
    if( !me->query("fabao/weapon") )
-     write("w. ÎäÆ÷\n");
+     write("w. æ­¦å™¨\n");
    if( !me->query("fabao/armor1") || !me->query("fabao/armor2") )
-     write("a. ·À¾ß\n");
-   write("o. ÆäËû(ÔİÈ±)\n");
+     write("a. é˜²å…·\n");
+   write("o. å…¶ä»–(æš‚ç¼º)\n");
 
    seteuid(getuid());
    // Other kinds of fabao can be added too.. if there is somefile
    // we can use as a default object.
-   write("ÇëÑ¡Ôñ£º(q ¼üÈ¡Ïû)");
+   write("è¯·é€‰æ‹©ï¼š(q é”®å–æ¶ˆ)");
    input_to( (: get_type :), me );
    
    return 1;   
@@ -141,13 +141,13 @@ void get_type(string arg, object ob)
    if( (arg != "w" || ob->query("fabao/weapon"))
      && (arg != "a" || ( ob->query("fabao/armor1")
      && ob->query("fabao/armor2") )) )   {
-     write("ÄúÒªÔìÄÄÀà·¨±¦£º\n");
+     write("æ‚¨è¦é€ å“ªç±»æ³•å®ï¼š\n");
      if( !ob->query("fabao/weapon") )
-        write("w. ÎäÆ÷\n");
+        write("w. æ­¦å™¨\n");
      if( !ob->query("fabao/armor1") || !ob->query("fabao/armor2") )
-        write("a. ·À¾ß\n");
-       write("o. ÆäËû(ÔİÈ±)\n");
-       write("ÇëÑ¡Ôñ£º(q ¼üÈ¡Ïû)");
+        write("a. é˜²å…·\n");
+       write("o. å…¶ä»–(æš‚ç¼º)\n");
+       write("è¯·é€‰æ‹©ï¼š(q é”®å–æ¶ˆ)");
      input_to( (: get_type :), ob );
      return;
    }
@@ -155,18 +155,18 @@ void get_type(string arg, object ob)
    if( arg == "w" )    {
      ob->set_temp("fabao_type", "weapon");
      write("\n");
-     write("¿ÉÑ¡ÔñÎäÆ÷ÖÖÀà£º\n");
-     write("1. ¸«  2. µ¶  3. ²æ  4. ´¸  5. ïµ  6. Ç¹\n");
-     write("7. ÕÈ  8. °ô  9. ½£  10. ±Ş\n");
-       write("ÇëÑ¡Ôñ£º(q ¼üÈ¡Ïû)");
+     write("å¯é€‰æ‹©æ­¦å™¨ç§ç±»ï¼š\n");
+     write("1. æ–§  2. åˆ€  3. å‰  4. é”¤  5. é”  6. æª\n");
+     write("7. æ–  8. æ£’  9. å‰‘  10. é­\n");
+       write("è¯·é€‰æ‹©ï¼š(q é”®å–æ¶ˆ)");
    }
    else if( arg == "a" )   {
      ob->set_temp("fabao_type", "armor");
      write("\n");
-     write("¿ÉÑ¡Ôñ·À¾ßÖÖÀà£º\n");
-     write("1. ¼×  2. Ğ¬  3. ÒÂ·ş  4. Ö¸Ì×  5. »¤ÕÆ  6. Í·ÕÖ\n");
-     write("7. ²±Ì×  8. ¶Ü  9. Åû·ç  10. »¤Íó  11. Ñü´ø\n");
-       write("ÇëÑ¡Ôñ£º(q ¼üÈ¡Ïû)");
+     write("å¯é€‰æ‹©é˜²å…·ç§ç±»ï¼š\n");
+     write("1. ç”²  2. é‹  3. è¡£æœ  4. æŒ‡å¥—  5. æŠ¤æŒ  6. å¤´ç½©\n");
+     write("7. è„–å¥—  8. ç›¾  9. æŠ«é£  10. æŠ¤è…•  11. è…°å¸¦\n");
+       write("è¯·é€‰æ‹©ï¼š(q é”®å–æ¶ˆ)");
    }
    input_to( (: get_subtype :), ob);
 }
@@ -185,18 +185,18 @@ void get_subtype(string arg, object ob)
      if( arg == "w" )    {
         fabao_type = "weapon";
         write("\n");
-        write("¿ÉÑ¡ÔñÎäÆ÷ÖÖÀà£º\n");
-        write("1. ¸«  2. µ¶  3. ²æ  4. ´¸  5. ïµ  6. Ç¹\n");
-        write("7. ÕÈ  8. °ô  9. ½£  10. ±Ş\n");
-           write("ÇëÑ¡Ôñ£º(q ¼üÈ¡Ïû)");
+        write("å¯é€‰æ‹©æ­¦å™¨ç§ç±»ï¼š\n");
+        write("1. æ–§  2. åˆ€  3. å‰  4. é”¤  5. é”  6. æª\n");
+        write("7. æ–  8. æ£’  9. å‰‘  10. é­\n");
+           write("è¯·é€‰æ‹©ï¼š(q é”®å–æ¶ˆ)");
      }
      else if( arg == "a" )   {
         fabao_type = "armor";   
         write("\n");
-        write("¿ÉÑ¡Ôñ·À¾ßÖÖÀà£º\n");
-        write("1. ¼×  2. Ğ¬  3. ÒÂ·ş  4. Ö¸Ì×  5. »¤ÕÆ  6. Í·ÕÖ\n");
-        write("7. ²±Ì×  8. ¶Ü  9. Åû·ç  10. »¤Íó  11. Ñü´ø\n");
-           write("ÇëÑ¡Ôñ£º(q ¼üÈ¡Ïû)");
+        write("å¯é€‰æ‹©é˜²å…·ç§ç±»ï¼š\n");
+        write("1. ç”²  2. é‹  3. è¡£æœ  4. æŒ‡å¥—  5. æŠ¤æŒ  6. å¤´ç½©\n");
+        write("7. è„–å¥—  8. ç›¾  9. æŠ«é£  10. æŠ¤è…•  11. è…°å¸¦\n");
+           write("è¯·é€‰æ‹©ï¼š(q é”®å–æ¶ˆ)");
      }
      ob->set_temp("fabao_type", fabao_type);
      input_to( (: get_subtype :), ob);
@@ -206,7 +206,7 @@ void get_subtype(string arg, object ob)
    ob->set_temp("fabao_subtype",  order);
 
    write("\n");
-   write("ÇëÉè¶¨Ó¢ÎÄ id £º");
+   write("è¯·è®¾å®šè‹±æ–‡ id ï¼š");
    input_to( (: get_id :), ob ); 
 }
 
@@ -218,19 +218,19 @@ int check_legal_id(string id)
    
    i = strlen(id);
     if( (strlen(id) < 3) || (strlen(id) > 20 ) ) {
-     write("¶Ô²»Æğ£¬Ó¢ÎÄ id ±ØĞëÊÇ 3 µ½ 20 ¸öÓ¢ÎÄ×ÖÄ¸¡£\n");
+     write("å¯¹ä¸èµ·ï¼Œè‹±æ–‡ id å¿…é¡»æ˜¯ 3 åˆ° 20 ä¸ªè‹±æ–‡å­—æ¯ã€‚\n");
      return 0;
     }
     while(i--)
        if( id[i] != ' ' && (id[i]<'a' || id[i]>'z') )  {
-         write("¶Ô²»Æğ£¬Ó¢ÎÄ id Ö»ÄÜÓÃÓ¢ÎÄ×ÖÄ¸¡£\n");
+         write("å¯¹ä¸èµ·ï¼Œè‹±æ–‡ id åªèƒ½ç”¨è‹±æ–‡å­—æ¯ã€‚\n");
          return 0;
        }
     
     legalid = explode(read_file(BANNED_ID), "\n");
     for(i=0; i<sizeof(legalid); i++)   {
        if( id == legalid[i] )   {
-         write("¶Ô²»Æğ£¬ÕâÖÖ id »áÔì³ÉÆäËûÈËµÄÀ§ÈÅ¡£\n");
+         write("å¯¹ä¸èµ·ï¼Œè¿™ç§ id ä¼šé€ æˆå…¶ä»–äººçš„å›°æ‰°ã€‚\n");
          return 0;
        }
     }
@@ -246,17 +246,17 @@ int check_legal_name(string name, int max_len)
    
    i = strlen(name);
     if( (strlen(name) < 2) || (strlen(name) > max_len ) ) {
-       write( sprintf("¶Ô²»Æğ£¬·¨±¦ÖĞÎÄ×Ö±ØĞëÊÇ 1 µ½ %d ¸öÖĞÎÄ×Ö¡£\n",
+       write( sprintf("å¯¹ä¸èµ·ï¼Œæ³•å®ä¸­æ–‡å­—å¿…é¡»æ˜¯ 1 åˆ° %d ä¸ªä¸­æ–‡å­—ã€‚\n",
         max_len/2) );
      return 0;
     }
     while(i--)   {
        if( name[i]<=' ' )   {
-         write("¶Ô²»Æğ£¬·¨±¦ÖĞÎÄ×Ö²»ÄÜÓÃ¿ØÖÆ×ÖÔª¡£\n");
+         write("å¯¹ä¸èµ·ï¼Œæ³•å®ä¸­æ–‡å­—ä¸èƒ½ç”¨æ§åˆ¶å­—å…ƒã€‚\n");
          return 0;
        }
        if( i%2==0 && !is_chinese(name[i..<0]) )  {
-         write("¶Ô²»Æğ£¬ÇëÄúÓÃ¡¸ÖĞÎÄ¡¹¸ø·¨±¦È¡Ãû×Ö¡£\n");
+         write("å¯¹ä¸èµ·ï¼Œè¯·æ‚¨ç”¨ã€Œä¸­æ–‡ã€ç»™æ³•å®å–åå­—ã€‚\n");
          return 0;
        }
     }
@@ -269,7 +269,7 @@ void get_id(string arg, object ob)
 {
    arg = lower_case(arg);
    if( !check_legal_id(arg) )   {
-     write("ÇëÉè¶¨Ó¢ÎÄ id £º");
+     write("è¯·è®¾å®šè‹±æ–‡ id ï¼š");
      input_to( (: get_id :), ob ); 
      return;
    }
@@ -278,7 +278,7 @@ void get_id(string arg, object ob)
    ob->set_temp("fabao_id",arg);
    
    write("\n");
-   write("ÇëÉè¶¨ÖĞÎÄÃû£º(¿É¼ÓÑÕÉ«)");
+   write("è¯·è®¾å®šä¸­æ–‡åï¼š(å¯åŠ é¢œè‰²)");
    input_to( (: get_name :), ob);
 }
 
@@ -306,7 +306,7 @@ void get_name(string arg, object ob)
         arg = replace_string(arg, "$NOR$", "");
 
    if( !check_legal_name(arg, 12) )  {
-        write("ÇëÉè¶¨ÖĞÎÄÃû£º(¿É¼ÓÑÕÉ«)");
+        write("è¯·è®¾å®šä¸­æ–‡åï¼š(å¯åŠ é¢œè‰²)");
      input_to( (: get_name :), ob);
      return;
    }
@@ -333,14 +333,14 @@ void get_name(string arg, object ob)
    ob->set_temp("fabao_name", arg + NOR);
    
    write("\n");
-   write("ÇëÃèÊö·¨±¦£º");
+   write("è¯·æè¿°æ³•å®ï¼š");
    input_to( (: get_desc :), ob);
 }
 
 void get_desc(string arg, object ob)
 {
    if( !check_legal_name(arg, 60) )  {
-     write("ÇëÃèÊö·¨±¦£º");
+     write("è¯·æè¿°æ³•å®ï¼š");
      input_to( (: get_desc :), ob);
      return;
    }
@@ -348,7 +348,7 @@ void get_desc(string arg, object ob)
    ob->set_temp("fabao_desc",  arg);
    
    write("\n");
-   write("·¨±¦ÓÃÁ¿´Ê£º(Return for default)");
+   write("æ³•å®ç”¨é‡è¯ï¼š(Return for default)");
    input_to( (: get_unit :), ob);
 }
 
@@ -360,7 +360,7 @@ void get_unit(string arg, object ob)
     if( arg == "" )
        fabao_unit = "";
    else if( !check_legal_name(arg, 2) )  {
-       write("·¨±¦ÓÃÁ¿´Ê£º(Return for defult)");
+       write("æ³•å®ç”¨é‡è¯ï¼š(Return for defult)");
       input_to( (: get_unit :), ob);
       return;
     }
@@ -475,7 +475,7 @@ void build_weapon(object ob)
       newob->move(environment(ob));
    ob->save();
    
-   write("·¨±¦Á¶ÖÆ³É¹¦¡£\n");
+   write("æ³•å®ç‚¼åˆ¶æˆåŠŸã€‚\n");
 
    return;
 }
@@ -600,7 +600,7 @@ void build_armor(object ob)
       newob->move(environment(ob));
    ob->save();
 
-   write("·¨±¦Á¶ÖÆ³É¹¦¡£\n");
+   write("æ³•å®ç‚¼åˆ¶æˆåŠŸã€‚\n");
    
    return;
 }
@@ -611,15 +611,15 @@ int  do_dispose(string arg)
    object fabao_ob;
   
    if( !arg || arg == "" )
-     return notify_fail("ÄãÒªÏû³ıÊ²Ã´·¨±¦£¿\n");
+     return notify_fail("ä½ è¦æ¶ˆé™¤ä»€ä¹ˆæ³•å®ï¼Ÿ\n");
 
    if( !objectp(fabao_ob=present(arg, ob)) )
-      return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷°¡¡£\n");
+      return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿å•Šã€‚\n");
       
    if(!fabao_ob->query("owner_id") || !fabao_ob->query("series_no")) 
-      return notify_fail("ÄÇ¸ö²»ÊÇ·¨±¦Ò®£¡\n");
+      return notify_fail("é‚£ä¸ªä¸æ˜¯æ³•å®è€¶ï¼\n");
       
-   write("ÄãÈ·¶¨Òª»ÙÃğ¸Ã·¨±¦Âğ£¿(y/n)");
+   write("ä½ ç¡®å®šè¦æ¯ç­è¯¥æ³•å®å—ï¼Ÿ(y/n)");
    input_to( (: confirm_dispose :), ob, fabao_ob); 
    return 1;
 }
@@ -640,7 +640,7 @@ void confirm_dispose(string arg, object ob, object fabao_ob)
         //rm( fabao_ob->query_save_file() + __SAVE_EXTENSION__ );
         ob->delete("fabao/"+names[i]);
         destruct( fabao_ob );
-        write("·¨±¦±»»ÙÆúÁË¡£\n");
+        write("æ³•å®è¢«æ¯å¼ƒäº†ã€‚\n");
         break;
       }
      }
@@ -651,22 +651,22 @@ void confirm_dispose(string arg, object ob, object fabao_ob)
 
 int  do_list()
 {
-    write("Ä¿Ç°¿ÉÔì·¨±¦ÖÖÀàÓĞ£º\n");   
-    write("w. ÎäÆ÷Àà£º\n");
-   write("       ¸«  µ¶  ²æ  ´¸  ïµ  Ç¹\n");
-   write("       ÕÈ  °ô  ½£  ±Ş\n\n");
-   write("a. »¤¾ßÀà£º\n");
-   write("       »¤¼×  Ğ¬  ÒÂ·ş  Ö¸Ì×  »¤ÕÆ  Í·ÕÖ\n");
-   write("       ²±Ì×  ¶Ü  Åû·ç  »¤Íó   Ñü´ø\n\n");
-   write("Ä¿Ç°·¨±¦¿ÉÉı¼¶ÖÖÀà£º\n");
-    write("w. ÎäÆ÷£º\n");
-   write("       ¼ÓÉËº¦Á¦\n\n");
-   write("a. »¤¾ßÀà£º\n");
-   write("       ¼Ó·ÀÓùÁ¦\n");
-   write("       ¼ÓµÖ¿¹Á¦\n");
-   write("       ¼ÓÄÚ¹¦µÖ¿¹Á¦\n");
-   write("       ¼ÓÄ§·¨¹¥»÷Á¦\n");
-   write("       ¼ÓÄ§·¨µÖ¿¹Á¦\n");
+    write("ç›®å‰å¯é€ æ³•å®ç§ç±»æœ‰ï¼š\n");   
+    write("w. æ­¦å™¨ç±»ï¼š\n");
+   write("       æ–§  åˆ€  å‰  é”¤  é”  æª\n");
+   write("       æ–  æ£’  å‰‘  é­\n\n");
+   write("a. æŠ¤å…·ç±»ï¼š\n");
+   write("       æŠ¤ç”²  é‹  è¡£æœ  æŒ‡å¥—  æŠ¤æŒ  å¤´ç½©\n");
+   write("       è„–å¥—  ç›¾  æŠ«é£  æŠ¤è…•   è…°å¸¦\n\n");
+   write("ç›®å‰æ³•å®å¯å‡çº§ç§ç±»ï¼š\n");
+    write("w. æ­¦å™¨ï¼š\n");
+   write("       åŠ ä¼¤å®³åŠ›\n\n");
+   write("a. æŠ¤å…·ç±»ï¼š\n");
+   write("       åŠ é˜²å¾¡åŠ›\n");
+   write("       åŠ æŠµæŠ—åŠ›\n");
+   write("       åŠ å†…åŠŸæŠµæŠ—åŠ›\n");
+   write("       åŠ é­”æ³•æ”»å‡»åŠ›\n");
+   write("       åŠ é­”æ³•æŠµæŠ—åŠ›\n");
 
    return 1;   
 }
@@ -678,48 +678,48 @@ int do_cost(string arg)
    int spells_stars, vs_spells_stars;
    
    if( !arg || arg == "" )  {
-      write("ÖÆÔì·¨±¦ĞèÒªÎåÊ®Á½»Æ½ğ£¬Á½°ÙµãÕæÆøºÍÄ§Á¦£¬\n");
-      write("²¢ÇÒµÀĞĞ±ØĞëÔÚ¶şÊ®ÄêÒÔÉÏ£¬×î´óÄÚÁ¦·¨Á¦¶¼±Ø\n");
-      write("ĞëÔÚ 300ÒÔÉÏ¡£ÀıÈçÄãµÄÄÚÁ¦ÊÇ 1500/1200£¬ÄÇ\n");
-      write("¸ß³öÀ´µÄ300¾ÍÊÇÕæÆø£¬Ä§Á¦ÀàËÆ¡£\n");
+      write("åˆ¶é€ æ³•å®éœ€è¦äº”åä¸¤é»„é‡‘ï¼Œä¸¤ç™¾ç‚¹çœŸæ°”å’Œé­”åŠ›ï¼Œ\n");
+      write("å¹¶ä¸”é“è¡Œå¿…é¡»åœ¨äºŒåå¹´ä»¥ä¸Šï¼Œæœ€å¤§å†…åŠ›æ³•åŠ›éƒ½å¿…\n");
+      write("é¡»åœ¨ 300ä»¥ä¸Šã€‚ä¾‹å¦‚ä½ çš„å†…åŠ›æ˜¯ 1500/1200ï¼Œé‚£\n");
+      write("é«˜å‡ºæ¥çš„300å°±æ˜¯çœŸæ°”ï¼Œé­”åŠ›ç±»ä¼¼ã€‚\n");
       return 1;
    }
   
    if( !objectp(fabao_ob=present(arg, me)) )
-      return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷°¡¡£\n");
+      return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿å•Šã€‚\n");
       
    if(!fabao_ob->query("owner_id") || !fabao_ob->query("series_no")) 
-      return notify_fail("ÄÇ¸ö²»ÊÇ·¨±¦Ò®£¡\n");
+      return notify_fail("é‚£ä¸ªä¸æ˜¯æ³•å®è€¶ï¼\n");
       
    if( fabao_ob->query("series_no") == "1" )  {
-      write("·¨±¦µÈ¼¶£º    " + HIR);
+      write("æ³•å®ç­‰çº§ï¼š    " + HIR);
       damage_stars = fabao_ob->query("stars/damage");
       for(i=0; i<damage_stars; i++)
-         write("¡ï");
+         write("â˜…");
       write(NOR + "\n");
-      write(HIG+"ÉËº¦Á¦" + NOR+ "(damage)Éı¼¶ĞèÒª£º\n");
+      write(HIG+"ä¼¤å®³åŠ›" + NOR+ "(damage)å‡çº§éœ€è¦ï¼š\n");
       switch(damage_stars)  {
-         case 1:  write("    µÀĞĞÒ»°ÙÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Îå°ÙÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦ÎåÊ®µã\n");
-                  write("    ÏûºÄµÀĞĞÒ»Äê\n");
+         case 1:  write("    é“è¡Œä¸€ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›äº”ç™¾ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›äº”åç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡Œä¸€å¹´\n");
                   break;
-         case 2:  write("    µÀĞĞÎå°ÙÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Ò»Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦Ò»°Ùµã\n");
-                  write("    ÏûºÄµÀĞĞÊ®Äê\n");
+         case 2:  write("    é“è¡Œäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›ä¸€åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›ä¸€ç™¾ç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡Œåå¹´\n");
                   break;
-         case 3:  write("    µÀĞĞÒ»Ç§ÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Ò»Ç§ÎåÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦Ò»°ÙÎåÊ®µã\n");
-                  write("    ÏûºÄµÀĞĞ¶şÊ®Äê\n");
+         case 3:  write("    é“è¡Œä¸€åƒå¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›ä¸€åƒäº”ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›ä¸€ç™¾äº”åç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡ŒäºŒåå¹´\n");
                   break;
-         case 4:  write("    µÀĞĞÒ»Ç§Îå°ÙÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Á½Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦Á½°Ùµã\n");
-                  write("    ÏûºÄµÀĞĞÎåÊ®Äê\n");
+         case 4:  write("    é“è¡Œä¸€åƒäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›ä¸¤åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›ä¸¤ç™¾ç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡Œäº”åå¹´\n");
                   break;
-         case 5:  write("ÄãµÄ·¨±¦"+HIG+"ÉËº¦Á¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+         case 5:  write("ä½ çš„æ³•å®"+HIG+"ä¼¤å®³åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
       }
    }
    else if( fabao_ob->query("series_no") == "2"  ||
@@ -729,148 +729,148 @@ int do_cost(string arg)
       force_stars = fabao_ob->query("stars/armor_vs_force");
       spells_stars = fabao_ob->query("stars/spells");
       vs_spells_stars = fabao_ob->query("stars/armor_vs_spells");
-      write("·¨±¦µÈ¼¶£º\n");
-      write("    " + HIY+"·ÀÓùÁ¦        "+HIR);
+      write("æ³•å®ç­‰çº§ï¼š\n");
+      write("    " + HIY+"é˜²å¾¡åŠ›        "+HIR);
       for(i=0; i<dodge_stars; i++)
-         write("¡ï");
+         write("â˜…");
       for(i=dodge_stars; i<5; i++)
-         write("¡¡");
-      write("    " + HIB+"µÖ¿¹Á¦        "+HIR);
+         write("ã€€");
+      write("    " + HIB+"æŠµæŠ—åŠ›        "+HIR);
       for(i=0; i<armor_stars; i++)
-         write("¡ï");
+         write("â˜…");
       write("\n"); 
-      write("    " + HIM+"ÄÚ¹¦µÖ¿¹Á¦    "+HIR);
+      write("    " + HIM+"å†…åŠŸæŠµæŠ—åŠ›    "+HIR);
       for(i=0; i<force_stars; i++)
-         write("¡ï");
+         write("â˜…");
       for(i=force_stars; i<5; i++)
-         write("¡¡");
-      write("    " + HIC+"Ä§·¨¹¥»÷Á¦    "+HIR);
+         write("ã€€");
+      write("    " + HIC+"é­”æ³•æ”»å‡»åŠ›    "+HIR);
       for(i=0; i<spells_stars; i++)
-         write("¡ï");
+         write("â˜…");
       write("\n"); 
-      write("    " + HIW+"Ä§·¨µÖ¿¹Á¦    "+HIR);
+      write("    " + HIW+"é­”æ³•æŠµæŠ—åŠ›    "+HIR);
       for(i=0; i<vs_spells_stars; i++)
-         write("¡ï");
+         write("â˜…");
       write(NOR+"\n"); 
       
       switch( dodge_stars )   {
-         case 1:  write(HIY+"·ÀÓùÁ¦" + NOR+ "(dodge)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÁ½°ÙÄêÒÔÉÏ\n");
-                  write("    ÏûºÄµÀĞĞÎåÄê\n");
+         case 1:  write(HIY+"é˜²å¾¡åŠ›" + NOR+ "(dodge)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸¤ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—é“è¡Œäº”å¹´\n");
                   break;
-         case 2:  write(HIY+"·ÀÓùÁ¦" + NOR+ "(dodge)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÎå°ÙÄêÒÔÉÏ\n");
-                  write("    ÏûºÄµÀĞĞ¶şÊ®Äê\n");
+         case 2:  write(HIY+"é˜²å¾¡åŠ›" + NOR+ "(dodge)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—é“è¡ŒäºŒåå¹´\n");
                   break;
-         case 3:  write(HIY+"·ÀÓùÁ¦" + NOR+ "(dodge)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§ÄêÒÔÉÏ\n");
-                  write("    ÏûºÄµÀĞĞÎåÊ®Äê\n");
+         case 3:  write(HIY+"é˜²å¾¡åŠ›" + NOR+ "(dodge)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒå¹´ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—é“è¡Œäº”åå¹´\n");
                   break;
-         case 4:  write(HIY+"·ÀÓùÁ¦" + NOR+ "(dodge)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§Îå°ÙÄêÒÔÉÏ\n");
-                  write("    ÏûºÄµÀĞĞÒ»°ÙÄê\n");
+         case 4:  write(HIY+"é˜²å¾¡åŠ›" + NOR+ "(dodge)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—é“è¡Œä¸€ç™¾å¹´\n");
                   break;
-         case 5:  write("ÄãµÄ·¨±¦"+HIY+"·ÀÓùÁ¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+         case 5:  write("ä½ çš„æ³•å®"+HIY+"é˜²å¾¡åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
       }
       switch( armor_stars )   {
-         case 1:  write(HIB+"µÖ¿¹Á¦" + NOR+ "(armor)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»°ÙÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Îå°ÙÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦ÎåÊ®µã\n");
-                  write("    ÏûºÄµÀĞĞÒ»Äê\n");
+         case 1:  write(HIB+"æŠµæŠ—åŠ›" + NOR+ "(armor)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›äº”ç™¾ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›äº”åç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡Œä¸€å¹´\n");
                   break;
-         case 2:  write(HIB+"µÖ¿¹Á¦" + NOR+ "(armor)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÎå°ÙÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Ò»Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦Ò»°Ùµã\n");
-                  write("    ÏûºÄµÀĞĞÎåÄê\n");
+         case 2:  write(HIB+"æŠµæŠ—åŠ›" + NOR+ "(armor)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›ä¸€åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›ä¸€ç™¾ç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡Œäº”å¹´\n");
                   break;
-         case 3:  write(HIB+"µÖ¿¹Á¦" + NOR+ "(armor)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§ÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Ò»Ç§ÎåÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦Ò»°ÙÎåÊ®µã\n");
-                  write("    ÏûºÄµÀĞĞ¶şÊ®Äê\n");
+         case 3:  write(HIB+"æŠµæŠ—åŠ›" + NOR+ "(armor)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒå¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›ä¸€åƒäº”ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›ä¸€ç™¾äº”åç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡ŒäºŒåå¹´\n");
                   break;
-         case 4:  write(HIB+"µÖ¿¹Á¦" + NOR+ "(armor)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§Îå°ÙÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Á½Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦Á½°Ùµã\n");
-                  write("    ÏûºÄµÀĞĞÎåÊ®Äê\n");
+         case 4:  write(HIB+"æŠµæŠ—åŠ›" + NOR+ "(armor)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›ä¸¤åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›ä¸¤ç™¾ç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡Œäº”åå¹´\n");
                   break;
-         case 5:  write("ÄãµÄ·¨±¦"+HIB+"µÖ¿¹Á¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+         case 5:  write("ä½ çš„æ³•å®"+HIB+"æŠµæŠ—åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
       } 
       switch( force_stars )   {
-         case 1:  write(HIM+"ÄÚ¹¦µÖ¿¹Á¦" + NOR+ "(armor_vs_force)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»°ÙÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Îå°ÙÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦Ò»°Ùµã\n");
+         case 1:  write(HIM+"å†…åŠŸæŠµæŠ—åŠ›" + NOR+ "(armor_vs_force)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›äº”ç™¾ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›ä¸€ç™¾ç‚¹\n");
                   break;
-         case 2:  write(HIM+"ÄÚ¹¦µÖ¿¹Á¦" + NOR+ "(armor_vs_force)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÎå°ÙÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Ò»Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦Ò»°ÙÎåÊ®µã\n");
+         case 2:  write(HIM+"å†…åŠŸæŠµæŠ—åŠ›" + NOR+ "(armor_vs_force)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›ä¸€åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›ä¸€ç™¾äº”åç‚¹\n");
                   break;
-         case 3:  write(HIM+"ÄÚ¹¦µÖ¿¹Á¦" + NOR+ "(armor_vs_force)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§ÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Ò»Ç§ÎåÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦Á½°ÙÎåÊ®µã\n");
+         case 3:  write(HIM+"å†…åŠŸæŠµæŠ—åŠ›" + NOR+ "(armor_vs_force)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒå¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›ä¸€åƒäº”ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›ä¸¤ç™¾äº”åç‚¹\n");
                   break;
-         case 4:  write(HIM+"ÄÚ¹¦µÖ¿¹Á¦" + NOR+ "(armor_vs_force)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§Îå°ÙÄêÒÔÉÏ\n");
-                  write("    ÄÚÁ¦Á½Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´óÄÚÁ¦ËÄ°Ùµã\n");
+         case 4:  write(HIM+"å†…åŠŸæŠµæŠ—åŠ›" + NOR+ "(armor_vs_force)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    å†…åŠ›ä¸¤åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§å†…åŠ›å››ç™¾ç‚¹\n");
                   break;
-         case 5:  write("ÄãµÄ·¨±¦"+HIM+"ÄÚ¹¦µÖ¿¹Á¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+         case 5:  write("ä½ çš„æ³•å®"+HIM+"å†…åŠŸæŠµæŠ—åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
       }
       switch( spells_stars )   {
-         case 1:  write(HIC+"Ä§·¨¹¥»÷Á¦" + NOR+ "(spells)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÁ½°ÙÄêÒÔÉÏ\n");
-                  write("    ·¨Á¦Îå°ÙÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´ó·¨Á¦ÎåÊ®µã\n");
-                  write("    ÏûºÄµÀĞĞÎåÄê\n");
+         case 1:  write(HIC+"é­”æ³•æ”»å‡»åŠ›" + NOR+ "(spells)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸¤ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    æ³•åŠ›äº”ç™¾ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§æ³•åŠ›äº”åç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡Œäº”å¹´\n");
                   break;
-         case 2:  write(HIC+"Ä§·¨¹¥»÷Á¦" + NOR+ "(spells)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÎå°ÙÄêÒÔÉÏ\n");
-                  write("    ·¨Á¦Ò»Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´ó·¨Á¦Ò»°Ùµã\n");
-                  write("    ÏûºÄµÀĞĞ¶şÊ®Äê\n");
+         case 2:  write(HIC+"é­”æ³•æ”»å‡»åŠ›" + NOR+ "(spells)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    æ³•åŠ›ä¸€åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§æ³•åŠ›ä¸€ç™¾ç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡ŒäºŒåå¹´\n");
                   break;
-         case 3:  write(HIC+"Ä§·¨¹¥»÷Á¦" + NOR+ "(spells)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§ÄêÒÔÉÏ\n");
-                  write("    ·¨Á¦Ò»Ç§ÎåÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´ó·¨Á¦Ò»°ÙÎåÊ®µã\n");
-                  write("    ÏûºÄµÀĞĞÎåÊ®Äê\n");
+         case 3:  write(HIC+"é­”æ³•æ”»å‡»åŠ›" + NOR+ "(spells)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒå¹´ä»¥ä¸Š\n");
+                  write("    æ³•åŠ›ä¸€åƒäº”ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§æ³•åŠ›ä¸€ç™¾äº”åç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡Œäº”åå¹´\n");
                   break;
-         case 4:  write(HIC+"Ä§·¨¹¥»÷Á¦" + NOR+ "(spells)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§Îå°ÙÄêÒÔÉÏ\n");
-                  write("    ·¨Á¦Á½Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´ó·¨Á¦Á½°Ùµã\n");
-                  write("    ÏûºÄµÀĞĞÒ»°ÙÄê\n");
+         case 4:  write(HIC+"é­”æ³•æ”»å‡»åŠ›" + NOR+ "(spells)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    æ³•åŠ›ä¸¤åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§æ³•åŠ›ä¸¤ç™¾ç‚¹\n");
+                  write("    æ¶ˆè€—é“è¡Œä¸€ç™¾å¹´\n");
                   break;
-         case 5:  write("ÄãµÄ·¨±¦"+HIC+"Ä§·¨¹¥»÷Á¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+         case 5:  write("ä½ çš„æ³•å®"+HIC+"é­”æ³•æ”»å‡»åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
       }
       switch( vs_spells_stars )   {
-         case 1:  write(HIW+"Ä§·¨µÖ¿¹Á¦" + NOR+ "(armor_vs_spells)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÁ½°ÙÄêÒÔÉÏ\n");
-                  write("    ·¨Á¦Îå°ÙÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´ó·¨Á¦Ò»°Ùµã\n");
+         case 1:  write(HIW+"é­”æ³•æŠµæŠ—åŠ›" + NOR+ "(armor_vs_spells)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸¤ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    æ³•åŠ›äº”ç™¾ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§æ³•åŠ›ä¸€ç™¾ç‚¹\n");
                   break;
-         case 2:  write(HIW+"Ä§·¨µÖ¿¹Á¦" + NOR+ "(armor_vs_spells)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÎå°ÙÄêÒÔÉÏ\n");
-                  write("    ·¨Á¦Ò»Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´ó·¨Á¦Ò»°ÙÎåÊ®µã\n");
+         case 2:  write(HIW+"é­”æ³•æŠµæŠ—åŠ›" + NOR+ "(armor_vs_spells)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    æ³•åŠ›ä¸€åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§æ³•åŠ›ä¸€ç™¾äº”åç‚¹\n");
                   break;
-         case 3:  write(HIW+"Ä§·¨µÖ¿¹Á¦" + NOR+ "(armor_vs_spells)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§ÄêÒÔÉÏ\n");
-                  write("    ·¨Á¦Ò»Ç§ÎåÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´ó·¨Á¦Èı°Ùµã\n");
+         case 3:  write(HIW+"é­”æ³•æŠµæŠ—åŠ›" + NOR+ "(armor_vs_spells)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒå¹´ä»¥ä¸Š\n");
+                  write("    æ³•åŠ›ä¸€åƒäº”ä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§æ³•åŠ›ä¸‰ç™¾ç‚¹\n");
                   break;
-         case 4:  write(HIW+"Ä§·¨µÖ¿¹Á¦" + NOR+ "(armor_vs_spells)Éı¼¶ĞèÒª£º\n");
-                  write("    µÀĞĞÒ»Ç§Îå°ÙÄêÒÔÉÏ\n");
-                  write("    ·¨Á¦Á½Ç§ÒÔÉÏ\n");
-                  write("    ÏûºÄ×î´ó·¨Á¦Îå°Ùµã\n");
+         case 4:  write(HIW+"é­”æ³•æŠµæŠ—åŠ›" + NOR+ "(armor_vs_spells)å‡çº§éœ€è¦ï¼š\n");
+                  write("    é“è¡Œä¸€åƒäº”ç™¾å¹´ä»¥ä¸Š\n");
+                  write("    æ³•åŠ›ä¸¤åƒä»¥ä¸Š\n");
+                  write("    æ¶ˆè€—æœ€å¤§æ³•åŠ›äº”ç™¾ç‚¹\n");
                   break;
-         case 5:  write("ÄãµÄ·¨±¦"+HIW+"Ä§·¨µÖ¿¹Á¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+         case 5:  write("ä½ çš„æ³•å®"+HIW+"é­”æ³•æŠµæŠ—åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
       }
    }
    
@@ -884,36 +884,36 @@ int  do_upgrade(string arg)
    int   stars, upgraded;
   
    if( !arg || arg == "")   {
-      write("ÇëÓÃ upgrade ·¨±¦Ãû for Éı¼¶ÌØĞÔ À´Éı¼¶¡£\n");
-      write("Éı¼¶ÌØĞÔ¿ÉÓÃ cost ·¨±¦Ãû À´²é¿´¡£\n");
+      write("è¯·ç”¨ upgrade æ³•å®å for å‡çº§ç‰¹æ€§ æ¥å‡çº§ã€‚\n");
+      write("å‡çº§ç‰¹æ€§å¯ç”¨ cost æ³•å®å æ¥æŸ¥çœ‹ã€‚\n");
       return 1;
    }
       
    if( sscanf(arg, "%s for %s", name, property) != 2)  {
-      write("ÇëÓÃ upgrade ·¨±¦Ãû for Éı¼¶ÌØĞÔ À´Éı¼¶¡£\n");
-      write("Éı¼¶ÌØĞÔ¿ÉÓÃ cost ·¨±¦Ãû À´²é¿´¡£\n");
+      write("è¯·ç”¨ upgrade æ³•å®å for å‡çº§ç‰¹æ€§ æ¥å‡çº§ã€‚\n");
+      write("å‡çº§ç‰¹æ€§å¯ç”¨ cost æ³•å®å æ¥æŸ¥çœ‹ã€‚\n");
       return 1;
    }
    
    if( !objectp(fabao_ob=present(name, me)) )
-      return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷°¡¡£\n");
+      return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿å•Šã€‚\n");
       
    if(!fabao_ob->query("owner_id") || !fabao_ob->query("series_no")) 
-      return notify_fail("ÄÇ¸ö²»ÊÇ·¨±¦Ò®£¡\n");
+      return notify_fail("é‚£ä¸ªä¸æ˜¯æ³•å®è€¶ï¼\n");
      
    if( fabao_ob->query("equipped") )
-      return notify_fail("Äã±ØĞë·ÅÏÂ·¨±¦²ÅÄÜÉı¼¶¡£\n");
+      return notify_fail("ä½ å¿…é¡»æ”¾ä¸‹æ³•å®æ‰èƒ½å‡çº§ã€‚\n");
           
    if( fabao_ob->query("series_no") == "1")  {   // weapon
       if( property != "damage" )
-         return notify_fail("·¨±¦Ã»ÓĞÕâ¸öÉı¼¶ÌØĞÔ¡£\n");
+         return notify_fail("æ³•å®æ²¡æœ‰è¿™ä¸ªå‡çº§ç‰¹æ€§ã€‚\n");
       
       stars = fabao_ob->query("stars/"+property);
       upgraded = fabao_ob->query("upgraded/"+property) + 1;
       switch(stars)   {
          case 1:  if( me->query("combat_exp") < (20000+upgraded*16000) ||
                   me->query("max_force") < 500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("weapon_prop/damage", 4);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -925,7 +925,7 @@ int  do_upgrade(string arg)
                   break;
          case 2:  if( me->query("combat_exp") < (100000+upgraded*80000) ||
                   me->query("max_force") < 1000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("weapon_prop/damage", 6);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -937,7 +937,7 @@ int  do_upgrade(string arg)
                   break;
          case 3:  if( me->query("combat_exp") < (500000+upgraded*100000) ||
                   me->query("max_force") < 1500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("weapon_prop/damage", 6);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -949,7 +949,7 @@ int  do_upgrade(string arg)
                   break;
          case 4:  if( me->query("combat_exp") < (1000000+upgraded*100000) ||
                   me->query("max_force") < 2000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("weapon_prop/damage", 6);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -959,23 +959,23 @@ int  do_upgrade(string arg)
                   me->add("max_force", -40);
                   me->add("combat_exp", -10000);
                   break;
-         case 5:  return notify_fail("ÄãµÄ·¨±¦ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+         case 5:  return notify_fail("ä½ çš„æ³•å®å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
       }
-      write(fabao_ob->query("name")+"µÄ"+HIG+"ÉËº¦Á¦"+NOR+"Ôö¼ÓÁË£¡\n");
+      write(fabao_ob->query("name")+"çš„"+HIG+"ä¼¤å®³åŠ›"+NOR+"å¢åŠ äº†ï¼\n");
    }
    else if(fabao_ob->query("series_no") == "2" ||
    fabao_ob->query("series_no") == "3")   {   // armor
       if( property != "dodge" && property != "armor" &&
       property != "armor_vs_force" && property != "spells" &&
       property != "armor_vs_spells" )
-         return notify_fail("·¨±¦Ã»ÓĞÕâ¸öÉı¼¶ÌØĞÔ¡£\n");
+         return notify_fail("æ³•å®æ²¡æœ‰è¿™ä¸ªå‡çº§ç‰¹æ€§ã€‚\n");
       
       stars = fabao_ob->query("stars/"+property); 
       upgraded = fabao_ob->query("upgraded/"+property) + 1; 
       if( property == "dodge" )   {
          switch(stars)  { 
             case 1:if( me->query("combat_exp") < (20000+36000*upgraded) )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/dodge", 1);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -985,7 +985,7 @@ int  do_upgrade(string arg)
                   me->add("combat_exp", -1000);
                   break;
             case 2:if( me->query("combat_exp") < (200000+60000*upgraded) )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/dodge", 1);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -995,7 +995,7 @@ int  do_upgrade(string arg)
                   me->add("combat_exp", -4000);
                   break;
             case 3:if( me->query("combat_exp") < (500000+upgraded*100000) )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/dodge", 2);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1005,7 +1005,7 @@ int  do_upgrade(string arg)
                   me->add("combat_exp", -10000);
                   break;
             case 4:if( me->query("combat_exp") < (1000000+upgraded*100000) )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/dodge", 2);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1015,15 +1015,15 @@ int  do_upgrade(string arg)
                   me->add("combat_exp", -20000);
                   break;
             case 5: 
-                  return notify_fail("ÄãµÄ·¨±¦"+HIY+"·ÀÓùÁ¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+                  return notify_fail("ä½ çš„æ³•å®"+HIY+"é˜²å¾¡åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
          }
-         write(fabao_ob->query("name")+"µÄ"+HIY+"·ÀÓùÁ¦"+NOR+"Ôö¼ÓÁË£¡\n");
+         write(fabao_ob->query("name")+"çš„"+HIY+"é˜²å¾¡åŠ›"+NOR+"å¢åŠ äº†ï¼\n");
       }
       else if( property == "armor" )  {
          switch(stars)  {
             case 1: if( me->query("combat_exp") < (20000+16000*upgraded) ||
                   me->query("max_force") < 500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor", 2);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1035,7 +1035,7 @@ int  do_upgrade(string arg)
                   break;
             case 2: if( me->query("combat_exp") < (100000+upgraded*80000) ||
                   me->query("max_force") < 1000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor", 3);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1047,7 +1047,7 @@ int  do_upgrade(string arg)
                   break;
             case 3: if( me->query("combat_exp") < (500000+upgraded*100000) ||
                   me->query("max_force") < 1500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor", 4);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1059,7 +1059,7 @@ int  do_upgrade(string arg)
                   break;
             case 4: if( me->query("combat_exp") < (1000000+upgraded*100000) ||
                   me->query("max_force") < 2000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor", 5);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1069,15 +1069,15 @@ int  do_upgrade(string arg)
                   me->add("max_force", -40);
                   me->add("combat_exp", -10000);
                   break;
-            case 5:  return notify_fail("ÄãµÄ·¨±¦"+HIB+"µÖ¿¹Á¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+            case 5:  return notify_fail("ä½ çš„æ³•å®"+HIB+"æŠµæŠ—åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
          }
-         write(fabao_ob->query("name")+"µÄ"+HIB+"µÖ¿¹Á¦"+NOR+"Ôö¼ÓÁË£¡\n");
+         write(fabao_ob->query("name")+"çš„"+HIB+"æŠµæŠ—åŠ›"+NOR+"å¢åŠ äº†ï¼\n");
       }
       else if( property == "armor_vs_force" )  {
          switch(stars)  {
             case 1: if( me->query("combat_exp") < (20000+upgraded*16000) ||
                   me->query("max_force") < 500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor_vs_force", 20);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1088,7 +1088,7 @@ int  do_upgrade(string arg)
                   break;
             case 2: if( me->query("combat_exp") < (100000+upgraded*80000) ||
                   me->query("max_force") < 1000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->set("armor_prop/armor_vs_force", 30);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1099,7 +1099,7 @@ int  do_upgrade(string arg)
                   break;
             case 3: if( me->query("combat_exp") < (500000+upgraded*100000) ||
                   me->query("max_force") < 1500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor_vs_force", 40);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1110,7 +1110,7 @@ int  do_upgrade(string arg)
                   break;
             case 4: if( me->query("combat_exp") < (1000000+upgraded*100000) ||
                   me->query("max_force") < 2000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor_vs_force", 50);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1119,15 +1119,15 @@ int  do_upgrade(string arg)
                   }
                   me->add("max_force", -80);
                   break;
-            case 5:  return notify_fail("ÄãµÄ·¨±¦"+HIM+"ÄÚ¹¦µÖ¿¹Á¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+            case 5:  return notify_fail("ä½ çš„æ³•å®"+HIM+"å†…åŠŸæŠµæŠ—åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
          }
-         write(fabao_ob->query("name")+"µÄ"+HIM+"ÄÚ¹¦µÖ¿¹Á¦"+NOR+"Ôö¼ÓÁË£¡\n");
+         write(fabao_ob->query("name")+"çš„"+HIM+"å†…åŠŸæŠµæŠ—åŠ›"+NOR+"å¢åŠ äº†ï¼\n");
       }
       else if( property == "spells" )  {
          switch(stars)   {
             case 1: if( me->query("combat_exp") < (20000+upgraded*36000) ||
                   me->query("max_mana") < 500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/spells", 1);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1139,7 +1139,7 @@ int  do_upgrade(string arg)
                   break;
             case 2: if( me->query("combat_exp") < (200000+upgraded*60000) ||
                   me->query("max_mana") < 1000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/spells", 1);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1151,7 +1151,7 @@ int  do_upgrade(string arg)
                   break;
             case 3: if( me->query("combat_exp") < (500000+upgraded*100000) ||
                   me->query("max_mana") < 1500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/spells", 2);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1163,7 +1163,7 @@ int  do_upgrade(string arg)
                   break;
             case 4: if( me->query("combat_exp") < (1000000+upgraded*100000) ||
                   me->query("max_mana") < 2000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/spells", 2);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1173,15 +1173,15 @@ int  do_upgrade(string arg)
                   me->add("max_mana", -40);
                   me->add("combat_exp", -20000);
                   break;
-            case 5:  return notify_fail("ÄãµÄ·¨±¦"+HIC+"Ä§·¨¹¥»÷Á¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+            case 5:  return notify_fail("ä½ çš„æ³•å®"+HIC+"é­”æ³•æ”»å‡»åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
          }
-         write(fabao_ob->query("name")+"µÄ"+HIC+"Ä§·¨¹¥»÷Á¦"+NOR+"Ôö¼ÓÁË£¡\n");
+         write(fabao_ob->query("name")+"çš„"+HIC+"é­”æ³•æ”»å‡»åŠ›"+NOR+"å¢åŠ äº†ï¼\n");
       }
       else if( property == "armor_vs_spells" )  {
          switch(stars)  {
             case 1: if( me->query("combat_exp") < (20000+upgraded*36000) || 
                   me->query("max_mana") < 500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor_vs_spells", 20);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1192,7 +1192,7 @@ int  do_upgrade(string arg)
                   break;
             case 2: if( me->query("combat_exp") < (20000+upgraded*80000) || 
                   me->query("max_mana") < 1000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor_vs_spells", 30);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1203,7 +1203,7 @@ int  do_upgrade(string arg)
                   break;
             case 3: if( me->query("combat_exp") < (500000+upgraded*100000) || 
                   me->query("max_mana") < 1500 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor_vs_spells", 40);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1214,7 +1214,7 @@ int  do_upgrade(string arg)
                   break;
             case 4: if( me->query("combat_exp") < (1000000+upgraded*100000) || 
                   me->query("max_mana") < 2000 )
-                     return notify_fail("²»¹»Éı¼¶Ìõ¼ş£¬ÇëÓÃ cost ²éÑ¯¡£\n");
+                     return notify_fail("ä¸å¤Ÿå‡çº§æ¡ä»¶ï¼Œè¯·ç”¨ cost æŸ¥è¯¢ã€‚\n");
                   fabao_ob->add("armor_prop/armor_vs_spells", 50);
                   fabao_ob->add("upgraded/"+property, 1);
                   if( upgraded == 5 )  {
@@ -1223,9 +1223,9 @@ int  do_upgrade(string arg)
                   }
                   me->add("max_mana", -100);
                   break;
-            case 5:  return notify_fail("ÄãµÄ·¨±¦"+HIW+"Ä§·¨µÖ¿¹Á¦"+NOR+"ÒÑ¾­²»ÄÜÔÙÉı¼¶ÁË¡£\n");
+            case 5:  return notify_fail("ä½ çš„æ³•å®"+HIW+"é­”æ³•æŠµæŠ—åŠ›"+NOR+"å·²ç»ä¸èƒ½å†å‡çº§äº†ã€‚\n");
          }
-         write(fabao_ob->query("name")+"µÄ"+HIW+"Ä§·¨µÖ¿¹Á¦"+NOR+"Ôö¼ÓÁË£¡\n");
+         write(fabao_ob->query("name")+"çš„"+HIW+"é­”æ³•æŠµæŠ—åŠ›"+NOR+"å¢åŠ äº†ï¼\n");
       } 
    }
   
@@ -1241,19 +1241,19 @@ int  do_change_name(string arg)
    object fabao_ob, me=this_player();
   
    if( !arg || arg == "") 
-      return notify_fail("ÇëÓÃ change_name ·¨±¦ ĞÂÖĞÎÄÃû À´¸ÄÃû¡£\n");
+      return notify_fail("è¯·ç”¨ change_name æ³•å® æ–°ä¸­æ–‡å æ¥æ”¹åã€‚\n");
       
    if( sscanf(arg, "%s %s", name, newname) != 2)
-      return notify_fail("ÇëÓÃ change_name ·¨±¦ ĞÂÖĞÎÄÃû À´¸ÄÃû¡£\n");
+      return notify_fail("è¯·ç”¨ change_name æ³•å® æ–°ä¸­æ–‡å æ¥æ”¹åã€‚\n");
    
    if( !objectp(fabao_ob=present(name, me)) )
-      return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷°¡¡£\n");
+      return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿å•Šã€‚\n");
 
    if(!fabao_ob->query("owner_id") || !fabao_ob->query("series_no")) 
-      return notify_fail("ÄÇ¸ö²»ÊÇ·¨±¦Ò®£¡\n");
+      return notify_fail("é‚£ä¸ªä¸æ˜¯æ³•å®è€¶ï¼\n");
 
    if( fabao_ob->query("equipped") )
-      return notify_fail("Äã±ØĞë·ÅÏÂ·¨±¦²ÅÄÜ¸ÄÃû¡£\n");
+      return notify_fail("ä½ å¿…é¡»æ”¾ä¸‹æ³•å®æ‰èƒ½æ”¹åã€‚\n");
    
    newname += "$NOR$";      
    arg = newname;
@@ -1301,7 +1301,7 @@ int  do_change_name(string arg)
    fabao_ob->set("name", arg);
    fabao_ob->save();     
    
-   write("¸Ä¶¯³É¹¦¡£\n");
+   write("æ”¹åŠ¨æˆåŠŸã€‚\n");
    return 1;
 }
       
@@ -1312,19 +1312,19 @@ int  do_change_id(string arg)
    string *id_list, *t_list;
   
    if( !arg || arg == "") 
-      return notify_fail("ÇëÓÃ change_id ·¨±¦ ĞÂÓ¢ÎÄÃû À´¸ÄÃû¡£\n");
+      return notify_fail("è¯·ç”¨ change_id æ³•å® æ–°è‹±æ–‡å æ¥æ”¹åã€‚\n");
       
    if( sscanf(arg, "%s %s", name, newname) != 2)
-      return notify_fail("ÇëÓÃ change_id ·¨±¦ ĞÂÓ¢ÎÄÃû À´¸ÄÃû¡£\n");
+      return notify_fail("è¯·ç”¨ change_id æ³•å® æ–°è‹±æ–‡å æ¥æ”¹åã€‚\n");
    
    if( !objectp(fabao_ob=present(name, me)) )
-      return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷°¡¡£\n");
+      return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿å•Šã€‚\n");
 
    if(!fabao_ob->query("owner_id") || !fabao_ob->query("series_no")) 
-      return notify_fail("ÄÇ¸ö²»ÊÇ·¨±¦Ò®£¡\n");
+      return notify_fail("é‚£ä¸ªä¸æ˜¯æ³•å®è€¶ï¼\n");
 
    if( fabao_ob->query("equipped") )
-      return notify_fail("Äã±ØĞë·ÅÏÂ·¨±¦²ÅÄÜ¸ÄÃû¡£\n");
+      return notify_fail("ä½ å¿…é¡»æ”¾ä¸‹æ³•å®æ‰èƒ½æ”¹åã€‚\n");
 
    if( !check_legal_id( newname ) )     return 1;
   
@@ -1339,7 +1339,7 @@ int  do_change_id(string arg)
    fabao_ob->set_name( fabao_ob->query("name"), id_list ); 
    fabao_ob->save();
    
-   write("¸Ä¶¯³É¹¦¡£\n");
+   write("æ”¹åŠ¨æˆåŠŸã€‚\n");
    return 1;
 }
 
@@ -1350,26 +1350,26 @@ int  do_change_desc(string arg)
    object fabao_ob, me=this_player();
   
    if( !arg || arg == "") 
-      return notify_fail("ÇëÓÃ change_desc ·¨±¦ ĞÂÃèÊö À´ÖØĞÂÃèÊö·¨±¦¡£\n");
+      return notify_fail("è¯·ç”¨ change_desc æ³•å® æ–°æè¿° æ¥é‡æ–°æè¿°æ³•å®ã€‚\n");
       
    if( sscanf(arg, "%s %s", name, newname) != 2)
-      return notify_fail("ÇëÓÃ change_desc ·¨±¦ ĞÂÃèÊö À´ÖØĞÂÃèÊö·¨±¦¡£\n");
+      return notify_fail("è¯·ç”¨ change_desc æ³•å® æ–°æè¿° æ¥é‡æ–°æè¿°æ³•å®ã€‚\n");
    
    if( !objectp(fabao_ob=present(name, me)) )
-      return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷°¡¡£\n");
+      return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿å•Šã€‚\n");
 
    if(!fabao_ob->query("owner_id") || !fabao_ob->query("series_no")) 
-      return notify_fail("ÄÇ¸ö²»ÊÇ·¨±¦Ò®£¡\n");
+      return notify_fail("é‚£ä¸ªä¸æ˜¯æ³•å®è€¶ï¼\n");
 
    if( fabao_ob->query("equipped") )
-      return notify_fail("Äã±ØĞë·ÅÏÂ·¨±¦²ÅÄÜ¸ÄÃû¡£\n");
+      return notify_fail("ä½ å¿…é¡»æ”¾ä¸‹æ³•å®æ‰èƒ½æ”¹åã€‚\n");
 
    if( !check_legal_name(newname, 60 ) )     return 1;
    
    fabao_ob->set("long", newname);
    fabao_ob->save();
    
-   write("¸Ä¶¯³É¹¦¡£\n");
+   write("æ”¹åŠ¨æˆåŠŸã€‚\n");
    return 1;
 }
       
@@ -1379,25 +1379,25 @@ int  do_change_unit(string arg)
    object fabao_ob, me=this_player();
   
    if( !arg || arg == "") 
-      return notify_fail("ÇëÓÃ change_unit ·¨±¦ µ¥Î» À´Ö¸¶¨·¨±¦µ¥Î»¡£\n");
+      return notify_fail("è¯·ç”¨ change_unit æ³•å® å•ä½ æ¥æŒ‡å®šæ³•å®å•ä½ã€‚\n");
       
    if( sscanf(arg, "%s %s", name, newname) != 2)
-      return notify_fail("ÇëÓÃ change_unit ·¨±¦ µ¥Î» À´Ö¸¶¨·¨±¦µ¥Î»¡£\n");
+      return notify_fail("è¯·ç”¨ change_unit æ³•å® å•ä½ æ¥æŒ‡å®šæ³•å®å•ä½ã€‚\n");
    
    if( !objectp(fabao_ob=present(name, me)) )
-      return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷°¡¡£\n");
+      return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿å•Šã€‚\n");
 
    if(!fabao_ob->query("owner_id") || !fabao_ob->query("series_no")) 
-      return notify_fail("ÄÇ¸ö²»ÊÇ·¨±¦Ò®£¡\n");
+      return notify_fail("é‚£ä¸ªä¸æ˜¯æ³•å®è€¶ï¼\n");
 
    if( fabao_ob->query("equipped") )
-      return notify_fail("Äã±ØĞë·ÅÏÂ·¨±¦²ÅÄÜ¸ÄÃû¡£\n");
+      return notify_fail("ä½ å¿…é¡»æ”¾ä¸‹æ³•å®æ‰èƒ½æ”¹åã€‚\n");
 
    if( !check_legal_name(newname, 2 ) )     return 1;
    
    fabao_ob->set("unit", newname);
    fabao_ob->save();
    
-   write("¸Ä¶¯³É¹¦¡£\n");
+   write("æ”¹åŠ¨æˆåŠŸã€‚\n");
    return 1;
 }

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit NPC;
@@ -8,13 +8,13 @@ int give_me(object ob);
 
 void create()
 {
-       set_name("¾¨ÎÞµÐ", ({"jing wudi", "jing"}));
+       set_name("é²¸æ— æ•Œ", ({"jing wudi", "jing"}));
 
-set("long","Éí¸ß°ËÕÉ£¬°ò´óÑüÔ²£®ºÅ³Æ¶«º£µÚÒ»ÓÂÊ¿¡£
-Ë®×åÐèÓÐËû·¢µÄÑüÅÆ²ÅÄÜ×ÔÓÉ³öÈëÓÚË®¾§¹¬ÖÐ¡£\n");
-       set("gender", "ÄÐÐÔ");
+set("long","èº«é«˜å…«ä¸ˆï¼Œè†€å¤§è…°åœ†ï¼Žå·ç§°ä¸œæµ·ç¬¬ä¸€å‹‡å£«ã€‚
+æ°´æ—éœ€æœ‰ä»–å‘çš„è…°ç‰Œæ‰èƒ½è‡ªç”±å‡ºå…¥äºŽæ°´æ™¶å®«ä¸­ã€‚\n");
+       set("gender", "ç”·æ€§");
        set("age", 56);
-        set("title", "½«¾ü");
+        set("title", "å°†å†›");
         set("per", 10);
         set("str", 35);
    set("con", 30);
@@ -49,9 +49,9 @@ set("long","Éí¸ß°ËÕÉ£¬°ò´óÑüÔ²£®ºÅ³Æ¶«º£µÚÒ»ÓÂÊ¿¡£
    set("mana_factor", 40);
    set("have", 1);
 
-    create_family("¶«º£Áú¹¬", 2, "Ë®×å");
+    create_family("ä¸œæµ·é¾™å®«", 2, "æ°´æ—");
         set("inquiry", ([
-                "ÑüÅÆ": (: give_me :),
+                "è…°ç‰Œ": (: give_me :),
                 "pai": (: give_me :),
         ]) );
 
@@ -81,13 +81,13 @@ int give_me(object ob)
    who=this_player();
    me=this_object();
 
-   if( (string)who->query("family/family_name")!="¶«º£Áú¹¬" ) {
+   if( (string)who->query("family/family_name")!="ä¸œæµ·é¾™å®«" ) {
      if( (int)who->query_temp("pending/ask_time") >= 3) {
-        message_vision("$NÍ»È»ÌøÆð£¬¶ñºÝºÝµÄµÉ×Å$nËµ£º¿´À´ÄãÊÇ²»Ïë»îÁË£¡\n", me, who);
+        message_vision("$Nçªç„¶è·³èµ·ï¼Œæ¶ç‹ ç‹ çš„çžªç€$nè¯´ï¼šçœ‹æ¥ä½ æ˜¯ä¸æƒ³æ´»äº†ï¼\n", me, who);
         command("kill " + who->query("id"));
         return 1;
         }
-     message_vision("$NÐ±Ð±µØî©ÁË$nÒ»ÑÛ£¬Ëµ£º´Ë²»×ãÎªÍâÈËµÀÒ²£¡\n", me, who);
+     message_vision("$Næ–œæ–œåœ°çžŸäº†$nä¸€çœ¼ï¼Œè¯´ï¼šæ­¤ä¸è¶³ä¸ºå¤–äººé“ä¹Ÿï¼\n", me, who);
      who->add_temp("pending/ask_time", 1);
      return 1;
    }
@@ -97,6 +97,6 @@ int give_me(object ob)
      me->delete("have");
      return 1;
    }
-   message_vision("$N¶Ô$nÎÞÄÎµÄÒ»ÉìÊÖ£¬Ëµ£º½ñÈÕÑüÅÆÒÑ·¢ÍêÁË£¬Ã÷ÈÕÔÚÀ´Áì°É¡£\n", me, who);
+   message_vision("$Nå¯¹$næ— å¥ˆçš„ä¸€ä¼¸æ‰‹ï¼Œè¯´ï¼šä»Šæ—¥è…°ç‰Œå·²å‘å®Œäº†ï¼Œæ˜Žæ—¥åœ¨æ¥é¢†å§ã€‚\n", me, who);
    return 1;
 }

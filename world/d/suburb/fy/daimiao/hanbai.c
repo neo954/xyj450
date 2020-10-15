@@ -3,10 +3,10 @@
 inherit ROOM;
 void create()
 {
-  set("short","����Ժ");
+  set("short","汉柏院");
   set("long",@LONG
-��ôִ������֦�ϲԾ��ĹŰ�����Ժ�У�Ϊ�������Ԫ��Ԫ��
-����̩ɽʱ��ֲ��
+五棵粗大虬曲，枝老苍劲的古柏耸立院中，为汉武帝于元封元年
+封禅泰山时所植。
 LONG
   );
   set("exits",([

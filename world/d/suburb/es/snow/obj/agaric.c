@@ -5,15 +5,15 @@ inherit F_FOOD;
 
 void create()
 {
-	set_name("ÁéÖ¥", ({ "magical agaric", "agaric" }) );
+	set_name("çµèŠ", ({ "magical agaric", "agaric" }) );
 	set_weight(35);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
 		set("long",
-			"ÁéÖ¥ÊÇÒ»ÖÖÏàµ±°º¹óµÄÒ©²Ä£¬µ«ÊÇĞí¶à·½Ê¿¶¼°ÑÁéÖ¥µ±³ÉÖØÒªµÄ\n"
-			"Ò©Æ·¡£\n");
-		set("unit", "Öê");
+			"çµèŠæ˜¯ä¸€ç§ç›¸å½“æ˜‚è´µçš„è¯æï¼Œä½†æ˜¯è®¸å¤šæ–¹å£«éƒ½æŠŠçµèŠå½“æˆé‡è¦çš„\n"
+			"è¯å“ã€‚\n");
+		set("unit", "æ ª");
 		set("value", 4000);
 		set("food_remaining", 1);
 		//set("eat_func", (: eat_tonic :) );

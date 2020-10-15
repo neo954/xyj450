@@ -6,11 +6,11 @@ inherit ROOM;
 void create()
 {
     seteuid(getuid());
-	set("short", "ÇàÊ¯Ğ¡¾¶");
+	set("short", "é’çŸ³å°å¾„");
 	set("long", @LONG
-ÈÆ¹ıÁËºóµî, ³öÏÖÔÚÑÛÇ°µÄÊÇÒ»¶°Ä¾ÔìÁ½²ã¸ßµÄÎİ×Ó¡£Îİ×ÓËÄÖÜ
-µÄÃÅ´°¶¼½ô½ôµÄ¹ØÖø, ÃÅ¿ÚÉÏ·½¹ÒÖøÒ»·½À¶É«ÁğÁ§ØÒ¶î, ÉÏÊé¡º²Ø¾­
-Â¥¡»Èı¸ö½ğ×Ö¡£ÃÅÅÔÁ¢ÖøÒ»¸öÊ¯±®(slab)¡£
+ç»•è¿‡äº†åæ®¿, å‡ºç°åœ¨çœ¼å‰çš„æ˜¯ä¸€æ ‹æœ¨é€ ä¸¤å±‚é«˜çš„å±‹å­ã€‚å±‹å­å››å‘¨
+çš„é—¨çª—éƒ½ç´§ç´§çš„å…³è‘—, é—¨å£ä¸Šæ–¹æŒ‚è‘—ä¸€æ–¹è“è‰²ç‰ç’ƒåŒ¾é¢, ä¸Šä¹¦ã€è—ç»
+æ¥¼ã€ä¸‰ä¸ªé‡‘å­—ã€‚é—¨æ—ç«‹è‘—ä¸€ä¸ªçŸ³ç¢‘(slab)ã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -19,12 +19,12 @@ LONG
 ]));
 
         set("item_desc", ([
-            "slab" : "Ê¯±®ÉÏĞ´Öø : \n\n"
-                     "    ·Ç\n"
-                     "    Ã©  ²»\n"
-                     "    É½  µÃ\n"
-                     "    µÜ  ½ø\n"
-                     "    ×Ó  Èë\n\n"
+            "slab" : "çŸ³ç¢‘ä¸Šå†™è‘— : \n\n"
+                     "    é\n"
+                     "    èŒ…  ä¸\n"
+                     "    å±±  å¾—\n"
+                     "    å¼Ÿ  è¿›\n"
+                     "    å­  å…¥\n\n"
            ]) );
 
     setup();
@@ -43,12 +43,12 @@ void reset()
 
 int valid_leave(object me, string dir)
 {
-     if ( dir=="enter" && (string)this_player()->query("family/family_name") != "Ã©É½ÅÉ")      
-          return notify_fail("\nÒ»µÀÎŞĞÎµÄÇ½µ²×¡ÁËÃÅ¿Ú, ²îµã°ÑÄãµÄ±Ç×Ó¸ø×²±âÁË¡£\n\n");
-     if ( dir=="enter" && (string)this_player()->query("family/family_name") == "Ã©É½ÅÉ") 
+     if ( dir=="enter" && (string)this_player()->query("family/family_name") != "èŒ…å±±æ´¾")      
+          return notify_fail("\nä¸€é“æ— å½¢çš„å¢™æŒ¡ä½äº†é—¨å£, å·®ç‚¹æŠŠä½ çš„é¼»å­ç»™æ’æ‰äº†ã€‚\n\n");
+     if ( dir=="enter" && (string)this_player()->query("family/family_name") == "èŒ…å±±æ´¾") 
          {
-          message_vision("\n$NÍÆ¿ªÃÅ×ßÁË½øÈ¥, Ë³ÊÖ°ÑÃÅ¹ØÁËÆğÀ´¡£\n\n", this_player());
-          tell_room(__DIR__"book_room1", "Äã¿´µ½ÃÅ±»ÍÆÁË¿ªÀ´, ÓĞÈË×ßÁË½øÀ´²¢ËæÊÖ°ÑÃÅ´øÉÏ¡£\n\n");
+          message_vision("\n$Næ¨å¼€é—¨èµ°äº†è¿›å», é¡ºæ‰‹æŠŠé—¨å…³äº†èµ·æ¥ã€‚\n\n", this_player());
+          tell_room(__DIR__"book_room1", "ä½ çœ‹åˆ°é—¨è¢«æ¨äº†å¼€æ¥, æœ‰äººèµ°äº†è¿›æ¥å¹¶éšæ‰‹æŠŠé—¨å¸¦ä¸Šã€‚\n\n");
           ::valid_leave(me, dir);
          }
      return 1;

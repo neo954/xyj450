@@ -7,17 +7,17 @@ inherit SWORD;
 
 void create()
 {
-	set_name( HIW "Ğ°½£´©Áé" NOR, ({ "soulimpaler", "sword" }) );
+	set_name( HIW "é‚ªå‰‘ç©¿çµ" NOR, ({ "soulimpaler", "sword" }) );
 	set_weight(7000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
-		set("long", "ÕâÊÇÒ»°ÑÑªºìÉ«µÄµÄ³¤½££¬·İÁ¿´óÔ¼ÓĞÊ®À´½ï×óÓÒ¡£\n");
+		set("unit", "æŠŠ");
+		set("long", "è¿™æ˜¯ä¸€æŠŠè¡€çº¢è‰²çš„çš„é•¿å‰‘ï¼Œä»½é‡å¤§çº¦æœ‰åæ¥æ–¤å·¦å³ã€‚\n");
 		set("value", 4000000);
 		set("material", "crimsonsteel");
-		set("wield_msg", "$N¡¸à§¡¹µØÒ»Éù³é³öÒ»°Ñ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unequip_msg", "$N½«ÊÖÖĞµÄ$n²åÈë±³ááµÄ½£ÇÊ¡£\n");
+		set("wield_msg", "$Nã€Œå”°ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥èƒŒå¾Œçš„å‰‘é˜ã€‚\n");
 	}
 	init_sword(80);
 	setup();

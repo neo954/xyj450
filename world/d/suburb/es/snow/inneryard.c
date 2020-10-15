@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "Ìì¾®");
+	set("short", "å¤©äº•");
 	set("long", @LONG
-ÕâÀïÊÇ´¾·çÎä¹ÝÖÐµÄÌì¾®£¬ÍùÎ÷×ß¿ÉÒÔ»Øµ½ÕýÌü£¬Íù±±±ßÊÇÊé·¿£¬
-ÄÏ±ßÊÇÕÐ´ý¿ÍÈËµÄÏá·¿£¬Íù¶«Ò»Ìõ³¤ÀÈÍ¨ÍùÎä¹ÝÄÚÔº£¬Ìì¾®ÖÐÖÖÂúÁËÐí
-¶àÆæ»¨Òì²Ý£¬ÖÐÑëÁ¢ÖøÒ»¸ùÊ¯Öù(pillar)£¬ÉÏÃæËÆºõ¿ÌÖø×Ö¡£
+è¿™é‡Œæ˜¯æ·³é£Žæ­¦é¦†ä¸­çš„å¤©äº•ï¼Œå¾€è¥¿èµ°å¯ä»¥å›žåˆ°æ­£åŽ…ï¼Œå¾€åŒ—è¾¹æ˜¯ä¹¦æˆ¿ï¼Œ
+å—è¾¹æ˜¯æ‹›å¾…å®¢äººçš„åŽ¢æˆ¿ï¼Œå¾€ä¸œä¸€æ¡é•¿å»Šé€šå¾€æ­¦é¦†å†…é™¢ï¼Œå¤©äº•ä¸­ç§æ»¡äº†è®¸
+å¤šå¥‡èŠ±å¼‚è‰ï¼Œä¸­å¤®ç«‹è‘—ä¸€æ ¹çŸ³æŸ±(pillar)ï¼Œä¸Šé¢ä¼¼ä¹Žåˆ»è‘—å­—ã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 4 */
@@ -18,7 +18,7 @@ LONG
   "east" : "/d/suburb/es/snow/innerhall",
 ]));
 	set("item_desc", ([ /* sizeof() == 1 */
-  "pillar" : "Ê¯ÖùÉÏ¿ÌÖø£º½£ÆøÖ¸Ìì¡¢½£ÐÄÄÚÁ²¡¢½£Ã¢²»ÏÔ¡¢½£ÉñÈçµç¡£
+  "pillar" : "çŸ³æŸ±ä¸Šåˆ»è‘—ï¼šå‰‘æ°”æŒ‡å¤©ã€å‰‘å¿ƒå†…æ•›ã€å‰‘èŠ’ä¸æ˜¾ã€å‰‘ç¥žå¦‚ç”µã€‚
 ",
 ]));
 	set("no_clean_up", 0);

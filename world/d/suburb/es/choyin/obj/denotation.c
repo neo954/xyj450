@@ -4,11 +4,11 @@ inherit ITEM;
 
 void create()
 {
-	set_name("¹¦µÂÏä", ({ "denotation box", "box" }) );
-	set("unit", "¸ö");
+	set_name("åŠŸå¾·ç®±", ({ "denotation box", "box" }) );
+	set("unit", "ä¸ª");
 	set("long",
-		"ÕâÊÇËÂÃí½ÓÊÜÉÆÄĞĞÅÅ®¾èÏ×ÏãÓÍÇ®µÄ¹¦µÂÏä£¬Äã¿ÉÒÔ°ÑÏë¾èµÄÇ®\n"
-		"·Å½øÈ¥¡£\n");
+		"è¿™æ˜¯å¯ºåº™æ¥å—å–„ç”·ä¿¡å¥³æçŒ®é¦™æ²¹é’±çš„åŠŸå¾·ç®±ï¼Œä½ å¯ä»¥æŠŠæƒ³æçš„é’±\n"
+		"æ”¾è¿›å»ã€‚\n");
 	set("value", 1);
 	set("no_get", 1);
 	set_max_encumbrance(10000);
@@ -27,7 +27,7 @@ void insert_object(object ob)
 		if (who->query("bellicosity") > 0)
 	//	&&	(random(val/10) > (int)who->query("kar")) )
 			who->add("bellicosity", - (val/100) );
-               write(who->name()+"µÄÉ±Æø½µµÍÁË£¡\n");	
+               write(who->name()+"çš„æ€æ°”é™ä½äº†ï¼\n");	
 }
 	seteuid(getuid());
 	destruct(ob);

@@ -5,14 +5,14 @@ inherit NPC;
 inherit F_VENDOR;
 void create()
 {
-	set_name("ÂôÃæµÄÀÏÈË", ({ "oldman" }) );
-	set("gender", "ÄÐÐÔ" );
+	set_name("å–é¢çš„è€äºº", ({ "oldman" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 65);
 	set("long",
 		"
-ÂôÃæµÄÀÏÈËÄê¼ÍÒÑ¾­ºÜ´óÁË£¬¶úÄ¿ÒÑ¾­ÓÐµã²»ÁéÁË£¬Ëµ»°Ò²²»Ì«Çå³þ£¬¾Í
-ÏóÊÇ´ó¶àÊýÕâÀàÃæ¹ÝÀÏ°åÒ»Ñù¾­¹ýÁË¼èÄÑÀ§¿àµÄÒ»Éú£¬¼ÈÃ»ÓÐ²úÒµ£¬Ò²Ã»
-ÓÐÇ×ÈË¡£µ½ÀÏÀ´»¹ÊÇÍ¬ÑùµÄ¼èÄÑÀ§¿à¡£
+å–é¢çš„è€äººå¹´çºªå·²ç»å¾ˆå¤§äº†ï¼Œè€³ç›®å·²ç»æœ‰ç‚¹ä¸çµäº†ï¼Œè¯´è¯ä¹Ÿä¸å¤ªæ¸…æ¥šï¼Œå°±
+è±¡æ˜¯å¤§å¤šæ•°è¿™ç±»é¢é¦†è€æ¿ä¸€æ ·ç»è¿‡äº†è‰°éš¾å›°è‹¦çš„ä¸€ç”Ÿï¼Œæ—¢æ²¡æœ‰äº§ä¸šï¼Œä¹Ÿæ²¡
+æœ‰äº²äººã€‚åˆ°è€æ¥è¿˜æ˜¯åŒæ ·çš„è‰°éš¾å›°è‹¦ã€‚
 \n");
 	set("combat_exp", 5);
 	set("attitude", "friendly");
@@ -23,8 +23,8 @@ void create()
 		"/obj/example/wineskin" : 50,
 	]) );
         set("inquiry", ([
-                "É±ÈË°¸" : "ÄÇ¼Ò»ïÓÐ°Ñµ¶£¬»áÅç»ðµÄµ¶£¬¾ÍÊÇËûÉ±µÄ£®\n",
-		"murder" : "ÄÇ¼Ò»ïÓÐ°Ñµ¶£¬»áÅç»ðµÄµ¶£¬¾ÍÊÇËûÉ±µÄ£®\n",
+                "æ€äººæ¡ˆ" : "é‚£å®¶ä¼™æœ‰æŠŠåˆ€ï¼Œä¼šå–·ç«çš„åˆ€ï¼Œå°±æ˜¯ä»–æ€çš„ï¼Ž\n",
+		"murder" : "é‚£å®¶ä¼™æœ‰æŠŠåˆ€ï¼Œä¼šå–·ç«çš„åˆ€ï¼Œå°±æ˜¯ä»–æ€çš„ï¼Ž\n",
         ]));
 
 	setup();
@@ -48,7 +48,7 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(10) ) {
 		case 0:
-command("say ÎÒ¿ì²»ÐÐÁË£¬ÄÃ¼¸Á½Òø×ÓÐÐÐÐºÃ°É£®\n");	
+command("say æˆ‘å¿«ä¸è¡Œäº†ï¼Œæ‹¿å‡ ä¸¤é“¶å­è¡Œè¡Œå¥½å§ï¼Ž\n");	
 			break;
 	}
 }
@@ -58,14 +58,14 @@ int accept_object(object me, object obj)
 	object ob;
 	if( obj->value() > 500 && (int) query("given") < 10)
 	{
-        command("say ¶àÐ»ÕâÎ»" + RANK_D->query_respect(me) +
-"£¬ÕâÐ¡µê¾ÍËÍÓÚÄã°É£®");
+        command("say å¤šè°¢è¿™ä½" + RANK_D->query_respect(me) +
+"ï¼Œè¿™å°åº—å°±é€äºŽä½ å§ï¼Ž");
 	ob = new(__DIR__"obj/qiju");
 	ob->move(me);
 	add("given",1);
 	}
 	else
-	command("say ¶àÐ»ÕâÎ»" + RANK_D->query_respect(me) + "\n");	
+	command("say å¤šè°¢è¿™ä½" + RANK_D->query_respect(me) + "\n");	
         return 1;
 }
 

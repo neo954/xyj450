@@ -3,8 +3,8 @@ inherit NPC;
 void create()
 {
 	seteuid(getuid());
-        set_name("¹¤½³µÄĞ¡º¢",({"kid","child"}));
-        set("gender","ÄĞĞÔ");
+        set_name("å·¥åŒ çš„å°å­©",({"kid","child"}));
+        set("gender","ç”·æ€§");
         set("age",7);
         set("str",25);
         set("con",20);

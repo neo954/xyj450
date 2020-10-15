@@ -4,12 +4,12 @@
 inherit STAFF;
 void create()
 {
-	set_name("Ã·Ä¾³¤µÊ" , ({ "chair" }) );
+	set_name("æ¢…æœ¨é•¿å‡³" , ({ "chair" }) );
 	set_weight(70000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ìõ");
+		set("unit", "æ¡");
 		set("value", 400);
 		set("material", "wood");
 	}

@@ -7,12 +7,12 @@ string look_sign(object me);
 
 void create()
 {
-        set("short", "���Ь��");
+        set("short", "李记鞋店");
         set("long", @LONG
-�����Ǿ�ʦ������һ��Ь�ꡣ��������������������ǰ�
-���ϵꡣ����ͦ��������һ������Ƥ�����ζ�����̨����ļ�
-���Ϸ����˸�ʽ��Ƥѥ�����м����������æµ��
-    ���ſ���һ���������(sign)��
+这里是京师中最大的一家鞋店。店主姓李，历经几代，已是百
+年老店。店铺挺大，弥漫着一种特殊皮革的气味。大柜台后面的架
+子上放满了各式的皮靴。店中几个伙计正在忙碌。
+    店门口有一块金字招牌(sign)。
 LONG
         );
         set("exits", ([
@@ -30,6 +30,6 @@ LONG
 
 string look_sign(object me)
 {
-        return HIY "ר����ʽЬ��\n"NOR;
+        return HIY "专卖各式鞋。\n"NOR;
 }
 

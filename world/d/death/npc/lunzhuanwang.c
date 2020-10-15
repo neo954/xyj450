@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 //puti.c
@@ -7,9 +7,9 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("��ת��", ({"lunzhuan wang", "wang"}));
-       set("title", "����ʮ��֮");
-       set("gender", "����");
+       set_name("轮转王", ({"lunzhuan wang", "wang"}));
+       set("title", "阴间十王之");
+       set("gender", "男性");
        set("age", 70);
    set("class", "youling");
        set("attitude", "peaceful");
@@ -35,7 +35,7 @@ void create()
    set_skill("tonsillit", 100);
    map_skill("spells", "gouhunshu");
    map_skill("force", "tonsillit");
-   create_family("���޵ظ�", 1, "���");
+   create_family("阎罗地府", 1, "你好");
 setup();
 
         carry_object("/d/obj/cloth/mangpao")->wear();

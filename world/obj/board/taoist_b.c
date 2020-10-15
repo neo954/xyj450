@@ -4,11 +4,11 @@ inherit BULLETIN_BOARD;
 
 void create()
 {
-	set_name("Ã©É½ÅÉÁôÑÔ°å", ({ "board" }) );
+	set_name("èŒ…å±±æ´¾ç•™è¨€æ¿", ({ "board" }) );
 	set("location", "/d/temple/temple1");
 	set("board_id", "taoist_b");
 	set("long",
-		"ÕâÊÇ¹©Ã©É½ÅÉµÜ×ÓÁôÑÔ¼ÇÊÂµÄÁôÑÔ°å¡£\n" );
+		"è¿™æ˜¯ä¾›èŒ…å±±æ´¾å¼Ÿå­ç•™è¨€è®°äº‹çš„ç•™è¨€æ¿ã€‚\n" );
 	setup();
 	set("capacity", 30);
 	replace_program(BULLETIN_BOARD);

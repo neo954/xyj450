@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // astral_vision.c
@@ -12,10 +12,10 @@ int cast(object me, object target)
    int skill;
 
    if( me->query_temp("apply/astral_vision") )
-     return notify_fail("���Ѿ�ʩչ�������۵ķ����ˡ�\n");
+     return notify_fail("你已经施展过阴阳眼的法术了。\n");
 
    if( (int)me->query("mana") < 30 )
-     return notify_fail("��ķ���������\n");
+     return notify_fail("你的法力不够。\n");
 
    skill = me->query_skill("spells");
 
@@ -23,7 +23,7 @@ int cast(object me, object target)
    me->receive_damage("sen", 5);
 
    message_vision(
-     HIB "$N΢һ���񣬱����۾����˼������ʩչ�������ۡ�������\n" NOR, me);
+     HIB "$N微一凝神，闭著眼睛念了几句咒语，施展「阴阳眼」法术。\n" NOR, me);
 
    me->add_temp("apply/astral_vision", 1);
    me->start_call_out( (: call_other, __FILE__, "remove_effect", me :), skill);
@@ -36,5 +36,5 @@ int cast(object me, object target)
 void remove_effect(object me)
 {
    me->add_temp("apply/astral_vision", -1);
-   tell_object(me, "��������۷���ʧЧ�ˡ�\n");
+   tell_object(me, "你的阴阳眼法术失效了。\n");
 }

@@ -7,8 +7,8 @@ void backattack();
 void create()
 {
 
-	set_name("大内高手", ({ "guard", "body guard" }) );
-	set("long", "这是一位大内高手，专门担任保护之责。\n");
+	set_name("澶у唴楂樻墜", ({ "guard", "body guard" }) );
+	set("long", "杩欐槸涓�浣嶅ぇ鍐呴珮鎵嬶紝涓撻棬鎷呬换淇濇姢涔嬭矗銆俓n");
 	set("attitude", "friendly");
 
 
@@ -48,8 +48,8 @@ void leave()
 {
 	object owner;
 	message("vision",
-		 name() + "说道：如再有变化，发哨为警！\n\n"
-		+ name() + "闪了闪就消失不见了。\n" , environment(),
+		 name() + "璇撮亾锛氬鍐嶆湁鍙樺寲锛屽彂鍝ㄤ负璀︼紒\n\n"
+		+ name() + "闂簡闂氨娑堝け涓嶈浜嗐�俓n" , environment(),
 		this_object() );
         if(objectp(owner=this_object()->query("possessed")))
 		owner->add_temp("max_guard",-1);
@@ -66,7 +66,7 @@ void invocation(object who, int level)
 	set_skill("move", 70 + random(level/2));
 	set("combat_exp", 100000 + random(level/4*level*level));
 	message("vision",
-		 name() + "喝道：大胆！竟敢和朝廷命官过不去！\n" NOR,
+		 name() + "鍠濋亾锛氬ぇ鑳嗭紒绔熸暍鍜屾湞寤峰懡瀹樿繃涓嶅幓锛乗n" NOR,
 		environment(), this_object() );
 	enemy = who->query_enemy();
 	i = sizeof(enemy);

@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "���");
+	set("short", "后殿");
 	set("long", @LONG
-һ�����ĺ��, ������һ��ҩʦ�����Ľ����������ܵ�ǽ��
-Ψ��ΨФ�زʻ���ʮ���޺�, ÿ���޺����Ա߲�д�����õ�����Ĺ�
-�̡�
+一间宽大的后殿, 正中有一尊药师如来的金身塑像。四周的墙上
+唯妙唯肖地彩绘著十八罗汉, 每个罗汉的旁边并写著他得道升天的过
+程。
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */

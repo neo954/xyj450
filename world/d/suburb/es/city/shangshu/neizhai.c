@@ -5,11 +5,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "��լ");
+        set("short", "内宅");
         set("long",@LONG
-��������߽����鸮����լ���п�һ���ǲ������˵ġ���լ�Ĳ�
-�ú����ţ�һ�еİ��趼�Եú���Ȼ���С���Ȼȥ���Σ���ˮ��ܽ��
-������ζ�����߾�������ʱ�����Ļ�԰��
+你轻轻地走进尚书府的内宅，男客一般是不让来此的。内宅的布
+置很素雅，一切的摆设都显得很自然，有「天然去雕饰，清水出芙蓉
+」的意味。西边就是你来时经过的花园。
 LONG
         );
 
@@ -21,7 +21,7 @@ LONG
 		__DIR__"npc/qing_chen":		1,
 		]) );
 
-	create_door("west", "����", "east", DOOR_CLOSED);
+	create_door("west", "帘子", "east", DOOR_CLOSED);
 
         setup();
         replace_program(ROOM);

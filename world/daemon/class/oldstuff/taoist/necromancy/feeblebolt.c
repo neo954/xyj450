@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // feeblebolt.c
@@ -18,22 +18,22 @@ int cast(object me, object target)
    ||   !target->is_character()
    ||   target->is_corpse()
    ||   target==me)
-     return notify_fail("ÄãÒª¶ÔË­Ê©Õ¹Õâ¸ö·¨Êõ£¿\n");
+     return notify_fail("ä½ è¦å¯¹è°æ–½å±•è¿™ä¸ªæ³•æœ¯ï¼Ÿ\n");
 
    if((int)me->query("mana") < 25 )
-     return notify_fail("ÄãµÄ·¨Á¦²»¹»£¡\n");
+     return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿï¼\n");
 
    if((int)me->query("sen") < 10 )
-     return notify_fail("ÄãµÄ¾«ÉñÃ»ÓĞ°ì·¨ÓĞĞ§¼¯ÖĞ£¡\n");
+     return notify_fail("ä½ çš„ç²¾ç¥æ²¡æœ‰åŠæ³•æœ‰æ•ˆé›†ä¸­ï¼\n");
 
    me->add("mana", -25);
    me->receive_damage("sen", 10);
 
    if( random(me->query("max_mana")) < 50 ) {
-     write("ÄãÊ§°ÜÁË¡£\n");
+     write("ä½ å¤±è´¥äº†ã€‚\n");
      return 1;
    }
-   msg = HIW "$N¿ÚÖĞà«à«µØÄîÖøÖäÎÄ£¬×óÊÖÒ»»Ó£¬ÊÖÖĞ¾ÛÆğÒ»ÍÅ°×¹âÉäÏò$n£¡\n\n" NOR;
+   msg = HIW "$Nå£ä¸­å–ƒå–ƒåœ°å¿µè‘—å’’æ–‡ï¼Œå·¦æ‰‹ä¸€æŒ¥ï¼Œæ‰‹ä¸­èšèµ·ä¸€å›¢ç™½å…‰å°„å‘$nï¼\n\n" NOR;
 
    ap = me->query_skill("spells");
    ap = ( ap * ap * ap / 4 ) * (int)me->query("sen") / 100;
@@ -42,15 +42,15 @@ int cast(object me, object target)
      damage = (int)me->query("max_mana") / 20 + random((int)me->query("eff_sen") / 10);
      damage -= (int)target->query("max_mana") / 30 + random((int)me->query("eff_sen") / 15);
      if( damage > 0 ) {
-        msg +=  HIR "½á¹û¡¸àÍ¡¹µØÒ»Éù£¬°×¹â´Ó$pÉíÉÏÍ¸Ìå¶ø¹ı£¬ÍÏ³öÒ»Ìõ³¤³¤µÄºÚÆøÖ±Éäµ½\n"
-             "Á½ÈıÕÉÍâµÄµØÏÂ£¡\n" NOR;
+        msg +=  HIR "ç»“æœã€Œå—¤ã€åœ°ä¸€å£°ï¼Œç™½å…‰ä»$pèº«ä¸Šé€ä½“è€Œè¿‡ï¼Œæ‹–å‡ºä¸€æ¡é•¿é•¿çš„é»‘æ°”ç›´å°„åˆ°\n"
+             "ä¸¤ä¸‰ä¸ˆå¤–çš„åœ°ä¸‹ï¼\n" NOR;
         target->receive_damage("sen", damage, me);
         target->receive_wound("sen", damage/3, me);
         me->improve_skill("necromancy", 1, 1);
      } else
-        msg += "½á¹û¡¸àÍ¡¹µØÒ»Éù£¬°×¹â´Ó$pÉíÉÏÍ¸Ìå¶ø¹ı£¬ÎŞÉùÎŞÏ¢µØ×êÈëµØÏÂ£¡\n";
+        msg += "ç»“æœã€Œå—¤ã€åœ°ä¸€å£°ï¼Œç™½å…‰ä»$pèº«ä¸Šé€ä½“è€Œè¿‡ï¼Œæ— å£°æ— æ¯åœ°é’»å…¥åœ°ä¸‹ï¼\n";
    } else
-     msg += "µ«ÊÇ±»$n¶ã¿ªÁË¡£\n";
+     msg += "ä½†æ˜¯è¢«$nèº²å¼€äº†ã€‚\n";
 
    message_vision(msg, me, target);
    if( damage > 0 ) COMBAT_D->report_status(target);

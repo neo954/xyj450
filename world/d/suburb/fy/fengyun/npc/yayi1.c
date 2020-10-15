@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-        set_name("·çÔÆĞ¡ÑÃÒÛ", ({ "yayi", "ya" }) );
+        set_name("é£äº‘å°è¡™å½¹", ({ "yayi", "ya" }) );
         set("long",
-                "ÕıÔÚÉÏÌÃµÄÑÃÒÛ£¬Ç§Íò²»ÒªÈÇËûÃÇ\n");
+                "æ­£åœ¨ä¸Šå ‚çš„è¡™å½¹ï¼Œåƒä¸‡ä¸è¦æƒ¹ä»–ä»¬\n");
 
         set("attitude", "heroism");
 	set("vendetta_mark", "authority");
@@ -33,7 +33,7 @@ void create()
         set_temp("apply/move", 100);
         set("chat_chance", 1);
         set("chat_msg", ({
-"·çÔÆÑÃÒÛµÍÉùĞûµÀ£ºÍş¡«¡«¡«¡«Îä¡«¡«¡«¡«\n"
+"é£äº‘è¡™å½¹ä½å£°å®£é“ï¼šå¨ï½ï½ï½ï½æ­¦ï½ï½ï½ï½\n"
         }) );
 
         setup();

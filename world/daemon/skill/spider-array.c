@@ -12,8 +12,8 @@ int form_array(object leader)
 
 	member = leader->query_team();
 	if( sizeof(member) != 8 )
-		return notify_fail("ÁéÖë½£Õó¹²Ðè°ËÈË£¬ÉÙÒ»¸ö¶àÒ»¸ö¶¼²»ÐÐ¡£\n");
-	message_vision( HIG "$NÂÊÁìÖÚÈËËÄÏÂÕ¾¶¨°Ë¸ö·½Î»£¬×é³ÉÁË¡¸ÁéÖë½£Õó¡¹£¡\n" NOR, leader);
+		return notify_fail("çµè››å‰‘é˜µå…±éœ€å…«äººï¼Œå°‘ä¸€ä¸ªå¤šä¸€ä¸ªéƒ½ä¸è¡Œã€‚\n");
+	message_vision( HIG "$NçŽ‡é¢†ä¼—äººå››ä¸‹ç«™å®šå…«ä¸ªæ–¹ä½ï¼Œç»„æˆäº†ã€Œçµè››å‰‘é˜µã€ï¼\n" NOR, leader);
 	return 1;
 }
 int effective_level() { return 20;}

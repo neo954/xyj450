@@ -4,13 +4,13 @@ void use_poison();
 
 void create()
 {
-        set_name("Ë®Éß", ({ "snake" }) );
-        set("race", "Ò°ÊÞ");
+        set_name("æ°´è›‡", ({ "snake" }) );
+        set("race", "é‡Žå…½");
         set("age", 4);
 	set("yes_carry", 1);
-        set("long", "Ò»ÌõË®Í°°ã´ÖµÄË®Éß¡£\n");
+        set("long", "ä¸€æ¡æ°´æ¡¶èˆ¬ç²—çš„æ°´è›‡ã€‚\n");
 
-        set("limbs", ({ "Í·²¿", "ÉíÌå", "Î²°Í", "Æß´ç" }) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å°¾å·´", "ä¸ƒå¯¸" }) );
         set("verbs", ({ "bite" }) );
         set("attitude", "aggressive");
         set_skill("dodge", 50);
@@ -30,7 +30,7 @@ void use_poison()
         if( sizeof(enemy) ) ob = enemy[random(sizeof(enemy))];
 
         tell_object(ob,
-"Äã¾õµÃÁ³ÉÏ¾çÍ´£¬ÉìÊÖÒ»Ãþ·¢ÏÖÁ½¸ö¶¾ÑÀÓ¡ºÛ¡£\n");
+"ä½ è§‰å¾—è„¸ä¸Šå‰§ç—›ï¼Œä¼¸æ‰‹ä¸€æ‘¸å‘çŽ°ä¸¤ä¸ªæ¯’ç‰™å°ç—•ã€‚\n");
         if( random(query("combat_exp")) > (int)ob->query("combat_exp") )
                 ob->apply_condition("snake_poison", 
                 (int)this_player()->query_condition("snake_poison")

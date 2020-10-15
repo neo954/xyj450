@@ -4,9 +4,9 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "���");
+	set("short", "书库");
 	set("long", @LONG
-����һ��ʲôҲû�еĿշ��䡣
+这是一间什么也没有的空房间。
 LONG
 	);
 	set("exits", ([ /* sizeof() == 1 */

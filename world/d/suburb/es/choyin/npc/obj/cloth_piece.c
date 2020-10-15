@@ -4,14 +4,14 @@ inherit ITEM;
 
 void create()
 {
-	set_name("´ÓÊÙÒÂËºÏÂµÄ²¼Ìõ", ({ "shroud piece", "piece", "shroud" }));
+	set_name("ä»å¯¿è¡£æ’•ä¸‹çš„å¸ƒæ¡", ({ "shroud piece", "piece", "shroud" }));
 	set_weight(200);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ìõ");
+		set("unit", "æ¡");
 		set("long",
-			"ÕâÌõ²¼ÌõÊÇ´ÓÒ»¼şÊÙÒÂÉÏËºÏÂÀ´µÄ£¬ÉÏÃæÃÜÃÜÂéÂéĞ´ÁËĞí\¶à×Ö¡£\n");
+			"è¿™æ¡å¸ƒæ¡æ˜¯ä»ä¸€ä»¶å¯¿è¡£ä¸Šæ’•ä¸‹æ¥çš„ï¼Œä¸Šé¢å¯†å¯†éº»éº»å†™äº†è®¸\å¤šå­—ã€‚\n");
 		set("material", "cloth");
 		set("skill", ([
 			"name": 		"spells",		// name of the skill

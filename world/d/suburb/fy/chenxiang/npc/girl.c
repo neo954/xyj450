@@ -4,18 +4,18 @@
 inherit NPC;
 void create()
 {
-	set_name("Å©¼ÒÅ®", ({ "nongnu" }) );
-	set("gender", "Å®ĞÔ" );
+	set_name("å†œå®¶å¥³", ({ "nongnu" }) );
+	set("gender", "å¥³æ€§" );
 	set("age", 15);
 	set("combat_exp", 50);
 	set("attitude", "friendly");
 	set("per",20);
-	set("arrive_msg", "±Ä±ÄÌøÌøµØÅÜÁË¹ıÀ´");
-	set("leave_msg", "ÅÜ¿ªÁË");
+	set("arrive_msg", "è¹¦è¹¦è·³è·³åœ°è·‘äº†è¿‡æ¥");
+	set("leave_msg", "è·‘å¼€äº†");
         set("chat_chance", 15);
         set("chat_msg", ({
-                "Å©¼ÒÅ®Ğ¦µÀ£ºÇëÄãÒ»ÆğÌß£¬ºÃ²»ºÃÂğ£¿\n",
-                "Å©¼ÒÅ®ÄÃÆğ¼¦Ã«ë¦×ÓÌßÁË¼¸ÏÂ¡£\n",
+                "å†œå®¶å¥³ç¬‘é“ï¼šè¯·ä½ ä¸€èµ·è¸¢ï¼Œå¥½ä¸å¥½å—ï¼Ÿ\n",
+                "å†œå®¶å¥³æ‹¿èµ·é¸¡æ¯›æ¯½å­è¸¢äº†å‡ ä¸‹ã€‚\n",
 		                (: random_move :)
 
         }) );

@@ -4,15 +4,15 @@ inherit ITEM;
 
 void create()
 {
-        set_name("·ûÖä¼ò½é", ({ "spellsbook" }));
+        set_name("ç¬¦å’’ç®€ä»‹", ({ "spellsbook" }));
         set_weight(300);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "±¾");
+                set("unit", "æœ¬");
                 set("long",
 
-"ÕâËÆºõÊÇÒ»±¾·ûÖäµÄ¼ò½é£¬ÀïÃæ»­×ÅÒ»Ğ©Ï¡Ææ¹Å¹ÖµÄ·ûºÅ\n"
+"è¿™ä¼¼ä¹æ˜¯ä¸€æœ¬ç¬¦å’’çš„ç®€ä»‹ï¼Œé‡Œé¢ç”»ç€ä¸€äº›ç¨€å¥‡å¤æ€ªçš„ç¬¦å·\n"
                 );
                 set("value", 260);
                 set("material", "paper");
@@ -21,7 +21,7 @@ void create()
                     "exp_required": 100, // minimum combat experience equired
                         "sen_cost":  30, // gin cost every time study this
                       "difficulty":  10,//the base int to learn this skill
-        // modify is gin_cost's (difficulty - int)*5%³)
+        // modify is gin_cost's (difficulty - int)*5%ï¿½)
                     "max_skill":  20 // the maximum level you can learn
 
         // from this object.

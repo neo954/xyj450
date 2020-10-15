@@ -6,17 +6,17 @@ inherit WHIP;
 void create()
 
 {
-     set_name("·÷³¾", ({"whip"}) );
+     set_name("æ‹‚å°˜", ({"whip"}) );
      set_weight(1000);
      if( clonep() )
              set_default_object(__FILE__);
      else {
-     set("unit", "±ú");
-     set("long", "Ò»±úÒÔÌÙÄ¾Îª±ú, ÂíÎ²ÎªË¿µÄ·÷³¾\n");
+     set("unit", "æŸ„");
+     set("long", "ä¸€æŸ„ä»¥è—¤æœ¨ä¸ºæŸ„, é©¬å°¾ä¸ºä¸çš„æ‹‚å°˜\n");
      set("value", 100);
      set("martial", "wood");
-     set("wield_msg", "$N´Ó±³ºóµÄÑü´ø³é³öÒ»±ú$nÎÕÔÚÊÖÖĞ¡£\n");
-     set("unwield_msg", "$N½«ÊÖÖĞµÄ$n·ÅÏÂĞ±²åÔÚ±³ºóµÄÑü´øÉÏ¡£\n");
+     set("wield_msg", "$Nä»èƒŒåçš„è…°å¸¦æŠ½å‡ºä¸€æŸ„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+     set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næ”¾ä¸‹æ–œæ’åœ¨èƒŒåçš„è…°å¸¦ä¸Šã€‚\n");
      }
      init_whip(10);
     

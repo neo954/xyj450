@@ -10,14 +10,14 @@ int conjure(object me, object target)
 	lvl = (int) me->query_skill("magic");
 	lvl += (int) me->query("spi");
         if ( lvl <= 80)
-                return notify_fail("你法术不够高！\n");
+                return notify_fail("浣犳硶鏈笉澶熼珮锛乗n");
 	if( me->query("atman") < 30 )
-		return notify_fail("你的灵力不够！\n");
+		return notify_fail("浣犵殑鐏靛姏涓嶅锛乗n");
         if( me->query("gin") <= 15 )
-                return notify_fail("你的精不够！\n");
+                return notify_fail("浣犵殑绮句笉澶燂紒\n");
 	me->add("atman", -30);
 	me->receive_damage("gin", 15);
-	message_vision(HIW "$N微一凝神，闭著眼睛使出八识神通中的灵识．．．\n" NOR, me);
+	message_vision(HIW "$N寰竴鍑濈锛岄棴钁楃溂鐫涗娇鍑哄叓璇嗙閫氫腑鐨勭伒璇嗭紟锛庯紟\n" NOR, me);
 	        me->add_temp("apply/astral_vision", 1);
         me->start_call_out( (: call_other, __FILE__, "remove_effect", me :), lvl);
         if( me->is_fighting() ) me->start_busy(3);
@@ -27,6 +27,6 @@ int conjure(object me, object target)
 void remove_effect(object me)
 {
         me->add_temp("apply/astral_vision", -1);
-        tell_object(me, "你的灵识失效了。\n");
+        tell_object(me, "浣犵殑鐏佃瘑澶辨晥浜嗐�俓n");
 }
 

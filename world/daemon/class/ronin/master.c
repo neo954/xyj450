@@ -5,8 +5,8 @@ inherit F_MASTER;
 
 void create()
 {
-	set_name("Ôç´¨Ö±Òå", ({ "master ronin", "ronin" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("æ—©å·ç›´ä¹‰", ({ "master ronin", "ronin" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 52);
 	set("attitude", "peaceful");
 
@@ -24,7 +24,7 @@ void create()
 	set("chat_msg", ({
 	}) );
 */
-	create_family("¹íóÒ¹İÀËÈË", 11, "×ÚµÀ");
+	create_family("é¬¼ç¬ é¦†æµªäºº", 11, "å®—é“");
 
 /*
 	set("chat_chance_combat", 80);
@@ -57,8 +57,8 @@ void attempt_apprentice(object me)
 {
 	command("look " + me->query("id"));
 	if( me->can_afford(100) ) {
-		command("say ÎÒÃÇ»¨×Ï»áÖ»ÊÕ»¯×Ó£¬" + RANK_D->query_respect(me)
-			+ "Äú»¹ÊÇ»ØÈ¥Ïí¸£°É¡£\n");
+		command("say æˆ‘ä»¬èŠ±ç´«ä¼šåªæ”¶åŒ–å­ï¼Œ" + RANK_D->query_respect(me)
+			+ "æ‚¨è¿˜æ˜¯å›å»äº«ç¦å§ã€‚\n");
 		return;
 	} else {
 		command("nod");

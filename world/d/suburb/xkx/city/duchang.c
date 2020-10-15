@@ -5,16 +5,16 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "¶Ä³¡");
+	set("short", "èµŒåœº");
 	set("long", @LONG
-ÕâÀïÊÇ¶Ä³¡µÄ´óÌÃ£¬ËÄÖÜµÄ·¿¼äÀï´«³öÀ´ßºÎåºÈÁùµÄ¶Ä²©Éù¡£
-Î÷±ßÊÇ¶Ä¡¸´óÐ¡¡¹µÄ·¿¼ä£¬±±±ßÊÇ¶Ä¡¸ÅÆ¾Å¡¹µÄ·¿¼ä(not yet available)¡£
-Ç½ÉÏ¹Ò×ÅÒ»¿éÅÆ×Ó(paizi)¡£
+è¿™é‡Œæ˜¯èµŒåœºçš„å¤§å ‚ï¼Œå››å‘¨çš„æˆ¿é—´é‡Œä¼ å‡ºæ¥å†äº”å–å…­çš„èµŒåšå£°ã€‚
+è¥¿è¾¹æ˜¯èµŒã€Œå¤§å°ã€çš„æˆ¿é—´ï¼ŒåŒ—è¾¹æ˜¯èµŒã€Œç‰Œä¹ã€çš„æˆ¿é—´(not yet available)ã€‚
+å¢™ä¸ŠæŒ‚ç€ä¸€å—ç‰Œå­(paizi)ã€‚
 LONG
 	);
 
 	set("item_desc", ([
-		"paizi" : "¶þÂ¥µÄ¹°Öí·¿Õý´¦ÓÚ²âÊÔ½×¶Î¡£\n",
+		"paizi" : "äºŒæ¥¼çš„æ‹±çŒªæˆ¿æ­£å¤„äºŽæµ‹è¯•é˜¶æ®µã€‚\n",
 	]));
 	set("exits", ([
                 "west" : "/u/ding/daxiao",
@@ -28,7 +28,7 @@ LONG
 int valid_leave(object me, string dir)
 {
         if (dir == "west" && this_player()->query("age")<18)
-                return notify_fail("Ð¡Ã«º¢×ÓÍùÕâ¶ùÏ¹´ÕºÏÊ²Ã´?!\n");
+                return notify_fail("å°æ¯›å­©å­å¾€è¿™å„¿çžŽå‡‘åˆä»€ä¹ˆ?!\n");
         return ::valid_leave(me, dir);
 }
 

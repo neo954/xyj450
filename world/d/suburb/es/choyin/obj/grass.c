@@ -4,13 +4,13 @@ inherit ITEM;
 
 void create()
 {
-        set_name("ÍüÓÇ²İ", ({ "grass" }) );
+        set_name("å¿˜å¿§è‰", ({ "grass" }) );
         set_weight(200);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¿Ã");
-                set("long", "Ò»¿Ã´äÂÌÉ«µÄĞ¡²İ£¬·¢×Å¾§Ó¨µÄ¹âÃ¢ºÍ×íÈËµÄÏãÎ¶¡£\n");
+                set("unit", "æ£µ");
+                set("long", "ä¸€æ£µç¿ ç»¿è‰²çš„å°è‰ï¼Œå‘ç€æ™¶è¹çš„å…‰èŠ’å’Œé†‰äººçš„é¦™å‘³ã€‚\n");
                 set("material", "paper");
                 set("value", 10000);
         }

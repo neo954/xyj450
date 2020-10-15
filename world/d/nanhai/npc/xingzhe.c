@@ -1,7 +1,7 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
-// xingzhe.c iη����ߺ
+// xingzhe.c i畏叫姓吆
 // By Dream Dec. 20, 1996
 
 inherit NPC;
@@ -9,8 +9,8 @@ inherit F_MASTER;
 
 void create()
 {
-   set_name("�η�����", ({ "xingzhe" }));
-   set("gender", "����");
+   set_name("游方行者", ({ "xingzhe" }));
+   set("gender", "男性");
    set("age", 40);
    set("attitude", "peaceful");
    set("class", "bonze");
@@ -54,7 +54,7 @@ void create()
 //     (: cast_spell, "thunder" :),
 //   }) );
 
-        create_family("�Ϻ�����ɽ", 3, "����");
+        create_family("南海普陀山", 3, "弟子");
    
    setup();
    carry_object("/obj/money/gold");
@@ -65,7 +65,7 @@ void create()
 void attempt_apprentice(object ob)
 {
    command("smile");
-   command("say �ܺã�ƶɮ�������㣬ϣ������Ŭ�������������\n");
+   command("say 很好，贫僧就收下你，希望你多加努力，早成正果。\n");
 
    command("recruit " + ob->query("id") );
    return;

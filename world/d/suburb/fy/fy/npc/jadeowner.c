@@ -4,11 +4,11 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("ÉÌÓñÁú", ({ "seller", "jadeseller" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å•†ç‰é¾™", ({ "seller", "jadeseller" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 49);
-	set("title", "ÓñÁúÖé±¦");
-        set("long", "ÕâÊÇÒ»Î»·Ê·ÊÅÖÅÖµêÕÆ¹ñ\n");
+	set("title", "ç‰é¾™ç å®");
+        set("long", "è¿™æ˜¯ä¸€ä½è‚¥è‚¥èƒ–èƒ–åº—æŒæŸœ\n");
         set("combat_exp", 700000);
 	set("str", 300);
         set("attitude", "friendly");
@@ -41,14 +41,14 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) return;
         switch( random(10) ) {
                 case 0:
-                        say( " µêÕÆ¹ñĞ¦×ÅµÀ£ºÕâÎ»"
+                        say( " åº—æŒæŸœç¬‘ç€é“ï¼šè¿™ä½"
                                 + RANK_D->query_respect(ob)
-                                + "£¬ÂòÓñÂğ£¿ \n");
+                                + "ï¼Œä¹°ç‰å—ï¼Ÿ \n");
                         break;
                 case 1:
-                        say( " µêÕÆ¹ñĞ¦×ÅµÀ£ºÕâÎ»"
+                        say( " åº—æŒæŸœç¬‘ç€é“ï¼šè¿™ä½"
                                 + RANK_D->query_respect(ob)
-                                + "£¬ÓñÊÇ¼ªÏéÖ®Îï£¬ÂòÒ»¿é°É¡£ \n");
+                                + "ï¼Œç‰æ˜¯å‰ç¥¥ä¹‹ç‰©ï¼Œä¹°ä¸€å—å§ã€‚ \n");
                         break;
 
         }

@@ -2,10 +2,10 @@ inherit COMBINED_ITEM;
 
 void create()
 {
-	set_name("ÏÉ¶¹", ({"sen-bean"}));
-	set("long",	"ÕâÊÇÒ»Á£ÓÐµãÆæ¹ÖµÄ¶¹×Ó£¬ÎÅÁËÎÅÓÐÒ»ÖÖÉÏµÈÒ©²ÄµÄÎ¶µÀ¡£\n");
-	set("unit", "Á£");
-	set("base_unit", "Á£");
+	set_name("ä»™è±†", ({"sen-bean"}));
+	set("long",	"è¿™æ˜¯ä¸€ç²’æœ‰ç‚¹å¥‡æ€ªçš„è±†å­ï¼Œé—»äº†é—»æœ‰ä¸€ç§ä¸Šç­‰è¯æçš„å‘³é“ã€‚\n");
+	set("unit", "ç²’");
+	set("base_unit", "ç²’");
 	set("base_weight", 200);
 	set_amount(1);
 }
@@ -18,11 +18,11 @@ void init()
 
 int do_eat(string arg)
 {
-	if( !arg || arg != "sen-bean")  return notify_fail("ÄãÒª³ÔÉõÃ´ÄØ? \n");
+	if( !arg || arg != "sen-bean")  return notify_fail("ä½ è¦åƒç”šä¹ˆå‘¢? \n");
 
 	message_vision(
-	   "$NÄÃ³öÒ»Á£Ð¡Íè×Ó£¬Ò»¿Ú¸øÍÌÁËÏÂÈ¥¡£\n"
-	   "Ö»¼û$NÁ³ÉÏ·ºÆðÒ»ÕóºìÔÎ£¬Õû¸öÈË¿´ÆðÀ´ºÃ¶àÁË! \n",this_player()  );
+	   "$Næ‹¿å‡ºä¸€ç²’å°ä¸¸å­ï¼Œä¸€å£ç»™åžäº†ä¸‹åŽ»ã€‚\n"
+	   "åªè§$Nè„¸ä¸Šæ³›èµ·ä¸€é˜µçº¢æ™•ï¼Œæ•´ä¸ªäººçœ‹èµ·æ¥å¥½å¤šäº†! \n",this_player()  );
 	this_player()->receive_heal("gin", 50);
 	this_player()->receive_heal("kee", 100);
 	this_player()->receive_heal("sen", 50);

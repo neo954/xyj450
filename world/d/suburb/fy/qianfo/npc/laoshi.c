@@ -5,12 +5,12 @@ int give_silk();
 inherit NPC;
 void create()
 {
-        set_name("ÀÏÊµºÍÉĞ", ({ "lao shi", "lao"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("è€å®å’Œå°š", ({ "lao shi", "lao"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 32);
         set("long", 
-"ÀÏÊµºÍÉĞÕûÌì·è·èñ²ñ²£¬¹ÖÀï¹ÖÆøµÄ£®ËûµÄ¹¦·òÒ²ÊÇÈç´Ë£®
-ÀÏÊµºÍÉĞ´ÓÀ´²»Ëµ»Ñ»°£¬ËùÒÔµÃÃû£¢ÀÏÊµºÍÉĞ£¢\n");
+"è€å®å’Œå°šæ•´å¤©ç–¯ç–¯ç™«ç™«ï¼Œæ€ªé‡Œæ€ªæ°”çš„ï¼ä»–çš„åŠŸå¤«ä¹Ÿæ˜¯å¦‚æ­¤ï¼
+è€å®å’Œå°šä»æ¥ä¸è¯´è°è¯ï¼Œæ‰€ä»¥å¾—åï¼‚è€å®å’Œå°šï¼‚\n");
         set("combat_exp", 100000);
         set("attitude", "friendly");
         set_skill("unarmed", 5+random(350));
@@ -23,13 +23,13 @@ void create()
         set("max_force",100);
         set("chat_chance", 5);
         set("chat_msg", ({
-"ÀÏÊµºÍÉĞÌ¾µÀ£ºÇë·ğ×æ·£ÎÒ£¬ÎÒÓÖÈ¥¹äÁËÇ§½ğÂ¥£¡\n",
-"ÀÏÊµºÍÉĞ´·ÁË´·×Ô¼ºµÄÍ·£¬£¢³ö¼ÒÈË¾ö²»´òÚ¿Óï£¡\n",
-"ÀÏÊµºÍÉĞÂîµÀ£ºÕâ¸ö¸ÃËÀµÄËÄÌõÃ¼£¬°ÑÕâÌÌÊÖµÄ²îÊÂÓÖ¸øÁËÎÒ£¡\n",
+"è€å®å’Œå°šå¹é“ï¼šè¯·ä½›ç¥–ç½šæˆ‘ï¼Œæˆ‘åˆå»é€›äº†åƒé‡‘æ¥¼ï¼\n",
+"è€å®å’Œå°šæ¶äº†æ¶è‡ªå·±çš„å¤´ï¼Œï¼‚å‡ºå®¶äººå†³ä¸æ‰“è¯³è¯­ï¼\n",
+"è€å®å’Œå°šéª‚é“ï¼šè¿™ä¸ªè¯¥æ­»çš„å››æ¡çœ‰ï¼ŒæŠŠè¿™çƒ«æ‰‹çš„å·®äº‹åˆç»™äº†æˆ‘ï¼\n",
 		(: random_move :),
         }) );
         set("inquiry", ([
-                "Æß²ÊË¿¶Ğ´ø" : (: give_silk:),
+                "ä¸ƒå½©ä¸ç¼å¸¦" : (: give_silk:),
                 "silk" : (: give_silk:)
 
         ]));
@@ -41,23 +41,23 @@ int give_silk()
 {
 if( (int)query("given") >= 7 )
 {
-command("say ÄãÍíÁË£¬¶¼¸ø¹âÁË£®£®£®\n");
+command("say ä½ æ™šäº†ï¼Œéƒ½ç»™å…‰äº†ï¼ï¼ï¼\n");
 return 1;
 }
-command("say ÄãÒ²ÏëÔÚÔÂÔ²Ö®Ò¹£¬È¥¿´ÄÇ×Ï½ûÖ®áÛµÄ¿õÊÀ¾öÕ½Âğ£¿\n");
-command("say ÄÇÎÒµÃ¿¼¿¼Äã£¬¿´Äã¹»²»¹»¸ñ£®\n");
+command("say ä½ ä¹Ÿæƒ³åœ¨æœˆåœ†ä¹‹å¤œï¼Œå»çœ‹é‚£ç´«ç¦ä¹‹å·…çš„æ—·ä¸–å†³æˆ˜å—ï¼Ÿ\n");
+command("say é‚£æˆ‘å¾—è€ƒè€ƒä½ ï¼Œçœ‹ä½ å¤Ÿä¸å¤Ÿæ ¼ï¼\n");
 this_player()->set_temp("marks/laoshi",1);
 return 1;
 }
 
 void win_enemy(object loser)
 {
-command("say ÕâÎ»" + RANK_D->query_respect(loser)+ "£¬Äã»¹²»¹»¸ñ£¡\n");
+command("say è¿™ä½" + RANK_D->query_respect(loser)+ "ï¼Œä½ è¿˜ä¸å¤Ÿæ ¼ï¼\n");
 }
 void lose_enemy( object winner)
 {
 object silk;
-command("say ÕâÎ»" + RANK_D->query_respect(winner)+ "£¬ÄãµÄ¹¦·ò²»´í£¡\n");
+command("say è¿™ä½" + RANK_D->query_respect(winner)+ "ï¼Œä½ çš„åŠŸå¤«ä¸é”™ï¼\n");
 silk = new(__DIR__"obj/silk");
 silk->move(this_object());
 command("give silk to " + winner->query("id"));
@@ -68,13 +68,13 @@ int accept_fight(object me)
 {
 	if(me->query_temp("marks/laoshi"))
 	{
-	command("say ºÃ£¬ÄãÓ®ÁËÎÒ£¬ÕâË¿´ø¾ÍÊÇÄãµÄ£®\n");
+	command("say å¥½ï¼Œä½ èµ¢äº†æˆ‘ï¼Œè¿™ä¸å¸¦å°±æ˜¯ä½ çš„ï¼\n");
 	me->delete_temp("marks/laoshi");
         return 1;
 	}
 	else
 	{
-        command("say °¢ÃÖÍÓ·ğ£¡Æ¶É®Îä¹¦µÍÎ¢£¬Ê©Ö÷²»Òª¿ªÕâÖÖÍæĞ¦¡£\n");
+        command("say é˜¿å¼¥é™€ä½›ï¼è´«åƒ§æ­¦åŠŸä½å¾®ï¼Œæ–½ä¸»ä¸è¦å¼€è¿™ç§ç©ç¬‘ã€‚\n");
         return 0;
 	}
 }

@@ -2,18 +2,18 @@
 inherit STAFF;
 void create()
 {
-        set_name("´ÖÄ¾±âµ£", ({ "biandian" }) );
+        set_name("ç²—æœ¨æ‰æ‹…", ({ "biandian" }) );
         set_weight(2000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¸ù");
-                set("long", "ÕâÊÇÒ»°Ñ¿´ÆğÏàµ±ÆÕÍ¨µÄÄ¾±âµ£");
+                set("unit", "æ ¹");
+                set("long", "è¿™æ˜¯ä¸€æŠŠçœ‹èµ·ç›¸å½“æ™®é€šçš„æœ¨æ‰æ‹…");
                 set("value", 300);
                 set("material", "wood");
         }
         init_staff(10);
-        set("wield_msg", "$N°Ñ$n½ô½ôµØÎÕÔÚÊÖÖĞ¡£\n");
-        set("unwield_msg", "$NËÉ¿ªÁËÊÖÖĞµÄ$n¡£\n");
+        set("wield_msg", "$NæŠŠ$nç´§ç´§åœ°æ¡åœ¨æ‰‹ä¸­ã€‚\n");
+        set("unwield_msg", "$Næ¾å¼€äº†æ‰‹ä¸­çš„$nã€‚\n");
         setup();
 }

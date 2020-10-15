@@ -4,15 +4,15 @@ inherit ITEM;
 
 void create()
 {
-        set_name("ÌìÊ¦ÕıµÀÈëÃÅ", ({ "taoismbook" }));
+        set_name("å¤©å¸ˆæ­£é“å…¥é—¨", ({ "taoismbook" }));
         set_weight(300);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "±¾");
+                set("unit", "æœ¬");
                 set("long",
                         
-"ÕâÊÇÒ»±¾ÌìÊ¦ÕıµÀµÄÈëÃÅ£¬Ö»ÓĞÑ§ÁËÌìÊ¦ÕıµÀ£¬Äã²ÅÄÜ½øÒ»²½Ìá¸ßÃ©É½ÊõµÄµÈ¼¶.\n"
+"è¿™æ˜¯ä¸€æœ¬å¤©å¸ˆæ­£é“çš„å…¥é—¨ï¼Œåªæœ‰å­¦äº†å¤©å¸ˆæ­£é“ï¼Œä½ æ‰èƒ½è¿›ä¸€æ­¥æé«˜èŒ…å±±æœ¯çš„ç­‰çº§.\n"
                 );
                 set("value", 12260);
                 set("material", "paper");

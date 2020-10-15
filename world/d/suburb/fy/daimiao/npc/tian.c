@@ -8,9 +8,9 @@ inherit F_QUEST;
 #include <ansi.h>
 void create()
 {
-        set_name("ÌìÊ±ÀÏÈË", ({ "master tian", "master"}) );
-        set("nickname", HIW "Ìì¶æ¶æÖ÷"NOR);
-        set("gender", "ÄĞĞÔ" );
+        set_name("å¤©æ—¶è€äºº", ({ "master tian", "master"}) );
+        set("nickname", HIW "å¤©èˆµèˆµä¸»"NOR);
+        set("gender", "ç”·æ€§" );
         set("age", 64);
 	set("per", 3);
         set("agi",25);
@@ -21,11 +21,11 @@ void create()
         set("force_factor", 30);
         set("long",
 "
-ÌìÊ±ÀÏÈËÔÚÎ÷·½Éñ½ÌÖĞµÄµØÎ»ÊÇ½ö´ÎÓÚ½ÌÖ÷µÄ£¬
-ÌìÊ±ÀÏÈËÍ³Áì×ÅÎ÷·½Éñ½ÌÖĞµÄÌì¶æ¡£
+å¤©æ—¶è€äººåœ¨è¥¿æ–¹ç¥æ•™ä¸­çš„åœ°ä½æ˜¯ä»…æ¬¡äºæ•™ä¸»çš„ï¼Œ
+å¤©æ—¶è€äººç»Ÿé¢†ç€è¥¿æ–¹ç¥æ•™ä¸­çš„å¤©èˆµã€‚
 \n"
 	);
-        create_family("Î÷·½Éñ½Ì", 2, "¶æÖ÷");
+        create_family("è¥¿æ–¹ç¥æ•™", 2, "èˆµä¸»");
 
         set("combat_exp", 1000000);
         set("score", 200000);
@@ -55,13 +55,13 @@ void create()
 
 void attempt_apprentice(object me)
 {
-	if(me->query("family/family_name") == "Î÷·½Éñ½Ì")
+	if(me->query("family/family_name") == "è¥¿æ–¹ç¥æ•™")
 	{
-		command("say ÄãÒÑÊÇÎ÷·½Éñ½ÌµÜ×Ó£¬¸úË­Ñ§¶¼Ò»Ñù¡£\n");
+		command("say ä½ å·²æ˜¯è¥¿æ–¹ç¥æ•™å¼Ÿå­ï¼Œè·Ÿè°å­¦éƒ½ä¸€æ ·ã€‚\n");
 		return;
 	}
 	command("smile");
-	command("say ¶à¼ÓÅ¬Á¦£¬ÄãÊÇÒ»¿é²»ÊÀÖ®²Ä£¡\n");
+	command("say å¤šåŠ åŠªåŠ›ï¼Œä½ æ˜¯ä¸€å—ä¸ä¸–ä¹‹æï¼\n");
         command("recruit " + me->query("id") );
 }
 
@@ -79,40 +79,40 @@ void re_rank(object student)
         int exp;
         exp = (int) student->query("combat_exp");
         if( exp <= 32000 ) {
-                student->set("title","Î÷·½Éñ½Ì½ÌÍ½");
+                student->set("title","è¥¿æ–¹ç¥æ•™æ•™å¾’");
                 return ;
         } else if ( exp <= 64000 ) {
-                student->set("title","Î÷·½Éñ½Ì¸±ÌÃÖ÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å‰¯å ‚ä¸»");
                 return ;
         } else if ( exp <= 128000 ) {
-                student->set("title","Î÷·½Éñ½ÌÌÃÖ÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å ‚ä¸»");
                 return ;
         } else if ( exp <= 256000 ) {
-                student->set("title","Î÷·½Éñ½Ì¸±Ì³Ö÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å‰¯å›ä¸»");
                 return ;
         } else if ( exp <= 512000 ) {
-                student->set("title","Î÷·½Éñ½ÌÌ³Ö÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å›ä¸»");
                 return ;
         } else if ( exp <= 1024000 ) {
-                student->set("title","Î÷·½Éñ½Ì¸±¶æÖ÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å‰¯èˆµä¸»");
                 return ;
         } else if ( exp <= 1536000 ) {
-                student->set("title","Î÷·½Éñ½Ì¶æÖ÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™èˆµä¸»");
                 return ;
         } else if ( exp <= 2304000 ) {
-                student->set("title","Î÷·½Éñ½Ì»¤·¨");
+                student->set("title","è¥¿æ–¹ç¥æ•™æŠ¤æ³•");
                 return ;
         } else if ( exp <= 3456000 ) {
-                student->set("title","Î÷·½Éñ½Ì´ó»¤·¨");
+                student->set("title","è¥¿æ–¹ç¥æ•™å¤§æŠ¤æ³•");
                 return ;
         } else if ( exp <= 5187000 ) {
-                student->set("title","Î÷·½Éñ½Ì³¤ÀÏ");
+                student->set("title","è¥¿æ–¹ç¥æ•™é•¿è€");
                 return ;
         } else if ( exp <= 26244000 ) {
-                student->set("title","Î÷·½Éñ½Ì´ó³¤ÀÏ");
+                student->set("title","è¥¿æ–¹ç¥æ•™å¤§é•¿è€");
                 return ;
         } else
-                student->set("title","Î÷·½Éñ½Ì¸±½ÌÖ÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å‰¯æ•™ä¸»");
                 return ;
 
 }

@@ -2,13 +2,13 @@
 inherit ITEM;
 void create()
 {
-	set_name("ÖóÊìÁËµÄÇù" , ({ "qu" , "dead qu"}) );
+	set_name("ç…®ç†Ÿäº†çš„è›†" , ({ "qu" , "dead qu"}) );
 	set_weight(1);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ìõ");
-		set("long", "Ò»Ìõ°×°×µÄÖóÊìÁËµÄÇù\n");
+		set("unit", "æ¡");
+		set("long", "ä¸€æ¡ç™½ç™½çš„ç…®ç†Ÿäº†çš„è›†\n");
 		set("value", 0);
 	}
 }

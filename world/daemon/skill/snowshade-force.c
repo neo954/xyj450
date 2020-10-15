@@ -11,7 +11,7 @@ int valid_learn(object me) { return 1; }
 int practice_skill(object me)
 {
         return 
-notify_fail("·âÉ½ÅÉÄÚ¹¦Ö»ÄÜÓÃÑ§µÄ»òÊÇ´ÓÔËÓÃ(exert)ÖĞÔö¼ÓÊìÁ·¶È¡£\n");
+notify_fail("å°å±±æ´¾å†…åŠŸåªèƒ½ç”¨å­¦çš„æˆ–æ˜¯ä»è¿ç”¨(exert)ä¸­å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");
 } 
 int effective_level() { return 10;}
 

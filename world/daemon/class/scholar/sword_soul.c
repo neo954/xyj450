@@ -6,10 +6,10 @@ inherit NPC;
 
 void create()
 {
-        set_name( HIW "·çÈª½£Áé" NOR, ({ "sword soul", "soul" }) );
-        set("long", "Ò»¸ö¸ß´óµÄÈËĞÎ£¬Ö»ÓĞÂÖÀª·¢³ö°µÀ¶É«µÄ¹âÃ¢£¬ÆäËû²¿·İ¶¼ÊÇÍ¸Ã÷µÄ£¡\n");
+        set_name( HIW "é£æ³‰å‰‘çµ" NOR, ({ "sword soul", "soul" }) );
+        set("long", "ä¸€ä¸ªé«˜å¤§çš„äººå½¢ï¼Œåªæœ‰è½®å»“å‘å‡ºæš—è“è‰²çš„å…‰èŠ’ï¼Œå…¶ä»–éƒ¨ä»½éƒ½æ˜¯é€æ˜çš„ï¼\n");
         set("age", 19);
-        set("gender", "Å®ĞÔ");
+        set("gender", "å¥³æ€§");
         set("attitude", "heroism");
 
         set("max_gin", 2000);
@@ -49,20 +49,20 @@ static void chant_sword(int stage)
 {
         switch(stage) {
                 case 1:
-                        command("say ½£ÆøÖ¸Ìì ...");
+                        command("say å‰‘æ°”æŒ‡å¤© ...");
                         call_out("chant_sword", 20, 2);
                         break;
                 case 2:
-                        command("say ½£ĞÄÄÚÁ² ...");
+                        command("say å‰‘å¿ƒå†…æ•› ...");
                         call_out("chant_sword", 20, 3);
                         break;
                 case 3:
-                        command("say ½£Ã¢ÓÎ¹â ...");
+                        command("say å‰‘èŠ’æ¸¸å…‰ ...");
                         call_out("chant_sword", 20, 4);
                         break;
                 case 4:
-                        command("say ½£ÉñÈçÒâ£¡");
-                        message_vision("Ò»ÕóÀ¶¹âÁıÕÖ×¡$N£¬¡¸ÎË¡¹µØÒ»Éù£¬$NµÄÂÖÀªÓÖ±äÇåÎúÁËÒ»Ğ©£¡\n", this_object());
+                        command("say å‰‘ç¥å¦‚æ„ï¼");
+                        message_vision("ä¸€é˜µè“å…‰ç¬¼ç½©ä½$Nï¼Œã€Œå—¡ã€åœ°ä¸€å£°ï¼Œ$Nçš„è½®å»“åˆå˜æ¸…æ™°äº†ä¸€äº›ï¼\n", this_object());
                         add("combat_exp", 100000);
                         call_out("chant_sword", 60, 1);
                         break;

@@ -2,10 +2,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "���̵�С��ƺ");
+        set("short", "翠绿的小草坪");
         set("long", @LONG
-С��ƺ�޼��ĺ����롣���滹����Сͯ��ˣ���ĺۼ�������
-���涼�����ｨ�������ǵ���԰��
+小草坪修剪的很整齐。上面还留着小童玩耍过的痕迹。各种
+昆虫都在这里建立了它们的乐园。
 LONG
         );
         set("exits", ([ /* sizeof() == 2 */

@@ -3,11 +3,11 @@ inherit NPC;
 #include <ansi.h> 
 void create()
 {
-        set_name("ÎâÇà", ({"wuqing", "wu", "qing"}));
+        set_name("å´é’", ({"wuqing", "wu", "qing"}));
         set("long",
-                "Ò»¸ö¾«Ã÷ÄÜ¸É£¬Îä¹¦¸ßÇ¿µÄÉÍ·£ÌÃÌÃÖ÷\n");
-        set("gender","ÄĞĞÔ");
-	set("title", HIR "½ğÇ®°ïÉÍ·£ÌÃÌÃÖ÷" NOR);
+                "ä¸€ä¸ªç²¾æ˜èƒ½å¹²ï¼Œæ­¦åŠŸé«˜å¼ºçš„èµç½šå ‚å ‚ä¸»\n");
+        set("gender","ç”·æ€§");
+	set("title", HIR "é‡‘é’±å¸®èµç½šå ‚å ‚ä¸»" NOR);
         set("max_atman", 300);
         set("atman", 300);
         set("max_force", 300);
@@ -37,7 +37,7 @@ void create()
 int accept_object(object who, object ob)
 {
             command("grin");
-            command("say Ï¹ÁËÑÛµÄ¹·²Å£¬¾¹¸Ò»ßÂ¸ÎÒ£¿£¿");
+            command("say çäº†çœ¼çš„ç‹—æ‰ï¼Œç«Ÿæ•¢è´¿èµ‚æˆ‘ï¼Ÿï¼Ÿ");
 	    kill_ob(who);
             return 0;
 }

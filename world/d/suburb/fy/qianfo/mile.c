@@ -5,10 +5,10 @@
 inherit ROOM;
 void create()
 {
-  set("short","ÃÖÀÕµî");
+  set("short","å¼¥å‹’æ®¿");
   set("long",@LONG
-ÃÖÀÕ·ðÎªÎå´úÉ®£¬ÃûÆõ´Ë£¬ÌåÇû·ÊÂú£¬ÑÔÓïÎÞºã£¬ÒÔÕÈ¸º²¼´üÁ¢
-ÓÚÁ«»¨×ùÉÏ£¬ÃæÏÖÏ²ÔÃÖ®Ïà¡£ÎÞÖø£¬ÌìÇ×¶þÆÐÈøËæËÅ×óÓÒ¡£
+å¼¥å‹’ä½›ä¸ºäº”ä»£åƒ§ï¼Œåå¥‘æ­¤ï¼Œä½“èº¯è‚¥æ»¡ï¼Œè¨€è¯­æ— æ’ï¼Œä»¥æ–è´Ÿå¸ƒè¢‹ç«‹
+äºŽèŽ²èŠ±åº§ä¸Šï¼Œé¢çŽ°å–œæ‚¦ä¹‹ç›¸ã€‚æ— è‘—ï¼Œå¤©äº²äºŒè©è¨éšä¼ºå·¦å³ã€‚
 LONG
   );
   set("exits",([
@@ -18,10 +18,10 @@ LONG
             "east" :__DIR__"chantang.c"
                ]));
         set("item_desc", ([
-                "ÃÖÀÕ·ð": "
-                        ÃÖÀÕ·ð¿´ÆðÀ´Ò»Ö±ÔÚÐ¦£¬Ð¦£¬Ð¦£®£®£®\n",
+                "å¼¥å‹’ä½›": "
+                        å¼¥å‹’ä½›çœ‹èµ·æ¥ä¸€ç›´åœ¨ç¬‘ï¼Œç¬‘ï¼Œç¬‘ï¼Žï¼Žï¼Ž\n",
                 "milefe": "
-                        ÃÖÀÕ·ð¿´ÆðÀ´Ò»Ö±ÔÚÐ¦£¬Ð¦£¬Ð¦£®£®£®\n"
+                        å¼¥å‹’ä½›çœ‹èµ·æ¥ä¸€ç›´åœ¨ç¬‘ï¼Œç¬‘ï¼Œç¬‘ï¼Žï¼Žï¼Ž\n"
 
         ]) );
   setup();
@@ -35,7 +35,7 @@ int closepath()
 {
         if( !query("exits/north") ) return 1;
         message("vision",
-"±±ÃæÇ½ÉÏµÄ°µÃÅÓÖÎÞÉùÎÞÏ¢µÄºÏÉÏÁË¡£\n",
+"åŒ—é¢å¢™ä¸Šçš„æš—é—¨åˆæ— å£°æ— æ¯çš„åˆä¸Šäº†ã€‚\n",
                 this_object());
              delete("exits/north");
 	return 1;
@@ -48,7 +48,7 @@ int do_smile()
 		{
 			set("exits/north",__DIR__"weituo");
 			message("vision",
-"ÃÖÀÕ·ðËÆºõÒ²ºÍÄãÒ»ÆðÐ¦ÁËÆðÀ´£®£®£¢à¾²ê£¢Ò»Éù£¬±±ÃæµÄÇ½ÉÏÁÑ³öÁËÒ»¸ö°µÃÅ¡£\n",
+"å¼¥å‹’ä½›ä¼¼ä¹Žä¹Ÿå’Œä½ ä¸€èµ·ç¬‘äº†èµ·æ¥ï¼Žï¼Žï¼‚å—‘ç¢´ï¼‚ä¸€å£°ï¼ŒåŒ—é¢çš„å¢™ä¸Šè£‚å‡ºäº†ä¸€ä¸ªæš—é—¨ã€‚\n",
 			this_object());
 			call_out("closepath",4);
 			return 1;

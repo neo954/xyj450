@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÀîÉñÍ¯", ({ "li", "tong" }) );
-        set("long","Ò»¸ö´ø×ÅÂÌ¸ßÃ±µÄÀîÉñÍ¯\n");
-	set("title", HIG "ÂÌ¸ßÃ±" NOR);
+        set_name("æç¥ç«¥", ({ "li", "tong" }) );
+        set("long","ä¸€ä¸ªå¸¦ç€ç»¿é«˜å¸½çš„æç¥ç«¥\n");
+	set("title", HIG "ç»¿é«˜å¸½" NOR);
         set("attitude", "heroism");
         set("str", 27);
         set("cor", 26);

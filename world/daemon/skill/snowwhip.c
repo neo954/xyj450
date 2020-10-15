@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // former snowwhip.c or es2
@@ -9,23 +9,23 @@
 inherit SKILL;
 
 mapping *action = ({
-   ([   "name":        "º®·çÆðÙâ",
-     "action":     "$NÊ¹Ò»ÕÐ¡¸º®·çÆðÙâ¡¹£¬ÊÖÖÐ$w¶¶µÃ±ÊÖ±Ïò$nµÄ$lÁ¬´ÌÊý±Þ",
+   ([   "name":        "å¯’é£Žèµ·å…®",
+     "action":     "$Nä½¿ä¸€æ‹›ã€Œå¯’é£Žèµ·å…®ã€ï¼Œæ‰‹ä¸­$wæŠ–å¾—ç¬”ç›´å‘$nçš„$lè¿žåˆºæ•°éž­",
      "dodge":     -10,
      "damage":     30,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
-   ([   "name":        "ÂþÌì·ÉÑ©",
-     "action":     "$NÉíÐÎÒ»×ª£¬Ò»ÕÐ¡¸Â«»¨ÂúÌì¡¹$w»Ã³öÂúÌì±ÞÓ°£¬ÐéÐéÊµÊµµØÏ®Ïò$nµÄ$l",
+   ([   "name":        "æ¼«å¤©é£žé›ª",
+     "action":     "$Nèº«å½¢ä¸€è½¬ï¼Œä¸€æ‹›ã€ŒèŠ¦èŠ±æ»¡å¤©ã€$wå¹»å‡ºæ»¡å¤©éž­å½±ï¼Œè™šè™šå®žå®žåœ°è¢­å‘$nçš„$l",
      "dodge":     -20,
      "damage":     20,
-     "damage_type":   "ðöÉË"
+     "damage_type":   "ç˜€ä¼¤"
    ]),
-   ([   "name":        "Ñ©»¨ôæôæ",
-     "action":     "$NÁ¦¹á$w£¬Ò»ÕÐ¡¸Â«»¨Æ®Ïã¡¹µãµã±ÞÓ°Æ®¸¡²»¶¨µØµãÏò$nµÄ$l",
+   ([   "name":        "é›ªèŠ±ç¿©ç¿©",
+     "action":     "$NåŠ›è´¯$wï¼Œä¸€æ‹›ã€ŒèŠ¦èŠ±é£˜é¦™ã€ç‚¹ç‚¹éž­å½±é£˜æµ®ä¸å®šåœ°ç‚¹å‘$nçš„$l",
      "dodge":     -20,
      "damage":     25,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
 });
 
@@ -34,11 +34,11 @@ int valid_learn(object me)
    object ob;
 
    if( (int)me->query("max_force") < 150 )
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬Ã»ÓÐ°ì·¨Á·º®Ñ©±Þ·¨, ¶àÁ·Ð©ÄÚÁ¦ÔÙÀ´°É¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒå¯’é›ªéž­æ³•, å¤šç»ƒäº›å†…åŠ›å†æ¥å§ã€‚\n");
 
    if( !(ob = me->query_temp("weapon"))
    ||   (string)ob->query("skill_type") != "whip" )
-     return notify_fail("Äã±ØÐëÏÈÕÒÒ»Ìõ±Þ×Ó²ÅÄÜÁ·±Þ·¨¡£\n");
+     return notify_fail("ä½ å¿…é¡»å…ˆæ‰¾ä¸€æ¡éž­å­æ‰èƒ½ç»ƒéž­æ³•ã€‚\n");
 
    return 1;
 }
@@ -57,10 +57,10 @@ int practice_skill(object me)
 {
    if( (int)me->query("kee") < 30
    ||   (int)me->query("force") < 5 )
-     return notify_fail("ÄãµÄÄÚÁ¦»òÆø²»¹»£¬Ã»ÓÐ°ì·¨Á·Ï°º®Ñ©±Þ·¨¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›æˆ–æ°”ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒä¹ å¯’é›ªéž­æ³•ã€‚\n");
    me->receive_damage("kee", 30);
    me->add("force", -5);
-   write("Äã°´ÖøËùÑ§Á·ÁËÒ»±éº®Ñ©±Þ·¨¡£\n");
+   write("ä½ æŒ‰è‘—æ‰€å­¦ç»ƒäº†ä¸€éå¯’é›ªéž­æ³•ã€‚\n");
    return 1;
 }
 

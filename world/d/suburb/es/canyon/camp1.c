@@ -3,10 +3,10 @@
 inherit ROOM;
 void create()
 {
-        set("short","��Ӫ���");
+        set("short","军营入口");
 	set("long",@LONG                                   
-�˴�Ϊ��ʯ����פ������ڣ�����Ϊ������ʳ�ĵط������ſڵ�����
-����λС������ֵ�ڡ��ϡ�������ΪС����Ӫ�ʡ�
+此处为黄石隘口驻军的入口，东方为军队饮食的地方，在门口的两侧
+有两位小兵正在值勤。南、北两侧为小兵的营帐。
 LONG
 	); // eof(long)
 	

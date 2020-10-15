@@ -2,13 +2,13 @@ inherit NPC;
  
 void create()
 {
-        set_name("Ô²´º", ({ "yuan chung","yuan","chung" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("åœ†æ˜¥", ({ "yuan chung","yuan","chung" }) );
+        set("gender", "å¥³æ€§" );
         set("age",18);
         set("long", @TEXT
-ËıÊÇÏ§´ºµÄÃÃÃÃ£¬¸ú½ã½ã´ÓĞ¡¾ÍÔÚÍíÔÂ×¯
-³¤´ó¡£ÒòÎªÓëË«Ç×Ê§É¢£¬±»×¯Ö÷ÊÕÁô¡£Æ½
-³£°ïÃ¦×¯ÄÚËöËéÊÂÎñ¡£
+å¥¹æ˜¯æƒœæ˜¥çš„å¦¹å¦¹ï¼Œè·Ÿå§å§ä»å°å°±åœ¨æ™šæœˆåº„
+é•¿å¤§ã€‚å› ä¸ºä¸åŒäº²å¤±æ•£ï¼Œè¢«åº„ä¸»æ”¶ç•™ã€‚å¹³
+å¸¸å¸®å¿™åº„å†…çç¢äº‹åŠ¡ã€‚
 TEXT
 );
        set("class", "dancer");
@@ -23,7 +23,7 @@ TEXT
         set("force", 300);
         set("max_force", 300);
 
-       create_family("ÍíÔÂ×¯",4,"µÜ×Ó");
+       create_family("æ™šæœˆåº„",4,"å¼Ÿå­");
         setup();
         carry_object("/d/suburb/es/latemoon/obj/skirt5")->wear();
 }

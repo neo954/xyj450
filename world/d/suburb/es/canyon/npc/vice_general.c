@@ -6,13 +6,13 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÀîÐÅ", ({ "vice general","general" }));
-	set("title","¸±½«");
-	set("gender", "ÄÐÐÔ");
+        set_name("æŽä¿¡", ({ "vice general","general" }));
+	set("title","å‰¯å°†");
+	set("gender", "ç”·æ€§");
 	set("age", 40);
 	set("long",
-                "Ô­ÊÇ½ûÎÀ¾üµÄ¶Ó³¤£¬Ò²ÒòÆäÇ¿´óµÄÉùÍûºÍÊµÁ¦£¬±»ÏÈµÛµ÷Àë¾©Ê¦\n"
-                "ºÍÕò¹ú´ó½«¾ü¹²Í¬ÕòÊØ»ÆÊ¯°¯¿Ú¡£\n");
+                "åŽŸæ˜¯ç¦å«å†›çš„é˜Ÿé•¿ï¼Œä¹Ÿå› å…¶å¼ºå¤§çš„å£°æœ›å’Œå®žåŠ›ï¼Œè¢«å…ˆå¸è°ƒç¦»äº¬å¸ˆ\n"
+                "å’Œé•‡å›½å¤§å°†å†›å…±åŒé•‡å®ˆé»„çŸ³éš˜å£ã€‚\n");
 
 	set("attitude", "peaceful");
 
@@ -74,8 +74,8 @@ void init()
 void greeting(object ob)
 {
         if ( !ob || environment(ob) != environment() ) return;
-        if ( !ob->query("marks/¾üÓª") )	{
-        	command("say ´óµ¨¿ñÍ½£¬¾¹Ë½´³´ËµØ£¬¸øÎÒ¹ö³öÈ¥");
+        if ( !ob->query("marks/å†›è¥") )	{
+        	command("say å¤§èƒ†ç‹‚å¾’ï¼Œç«Ÿç§é—¯æ­¤åœ°ï¼Œç»™æˆ‘æ»šå‡ºåŽ»");
                 ob->move(PATH);
 
         }

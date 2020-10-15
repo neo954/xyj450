@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // iceshock.c
@@ -13,11 +13,11 @@ int update_condition(object me, int duration)
    me->receive_damage("gin", 25);
    me->receive_wound("kee", 25);
    me->receive_damage("sen", 25);
-        me->set_temp("death_msg","�⺮�ƶ��������ˡ�\n");
+        me->set_temp("death_msg","意寒掌毒发作死了。\n");
 
    me->apply_condition("iceshock", duration - 1);
 
-   tell_object(me, HIB "���е��⺮�ƶ������ˣ�\n" NOR );
+   tell_object(me, HIB "你中的意寒掌毒发作了！\n" NOR );
    if( duration < 1 ) return 0;
 
    return CND_CONTINUE;

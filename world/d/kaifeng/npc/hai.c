@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // by snowcat 12/8/1997
@@ -8,9 +8,9 @@ inherit F_VENDOR_SALE;
 void create()
 {
   reload ("kaifeng_hai");
-  set_name("º£ÀÏ°å", ({"hai laoban", "hai", "laoban"}));
+  set_name("æµ·è€æ¿", ({"hai laoban", "hai", "laoban"}));
   set("shop_id",({"laoban","waiter"}));
-  set("gender", "ÄĞĞÔ");
+  set("gender", "ç”·æ€§");
   set("combat_exp", 5000);
   set("age", 48);
   set("per", 24);

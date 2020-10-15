@@ -4,11 +4,11 @@ void create()
 {
         int has_game;
         seteuid(getuid());
-        set_name("ÀÏÆÅÆÅ",({"old woman", "oldwoman", "woman"}));
+        set_name("è€å©†å©†",({"old woman", "oldwoman", "woman"}));
         set("long", @TEXT
 TEXT
         );
-        set("gender","Å®ÐÔ");
+        set("gender","å¥³æ€§");
         set("age",74);
         set("combat_exp",55);
         set("attitude","friendly");
@@ -28,8 +28,8 @@ void ask_for_help()
         object helper;
         helper = present("old man", environment(this_object()));
         if (!helper || helper->is_fighting()) return;
-	tell_room(environment(helper), helper->name()+"½ÐµÀ: ºÃ°¡,"+
-	"¸Ò¿³ÎÒÀÏÆÅ, È¥ËÀ°É!\n", ({this_object(), helper}) );
+	tell_room(environment(helper), helper->name()+"å«é“: å¥½å•Š,"+
+	"æ•¢ç æˆ‘è€å©†, åŽ»æ­»å§!\n", ({this_object(), helper}) );
         helper->kill_ob(query_temp("killer"));
         return;
 }

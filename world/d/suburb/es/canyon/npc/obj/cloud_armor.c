@@ -8,12 +8,12 @@ inherit ARMOR;
 
 void create()
 {
-	set_name(RED"»ğ ÔÆ "HIB"Õ½ ¼×"NOR,({ "cloud armor","armor" }) );
+	set_name(RED"ç« äº‘ "HIB"æˆ˜ ç”²"NOR,({ "cloud armor","armor" }) );
 	set_weight(12000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¼ş");
+		set("unit", "ä»¶");
 		set("material", "cloud");
 		set("value",12000);
 		set("armor_prop/armor", 40);

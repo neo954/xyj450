@@ -4,15 +4,15 @@ inherit NPC;
 
 void create()
 {
-	set_name("õËÉ®ÈË", ({ "cripple bonze", "bonze" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("è·›åƒ§äºº", ({ "cripple bonze", "bonze" }) );
+	set("gender", "ç”·æ€§" );
 	set("class", "bonze");
 	set("age", 36);
 	set("str", 26);
 	set("cor", 24);
 	set("cps", 12);
 	set("int", 20);
-	set("long", "Õâ¸öÉ®ÈËõËÁËÓÒÍÈ£¬Á³ÉÏÃ»ÓĞÊ²Ã´±íÇé£¬Ò»¸±ÈôÓĞËùË¼µÄÑù×Ó¡£\n");
+	set("long", "è¿™ä¸ªåƒ§äººè·›äº†å³è…¿ï¼Œè„¸ä¸Šæ²¡æœ‰ä»€ä¹ˆè¡¨æƒ…ï¼Œä¸€å‰¯è‹¥æœ‰æ‰€æ€çš„æ ·å­ã€‚\n");
 	set("combat_exp", 4000);
 	set("attitude", "friendly");
 
@@ -42,6 +42,6 @@ void create()
 
 int accept_fight(object me)
 {
-	command("say °¢ÃÖÍÓ·ğ£¡Æ¶É®Îä¹¦µÍÎ¢£¬ÓÖÊÇ¸ö²Ğ·Ï£¬Ê©Ö÷²»Òª¿ªÕâÖÖÍæĞ¦¡£\n");
+	command("say é˜¿å¼¥é™€ä½›ï¼è´«åƒ§æ­¦åŠŸä½å¾®ï¼Œåˆæ˜¯ä¸ªæ®‹åºŸï¼Œæ–½ä¸»ä¸è¦å¼€è¿™ç§ç©ç¬‘ã€‚\n");
 	return 0;
 }

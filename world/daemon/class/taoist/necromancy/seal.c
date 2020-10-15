@@ -11,11 +11,11 @@ inherit ITEM;
 
 void create()
 {
-	set_name("·ûÖä", ({"seal"}) );
+	set_name("ç¬¦å’’", ({"seal"}) );
 	set_weight(5);
 	set("long",
-		"ÕâÊÇÒ»ÕÅ»­ºÃµÄ·ûÖä£¬ÓÃ burn ½«ËüÌùÔÚÄ³ÈË(»òÄ³Îï)ÉíÉÏ¡£\n");
-	set("unit", "ÕÅ");
+		"è¿™æ˜¯ä¸€å¼ ç”»å¥½çš„ç¬¦å’’ï¼Œç”¨ burn å°†å®ƒè´´åœ¨æŸäºº(æˆ–æŸç‰©)èº«ä¸Šã€‚\n");
+	set("unit", "å¼ ");
 }
 
 int unequip()
@@ -36,26 +36,26 @@ int do_warp(string tar)
        
         who=this_player();
     //  if( who && who!=this_player() )
-          //  return notify_fail("Òõ½ç´«ËÍ·ûÖ»ÄÜ¶Ô×Ô¼ºÊ¹ÓÃ¡£\n");
+          //  return notify_fail("é˜´ç•Œä¼ é€ç¬¦åªèƒ½å¯¹è‡ªå·±ä½¿ç”¨ã€‚\n");
 
     //  env = environment(this_player());
       message("vision",
-              HIB + this_player()->name() + "¼ÀÆğÒ»ÕÅÒõ½ç´«ËÍ·û¡£\n\n"
+              HIB + this_player()->name() + "ç¥­èµ·ä¸€å¼ é˜´ç•Œä¼ é€ç¬¦ã€‚\n\n"
                 
-   "ºöÈ»ËÄÖÜ´µÆğÁËÒ»ÕóÁ¹ì¬ì¬µÄÒõ·ç£¬Òõ·çÖ®ÖĞáİ·ğÓĞĞí¶àÈËÓ°ÔÚ»Î¶¯...\n\n"
-                "È»ááÒ»Õó»ğ¹âÍ»È»±¬Æğ£¡\n" NOR, env);
+   "å¿½ç„¶å››å‘¨å¹èµ·äº†ä¸€é˜µå‡‰é£•é£•çš„é˜´é£ï¼Œé˜´é£ä¹‹ä¸­å½·ä½›æœ‰è®¸å¤šäººå½±åœ¨æ™ƒåŠ¨...\n\n"
+                "ç„¶å¾Œä¸€é˜µç«å…‰çªç„¶çˆ†èµ·ï¼\n" NOR, env);
         //OP_CMD->main(this_player(), "all");
      
            who->move(DEATH_ROOM);
         message("vision",
-                CYN "¿ÉÊÇ...." + who->name() + "ÒÑ¾­²»¼ûÁË¡£\n" 
+                CYN "å¯æ˜¯...." + who->name() + "å·²ç»ä¸è§äº†ã€‚\n" 
 NOR, env);
         message("vision",
                 CYN 
-"ÄãÖ»¾õµÃÉí×Ó²»¶ÏÏÂ×¹£¬Ò»Ö±ÏÂ×¹£¬Ò»Ö±ÏÂ×¹£¬Ò»Ö±ÏÂ×¹£¬Ò»Ö±ÏÂ×¹ .....\n\n"
+"ä½ åªè§‰å¾—èº«å­ä¸æ–­ä¸‹å ï¼Œä¸€ç›´ä¸‹å ï¼Œä¸€ç›´ä¸‹å ï¼Œä¸€ç›´ä¸‹å ï¼Œä¸€ç›´ä¸‹å  .....\n\n"
                 NOR     
-"²»ÖªµÀÊ²÷áÊ±ºò£¬Äã·¢ÏÖÄãÆäÊµÒ»Ö±¶¼Õ¾ÔÚ¼áÓ²µÄµØÃæÉÏ£¬¿ÉÊÇËÄÖÜµÄ¾°Îï\n\n"
-                        "È´²»Ò»ÑùÁË....\n", this_player() );
+"ä¸çŸ¥é“ä»€éº½æ—¶å€™ï¼Œä½ å‘ç°ä½ å…¶å®ä¸€ç›´éƒ½ç«™åœ¨åšç¡¬çš„åœ°é¢ä¸Šï¼Œå¯æ˜¯å››å‘¨çš„æ™¯ç‰©\n\n"
+                        "å´ä¸ä¸€æ ·äº†....\n", this_player() );
         destruct(this_object());
         return 1;
 }
@@ -73,24 +73,24 @@ int do_attach(string arg)
 	function f;
 
 	if( !arg || sscanf(arg, "%s to %s", sheet, dest)!=2 )
-		return notify_fail("Ö¸Áî¸ñÊ½£ºattach <·ûÖä> to <Ä¿±ê>\n");
+		return notify_fail("æŒ‡ä»¤æ ¼å¼ï¼šattach <ç¬¦å’’> to <ç›®æ ‡>\n");
 	
 	if( !id(sheet) ) return 0;
 
 	ob = present(dest, this_player());
 	if( !ob ) ob = present(dest, environment(this_player()));
-	if( !ob ) return notify_fail("ÄãÒª¶ÔÊ²÷á¶«Î÷Ê¹ÓÃÕâÕÅ·ûÖä£¿\n");
+	if( !ob ) return notify_fail("ä½ è¦å¯¹ä»€éº½ä¸œè¥¿ä½¿ç”¨è¿™å¼ ç¬¦å’’ï¼Ÿ\n");
 
 	if( !functionp(f = query("attach_func", 1)) )
-		return notify_fail("ÕâÕÅ·ûÃ»ÓĞÓÃ¡£\n");
+		return notify_fail("è¿™å¼ ç¬¦æ²¡æœ‰ç”¨ã€‚\n");
 
 	if( evaluate(f, ob) ) {
 		if( ob!=this_player() )
-			message_vision("$NÄÃ³öÒ»ÕÅ" + name() + "Íù$nÒ»Ìù¡£\n", this_player(), ob);
+			message_vision("$Næ‹¿å‡ºä¸€å¼ " + name() + "å¾€$nä¸€è´´ã€‚\n", this_player(), ob);
 		if( ob && ob->is_character() ) {
 			move(ob);
 			set("equipped", "sealed");
-			set("no_drop", "ÕâÑù¶«Î÷²»ÄÜ¶ªÆú£¬±ØĞëÓÃ detach¡£\n");
+			set("no_drop", "è¿™æ ·ä¸œè¥¿ä¸èƒ½ä¸¢å¼ƒï¼Œå¿…é¡»ç”¨ detachã€‚\n");
 		} else destruct(this_object());
 		return 1;
 	} else 

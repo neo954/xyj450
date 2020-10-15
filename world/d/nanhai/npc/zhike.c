@@ -1,16 +1,16 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
-// zhike.c ֪��ɮ�
+// zhike.c 知客僧�
 // By Dream Dec. 20, 1996
 
 inherit NPC;
 
 void create()
 {
-   set_name("֪��ɮ", ({ "zhike seng", "seng" }));
-   set("long", "һλ�����ɮ�ˣ��������Ǵ��������Ц�ݡ�\n�������ڴ�ӭ��ǰ����������Ŀ��ˡ�\n");
-   set("gender", "����");
+   set_name("知客僧", ({ "zhike seng", "seng" }));
+   set("long", "一位年轻的僧人，脸上总是带着热情的笑容。\n他负责在此迎接前来参禅进香的客人。\n");
+   set("gender", "男性");
    set("age", 25);
    set("attitude", "peaceful");
    set("class", "bonze");
@@ -38,7 +38,7 @@ void create()
 //     (: cast_spell, "thunder" :),
 //   }) );
 
-        create_family("�Ϻ�����ɽ", 4, "����");
+        create_family("南海普陀山", 4, "弟子");
    
    setup();
    add_money("silver", 20);
@@ -60,6 +60,6 @@ void init()
 void greeting(object ob)
 {
    if( !ob || !present(ob, environment(this_object())) ) return;
-   say( "֪��ɮ�����˵������λ" + RANK_D->query_respect(ob) + "����ӭ�����Ϻ�����ɽ��\n");
+   say( "知客僧热情地说道：这位" + RANK_D->query_respect(ob) + "，欢迎来到南海普陀山！\n");
 }
 

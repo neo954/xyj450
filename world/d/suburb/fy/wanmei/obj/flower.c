@@ -2,13 +2,13 @@
 inherit THROWING;
 void create()
 {
-	set_name("Â·±ßµÄÒ°»¨", ({ "wildflower", "flower" }) );
+	set_name("è·¯è¾¹çš„é‡èŠ±", ({ "wildflower", "flower" }) );
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long",	"Â·±ßµÄÒ°»¨£¬·¢³öÒ»¹Éµ­µ­µÄÏãÆø¡£\n");
-		set("unit", "°Ñ");
-		set("base_unit", "¶ä");
+		set("long",	"è·¯è¾¹çš„é‡èŠ±ï¼Œå‘å‡ºä¸€è‚¡æ·¡æ·¡çš„é¦™æ°”ã€‚\n");
+		set("unit", "æŠŠ");
+		set("base_unit", "æœµ");
 		set("base_weight", 1);
 		set("base_value", 1);
 	}

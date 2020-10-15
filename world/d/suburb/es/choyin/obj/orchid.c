@@ -2,13 +2,13 @@ inherit ITEM;
 
 void create()
 {
-        set_name("º®¹ÈÓÄÀ¼", ({ "orchid" }) );
+        set_name("å¯’è°·å¹½å…°", ({ "orchid" }) );
         set_weight(200);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Öê");
-                set("long", "Ò»Öêº®¹ÈÓÄÀ¼£¬É¢·¢×Åµ­µ­µÄÏãÆø, ÄãËÆºõÔÚÍíÔÂ×¯ÎÅµ½¹ı.\n");
+                set("unit", "æ ª");
+                set("long", "ä¸€æ ªå¯’è°·å¹½å…°ï¼Œæ•£å‘ç€æ·¡æ·¡çš„é¦™æ°”, ä½ ä¼¼ä¹åœ¨æ™šæœˆåº„é—»åˆ°è¿‡.\n");
                 set("material", "paper");
                 set("value", 10000);
         }

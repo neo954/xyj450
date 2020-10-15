@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 int block_tell(object me)
@@ -8,7 +8,7 @@ int block_tell(object me)
                 time=time();
                 if(me->query("channel/tell_block") &&
                   (time-me->query("channel/tell_block"))<0 ) {
-                   write("��Ľ�̸ָ���ʱ�ر��ˡ�\n");
+                   write("你的交谈指令被暂时关闭了。\n");
                    return 0;
                 }
               
@@ -20,7 +20,7 @@ int block_tell(object me)
                   me->set("channel/last_tell",time);
                   if (time==last_tell) {
                     me->set("channel/tell_block",time+180);
-                    write("��Ϊһ�ν���̫�࣬��Ľ�̸ָ���ʱ�ر��ˡ�\n");
+                    write("因为一次讲话太多，你的交谈指令被暂时关闭了。\n");
                     return 0;
                   }
                 }

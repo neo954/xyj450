@@ -4,17 +4,17 @@ inherit NECK;
 
 void create()
 {
-        set_name(HIM "ÕäÖéÏîÁ´" NOR, ({ "necklace" }) );
+        set_name(HIM "çç é¡¹é“¾" NOR, ({ "necklace" }) );
         set_weight(700);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "´®");
+                set("unit", "ä¸²");
                 set("value", 10000);
                 set("material", "pearl");
                 set("armor_prop/armor", 5);
                 set("armor_prop/spells",5);
-                set("wear_msg", "$NÄÃ³öÒ»´®$n´÷ÔÚ¾±×ÓÉÏ¡£\n");
+                set("wear_msg", "$Næ‹¿å‡ºä¸€ä¸²$næˆ´åœ¨é¢ˆå­ä¸Šã€‚\n");
         }
         setup();
 }

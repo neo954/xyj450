@@ -9,9 +9,9 @@ int update_condition(object me, int duration)
         me->receive_wound("sen", 40);
 	me->apply_condition("red_blood", duration - 1);
         if( duration < 1 )
-	tell_object(me, HIW "ÄãÖÐµÄ" HIR "³àÑª¹Æ" HIW "ÖÕÓÚ·¢×÷¹âÁË£¡\n" NOR );
+	tell_object(me, HIW "ä½ ä¸­çš„" HIR "èµ¤è¡€è›Š" HIW "ç»ˆäºŽå‘ä½œå…‰äº†ï¼\n" NOR );
 	else
-	tell_object(me, HIW "ÄãÖÐµÄ" HIR "³àÑª¹Æ" HIW "·¢×÷ÁË£¡\n" NOR );
+	tell_object(me, HIW "ä½ ä¸­çš„" HIR "èµ¤è¡€è›Š" HIW "å‘ä½œäº†ï¼\n" NOR );
 	if( duration < 1 ) 
 		return 0;
 	return 1;

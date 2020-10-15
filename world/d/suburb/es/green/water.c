@@ -5,19 +5,19 @@ inherit ROOM;
 
 void create()
 {
-	set("short","ÏªË®±ß");
+	set("short","æºªæ°´è¾¹");
 	set("long",@LONG
-ÄãÀ´µ½ÁËÒ»ÌõĞ¡ÏªµÄÅÔ±ß£¬ÏªË®ºÜÇå³º£¬»º»ºµØÏòÄÏÁ÷È¥£¬Î÷Ãæ
-¹àÄ¾´ÔÖĞÒşÒşµÄÓĞÌõĞ¡Â·¡£
-ºöÈ»Ë®(water)ÖĞÓĞÒ»µÀÁÁ¹âÉÁ¹ı£¬²»¹ı¿´²»ÇåÊÇÊ²Ã´£¬ÄãÊÇ·ñÒªÏÂÈ¥
-ÕÒÒ»ÕÒ(search)?
+ä½ æ¥åˆ°äº†ä¸€æ¡å°æºªçš„æ—è¾¹ï¼Œæºªæ°´å¾ˆæ¸…æ¾ˆï¼Œç¼“ç¼“åœ°å‘å—æµå»ï¼Œè¥¿é¢
+çŒæœ¨ä¸›ä¸­éšéšçš„æœ‰æ¡å°è·¯ã€‚
+å¿½ç„¶æ°´(water)ä¸­æœ‰ä¸€é“äº®å…‰é—ªè¿‡ï¼Œä¸è¿‡çœ‹ä¸æ¸…æ˜¯ä»€ä¹ˆï¼Œä½ æ˜¯å¦è¦ä¸‹å»
+æ‰¾ä¸€æ‰¾(search)?
 LONG
 );
 	set("exits",([
 	"west" :__DIR__"outdoor",
 	"north":__DIR__"stoneroom",
 	]) );
-	create_door("north","ÃÜÃÅ","south",DOOR_CLOSED);
+	create_door("north","å¯†é—¨","south",DOOR_CLOSED);
 	setup();
 }
 
@@ -32,20 +32,20 @@ int do_search(string arg)
 	
 	me = this_player();
 	if ( !arg || arg != "water" )
-		return notify_fail("ÄãÒªÔÚÄÇ¶ùÕÒ?\n");
+		return notify_fail("ä½ è¦åœ¨é‚£å„¿æ‰¾?\n");
 
-        message_vision("$NÌøÈëÏªË®Ö®ÖĞ£¬¿ªÊ¼×ĞÏ¸Ñ°ÕÒ....\n",me);		
+        message_vision("$Nè·³å…¥æºªæ°´ä¹‹ä¸­ï¼Œå¼€å§‹ä»”ç»†å¯»æ‰¾....\n",me);		
 
-	if ( me->query("°ËØÔÕó") ) {
+	if ( me->query("å…«å¦é˜µ") ) {
 	   if ( random(2) ) {
 		obj = new("/d/suburb/es/green/obj/windsword");
 		obj->move(me);
-		message_vision("$N¾¹´ÓË®ÖĞÕÒ³öÒ»°Ñ"+HIW"×··ç½£"NOR+"!\n", me);
+		message_vision("$Nç«Ÿä»æ°´ä¸­æ‰¾å‡ºä¸€æŠŠ"+HIW"è¿½é£å‰‘"NOR+"!\n", me);
 		return 1 ;
 	   }
-	   me->delete("°ËØÔÕó");
+	   me->delete("å…«å¦é˜µ");
 	}
-        message_vision("$NÔÚË®ÖĞÃ¦ÁË°ëÌì£¬½á¹ûÒ»ÎŞËù»ñ¡£\n",me);		
+        message_vision("$Nåœ¨æ°´ä¸­å¿™äº†åŠå¤©ï¼Œç»“æœä¸€æ— æ‰€è·ã€‚\n",me);		
 	return 1 ;
 }
 

@@ -6,13 +6,13 @@ inherit CLOTH;
 
 void create()
 {
-	set_name("¾ÉµÀÅÛ", ({"old robe","robe"}) );
+	set_name("æ—§é“è¢", ({"old robe","robe"}) );
 	set_weight(900);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¼ş²¹ÁËÓÖ²¹, Ï´µ½·º°×µÄ¾ÉµÀÅÛ\n");
-		set("unit", "¼ş");
+		set("long", "ä¸€ä»¶è¡¥äº†åˆè¡¥, æ´—åˆ°æ³›ç™½çš„æ—§é“è¢\n");
+		set("unit", "ä»¶");
 		set("armor_prop/armor", 1);
 		set("armor_prop/dodge", -1);
 	}

@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // Room: /changan/phomes
@@ -10,12 +10,12 @@ inherit ROOM;
 
 void create ()
 {
-  set ("short", "סլ��");
+  set ("short", "住宅区");
   set ("long", @LONG
 
-��ˮ֮����һ��סլ�����غ�������һ����Ư����С������
-�������컣���Ϣ���£�����ס�ҵľ������ڡ�����С¥
-ǰ��������(paizi)��д��Щ�˼ҵ����֡�
+泾水之滨的一块住宅区，沿河坐落着一栋栋漂亮的小别墅。
+这里风光旖旎，气息清新，正是住家的绝好所在。几座小楼
+前挂着牌子(paizi)，写着些人家的名字。
 
 LONG);
 
@@ -52,7 +52,7 @@ int show_name(string arg)
      ++j;
         }
       }
-      result="\n                        ���֮�� \n";
+      result="\n                        玩家之家 \n";
       if (j>0) {
    --j;
    k=0;
@@ -84,7 +84,7 @@ int show_name(string arg)
       }
       
       result="\n"+result+"\n\n\n"+
-        "ע���������ҵĵ�һ�����������롣\n";
+        "注：请键入各家的第一个名字来进入。\n";
         
       this_player()->start_more(result);
       
@@ -125,7 +125,7 @@ int enter_home(string arg)
         room->set("no_magic",1);
         room->move(env);
       }
-      message_vision("$N�����һ���ţ����˽�ȥ��\n",me);
+      message_vision("$N轻轻打开一扇门，走了进去。\n",me);
       me->move(room);
       return 1;
 }

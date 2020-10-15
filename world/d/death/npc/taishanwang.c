@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 //puti.c
@@ -7,10 +7,10 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("̩ɽ��", ({"taishan wang", "wang", "taishan"}));
-       set("title", "����ʮ��֮");
+       set_name("泰山王", ({"taishan wang", "wang", "taishan"}));
+       set("title", "阴间十王之");
    set("class", "youling");
-       set("gender", "����");
+       set("gender", "男性");
        set("age", 100);
        set("attitude", "friendly");
        set("shen_type", 1);
@@ -37,7 +37,7 @@ void create()
    map_skill("force", "tonsillit");
    map_skill("spells", "gouhunshu");
 
-create_family("���޵ظ�", 1, "���");
+create_family("阎罗地府", 1, "你好");
 setup();
 
         carry_object("/d/obj/cloth/mangpao")->wear();

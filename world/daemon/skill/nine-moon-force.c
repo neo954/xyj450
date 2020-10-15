@@ -5,8 +5,8 @@ int valid_enable(string usage) { return usage=="force"; }
 
 int valid_learn(object me) 
 { 
-       if( (string)me->query("gender") != "Å®ĞÔ" )
-                return notify_fail("¾ÅÒõĞÄ¾­ÊÇÖ»ÓĞÅ®×Ó²ÅÄÜÁ·µÄÄÚ¹¦¡£\n");
+       if( (string)me->query("gender") != "å¥³æ€§" )
+                return notify_fail("ä¹é˜´å¿ƒç»æ˜¯åªæœ‰å¥³å­æ‰èƒ½ç»ƒçš„å†…åŠŸã€‚\n");
 
 
 
@@ -17,7 +17,7 @@ return 1;
 int practice_skill(object me)
 {
         return 
-notify_fail("¾ÅÒõĞÄ¾­Ö»ÄÜÓÃÑ§µÄ£¬»òÊÇ´ÓÔËÓÃ(exert)ÖĞÔö¼ÓÊìÁ·¶È¡£\n");
+notify_fail("ä¹é˜´å¿ƒç»åªèƒ½ç”¨å­¦çš„ï¼Œæˆ–æ˜¯ä»è¿ç”¨(exert)ä¸­å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");
 }
 
 string exert_function_file(string func)
@@ -36,7 +36,7 @@ foo) ) {
                         victim->receive_wound("kee", (damage_bonus + foo));
                         victim->apply_condition("ninemoonpoison", factor/2);
                         return 
-"$NµÄÕĞÊ½Ğ®ÖøÒ»¹ÉÒõº®ÎŞ±ÈµÄ¾¢·çÊ¹µÃ$n²»½û´òÁË¸öº®àä¡£\n";
+"$Nçš„æ‹›å¼æŒŸè‘—ä¸€è‚¡é˜´å¯’æ— æ¯”çš„åŠ²é£ä½¿å¾—$nä¸ç¦æ‰“äº†ä¸ªå¯’å™¤ã€‚\n";
                 }
         }
         return foo;

@@ -4,10 +4,10 @@ inherit ROOM ;
 
 void create()
 {
-        set("short","¾øµØ");
+        set("short","ç»åœ°");
         set("long",@LONG
-ÕâÊÇÒ»¿é¾øµØ,ËÄÖÜÃ»ÓĞÈÎºÎ³ö¿Ú,Äã²»½û¼±µÃÒª¿ŞÁË³öÀ´,ºöÈ»,Äã·¢ÏÖ
-Ô¶·½ÓĞÒ»¿é´óÊ¯(stone)¶¯ÁËÒ»ÏÂ,×ß½üÒ»¿´,ËÆºõ¿ÉÒÔÍÆ(push)Ò»ÏÂ¡£
+è¿™æ˜¯ä¸€å—ç»åœ°,å››å‘¨æ²¡æœ‰ä»»ä½•å‡ºå£,ä½ ä¸ç¦æ€¥å¾—è¦å“­äº†å‡ºæ¥,å¿½ç„¶,ä½ å‘ç°
+è¿œæ–¹æœ‰ä¸€å—å¤§çŸ³(stone)åŠ¨äº†ä¸€ä¸‹,èµ°è¿‘ä¸€çœ‹,ä¼¼ä¹å¯ä»¥æ¨(push)ä¸€ä¸‹ã€‚
 LONG
 );
 
@@ -28,27 +28,27 @@ int do_push(string arg)
         object me;
         
         if ( !arg || arg != "stone" )
-                return notify_fail("ÄãÒªÍÆÊ²÷á?\n");
+                return notify_fail("ä½ è¦æ¨ä»€éº½?\n");
         
         me=this_player();
         
         if ( ((int)me->query("force") < 560) ||
              ((int)me->query("max_force") < 560) ||
              ((int)me->query("force_factor") < 40 ) ) { 
-                tell_object(me, "Äã³öÁ¦²»Ì«¹»à¸£¡\n");
+                tell_object(me, "ä½ å‡ºåŠ›ä¸å¤ªå¤Ÿå–”ï¼\n");
                 return 1;
         }
 
         me->receive_damage("gin",20);
         me->receive_damage("kee",60);
         me->receive_damage("sen",20);
-        message_vision("$NÓÃÁ¦ÍÆ»î¶¯µÄ´óÑÒÊ¯,´óÑÒÊ¯¶¯ÁËÒ»ÏÂ\n",me);
+        message_vision("$Nç”¨åŠ›æ¨æ´»åŠ¨çš„å¤§å²©çŸ³,å¤§å²©çŸ³åŠ¨äº†ä¸€ä¸‹\n",me);
         
         if ( random(3) == 0 ) {
-                message_vision("´óÑÒÊ¯¹ö¿ªÁË,$N´Ó´óÑÒÊ¯ºóÃæµÄĞ¡¶´×êÁË³öÈ¥\n",me);
+                message_vision("å¤§å²©çŸ³æ»šå¼€äº†,$Nä»å¤§å²©çŸ³åé¢çš„å°æ´é’»äº†å‡ºå»\n",me);
                 this_player()->move(__DIR__"entrance");
-                message("vision","$N´ÓÉ½±ÚÉÏµÄÒ»¸ö¶´¿Ú×êÁË³öÀ´\n",environment(me),me);
-        	tell_room(__DIR__"closed","·çÒ»´µ,´óÑÒÊ¯ÓÖ¹öÁË»ØÀ´,°Ñ¶´¿ÚÓÖ·â×¡ÁË\n");
+                message("vision","$Nä»å±±å£ä¸Šçš„ä¸€ä¸ªæ´å£é’»äº†å‡ºæ¥\n",environment(me),me);
+        	tell_room(__DIR__"closed","é£ä¸€å¹,å¤§å²©çŸ³åˆæ»šäº†å›æ¥,æŠŠæ´å£åˆå°ä½äº†\n");
                 return(1);
         }
         return(1);

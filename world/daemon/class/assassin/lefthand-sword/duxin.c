@@ -13,12 +13,12 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("£ÛÓÒÊÖ¾÷£ÝÖ»ÄÜ¶ÔÕ½¶·ÖÐµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("ï¼»å³æ‰‹è¯€ï¼½åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 	weapon = me->query_temp("weapon");
 	extra = me->query_skill("lefthand-sword",1) / 10;
 	me->add_temp("apply/attack", extra);	
 	me->add_temp("apply/damage", extra);
-	msg = HIR  "$N½«"+ weapon->name() +"»»µ½ÓÒÊÖ£¬¸ü¿ì£¬¸ü¶¾£¬¸ü×¼µØÏò$n´Ì³ö£¡" NOR;
+	msg = HIR  "$Nå°†"+ weapon->name() +"æ¢åˆ°å³æ‰‹ï¼Œæ›´å¿«ï¼Œæ›´æ¯’ï¼Œæ›´å‡†åœ°å‘$nåˆºå‡ºï¼" NOR;
 	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
 	me->add_temp("apply/attack", -extra);
 	me->add_temp("apply/damage", -extra);

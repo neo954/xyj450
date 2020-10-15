@@ -5,28 +5,28 @@ inherit F_QUEST;
 int kill_him();
 void create()
 {
-	set_name("Ê¯¹ÛÒô", ({ "master guanyin", "master","guanyin" }) );
-	set("gender", "Å®ĞÔ" );
+	set_name("çŸ³è§‚éŸ³", ({ "master guanyin", "master","guanyin" }) );
+	set("gender", "å¥³æ€§" );
 	set("age", 25);
 	set("int", 30);
 	set("str",60);
 	set("per", 30);
 	set("agi",100);
         set("apprentice_available", 50);
-        create_family("Ìì·ãÅÉ", 2, "ÕÆÃÅ");
+        create_family("å¤©æ«æ´¾", 2, "æŒé—¨");
 	set("long",
-"Ê¯¹ÛÒôµÄÃÀÀö£¬¾¹ÒÑÊÇ½ñÈË²»ÄÜÏëÏóµÄ£¬ÒòÎªËıµÄÃÀÀöÒÑÈ«²¿Õ¼¾İÁË
-ÈËÃÇµÄÏëÏóÁ¦¡£ÓĞºÜ¶àÈË¶¼³£ÓÃ¡°ĞÇíø¡±À´ĞÎÈİÅ®×ÓµÄÃÀÀö£¬µ«ĞÇ¹âÓÖÔõ
-¼°ËıÕâË«ÑÛ¾¦µÄÃ÷ÁÁÓëÎÂÈá¡£ÓĞºÜ¶àÈË¶¼³£ÓÃ¡°´ºÉ½¡±À´ĞÎÈİÃÀÅ®µÄÃ¼£¬
-µ«×İÊÇÎíÀïëüëÊµÄ´ºÉ½Ò²²»¼°ËıĞãÃ¼µÄÍñÔ¼¡£
+"çŸ³è§‚éŸ³çš„ç¾ä¸½ï¼Œç«Ÿå·²æ˜¯ä»Šäººä¸èƒ½æƒ³è±¡çš„ï¼Œå› ä¸ºå¥¹çš„ç¾ä¸½å·²å…¨éƒ¨å æ®äº†
+äººä»¬çš„æƒ³è±¡åŠ›ã€‚æœ‰å¾ˆå¤šäººéƒ½å¸¸ç”¨â€œæ˜Ÿçœ¸â€æ¥å½¢å®¹å¥³å­çš„ç¾ä¸½ï¼Œä½†æ˜Ÿå…‰åˆæ€
+åŠå¥¹è¿™åŒçœ¼ç›çš„æ˜äº®ä¸æ¸©æŸ”ã€‚æœ‰å¾ˆå¤šäººéƒ½å¸¸ç”¨â€œæ˜¥å±±â€æ¥å½¢å®¹ç¾å¥³çš„çœ‰ï¼Œ
+ä½†çºµæ˜¯é›¾é‡Œæœ¦èƒ§çš„æ˜¥å±±ä¹Ÿä¸åŠå¥¹ç§€çœ‰çš„å©‰çº¦ã€‚
 "
 		);
         set("force_factor", 400);
         set("chat_chance", 2);
         set("chat_msg", ({
-                "Ê¯¹ÛÒôµÀ£º¡°Äã......Äã²»¾õÎÒÀÏ£¿¡±\n",
-                "Ê¯¹ÛÒôĞ¦ÁËĞ¦£¬ÓÖµÀ£º¡°Äã¿ÉÖªµÀÕâÀïÊÇÊ²Ã´µØ·½£¿¡±\n",
-		"Ê¯¹ÛÒôÑÛ¹âÍ»È»ëüëÊ£¬ÈáÉùµÀ£º¡°Äã¼ÈÖªµÀ£¬ÎªºÎ»¹²»¹ıÀ´£¿¡±\n",
+                "çŸ³è§‚éŸ³é“ï¼šâ€œä½ ......ä½ ä¸è§‰æˆ‘è€ï¼Ÿâ€\n",
+                "çŸ³è§‚éŸ³ç¬‘äº†ç¬‘ï¼Œåˆé“ï¼šâ€œä½ å¯çŸ¥é“è¿™é‡Œæ˜¯ä»€ä¹ˆåœ°æ–¹ï¼Ÿâ€\n",
+		"çŸ³è§‚éŸ³çœ¼å…‰çªç„¶æœ¦èƒ§ï¼ŒæŸ”å£°é“ï¼šâ€œä½ æ—¢çŸ¥é“ï¼Œä¸ºä½•è¿˜ä¸è¿‡æ¥ï¼Ÿâ€\n",
         }) );
 
         set("max_gin", 3000);
@@ -52,11 +52,11 @@ void create()
         }) );
         set("combat_exp", 99999999);
         set("inquiry", ([
-                "ÎŞ»¨" : (: kill_him :),
-                "Àî¹ÃÄï" : (: kill_him :),
-                "Àîçù" : (: kill_him :),
-                "Ìì·ãÊ®ËÄÀÉ" : (: kill_him :),
-                "ÄÏ¹¬Áé" : (: kill_him :),
+                "æ— èŠ±" : (: kill_him :),
+                "æå§‘å¨˜" : (: kill_him :),
+                "æç¦" : (: kill_him :),
+                "å¤©æ«åå››éƒ" : (: kill_him :),
+                "å—å®«çµ" : (: kill_him :),
 
         ]));
         set_skill("unarmed", 100);
@@ -90,17 +90,17 @@ void attempt_apprentice(object ob)
 {
         if( query("apprentice_available") ) {
                 if( find_call_out("do_recruit") != -1 )
-                        command("say ÂıÖø£¬Ò»¸öÒ»¸öÀ´¡£");
+                        command("say æ…¢è‘—ï¼Œä¸€ä¸ªä¸€ä¸ªæ¥ã€‚");
                 else
                         call_out("do_recruit", 2, ob);
         } else {
-                command("say ±¾ÕÆÃÅ½ñÌìÒÑ¾­ÊÕÁË¶şÊ®¸öµÜ×Ó£¬²»ÏëÔÙÊÕÍ½ÁË¡£");
+                command("say æœ¬æŒé—¨ä»Šå¤©å·²ç»æ”¶äº†äºŒåä¸ªå¼Ÿå­ï¼Œä¸æƒ³å†æ”¶å¾’äº†ã€‚");
         }
 }
 void do_recruit(object ob)
 {
                 command("smile");
-                command("say ÄãÈÕºó¿ÉÒª¶à¶àÅ¬Á¦£¡");
+                command("say ä½ æ—¥åå¯è¦å¤šå¤šåŠªåŠ›ï¼");
                 command("smile");
                 command("recruit " + ob->query("id") );
 }
@@ -120,28 +120,28 @@ void re_rank(object student)
         int exp;
         exp = (int) student->query("combat_exp");
         if( exp <= 32000 ) {
-                student->set("title","Ìì·ãÅÉµÜ×Ó");
+                student->set("title","å¤©æ«æ´¾å¼Ÿå­");
                 return ;
         } else if ( exp <= 128000 ) {
-                student->set("title","Ìì·ãÅÉĞ¡Ä§");
+                student->set("title","å¤©æ«æ´¾å°é­”");
                 return ;
         } else if ( exp <= 512000 ) {
-                student->set("title","Ìì·ãÅÉÉÙÄ§");
+                student->set("title","å¤©æ«æ´¾å°‘é­”");
                 return ;
         } else if ( exp <= 1536000 ) {
-                student->set("title","Ìì·ãÅÉ´óÄ§");
+                student->set("title","å¤©æ«æ´¾å¤§é­”");
                 return ;
         } else if ( exp <= 3456000 ) {
-                student->set("title","Ìì·ãÅÉÆæÄ§");
+                student->set("title","å¤©æ«æ´¾å¥‡é­”");
                 return ;
         } else if ( exp <= 5187000 ) {
-                student->set("title","Ìì·ãÅÉ³¤ÀÏ");
+                student->set("title","å¤©æ«æ´¾é•¿è€");
                 return ;
         } else if ( exp <= 26244000 ) {
-                student->set("title","Ìì·ãÅÉÔªÀÏ");
+                student->set("title","å¤©æ«æ´¾å…ƒè€");
                 return ;
         } else
-                student->set("title","Ìì·ãÅÉ¸±ÕÆÃÅ");
+                student->set("title","å¤©æ«æ´¾å‰¯æŒé—¨");
                 return ;
 }
 
@@ -149,7 +149,7 @@ int kill_him()
 {
         object me;
         me = this_player();
-        command("say ¿´À´ÄãÒÑ¾­ÖªµÀÎÒµÄÀ´ÀúÁË£¡£¡ \n");
+        command("say çœ‹æ¥ä½ å·²ç»çŸ¥é“æˆ‘çš„æ¥å†äº†ï¼ï¼ \n");
         this_object()->kill_ob(me);
         me->kill_ob(this_object());
         return 1;

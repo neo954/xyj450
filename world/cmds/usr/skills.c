@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // skills.c
@@ -8,39 +8,39 @@
 inherit F_CLEAN_UP;
 
 string *skill_level_desc = ({
-   BLU "³õÑ§Õ§Á·" NOR,
-        BLU "³õ¿úÃÅ¾¶" NOR,
-   HIB "´ÖÍ¨Æ¤Ã«" NOR,
-        HIB "ÂÔÖªÒ»¶ş" NOR,
-   YEL "°ëÉú²»Êì" NOR,
-   YEL "ÂíÂí»¢»¢" NOR,
-        HIY "ÒÑÓĞĞ¡³É" NOR,
-        HIY "½¥Èë¼Ñ¾³" NOR,
-   HIM "¼İÇá¾ÍÊì" NOR,
-        HIM "ÁËÈ»ÓÚĞØ" NOR,
-   HIR "³öÀà°ÎİÍ" NOR,
-        HIR "ĞÄÁìÉñ»á" NOR,
-   MAG "ÉñºõÆä¼¼" NOR,
-   MAG "³öÉñÈë»¯" NOR,
-        CYN "»íÈ»¹áÍ¨" NOR,
-   CYN "µÇ·åÔì¼«" NOR,
-        HIC "¾ÙÊÀÎŞË«" NOR,
-        HIC "Ò»´ú×ÚÊ¦" NOR,
-   HIC "Õğ¹Åîå½ñ" NOR,
-   HIW "Éî²»¿É²â" NOR
+   BLU "åˆå­¦ä¹ç»ƒ" NOR,
+        BLU "åˆçª¥é—¨å¾„" NOR,
+   HIB "ç²—é€šçš®æ¯›" NOR,
+        HIB "ç•¥çŸ¥ä¸€äºŒ" NOR,
+   YEL "åŠç”Ÿä¸ç†Ÿ" NOR,
+   YEL "é©¬é©¬è™è™" NOR,
+        HIY "å·²æœ‰å°æˆ" NOR,
+        HIY "æ¸å…¥ä½³å¢ƒ" NOR,
+   HIM "é©¾è½»å°±ç†Ÿ" NOR,
+        HIM "äº†ç„¶äºèƒ¸" NOR,
+   HIR "å‡ºç±»æ‹”èƒ" NOR,
+        HIR "å¿ƒé¢†ç¥ä¼š" NOR,
+   MAG "ç¥ä¹å…¶æŠ€" NOR,
+   MAG "å‡ºç¥å…¥åŒ–" NOR,
+        CYN "è±ç„¶è´¯é€š" NOR,
+   CYN "ç™»å³°é€ æ" NOR,
+        HIC "ä¸¾ä¸–æ— åŒ" NOR,
+        HIC "ä¸€ä»£å®—å¸ˆ" NOR,
+   HIC "éœ‡å¤é“„ä»Š" NOR,
+   HIW "æ·±ä¸å¯æµ‹" NOR
 });
 string *knowledge_level_desc = ({
-        BLU "ĞÂÑ§Õ§ÓÃ" NOR,
-        HIB "³õ¿úÃÅ¾¶" NOR,
-        HIB "ÂÔÖªÒ»¶ş" NOR,
-        YEL "ÂíÂí»¢»¢" NOR,
-        YEL "ÒÑÓĞĞ¡³É" NOR,
-        CYN "ĞÄÁìÉñ»á" NOR,
-        CYN "ÁËÈ»ÓÚĞØ" NOR,
-        CYN "»íÈ»¹áÍ¨" NOR,
-        HIC "¾ÙÊÀÎŞË«" NOR,
-        HIC "Õğ¹Åîå½ñ" NOR,
-        HIW "Éî²»¿É²â" NOR
+        BLU "æ–°å­¦ä¹ç”¨" NOR,
+        HIB "åˆçª¥é—¨å¾„" NOR,
+        HIB "ç•¥çŸ¥ä¸€äºŒ" NOR,
+        YEL "é©¬é©¬è™è™" NOR,
+        YEL "å·²æœ‰å°æˆ" NOR,
+        CYN "å¿ƒé¢†ç¥ä¼š" NOR,
+        CYN "äº†ç„¶äºèƒ¸" NOR,
+        CYN "è±ç„¶è´¯é€š" NOR,
+        HIC "ä¸¾ä¸–æ— åŒ" NOR,
+        HIC "éœ‡å¤é“„ä»Š" NOR,
+        HIW "æ·±ä¸å¯æµ‹" NOR
 });
 
 string skill_level(string, int);
@@ -61,24 +61,24 @@ int main(object me, string arg)
 //        if ( ob->query("SPSKILLS",1)  ) return ob->skills();      
      if (!ob) ob = find_player(arg);
      if (!ob) ob = find_living(arg);
-     if (!ob) return notify_fail("ÄãÒª²ì¿´Ë­µÄ¼¼ÄÜ£¿\n");
+     if (!ob) return notify_fail("ä½ è¦å¯Ÿçœ‹è°çš„æŠ€èƒ½ï¼Ÿ\n");
    }
    if( ob!=me && ob->query("env/invisibility")&&!wizardp(me) )
-     return notify_fail("ÄãÒª²ì¿´Ë­µÄ¼¼ÄÜ£¿\n");
+     return notify_fail("ä½ è¦å¯Ÿçœ‹è°çš„æŠ€èƒ½ï¼Ÿ\n");
 
    if( ob!=me && !wizardp(me) 
    && !ob->is_apprentice_of(me) 
    && !me->is_apprentice_of(ob) 
    && getuid(ob)!=me->query("bonze/dadangid")
    && getuid(ob)!=me->query("couple/id"))
-     return notify_fail("Ö»ÓĞÎ×Ê¦»òÓĞÊ¦Í½¹ØÏµµÄÈËÄÜ²ì¿´ËûÈËµÄ¼¼ÄÜ¡£\n");
+     return notify_fail("åªæœ‰å·«å¸ˆæˆ–æœ‰å¸ˆå¾’å…³ç³»çš„äººèƒ½å¯Ÿçœ‹ä»–äººçš„æŠ€èƒ½ã€‚\n");
 
    skl = ob->query_skills();
    if(!sizeof(skl)) {
-     write( (ob==me ? "Äã" : ob->name()) + "Ä¿Ç°²¢Ã»ÓĞÑ§»áÈÎºÎ¼¼ÄÜ¡£\n");
+     write( (ob==me ? "ä½ " : ob->name()) + "ç›®å‰å¹¶æ²¡æœ‰å­¦ä¼šä»»ä½•æŠ€èƒ½ã€‚\n");
      return 1;
    }
-   write( (ob==me ? "Äã" : ob->name()) +"Ä¿Ç°ËùÕÆÎÕµÄ¼¼ÄÜ£º\n\n");
+   write( (ob==me ? "ä½ " : ob->name()) +"ç›®å‰æ‰€æŒæ¡çš„æŠ€èƒ½ï¼š\n\n");
    sname  = sort_array( keys(skl), (: strcmp :) );
    
    map = ob->query_skill_map();
@@ -91,7 +91,7 @@ int main(object me, string arg)
    for(i=0; i<sizeof(skl); i++) {
      printf("%s%s%-40s" NOR " - %-10s %3d/%5d\n", 
         (lrn[sname[i]] >= (skl[sname[i]]+1) * (skl[sname[i]]+1)) ? HIM : "",
-        (member_array(sname[i], mapped)==-1? "  ": "¡õ"),
+        (member_array(sname[i], mapped)==-1? "  ": "â–¡"),
         to_chinese(sname[i]) + " (" + sname[i] + ")",
         skill_level(SKILL_D(sname[i])->type(), skl[sname[i]]),
         skl[sname[i]], (int)lrn[sname[i]],
@@ -122,13 +122,13 @@ string skill_level(string type, int level)
 int help(object me)
 {
    write(@HELP
-Ö¸Áî¸ñÊ½ : skills|jineng [<Ä³ÈË>]
+æŒ‡ä»¤æ ¼å¼ : skills|jineng [<æŸäºº>]
 
-Õâ¸öÖ¸Áî¿ÉÒÔÈÃÄã²éÑ¯ËùÑ§¹ıµÄ¼¼ÄÜ¡£
+è¿™ä¸ªæŒ‡ä»¤å¯ä»¥è®©ä½ æŸ¥è¯¢æ‰€å­¦è¿‡çš„æŠ€èƒ½ã€‚
 
-ÄãÒ²¿ÉÒÔÖ¸¶¨Ò»¸öºÍÄãÓĞÊ¦Í½¹ØÏµµÄ¶ÔÏó£¬ÓÃ skills ¿ÉÒÔ²éÖª¶Ô·½µÄ¼¼ÄÜ×´¿ö¡£
+ä½ ä¹Ÿå¯ä»¥æŒ‡å®šä¸€ä¸ªå’Œä½ æœ‰å¸ˆå¾’å…³ç³»çš„å¯¹è±¡ï¼Œç”¨ skills å¯ä»¥æŸ¥çŸ¥å¯¹æ–¹çš„æŠ€èƒ½çŠ¶å†µã€‚
 
-Î×Ê¦¿ÉÒÔ²éÑ¯ÈÎºÎÈË»ò NPC µÄ¼¼ÄÜ×´¿ö¡£
+å·«å¸ˆå¯ä»¥æŸ¥è¯¢ä»»ä½•äººæˆ– NPC çš„æŠ€èƒ½çŠ¶å†µã€‚
 
 HELP
     );

@@ -9,13 +9,13 @@ int main(object me,string arg)
         int i;
 	string mebang,obbang;
 
-	mebang = (string)me->query("marks/°ïÅÉ");
-	if ((mebang==0) || (mebang=="¿Õ")) return 1;
+	mebang = (string)me->query("marks/å¸®æ´¾");
+	if ((mebang==0) || (mebang=="ç©º")) return 1;
         ob=users();
         i = sizeof(ob);
         while (i--) {
-		obbang = (string)ob[i]->query("marks/°ïÅÉ");
-		if ( (obbang!=0) && (obbang!="¿Õ") && (mebang == obbang) )
+		obbang = (string)ob[i]->query("marks/å¸®æ´¾");
+		if ( (obbang!=0) && (obbang!="ç©º") && (mebang == obbang) )
 		{
 			if (sizeof(target)==0)
 			{
@@ -26,16 +26,16 @@ int main(object me,string arg)
 		}
 	}
 	
-	message("vision", HIW "¡¾°ï»á¡¿" + me->name(1) + "£º" + arg + "\n" NOR, target);	
+	message("vision", HIW "ã€å¸®ä¼šã€‘" + me->name(1) + "ï¼š" + arg + "\n" NOR, target);	
         return 1;
 }
 
 int help(object me)
 {
 write(@HELP
-Ö¸Áî¸ñÊ½ : ulist
+æŒ‡ä»¤æ ¼å¼ : ulist
 
-½«ÏßÉÏËùÓĞÍæ¼ÒµÄ/obj/user number ÏÔÊ¾³öÀ´¡£
+å°†çº¿ä¸Šæ‰€æœ‰ç©å®¶çš„/obj/user number æ˜¾ç¤ºå‡ºæ¥ã€‚
 HELP
     );
     return 1;

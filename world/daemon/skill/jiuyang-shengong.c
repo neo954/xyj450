@@ -1,7 +1,7 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
 
-// jiuyang-shengong.c ¾ÅÑôÉñ¹¦
+// jiuyang-shengong.c ä¹é˜³ç¥žåŠŸ
 // cleansword
 
 inherit FORCE;
@@ -15,7 +15,7 @@ int valid_learn(object me)
 {
 
 	if ((int)me->query_skill("force", 1) < 30)
-		return notify_fail("ÄãµÄ»ù±¾ÄÚ¹¦»ðºò»¹²»¹»£¬ÎÞ·¨Áì»á¾ÅÑôÉñ¹¦¡£\n");
+		return notify_fail("ä½ çš„åŸºæœ¬å†…åŠŸç«å€™è¿˜ä¸å¤Ÿï¼Œæ— æ³•é¢†ä¼šä¹é˜³ç¥žåŠŸã€‚\n");
 
 	return 1;
 }
@@ -24,9 +24,9 @@ int valid_learn(object me)
 int practice_skill(object me)
 {
 	if ((int)me->query("kee") < 20)
-		return notify_fail("ÄãµÄÌåÁ¦Ì«µÍÁË¡£\n");
+		return notify_fail("ä½ çš„ä½“åŠ›å¤ªä½Žäº†ã€‚\n");
 	if ((int)me->query("force") < 20)
-		return notify_fail("ÄãµÄÄÚÁ¦²»¹»Á·¾ÅÑôÉñ¹¦¡£\n");
+		return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿç»ƒä¹é˜³ç¥žåŠŸã€‚\n");
 
 	me->receive_damage("kee", 10);
 	me->receive_damage("force", 10);

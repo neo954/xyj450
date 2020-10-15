@@ -6,12 +6,12 @@ inherit EQUIP;
 
 void create()
 {
-    set_name( MAG"×Ï½ð¹Ú" NOR, ({ "gold hat", "hat" }));
+    set_name( MAG"ç´«é‡‘å† " NOR, ({ "gold hat", "hat" }));
         set_weight(500);
         if ( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¶¥");
+                set("unit", "é¡¶");
                 set("value", 12000);
                 set("material", "cloud");
                 set("armor_type", "head");

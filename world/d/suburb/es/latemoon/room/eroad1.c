@@ -3,11 +3,11 @@ inherit ROOM;
 
 void create()
 {
-   set("short", "¶«Ïá·¿×ßµÀ");
+   set("short", "ä¸œåŽ¢æˆ¿èµ°é“");
 	set("long", @LONG
-Í¨¹ýºóÌü×ßµÀ£¬½ÓÖøÄã×ß½ø¶«Ïá·¿×ßµÀ¡£³ýÁË³¤³¤µÄ×ßµÀÖÐ£¬
-Ò»ÅÅÊÎÀöµÄ¹¬µÆ! ×ßµÀÁ½ÅÔ°ÚÉèÁËÐí¶àÆæ»¨Òì²Ý£¬¸÷ÓÐ¸÷µÄÌØÉ«Óë
-ÐÎÌ¬£¬¿ÕÆøÖÐÃÖÂþÒ»ÖÖµ­µ­µÄÏãÆø¡£¶«ÃæÄã¿´µ½Ò»ÉÈÏáÃÅ¡£
+é€šè¿‡åŽåŽ…èµ°é“ï¼ŒæŽ¥è‘—ä½ èµ°è¿›ä¸œåŽ¢æˆ¿èµ°é“ã€‚é™¤äº†é•¿é•¿çš„èµ°é“ä¸­ï¼Œ
+ä¸€æŽ’é¥°ä¸½çš„å®«ç¯! èµ°é“ä¸¤æ—æ‘†è®¾äº†è®¸å¤šå¥‡èŠ±å¼‚è‰ï¼Œå„æœ‰å„çš„ç‰¹è‰²ä¸Ž
+å½¢æ€ï¼Œç©ºæ°”ä¸­å¼¥æ¼«ä¸€ç§æ·¡æ·¡çš„é¦™æ°”ã€‚ä¸œé¢ä½ çœ‹åˆ°ä¸€æ‰‡åŽ¢é—¨ã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -17,7 +17,7 @@ LONG
 
 ]));
 
-   create_door("east","µñÊÎÏáÃÅ","west", DOOR_CLOSED);
+   create_door("east","é›•é¥°åŽ¢é—¨","west", DOOR_CLOSED);
 	setup();
 	replace_program(ROOM);
 }

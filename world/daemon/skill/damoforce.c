@@ -8,7 +8,7 @@ int valid_learn(object me) { return 1; }
 int practice_skill(object me)
 {
         return 
-notify_fail("达摩易筋经只能用学的，或是从运用(exert)中增加熟练度。\n");
+notify_fail("杈炬懇鏄撶瓔缁忓彧鑳界敤瀛︾殑锛屾垨鏄粠杩愮敤(exert)涓鍔犵啛缁冨害銆俓n");
 }
 
 string exert_function_file(string func)
@@ -35,7 +35,7 @@ void skill_improved(object me)
         s = me->query_skill("damoforce", 1);
         if(!(s%10) && (int)me->query("con") < s/4){ 
                 tell_object(me, HIG
-"你学着学着达摩易筋经，突然感到丹田之气喷涌而出！！\n" NOR);
+"浣犲鐫�瀛︾潃杈炬懇鏄撶瓔缁忥紝绐佺劧鎰熷埌涓圭敯涔嬫皵鍠锋秾鑰屽嚭锛侊紒\n" NOR);
                 me->add("con", 1);
 		me->unconcious();
         }

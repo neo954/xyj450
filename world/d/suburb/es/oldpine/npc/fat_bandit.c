@@ -4,18 +4,18 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÍÁ·Ë", ({ "bandit" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("åœŸåŒª", ({ "bandit" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 36);
 	set("long",
-		"Õâ¼Ò»ïÓÖ°«ÓÖÅÖ£¬Ô²¹ö¹öµÄÑÛÖé×ÓÔÚÂúÁ³·ÊÈâÖĞ¹ÇÂµÂµµØ×ªÀ´×ªÈ¥¡£\n");
+		"è¿™å®¶ä¼™åˆçŸ®åˆèƒ–ï¼Œåœ†æ»šæ»šçš„çœ¼ç å­åœ¨æ»¡è„¸è‚¥è‚‰ä¸­éª¨ç¢Œç¢Œåœ°è½¬æ¥è½¬å»ã€‚\n");
 	set("combat_exp", 500);
 	set("score", 80);
 	set("attitude", "aggressive");
 	set("chat_chance", 10);
 	set("chat_msg_combat", ({
-		"\n°«ÅÖ×ÓÍÁ·Ë´ó½Ğ£º°ÑÄãÉíÉÏµÄÇ®Í¨Í¨ÁôÏÂÀ´£¡\n",
-		"\n°«ÅÖ×ÓÍÁ·Ë×ìÀï²»Ç¬²»¾»µØÖäÂîÖø¡£\n",
+		"\nçŸ®èƒ–å­åœŸåŒªå¤§å«ï¼šæŠŠä½ èº«ä¸Šçš„é’±é€šé€šç•™ä¸‹æ¥ï¼\n",
+		"\nçŸ®èƒ–å­åœŸåŒªå˜´é‡Œä¸ä¹¾ä¸å‡€åœ°å’’éª‚è‘—ã€‚\n",
 		(: this_object(), "call_for_help" :),
 	}) );
 	set_skill("sword", 20);
@@ -33,8 +33,8 @@ void call_for_help()
 
 	if( query("called_help") || present("bandit chief", environment()) ) return;
 	set("called_help", 1);
-	command("say ËûÂèµÄ£¬µã×Ó×¦×ÓÌ«Ó²....");
-	say("°«ÅÖ×ÓÍÁ·Ë´ó½Ğ£ºÀÏ´ó£¡ÀÏ´ó£¡ĞÖµÜ³Å²»×¡À²£¡");
+	command("say ä»–å¦ˆçš„ï¼Œç‚¹å­çˆªå­å¤ªç¡¬....");
+	say("çŸ®èƒ–å­åœŸåŒªå¤§å«ï¼šè€å¤§ï¼è€å¤§ï¼å…„å¼Ÿæ’‘ä¸ä½å•¦ï¼");
 	ob = new(__DIR__"bandit_chief");
 	ob->move(environment());
 	ob->start_help();

@@ -4,8 +4,8 @@ inherit NPC;
 
 void create()
 {
-	set_name("�Ҷ�", ({ "servant" }) );
-	set("long", "һ���������˷�ɫ�����ӣ��ع��ؾ��ش���վ��һ�ԡ�\n");
+	set_name("家丁", ({ "servant" }) );
+	set("long", "一个穿著家人服色的男子，必恭必敬地垂手站在一旁。\n");
 	set("age", 32);
 	set("attitude", "peaceful");
 	set("combat_exp", 500);

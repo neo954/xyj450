@@ -6,11 +6,11 @@ int do_pick (string arg);
 
 void create()
 {
-	set("short", "¹ÏµØ");
+	set("short", "ç“œåœ°");
 	set("long", @LONG
-ÕâÊÇÒ»Æ¬ºÜ´óµÄÎ÷¹ÏµØ£¬É³ÖÊµÄÍÁÈÀ£¬ÖÖ³öÀ´µÄ¹Ï¿Ï¶¨ÊÇÓÖÌğÓÖÉ°È¿£¬
-ÊìÍ¸ÁËµÄÎ÷¹Ï(melon)ÒÑÓë¹ÏµÙÍÑ¿ª£¬¾ÍµÈÈËÃÇÈ¥Õª(pick)ÄØ¡£²»¹ı¿´¹ÏÅ©
-µÄÅñ×Ó¾ÍÔÚ¹ÏµØµÄÄÏÃæ£¬ËûµÄ¾¯ÌèĞÔ¿ÉÊÇºÜ¸ßÑ½¡£±±ÃæÊÇ´åÀïµÄĞ¡Â·¡£
+è¿™æ˜¯ä¸€ç‰‡å¾ˆå¤§çš„è¥¿ç“œåœ°ï¼Œæ²™è´¨çš„åœŸå£¤ï¼Œç§å‡ºæ¥çš„ç“œè‚¯å®šæ˜¯åˆç”œåˆç ‚ç“¤ï¼Œ
+ç†Ÿé€äº†çš„è¥¿ç“œ(melon)å·²ä¸ç“œè’‚è„±å¼€ï¼Œå°±ç­‰äººä»¬å»æ‘˜(pick)å‘¢ã€‚ä¸è¿‡çœ‹ç“œå†œ
+çš„ç¯·å­å°±åœ¨ç“œåœ°çš„å—é¢ï¼Œä»–çš„è­¦æƒ•æ€§å¯æ˜¯å¾ˆé«˜å‘€ã€‚åŒ—é¢æ˜¯æ‘é‡Œçš„å°è·¯ã€‚
 LONG
 	);
 
@@ -39,17 +39,17 @@ int do_pick (string arg)
 	me=this_player();
 
 	room = find_object("/d/suburb/es/village/melonguard");
-	if (arg == "melon" || arg == "¹Ï") {
+	if (arg == "melon" || arg == "ç“œ") {
 	  if( random(me->query("kar"))>random(30) )
 	  {
-	    message_vision("$NÕÒÀ´ÕÒÈ¥£¬ÖÕÓÚÕÒµ½ÁËÒ»¸öÊìÍ¸ÁËµÄ´óÎ÷¹Ï±§ÔÚ»³ÖĞ¡£\n",me );
+	    message_vision("$Næ‰¾æ¥æ‰¾å»ï¼Œç»ˆäºæ‰¾åˆ°äº†ä¸€ä¸ªç†Ÿé€äº†çš„å¤§è¥¿ç“œæŠ±åœ¨æ€€ä¸­ã€‚\n",me );
 	    melon = new(__DIR__"obj/melon");
 	    melon->move(me);
 	    if( objectp(room) && objectp(ob=present("meloner",room)))
 	    {
 	      if( random(me->query("kar"))>random(10) )
 	      {
-	        message_vision( "Ôã¸â£¬¹ÏÅ©·¢ÏÖÁË$NÍµ¹Ï£¬ÏòÕâ±ß³å¹ıÀ´£¡\n", me );
+	        message_vision( "ç³Ÿç³•ï¼Œç“œå†œå‘ç°äº†$Nå·ç“œï¼Œå‘è¿™è¾¹å†²è¿‡æ¥ï¼\n", me );
 		ob->move(__DIR__"melonfarm");
 		ob->set_temp("melon/catch_thief",1);
 		me->set_temp("melon/catch_thief",1);
@@ -59,22 +59,22 @@ int do_pick (string arg)
 		return 1; 
 	      }
 	      else {
-		message_vision( "¹ÏÅ©ËÆºõÕıÔÚ´òî§Ë¯£¬Ã»ÓĞ·¢ÏÖ$NµÄĞ¡¶¯×÷¡£\n", me );
+		message_vision( "ç“œå†œä¼¼ä¹æ­£åœ¨æ‰“çŒç¡ï¼Œæ²¡æœ‰å‘ç°$Nçš„å°åŠ¨ä½œã€‚\n", me );
 		return 1;
 	      } 
 	    }
 	    else{
-	      message_vision( "$NÕæĞÒÔË£¬¹ÏÅ©Ã»ÓĞÔÚ¹ÏÅï¿´¹Ï¡£\n", me );
+	      message_vision( "$NçœŸå¹¸è¿ï¼Œç“œå†œæ²¡æœ‰åœ¨ç“œæ£šçœ‹ç“œã€‚\n", me );
 	      return 1; 
 	    }
 	  }
           else {
-	    message_vision( "$NÕÒÀ´ÕÒÈ¥£¬ÖÕÓÚ»¹ÊÇÃ»ÕÒµ½ÊìÍ¸µÄÎ÷¹Ï¡£\n", me );
+	    message_vision( "$Næ‰¾æ¥æ‰¾å»ï¼Œç»ˆäºè¿˜æ˜¯æ²¡æ‰¾åˆ°ç†Ÿé€çš„è¥¿ç“œã€‚\n", me );
 	    return 1;
 	  }
 	}
 
-	return notify_fail("ÄãÒªÕªÊ²Ã´£¿\n");
+	return notify_fail("ä½ è¦æ‘˜ä»€ä¹ˆï¼Ÿ\n");
 
 }
 
@@ -82,6 +82,6 @@ int valid_leave(object me,string dir)
 {
 	if( dir=="northup" || dir=="south" )
 	  if( me->query_temp("melon/catch_thief") )
-	    return notify_fail( "ÄãµÄÈ¥Â·±»¹ÏÅ©À¹×¡ÁË¡£\n" );
+	    return notify_fail( "ä½ çš„å»è·¯è¢«ç“œå†œæ‹¦ä½äº†ã€‚\n" );
 	return ::valid_leave(me,dir);
 }

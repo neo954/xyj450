@@ -6,19 +6,19 @@ inherit ITEM;
 
 void create()
 {
-	set_name( HIG "¹Å ½£" NOR, ({ "old sword", "sword"}));
+	set_name( HIG "å¤ å‰‘" NOR, ({ "old sword", "sword"}));
 	set_weight(800);
 	if ( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
+		set("unit", "æŠŠ");
 		set("long",@LONG
-ĞĞÔÆÁ÷Ë®£¬Èç¾¢·çÖ®Öñ£¬Æø¾ÛÓÚ·æ£¬Èç»ŞÈçÃ÷£¬Ë¹ĞĞÓÚ¼¼£¬»º¶¯¶ø
-Ë²¹¥£¬ÄËĞìÈçÁÖ£¬¼±Èç·ç£¬²»¶¯ÈçÉ½£¬ÇÖÂÔÈç»ğ¡£
+è¡Œäº‘æµæ°´ï¼Œå¦‚åŠ²é£ä¹‹ç«¹ï¼Œæ°”èšäºé”‹ï¼Œå¦‚æ™¦å¦‚æ˜ï¼Œæ–¯è¡ŒäºæŠ€ï¼Œç¼“åŠ¨è€Œ
+ç¬æ”»ï¼Œä¹ƒå¾å¦‚æ—ï¼Œæ€¥å¦‚é£ï¼Œä¸åŠ¨å¦‚å±±ï¼Œä¾µç•¥å¦‚ç«ã€‚
 LONG
 		);
 		set("value", 100);
-		set("material", "Í­");
+		set("material", "é“œ");
 		set("skill", ([
 		"name" :		"sword",
 			"exp_required" :  2500,

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
  
@@ -6,12 +6,12 @@ inherit NPC;
 int give_horse();
 void create()
 {
-   set_name("¼àØ©", ({"jian cheng"})); 
-        set("gender", "ÄĞĞÔ" );
-   set("long", "ÓùÂí¼à¼àØ©¡£\n");
+   set_name("ç›‘ä¸", ({"jian cheng"})); 
+        set("gender", "ç”·æ€§" );
+   set("long", "å¾¡é©¬ç›‘ç›‘ä¸ã€‚\n");
         set("age",40);
         set("str", 30);
-   set("title", "ÓùÂí¼à");
+   set("title", "å¾¡é©¬ç›‘");
         set("int", 20);
    set("con", 30);
    set("spi", 20);
@@ -23,7 +23,7 @@ void create()
    set("max_sen", 1000);
         set("inquiry", ([
                 "horse": (: give_horse :),
-     "ÌìÂí":(: give_horse :),
+     "å¤©é©¬":(: give_horse :),
         ]) );
 
         setup();
@@ -37,18 +37,18 @@ int give_horse()
    who=this_player();
    if( member_array("zengzhang tianwang", who->parse_command_id_list())==-1
      && member_array("huguo tianwang", who->parse_command_id_list())==-1) {
-     message_vision("$NºÜÒÉ»óµÄ¿´×Å$nËµ£ºÎÒ²»ÈÏÊ¶Äã£¡\n", me,who);
+     message_vision("$Nå¾ˆç–‘æƒ‘çš„çœ‹ç€$nè¯´ï¼šæˆ‘ä¸è®¤è¯†ä½ ï¼\n", me,who);
      return 1;
    }
    if( me->query("no_horse")){
-     message_vision("$NµÍÍ·¹şÑüµÄ¶Ô$nËµ£ºÌìÍõ£¬Ğ¡ÈËÊµÔÚÊÇ³é²»³öÒ»Æ¥°¡¡£\n", me, who);
+     message_vision("$Nä½å¤´å“ˆè…°çš„å¯¹$nè¯´ï¼šå¤©ç‹ï¼Œå°äººå®åœ¨æ˜¯æŠ½ä¸å‡ºä¸€åŒ¹å•Šã€‚\n", me, who);
      return 1;
    }
-   message_vision("$NµÍÍ·¹şÑüµÄËµ£ººÃËµ£¬ºÃËµ¡£\n", me);
+   message_vision("$Nä½å¤´å“ˆè…°çš„è¯´ï¼šå¥½è¯´ï¼Œå¥½è¯´ã€‚\n", me);
    seteuid(getuid());
    horse=new("/d/sky/npc/horse");
    horse->move(environment(me));
-   tell_room(environment(me), "ÅÔ±ßµÄµä²¾µ½ÂíÈ¦ÀïÇ£³öÆ¥ÌìÂíÀ´¡£\n");
+   tell_room(environment(me), "æ—è¾¹çš„å…¸ç°¿åˆ°é©¬åœˆé‡Œç‰µå‡ºåŒ¹å¤©é©¬æ¥ã€‚\n");
    me->set("no_horse", 1);
    call_out("reg", 3600);
    return 1;

@@ -7,17 +7,17 @@ inherit SWORD;
 
 void create()
 {
-        set_name( "Ô°¹¤¼ô", ({ "scissors" }) );
+        set_name( "å›­å·¥å‰ª", ({ "scissors" }) );
         set_weight(4000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "°Ñ");
-                set("long", "Ò»°Ñ³¤¶ø·æÀûµÄÔ°¹¤¼ôµ¶¡£\n");
+                set("unit", "æŠŠ");
+                set("long", "ä¸€æŠŠé•¿è€Œé”‹åˆ©çš„å›­å·¥å‰ªåˆ€ã€‚\n");
                 set("value", 100);
                 set("material", "iron");
-                set("wield_msg", "$NÄÃ³öÒ»°Ñ$n³­ÔÚÊÖÖÐ¡£\n");
-                set("unwield_msg", "$N·ÅÏÂÊÖÖÐµÄ$n¡£\n");
+                set("wield_msg", "$Næ‹¿å‡ºä¸€æŠŠ$næŠ„åœ¨æ‰‹ä¸­ã€‚\n");
+                set("unwield_msg", "$Næ”¾ä¸‹æ‰‹ä¸­çš„$nã€‚\n");
         }
 
         init_sword(15);

@@ -1,40 +1,40 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
 
-// taiji-quan.c Ì«¼«È­
+// taiji-quan.c å¤ªææ‹³
 
 inherit SKILL;
 
 mapping *action = ({
-([	"action" : "$NÊ¹Ò»ÕĞ¡¸À¿È¸Î²¡¹£¬Ë«ÊÖ»®ÁË¸ö°ëÈ¦£¬°´Ïò$nµÄ$l",
+([	"action" : "$Nä½¿ä¸€æ‹›ã€Œæ½é›€å°¾ã€ï¼ŒåŒæ‰‹åˆ’äº†ä¸ªåŠåœˆï¼ŒæŒ‰å‘$nçš„$l",
 	"force" : 150,
 	"dodge" : 30,
-	"skill_name" : "À¿È¸Î²",
-	"damage_type" : "ğöÉË"
+	"skill_name" : "æ½é›€å°¾",
+	"damage_type" : "ç˜€ä¼¤"
 ]),
-([	"action" : "$N×óÊÖĞé°´£¬ÓÒÊÖÊ¹Ò»ÕĞ¡¸°×ÉßÍÂĞÅ¡¹£¬Ïò$nµÄ$l²åÈ¥",
+([	"action" : "$Nå·¦æ‰‹è™šæŒ‰ï¼Œå³æ‰‹ä½¿ä¸€æ‹›ã€Œç™½è›‡åä¿¡ã€ï¼Œå‘$nçš„$læ’å»",
 	"force" : 250,
 	"dodge" : 25,
-	"skill_name" : "°×ÉßÍÂĞÅ",
-        "damage_type" : "ğöÉË"
+	"skill_name" : "ç™½è›‡åä¿¡",
+        "damage_type" : "ç˜€ä¼¤"
 ]),
-([	"action" : "$NË«ÊÖÎÕÈ­£¬ÏòÇ°Ïòºó»®»¡£¬Ò»ÕĞ¡¸Ë«·ç¹á¶ú¡¹´òÏò$nµÄ$l",
+([	"action" : "$NåŒæ‰‹æ¡æ‹³ï¼Œå‘å‰å‘ååˆ’å¼§ï¼Œä¸€æ‹›ã€ŒåŒé£è´¯è€³ã€æ‰“å‘$nçš„$l",
 	"force" : 300,
 	"dodge" : 20,
-	"skill_name" : "Ë«·ç¹á¶ú",
-        "damage_type" : "ğöÉË"
+	"skill_name" : "åŒé£è´¯è€³",
+        "damage_type" : "ç˜€ä¼¤"
 ]),
-([	"action" : "$N×óÊÖĞé»®£¬ÓÒÊÖÒ»¼Ç¡¸Ö¸ñÉ´¸¡¹»÷Ïò$nµÄñÉ²¿",
+([	"action" : "$Nå·¦æ‰‹è™šåˆ’ï¼Œå³æ‰‹ä¸€è®°ã€ŒæŒ‡è£†é”¤ã€å‡»å‘$nçš„è£†éƒ¨",
 	"force" : 320,
 	"dodge" : 15,
-	"skill_name" : "Ö¸ñÉ´¸",
-        "damage_type" : "ğöÉË"
+	"skill_name" : "æŒ‡è£†é”¤",
+        "damage_type" : "ç˜€ä¼¤"
 ]),
-([	"action" : "$NÊ©³ö¡¸·ü»¢Ê½¡¹£¬ÓÒÊÖ»÷Ïò$nµÄ$l£¬×óÊÖ¹¥Ïò$nµÄñÉ²¿",
+([	"action" : "$Næ–½å‡ºã€Œä¼è™å¼ã€ï¼Œå³æ‰‹å‡»å‘$nçš„$lï¼Œå·¦æ‰‹æ”»å‘$nçš„è£†éƒ¨",
 	"force" : 370,
 	"dodge" : 10,
-	"skill_name" : "·ü»¢Ê½",
-        "damage_type" : "ğöÉË"
+	"skill_name" : "ä¼è™å¼",
+        "damage_type" : "ç˜€ä¼¤"
 ])
 });
 
@@ -43,11 +43,11 @@ int valid_enable(string usage) { return usage=="unarmed" || usage=="parry"; }
 int valid_learn(object me)
 {
 	if (me->query_temp("weapon") || me->query_temp("secondary_weapon"))
-		return notify_fail("Á·Ì«¼«È­±ØĞë¿ÕÊÖ¡£\n");
+		return notify_fail("ç»ƒå¤ªææ‹³å¿…é¡»ç©ºæ‰‹ã€‚\n");
 	if ((int)me->query_skill("taiji-shengong", 1) < 20)
-		return notify_fail("ÄãµÄÌ«¼«Éñ¹¦»ğºò²»¹»£¬ÎŞ·¨Ñ§Ì«¼«È­¡£\n");
+		return notify_fail("ä½ çš„å¤ªæç¥åŠŸç«å€™ä¸å¤Ÿï¼Œæ— æ³•å­¦å¤ªææ‹³ã€‚\n");
 	if ((int)me->query("max_force") < 100)
-		return notify_fail("ÄãµÄÄÚÁ¦Ì«Èõ£¬ÎŞ·¨Á·Ì«¼«È­¡£\n");
+		return notify_fail("ä½ çš„å†…åŠ›å¤ªå¼±ï¼Œæ— æ³•ç»ƒå¤ªææ‹³ã€‚\n");
 	return 1;
 }
 
@@ -59,9 +59,9 @@ mapping query_action(object me, object weapon)
 int practice_skill(object me)
 {
 	if ((int)me->query("kee") < 30)
-		return notify_fail("ÄãµÄÌåÁ¦Ì«µÍÁË¡£\n");
+		return notify_fail("ä½ çš„ä½“åŠ›å¤ªä½äº†ã€‚\n");
 	if ((int)me->query("force") < 20)
-		return notify_fail("ÄãµÄÄÚÁ¦²»¹»Á·Ì«¼«È­¡£\n");
+		return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿç»ƒå¤ªææ‹³ã€‚\n");
 	me->receive_damage("kee", 25);
 	me->add("force", -10);
 	return 1;

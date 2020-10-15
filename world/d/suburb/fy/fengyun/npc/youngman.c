@@ -4,10 +4,10 @@ inherit NPC;
 int random_action();
 void create()
 {
-        set_name("ÄêÇàÈË", ({ "youngman" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å¹´é’äºº", ({ "youngman" }) );
+        set("gender", "ç”·æ€§" );
         set("age", random(5)+15);
-        set("long", "Ò»¸öµ¥ÉíµÄÄêÇàÈË£¬ÕıÅÎ×ÅÌÒ»¨ÔËµÄ½µÁÙ¡£\n");
+        set("long", "ä¸€ä¸ªå•èº«çš„å¹´é’äººï¼Œæ­£ç›¼ç€æ¡ƒèŠ±è¿çš„é™ä¸´ã€‚\n");
 	set("per",30);
         set("combat_exp", 1000);
         set("attitude", "heroism");

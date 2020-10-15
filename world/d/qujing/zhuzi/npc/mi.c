@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // by snowcat oct 15 1997
@@ -9,9 +9,9 @@ inherit F_VENDOR_SALE;
 void create()
 {
   reload("zhuzi_mi_laoban");
-  set_name("Ã×ÀÏ°å", ({"mi laoban", "mi", "laoban"}));
+  set_name("ç±³è€æ¿", ({"mi laoban", "mi", "laoban"}));
   set("shop_id", ({"laoban"}));
-  set("gender", "ÄĞĞÔ");
+  set("gender", "ç”·æ€§");
   set("combat_exp", 5000);
   set("age", 50);
   set("per", 34);

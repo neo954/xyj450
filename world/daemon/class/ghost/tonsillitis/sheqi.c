@@ -1,8 +1,8 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 
-// sheqi.c ÉãÆø£¬ÉãÈ¡ÑôÆø¡£weiqi...
+// sheqi.c æ‘„æ°”ï¼Œæ‘„å–é˜³æ°”ã€‚weiqi...
 #include <ansi.h>
 inherit SSERVER;
 
@@ -15,31 +15,31 @@ int exert(object me, object target)
    ||      !target->is_character()
    ||      target->is_corpse()
    ||      target==me)
-   return notify_fail("ÄãÏëÉãÈ¡Ë­µÄÑôÆø£¿\n");
+   return notify_fail("ä½ æƒ³æ‘„å–è°çš„é˜³æ°”ï¼Ÿ\n");
     
-   if( target == me ) return notify_fail("Äã·èÁË£¿\n");
+   if( target == me ) return notify_fail("ä½ ç–¯äº†ï¼Ÿ\n");
 
-   if(target->query_temp("netdead")) return notify_fail("³Ã»ğ´ò½Ù£¬²»Ì«Ïñ»°°É£¿\n");
+   if(target->query_temp("netdead")) return notify_fail("è¶ç«æ‰“åŠ«ï¼Œä¸å¤ªåƒè¯å§ï¼Ÿ\n");
 
    if( (int)me->query_skill("tonsillit", 1) < 30 )
-     return notify_fail("ÄãµÄÉãÆø¾÷ĞŞÎªÌ«µÍ£¬²»ÄÜÉãÈ¡ÑôÆø¡£\n");
+     return notify_fail("ä½ çš„æ‘„æ°”è¯€ä¿®ä¸ºå¤ªä½ï¼Œä¸èƒ½æ‘„å–é˜³æ°”ã€‚\n");
 
-   if( (string)me->query("family/family_name") != "ÑÖÂŞµØ¸®" )
-     return notify_fail("Äã²¢·ÇÑÖÂŞµØ¸®ÖĞÈË£¬²»ÄÜÉãÈ¡ÑôÆø¡£\n");
+   if( (string)me->query("family/family_name") != "é˜ç½—åœ°åºœ" )
+     return notify_fail("ä½ å¹¶éé˜ç½—åœ°åºœä¸­äººï¼Œä¸èƒ½æ‘„å–é˜³æ°”ã€‚\n");
 
         if(!me->is_fighting()||!target->is_fighting())
-                return notify_fail("Ö»ÄÜÔÚÕ½¶·ÖĞÉãÈ¡ÑôÆø¡£\n");
+                return notify_fail("åªèƒ½åœ¨æˆ˜æ–—ä¸­æ‘„å–é˜³æ°”ã€‚\n");
 
    if( (int)me->query("kee")  > 2*(int)me->query("max_kee") )
-     return notify_fail("ÄãÏÖÔÚÆøÌ«¹ı³äÓ¯£¬ÔÙÎü¾ÍÒª±¬Õ¨ÁË¡£\n");
+     return notify_fail("ä½ ç°åœ¨æ°”å¤ªè¿‡å……ç›ˆï¼Œå†å¸å°±è¦çˆ†ç‚¸äº†ã€‚\n");
 
    qi_lost = target->query("kee") / 4;
 
    if(qi_lost < 5 )
-     return notify_fail("¶Ô·½ÂíÉÏ¾ÍÒª¶ÏÆø£¬Ã»ÓĞÊ²Ã´ºÃÕ¥µÄÁË¡£\n");
+     return notify_fail("å¯¹æ–¹é©¬ä¸Šå°±è¦æ–­æ°”ï¼Œæ²¡æœ‰ä»€ä¹ˆå¥½æ¦¨çš„äº†ã€‚\n");
    
    msg = HIC
-"$NÃæ´øÄüĞ¦£¬Â¶³ö°×É­É­µÄÑÀ³İÍù$nµÄ±Ç¿×´ÕÁË¹ıÈ¥£¬ÕÅ×ì¾ÍÊÇÒ»Îü£¡\n" 
+"$Né¢å¸¦ç‹ç¬‘ï¼Œéœ²å‡ºç™½æ£®æ£®çš„ç‰™é½¿å¾€$nçš„é¼»å­”å‡‘äº†è¿‡å»ï¼Œå¼ å˜´å°±æ˜¯ä¸€å¸ï¼\n" 
 NOR;
 
    success = 1;
@@ -55,10 +55,10 @@ NOR;
    ap = (int)me->query("max_mana");
    dp = (int)target->query("max_mana");
    if( random(ap + dp) < dp ) success = 0;
-   //here we compared max_mana, ·¨Á¦¸ßÇ¿Ó¦¸Ã²»ÅÂ¹í¡£
+   //here we compared max_mana, æ³•åŠ›é«˜å¼ºåº”è¯¥ä¸æ€•é¬¼ã€‚
 
    if(success == 1 ){
-     msg +=  HIR "½á¹û$nÍ·Æ¤Ò»Âé£¬Ö»¾õµÃÌåÄÚÑôÆøÔ´Ô´²»¶ÏµØÁ÷ÁË³öÈ¥£¡\n" NOR;
+     msg +=  HIR "ç»“æœ$nå¤´çš®ä¸€éº»ï¼Œåªè§‰å¾—ä½“å†…é˜³æ°”æºæºä¸æ–­åœ°æµäº†å‡ºå»ï¼\n" NOR;
      target->receive_damage("kee", qi_lost, me);
 
      qi_gain = qi_lost;
@@ -83,7 +83,7 @@ NOR;
      }else me->improve_skill("tonsillit", qi_gain, 1);
    }       
    else {
-     msg +=  HIR "½á¹û$nÒ»Å¤Í·£¬±ÜÁË¿ªÈ¥£¡\n" NOR;   
+     msg +=  HIR "ç»“æœ$nä¸€æ‰­å¤´ï¼Œé¿äº†å¼€å»ï¼\n" NOR;   
    } 
 
    message_vision(msg, me, target);

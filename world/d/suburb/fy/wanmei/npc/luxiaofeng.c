@@ -1,19 +1,19 @@
 inherit NPC;
 void create()
 {
-        set_name("Â½Ğ¡·ï", ({ "lu", "xiaofeng", "xiao feng" }) );
-        set("gender", "ÄĞĞÔ");
+        set_name("é™†å°å‡¤", ({ "lu", "xiaofeng", "xiao feng" }) );
+        set("gender", "ç”·æ€§");
         set("age", 34);
-	set("title","ĞÄÓĞÁéÏ¬Ò»µãÍ¨");
+	set("title","å¿ƒæœ‰çµçŠ€ä¸€ç‚¹é€š");
         set("long",
-"ËÄÌõÃ¼Ã«µÄÂ½Ğ¡·ï\n"
+"å››æ¡çœ‰æ¯›çš„é™†å°å‡¤\n"
                ); 
 
         set("attitude", "peaceful");
         set("combat_exp", 1000000);
         set("chat_chance", 10);
         set("chat_msg", ({
-                "Â½Ğ¡·ïà«à«µÀ£ºÀÏµ¶°Ñ×Óµ½µ×ÊÇË­£¿£¿£¿\n",
+                "é™†å°å‡¤å–ƒå–ƒé“ï¼šè€åˆ€æŠŠå­åˆ°åº•æ˜¯è°ï¼Ÿï¼Ÿï¼Ÿ\n",
         }) );
         set("force", 4000);
         set("max_force", 2200);

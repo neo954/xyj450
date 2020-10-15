@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // heart_sense.c
@@ -10,14 +10,14 @@ inherit SSERVER;
 int conjure(object me, object target)
 {
    if( !target || !target->is_character() )
-     return notify_fail("ÄãÒª¶ÔË­Ê¹ÓÃĞÄÊ¶ÉñÍ¨£¿\n");
+     return notify_fail("ä½ è¦å¯¹è°ä½¿ç”¨å¿ƒè¯†ç¥é€šï¼Ÿ\n");
    if( target->is_corpse() )
-     return notify_fail("À´²»¼°ÁË£¬Ö»ÓĞ»îÈË²ÅÄÜ¾ÈĞÑ¡£\n");
+     return notify_fail("æ¥ä¸åŠäº†ï¼Œåªæœ‰æ´»äººæ‰èƒ½æ•‘é†’ã€‚\n");
 
-   if( (int)me->query("atman") < 50 ) return notify_fail("ÄãµÄÁéÁ¦²»¹»£¡\n");
+   if( (int)me->query("atman") < 50 ) return notify_fail("ä½ çš„çµåŠ›ä¸å¤Ÿï¼\n");
    me->add("atman", -50);
    me->receive_damage("sen", 30);
-   message_vision( HIY "$NÒ»ÊÖ·ÅÔÚ$nµÄÌìÁé¸Ç\ÉÏ£¬Ò»ÊÖÌùÔÚ$nµÄááĞÄ£¬±ÕÉÏÑÛ¾¦»º»ºµÍÒ÷ ...\n" NOR,
+   message_vision( HIY "$Nä¸€æ‰‹æ”¾åœ¨$nçš„å¤©çµç›–\ä¸Šï¼Œä¸€æ‰‹è´´åœ¨$nçš„å¾Œå¿ƒï¼Œé—­ä¸Šçœ¼ç›ç¼“ç¼“ä½åŸ ...\n" NOR,
      me, target );
    if( random(me->query("max_atman")) > 100 )
      target->revive();

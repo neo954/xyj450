@@ -5,11 +5,11 @@ inherit NPC;
 int custom();
 void create()
 {
-        set_name("Ğ¡¶¹¶¹", ({ "tin" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("å°è±†è±†", ({ "tin" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 37);
 	set("combat_exp", 4665677);
-	set("title","·çÔÆÒ»µ¶µÚÈı´úµÜ×Ó");
+	set("title","é£äº‘ä¸€åˆ€ç¬¬ä¸‰ä»£å¼Ÿå­");
         set("chat_chance", 2);
         set("chat_msg", ({
 		(: custom :)	

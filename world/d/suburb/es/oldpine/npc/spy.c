@@ -6,11 +6,11 @@ void create()
 {
 	object ob;
 
-	set_name("ºÚÒÂÈË", ({ "spy" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("é»‘è¡£äºº", ({ "spy" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 24);
 	set("long",
-		"Õâ¸öÄĞÈË¿´ÆğÀ´¹í¹íËîËîµÄ£¬Ïë±Ø²»ÊÇÊ²Ã´ºÃ¶«Î÷¡£\n");
+		"è¿™ä¸ªç”·äººçœ‹èµ·æ¥é¬¼é¬¼ç¥Ÿç¥Ÿçš„ï¼Œæƒ³å¿…ä¸æ˜¯ä»€ä¹ˆå¥½ä¸œè¥¿ã€‚\n");
 	set("combat_exp", 6000);
 	set("score", 400);
 	set("bellicosity", 2000);
@@ -30,7 +30,7 @@ void create()
 
 void killed_enemy(object who)
 {
-	command("say ¹ş¹ş¹ş¹ş¹ş¹ş¡£");
+	command("say å“ˆå“ˆå“ˆå“ˆå“ˆå“ˆã€‚");
 	call_out("dissolve", 1);
 }
 

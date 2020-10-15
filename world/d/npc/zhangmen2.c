@@ -1,8 +1,8 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // by snowcat 10/05/1997
-// zhangmen.c ÕÆÃÅ
+// zhangmen.c æŽŒé—¨
 
 inherit NPC;
 inherit F_CLEAN_UP;
@@ -14,13 +14,13 @@ inherit F_SAVE;
 
 void create()
 {
-  set_name("ÕÆÃÅ´óµÜ×Ó", ({ "zhang men", "zhangmen" }) );
-  set("gender", "ÄÐÐÔ" );
+  set_name("æŽŒé—¨å¤§å¼Ÿå­", ({ "zhang men", "zhangmen" }) );
+  set("gender", "ç”·æ€§" );
   set("age", 30);
   set("str", 30);
   set("per", 30);
   set("int", 30);
-  set("long", "ÕÆÃÅ´óµÜ×Ó¡£" );
+  set("long", "æŽŒé—¨å¤§å¼Ÿå­ã€‚" );
   set("attitude", "heroism");
   set("combat_exp", 100000);
   set("current_player","none of us");
@@ -82,9 +82,9 @@ void reset_me (object me)
     destruct (inv[i]);
   }
 
-  me->set_name("ÕÆÃÅ´óµÜ×Ó", ({ "zhang men", "zhangmen" }) );
-  me->set("gender", "ÄÐÐÔ" );
-  me->set("title",me->query("family/family_name")+"ÕÆÃÅ");
+  me->set_name("æŽŒé—¨å¤§å¼Ÿå­", ({ "zhang men", "zhangmen" }) );
+  me->set("gender", "ç”·æ€§" );
+  me->set("title",me->query("family/family_name")+"æŽŒé—¨");
   me->set("short",me->query("name")+"("+capitalize(me->query("id"))+")");
   me->set("attitude", "heroism");
   me->set("current_player","none of us");
@@ -273,7 +273,7 @@ int convert_identity (object me, object ob)
   me->set("name", ob->query("name") );
   me->set("gender", ob->query("gender") );
   me->set("current_player",ob->query("id"));
-  me->set("title",ob->query("family/family_name")+"ÕÆÃÅ");
+  me->set("title",ob->query("family/family_name")+"æŽŒé—¨");
   me->set("short",me->query("name")+"("+capitalize(me->query("id"))+")");
 
   save_record(me, ob);
@@ -330,7 +330,7 @@ int init_identity (object me, object ob)
   me->set("current_master",ob->query("id"));
   me->set("family/generation",ob->query("family/generation"));
   me->set("family/family_name",ob->query("family/family_name"));
-  me->set("title",me->query("family/family_name")+"ÕÆÃÅ");
+  me->set("title",me->query("family/family_name")+"æŽŒé—¨");
   me->set("short",me->query("name")+"("+capitalize(me->query("id"))+")");
   me->set("new_player",1);
 
@@ -437,13 +437,13 @@ int accept_fight(object ob)
 
   if (me->query("current_player") == ob->query("id")) 
   {
-    command ("say ±¾µÜ×Ó²»¿ÉÓë¼º½ÏÁ¿£¡\n");
-    return notify_fail("Äã¾ÍÊÇ´óµÜ×Ó£¡\n");
+    command ("say æœ¬å¼Ÿå­ä¸å¯ä¸Žå·±è¾ƒé‡ï¼\n");
+    return notify_fail("ä½ å°±æ˜¯å¤§å¼Ÿå­ï¼\n");
   }
   if (me->is_fighting())
   {
-    command ("say Ê§ÅãÁË£¡\n");
-    return notify_fail("ÕâÎ»´óµÜ×ÓÉÐÔÚ±ÈÎäÖ®ÖÐ£¬ÇëÉÔºò¡£\n");
+    command ("say å¤±é™ªäº†ï¼\n");
+    return notify_fail("è¿™ä½å¤§å¼Ÿå­å°šåœ¨æ¯”æ­¦ä¹‹ä¸­ï¼Œè¯·ç¨å€™ã€‚\n");
   }
 
   fully_recover (me);
@@ -480,8 +480,8 @@ int check_result(object me, object ob)
       who = present(me->query("current_master"),environment(me));
     if (who == 0)
       who = me;
-    message_vision ("$N·­ÉíÏÂ°Ý£¬Á¬ÉùÅå·þ£¡\n",me);
-    //CHANNEL_D->do_channel(me,"chat","¹§Ï²´óµÜ×Ó"+ob->query("name")+"×ßÂíÉÏÈÎ£¡");
+    message_vision ("$Nç¿»èº«ä¸‹æ‹œï¼Œè¿žå£°ä½©æœï¼\n",me);
+    //CHANNEL_D->do_channel(me,"chat","æ­å–œå¤§å¼Ÿå­"+ob->query("name")+"èµ°é©¬ä¸Šä»»ï¼");
     me->set("new_player",1);
     convert_identity (me, ob);
     return 1;
@@ -489,7 +489,7 @@ int check_result(object me, object ob)
 
   if (( (int)ob->query("kee")*100/his_max_kee)<=50)
   {
-    message_vision ("$N½«$n·öÆð¡£\n",me,ob);
+    message_vision ("$Nå°†$næ‰¶èµ·ã€‚\n",me,ob);
   }
 
   return 1;  
@@ -515,14 +515,14 @@ int do_bandage(string arg)
   if (! arg || me != present(arg, environment(me)))
     return 0;
 
-  message_vision ("$N±ðÓÐÓÃÐÄµØÒª¸ø$n°üÔúÉË¿Ú¡£\n",who,me);
+  message_vision ("$Nåˆ«æœ‰ç”¨å¿ƒåœ°è¦ç»™$nåŒ…æ‰Žä¼¤å£ã€‚\n",who,me);
   call_out("no_bandage",2,who,me);
   return 1;
 }
 
 void no_bandage(object who, object me)
 {
-  message_vision ("$NÏò$nÒ¡ÁËÒ¡Í·¡£\n",me,who);
+  message_vision ("$Nå‘$næ‘‡äº†æ‘‡å¤´ã€‚\n",me,who);
 }
 
 int do_cast(string arg)
@@ -533,14 +533,14 @@ int do_cast(string arg)
   if (arg == "transfer")
     return 0;
 
-  message_vision ("$NÕÅ¿ª×ì£¬½á½á°É°ÉµØÄîÁË¼¸ÉùÖäÓï¡£\n",who);
+  message_vision ("$Nå¼ å¼€å˜´ï¼Œç»“ç»“å§å§åœ°å¿µäº†å‡ å£°å’’è¯­ã€‚\n",who);
   call_out("no_cast",2,who,me);
   return 1;
 }
 
 void no_cast(object who, object me)
 {
-  message_vision ("$NÏò$nÒ¡ÁËÒ¡Í·¡£\n",me,who);
+  message_vision ("$Nå‘$næ‘‡äº†æ‘‡å¤´ã€‚\n",me,who);
 }
 
 int do_exert(string arg)
@@ -553,7 +553,7 @@ int do_exert(string arg)
       arg != "sheqi men")
     return 0;
 
-  message_vision ("$N¹í¹íËîËîµØÒ»ÔËÆø¡£\n",who);
+  message_vision ("$Né¬¼é¬¼ç¥Ÿç¥Ÿåœ°ä¸€è¿æ°”ã€‚\n",who);
   call_out("no_exert",2,who,me);
   return 1;
 }
@@ -563,14 +563,14 @@ int do_perform(string arg)
   object who = this_player();
   object me = this_object();
 
-  message_vision ("$N¹í¹íËîËîµØÒ»Ê©Íâ¹¦¡£\n",who);
+  message_vision ("$Né¬¼é¬¼ç¥Ÿç¥Ÿåœ°ä¸€æ–½å¤–åŠŸã€‚\n",who);
   call_out("no_exert",2,who,me);
   return 1;
 }
 
 void no_exert(object who, object me)
 {
-  message_vision ("$NÏò$nÒ¡ÁËÒ¡Í·¡£\n",me,who);
+  message_vision ("$Nå‘$næ‘‡äº†æ‘‡å¤´ã€‚\n",me,who);
 }
 
 int do_steal(string arg)
@@ -578,14 +578,14 @@ int do_steal(string arg)
   object who = this_player();
   object me = this_object();
 
-  message_vision ("$NÉì³öÊÖ£¬¹í¹íËîËîµØÏëÍµÊ²Ã´¶«Î÷¡£\n",who);
+  message_vision ("$Nä¼¸å‡ºæ‰‹ï¼Œé¬¼é¬¼ç¥Ÿç¥Ÿåœ°æƒ³å·ä»€ä¹ˆä¸œè¥¿ã€‚\n",who);
   call_out("no_steal",2,who,me);
   return 1;
 }
 
 void no_steal(object who, object me)
 {
-  message_vision ("$NÏò$nÒ¡ÁËÒ¡Í·¡£\n",me,who);
+  message_vision ("$Nå‘$næ‘‡äº†æ‘‡å¤´ã€‚\n",me,who);
 }
 
 int do_kill(string arg)
@@ -593,14 +593,14 @@ int do_kill(string arg)
   object who = this_player();
   object me = this_object();
 
-  message_vision ("$NÑÛÂ¶Ð×¹â£¬¿´Ñù×Ó¶¯ÁËÉ±»ú£¡\n",who);
+  message_vision ("$Nçœ¼éœ²å‡¶å…‰ï¼Œçœ‹æ ·å­åŠ¨äº†æ€æœºï¼\n",who);
   call_out("no_kill",2,who,me);
   return 1;
 }
 
 void no_kill(object who, object me)
 {
-  message_vision ("$NÏò$nÒ¡ÁËÒ¡Í·¡£\n",me,who);
+  message_vision ("$Nå‘$næ‘‡äº†æ‘‡å¤´ã€‚\n",me,who);
 }
 
 void die()

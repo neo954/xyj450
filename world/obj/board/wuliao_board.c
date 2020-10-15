@@ -1,4 +1,4 @@
-// иЯ╩╟йю╫Г║╓нВсн╪г║╓╟Ф╠╬ё╢ё╝ё╣ё╟
+// Г╔·Х╞²Д╦√Г∙▄б╥Х╔©Ф╦╦Х╝╟б╥Г┴┬Ф°╛О╪■О╪▌О╪∙О╪░
 /* <SecCrypt CPL V3R05> */
  
 // Wuliao's Board
@@ -8,10 +8,10 @@ inherit BULLETIN_BOARD;
 
 void create()
 {
-        set_name("опад╟Е", ({ "board" }) );
+        set_name("И≈╡Х│┼Ф²©", ({ "board" }) );
   set("location", "/u/wuxin/workroom");
         set("board_id", "wuliao_board");
-        set("long",     "уБйгр╩опад╟Её╛иоцФп╢бЗактсбрнчуб╣даТят║ё\n" );
+        set("long",     "Х©≥Ф≤╞Д╦─И≈╡Х│┼Ф²©О╪▄Д╦┼И²╒Е├≥Ф╩║Д╨├Ф²┌Д╧╠Ф≈═Г╚═Г └Г∙≥Х╗─Ц─┌\n" );
         setup();
         set("capacity", 100);
         replace_program(BULLETIN_BOARD);

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // gouyee.c
@@ -10,14 +10,14 @@ int valid_enable(string usage) { return usage=="force"; }
 int valid_learn(object me)
 {
    if( (int)me->query("max_mana") < (int)me->query_skill("gouyee") * 5 )
-     return notify_fail("ÄãµÄÄ§Á¦²»¹»£¬ÎŞ·¨ÌáÉı¹È\ÒÂĞÄ·¨µÄÔìÒè¡£\n");
+     return notify_fail("ä½ çš„é­”åŠ›ä¸å¤Ÿï¼Œæ— æ³•æå‡è°·\è¡£å¿ƒæ³•çš„é€ è¯£ã€‚\n");
 
    return 1;
 }
 
 int practice_skill(object me)
 {
-   return notify_fail("¹È\ÒÂĞÄ·¨Ö»ÄÜÓÃÑ§µÄ£¬»òÊÇ´ÓÔËÓÃ(exert)ÖĞÔö¼ÓÊìÁ·¶È¡£\n");
+   return notify_fail("è°·\è¡£å¿ƒæ³•åªèƒ½ç”¨å­¦çš„ï¼Œæˆ–æ˜¯ä»è¿ç”¨(exert)ä¸­å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");
 }
 
 string exert_function_file(string func)

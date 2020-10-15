@@ -3,7 +3,7 @@
 inherit SKILL;
 
 string *dodge_msg = ({
-	"µ«ÊÇ$nÉí·¨ÇáÁé£¬ôæôæµØÆ®ÁË¿ªÈ¥£¡\n"
+	"ä½†æ˜¯$nèº«æ³•è½»çµï¼Œç¿©ç¿©åœ°é£˜äº†å¼€åŽ»ï¼\n"
 });
 
 int valid_enable(string usage)
@@ -13,10 +13,10 @@ int valid_enable(string usage)
 
 int valid_learn(object me)
 {
-	if( (string)me->query("gender") != "Å®ÐÔ" )
-		return notify_fail("Æß±¦Ììá°ÎèÖ»ÓÐÅ®ÐÔ²ÅÄÜÁ·¡£\n");
+	if( (string)me->query("gender") != "å¥³æ€§" )
+		return notify_fail("ä¸ƒå®å¤©å²šèˆžåªæœ‰å¥³æ€§æ‰èƒ½ç»ƒã€‚\n");
 	if( (int)me->query("spi") < 20 )
-		return notify_fail("ÄãµÄÁéÐÔ²»¹»£¬Ã»ÓÐ°ì·¨Á·Æß±¦Ììá°Îè¡£\n");
+		return notify_fail("ä½ çš„çµæ€§ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒä¸ƒå®å¤©å²šèˆžã€‚\n");
 
 	return 1;
 }
@@ -29,7 +29,7 @@ string query_dodge_msg(string limb)
 int practice_skill(object me)
 {
 	if( (int)me->query("sen") < 30 )
-		return notify_fail("ÄãµÄ¾«ÉñÌ«²îÁË£¬²»ÄÜÁ·Æß±¦Ììá°Îè¡£\n");
+		return notify_fail("ä½ çš„ç²¾ç¥žå¤ªå·®äº†ï¼Œä¸èƒ½ç»ƒä¸ƒå®å¤©å²šèˆžã€‚\n");
 	me->receive_damage("sen", 30);
 	return 1;
 }

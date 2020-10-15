@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("²É»¨æ¤", ({ "little girl", "girl" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("é‡‡èŠ±å¦", ({ "little girl", "girl" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 9);
-        set("long", "ÌìÕæµÄĞ¡Å®º¢ÕıÔÚÍæË£×Å \n");
+        set("long", "å¤©çœŸçš„å°å¥³å­©æ­£åœ¨ç©è€ç€ \n");
         set("combat_exp", 700);
         set("attitude", "friendly");
         set_skill("unarmed", 10);
@@ -16,7 +16,7 @@ void create()
         set_skill("throwing", 50);
 
         set("inquiry", ([
-                "Ğ¡¾ê" : "ÕâÒªµ½ºÚËÉÉ½È¥ÎÊ¡£", 
+                "å°å¨Ÿ" : "è¿™è¦åˆ°é»‘æ¾å±±å»é—®ã€‚", 
         ]) );
 
         setup();

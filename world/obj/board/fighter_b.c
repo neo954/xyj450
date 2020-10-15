@@ -4,10 +4,10 @@ inherit BULLETIN_BOARD;
 
 void create()
 {
-	set_name("ÎäÕßÁôÑÔ°å", ({ "board" }) );
+	set_name("æ­¦è€…ç•™è¨€æ¿", ({ "board" }) );
 	set("location", CLASS_D("fighter") + "/guildhall");
 	set("board_id", "fighter_b");
-	set("long",	"ÕâÊÇ¹©ÎäÁÖÖĞÈËÁôÑÔ¼ÇÊÂµÄÁôÑÔ°å¡£\n" );
+	set("long",	"è¿™æ˜¯ä¾›æ­¦æ—ä¸­äººç•™è¨€è®°äº‹çš„ç•™è¨€æ¿ã€‚\n" );
 	setup();
 	set("capacity", 30);
 	replace_program(BULLETIN_BOARD);

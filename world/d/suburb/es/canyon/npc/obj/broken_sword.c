@@ -1,4 +1,4 @@
-// sword:__DIR__"obj/broken_sword.c" ÆÆ²ĞÆæ½£Ò»°Ñ
+// sword:__DIR__"obj/broken_sword.c" ç ´æ®‹å¥‡å‰‘ä¸€æŠŠ
 
 #include <weapon.h>
 #include <ansi.h>
@@ -8,17 +8,17 @@ inherit SWORD;
 
 void create()
 {
-    set_name( HIW"¦×ÆÆ ²Ğ Ææ ½£¦×" NOR,({"broken sword","sword"}));
+    set_name( HIW"Ïˆç ´ æ®‹ å¥‡ å‰‘Ïˆ" NOR,({"broken sword","sword"}));
 	set_weight(4500);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else{
-		set("unit", "°Ñ");
-       	set("long", "½£·æ´¦È±ÁËÒ»½Ç£¬È±½Ç´¦·¢³öÒìÑù°×¹âµÄÆæ½£¡£\n");
+		set("unit", "æŠŠ");
+       	set("long", "å‰‘é”‹å¤„ç¼ºäº†ä¸€è§’ï¼Œç¼ºè§’å¤„å‘å‡ºå¼‚æ ·ç™½å…‰çš„å¥‡å‰‘ã€‚\n");
 		set("value", 4000);
-		set("material", "ÒìÀà½ğÊô");
-        set("wield_msg", "$N¡¸à§¡¹µØÒ»Éù³é³öÒ»°Ñ$nÎÕÔÚÊÖÖĞ¡£\n");
-        set("unwield_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄ½£ÇÊ¡£\n");
+		set("material", "å¼‚ç±»é‡‘å±");
+        set("wield_msg", "$Nã€Œå”°ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+        set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„å‰‘é˜ã€‚\n");
         set("replica_ob", "/obj/weapon/longsword");
     }
 	init_sword(65);

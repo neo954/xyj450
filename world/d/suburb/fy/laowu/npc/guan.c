@@ -3,16 +3,16 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÀÏÎİÈË", ({ "laowuren"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("è€å±‹äºº", ({ "laowuren"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 32+ random(10));
-        set("long", "ÕâÊÇÒ»Î»¾Ã¾ÓÀ­¹şËÕµÄ±¾µØÈË¡£\n");
+        set("long", "è¿™æ˜¯ä¸€ä½ä¹…å±…æ‹‰å“ˆè‹çš„æœ¬åœ°äººã€‚\n");
         set("combat_exp", 5000);
         set("attitude", "aggrensive");
         set_skill("unarmed", 30 + random(100));
         set("chat_chance", 10);
         set("chat_msg", ({
-                "ÀÏÎİÈËÓÃÁ¦´êÁË´ê±»¶³ÂéµÄË«ÊÖ\n",
+                "è€å±‹äººç”¨åŠ›æ“äº†æ“è¢«å†»éº»çš„åŒæ‰‹\n",
         }) );
 	setup();
 	add_money("silver", 5);

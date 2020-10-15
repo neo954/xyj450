@@ -7,15 +7,15 @@ inherit NPC;
 #define DUMP_PLACE  "/d/suburb/fy/laowu/road0.c"
 void create()
 {
-        set_name("ÀäÈôËª", ({ "leng", "lengruoshuang" }) );
+        set_name("å†·è‹¥éœœ", ({ "leng", "lengruoshuang" }) );
         set("long",
-"ÕâÎ»ÃÀÈËÈËÈçÆäÃû£¬¸øÈËÒ»ÖÖ¸ß²»¿ÉÅÊ£¬ÀäÈô±ùËªµÄ¸Ð¾õ£®
-µ«ËýÊÇÌ«ÓÐÃÄÁ¦£¬Ì«ÁîÈË×ÅÃÔ£¬ÄãÕæÏëºÍËýÈÏÊ¶ÈÏÊ¶£¨£ë£î£ï£÷£©\n");
+"è¿™ä½ç¾Žäººäººå¦‚å…¶åï¼Œç»™äººä¸€ç§é«˜ä¸å¯æ”€ï¼Œå†·è‹¥å†°éœœçš„æ„Ÿè§‰ï¼Ž
+ä½†å¥¹æ˜¯å¤ªæœ‰åªšåŠ›ï¼Œå¤ªä»¤äººç€è¿·ï¼Œä½ çœŸæƒ³å’Œå¥¹è®¤è¯†è®¤è¯†ï¼ˆï½‹ï½Žï½ï½—ï¼‰\n");
         set("attitude", "heroism");
-	set("title", HIW "±ùÉ½" NOR);
+	set("title", HIW "å†°å±±" NOR);
         set("str", 27);
         set("cor", 26);
-	set("gender", "Å®ÐÔ");
+	set("gender", "å¥³æ€§");
         set("cps", 25);
 	set("per", 30);
 	set("age",19);
@@ -50,10 +50,10 @@ int do_know()
 	me = this_player();
 	if((int) me->query("combat_exp") >= LOWER_LIMIT)
 	{
-	tell_object(me,"ÀäÈôËªÌ¾ÁË¿ÚÆø£¬£¢¿´À´½ñÌìÖ»ºÃÀ­Äã×÷ÌæËÀ¹íÁË£®£¢\n");
-	tell_object(me,"ÀäÈôËª³ÃÄã²»±¸£¬ÇÄÇÄ·÷ÁËÒ»ÏÂÄãµÄË¯Ñ¨£®\n");
+	tell_object(me,"å†·è‹¥éœœå¹äº†å£æ°”ï¼Œï¼‚çœ‹æ¥ä»Šå¤©åªå¥½æ‹‰ä½ ä½œæ›¿æ­»é¬¼äº†ï¼Žï¼‚\n");
+	tell_object(me,"å†·è‹¥éœœè¶ä½ ä¸å¤‡ï¼Œæ‚„æ‚„æ‹‚äº†ä¸€ä¸‹ä½ çš„ç¡ç©´ï¼Ž\n");
 	me->unconcious();
-	me->set("marks/ÀäÈôËª", 1);
+	me->set("marks/å†·è‹¥éœœ", 1);
 	me->save();
 	dump = find_object(DUMP_PLACE);
 	if (!dump) dump = load_object(DUMP_PLACE);
@@ -61,12 +61,12 @@ int do_know()
 	}	
 	else
 	{
-	if(me->query("gender") == "ÄÐÐÔ")
-message_vision("$N·´·´ÕýÕý´òÁË$n¼¸¼Ç´ó¶ú¹â£¬³âÂîµÀ£º
-£¢¹ö¿ª£¡ÄãÕâÖÖ³ôÄÐÈËÎÒ¼ûµÃ¶àÁË£¡¿´¼ûÄã¶¼¸Ðµ½¶ñÐÄ£¡¹ö£¡£¢\n",this_object(),me);	
+	if(me->query("gender") == "ç”·æ€§")
+message_vision("$Nååæ­£æ­£æ‰“äº†$nå‡ è®°å¤§è€³å…‰ï¼Œæ–¥éª‚é“ï¼š
+ï¼‚æ»šå¼€ï¼ä½ è¿™ç§è‡­ç”·äººæˆ‘è§å¾—å¤šäº†ï¼çœ‹è§ä½ éƒ½æ„Ÿåˆ°æ¶å¿ƒï¼æ»šï¼ï¼‚\n",this_object(),me);	
 	else
-message_vision("$NÏò$n¼·³öÒ»Ë¿ÃãÇ¿µÄÐ¦ÈÝ£¬µÀ£º
-£¢ºÃÃÃÃÃ£¡Äã°ï²»µ½ÎÒ£®£¢\n",this_object(),me);
+message_vision("$Nå‘$næŒ¤å‡ºä¸€ä¸å‹‰å¼ºçš„ç¬‘å®¹ï¼Œé“ï¼š
+ï¼‚å¥½å¦¹å¦¹ï¼ä½ å¸®ä¸åˆ°æˆ‘ï¼Žï¼‚\n",this_object(),me);
 	}
 	return 1;
 }

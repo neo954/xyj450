@@ -4,14 +4,14 @@
 inherit ITEM;
 void create()
 {
-	set_name("ÆĞÌá´ïÄ¦µÄÊ¯Ïñ", ({ "damo" }));
+	set_name("è©æè¾¾æ‘©çš„çŸ³åƒ", ({ "damo" }));
 	set_weight(600);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
+		set("unit", "ä¸ª");
 		set("long",
-			"Ò»¸öË«ÊÖºÏÊ®£¬ÃæÃ²×¯ÖØµÄ´ïÄ¦Ê¯Ïñ£¬ÉÏÃæºÃÏó¿Ì×ÅÒ»Ğ©×Ö¡£\n");
+			"ä¸€ä¸ªåŒæ‰‹åˆåï¼Œé¢è²Œåº„é‡çš„è¾¾æ‘©çŸ³åƒï¼Œä¸Šé¢å¥½è±¡åˆ»ç€ä¸€äº›å­—ã€‚\n");
 		set("value", 70);
 		set("material", "wood");
 		set("no_get",1);

@@ -5,12 +5,12 @@ inherit ROOM;
 
 void create()
 {
-   set("short", "ãåÔ¡¸üÒÂÊÒ");
+   set("short", "æ²æµ´æ›´è¡£å®¤");
 	set("long", @LONG
-ÕâÊÇÒ»¼ä¸üÒÂÊÒ£¬Äã¿´µ½Ðí¶à¹ñ×Ó£¬ÒÂ¼ÜÉÏ¹ÒÁËÐí¶àµÄÒÂ·þÊÎ
-Æ·¡£Ç½ÉÏµÄ¼ÜÉÏ¹ÒÁËÒ»Ð©Ë¿½í£¬Äã¿ÉÒÔÎÅµ½µ­µ­µÄÏãÆøÎ§ÈÆËÄÖÜ¡£
-¶«²àÒ»À¶ÇàÈ÷»¨ÈíÁ±£¬¸ôÁ±ÍûÈ¥£¬ÒþÔ¼¿É¿´µ½Ð¡»¨³Ø£¬Ò»ÍÅµÄÎíÆø
-ÄãÓÐµãÏëÈ¥³åÁ¹ãåÔ¡£¬ÈÃ¾«ÉñºÃÐ©¡£µ±È»´Ë´¦ÊÇ½ûÖ¹ÄÐÐÔ½øÈë!
+è¿™æ˜¯ä¸€é—´æ›´è¡£å®¤ï¼Œä½ çœ‹åˆ°è®¸å¤šæŸœå­ï¼Œè¡£æž¶ä¸ŠæŒ‚äº†è®¸å¤šçš„è¡£æœé¥°
+å“ã€‚å¢™ä¸Šçš„æž¶ä¸ŠæŒ‚äº†ä¸€äº›ä¸å·¾ï¼Œä½ å¯ä»¥é—»åˆ°æ·¡æ·¡çš„é¦™æ°”å›´ç»•å››å‘¨ã€‚
+ä¸œä¾§ä¸€è“é’æ´’èŠ±è½¯å¸˜ï¼Œéš”å¸˜æœ›åŽ»ï¼Œéšçº¦å¯çœ‹åˆ°å°èŠ±æ± ï¼Œä¸€å›¢çš„é›¾æ°”
+ä½ æœ‰ç‚¹æƒ³åŽ»å†²å‡‰æ²æµ´ï¼Œè®©ç²¾ç¥žå¥½äº›ã€‚å½“ç„¶æ­¤å¤„æ˜¯ç¦æ­¢ç”·æ€§è¿›å…¥!
 LONG
 	);
     set("no_fight", 1);
@@ -23,15 +23,15 @@ LONG
         "east" :__DIR__"bathroom",
       ]));
 
-    create_door("west","Ð¡Á±ÃÅ","east", DOOR_CLOSED);
+    create_door("west","å°å¸˜é—¨","east", DOOR_CLOSED);
 	setup();
 	replace_program(ROOM);
 }
 int valid_leave(object me, string dir)
 {
-        if( (string)me->query("gender") != "Å®ÐÔ" ) {
+        if( (string)me->query("gender") != "å¥³æ€§" ) {
         me->apply_condition("rose_poison", 5);
-        tell_object(me, HIG "Äã¾õµÃÓÐÈËÏòÄãÉíÉÏÈ÷ÏÂÒ»Ð©·ÛÄ©£¡\n" NOR );
+        tell_object(me, HIG "ä½ è§‰å¾—æœ‰äººå‘ä½ èº«ä¸Šæ´’ä¸‹ä¸€äº›ç²‰æœ«ï¼\n" NOR );
         }
         return 1;
 }

@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 //restroom.c
@@ -7,11 +7,11 @@ inherit ROOM;
 
 void create ()
 {
-  set ("short", "��ѩ����Ϣ��");
+  set ("short", "枫雪宫休息室");
   set ("long", @LONG
 
-���ǹ���ѩ��ػ�ĳ�Ա�������Ϣ�ĵط�����ǽ����һ��
-��ª��ľ����
+这是供枫雪天地会的成员或客人休息的地方。靠墙放着一张
+简陋的木床。
 LONG);
 
   set("sleep_room", 1);

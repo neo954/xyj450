@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // haunt.c
@@ -9,13 +9,13 @@ inherit F_CLEAN_UP;
 
 int scribe(object me, object sheet, string arg)
 {
-   if( me->is_fighting() )   return notify_fail("ÄãÕıÔÚÕ½¶·ÖĞ£¡\n");
+   if( me->is_fighting() )   return notify_fail("ä½ æ­£åœ¨æˆ˜æ–—ä¸­ï¼\n");
    
-   if( (int)me->query("mana") < 20 ) return notify_fail("ÄãµÄ·¨Á¦²»¹»ÁË£¡\n");
+   if( (int)me->query("mana") < 20 ) return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿäº†ï¼\n");
 
-   if( !arg ) return notify_fail("ÄãÒªÔÚÕâÕÅ·ûÉÏĞ´Ë­µÄÃû×Ö£¿\n");
+   if( !arg ) return notify_fail("ä½ è¦åœ¨è¿™å¼ ç¬¦ä¸Šå†™è°çš„åå­—ï¼Ÿ\n");
 
-   sheet->set_name(YEL "½©¡õ×·»ê·û" NOR, ({ "haunting sheet", "sheet"}) );   
+   sheet->set_name(YEL "åƒµâ–¡è¿½é­‚ç¬¦" NOR, ({ "haunting sheet", "sheet"}) );   
    sheet->set("attach_func", (: call_other, __FILE__, "do_haunt", arg :) );
    me->add("mana", -20);
    me->receive_damage("sen", 10);
@@ -28,10 +28,10 @@ int do_haunt(string target, object who)
    object dest;
 
    if( !who->is_zombie() )
-     return notify_fail(YEL "½©¡õ×·»ê·û" NOR "Ö»ÄÜÓÃÔÚ½©¡õÉíÉÏ¡£\n");
+     return notify_fail(YEL "åƒµâ–¡è¿½é­‚ç¬¦" NOR "åªèƒ½ç”¨åœ¨åƒµâ–¡èº«ä¸Šã€‚\n");
 
    if( !who->query("possessed") )
-     return notify_fail("Äã±ØĞëÏÈÓÃ·¨Á¦Õò×¡" + who->name() + "²ÅÄÜÊ¹ÓÃÕâµÀ·û¡£\n");
+     return notify_fail("ä½ å¿…é¡»å…ˆç”¨æ³•åŠ›é•‡ä½" + who->name() + "æ‰èƒ½ä½¿ç”¨è¿™é“ç¬¦ã€‚\n");
 
    dest = present(target, environment(who));
    if( !dest ) dest = find_player(target);
@@ -39,13 +39,13 @@ int do_haunt(string target, object who)
    if( objectp(dest) ) {
      who->kill_ob(dest);
      who->set_leader(dest);
-     message_vision("$NÑÛ¾¦ºöÈ»Õö¿ª£¬à«à«µØËµµÀ£º" RED "É±....ËÀ....$n....\n" NOR,
+     message_vision("$Nçœ¼ç›å¿½ç„¶çå¼€ï¼Œå–ƒå–ƒåœ°è¯´é“ï¼š" RED "æ€....æ­»....$n....\n" NOR,
         who, dest);
      if( environment(dest)==environment(who) ) {
         dest->fight_ob(who);
      }
    } else {
-     message_vision("$NÑÛ¾¦ºöÈ»Õö¿ª£¬à«à«µØËµµÀ£º" RED "É±....É±....É±....\n" NOR,
+     message_vision("$Nçœ¼ç›å¿½ç„¶çå¼€ï¼Œå–ƒå–ƒåœ°è¯´é“ï¼š" RED "æ€....æ€....æ€....\n" NOR,
         who);
      if( this_player() ) {
         who->kill_ob(this_player());

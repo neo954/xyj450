@@ -4,15 +4,15 @@
 inherit NPC;
 void create()
 {
-        set_name("·çÁè", ({ "fengling" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("é£å‡Œ", ({ "fengling" }) );
+        set("gender", "ç”·æ€§" );
         set("class", "bonze");
-	set("title","ĞË¹úìøËÂ·ç×Ö±²´óÊ¦");
+	set("title","å…´å›½ç¦…å¯ºé£å­—è¾ˆå¤§å¸ˆ");
         set("age", random(40)+20);
         set("cor", 24);
         set("cps", 29);
         set("int", 25);
-        set("long", "ËûÊÇĞË¹úìøËÂÖĞÆÄÓĞÍşÍûµÄ·ç×Ö±²´óÊ¦\n");
+        set("long", "ä»–æ˜¯å…´å›½ç¦…å¯ºä¸­é¢‡æœ‰å¨æœ›çš„é£å­—è¾ˆå¤§å¸ˆ\n");
         set("combat_exp", 60000);
         set("attitude", "friendly");
         set("max_force", 500);
@@ -20,11 +20,11 @@ void create()
         set("force_factor", 5);
         set("chat_chance", 1);
         set("chat_msg", ({
-                "·çÁèµÀ£º¿Õ¼´ÊÇÉ«£¬É«¼´ÊÇ¿Õ£®£®£®£®\n",
+                "é£å‡Œé“ï¼šç©ºå³æ˜¯è‰²ï¼Œè‰²å³æ˜¯ç©ºï¼ï¼ï¼ï¼\n",
         }) );
         set("inquiry", ([
-                "Â·" : "ÄãÈ¥ÃÖÀÕµî¿´Ò»¿´ÃÖÀÕ·ğÏñ°É¡£\n",
-                "road" : "ÄãÈ¥ÃÖÀÕµî¿´Ò»¿´ÃÖÀÕ·ğÏñ°É¡£\n",
+                "è·¯" : "ä½ å»å¼¥å‹’æ®¿çœ‹ä¸€çœ‹å¼¥å‹’ä½›åƒå§ã€‚\n",
+                "road" : "ä½ å»å¼¥å‹’æ®¿çœ‹ä¸€çœ‹å¼¥å‹’ä½›åƒå§ã€‚\n",
 	]));
         setup();
         carry_object(__DIR__"obj/monk_cloth")->wear();
@@ -32,6 +32,6 @@ void create()
 }
 int accept_fight(object me)
 {
-        command("say °¢ÃÖÍÓ·ğ£¡Æ¶É®Îä¹¦µÍÎ¢£¬Ê©Ö÷²»Òª¿ªÕâÖÖÍæĞ¦¡£\n");
+        command("say é˜¿å¼¥é™€ä½›ï¼è´«åƒ§æ­¦åŠŸä½å¾®ï¼Œæ–½ä¸»ä¸è¦å¼€è¿™ç§ç©ç¬‘ã€‚\n");
         return 0;
 }

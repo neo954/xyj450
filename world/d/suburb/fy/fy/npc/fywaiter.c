@@ -5,12 +5,12 @@ inherit F_VENDOR;
 
 void create()
 {
-	set_name("ËÕºì¶ù", ({ "suhong" }) );
-	set("gender", "Å®ĞÔ" );
+	set_name("è‹çº¢å„¿", ({ "suhong" }) );
+	set("gender", "å¥³æ€§" );
 	set("age", 21);
-	set("title", "ÀÏ°åÄï");
+	set("title", "è€æ¿å¨˜");
 	set("long",
-		"ÕâÎ»ÀÏ°åÄïÕıĞ±ÒÀÔÚ¹ñÌ¨±ß£¬Ğ¦ßäßäµØÍû×ÅÄã¡£\n");
+		"è¿™ä½è€æ¿å¨˜æ­£æ–œä¾åœ¨æŸœå°è¾¹ï¼Œç¬‘å’ªå’ªåœ°æœ›ç€ä½ ã€‚\n");
 	set("combat_exp", 500000);
 	set("attitude", "friendly");
 	set("per",30);
@@ -69,13 +69,13 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(3) ) {
 		case 0:
-message_vision("$NÑÛ½Çº¬Ğ¦£¬ÓĞÒâÎŞÒâµÄî©ÁË$nÒ»ÑÛ¡£\n",this_object(),ob);
+message_vision("$Nçœ¼è§’å«ç¬‘ï¼Œæœ‰æ„æ— æ„çš„çŸäº†$nä¸€çœ¼ã€‚\n",this_object(),ob);
 			break;
 		case 1:
-message_vision("$NÏËÑüÎ¢°Ú£¬Â¶³öÑòÖ¬°ãµÄÓñ±Û£¬Ïò$nÕĞÁËÕĞÊÖ¡£\n",this_object(),ob);
+message_vision("$Nçº¤è…°å¾®æ‘†ï¼Œéœ²å‡ºç¾Šè„‚èˆ¬çš„ç‰è‡‚ï¼Œå‘$næ‹›äº†æ‹›æ‰‹ã€‚\n",this_object(),ob);
 			break;
 		case 2:
-message_vision("$NÍûÁË$nÒ»ÑÛ£¬ÓÃÓñÊÖÑÚ×ÅÓ£ÌÒĞ¡×ìÇáĞ¦ÆğÀ´¡£\n",this_object(),ob);
+message_vision("$Næœ›äº†$nä¸€çœ¼ï¼Œç”¨ç‰æ‰‹æ©ç€æ¨±æ¡ƒå°å˜´è½»ç¬‘èµ·æ¥ã€‚\n",this_object(),ob);
 			break;
 	}
 }

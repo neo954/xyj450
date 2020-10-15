@@ -9,11 +9,11 @@ int valid_learn(object me) { return 1; }
 int practice_skill(object me)
 {
         if( !environment(me)->query("resource/water") )
-                return notify_fail("伏蛟功只能在有水的地方练。\n");
+                return notify_fail("浼忚洘鍔熷彧鑳藉湪鏈夋按鐨勫湴鏂圭粌銆俓n");
         if( (int)me->query("kee") < 30 )
-                return notify_fail("你的气不够。\n");
+                return notify_fail("浣犵殑姘斾笉澶熴�俓n");
         if( (int)me->query("force") < 10 )
-                return notify_fail("你的内力不够");
+                return notify_fail("浣犵殑鍐呭姏涓嶅");
         me->receive_damage("kee", 30);
         me->add("force", -10);
         return 1;

@@ -1,11 +1,11 @@
 inherit ROOM;
 void create()
 {
-        set("short", "Ï´Àñ³Ø");
+        set("short", "æ´—ç¤¼æ± ");
         set("long", @LONG
-ÕâÀïÊÇ·çÔÆ±øÂíÕ÷Õ½»ØÀ´½ÓÊÜÏ´Àñ£¨£ó£á£ì£õ£ô£å£©µÄµØ·½£¬
-ÒÔÇóÏ´È¥É±ÄõÖ®Æø¡£²¼ÖÃµÃºÜ¼òµ¥£¬ÖĞ¼äÒ»¸öË®³Ø£¬³ØÖĞÃ°³öôÁ
-ôÁË®äÎ¡£
+è¿™é‡Œæ˜¯é£äº‘å…µé©¬å¾æˆ˜å›æ¥æ¥å—æ´—ç¤¼ï¼ˆï½“ï½ï½Œï½•ï½”ï½…ï¼‰çš„åœ°æ–¹ï¼Œ
+ä»¥æ±‚æ´—å»æ€å­½ä¹‹æ°”ã€‚å¸ƒç½®å¾—å¾ˆç®€å•ï¼Œä¸­é—´ä¸€ä¸ªæ°´æ± ï¼Œæ± ä¸­å†’å‡ºè¢…
+è¢…æ°´æ¹®ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -24,12 +24,12 @@ int do_ponder(string arg)
 
        who = this_player();
         if((int) who->query("sen") <=50)
-        return notify_fail("ÄãµÄÉñ²»¹»¡£\n");
-       message_vision("$N½«Ë«ÊÖ½şÈëË®³ØÖĞ¡£\n" ,who);
+        return notify_fail("ä½ çš„ç¥ä¸å¤Ÿã€‚\n");
+       message_vision("$Nå°†åŒæ‰‹æµ¸å…¥æ°´æ± ä¸­ã€‚\n" ,who);
        who->receive_damage("sen",50);
        if( (int)who->query("bellicosity") > 0)
            who->add("bellicosity", - (random((int)who->query("kar")) + 7 ) );
-       message_vision("$NÉíÉÏµÄÉ±ÄõÖ®ÆøËÆºõÇáÁË¡£ \n" , who);
+       message_vision("$Nèº«ä¸Šçš„æ€å­½ä¹‹æ°”ä¼¼ä¹è½»äº†ã€‚ \n" , who);
     return 1;
 }
 

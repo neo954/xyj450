@@ -8,9 +8,9 @@ void do_bite();
 
 void create()
 {
-        set_name("ÃÉÃæÈË", ({ "figure" }) );
+        set_name("è’™é¢äºº", ({ "figure" }) );
         set("long",
-"Õâ¸öÈËÍ·ÉÏ´÷ÖøÃÉÃæÍ·ÕÖ£¬°Ë³É×¼±¸¸ÉÊ²÷á»µÊÂ¡£\n");
+"è¿™ä¸ªäººå¤´ä¸Šæˆ´è‘—è’™é¢å¤´ç½©ï¼Œå…«æˆå‡†å¤‡å¹²ä»€éº½åäº‹ã€‚\n");
 	set("attitude", "heroism");
 	set("hired_killer", 1);
 	set_skill("move",1);
@@ -44,13 +44,13 @@ void  hunting()
 			if(userp(targ) && (int)targ->query("combat_exp") < 2000)
 				{
 					if( hirer)
-					message_vision("$NÖ¸×Å$nËµµÀ£ºÕâÖÖ¾ÅÁ÷»õÉ«»¹ÓÃÎÒ£¿ÔÙ¼û£¡\n",this_object(),targ);
+					message_vision("$NæŒ‡ç€$nè¯´é“ï¼šè¿™ç§ä¹æµè´§è‰²è¿˜ç”¨æˆ‘ï¼Ÿå†è§ï¼\n",this_object(),targ);
 					set_leader(0);
 					call_out("destkiller",1);
 					return ;
 				
 				}
-			message_vision(HIR "$N¶Ô$n´óºÈµÀ£ºÓÐÈË»¨Òø×ÓÂòÁËÄãµÄÃü£¡Ã÷Äê½ñÈÕ¾ÍÊÇÄãµÄ¼É³½£¡ÈÏµ¹Ã¹°É£¡\n" NOR,this_object(), targ);
+			message_vision(HIR "$Nå¯¹$nå¤§å–é“ï¼šæœ‰äººèŠ±é“¶å­ä¹°äº†ä½ çš„å‘½ï¼æ˜Žå¹´ä»Šæ—¥å°±æ˜¯ä½ çš„å¿Œè¾°ï¼è®¤å€’éœ‰å§ï¼\n" NOR,this_object(), targ);
 			this_object()->kill_ob(targ);
 			this_object()->set_leader(targ);
 			targ->kill_ob(this_object());

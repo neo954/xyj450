@@ -8,14 +8,14 @@ inherit F_QUEST;
 
 void create()
 {
-        set_name("ĞË¹ú´óÊ¦", ({ "master xing", "master", "xing" }) );
+        set_name("å…´å›½å¤§å¸ˆ", ({ "master xing", "master", "xing" }) );
 
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("age", 74);
         set("attitude", "peaceful");
         set("class", "bonze");
         set("apprentice_available", 3);
-	set("student_title","´óÊ¦");
+	set("student_title","å¤§å¸ˆ");
         set("str", 27);
         set("int", 30);
         set("spi", 30);
@@ -58,7 +58,7 @@ void create()
         map_skill("magic", "essencemagic");
         map_skill("dodge","notracesnow");
 	map_skill("unarmed", "changquan");
-        create_family("ĞË¹úìøËÂ", 3, "×¡³Ö");
+        create_family("å…´å›½ç¦…å¯º", 3, "ä½æŒ");
         setup();
         carry_object(__DIR__"obj/buddha_staff")->wield();
 	carry_object("/obj/cloth")->wear();
@@ -74,28 +74,28 @@ void attempt_apprentice(object ob)
 {
         if( query("apprentice_available") ) {
                 if( find_call_out("do_recruit") != -1 )
-                        command("say ÂıÖø£¬Ò»¸öÒ»¸öÀ´¡£");
+                        command("say æ…¢è‘—ï¼Œä¸€ä¸ªä¸€ä¸ªæ¥ã€‚");
                 else
                         call_out("do_recruit", 2, ob);
         } else {
-                command("say ÀÏÄÉ½ñÌìÒÑ¾­ÊÕ¹»ÁËµÜ×Ó£¬²»ÏëÔÙÊÕÍ½ÁË¡£");
+                command("say è€çº³ä»Šå¤©å·²ç»æ”¶å¤Ÿäº†å¼Ÿå­ï¼Œä¸æƒ³å†æ”¶å¾’äº†ã€‚");
         }
 }
 
 void do_recruit(object ob)
 {
-        if( (string)ob->query("gender") != "ÄĞĞÔ" )
-                command("say °¢ÃÖÍÓ·ğ£¬Å®Ê©Ö÷²»Òª¸úÀÏÄÉ¿ªÍæĞ¦¡£");
+        if( (string)ob->query("gender") != "ç”·æ€§" )
+                command("say é˜¿å¼¥é™€ä½›ï¼Œå¥³æ–½ä¸»ä¸è¦è·Ÿè€çº³å¼€ç©ç¬‘ã€‚");
         else if(ob->query_temp("marks/ye")){
 		ob->set("class","bonze");
-		command("say ¿´ÔÚ°×ÔÆ³ÇÖ÷µÄ·İÉÏ£¬ÎÒ¾ÍÊÕÄãÎªÍ½°É£¡\n");
-                command("say °¢ÃÖÍÓ·ğ£¬ÉÆÔÕ£¡ÉÆÔÕ£¡");
+		command("say çœ‹åœ¨ç™½äº‘åŸä¸»çš„ä»½ä¸Šï¼Œæˆ‘å°±æ”¶ä½ ä¸ºå¾’å§ï¼\n");
+                command("say é˜¿å¼¥é™€ä½›ï¼Œå–„å“‰ï¼å–„å“‰ï¼");
                 command("recruit " + ob->query("id") );
         }
 	else if(ob->query_temp("marks/lady")){
                 ob->set("class","bonze");
-                command("say ¿´ÔÚÄã²»¾åÉúËÀ£¬¼ûÒåÓÂÎªµÄ·İÉÏ£¬ÎÒ¾ÍÊÕÄãÎªÍ½°É£¡\n");
-                command("say °¢ÃÖÍÓ·ğ£¬ÉÆÔÕ£¡ÉÆÔÕ£¡");
+                command("say çœ‹åœ¨ä½ ä¸æƒ§ç”Ÿæ­»ï¼Œè§ä¹‰å‹‡ä¸ºçš„ä»½ä¸Šï¼Œæˆ‘å°±æ”¶ä½ ä¸ºå¾’å§ï¼\n");
+                command("say é˜¿å¼¥é™€ä½›ï¼Œå–„å“‰ï¼å–„å“‰ï¼");
                 command("recruit " + ob->query("id") );
         }
 }
@@ -111,9 +111,9 @@ int recruit_apprentice(object ob)
 int accept_fight(object me)
 {
         if( (string)me->query("class")=="bonze" )
-                command("say °¢ÃÖÍÓ·ğ£¡³ö¼ÒÈË½ä³ÑÇ¿¶ñ¶·£¡ÀÏñÄ²»¸ÒÎ¥·´Çå¹æ¡£");
+                command("say é˜¿å¼¥é™€ä½›ï¼å‡ºå®¶äººæˆ’é€å¼ºæ¶æ–—ï¼è€è¡²ä¸æ•¢è¿åæ¸…è§„ã€‚");
         else
-                command("say Ê©Ö÷¼ÈÈ»Éí¸º¾øÒÕ£¬ÀÏñÄÅå·ş±ãÊÇ£¬Ò²²»±Ø½ÏÁ¿ÁË¡£");
+                command("say æ–½ä¸»æ—¢ç„¶èº«è´Ÿç»è‰ºï¼Œè€è¡²ä½©æœä¾¿æ˜¯ï¼Œä¹Ÿä¸å¿…è¾ƒé‡äº†ã€‚");
 
         return 0;
 }
@@ -122,28 +122,28 @@ void re_rank(object student)
         int exp;
         exp = (int) student->query("combat_exp");
         if( exp <= 32000 ) {
-                student->set("title","ĞË¹úìøËÂ´óÊ¦");
+                student->set("title","å…´å›½ç¦…å¯ºå¤§å¸ˆ");
                 return ;
         } else if ( exp <= 128000 ) {
-                student->set("title","ĞË¹úìøËÂÂŞºº");
+                student->set("title","å…´å›½ç¦…å¯ºç½—æ±‰");
                 return ;
         } else if ( exp <= 512000 ) {
-                student->set("title","ĞË¹úìøËÂ½ğ¸Õ");
+                student->set("title","å…´å›½ç¦…å¯ºé‡‘åˆš");
                 return ;
         } else if ( exp <= 1536000 ) {
-                student->set("title","ĞË¹úìøËÂ¸ßÉ®");
+                student->set("title","å…´å›½ç¦…å¯ºé«˜åƒ§");
                 return ;
         } else if ( exp <= 3456000 ) {
-                student->set("title","ĞË¹úìøËÂÊ¥É®");
+                student->set("title","å…´å›½ç¦…å¯ºåœ£åƒ§");
                 return ;
         } else if ( exp <= 5187000 ) {
-                student->set("title","ĞË¹úìøËÂÉñÉ®");
+                student->set("title","å…´å›½ç¦…å¯ºç¥åƒ§");
                 return ;
         } else if ( exp <= 26244000 ) {
-                student->set("title","ĞË¹úìøËÂ»î·ğ");
+                student->set("title","å…´å›½ç¦…å¯ºæ´»ä½›");
                 return ;
         } else
-                student->set("title","ĞË¹úìøËÂ¸±Ö÷³Ö");
+                student->set("title","å…´å›½ç¦…å¯ºå‰¯ä¸»æŒ");
                 return ;
 
 }

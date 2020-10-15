@@ -5,19 +5,19 @@
 inherit DAGGER;
 void create()
 {
-	string *order=({"ºì", "ÂÌ", "»Æ", "°×","ºÚ"});
-        set_name((order[random(5)]) +"É«µÄÏ¸Õë", ({ "needle", "long needle"}) );
+	string *order=({"çº¢", "ç»¿", "é»„", "ç™½","é»‘"});
+        set_name((order[random(5)]) +"è‰²çš„ç»†é’ˆ", ({ "needle", "long needle"}) );
 	set_weight(1);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ö§");
-		set("long", "Ò»¸ùÏ¸³¤µÄÒøÕë£¬ÉÏÃæ¿Ì×Å£¢½ğÄ¾Ë®»ğÍÁ£¢¼¸¸öÓ¬Í·Ğ¡×Ö\n");
+		set("unit", "æ”¯");
+		set("long", "ä¸€æ ¹ç»†é•¿çš„é“¶é’ˆï¼Œä¸Šé¢åˆ»ç€ï¼‚é‡‘æœ¨æ°´ç«åœŸï¼‚å‡ ä¸ªè‡å¤´å°å­—\n");
 		set("value", 50);
 		set("material", "steel");
 	}
 	init_dagger(10);
-	set("wield_msg", "$N´Ó»³ÖĞÃş³öÒ»Ö§$nÎÕÔÚÊÖÖĞ¡£\n");
-	set("unwield_msg", "$N½«ÊÖÖĞµÄ$n²ØÈë»³ÖĞ¡£\n");
+	set("wield_msg", "$Nä»æ€€ä¸­æ‘¸å‡ºä¸€æ”¯$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+	set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$nè—å…¥æ€€ä¸­ã€‚\n");
 	setup();
 }

@@ -4,15 +4,15 @@ inherit NPC;
 
 void create()
 {
-	set_name("Ñ¾÷ß", ({ "maid" }) );
-	set("long", "Ò»¸ö·şÊÌÓĞÇ®ÈË¼ÒĞ¡½ãµÄÑ¾÷ß£¬ÕıÎŞÁÄµØÍæÅªÖøÒÂ½Ç¡£\n");
+	set_name("ä¸«é¬Ÿ", ({ "maid" }) );
+	set("long", "ä¸€ä¸ªæœä¾æœ‰é’±äººå®¶å°å§çš„ä¸«é¬Ÿï¼Œæ­£æ— èŠåœ°ç©å¼„è‘—è¡£è§’ã€‚\n");
 	set("age", 17);
-	set("gender", "Å®ĞÔ");
+	set("gender", "å¥³æ€§");
 	set("attitude", "peaceful");
 	set("combat_exp", 10);
 	set("env/wimpy", 100);
 	set("inquiry", ([
-		"here": "ÕâÀï°¡£¿ÕâÀï¾ÍÊÇÇÇÒõÏØÓĞÃûµÄ´äÁøºş°¡£¡",
+		"here": "è¿™é‡Œå•Šï¼Ÿè¿™é‡Œå°±æ˜¯ä¹”é˜´å¿æœ‰åçš„ç¿ æŸ³æ¹–å•Šï¼",
 	]) );
 	setup();
 	carry_object("/obj/cloth")->wear();

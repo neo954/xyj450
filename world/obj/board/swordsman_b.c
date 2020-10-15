@@ -4,10 +4,10 @@ inherit BULLETIN_BOARD;
 
 void create()
 {
-	set_name("½£Ê¿ÁôÑÔ°å", ({ "board" }) );
+	set_name("å‰‘å£«ç•™è¨€æ¿", ({ "board" }) );
 	set("location", "/d/snow/schoolhall");
 	set("board_id", "swordsman_b");
-	set("long",	"ÕâÊÇ¹©½£Ê¿ÃÇÁôÑÔ¼ÇÊÂµÄÁôÑÔ°å¡£\n" );
+	set("long",	"è¿™æ˜¯ä¾›å‰‘å£«ä»¬ç•™è¨€è®°äº‹çš„ç•™è¨€æ¿ã€‚\n" );
 	setup();
 	set("capacity", 30);
 	replace_program(BULLETIN_BOARD);

@@ -5,13 +5,13 @@ inherit F_MASTER;
 
 void create()
 {
-        set_name("ÁúÈô·¨Íõ", ({ "master neon", "master", "neon" }) );
+        set_name("é¾™è‹¥æ³•ç‹", ({ "master neon", "master", "neon" }) );
 
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("age", 62);
         set("long",
-                "ÁúÈô·¨Íõ±¾ÊÇÊÍ¼ÒÖĞÈË£¬ºóµÃÆæÈËµã»¯£¬·ğµÀË«ĞŞ£¬ÆëÈë»¯¾³£¬\n"
-                "ÓÚ¶şÊ®¾ÅÄêÇ°´´ÏÂ¾ø³¾Ò»ÅÉ¡£\n");
+                "é¾™è‹¥æ³•ç‹æœ¬æ˜¯é‡Šå®¶ä¸­äººï¼Œåå¾—å¥‡äººç‚¹åŒ–ï¼Œä½›é“åŒä¿®ï¼Œé½å…¥åŒ–å¢ƒï¼Œ\n"
+                "äºäºŒåä¹å¹´å‰åˆ›ä¸‹ç»å°˜ä¸€æ´¾ã€‚\n");
         set("attitude", "peaceful");
 
         set("str", 21);
@@ -60,7 +60,7 @@ void create()
         map_skill("staff", "jingang-staff");
 	map_skill("spells",magic-array);
 
-        create_family("¾ø³¾ÅÉ", 0, "·¨Ê¦");
+        create_family("ç»å°˜æ´¾", 0, "æ³•å¸ˆ");
 
         setup();
 

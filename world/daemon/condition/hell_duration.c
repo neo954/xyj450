@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // rose_poison.c
@@ -15,8 +15,8 @@ int update_condition(object me, int duration)
 
      guard->move(environment(me));
      guard->set_leader(me);
-     message_vision("\n\nÄãÑÛÇ°À¶¹âÒ»ÏÖ£¬$N´ÓÀï±ß×ßÁË¹ýÀ´¡£\n", guard);
-     message_vision("\n$N¶Ô$n´óºÈÒ»Éù£¬¾¹¸ÒºÍÎÒÒõ¸®×÷¶Ô£¬¿´ÕÐ£¡\n", guard, me);
+     message_vision("\n\nä½ çœ¼å‰è“å…‰ä¸€çŽ°ï¼Œ$Nä»Žé‡Œè¾¹èµ°äº†è¿‡æ¥ã€‚\n", guard);
+     message_vision("\n$Nå¯¹$nå¤§å–ä¸€å£°ï¼Œç«Ÿæ•¢å’Œæˆ‘é˜´åºœä½œå¯¹ï¼Œçœ‹æ‹›ï¼\n", guard, me);
      guard->kill_ob(me);
      me->fight_ob(guard);
    }
@@ -27,8 +27,8 @@ int update_condition(object me, int duration)
 
                 guard->move(environment(me));
                 guard->set_leader(me);
-                message_vision("\n\nÄãÑÛÇ°À¶¹âÒ»ÏÖ£¬$N´ÓÀï±ß×ßÁË¹ýÀ´¡£\n", guard);
-                message_vision("\n$N¶Ô$n´óºÈÒ»Éù£¬¾¹¸ÒºÍÎÒÒõ¸®×÷¶Ô£¬¿´ÕÐ£¡\n", guard, me);
+                message_vision("\n\nä½ çœ¼å‰è“å…‰ä¸€çŽ°ï¼Œ$Nä»Žé‡Œè¾¹èµ°äº†è¿‡æ¥ã€‚\n", guard);
+                message_vision("\n$Nå¯¹$nå¤§å–ä¸€å£°ï¼Œç«Ÿæ•¢å’Œæˆ‘é˜´åºœä½œå¯¹ï¼Œçœ‹æ‹›ï¼\n", guard, me);
                 guard->kill_ob(me);
                 me->fight_ob(guard);
         }
@@ -38,8 +38,8 @@ int update_condition(object me, int duration)
                 guardb = new ("/d/death/npc/guard/killer4");
                 guardb->move(environment(me));
                 guardb->set_leader(me);
-                message_vision("\n\nÄãÑÛÇ°À¶¹âÒ»ÏÖ£¬$N´ÓÀï±ß×ßÁË¹ýÀ´¡£\n", guardb);
-                message_vision("\n$N¶Ô$nºÈµÀ£ºÑÖÍõÒ¯²îÎÒÀ´×¥Äã£¬¸úÎÒ×ß°É£¡\n", guardb, me);
+                message_vision("\n\nä½ çœ¼å‰è“å…‰ä¸€çŽ°ï¼Œ$Nä»Žé‡Œè¾¹èµ°äº†è¿‡æ¥ã€‚\n", guardb);
+                message_vision("\n$Nå¯¹$nå–é“ï¼šé˜ŽçŽ‹çˆ·å·®æˆ‘æ¥æŠ“ä½ ï¼Œè·Ÿæˆ‘èµ°å§ï¼\n", guardb, me);
                 guardb->kill_ob(me); 
                 me->fight_ob(guardb);
         }
@@ -50,8 +50,8 @@ int update_condition(object me, int duration)
                 guardw = new ("/d/death/npc/guard/killer3");
                 guardw->move(environment(me));
                 guardw->set_leader(me);
-     message_vision("\n\nÄãÑÛÇ°À¶¹âÒ»ÏÖ£¬$N´ÓÀï±ß×ßÁË¹ýÀ´¡£\n", guardw);
-                message_vision("\n$N¶Ô$n´óºÈÒ»Éù£¬¾¹¸ÒºÍÎÒÒõ¸®×÷¶Ô£¬¿´ÕÐ£¡\n", guardw, me);
+     message_vision("\n\nä½ çœ¼å‰è“å…‰ä¸€çŽ°ï¼Œ$Nä»Žé‡Œè¾¹èµ°äº†è¿‡æ¥ã€‚\n", guardw);
+                message_vision("\n$Nå¯¹$nå¤§å–ä¸€å£°ï¼Œç«Ÿæ•¢å’Œæˆ‘é˜´åºœä½œå¯¹ï¼Œçœ‹æ‹›ï¼\n", guardw, me);
                 guardw->kill_ob(me); 
                 me->fight_ob(guardw);
         }

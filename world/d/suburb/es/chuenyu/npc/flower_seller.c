@@ -5,11 +5,11 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("Âô»¨¹ÃÄï", ({ "flower seller", "seller" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("å–èŠ±å§‘å¨˜", ({ "flower seller", "seller" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 19);
         set("per", 40);
-        set("long", "ÃÀÀöµÄÂô»¨¹ÃÄïÕıÔÚÏòĞĞÈËÊÛ»¨¶ù\n");
+        set("long", "ç¾ä¸½çš„å–èŠ±å§‘å¨˜æ­£åœ¨å‘è¡Œäººå”®èŠ±å„¿\n");
         set("combat_exp", 700);
         set("attitude", "friendly");
         set_skill("unarmed", 40);
@@ -18,19 +18,19 @@ void create()
         set_skill("throwing", 100);
 
         set("inquiry", ([
-                "Ğ¡¾ê" : "ÕâÒªµ½ºÚËÉÉ½È¥ÎÊ¡£", 
+                "å°å¨Ÿ" : "è¿™è¦åˆ°é»‘æ¾å±±å»é—®ã€‚", 
         ]) );
         set("chat_chance", 5);
         set("chat_msg", ({
                 (:random_move :)
         }) );
         set("vendor_goods", ([
-                "×ÏÂŞÀ¼": __DIR__"obj/purple_flower",
-                "ºìÃµ¹å": __DIR__"obj/red_flower",
-                "»ÆÃµ¹å": __DIR__"obj/yellow_flower",
-                "À¶Ìì¶ì": __DIR__"obj/blue_flower",
-                "°×²è»¨": __DIR__"obj/white_flower",
-                "ºÚÄµµ¤": __DIR__"obj/black_flower",
+                "ç´«ç½—å…°": __DIR__"obj/purple_flower",
+                "çº¢ç«ç‘°": __DIR__"obj/red_flower",
+                "é»„ç«ç‘°": __DIR__"obj/yellow_flower",
+                "è“å¤©é¹…": __DIR__"obj/blue_flower",
+                "ç™½èŒ¶èŠ±": __DIR__"obj/white_flower",
+                "é»‘ç‰¡ä¸¹": __DIR__"obj/black_flower",
         ]) );
 
         setup();
@@ -56,34 +56,34 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) return;
         switch( random(6) ) {
                 case 0:
-                        say( " Âô»¨¹ÃÄïĞ¦×ÅµÀ£ºÕâÎ»"
+                        say( " å–èŠ±å§‘å¨˜ç¬‘ç€é“ï¼šè¿™ä½"
                                 + RANK_D->query_respect(ob)
-                                + "£¬Âò¶äºÚÄµµ¤Âğ£¿ \n");
+                                + "ï¼Œä¹°æœµé»‘ç‰¡ä¸¹å—ï¼Ÿ \n");
                         break;
                 case 1:
-                        say( " Âô»¨¹ÃÄïĞ¦×ÅµÀ£ºÕâÎ»"
+                        say( " å–èŠ±å§‘å¨˜ç¬‘ç€é“ï¼šè¿™ä½"
                                 + RANK_D->query_respect(ob)
-                                + "£¬Âò¶ä»ÆÃ¶¹åÂğ£¿ \n");
+                                + "ï¼Œä¹°æœµé»„æšç‘°å—ï¼Ÿ \n");
                         break;
                 case 2:
-                        say( " Âô»¨¹ÃÄïĞ¦×ÅµÀ£ºÕâÎ»"
+                        say( " å–èŠ±å§‘å¨˜ç¬‘ç€é“ï¼šè¿™ä½"
                                 + RANK_D->query_respect(ob)
-                                + "£¬Âò¶ä°×²è»¨Âğ£¿ \n");
+                                + "ï¼Œä¹°æœµç™½èŒ¶èŠ±å—ï¼Ÿ \n");
                         break;
                 case 3:
-                        say( " Âô»¨¹ÃÄïĞ¦×ÅµÀ£ºÕâÎ»"
+                        say( " å–èŠ±å§‘å¨˜ç¬‘ç€é“ï¼šè¿™ä½"
                                 + RANK_D->query_respect(ob)
-                                + "£¬Âò¶ä×ÏÂŞÀ¼Âğ£¿ \n");
+                                + "ï¼Œä¹°æœµç´«ç½—å…°å—ï¼Ÿ \n");
                         break;
                 case 4:
-                        say( " Âô»¨¹ÃÄïĞ¦×ÅµÀ£ºÕâÎ»"
+                        say( " å–èŠ±å§‘å¨˜ç¬‘ç€é“ï¼šè¿™ä½"
                                 + RANK_D->query_respect(ob)
-                                + "£¬Âò¶äºìÃ¶¹åÂğ£¿ \n");
+                                + "ï¼Œä¹°æœµçº¢æšç‘°å—ï¼Ÿ \n");
                         break;
                 case 5:
-                        say( " Âô»¨¹ÃÄïĞ¦×ÅµÀ£ºÕâÎ»"
+                        say( " å–èŠ±å§‘å¨˜ç¬‘ç€é“ï¼šè¿™ä½"
                                 + RANK_D->query_respect(ob)
-                                + "£¬Âò¶ä»ÆÃ¶¹åÂğ£¿ \n");
+                                + "ï¼Œä¹°æœµé»„æšç‘°å—ï¼Ÿ \n");
                         break;
 
         }

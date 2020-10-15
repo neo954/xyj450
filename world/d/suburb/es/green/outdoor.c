@@ -4,25 +4,25 @@ inherit ROOM;
 
 void create()
 {
-	set("short","Ê¯ÊÒ");
+	set("short","çŸ³å®¤");
 	set("long",@LONG
-ÕâÊÇÒ»¼äÊ¯ÊÒ£¬ÊÒÄÚÍ¸×ÅÒ»ÖÖËµ²»ÇåµÄÉñÃØÁ¦Á¿£¬Î÷±ßÓĞÁ½ÕÅÊ¯ÒÎ
-¶«Ê×Ç½ÉÏ¹ÒÕâÒ»°ÑÄ¾½£¡£±±±ßÍ¨Íù´óÌü£¬µ«Ç½ÉÏĞ´ÁËÁ½ĞĞ×Ö£¬×ß½ü×ĞÏ¸
-±æÈÏ£¬ÊÇ£º·ÇÎÒµÜ×Ó£¬ÄªÈë´ËÃÅ¡£
+è¿™æ˜¯ä¸€é—´çŸ³å®¤ï¼Œå®¤å†…é€ç€ä¸€ç§è¯´ä¸æ¸…çš„ç¥ç§˜åŠ›é‡ï¼Œè¥¿è¾¹æœ‰ä¸¤å¼ çŸ³æ¤…
+ä¸œé¦–å¢™ä¸ŠæŒ‚è¿™ä¸€æŠŠæœ¨å‰‘ã€‚åŒ—è¾¹é€šå¾€å¤§å…ï¼Œä½†å¢™ä¸Šå†™äº†ä¸¤è¡Œå­—ï¼Œèµ°è¿‘ä»”ç»†
+è¾¨è®¤ï¼Œæ˜¯ï¼šéæˆ‘å¼Ÿå­ï¼Œè«å…¥æ­¤é—¨ã€‚
 LONG
 );
 	set("exits",([
 	"enter" :__DIR__"cavehall",
 	"south" :__DIR__"entrance",
 	]) );
-	create_door("south","´óÊ¯ÃÅ","north",DOOR_CLOSED);
+	create_door("south","å¤§çŸ³é—¨","north",DOOR_CLOSED);
 	setup();
 }
 
 int valid_leave(object me,string dir)
 {
 	if ( dir == "enter" && me->query("family/master_id") != "master outer" )
-		return notify_fail("Èë¿Ú±»Ä§·¨·â×¡ÁË£¡\n");
+		return notify_fail("å…¥å£è¢«é­”æ³•å°ä½äº†ï¼\n");
 	return ::valid_leave(me,dir);
 }
 

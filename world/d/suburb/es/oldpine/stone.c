@@ -4,10 +4,10 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "´óÇàÊ¯ÉÏ");
+	set("short", "å¤§é’çŸ³ä¸Š");
 	set("long", @LONG
-ÄãÏÖÔÚÕýÕ¾ÔÚÒ»¿éÍ»³öµÄ´óÇàÊ¯ÉÏ, ËäÈ»ÓÐµã»¬, Äã»¹ÊÇÄÜÕ¾ÎÈ,
-ÍùËÄÖÜ¿´, ³ýÁË³¤ÂúÁËÇàÌ¦µÄÊ¯±Ú, ºÃÏóÎÞÂ·¿É×ßÁË¡£
+ä½ çŽ°åœ¨æ­£ç«™åœ¨ä¸€å—çªå‡ºçš„å¤§é’çŸ³ä¸Š, è™½ç„¶æœ‰ç‚¹æ»‘, ä½ è¿˜æ˜¯èƒ½ç«™ç¨³,
+å¾€å››å‘¨çœ‹, é™¤äº†é•¿æ»¡äº†é’è‹”çš„çŸ³å£, å¥½è±¡æ— è·¯å¯èµ°äº†ã€‚
 LONG
 	);
 
@@ -26,9 +26,9 @@ void init ()
 int do_climb(string arg)
 {
 	if (!arg || arg != "down")
-		return notify_fail ("ÏëÅÀÏÂÈ¥(down)Âð£¿\n");
+		return notify_fail ("æƒ³çˆ¬ä¸‹åŽ»(down)å—ï¼Ÿ\n");
 
-	message_vision ("$NÑ¸ËÙµØÅÀÏÂ´óÇàÊ¯¡£\n",this_player());
+	message_vision ("$Nè¿…é€Ÿåœ°çˆ¬ä¸‹å¤§é’çŸ³ã€‚\n",this_player());
 	this_player()->move(__DIR__"cave1");
 	return 1;
 }

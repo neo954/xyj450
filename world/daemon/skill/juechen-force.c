@@ -11,5 +11,5 @@ int valid_learn(object me) { return 1; }
 int practice_skill(object me)
 {
         return 
-notify_fail("绝尘心法只能用学的或是从运用(exert)中增加熟练度。\n");
+notify_fail("缁濆皹蹇冩硶鍙兘鐢ㄥ鐨勬垨鏄粠杩愮敤(exert)涓鍔犵啛缁冨害銆俓n");
 } 

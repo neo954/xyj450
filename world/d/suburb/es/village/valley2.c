@@ -4,10 +4,10 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "�������");
+	set("short", "忘情谷外");
 	set("long", @LONG
-��������������һ��С·�������ͽ������и����µ�С��ׯ���Ӵ�
-ׯ��������С·����ϡ�٣����ܾ��������д���ɹ�����ȵ�ɽ�롣
+这里是忘情谷外的一条小路，往东就进了名叫傅家坡的小村庄。从村
+庄往外的这段小路人烟稀少，但能经常见到有大鸟飞过忘情谷的山岭。
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */

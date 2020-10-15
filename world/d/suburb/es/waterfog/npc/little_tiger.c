@@ -4,12 +4,12 @@ inherit NPC;
 
 void create()
 {
-	set_name("Ð¡ÌìÐ°»¢", ({ "little tiger", "tiger" }) );
+	set_name("å°å¤©é‚ªè™Ž", ({ "little tiger", "tiger" }) );
 	set("long",
-		"ÕâÊÇÒ»Ö»ÌìÐ°ÅÉµÄÁéÊÞ¡¸ÌìÐ°»¢¡¹£¬»ðºìµÄÃ«Æ¤ÉÏÓÐÖøÈç°×Òø°ãµÄ\n"
-		"°×ÎÆ£¬È»¶øÕâÖ»ÌìÐ°»¢µÄÄê¼ÍÏÔÈ»»¹ºÜÐ¡£¬Ëµ²»¶¨»¹²»µ½Á½Ëê¡£\n");
+		"è¿™æ˜¯ä¸€åªå¤©é‚ªæ´¾çš„çµå…½ã€Œå¤©é‚ªè™Žã€ï¼Œç«çº¢çš„æ¯›çš®ä¸Šæœ‰è‘—å¦‚ç™½é“¶èˆ¬çš„\n"
+		"ç™½çº¹ï¼Œç„¶è€Œè¿™åªå¤©é‚ªè™Žçš„å¹´çºªæ˜¾ç„¶è¿˜å¾ˆå°ï¼Œè¯´ä¸å®šè¿˜ä¸åˆ°ä¸¤å²ã€‚\n");
 
-	set("race", "Ò°ÊÞ");
+	set("race", "é‡Žå…½");
 	set("age", 1);
 	set("attitude", "friendly");
 
@@ -26,7 +26,7 @@ void create()
 	set("per", 60);
 	set("kar", 70);
 
-	set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "ºóÍÈ", "Î²°Í" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰è„š", "åŽè…¿", "å°¾å·´" }) );
 	set("verbs", ({ "bite", "claw" }) );
 
 	set_temp("apply/attack", 20);

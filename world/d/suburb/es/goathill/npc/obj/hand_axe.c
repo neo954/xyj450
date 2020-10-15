@@ -6,19 +6,19 @@ inherit AXE;
 
 void create()
 {
-	set_name("¶Ì¸«", ({ "hand axe", "axe" }) );
+	set_name("çŸ­æ–§", ({ "hand axe", "axe" }) );
 	set_weight(5000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "±ú");
+		set("unit", "æŸ„");
 		set("value", 500);
 		set("material", "steel");
 		set("long",
-			"ÕâÖÖ¸«Í·µÄÈĞ³¤±ú¶Ì£¬ÊÇ×¨ÃÅÓÃÀ´×ö±øÆ÷µÄ¸«Í·£¬½üÕ½¾ßÓĞÏàµ±Ç¿µÄ\n"
-			"É±ÉËÁ¦¡£\n");
-		set("wield_msg", "$N³é³öÒ»±ú$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unequip_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄÊø´ø¼ä¡£\n");
+			"è¿™ç§æ–§å¤´çš„åˆƒé•¿æŸ„çŸ­ï¼Œæ˜¯ä¸“é—¨ç”¨æ¥åšå…µå™¨çš„æ–§å¤´ï¼Œè¿‘æˆ˜å…·æœ‰ç›¸å½“å¼ºçš„\n"
+			"æ€ä¼¤åŠ›ã€‚\n");
+		set("wield_msg", "$NæŠ½å‡ºä¸€æŸ„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„æŸå¸¦é—´ã€‚\n");
 		set("weapon_prop/attack", 3);
 		set("weapon_prop/defense", -2);
 	}

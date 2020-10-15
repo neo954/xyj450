@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÂãÌåÅ®ÈË", ({ "naked girl", "girl" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("è£¸ä½“å¥³äºº", ({ "naked girl", "girl" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 19);
-        set("long", "ÕıÔÚÒÔ·ãÒ¶ÈªË®ÁÆÉËµÄÅ®ÈË\n");
+        set("long", "æ­£åœ¨ä»¥æ«å¶æ³‰æ°´ç–—ä¼¤çš„å¥³äºº\n");
         set("combat_exp", 700);
         set("attitude", "friendly");
         set_skill("unarmed", 10);

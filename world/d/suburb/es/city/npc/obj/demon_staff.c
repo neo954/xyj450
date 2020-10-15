@@ -5,13 +5,13 @@ inherit STAFF;
 
 void create()
 {
-        set_name( RED "ÌìÄ§èÆ" NOR, ({ "demon staff", "staff" }) );
+        set_name( RED "å¤©é­”æµ" NOR, ({ "demon staff", "staff" }) );
         set_weight(25000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "°Ñ");
-                set("long", "Ò»°Ñ°µºìÉ«¡¢Á½ÕÉ¶à³¤µÄ¾ŞèÆ¡£\n");
+                set("unit", "æŠŠ");
+                set("long", "ä¸€æŠŠæš—çº¢è‰²ã€ä¸¤ä¸ˆå¤šé•¿çš„å·¨æµã€‚\n");
 		set("value", 20000);
                 set("material", "crimson gold");
         }

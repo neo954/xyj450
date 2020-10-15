@@ -2,10 +2,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("´óó¯òë", ({ "cockroach" }) );
-        set("race", "Ò°ÊŞ");
+        set_name("å¤§èŸ‘è‚", ({ "cockroach" }) );
+        set("race", "é‡å…½");
         set("age", 1);
-        set("long", "Ò»Ö»·Ç³£¶ñĞÄµÄó¯òë¡£ \n");
+        set("long", "ä¸€åªéå¸¸æ¶å¿ƒçš„èŸ‘è‚ã€‚ \n");
 
         set("combat_exp",7000);
         set("score", 200);
@@ -14,7 +14,7 @@ void create()
         set_skill("dodge", 100);
 
 
-        set("limbs", ({ "Í·²¿", "ÉíÌå"}) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“"}) );
          set("verbs", ({ "bite" }) );
         set_temp("armor", 50);
 

@@ -5,12 +5,12 @@ inherit ARMOR;
 
 void create()
 {
-        set_name( HIY "×ÏÍ­Õ½¿ø" NOR,({ "armor" }) );
+        set_name( HIY "ç´«é“œæˆ˜ç›”" NOR,({ "armor" }) );
         set_weight(42000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¼þ");
+                set("unit", "ä»¶");
                 set("material", "copper");
                 set("value",10000);
                 set("armor_prop/armor", 30);

@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // master.c
@@ -12,15 +12,15 @@ void use_poison();
 
 void create()
 {
-   set_name("��ֹƼ", ({ "master dancer", "master", "dancer" }) );
+   set_name("蓝止萍", ({ "master dancer", "master", "dancer" }) );
 
-   set("title", "����ׯ��");
-   set("nickname", "��������");
-   set("gender", "Ů��");
+   set("title", "晚月庄主");
+   set("nickname", "回音仙子");
+   set("gender", "女性");
    set("age", 22);
    set("long",
-     "��ֹƼ��һ��ʮ�ֳ�ɫ����Ů��������һ����\�ø�������ǧ���\��\n"
-     "�����ӵܣ����̺��Ͷ�Ϊ��������˫����ò�������㵹��\n");
+     "蓝止萍是一个十分出色的美女，她弹的一手琵\琶更是闻名千里，许\多\n"
+     "王侯子弟，富商豪客都为她天下无双的美貌与琴艺倾倒。\n");
    set("attitude", "peaceful");
    set("class", "dancer");
    set("apprentice_available", 10);
@@ -40,10 +40,10 @@ void create()
 
    set("chat_chance_combat", 60);
    set("chat_msg_combat", ({
-     "��ֹƼ��ȻһЦ��һ��ת��������������������ǰ�ⳡ���ƺ�ȫ���������ϡ�\n",
-     "��ֹƼ�Ų����ƣ������ת�˼���Ȧ������һЦ��\n",
-     "��ֹƼ���ַ��˷��Լ��ķ����������±����������Ƶء�\n",
-     "��ֹƼЦ������ʰ�����һƬ��" HIM "ħ������" NOR "�����µĻ��ꡣ\n",
+     "蓝止萍嫣然一笑，一个转身迳自舞了起来，对眼前这场恶斗似乎全不放在心上。\n",
+     "蓝止萍脚步轻移，翩翩地转了几个圈，回眸一笑。\n",
+     "蓝止萍用手扶了扶自己的发簪，像是怕被对手碰歪似地。\n",
+     "蓝止萍笑嘻嘻地拾起地上一片从" HIM "魔鞭翩珑" NOR "上落下的花瓣。\n",
      (: use_poison :),
      (: exert_function, "chillgaze" :),
    }) );
@@ -68,7 +68,7 @@ void create()
    map_skill("force", "iceforce");
    map_skill("whip", "snowwhip");
 
-   create_family("����ׯ", 1, "ׯ��");
+   create_family("晚月庄", 1, "庄主");
 
    set_temp("apply/defense", 100);
 
@@ -90,22 +90,22 @@ void attempt_apprentice(object ob)
 {
    if( query("apprentice_available") ) {
      if( find_call_out("do_recruit") != -1 )
-        command("say ���ţ�һ��һ������");
+        command("say 慢着，一个一个来。");
      else
         call_out("do_recruit", 2, ob);
    } else {
-     command("say ��ׯ�������Ѿ�����ʮ�����ӣ���������ͽ�ˡ�");
+     command("say 本庄主今天已经收了十个弟子，不想再收徒了。");
    }
 }
 
 void do_recruit(object ob)
 {
-   if( (string)ob->query("gender") != "Ů��" )
-     command("say ���˶����Ǻö�����������");
+   if( (string)ob->query("gender") != "女性" )
+     command("say 男人都不是好东西，滚开！");
    else {
-     command("say �ܺã�ֻҪ��Ա�ׯ�����Ĺ������ô����ٲ��˵ġ�");
+     command("say 很好，只要你对本庄主忠心耿耿，好处是少不了的。");
      if( (int)ob->query("per") > 25 && (int)ob->query("age") < 20 )
-        message_vision("$N�����ظ�����$n������˵�����ر�������������Ů�� ....\n", this_object(), ob);
+        message_vision("$N暧昧地抚摸着$n的脸，说道：特别是像你这样的女孩 ....\n", this_object(), ob);
      command("recruit " + ob->query("id") );
    }
 }
@@ -127,7 +127,7 @@ void use_poison()
 
    if( ob->query_condition("rose_poison") ) return;
 
-   tell_object(ob, "����������ƺ�մ����ʲô����������һ��ȴʲôҲû�С�\n");
+   tell_object(ob, "你觉得脸上似乎沾上了什么东西，伸手一摸却什么也没有。\n");
    if( random(query("combat_exp")) > (int)ob->query("combat_exp") )
      ob->apply_condition("rose_poison", 20);
 }

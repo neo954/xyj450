@@ -1,4 +1,4 @@
-// иЯ╩╟йю╫Г║╓нВсн╪г║╓╟Ф╠╬ё╢ё╝ё╣ё╟
+// Г╔·Х╞²Д╦√Г∙▄б╥Х╔©Ф╦╦Х╝╟б╥Г┴┬Ф°╛О╪■О╪▌О╪∙О╪░
 /* <SecCrypt CPL V3R05> */
  
 //huanhua.c
@@ -7,14 +7,14 @@
 inherit NPC;
 void create()
 {
-   set_name("Д╫╩╗", ({"huan hua", "huanhua", "hua"}));
-   set("gender", "е╝пт" );
+   set_name("Ф╣ёХ┼╠", ({"huan hua", "huanhua", "hua"}));
+   set("gender", "Е╔ЁФ─╖" );
    set("age", 16);
-   set("long", "я╘и╫цеобе╝╣эвс║ё\n");
+   set("long", "И⌡╙Е╠╠И≈╗Д╦▀Е╔ЁЕ╪÷Е╜░Ц─┌\n");
    set("class", "yaomo");
    set("combat_exp", 25000);
    set("attitude", "peaceful");
-   create_family("╢Ся╘и╫", 4, "╣эвс");
+   create_family("Е╓╖И⌡╙Е╠╠", 4, "Е╪÷Е╜░");
    set_skill("unarmed", 30);
    set_skill("dodge", 30);
    set_skill("parry", 30);
@@ -50,9 +50,9 @@ void init()
 
         ::init();
 
-        if ( ((string)ob->query("gender")=="дппт") &&
+        if ( ((string)ob->query("gender")=="Г■╥Ф─╖") &&
 ((int)ob->query("env/invisibility")  == 0) &&
-((string)environment(me)->query("short")=="е╝╣эвснт╥©") )
+((string)environment(me)->query("short")=="Е╔ЁЕ╪÷Е╜░Е█╖Ф┬©") )
         {
 
                         remove_call_out("greeting");
@@ -65,7 +65,7 @@ void greeting(object ob)
 
         switch( random(1) ) {
                 case 0:
-                command("chat* ж╩лЩД╫╩╗╦ъиЫ╫п╣юё╨" + ob->query("name") + "ё╛дЦуБ╦ЖЁТаВц╔ё║╬сх╩╢Ё╣╫е╝╣эвснт╥©ю╢акё║\n");
+                command("chat* Е▐╙Е░╛Ф╣ёХ┼╠И╚≤Её╟Е▐╚И│⌠О╪ " + ob->query("name") + "О╪▄Д╫═Х©≥Д╦╙Х┤╜Ф╣│Ф╟⌠О╪│Е╠┘Г└╤И≈╞Е┬╟Е╔ЁЕ╪÷Е╜░Е█╖Ф┬©Ф²╔Д╨├О╪│\n");
      command("kick " + ob->query("id"));
                 break;
         }

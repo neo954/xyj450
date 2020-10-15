@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("¿¼Éú", ({ "student", "sheng"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("è€ƒç”Ÿ", ({ "student", "sheng"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 12);
-        set("long", "ÕâÊÇÒ»Î»ÕıÔÚ¿¼ÊÔµÄ¿¼Éú¡£\n");
+        set("long", "è¿™æ˜¯ä¸€ä½æ­£åœ¨è€ƒè¯•çš„è€ƒç”Ÿã€‚\n");
         set("combat_exp", 50000);
         set("attitude", "friendly");
         set_skill("hammer", 90);
@@ -14,7 +14,7 @@ void create()
         set("iron-cloth", 200);
         set("chat_chance", 1);
         set("chat_msg", ({
-                "¿¼ÉúÌ§ÆğÍ·£¬ËÄÏÂÍûÁËÒ»ÑÛ£®£®£®\n",
+                "è€ƒç”ŸæŠ¬èµ·å¤´ï¼Œå››ä¸‹æœ›äº†ä¸€çœ¼ï¼ï¼ï¼\n",
         }) );
 	
 	setup();

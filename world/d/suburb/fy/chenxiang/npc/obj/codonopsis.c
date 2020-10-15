@@ -5,11 +5,11 @@
 inherit ITEM;
 void create()
 {
-    set_name( "µ³²Î", ({ "codonopsis","radix codonopsis"  }) );
-    set("unit", "¿é");
+    set_name( "å…šå‚", ({ "codonopsis","radix codonopsis"  }) );
+    set("unit", "å—");
     set("value",20);
     set("long","
-Ò»¿éÉÏºÃµÄµ³²Î
+ä¸€å—ä¸Šå¥½çš„å…šå‚
 \n");
     set_weight(5);
 }

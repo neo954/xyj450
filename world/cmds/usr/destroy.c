@@ -10,28 +10,28 @@ int main(object me, string arg)
 	object ob;
 
 	if( !arg || sscanf(arg, "%s", arg) != 1 )
-		return notify_fail("ÄãÒª´İ»ÙÊ²Ã´£¿\n");
+		return notify_fail("ä½ è¦æ‘§æ¯ä»€ä¹ˆï¼Ÿ\n");
 
 	if( !objectp(ob = present(arg, me)) )
-        return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+        return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿ã€‚\n");
 	if(me->query("id") != ob->query("owner"))
-	return notify_fail("ÕâÑù¶«Î÷²»ÊÇÄãµÄ£¬Äã²»¿ÉÒÔ´İ»ÙËü¡£\n");
+	return notify_fail("è¿™æ ·ä¸œè¥¿ä¸æ˜¯ä½ çš„ï¼Œä½ ä¸å¯ä»¥æ‘§æ¯å®ƒã€‚\n");
 	seteuid(ROOT_UID);
 	rm(base_name(ob) + ".c");
 	ob->move(environment(me));
 	destruct(ob);
 	me->add("created_item",-1);
 	seteuid(getuid());
-	write("£Ï£Ë\n");
+	write("ï¼¯ï¼«\n");
 	return 1;
 }
 
 int help(object me)
 {
 write(@HELP
-Äã¿ÉÒÔÓÃ´ËÖ¸Áî´İ»ÙÒ»¼şÄã×Ô¼ºµÄÎï¼ş¡£±»´İ»ÙµÄÎï¼ş½«
-ÓÀÔ¶ÏûÊ§¡£´ËÖ¸ÁîÊÇÓÃÀ´´İ»ÙÄã²»ÏëÔÙÒªµÄ×ÔÔìÎïÆ·£¬
-Ö¸Áî¸ñÊ½ : destroy <Ä³Îï¼ş>
+ä½ å¯ä»¥ç”¨æ­¤æŒ‡ä»¤æ‘§æ¯ä¸€ä»¶ä½ è‡ªå·±çš„ç‰©ä»¶ã€‚è¢«æ‘§æ¯çš„ç‰©ä»¶å°†
+æ°¸è¿œæ¶ˆå¤±ã€‚æ­¤æŒ‡ä»¤æ˜¯ç”¨æ¥æ‘§æ¯ä½ ä¸æƒ³å†è¦çš„è‡ªé€ ç‰©å“ï¼Œ
+æŒ‡ä»¤æ ¼å¼ : destroy <æŸç‰©ä»¶>
 
 HELP
     );

@@ -10,18 +10,18 @@ string  summon_more( object who);
 
 void create()
 {
-        set_name("Ë®Ä¸Òõ¼§", ({ "master ninemoon", "master", "ninemoon" }) );
+        set_name("æ°´æ¯é˜´å§¬", ({ "master ninemoon", "master", "ninemoon" }) );
 
-        set("nickname", "¾ÅÒõÏÉ×Ó");
-        set("gender", "Å®ĞÔ");
+        set("nickname", "ä¹é˜´ä»™å­");
+        set("gender", "å¥³æ€§");
         set("age", 26);
         set("long",
-"Ë®Ä¸Òõ¼§¿´ÉÏÈ¥ÊÇÒ»¸öÊ®·Ö³öÉ«µÄÃÀÅ®£¬ËıµÄ¾ÅÒõ°×¹Ç×¦ÏòÀ´Ã»ÓĞ¹ıµĞÊÖ¡£\n"
+"æ°´æ¯é˜´å§¬çœ‹ä¸Šå»æ˜¯ä¸€ä¸ªååˆ†å‡ºè‰²çš„ç¾å¥³ï¼Œå¥¹çš„ä¹é˜´ç™½éª¨çˆªå‘æ¥æ²¡æœ‰è¿‡æ•Œæ‰‹ã€‚\n"
                 );
         set("attitude", "peaceful");
         set("class", "ninemoon");
         set("apprentice_available", 2);
-        create_family("ÉñË®¹¬", 11, "ÕÆÃÅ");
+        create_family("ç¥æ°´å®«", 11, "æŒé—¨");
         set("int", 28);
         set("spi", 26);
 	set("max_kee",700);
@@ -82,30 +82,30 @@ void attempt_apprentice(object ob)
 {
         if( query("apprentice_available") ) {
                 if( find_call_out("do_recruit") != -1 )
-                        command("say ÂıÖø£¬Ò»¸öÒ»¸öÀ´¡£");
+                        command("say æ…¢è‘—ï¼Œä¸€ä¸ªä¸€ä¸ªæ¥ã€‚");
                 else
                         call_out("do_recruit", 2, ob);
         } else {
-                command("say ±¾ÕÆÃÅ½ñÌìÒÑ¾­ÊÕÁËÎå¸öµÜ×Ó£¬²»ÏëÔÙÊÕÍ½ÁË¡£");
+                command("say æœ¬æŒé—¨ä»Šå¤©å·²ç»æ”¶äº†äº”ä¸ªå¼Ÿå­ï¼Œä¸æƒ³å†æ”¶å¾’äº†ã€‚");
         }
 }
 
 void do_recruit(object ob)
 {
-        if( (string)ob->query("gender") != "Å®ĞÔ" )
-          {      command("say ´óµ¨£¡À´ÈËÄÄ£¡");
+        if( (string)ob->query("gender") != "å¥³æ€§" )
+          {      command("say å¤§èƒ†ï¼æ¥äººå“ªï¼");
                 summon_more(this_object());
           }
         else {
         if( ((int)ob->query("cor") < 10) || ((int)ob->query("cps") < 10)
 || ((int)ob->query("int") < 10)
         ||      ((int)ob->query("con") < 10)) {
-                command("say Èë¾ÅÒõÒª¿¿Ôµ·İ£¬ÒÀÎÒ¿´" +
-RANK_D->query_respect(ob) + "ºÍ¾ÅÒõ½ñÉúÎŞÔµ¡£");
+                command("say å…¥ä¹é˜´è¦é ç¼˜ä»½ï¼Œä¾æˆ‘çœ‹" +
+RANK_D->query_respect(ob) + "å’Œä¹é˜´ä»Šç”Ÿæ— ç¼˜ã€‚");
                 return;
         }
                 command("smile");
-                command("say ºÜºÃ£¬ºÜºÃ£¬ºÜºÃ¡£");
+                command("say å¾ˆå¥½ï¼Œå¾ˆå¥½ï¼Œå¾ˆå¥½ã€‚");
                 command("recruit " + ob->query("id") );
         }
 }
@@ -126,7 +126,7 @@ string summon_more(object who)
         seteuid(getuid());
         another = new(__DIR__"thousand_hand");
         another->move(environment(who));
-        message_vision(another->name()+ "×ßÁË¹ıÀ´¡£\n"
+        message_vision(another->name()+ "èµ°äº†è¿‡æ¥ã€‚\n"
                 , this_object() );
         enemy = who->query_enemy();
         i = sizeof(enemy);
@@ -150,27 +150,27 @@ void re_rank(object student)
         int exp;
         exp = (int) student->query("combat_exp");
         if( exp <= 32000 ) {
-                student->set("title","¾ÅÒõÅÉµÜ×Ó");
+                student->set("title","ä¹é˜´æ´¾å¼Ÿå­");
                 return ;
         } else if ( exp <= 128000 ) {
-                student->set("title","¾ÅÒõÅÉĞ¡Ä§Å®");
+                student->set("title","ä¹é˜´æ´¾å°é­”å¥³");
                 return ;
         } else if ( exp <= 512000 ) {
-                student->set("title","¾ÅÒõÅÉÄ§Å®");
+                student->set("title","ä¹é˜´æ´¾é­”å¥³");
                 return ;
         } else if ( exp <= 1536000 ) {
-                student->set("title","¾ÅÒõÅÉ´óÄ§Å®");
+                student->set("title","ä¹é˜´æ´¾å¤§é­”å¥³");
                 return ;
         } else if ( exp <= 3456000 ) {
-                student->set("title","¾ÅÒõÅÉÉñ¼§");
+                student->set("title","ä¹é˜´æ´¾ç¥å§¬");
                 return ;
         } else if ( exp <= 5187000 ) {
-                student->set("title","¾ÅÒõÅÉÊ¥¼§");
+                student->set("title","ä¹é˜´æ´¾åœ£å§¬");
                 return ;
         } else if ( exp <= 26244000 ) {
-                student->set("title","¾ÅÒõÅÉÏÉ¼§");
+                student->set("title","ä¹é˜´æ´¾ä»™å§¬");
                 return ;
         } else
-                student->set("title","¾ÅÒõÅÉ¸±ÕÆÃÅ");
+                student->set("title","ä¹é˜´æ´¾å‰¯æŒé—¨");
                 return ;
 }

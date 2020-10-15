@@ -1,7 +1,7 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
-// powerup.c »ìÌìÆø¹¦¼ÓÁ¦
+// powerup.c æ··å¤©æ°”åŠŸåŠ åŠ›
 
 #include <ansi.h>
 
@@ -14,19 +14,19 @@ int exert(object me, object target)
 	int skill;
 
 	if( target != me ) 
-		return notify_fail("ÄãÖ»ÄÜÓÃ»ìÌìÆø¹¦À´ÌáÉý×Ô¼ºµÄÕ½¶·Á¦¡£\n");
+		return notify_fail("ä½ åªèƒ½ç”¨æ··å¤©æ°”åŠŸæ¥æå‡è‡ªå·±çš„æˆ˜æ–—åŠ›ã€‚\n");
 
 	if( (int)me->query("force") < 100  ) 
-		return notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
+		return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
 	if( (int)me->query_temp("powerup") ) 
-		return notify_fail("ÄãÒÑ¾­ÔÚÔË¹¦\ÖÐÁË¡£\n");
+		return notify_fail("ä½ å·²ç»åœ¨è¿åŠŸ\ä¸­äº†ã€‚\n");
 
 	skill = me->query_skill("force");
 	me->add("force", -100);
 	me->receive_damage("kee", 0);
 
 	message_vision(
-	HIR "$NÎ¢Ò»ÄýÉñ£¬ÔËÆð»ìÌìÆø¹¦£¬È«Éí¹Ç½Ú·¢³öÒ»Õó±¬¶¹°ãµÄÉùÏì¢¦\n" NOR, me);
+	HIR "$Nå¾®ä¸€å‡ç¥žï¼Œè¿èµ·æ··å¤©æ°”åŠŸï¼Œå…¨èº«éª¨èŠ‚å‘å‡ºä¸€é˜µçˆ†è±†èˆ¬çš„å£°å“â…µ\n" NOR, me);
 
 	me->add_temp("apply/attack", skill/3);
 	me->add_temp("apply/dodge", skill/3);
@@ -44,5 +44,5 @@ void remove_effect(object me, int amount)
 	me->add_temp("apply/attack", - amount);
 	me->add_temp("apply/dodge", - amount);
 	me->delete_temp("powerup");
-	tell_object(me, "ÄãµÄ»ìÌìÆø¹¦ÔËÐÐÍê±Ï£¬½«ÄÚÁ¦ÊÕ»Øµ¤Ìï¡£\n");
+	tell_object(me, "ä½ çš„æ··å¤©æ°”åŠŸè¿è¡Œå®Œæ¯•ï¼Œå°†å†…åŠ›æ”¶å›žä¸¹ç”°ã€‚\n");
 }

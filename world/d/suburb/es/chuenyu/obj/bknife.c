@@ -6,20 +6,20 @@ inherit DAGGER;
 
 void create()
 {
-        set_name("±ÌÓñµ¶", ({ "knife" }) );
+        set_name("ç¢§ç‰åˆ€", ({ "knife" }) );
         set_weight(6500);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "°Ñ");
-                set("long", "ÕâÊÇÒ»°Ñµ±ÄêÕÅ¼ÒÀÏ×æ×ÚÍËÒşÊ±»ÊÉÏ´ÍµÄ±¦µ¶");
+                set("unit", "æŠŠ");
+                set("long", "è¿™æ˜¯ä¸€æŠŠå½“å¹´å¼ å®¶è€ç¥–å®—é€€éšæ—¶çš‡ä¸Šèµçš„å®åˆ€");
                 set("value", 20000);
                 set("material", "crimsonsteel");
         }
         init_dagger(40);
 
-        set("wield_msg", "$N´ÓÑü¼ä³é³öÒ»°ÑÁÁÉÁÉÁµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-        set("unwield_msg", "$N½«ÊÖÖĞµÄ$n±ğÔÚÑü¼ä¡£\n");
+        set("wield_msg", "$Nä»è…°é—´æŠ½å‡ºä¸€æŠŠäº®é—ªé—ªçš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+        set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$nåˆ«åœ¨è…°é—´ã€‚\n");
 
 
         setup();

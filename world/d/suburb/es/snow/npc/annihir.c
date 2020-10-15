@@ -8,9 +8,9 @@ string ask_me(object who);
 
 void create()
 {
-	set_name("��ϧ��", ({ "annihir" }) );
-	set("title", "Ǯׯ�ϰ�");
-	set("gender", "����" );
+	set_name("安惜迩", ({ "annihir" }) );
+	set("title", "钱庄老板");
+	set("gender", "男性" );
 	set("age", 26);
 
 	set("str", 22);
@@ -23,11 +23,11 @@ void create()
 	set("kar", 25);
 
 	set("long",
-		"��ϧ���Ǹ��������൱˹�ĵ������ˣ�������ʱ�����Щ�Ĳ����ɵ�\n"
-		"���ӣ�ѩͤ��ľ���԰�ϧ�Ƕ������е�����Ī��ĸо���Ϊʲô��\n"
-		"����������Ϊһ�Ҵ�Ǯׯ���ϰ壬������һ��ϡ��Źֵ��书����\n"
-		"�Ұ�ϧ���ƺ������񵭣�������Щ���ߵķ�ǣ�ֻҪ���˲�ȥ������\n"
-		"��Ҳ������ȥ�������ˡ�\n");
+		"安惜迩是个看起来相当斯文的年轻人，不过有时候会有些心不在焉的\n"
+		"样子，雪亭镇的居民对安惜迩都觉得有点神秘莫测的感觉，为什么他\n"
+		"年纪轻轻就身为一家大钱庄的老板，还有他一身稀奇古怪的武功，所\n"
+		"幸安惜迩似乎天性恬淡，甚至有些隐者的风骨，只要旁人不去惹他，\n"
+		"他也绝不会去招惹旁人。\n");
 
 	set("combat_exp", 200000);
 	set("attitude", "friendly");
@@ -46,10 +46,10 @@ void create()
 
 	set("chat_chance_combat", 40);
 	set("chat_msg_combat", ({
-		CYN "��ϧ����Ц��Ц�������㣬���ϵ����������Ź֣���֪������Щʲô��\n" NOR,
-		CYN "��ϧ�ǵ���Ӱ����һ�£��ƺ��������ϸ�����Ѩ����һ�£�����Ҳ������Ĵ�����\n" NOR,
-		CYN "��ϧ�������Ȼ���������������������������Լ����£������޹ء�\n" NOR,
-		CYN "��ϧ�Ǻ�Ȼ�ǺǺǵ�Ц��������ȴ��֪����ЦЩʲô....\n" NOR,
+		CYN "安惜迩似笑非笑地望著你，脸上的神气古理古怪，不知道在想些什么？\n" NOR,
+		CYN "安惜迩的身影晃了一下，似乎在你身上各处大穴摸了一下，不过也许是你的错觉。\n" NOR,
+		CYN "安惜迩神情忽然严肃了起来，不过好像是在想自己的事，与你无关。\n" NOR,
+		CYN "安惜迩忽然呵呵呵地笑了起来，却不知道在笑些什么....\n" NOR,
 		(: perform_action, "sword.counterattack" :),
 		(: cast_spell, "drainerbolt" :),
 		(: cast_spell, "feeblebolt" :),
@@ -86,7 +86,7 @@ void create()
 
 int accept_fight(object me)
 {
-	command("say ��... Ҫ������ɣ����ǽ�����û��˼��");
+	command("say 咦... 要打就真打吧，光是较量多没意思？");
 	command("grin");
 	kill_ob(me);
 	return 1;

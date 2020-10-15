@@ -4,13 +4,13 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "µ¤Â¯");
+	set("short", "ä¸¹ç‚‰");
 	set("long", @LONG
-À×öª²»¶Ï»÷ÏòÒ»Á£Á£ÏÉµ¤,ÏÉµ¤ÂýÂýÓÉºÚ×ªÎªºìÉ«.Äã×¢Òâµ½Â¯ÃÅºÃÏó¿ª×Å.
+é›·éœ†ä¸æ–­å‡»å‘ä¸€ç²’ç²’ä»™ä¸¹,ä»™ä¸¹æ…¢æ…¢ç”±é»‘è½¬ä¸ºçº¢è‰².ä½ æ³¨æ„åˆ°ç‚‰é—¨å¥½è±¡å¼€ç€.
 LONG
 	);
          
-        tell_room("/d/suburb/es/choyin/tongbhill","É½¶´ÖÐÅç³öÒ»¹ÉÁÒÑæ, ¿¾µÃÄã¾õµÃ×Ô¼ºÏó¸öÏÄÍþÒÄ¿¾ÈéÖí......\n"); 
+        tell_room("/d/suburb/es/choyin/tongbhill","å±±æ´žä¸­å–·å‡ºä¸€è‚¡çƒˆç„°, çƒ¤å¾—ä½ è§‰å¾—è‡ªå·±è±¡ä¸ªå¤å¨å¤·çƒ¤ä¹³çŒª......\n"); 
         set("exits",(["out":__DIR__"tongbhill",])); 
         set("no-magic",1);
         set("objects", ([

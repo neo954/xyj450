@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // give.c
@@ -17,16 +17,16 @@ int main(object me, string arg)
    mixed no_give;
 
     if(this_player()->is_busy())
-      return notify_fail("ÄãÕıÃ¦×ÅÄØ£®£®£®\n");
+      return notify_fail("ä½ æ­£å¿™ç€å‘¢ï¼ï¼ï¼\n");
            
-   if(!arg) return notify_fail("ÄãÒª¸øË­Ê²Ã´¶«Î÷£¿\n");
+   if(!arg) return notify_fail("ä½ è¦ç»™è°ä»€ä¹ˆä¸œè¥¿ï¼Ÿ\n");
 
    if( sscanf(arg, "%s to %s", item, target)==2
    || sscanf(arg, "%s %s", target, item)==2 );
-   else return notify_fail("ÄãÒª¸øË­Ê²Ã´¶«Î÷£¿\n");
+   else return notify_fail("ä½ è¦ç»™è°ä»€ä¹ˆä¸œè¥¿ï¼Ÿ\n");
 
    if(!objectp(who = present(target, environment(me))) || !living(who))
-     return notify_fail("ÕâÀïÃ»ÓĞÕâ¸öÈË¡£\n");
+     return notify_fail("è¿™é‡Œæ²¡æœ‰è¿™ä¸ªäººã€‚\n");
 
    if( me == who )  {
      write("Ok.\n");
@@ -36,15 +36,15 @@ int main(object me, string arg)
 
    if(sscanf(item, "%d %s", amount, item)==2) {
      if( !objectp(obj = present(item, me)) )   
-        return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+        return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿ã€‚\n");
      if( no_give=obj->query("no_give") )
-        return notify_fail( stringp(no_give) ? no_give : "ÕâÑù¶«Î÷²»ÄÜËæÒâ¶ªÆú¡£\n");
+        return notify_fail( stringp(no_give) ? no_give : "è¿™æ ·ä¸œè¥¿ä¸èƒ½éšæ„ä¸¢å¼ƒã€‚\n");
      if( !obj->query_amount() )   
-        return notify_fail( obj->name() + "²»ÄÜ±»·Ö¿ª¸øÈË¡£\n");
+        return notify_fail( obj->name() + "ä¸èƒ½è¢«åˆ†å¼€ç»™äººã€‚\n");
      if( amount < 1 )
-        return notify_fail("¶«Î÷µÄÊıÁ¿ÖÁÉÙÊÇÒ»¸ö¡£\n");
+        return notify_fail("ä¸œè¥¿çš„æ•°é‡è‡³å°‘æ˜¯ä¸€ä¸ªã€‚\n");
      if( amount > obj->query_amount() ) 
-        return notify_fail("ÄãÃ»ÓĞÄÇÃ´¶àµÄ" + obj->name() + "¡£\n");
+        return notify_fail("ä½ æ²¡æœ‰é‚£ä¹ˆå¤šçš„" + obj->name() + "ã€‚\n");
      else if( amount == (int)obj->query_amount() )
         return do_give(me, obj, who);
      else {
@@ -71,9 +71,9 @@ int main(object me, string arg)
    }
 
    if(!objectp(obj = present(item, me)))
-     return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+     return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿ã€‚\n");
    if( no_give=obj->query("no_give") )
-     return notify_fail( stringp(no_give) ? no_give : "ÕâÑù¶«Î÷²»ÄÜËæÒâ¶ªÆú¡£\n");
+     return notify_fail( stringp(no_give) ? no_give : "è¿™æ ·ä¸œè¥¿ä¸èƒ½éšæ„ä¸¢å¼ƒã€‚\n");
    return do_give(me, obj, who);
 }
 
@@ -83,37 +83,37 @@ int do_give(object me, object obj, object who)
    object   *inv;
    mixed no_give;
     if(me->is_busy())
-      return notify_fail("ÄãÕıÃ¦×ÅÄØ£®£®£®\n");
+      return notify_fail("ä½ æ­£å¿™ç€å‘¢ï¼ï¼ï¼\n");
     
     if(who->is_busy())
-      return notify_fail("¶Ô·½ÕıÃ¦×ÅÄØ£¬Ã»Ê±¼äÀíÄã£®£®£®\n");
+      return notify_fail("å¯¹æ–¹æ­£å¿™ç€å‘¢ï¼Œæ²¡æ—¶é—´ç†ä½ ï¼ï¼ï¼\n");
 // no_accept should be in do_give Bula    
     if(who->query("env/no_accept"))
-           return notify_fail("¶Ô·½ºÃÏó²»Ô¸ÒâÊÕÏÂÄãµÄ¶«Î÷¡£\n");
+           return notify_fail("å¯¹æ–¹å¥½è±¡ä¸æ„¿æ„æ”¶ä¸‹ä½ çš„ä¸œè¥¿ã€‚\n");
 
    if(no_give=obj->query("no_give") )
-     return notify_fail( stringp(no_give) ? no_give : "ÕâÑù¶«Î÷²»ÄÜËæÒâ¶ªÆú¡£\n");
+     return notify_fail( stringp(no_give) ? no_give : "è¿™æ ·ä¸œè¥¿ä¸èƒ½éšæ„ä¸¢å¼ƒã€‚\n");
 /*
    inv = all_inventory(who);
    if( sizeof(inv) > 30 )
-      return notify_fail("¶Ô·½ÉíÉÏÔÙÒ²×°²»ÏÂÈÎºÎ¶«Î÷ÁË¡£\n");
+      return notify_fail("å¯¹æ–¹èº«ä¸Šå†ä¹Ÿè£…ä¸ä¸‹ä»»ä½•ä¸œè¥¿äº†ã€‚\n");
 */
         // snowcat jan 23 1998
         if( !interactive(who)) {
                 if (QUEST->quest_give (me, who, obj)) {
-        message_vision("$N¸ø$nÒ»"+obj->query("unit")+obj->name()+"¡£\n",me,who);
-        message_vision("$NÓÉÖÔµØÏò$nµÀĞ»¡£\n",who,me);
+        message_vision("$Nç»™$nä¸€"+obj->query("unit")+obj->name()+"ã€‚\n",me,who);
+        message_vision("$Nç”±è¡·åœ°å‘$né“è°¢ã€‚\n",who,me);
         destruct(obj);
         return 1;
               } 
      if( !(is_accept=who->accept_object(me, obj)) )
-        return notify_fail("¶Ô·½²»ÒªÄãµÄ¶«Î÷¡£\n");
+        return notify_fail("å¯¹æ–¹ä¸è¦ä½ çš„ä¸œè¥¿ã€‚\n");
      if( is_accept == 2 )
         return 1;
    }
 
    if( !userp(who) && obj->value() ) { // give money to npc
-     message_vision("$NÄÃ³ö" + obj->short() + "¸ø$n¡£\n", me, who);
+     message_vision("$Næ‹¿å‡º" + obj->short() + "ç»™$nã€‚\n", me, who);
      destruct(obj);
      return 2;
    } else if( obj->move(who) ) {
@@ -122,12 +122,12 @@ int do_give(object me, object obj, object who)
        unit=obj->query_temp("unit");
                 else
        unit=obj->query("unit");
-                if(strlen(unit)<2) unit="¸ö";
-     printf("Äã¸ø%sÒ»%s%s¡£\n", who->name(), unit,
+                if(strlen(unit)<2) unit="ä¸ª";
+     printf("ä½ ç»™%sä¸€%s%sã€‚\n", who->name(), unit,
         obj->name());
-     message("vision", sprintf("%s¸øÄãÒ»%s%s¡£\n", me->name(),
+     message("vision", sprintf("%sç»™ä½ ä¸€%s%sã€‚\n", me->name(),
         unit, obj->name()), who );
-     message("vision", sprintf("%s¸ø%sÒ»%s%s¡£\n", me->name(), who->name(),
+     message("vision", sprintf("%sç»™%sä¸€%s%sã€‚\n", me->name(), who->name(),
         unit, obj->name()), environment(me), ({me, who}) );
      if(!userp(who) && !userp(obj)) destruct(obj); // mon 4/25/98
      return 2;
@@ -137,13 +137,13 @@ int do_give(object me, object obj, object who)
 int help(object me)
 {
 write(@HELP
-Ö¸Áî¸ñÊ½ : give <ÎïÆ·Ãû³Æ> to <Ä³ÈË>
-      »ò : give <Ä³ÈË> <ÎïÆ·Ãû³Æ>
+æŒ‡ä»¤æ ¼å¼ : give <ç‰©å“åç§°> to <æŸäºº>
+      æˆ– : give <æŸäºº> <ç‰©å“åç§°>
  
-Õâ¸öÖ¸Áî¿ÉÒÔÈÃÄã½«Ä³ÑùÎïÆ·¸ø±ğÈË, µ±È», Ê×ÏÈÄãÒªÓµÓĞÕâÑùÎïÆ·.
+è¿™ä¸ªæŒ‡ä»¤å¯ä»¥è®©ä½ å°†æŸæ ·ç‰©å“ç»™åˆ«äºº, å½“ç„¶, é¦–å…ˆä½ è¦æ‹¥æœ‰è¿™æ ·ç‰©å“.
 
-²»½ÓÊÜÊ± : set no_accept <ÈÎÒâÖµ>
-ÖØĞÂ½ÓÊÜ : unset no_accept
+ä¸æ¥å—æ—¶ : set no_accept <ä»»æ„å€¼>
+é‡æ–°æ¥å— : unset no_accept
 HELP
     );
     return 1;

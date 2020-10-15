@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // fabao.c
@@ -13,7 +13,7 @@ inherit F_BACKUP;
 void create()
 {
    seteuid(0);   
-   set_name("×ÔÖÆ·¨±¦Îï¼ş", ({ "fabao object", "fabao", "object" }) );
+   set_name("è‡ªåˆ¶æ³•å®ç‰©ä»¶", ({ "fabao object", "fabao", "object" }) );
    setup();
 }
 
@@ -41,7 +41,7 @@ string query_save_file()
 int save()
 {
    if( query("equipped") )   {
-     write("±ØĞë·ÅÏÂ·¨±¦²ÅÄÜ´¢´æ¡£\n");
+     write("å¿…é¡»æ”¾ä¸‹æ³•å®æ‰èƒ½å‚¨å­˜ã€‚\n");
      return 0;
    }
    return ::save();

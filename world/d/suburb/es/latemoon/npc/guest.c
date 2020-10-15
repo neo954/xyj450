@@ -3,8 +3,8 @@ inherit NPC;
  
 void create()
 {
-        set_name("Ü½ÔÆ", ({ "fuyun" }) );
-        set("gender", "Å®ÐÔ" );
+        set_name("èŠ™äº‘", ({ "fuyun" }) );
+        set("gender", "å¥³æ€§" );
         set("age",17);
         set("long", @TEXT
 TEXT

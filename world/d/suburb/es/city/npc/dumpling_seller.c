@@ -5,22 +5,22 @@ inherit F_VENDOR;
 
 void create()
 {
-	set_name("Âô°ü×ÓµÄ", ({ "dumpling seller", "seller" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("å–åŒ…å­çš„", ({ "dumpling seller", "seller" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 33);
-	set("long", "Õâ¸öÂô°ü×ÓµÄĞ¡··¶ÔÄãÎ¢Î¢Ò»Ğ¦£¬ËµµÀ£ºÈÈÌÚÌÚµÄ°ü×Ó£¬À´Ò»Áı°É£¿\n");
+	set("long", "è¿™ä¸ªå–åŒ…å­çš„å°è´©å¯¹ä½ å¾®å¾®ä¸€ç¬‘ï¼Œè¯´é“ï¼šçƒ­è…¾è…¾çš„åŒ…å­ï¼Œæ¥ä¸€ç¬¼å§ï¼Ÿ\n");
 	set("combat_exp", 30);
 	set("attitude", "friendly");
 	set("vendor_goods", ([
 	//	"obj/example/dumpling" : -1,
-	        "°ü×Ó": "obj/example/dumpling",
+	        "åŒ…å­": "obj/example/dumpling",
            ]) );
 	set("chat_chance", 15);
 	set("chat_msg", ({
-		"Âô°ü×ÓµÄßººÈµÀ£º°ü×Ó£¡ÈÈÌÚÌÚµÄ°ü×Ó£¡\n",
+		"å–åŒ…å­çš„å†å–é“ï¼šåŒ…å­ï¼çƒ­è…¾è…¾çš„åŒ…å­ï¼\n",
 	}) );
 	set("inquiry", ([
-		"°ü×Ó" : (: do_vendor_list :),
+		"åŒ…å­" : (: do_vendor_list :),
 	]) );
 	setup();
 }

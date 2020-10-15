@@ -5,11 +5,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "»¨Ô°");
+        set("short", "èŠ±å›­");
         set("long",@LONG
-ÉÐÊé¸®µÄ»¨Ô°ÀïËÑ¼¯ÁËÐí¶àÃû¹ó»¨»Ü¡£´ÓÂåÑôµÄÄµµ¤µ½ÑïÖÝµÄÇí
-»¨£¬Äã²»ÄÜ²»¾ª²ïÓÚÕâÀïµÄÈ«À´¡£ËÄÊ±µÄ»¨»Ü¾ºÏà¿ª·Å×Å£¬·¢³öÇßÈË
-µÄÏãÎ¶¡£´Ó»¨Ô°¶«ÐÐ¾ÍÊÇÄÚÕ¬£¬¶øÎ÷±ßËÆºõÓÐÒ»¼äÆÆÎÝ¡£
+å°šä¹¦åºœçš„èŠ±å›­é‡Œæœé›†äº†è®¸å¤šåè´µèŠ±å‰ã€‚ä»Žæ´›é˜³çš„ç‰¡ä¸¹åˆ°æ‰¬å·žçš„ç¼
+èŠ±ï¼Œä½ ä¸èƒ½ä¸æƒŠè¯§äºŽè¿™é‡Œçš„å…¨æ¥ã€‚å››æ—¶çš„èŠ±å‰ç«žç›¸å¼€æ”¾ç€ï¼Œå‘å‡ºæ²äºº
+çš„é¦™å‘³ã€‚ä»ŽèŠ±å›­ä¸œè¡Œå°±æ˜¯å†…å®…ï¼Œè€Œè¥¿è¾¹ä¼¼ä¹Žæœ‰ä¸€é—´ç ´å±‹ã€‚
 LONG
         );
 
@@ -23,7 +23,7 @@ LONG
 		__DIR__"npc/gardener":	1,
 		]));
 
-	create_door("east", "Á±×Ó", "west", DOOR_CLOSED);
+	create_door("east", "å¸˜å­", "west", DOOR_CLOSED);
 
 	set("outdoors", "city");
 

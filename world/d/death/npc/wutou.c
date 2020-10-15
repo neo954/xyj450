@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //puti.c
@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-       set_name("ÎŞÍ·¹í", ({"wutou gui", "gui"}));
-       set("gender", "ÄĞĞÔ");
-   set("long", "Ò»¸öÃ»ÓĞÍ·£¬Ö»ÓĞÉí×ÓµÄÒ°¹í£®\n");
+       set_name("æ— å¤´é¬¼", ({"wutou gui", "gui"}));
+       set("gender", "ç”·æ€§");
+   set("long", "ä¸€ä¸ªæ²¡æœ‰å¤´ï¼Œåªæœ‰èº«å­çš„é‡é¬¼ï¼\n");
        set("attitude", "friendly");
        set("shen_type", 1);
        set("per", 10);

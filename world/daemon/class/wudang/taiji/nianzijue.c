@@ -8,18 +8,18 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("£ÛÕ³×Ö¾÷£İÖ»ÄÜ¶ÔÕ½¶·ÖĞµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("ï¼»ç²˜å­—è¯€ï¼½åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 
 	if( target->is_busy() )
-		return notify_fail(target->name() + "Ä¿Ç°Õı×Ô¹Ë²»Ï¾£¬·Åµ¨¹¥»÷°É£¡\n");
+		return notify_fail(target->name() + "ç›®å‰æ­£è‡ªé¡¾ä¸æš‡ï¼Œæ”¾èƒ†æ”»å‡»å§ï¼\n");
 
-	msg = CYN "$NÊ¹³öÌ«¼«È­·¨ÖĞµÄ¡¸Õ³¡¹×Ö¾÷£¬ÆóÍ¼¼õ»º$nµÄ¹¥ÊÆ£¬";
+	msg = CYN "$Nä½¿å‡ºå¤ªææ‹³æ³•ä¸­çš„ã€Œç²˜ã€å­—è¯€ï¼Œä¼å›¾å‡ç¼“$nçš„æ”»åŠ¿ï¼Œ";
 	me->start_busy(1);
 	if( random(me->query("combat_exp")) > (int)target->query("combat_exp")/2 ) {
-		msg += "½á¹û$p±»$P¹¥ÁË¸ö´ëÊÖ²»¼°£¡\n" NOR;
+		msg += "ç»“æœ$pè¢«$Pæ”»äº†ä¸ªæªæ‰‹ä¸åŠï¼\n" NOR;
 		target->start_busy( (int)me->query_skill("taiji") / 20 + 2);
 	} else {
-		msg += "¿ÉÊÇ$p¿´ÆÆÁË$PµÄÆóÍ¼£¬²¢Ã»ÓĞÉÏµ±¡£\n" NOR;
+		msg += "å¯æ˜¯$pçœ‹ç ´äº†$Pçš„ä¼å›¾ï¼Œå¹¶æ²¡æœ‰ä¸Šå½“ã€‚\n" NOR;
 	}
 	message_vision(msg, me, target);
 

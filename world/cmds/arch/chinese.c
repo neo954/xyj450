@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit F_CLEAN_UP;
@@ -8,7 +8,7 @@ int main(object me, string arg)
    string key, chinz;
 
    if( !arg || arg=="" )
-     return notify_fail("Ö¸Áî¸ñÊ½£ºchinese <Ó¢ÎÄ>==<ÖĞÎÄ>\n");
+     return notify_fail("æŒ‡ä»¤æ ¼å¼ï¼šchinese <è‹±æ–‡>==<ä¸­æ–‡>\n");
 
    if( sscanf(arg, "%s==%s", key, chinz)==2 ) {
      CHINESE_D->add_translate(key, chinz);
@@ -22,7 +22,7 @@ int main(object me, string arg)
 int help()
 {
    write ( @HELP
-Ö¸Áî¸ñÊ½£ºchinese <Ó¢ÎÄ>==<ÖĞÎÄ>
+æŒ‡ä»¤æ ¼å¼ï¼šchinese <è‹±æ–‡>==<ä¸­æ–‡>
 HELP
    );
    return 1 ;

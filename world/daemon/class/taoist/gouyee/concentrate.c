@@ -7,14 +7,14 @@ int exert(object me, object target, int amount)
         int mana_gain;
 
         if( target && target!=me )
-                return notify_fail("¡¸ÁéÉñ¾÷¡¹Ö»ÄÜÓÃÀ´»Ö¸´×Ô¼ºµÄ·¨Á¦¡£\n");
+                return notify_fail("ã€Œçµç¥è¯€ã€åªèƒ½ç”¨æ¥æ¢å¤è‡ªå·±çš„æ³•åŠ›ã€‚\n");
 
         if(amount == -1) amount = 30;
         else if(amount < 30 ) 
-                return notify_fail("×îÉÙÓÃÈıÊ®ÄÚÁ¦¡£\n");
+                return notify_fail("æœ€å°‘ç”¨ä¸‰åå†…åŠ›ã€‚\n");
 
         if( (int)me->query("force") < amount )
-                return notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
+                return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
 
         
         mana_gain =  (10 + (int)me->query_skill("force")/5)*amount/30;
@@ -26,8 +26,8 @@ int exert(object me, object target, int amount)
         me->receive_damage("sen", 10);
 
         message_vision(
-                HIY "$N±ÕÄ¿ÄıÉñ£¬ÓÃ¹ÈÒÂĞÄ·¨µÄÄÚÁ¦ÔË×ªÁËÒ»´Î¡¸ÁéÉñ¾÷¡¹...\n"
-                "Ò»¹ÉÇàÆø´Ó$NÉíÉÏÉ¢³ö£¬»ã¾ÛÔÚ$PµÄ¶¥ĞÄ£¬È»áá»º»ºµ­È¥¡£\n" NOR, 
+                HIY "$Né—­ç›®å‡ç¥ï¼Œç”¨è°·è¡£å¿ƒæ³•çš„å†…åŠ›è¿è½¬äº†ä¸€æ¬¡ã€Œçµç¥è¯€ã€...\n"
+                "ä¸€è‚¡é’æ°”ä»$Nèº«ä¸Šæ•£å‡ºï¼Œæ±‡èšåœ¨$Pçš„é¡¶å¿ƒï¼Œç„¶å¾Œç¼“ç¼“æ·¡å»ã€‚\n" NOR, 
 me);
 
         if( me->is_fighting() ) me->start_busy(1);

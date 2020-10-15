@@ -1,11 +1,11 @@
 inherit ROOM;
 void create()
 {
-        set("short", "·çÔÆ¶«³ÇÃÅ");
+        set("short", "é£Žäº‘ä¸œåŸŽé—¨");
         set("long", @LONG
-·çÔÆ¶«ÃÅ¸ßÈýÕÉ£¬¿íÔ¼¶þÕÉÓÐÓà£¬³ßÐíºñµÄ³ÇÃÅÉÏÏâÂúÁËÈ­Í·°ã´óÐ¡µÄÁø¶¤¡£
-ÃÅ¶´³¤Ô¼ËÄÕÉ£¬´óÔ¼Ã¿¸ôÁ½¸öÊ±³½¾Í»»¹Ù±ø°ÑÊØ¡£¶´²àÌûÂúÁËÐüÉÍ×½ÄÃÖ®ÀàµÄ¹Ù
-¸®Í¨µý¡£ÃÅ¶´Î÷²àÔòÊÇÒ»ÌõÉÏ³ÇÇ½µÄÕ­ÌÝ¡£
+é£Žäº‘ä¸œé—¨é«˜ä¸‰ä¸ˆï¼Œå®½çº¦äºŒä¸ˆæœ‰ä½™ï¼Œå°ºè®¸åŽšçš„åŸŽé—¨ä¸Šé•¶æ»¡äº†æ‹³å¤´èˆ¬å¤§å°çš„æŸ³é’‰ã€‚
+é—¨æ´žé•¿çº¦å››ä¸ˆï¼Œå¤§çº¦æ¯éš”ä¸¤ä¸ªæ—¶è¾°å°±æ¢å®˜å…µæŠŠå®ˆã€‚æ´žä¾§å¸–æ»¡äº†æ‚¬èµæ‰æ‹¿ä¹‹ç±»çš„å®˜
+åºœé€šè°ã€‚é—¨æ´žè¥¿ä¾§åˆ™æ˜¯ä¸€æ¡ä¸ŠåŸŽå¢™çš„çª„æ¢¯ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -33,7 +33,7 @@ int valid_leave(object me, string dir)
 		for(i=0; i<sizeof(inv); i++)
 		{
 			if((int)(inv[i]->query("weapon_prop")) && (int)(inv[i]->query("equipped")))
-			return notify_fail(ob->name()+"ÏòÄãºÈµÀ£º²»¿ÉÊÖ³Ö±øÆ÷Èë·çÔÆ³Ç£¡\n");	
+			return notify_fail(ob->name()+"å‘ä½ å–é“ï¼šä¸å¯æ‰‹æŒå…µå™¨å…¥é£Žäº‘åŸŽï¼\n");	
 			
 		}
 	}
@@ -42,13 +42,13 @@ int valid_leave(object me, string dir)
                 inv = all_inventory(me);
                 for(i=0; i<sizeof(inv); i++)
                 {
-                        if((string)inv[i]->name() == "·çÔÆÕ½¼×" && (int)inv[i]->query("equipped"))
+                        if((string)inv[i]->name() == "é£Žäº‘æˆ˜ç”²" && (int)inv[i]->query("equipped"))
                         {
 			return 1;
                         }
 
                 }
-		return notify_fail(ob->name()+"ÏòÄãºÈµÀ£ºÏÐÔÓÈËµÈ²»¿ÉÉÏµÇ»¤³ÇÇ½£¡\n");
+		return notify_fail(ob->name()+"å‘ä½ å–é“ï¼šé—²æ‚äººç­‰ä¸å¯ä¸Šç™»æŠ¤åŸŽå¢™ï¼\n");
         }
 
         return 1;

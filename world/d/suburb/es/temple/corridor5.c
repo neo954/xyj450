@@ -5,11 +5,11 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "»ØÀÈ");
+	set("short", "å›žå»Š");
 	set("long", @LONG
-ÄãÏÖÔÚ×ßÔÚÎ§ÈÆÖøÌì¾®µÄ»ØÀÈÉÏ, »ØÀÈÍù¶«Î÷Á½²àÑÓÉì, ÄÏ±ß¾Í
-ÊÇÌì¾®, ÄãÒ²Ðí¿ÉÒÔ×ß¹ýÈ¥ÉÍÉÍ»¨, É¢É¢ÐÄ¡£ÔÚÄãµÄ±±·½, ×ß¹ýÄÇÉÈ
-ºìÆáÄ¾ÃÅ¾ÍÊÇºóµî, Ò²ÊÇÃ©É½ÅÉ¹©·îÀú´úÕÆÃÅÈËÁéÎ»µÄµØ·½¡£
+ä½ çŽ°åœ¨èµ°åœ¨å›´ç»•è‘—å¤©äº•çš„å›žå»Šä¸Š, å›žå»Šå¾€ä¸œè¥¿ä¸¤ä¾§å»¶ä¼¸, å—è¾¹å°±
+æ˜¯å¤©äº•, ä½ ä¹Ÿè®¸å¯ä»¥èµ°è¿‡åŽ»èµèµèŠ±, æ•£æ•£å¿ƒã€‚åœ¨ä½ çš„åŒ—æ–¹, èµ°è¿‡é‚£æ‰‡
+çº¢æ¼†æœ¨é—¨å°±æ˜¯åŽæ®¿, ä¹Ÿæ˜¯èŒ…å±±æ´¾ä¾›å¥‰åŽ†ä»£æŽŒé—¨äººçµä½çš„åœ°æ–¹ã€‚
 LONG
 	);
      set("item_desc", ([
@@ -22,6 +22,6 @@ LONG
      "north" : __DIR__"temple2",
 ]));
 
-     create_door("north", "ºìÆáÄ¾ÃÅ", "south", DOOR_CLOSED);
+     create_door("north", "çº¢æ¼†æœ¨é—¨", "south", DOOR_CLOSED);
 	setup();
 }

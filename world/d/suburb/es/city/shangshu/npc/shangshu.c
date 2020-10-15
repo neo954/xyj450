@@ -2,16 +2,16 @@ inherit NPC;
 inherit F_MASTER;
 void create()
 {
-        set_name("â××Ó½¨", ({ "yu shangshu","yu" }));
-        set("title","±ø²¿ÉĞÊé");
-        set("gender", "ÄĞĞÔ");
+        set_name("åº¾å­å»º", ({ "yu shangshu","yu" }));
+        set("title","å…µéƒ¨å°šä¹¦");
+        set("gender", "ç”·æ€§");
         set("age", 54);
         set("long",
-                "ËûÊÇµ±½ñ»ÊÉÏÉí±ßµÄºìÈË£¬Óë¹¬ÖĞµÄ¹ØÏµÒ²ºÜÊìÂç£¬ÊÖÖĞÕÆ¹Ü×Å\n"
-		"±øÂí´óÈ¨¡£²»¹ıÄÜÅÀÉÏÕâ¸öÎ»ÖÃ£¬¾ø²»ÊÇ½ö½öÒòÎªÁïĞëÅÄÂíµÄÔµ\n"
-		"¹Ê£¬µ±ÄêÕ½¹¦ºÕºÕ£¬²ÅÓĞ½ñÌìµÄµØÎ»¡£\n"
+                "ä»–æ˜¯å½“ä»Šçš‡ä¸Šèº«è¾¹çš„çº¢äººï¼Œä¸å®«ä¸­çš„å…³ç³»ä¹Ÿå¾ˆç†Ÿç»œï¼Œæ‰‹ä¸­æŒç®¡ç€\n"
+		"å…µé©¬å¤§æƒã€‚ä¸è¿‡èƒ½çˆ¬ä¸Šè¿™ä¸ªä½ç½®ï¼Œç»ä¸æ˜¯ä»…ä»…å› ä¸ºæºœé¡»æ‹é©¬çš„ç¼˜\n"
+		"æ•…ï¼Œå½“å¹´æˆ˜åŠŸèµ«èµ«ï¼Œæ‰æœ‰ä»Šå¤©çš„åœ°ä½ã€‚\n"
 		);
-      create_family("³¯Í¥", 6, "¹ÙÔ±");
+      create_family("æœåº­", 6, "å®˜å‘˜");
 
 
         set("attitude", "peaceful");
@@ -52,13 +52,13 @@ void create()
 void attempt_apprentice(object ob)
  {          
 	command("smile");
-	command("say ºÜºÃ,³¯Í¥ÕıÊÇÓÃÈËÖ®¼¾£¡ª¬" + RANK_D->query_respect(ob) + 
-        "¶à¼ÓÅ¬Á¦ª¬ËûÈÕ±Ø¶¨ÓĞ³É¡£\n");
+	command("say å¾ˆå¥½,æœåº­æ­£æ˜¯ç”¨äººä¹‹å­£ï¼ï¿½" + RANK_D->query_respect(ob) + 
+        "å¤šåŠ åŠªåŠ›ï¿½ä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
 	command("recruit " + ob->query("id") );}
  
 void recruit_apprentice(object ob)
          {
         	if( ::recruit_apprentice(ob) )
         	ob->set("class", "officer");
-              ob->set("title","³¯Í¥µÚÆß´ú¹ÙÔ±");
+              ob->set("title","æœåº­ç¬¬ä¸ƒä»£å®˜å‘˜");
         }

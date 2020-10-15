@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // keeper.c
@@ -8,15 +8,15 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("���ޱ�", ({ "a luoben", "monk", "luoben" }) );
-        set("gender", "����" );
+        set_name("阿罗本", ({ "a luoben", "monk", "luoben" }) );
+        set("gender", "男性" );
         set("age", 54);
    set("str", 25);
    set("per", 25);
-   set("title", "��˹ɮ��");
+   set("title", "波斯僧人");
    set("long",
-   "����һλ��������ľ���ɮ�ˣ�ӥ����Ŀ���뷢�԰ס�\n"
-   "����������ѧ�ʣ������������Ŀ��˼��\n");
+   "这是一位来自西域的景教僧人，鹰鼻深目，须发皆白。\n"
+   "象有满腹的学问，正坐在那里闭目沉思。\n");
         set("combat_exp", 100000);
         set("attitude", "peaceful");
 
@@ -37,8 +37,8 @@ void create()
    set("mana_factor", 10);
 
    set("inquiry", ([
-     "here": "���ƾ�����\n",
-     "name": "���ޱ�\n",
+     "here": "大唐景教寺\n",
+     "name": "阿罗本\n",
    ]) );
 
         setup();
@@ -62,8 +62,8 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !visible(ob) || !present(ob, environment(this_object())) ) return;
-        say( "���ޱ�˵������λ" + RANK_D->query_respect(ob)
-     + "��������������츸�����ɡ�\n");
+        say( "阿罗本说道：这位" + RANK_D->query_respect(ob)
+     + "，用你的真心向天父祈祷吧。\n");
 }
 
 int accept_object(object who, object ob)
@@ -72,7 +72,7 @@ int accept_object(object who, object ob)
 
         val = ob->value();
         if( !val )
-                return notify_fail("���ޱ�������Ʒ�ľ��ס�\n");
+                return notify_fail("阿罗本不收物品的捐献。\n");
    else if( val > 100 )
    {
                 if( (who->query("bellicosity") > 0)
@@ -81,8 +81,8 @@ int accept_object(object who, object ob)
                 if(who->query("bellicosity")<0)
         who->set("bellicosity",0);
         }
-        say( "���ޱ�˵������л��λ" + RANK_D->query_respect(who)
-                + "���츸һ���ᱣ����ġ�\n");
+        say( "阿罗本说道：多谢这位" + RANK_D->query_respect(who)
+                + "，天父一定会保佑你的。\n");
 
         return 1;
 }

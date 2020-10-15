@@ -5,12 +5,12 @@ inherit F_QUEST;
 
 void create()
 {
-	set_name(HIY "¶«ÔÀ´óµÛ" NOR, ({ "master dadi", "master", "dadi" }) );
+	set_name(HIY "ä¸œå²³å¤§å¸" NOR, ({ "master dadi", "master", "dadi" }) );
 
-	set("gender", "ÄÐÐÔ");
+	set("gender", "ç”·æ€§");
 	set("age", 99);
 	set("long",
-"¶«ÔÀ´óµÛ¸ßÁù³ß£¬ÐÍÃ²»îÁé»îÏÖ£¬ÍðÈçÕæÈËÒ»°ã¡£\n");
+"ä¸œå²³å¤§å¸é«˜å…­å°ºï¼Œåž‹è²Œæ´»çµæ´»çŽ°ï¼Œå®›å¦‚çœŸäººä¸€èˆ¬ã€‚\n");
 	set("attitude", "peaceful");
 	set("str", 2600);
 	set("cor", 30);
@@ -34,7 +34,7 @@ void create()
         map_skill("force", "yiqiforce");
         map_skill("unarmed", "yiqiforce");
 	set("no_shown",1);
-	create_family("¶«ÔÀÅÉ", 1, "×æÊ¦");
+	create_family("ä¸œå²³æ´¾", 1, "ç¥–å¸ˆ");
 	setup();
 }
 int accept_fight(object me)
@@ -62,7 +62,7 @@ int do_look(string arg)
 
 if (arg == "master dadi" || arg == "dadi" || arg =="master")
 {
-write("¶«ÔÀ´óµÛ¸ßÁù³ß£¬ÐÍÃ²»îÁé»îÏÖ£¬ÍðÈçÕæÈËÒ»°ã¡£\n");
+write("ä¸œå²³å¤§å¸é«˜å…­å°ºï¼Œåž‹è²Œæ´»çµæ´»çŽ°ï¼Œå®›å¦‚çœŸäººä¸€èˆ¬ã€‚\n");
 return 1;
 }
 return 0;
@@ -74,16 +74,16 @@ void re_rank(object student)
         int exp;
         exp = (int) student->query("combat_exp");
         if( exp <= 320000 ) {
-                student->set("title","µØÏÉ");
+                student->set("title","åœ°ä»™");
                 return ;
         } else if ( exp <= 5187000 ) {
-                student->set("title","ÈËÏÉ");
+                student->set("title","äººä»™");
                 return ;
         } else if ( exp <= 26244000 ) {
-                student->set("title","ÌìÏÉ");
+                student->set("title","å¤©ä»™");
                 return ;
         } else
-                student->set("title","´óÂÞ½ðÏÉ");
+                student->set("title","å¤§ç½—é‡‘ä»™");
                 return ;
 
 }

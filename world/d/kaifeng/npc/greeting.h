@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // snowcat
@@ -18,10 +18,10 @@ void greeting1 (object who)
     object weapon = me->query_temp("weapon");
 
     if (weapon)
-      str = "$N¾ÙÆðÊÖÖÐµÄ"+weapon->query("name")+"Ïò$nÐÐÀñ£º";
+      str = "$Nä¸¾èµ·æ‰‹ä¸­çš„"+weapon->query("name")+"å‘$nè¡Œç¤¼ï¼š";
     else
-      str = "$N¾ÙÊÖÏò$nÐÐÀñ£º";
-    str = str + RANK_D->query_respect(who)+"Î÷ÐÐÈ¡¾­£¬ÍþÃûØ¨¹Å£¡\n";
+      str = "$Nä¸¾æ‰‹å‘$nè¡Œç¤¼ï¼š";
+    str = str + RANK_D->query_respect(who)+"è¥¿è¡Œå–ç»ï¼Œå¨åäº˜å¤ï¼\n";
 
     message_vision (str,me,who);
   }
@@ -39,8 +39,8 @@ void greeting2 (object who)
   if (who->query("quest/reward") > 0)
   {
     string str;
-    str = "$NÏò$nÒ»¹ª£º"+RANK_D->query_respect(who)+
-          "ÏÉÌåÏéÔÆÁýÕÖ£¬ÇëËÙÈ¥°Ý¼ûÎáÍõÌ«×Ú£¡\n";
+    str = "$Nå‘$nä¸€èº¬ï¼š"+RANK_D->query_respect(who)+
+          "ä»™ä½“ç¥¥äº‘ç¬¼ç½©ï¼Œè¯·é€ŸåŽ»æ‹œè§å¾çŽ‹å¤ªå®—ï¼\n";
     message_vision (str,me,who);
   }
 }

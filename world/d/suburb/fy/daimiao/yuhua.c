@@ -3,10 +3,10 @@
 inherit ROOM;
 void create()
 {
-  set("short","�껨��Ժ");
+  set("short","雨花道院");
   set("long",@LONG
-����Ϊ��ʿ��Ϣ����ʳ�������Ĵ����������徻���м���ʯ����
-���ӣ��ڷ���һЩ�򵥵�ʳƷ�����ϡ�
+这是为道士休息，饮食，打坐的处所，俭朴清净，有几个石砌的
+桌子，摆放着一些简单的食品，饮料。
 LONG
   );
   set("exits",([

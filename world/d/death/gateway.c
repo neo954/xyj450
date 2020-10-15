@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // Room: /d/death/gateway.c
@@ -7,12 +7,12 @@ inherit ROOM;
 
 void create ()
 {
-  set ("short", "ۺ������");
+  set ("short", "酆都城门");
   set ("long", @LONG
 
-����������һ����ɫ��¥֮ǰ����¥�Ͽ����������֣�ۺ���ǡ���
-���߽���¥ֻ��һƬ������ģ�ֻ����������ɫ�Ļ���������ֵ�
-��˸�š�
+你现在来到一座黑色城楼之前，城楼上刻着三个大字：酆都城。往
+北走进城楼只见一片黑漆漆的，只有少许暗红色的火光若隐若现地
+闪烁着。
 LONG);
 
   set("exits", ([ /* sizeof() == 2 */
@@ -33,9 +33,9 @@ int valid_leave(object me, string dir)
    if( wizardp(me)) return 1;
 
    if (dir == "north") {
-     if((string)me->query("family/family_name")!="���޵ظ�") {
+     if((string)me->query("family/family_name")!="阎罗地府") {
         if (objectp(present("black gargoyle", environment(me))))
-          return notify_fail("���޳�����ȵ��������Ҵ���\n");
+          return notify_fail("黑无常对你喝道：不许乱闯！\n");
         if(me->is_ghost()){
           me->reincarnate();
         }

@@ -6,17 +6,17 @@ inherit BLADE;
 
 void create()
 {
-	set_name("¹íÍ·µ¶", ({ "glaive" }) );
+	set_name("é¬¼å¤´åˆ€", ({ "glaive" }) );
 	set_weight(20000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "±ú");
+		set("unit", "æŸ„");
 		set("value", 1500);
 		set("material", "steel");
-		set("long", "ÕâÊÇÒ»°ÑÉòÖØµÄ¹íÍ·µ¶£¬µ¶±úÉÏµñÖø Ò»¸ö³óÂª¿É²ÀµÄ¹íÍ·ÕıÁÑ¿ªÁË×ì´óĞ¦¡£\n");
-		set("wield_msg", "$N³é³öÒ»°Ñ±³ºñÈĞ±¡µÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unequip_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄµ¶ÇÊ¡£\n");
+		set("long", "è¿™æ˜¯ä¸€æŠŠæ²ˆé‡çš„é¬¼å¤´åˆ€ï¼Œåˆ€æŸ„ä¸Šé›•è‘— ä¸€ä¸ªä¸‘é™‹å¯æ€–çš„é¬¼å¤´æ­£è£‚å¼€äº†å˜´å¤§ç¬‘ã€‚\n");
+		set("wield_msg", "$NæŠ½å‡ºä¸€æŠŠèƒŒåšåˆƒè–„çš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„åˆ€é˜ã€‚\n");
 	}
 	init_blade(45);
 	setup();

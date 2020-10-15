@@ -3,21 +3,21 @@
 inherit HEAD;
 void create()
 {
-        set_name( "Òøô¢" , ({ "clasp" }) );
+        set_name( "é“¶ç°ª" , ({ "clasp" }) );
         set_weight(100);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ö§");
+                set("unit", "æ”¯");
                 set("value", 800);
                 set("material", "silver");
 
                 set("armor_prop/armor", 1);
                 set("armor_prop/personality", 2);
                 set("female_only", 1);
-                set("wear_msg", "$NÏ¸ĞÄµØ½«Ò»Ö§$n²åÔÚ·¢÷ÙÉÏ¡£\n");
+                set("wear_msg", "$Nç»†å¿ƒåœ°å°†ä¸€æ”¯$næ’åœ¨å‘é«»ä¸Šã€‚\n");
 
-                set("wield_msg", "$N½«$nÎÕÔÚÊÖÖĞ£¬µ±³ÉÒ»°ÑØ°Ê×¡£\n");
+                set("wield_msg", "$Nå°†$næ¡åœ¨æ‰‹ä¸­ï¼Œå½“æˆä¸€æŠŠåŒ•é¦–ã€‚\n");
         }
         setup();
 }

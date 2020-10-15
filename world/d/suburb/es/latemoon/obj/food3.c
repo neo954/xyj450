@@ -3,13 +3,13 @@ inherit F_FOOD;
 
 void create()
 {
-    set_name("Ë®½È", ({ "boiled dumplings","food" }));
+    set_name("æ°´é¥º", ({ "boiled dumplings","food" }));
     set_weight(100);
     if( clonep() )
             set_default_object(__FILE__);
     else {
-          set("long", "ÕâÊÇÒ»¸öÊÖ¹¤Ï¸ÄåµÄË®½È£¬¿´ÆğÀ´ºÜºÃ³Ô¡£\n");
-          set("unit", "¸ö");
+          set("long", "è¿™æ˜¯ä¸€ä¸ªæ‰‹å·¥ç»†è…»çš„æ°´é¥ºï¼Œçœ‹èµ·æ¥å¾ˆå¥½åƒã€‚\n");
+          set("unit", "ä¸ª");
           set("value", 50);
           set("food_remaining", 2);
           set("food_supply", 30);

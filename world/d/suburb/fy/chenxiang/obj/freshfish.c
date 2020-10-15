@@ -5,11 +5,11 @@
 inherit ITEM;
 void create()
 {
-    set_name( "ÏÊÓã", ({ "freshfish","fish"  }) );
-    set("unit", "Ìõ");
+    set_name( "é²œé±¼", ({ "freshfish","fish"  }) );
+    set("unit", "æ¡");
     set("value",8);
     set("long","
-Ò»ÌõÉÏºÃµÄÏÊÓã
+ä¸€æ¡ä¸Šå¥½çš„é²œé±¼
 \n");
     set_weight(5);
 }

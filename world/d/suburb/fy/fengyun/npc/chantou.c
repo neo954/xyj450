@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("âã»ÚÍ½", ({ "chantu", "tu" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("å¿æ‚”å¾’", ({ "chantu", "tu" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 19);
-	set("title","ÀáÁ÷ÂúÃæ");
-        set("long", "Ò»¸öÀáÁ÷ÂúÃæµÄâã»ÚÍ½\n");
+	set("title","æ³ªæµæ»¡é¢");
+        set("long", "ä¸€ä¸ªæ³ªæµæ»¡é¢çš„å¿æ‚”å¾’\n");
         set("combat_exp", 700);
         set("attitude", "friendly");
         set_skill("unarmed", 10);

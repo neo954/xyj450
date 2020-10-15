@@ -5,9 +5,9 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "Ȫ�ݱ���");
+	set("short", "泉州北门");
 	set("long", @LONG
-�������Ϸ���һ��Ȫ�ݵı��š��������򱱿ɵ���ԭ��
+这里是南方第一港泉州的北门。出此门向北可抵中原。
 LONG
 	);
 

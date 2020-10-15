@@ -7,18 +7,18 @@ int exert(object me, object target, int amount)
         int skill;
 
         if( target != me ) return 
-notify_fail("你只能提升自己的定力。\n");
+notify_fail("浣犲彧鑳芥彁鍗囪嚜宸辩殑瀹氬姏銆俓n");
 
         if( (int)me->query("force") < 100 )     return 
-	notify_fail("你的内力不够。\n");
+	notify_fail("浣犵殑鍐呭姏涓嶅銆俓n");
         if( (int)me->query_temp("calm") ) return 
-	notify_fail("你已经在运功中了。\n");
+	notify_fail("浣犲凡缁忓湪杩愬姛涓簡銆俓n");
         skill = me->query_skill("jingxing");
-	if(skill < 10) return notify_fail("你的静行心法太差了！\n");
+	if(skill < 10) return notify_fail("浣犵殑闈欒蹇冩硶澶樊浜嗭紒\n");
         me->add("force", -100);
         message_vision(
                 HIR 
-"$N深深地呼出一口气，整个人处于心神和一的境界．．．\n" NOR, me);
+"$N娣辨繁鍦板懠鍑轰竴鍙ｆ皵锛屾暣涓汉澶勪簬蹇冪鍜屼竴鐨勫鐣岋紟锛庯紟\n" NOR, me);
         me->add_temp("apply/composure", skill/10);
         me->set_temp("calm", 1);
 
@@ -34,6 +34,6 @@ void remove_effect(object me, int amount)
 {
         me->add_temp("apply/composure", - amount);
         me->delete_temp("calm");
-        tell_object(me, "你的静行心法运行完毕，将内力收回丹田。\n");
+        tell_object(me, "浣犵殑闈欒蹇冩硶杩愯瀹屾瘯锛屽皢鍐呭姏鏀跺洖涓圭敯銆俓n");
 }
  

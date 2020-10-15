@@ -6,12 +6,12 @@ inherit ARMOR;
 
 void create()
 {
-	set_name("Ë®ÑÌ¸óÎäÊ¿ë©", ({ "guard suit", "suit" }) );
+	set_name("æ°´çƒŸé˜æ­¦å£«æ°…", ({ "guard suit", "suit" }) );
 	set_weight(7000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¼ş");
+		set("unit", "ä»¶");
 		set("value", 1400);
 		set("armor_prop/armor", 10);
 	}

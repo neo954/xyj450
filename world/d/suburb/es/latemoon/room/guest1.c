@@ -3,11 +3,11 @@ inherit ROOM;
 
 void create()
 {
-     set("short", "�ͷ�");
+     set("short", "客房");
 	set("long", @LONG
-����һ��ͷ������߰���һ��С�輸������Ĳʻ�ƿ�в���һ��
-�������輸�����ŵ����Ρ�������������ľ���Ϊ����ׯ���������
-��һ���᷿��
+这是一间客房，两边摆了一对小茶几。上面的彩绘瓶中插了一束
+琼花，茶几旁两张雕漆椅。整个房间简朴幽静，为晚月庄供外客留宿
+的一间厢房。
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */

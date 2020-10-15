@@ -9,19 +9,19 @@ int curse(object me, object target)
 	if( !target ) target = offensive_target(me);
 
         if((int)me->query_skill("cursism") < 30 )
-                return notify_fail("ÄãµÄ½µÍ·Êõ²»¹»¸ß£¡\n");
+                return notify_fail("ä½ çš„é™å¤´æœ¯ä¸å¤Ÿé«˜ï¼\n");
 
 	if( !target
 	||	!target->is_character()
 	||	target->is_corpse()
 	||	target==me)
-		return notify_fail("ÄãÒª¶ÔË­Ê©Õ¹Õâ¸ö½µÍ·£¿\n");
+		return notify_fail("ä½ è¦å¯¹è°æ–½å±•è¿™ä¸ªé™å¤´ï¼Ÿ\n");
 
 	if((int)me->query("kee") < 25 )
-		return notify_fail("ÄãµÄÆøÑª²»¹»£¡\n");
+		return notify_fail("ä½ çš„æ°”è¡€ä¸å¤Ÿï¼\n");
 
 	me->receive_wound("kee", 25);
-	msg = HIC "$NµÄÑÛÖÐºì¹âÒ»ÉÁ£¬Ò»ÌõÏ¸Èç·¢Ë¿µÄÑªÏßÉäÏò$n£¡\n\n" NOR;
+	msg = HIC "$Nçš„çœ¼ä¸­çº¢å…‰ä¸€é—ªï¼Œä¸€æ¡ç»†å¦‚å‘ä¸çš„è¡€çº¿å°„å‘$nï¼\n\n" NOR;
 
 	ap = me->query_skill("cursism");
 	extradam = ap/2;
@@ -29,7 +29,7 @@ int curse(object me, object target)
 	dp = target->query("combat_exp");
 	if( random(ap + dp) > dp ) {
 		damage = me->query("bellicosity") /50 ;
-			msg +=  HIR "ÑªÏßÎÞÉùÎÞÏ¢µØÉøÈë$pµÄÌåÄÚ£®£®£®\n" NOR;
+			msg +=  HIR "è¡€çº¿æ— å£°æ— æ¯åœ°æ¸—å…¥$pçš„ä½“å†…ï¼Žï¼Žï¼Ž\n" NOR;
        		         message_vision(msg, me, target);
 			target->receive_damage("kee", damage, me);
 			target->receive_wound("kee", damage/3, me);
@@ -37,7 +37,7 @@ int curse(object me, object target)
 
 	} else
 		{
-		msg += "µ«ÊÇ±»$n·¢ÏÖÁË£¡£¡\n";
+		msg += "ä½†æ˜¯è¢«$nå‘çŽ°äº†ï¼ï¼\n";
 	        message_vision(msg, me, target);
 		target->kill_ob(me);
 		me->kill_ob(target);

@@ -8,8 +8,8 @@ void converse_one();
 void create()
 {
         seteuid(getuid());
-        set_name("¸¾ÈË",({"woman"}));
-        set("gender","Å®ĞÔ");
+        set_name("å¦‡äºº",({"woman"}));
+        set("gender","å¥³æ€§");
         set("age",(random(30)+12));
         set("combat_exp",(20+random(40)));
         set_temp("apply/dodge",(10+random(5)));
@@ -27,7 +27,7 @@ void create()
 void wield_weapon()
 {
     if (!query_temp("weapon")) {
-        command("say Ã»¼ûÊ¶¹ıÎÒµÄ²Ëµ¶Éñ¹¦\ÊÇ°É, ½ÓÕĞ!");
+        command("say æ²¡è§è¯†è¿‡æˆ‘çš„èœåˆ€ç¥åŠŸ\æ˜¯å§, æ¥æ‹›!");
         command("wield knife");
         set("chat_chance_combat", 10);
     }
@@ -39,11 +39,11 @@ void converse_one()
     object ob;
     ob = this_player();
     if ((int)ob->query("age") < (int)query("age")) {
-        command("say ËÀĞ¡º¢, ×¨ÃÇÆÛ¸ºÀÏÈË¼Ò!");
+        command("say æ­»å°å­©, ä¸“ä»¬æ¬ºè´Ÿè€äººå®¶!");
         command("slap "+(string)ob->query("id"));
     }
     else
-        command("say ÒÔ´óÆÛĞ¡°¡Äã...");
+        command("say ä»¥å¤§æ¬ºå°å•Šä½ ...");
     return;
 }
 

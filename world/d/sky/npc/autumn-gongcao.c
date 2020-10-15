@@ -1,20 +1,20 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
-// ��ֵ����
+// 秋值功曹
 //created 4-8-97 pickle
 inherit NPC;
  
 void create()
 {
-        set_name("��ֵ����", ({ "rizhi gongcao", "ri", "day",
+        set_name("日值功曹", ({ "rizhi gongcao", "ri", "day",
 "gongcao" }) );
-        set("gender", "����" );
+        set("gender", "男性" );
         set("long","
-��ֵ��������������������ǰ�ͽ������鲻���
-��սʧ��������ΪѲ�߹١�������־ͬ���϶���Ϊ
-�����ֵܡ���ֵ���������������칬ǰ�ڵظ��䵱
-����ʹ�ߣ���������ս����Զ���ϴ���϶�֮�ϡ�\n"
+四值功曹乃是托塔李天王帐前猛将。因经验不足而
+出战失利，被罚为巡逻官。四人因志同道合而结为
+金兰兄弟。日值功曹是老三，入天宫前在地府充当
+勾魂使者，所以他作战经验远在老大和老二之上。\n"
         );
         set("age",35);
         set("str",28);
@@ -48,8 +48,8 @@ void create()
         map_skill("parry","kusang-bang");
    map_skill("stick", "kusang-bang");
         set("inquiry", ([
-                "name" : "���¾�����ֵ���ܣ�������������ǰ�󽫡�",
-                "here" : "��������칬���¹ٷ���������ڴ�Ѳ�顣",
+                "name" : "在下就是日值功曹，乃托塔天王帐前大将。",
+                "here" : "这里就是天宫。下官奉天王将令，在此巡查。",
         ]) );
         setup();
         carry_object("/d/obj/weapon/stick/wuchangbang")->wield();

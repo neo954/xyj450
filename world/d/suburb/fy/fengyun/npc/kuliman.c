@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("¿àÁ¦", ({ "kuliman" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("è‹¦åŠ›", ({ "kuliman" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 42);
-        set("long", "¿àÁ¦ÕıÔÚÎªÏÂ¶Ù·¹¶ø·¸³î. \n");
+        set("long", "è‹¦åŠ›æ­£åœ¨ä¸ºä¸‹é¡¿é¥­è€ŒçŠ¯æ„. \n");
 
         set("combat_exp", 1000);
         set("attitude", "heroism");

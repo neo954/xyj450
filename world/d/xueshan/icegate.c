@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //standroom.c used by weiqi...others may hate this format:D
@@ -8,12 +8,12 @@ inherit ROOM;
 
 void create ()
 {
-   set ("short", "±ù¹¬´óÃÅ");
+   set ("short", "å†°å®«å¤§é—¨");
    set ("long", @LONG
 
-·ÅÑÛÍûÈ¥£¬Õâ×ù±ù¹¬Í¨ÌåÑ©Ã÷£¬µ±ÕæÊÇÎ¡¶ë×³¹Û¡£µ«ÊÇ´Ë¿Ì¹¬ÃÅ
-½ô±Õ£¬Ò»Î»ÉíÅûÒø¼×µÄ×³ºººÍÒ»Î»ÃæÄ¿ÒõÉ­µÄÀÏÕßÕýÉñÇé½ôÕÅµØ
-ÊØÔÚÃÅÇ°¡£
+æ”¾çœ¼æœ›åŽ»ï¼Œè¿™åº§å†°å®«é€šä½“é›ªæ˜Žï¼Œå½“çœŸæ˜¯å·å³¨å£®è§‚ã€‚ä½†æ˜¯æ­¤åˆ»å®«é—¨
+ç´§é—­ï¼Œä¸€ä½èº«æŠ«é“¶ç”²çš„å£®æ±‰å’Œä¸€ä½é¢ç›®é˜´æ£®çš„è€è€…æ­£ç¥žæƒ…ç´§å¼ åœ°
+å®ˆåœ¨é—¨å‰ã€‚
 LONG);
 
    //set("item_desc", ([" *** " : " *** \n", ]));

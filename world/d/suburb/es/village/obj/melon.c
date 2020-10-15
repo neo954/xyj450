@@ -6,13 +6,13 @@ inherit F_FOOD;
 
 void create()
 {
-	set_name("Î÷¹Ï", ({ "water melon", "melon" }) );
+	set_name("è¥¿ç“œ", ({ "water melon", "melon" }) );
 	set_weight(1200);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¸öÂÌÆ¤Ä«ÎÆµÄ´óÎ÷¹Ï£¬²»µ«½â¿Ê£¬»¹ÄÜÌî¶Ç×Ó¡£\n");
-		set("unit", "¸ö");
+		set("long", "ä¸€ä¸ªç»¿çš®å¢¨çº¹çš„å¤§è¥¿ç“œï¼Œä¸ä½†è§£æ¸´ï¼Œè¿˜èƒ½å¡«è‚šå­ã€‚\n");
+		set("unit", "ä¸ª");
 		set("value", 60);
 		set("drink_func",1);
 		set("food_remaining", 8);
@@ -25,15 +25,15 @@ void create()
 	// in each cloned copy.
 	set("liquid", ([
 		"type": "water",
-		"name": "Î÷¹ÏÖ­",
+		"name": "è¥¿ç“œæ±",
 		"remaining": 15,
 	]) );
 }
 
 int finish_eat()
 {
-	set_name("Î÷¹ÏÆ¤", ({ "bone" }) );
+	set_name("è¥¿ç“œçš®", ({ "bone" }) );
 	set_weight(150);
-	set("long", "Ò»¿é¿ĞµÃ¾«¹âµÄÎ÷¹ÏÆ¤¡£\n");
+	set("long", "ä¸€å—å•ƒå¾—ç²¾å…‰çš„è¥¿ç“œçš®ã€‚\n");
 	return 1;
 }

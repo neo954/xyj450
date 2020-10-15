@@ -4,10 +4,10 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "��ʯ��");
+	set("short", "岩石坡");
 	set("long", @LONG
-������һ����ʯб�£�б���ϵ���������ʯ���Ӳݣ����ߵ��ұڱ�
-��һ��ʯ�ݣ���������������Իص�������ʯ��ɽ·��
+这里是一处岩石斜坡，斜坡上到处布满乱石及杂草，东边的岩壁边
+有一间石屋，往西跟往北则可以回到铺满碎石的山路。
 LONG
 	);
 	set("outdoors", "goathill");

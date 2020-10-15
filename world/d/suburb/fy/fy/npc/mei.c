@@ -3,13 +3,13 @@ inherit NPC;
 #include <ansi.h>
 void create()
 {
-        set_name("º®Ã·ÏÈÉú", ({ "mei" }) );
-        set("gender", "ÄÐÐÔ" );
+        set_name("å¯’æ¢…å…ˆç”Ÿ", ({ "mei" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 65);
         set("str", 6);
         set("cor", 24);
         set("cps", 11);
-	set("title", HIG "Ëêº®ÈýÓÑ" NOR);
+	set("title", HIG "å²å¯’ä¸‰å‹" NOR);
         set("per", 27);
         set("int", 27);
         set("intellgent",1);
@@ -26,7 +26,7 @@ void create()
         set("max_mana", 300);
         set("mana", 300);
 
-        set("long",     "Î÷·½Éñ½ÌµÄÈý´ó»¤·¨Ö®Ò»\n");
+        set("long",     "è¥¿æ–¹ç¥žæ•™çš„ä¸‰å¤§æŠ¤æ³•ä¹‹ä¸€\n");
 
 
         set("combat_exp", 999999);
@@ -53,7 +53,7 @@ void init()
 {
         object me;
         me = this_player();
-        if(interactive(me) && me->query("marks/ÀäÈôËª")
+        if(interactive(me) && me->query("marks/å†·è‹¥éœœ")
         && (int) me->query("combat_exp") > 20000) call_out("chase_him", 1,me );
 
 
@@ -61,7 +61,7 @@ void init()
 
 int chase_him(object me)
 {
-        message_vision("$NÏò$nºÈµÀ£º¾¹¸ÒÍµµÁ±¾½ÌµÄÂÞÉ²ÅÆ£¡ÄÃÀ´£¡\n",this_object(),me);
+        message_vision("$Nå‘$nå–é“ï¼šç«Ÿæ•¢å·ç›—æœ¬æ•™çš„ç½—åˆ¹ç‰Œï¼æ‹¿æ¥ï¼\n",this_object(),me);
         set_leader(me);
         kill_ob(me);
         me->kill_ob(this_object());
@@ -70,10 +70,10 @@ int chase_him(object me)
 
 int accept_object(object who, object ob)
 {
-	if( (string)ob->query("name") == "ÂÞÉ²ÅÆ")
+	if( (string)ob->query("name") == "ç½—åˆ¹ç‰Œ")
 	{
-		who->set("marks/ÀäÈôËª",0);
-		message_vision("$N¶Ô$nºßÁËÉù£ºÔÛÃÇµÄÇ°ÏÓ¾ÉÔ¹£¬Ò»£¢èµ£¢¹³Ïû£¡\n",this_object(),who);
+		who->set("marks/å†·è‹¥éœœ",0);
+		message_vision("$Nå¯¹$nå“¼äº†å£°ï¼šå’±ä»¬çš„å‰å«Œæ—§æ€¨ï¼Œä¸€ï¼‚ç’§ï¼‚é’©æ¶ˆï¼\n",this_object(),who);
 		who->remove_all_killer();
 		return 1;
 	}

@@ -3,9 +3,9 @@ inherit NPC;
  
 void create()
 {
-        set_name("ÁúÉØÒ÷", ({ "shaoin","shao" }) );
-        set("title", "ÍíÔÂ×¯µÚÈı´úµÜ×Ó");
-        set("gender", "Å®ĞÔ" );
+        set_name("é¾™éŸ¶åŸ", ({ "shaoin","shao" }) );
+        set("title", "æ™šæœˆåº„ç¬¬ä¸‰ä»£å¼Ÿå­");
+        set("gender", "å¥³æ€§" );
         set("age",17);
         set("long", @TEXT
 TEXT
@@ -38,9 +38,9 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-     if ((string)ob->query("gender") == "ÄĞĞÔ" ) {
-          say( HIY "ÉØÒ÷¾ª»ÅÉúÆøµÄÅ­³â£º Î¹! ĞÖÌ¨²»ÒªÂÒ´³! \n" NOR);
-           say( HIM "ËıµÄÑÛÉñÖè±ä£¬ÒşÔ¼ÖĞËÆºõÈÃÈËÉñÖÇ½¥Ä£ºı! \n" NOR);
+     if ((string)ob->query("gender") == "ç”·æ€§" ) {
+          say( HIY "éŸ¶åŸæƒŠæ…Œç”Ÿæ°”çš„æ€’æ–¥ï¼š å–‚! å…„å°ä¸è¦ä¹±é—¯! \n" NOR);
+           say( HIM "å¥¹çš„çœ¼ç¥éª¤å˜ï¼Œéšçº¦ä¸­ä¼¼ä¹è®©äººç¥æ™ºæ¸æ¨¡ç³Š! \n" NOR);
           ob->receive_damage("sen", 20);
           ob->apply_condition("rose_poison", 2);
        this_object()->add("force", 50);
@@ -56,6 +56,6 @@ int hit_ob(object ob1, object ob, int damage)
         if( random(damage) > (int)ob->query_temp("apply/armor")
         &&      (int)ob->query_condition("rose_poison") < 20 ) {
                 ob->apply_condition("rose_poison", 10);
-                tell_object(ob, HIG "Äã¾õµÃ±»´òÖĞµÄµØ·½Ò»ÕóÂéÑ÷£¡\n" NOR );
+                tell_object(ob, HIG "ä½ è§‰å¾—è¢«æ‰“ä¸­çš„åœ°æ–¹ä¸€é˜µéº»ç—’ï¼\n" NOR );
         }
 }

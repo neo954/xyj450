@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // essencemagic.c
@@ -13,7 +13,7 @@ int valid_learn(object me)
 {
    if( (int)me->query_skill("buddhism") < 10
    ||   (int)me->query_skill("buddhism") <= (int)me->query_skill("essencemagic") )
-     return notify_fail("ÄãµÄ·ğ·¨ĞŞÎª»¹²»¹»¸ßÉî£¬ÎŞ·¨Ñ§Ï°°ËÊ¶ÉñÍ¨¡£\n");
+     return notify_fail("ä½ çš„ä½›æ³•ä¿®ä¸ºè¿˜ä¸å¤Ÿé«˜æ·±ï¼Œæ— æ³•å­¦ä¹ å…«è¯†ç¥é€šã€‚\n");
    return 1;
 }
 

@@ -4,8 +4,8 @@ inherit NPC;
 
 void create()
 {
-	set_name("Áø»æĞÄ", ({ "liuh wheixin", "liuh", "wheixin" }) );
-	set("gender", "Å®ĞÔ" );
+	set_name("æŸ³ç»˜å¿ƒ", ({ "liuh wheixin", "liuh", "wheixin" }) );
+	set("gender", "å¥³æ€§" );
 	set("age", 15);
 	set("str", 16);
 	set("cor", 24);
@@ -19,17 +19,17 @@ void create()
 	set("force", 200);
 	set("force_factor", 2);
 
-	set("long",	"Áø»æĞÄÊÇ´¾·çÎä¹İ¹İÖ÷Áø´¾·çµÄ¶ÀÉúÅ®¡£\n");
+	set("long",	"æŸ³ç»˜å¿ƒæ˜¯æ·³é£æ­¦é¦†é¦†ä¸»æŸ³æ·³é£çš„ç‹¬ç”Ÿå¥³ã€‚\n");
 
-	create_family("·âÉ½½£ÅÉ±±×Ú", 14, "µÜ×Ó");
+	create_family("å°å±±å‰‘æ´¾åŒ—å®—", 14, "å¼Ÿå­");
 
 	set("combat_exp", 1000);
 
 	set("chat_chance_combat", 25);
 	set("chat_msg_combat", ({
 		(: perform_action, "sword.counterattack" :),
-		"Áø»æĞÄĞãÃ¼Î¢õ¾£¬ËµµÀ£ºÎ¹£¡ÎÒÄÄÀïµÃ×ïÄãÁË£¿¸ÉÂïÕâÑù¸úÎÒÆ´ËÀÆ´»î£¿\n",
-		"Áø»æĞÄ²»×¡µØÍûÖø´°Íâ£ºÄã»¹ÊÇ¿ì×ß°É£¬ÎÒÃ»¿ÕÅãÄãÁ·¹¦·ò£¡\n",
+		"æŸ³ç»˜å¿ƒç§€çœ‰å¾®è¹™ï¼Œè¯´é“ï¼šå–‚ï¼æˆ‘å“ªé‡Œå¾—ç½ªä½ äº†ï¼Ÿå¹²å˜›è¿™æ ·è·Ÿæˆ‘æ‹¼æ­»æ‹¼æ´»ï¼Ÿ\n",
+		"æŸ³ç»˜å¿ƒä¸ä½åœ°æœ›è‘—çª—å¤–ï¼šä½ è¿˜æ˜¯å¿«èµ°å§ï¼Œæˆ‘æ²¡ç©ºé™ªä½ ç»ƒåŠŸå¤«ï¼\n",
 	}) );
 
 	set_skill("unarmed", 20);
@@ -58,15 +58,15 @@ void create()
 
 int accept_fight(object me)
 {
-	if( (string)me->query("family/family_name")=="·âÉ½½£ÅÉ" ) {
-		if( (string)me->query("gender")=="Å®ĞÔ" ) {
-			command("say Ê¦½ã£¡±ğÕûÌìÏëÖøÁ·¹¦Âï£¬ÎÒÃÇÈ¥»¨Ô°Õª»¨¶ùÍæÂï£¿");
+	if( (string)me->query("family/family_name")=="å°å±±å‰‘æ´¾" ) {
+		if( (string)me->query("gender")=="å¥³æ€§" ) {
+			command("say å¸ˆå§ï¼åˆ«æ•´å¤©æƒ³è‘—ç»ƒåŠŸå˜›ï¼Œæˆ‘ä»¬å»èŠ±å›­æ‘˜èŠ±å„¿ç©å˜›ï¼Ÿ");
 			return 0;
 		} else {
-			command("say ÎÒ²Å²»Òª£¬ÄãÃÇÈ¥ÕÒÀî½ÌÍ·Á·°É£¡");
+			command("say æˆ‘æ‰ä¸è¦ï¼Œä½ ä»¬å»æ‰¾ææ•™å¤´ç»ƒå§ï¼");
 			return 0;
 		}
 	}
-	command("say µùµùËµ¹ı£¬²»ÄÜ¸úÄãÃÇÕâĞ©½­ºşÈËÎï±ÈÎä¹ıÕĞ¡£");
+	command("say çˆ¹çˆ¹è¯´è¿‡ï¼Œä¸èƒ½è·Ÿä½ ä»¬è¿™äº›æ±Ÿæ¹–äººç‰©æ¯”æ­¦è¿‡æ‹›ã€‚");
 	return 0;
 }

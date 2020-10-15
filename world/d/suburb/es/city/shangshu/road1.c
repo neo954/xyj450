@@ -6,11 +6,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "С��");
+        set("short", "小径");
         set("long",@LONG
-���鸮��С���ߵ����ƺ����˾�ͷ��С���Ķ�����һ��С�ݣ�ƽ
-ʱ�������ǹصģ�ÿ�찴ʱ��һ���������Ƶ������ͷ���ȥ��������
-һ�Ų������ڡ��ϱ߲�Զ���������鸮ͥԺ�ˡ�
+尚书府的小径走到这似乎到了尽头。小径的东边是一间小屋，平
+时房门总是关的，每天按时由一名又聋又哑的仆役送饭进去，其他人
+一概不让入内。南边不远处就是尚书府庭院了。
 LONG
         );
 
@@ -25,7 +25,7 @@ LONG
 
 	set("outdoors", "city");
 	
-	create_door ("east", "Сľ��", "west", DOOR_CLOSED);
+	create_door ("east", "小木门", "west", DOOR_CLOSED);
 
         setup();
         replace_program(ROOM);

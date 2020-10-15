@@ -5,11 +5,11 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("´óºú×Ó", ({ "butcher", "da" }) );
-        set("title", "ÍÀ¼ÇÈâÆÌ");
-        set("gender", "ÄĞĞÔ" );
+        set_name("å¤§èƒ¡å­", ({ "butcher", "da" }) );
+        set("title", "å± è®°è‚‰é“º");
+        set("gender", "ç”·æ€§" );
         set("age", 35);
-        set("long", "Ò»¸öÂúÁ³´óºú×Ó£¬ºÍºáÈâµÄ¼Ò»ï¡£\n");
+        set("long", "ä¸€ä¸ªæ»¡è„¸å¤§èƒ¡å­ï¼Œå’Œæ¨ªè‚‰çš„å®¶ä¼™ã€‚\n");
         set("str", 29);
         set("int", 14);
         set("combat_exp", 25000);
@@ -45,9 +45,9 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) return;
         switch( random(4) ) {
                 case 2:
-                        say( "´óºú×ÓßÖ¿ª´ó×ì, Ğ¦×ÅµÀ£ºÕâÎ»"  
+                        say( "å¤§èƒ¡å­å’§å¼€å¤§å˜´, ç¬‘ç€é“ï¼šè¿™ä½"  
                                 + RANK_D->query_respect(ob)
-                                + "£¬ÒªÂòÈâÊÇÂğ? \n");
+                                + "ï¼Œè¦ä¹°è‚‰æ˜¯å—? \n");
                         break;
         }
 }

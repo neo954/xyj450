@@ -2,12 +2,12 @@ inherit NPC;
 
 void create()
 {
-        set_name("信鸽", ({ "pigeon" }) );
-        set("race", "野兽");
+        set_name("淇￠附", ({ "pigeon" }) );
+        set("race", "閲庡吔");
         set("age", 2);
-        set("long", "一只乖巧的小信鸽\n");
+        set("long", "涓�鍙箹宸х殑灏忎俊楦絓n");
 
-        set("limbs", ({ "头部", "身体", "尾巴", "翅膀" }) );
+        set("limbs", ({ "澶撮儴", "韬綋", "灏惧反", "缈呰唨" }) );
         set("verbs", ({ "bite"}) );
 
         set_skill("dodge", 250);

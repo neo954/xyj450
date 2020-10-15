@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-     set_name("Ò©É®", ({"drug bonze", "bonze"}));
-     set("gender", "ÄĞĞÔ");
+     set_name("è¯åƒ§", ({"drug bonze", "bonze"}));
+     set("gender", "ç”·æ€§");
      set("class", "bonze");
      set("age",25);
-     set("long","Ò»Î»³¤µÃÏàµ±¾«×³µÄÄêÇáÉ®ÈË, ËûÕıÔÚÕûÀíÒ©²Ä¡£\n");
+     set("long","ä¸€ä½é•¿å¾—ç›¸å½“ç²¾å£®çš„å¹´è½»åƒ§äºº, ä»–æ­£åœ¨æ•´ç†è¯æã€‚\n");
      set("combat_exp", 1800);
      set("attitude", "heroism");
 

@@ -4,10 +4,10 @@
 inherit NPC;
 void create()
 {
-        set_name("ÕÔÈç¸Ö", ({ "zhao", "zhao gang"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("èµµå¦‚é’¢", ({ "zhao", "zhao gang"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 32);
-        set("long", "ÕâÊÇÎ÷·½Éñ½ÌËÄ´ó½ğ¸ÖÖ®Ò»¡£\n");
+        set("long", "è¿™æ˜¯è¥¿æ–¹ç¥æ•™å››å¤§é‡‘é’¢ä¹‹ä¸€ã€‚\n");
         set("combat_exp", 10000);
         set("attitude", "friendly");
         set_skill("unarmed", 50);
@@ -17,7 +17,7 @@ void create()
        	map_skill("unarmed", "demon-strike");
 	map_skill("dodge","demon-steps");
 	set_skill("iron-cloth",150);
-	create_family("Î÷·½Éñ½Ì", 8, "½ÌÖÚ");
+	create_family("è¥¿æ–¹ç¥æ•™", 8, "æ•™ä¼—");
 	setup();
 	add_money("silver", 5);
         carry_object(__DIR__"obj/yellowrobe")->wear();

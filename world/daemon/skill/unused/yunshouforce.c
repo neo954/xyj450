@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // celestial.c
@@ -12,7 +12,7 @@ int valid_learn(object me)
         if( (int)me->query("bellicosity") <
 (int)me->query_skill("yunshouforce") * 50 )
                 return
-notify_fail("ÄãµÄÉ±Æø²»¹»£¬ÎŞ·¨ÁìÎò¸ü¸ßÉîµÄÔÆÊŞÉñ¹¦£®\n");
+notify_fail("ä½ çš„æ€æ°”ä¸å¤Ÿï¼Œæ— æ³•é¢†æ‚Ÿæ›´é«˜æ·±çš„äº‘å…½ç¥åŠŸï¼\n");
 
         return 1;
 }
@@ -20,7 +20,7 @@ notify_fail("ÄãµÄÉ±Æø²»¹»£¬ÎŞ·¨ÁìÎò¸ü¸ßÉîµÄÔÆÊŞÉñ¹¦£®\n");
 int practice_skill(object me)
 {
         return
-notify_fail("ÔÆÊŞÉñ¹¦Ö»ÄÜÓÃÑ§µÄ£¬»òÊÇ´ÓÔËÓÃ(exert)ÖĞÔö¼ÓÊìÁ·¶È¡£\n");
+notify_fail("äº‘å…½ç¥åŠŸåªèƒ½ç”¨å­¦çš„ï¼Œæˆ–æ˜¯ä»è¿ç”¨(exert)ä¸­å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");
 }
 
 string exert_function_file(string func)

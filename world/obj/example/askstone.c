@@ -5,10 +5,10 @@ inherit ITEM;
 
 void create()
 {
-	set_name("ÎÊÂ·Ê¯" , ({ "askstone" }) );
+	set_name("é—®è·¯çŸ³" , ({ "askstone" }) );
         set_weight(600);
-        set("unit", "¿é");
-        set("long", "ÕâÊÇÒ»¿éÔØÓĞ¾øÊÀÉñÍ¨£¬ÓĞÎÊ±Ø´ğµÄÒ×½îÊ¯£®\n");
+        set("unit", "å—");
+        set("long", "è¿™æ˜¯ä¸€å—è½½æœ‰ç»ä¸–ç¥é€šï¼Œæœ‰é—®å¿…ç­”çš„æ˜“ç­‹çŸ³ï¼\n");
         set("value", 0);
 }
 
@@ -38,9 +38,9 @@ int askabout ( string arg)
                         	shifo = sprintf("%s",my["family"]["master_name"] );
 	        }
         	printf(
-		" ÄêÁä£º[%d]     ¾­Ñé£º[%d]     É±Æø£º[%d]     Ê¦¸¸£º%s\n"
-                " ëöÁ¦£º[%d,%d]  µ¨Ê¶£º[%d,%d]  ÎòĞÔ£º[%d,%d]  ÁéĞÔ£º[%d,%d]\n"
-                " ¶¨Á¦£º[%d,%d]  ÈİÃ²£º[%d,%d]  ¸ù¹Ç£º[%d,%d]  ¸£Ôµ£º[%d,%d]\n\n",
+		" å¹´é¾„ï¼š[%d]     ç»éªŒï¼š[%d]     æ€æ°”ï¼š[%d]     å¸ˆçˆ¶ï¼š%s\n"
+                " è†‚åŠ›ï¼š[%d,%d]  èƒ†è¯†ï¼š[%d,%d]  æ‚Ÿæ€§ï¼š[%d,%d]  çµæ€§ï¼š[%d,%d]\n"
+                " å®šåŠ›ï¼š[%d,%d]  å®¹è²Œï¼š[%d,%d]  æ ¹éª¨ï¼š[%d,%d]  ç¦ç¼˜ï¼š[%d,%d]\n\n",
 		me->query("age"),
 		me->query("combat_exp"),
 		me->query("bellicosity"),
@@ -66,7 +66,7 @@ int askabout ( string arg)
 		attackp = COMBAT_D->skill_power(me, skill_type, SKILL_USAGE_ATTACK);   
         	dodgep = COMBAT_D->skill_power(me, "dodge", SKILL_USAGE_DEFENSE);
         	parryp = COMBAT_D->skill_power(me, parry_type, SKILL_USAGE_DEFENSE);
-		printf("¹¥»÷Á¦£º%d\t¶ãÉÁÁ¦£º%d\nÕĞ¼ÜÁ¦£º%d\n",
+		printf("æ”»å‡»åŠ›ï¼š%d\tèº²é—ªåŠ›ï¼š%d\næ‹›æ¶åŠ›ï¼š%d\n",
 			attackp, dodgep, parryp);
 		break;
         default:

@@ -2,13 +2,13 @@ inherit NPC;
  
 void create()
 {
-        set_name("½ðÒÇÍ®", ({ "eton","zhin" }) );
-        set("gender", "Å®ÐÔ" );
+        set_name("é‡‘ä»ªå½¤", ({ "eton","zhin" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 27);
         set("long", @TEXT
-Ëý¹úÉ«ÌìÏã£¬½¿ÀöÎÞÂ×£»ÎÂÈáæµ¾²£¬Ðã¾øÈËå¾¡£
-¿ÉÏ§Ã¼ÐÄÉÏÓÐÒ»µÀµØÉ·ÎÆ¸É·¸×Ï¶·£¬¿ÖÒªÓñÊÖ
-È¾Ñª£¬ºÆ½ÙÎäÁÖ¡£
+å¥¹å›½è‰²å¤©é¦™ï¼Œå¨‡ä¸½æ— ä¼¦ï¼›æ¸©æŸ”å¨´é™ï¼Œç§€ç»äººå¯°ã€‚
+å¯æƒœçœ‰å¿ƒä¸Šæœ‰ä¸€é“åœ°ç…žçº¹å¹²çŠ¯ç´«æ–—ï¼Œæè¦çŽ‰æ‰‹
+æŸ“è¡€ï¼Œæµ©åŠ«æ­¦æž—ã€‚
 TEXT
 );
        set("class", "dancer");
@@ -23,7 +23,7 @@ TEXT
         set("force", 1000);
         set("max_force", 500);
 
-        create_family("ÍíÔÂ×¯",3,"µÜ×Ó");
+        create_family("æ™šæœˆåº„",3,"å¼Ÿå­");
         setup();
         carry_object("/d/suburb/es/latemoon/obj/deer_boot")->wear();
         carry_object("/d/suburb/es/latemoon/obj/necklace");

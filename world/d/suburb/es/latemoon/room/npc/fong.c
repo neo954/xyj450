@@ -2,8 +2,8 @@ inherit NPC;
  
 void create()
 {
-        set_name("·ï½ã", ({ "Fong","fong" }) );
-        set("gender", "Å®ÐÔ" );
+        set_name("å‡¤å§", ({ "Fong","fong" }) );
+        set("gender", "å¥³æ€§" );
          set("age", 47);
         set("long", @TEXT
 TEXT
@@ -18,7 +18,7 @@ TEXT
         set("force", 9000);
        set("max_force", 9000);
        set("force_factor", 50);
-        create_family("ÍíÔÂ×¯", 1, "Ç°±²");
+        create_family("æ™šæœˆåº„", 1, "å‰è¾ˆ");
 
         setup();
         carry_object(__DIR__"obj/deer_boot")->wear();
@@ -27,5 +27,5 @@ TEXT
 
 void attempt_apprentice(object ob)
 {
-     command("say °ÝÊ¦! ²»¸Òµ±£¬ÎÒ¶¼ÀÏÁË!ÄãÈ¥ÕÒ¡¸ÜÆÆ¼¡¹ºÃÁË£¬¿´ËýÊÕ²»ÊÕÄã? ");
+     command("say æ‹œå¸ˆ! ä¸æ•¢å½“ï¼Œæˆ‘éƒ½è€äº†!ä½ åŽ»æ‰¾ã€ŒèŠ·èã€å¥½äº†ï¼Œçœ‹å¥¹æ”¶ä¸æ”¶ä½ ? ");
 }

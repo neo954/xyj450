@@ -4,9 +4,9 @@ inherit NPC;
  
 void create()
 {
-        set_name("ÈîÐÀÓô", ({ "shinyu","shin" }) );
-        set("title", "ÍíÔÂ×¯µÚÈý´úµÜ×Ó");
-        set("gender", "Å®ÐÔ" );
+        set_name("é˜®æ¬£éƒ", ({ "shinyu","shin" }) );
+        set("title", "æ™šæœˆåº„ç¬¬ä¸‰ä»£å¼Ÿå­");
+        set("gender", "å¥³æ€§" );
         set("age",17);
         set("long", @TEXT
 TEXT
@@ -43,10 +43,10 @@ void init()
 void greeting(object ob)
 {
 	if( !ob || environment(ob) != environment() ) return;
-	if ((string)ob->query("gender") == "ÄÐÐÔ" ) {
-		say( HIY "ÐÀÓô´óº°£º Î¹! ÐÖÌ¨! Õâ²»×¼ÄÐÈË½øÀ´! \n"  NOR );
-		say( HIR "ÐÀÓô´ÓÐäÀïÈ¡³öÒ»°Ñ·ÛºìÉ«Ï¸·ÛÆÃÈö³öÈ¥¡£\n" NOR );
-		say( HIY "ÐÀÓôÒ»½ÅÍù´³ÈëÕßÌßÁË³öÈ¥¡£\n" NOR );
+	if ((string)ob->query("gender") == "ç”·æ€§" ) {
+		say( HIY "æ¬£éƒå¤§å–Šï¼š å–‚! å…„å°! è¿™ä¸å‡†ç”·äººè¿›æ¥! \n"  NOR );
+		say( HIR "æ¬£éƒä»Žè¢–é‡Œå–å‡ºä¸€æŠŠç²‰çº¢è‰²ç»†ç²‰æ³¼æ’’å‡ºåŽ»ã€‚\n" NOR );
+		say( HIY "æ¬£éƒä¸€è„šå¾€é—¯å…¥è€…è¸¢äº†å‡ºåŽ»ã€‚\n" NOR );
         command("close door");
         ob->apply_condition("rose_poison", 10);
 		ob->receive_damage("gin",50);

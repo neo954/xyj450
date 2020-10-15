@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("护草神兽", ({ "guarder" }) );
-        set("long", "看守忘忧草的护草神兽。\n");
+        set_name("鎶よ崏绁炲吔", ({ "guarder" }) );
+        set("long", "鐪嬪畧蹇樺咖鑽夌殑鎶よ崏绁炲吔銆俓n");
 
-        set("race", "野兽");
+        set("race", "閲庡吔");
         set("age", 100);
         set("attitude", "aggressive");
 
@@ -20,7 +20,7 @@ void create()
         set("spi", 20);
         set("int", 10);
 
-        set("limbs", ({ "头部", "躯干", "尾巴" }) );
+        set("limbs", ({ "澶撮儴", "韬共", "灏惧反" }) );
         set("verbs", ({ "bite" }) );
 
         set_temp("apply/attack", 30);

@@ -4,10 +4,10 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "��ʯ��");
+	set("short", "青石峪");
 	set("long", @LONG
-�˵�ɽ��ƽ��,ɽ�¾���������.�������ͩ��ɽ��,���漴Ϊ��ʿ��®����֮��
-.�����ɼ���ɽ����ʯС��.
+此地山势平缓,山坡尽是湘妃竹.南面就是桐柏山了,西面即为隐士结庐修身之所
+.往北可见下山的青石小径.
 LONG
 	);
 	set("exits", ([ /* sizeof() == 3 */

@@ -4,12 +4,12 @@ int time_period(int timep, object me);
 string sysmsg;
 void create()
 {
-	set_name(HIY "Öì" NOR + HIG "°ë" NOR + HIM "ÏÉ" NOR, ({ "halfgod", "half god", "half-god" }) );
+	set_name(HIY "æœ±" NOR + HIG "åŠ" NOR + HIM "ä»™" NOR, ({ "halfgod", "half god", "half-god" }) );
 
-	set("gender", "ÄĞĞÔ");
+	set("gender", "ç”·æ€§");
 	set("age", 99);
 	set("long",
-		"Öì°ëÏÉÄê¹ıÁù¼×£¬º×·¢Í¯ÑÕ¡£\n");
+		"æœ±åŠä»™å¹´è¿‡å…­ç”²ï¼Œé¹¤å‘ç«¥é¢œã€‚\n");
 	set("attitude", "peaceful");
         set("skill_public",1);
 	set("str", 26000);
@@ -38,7 +38,7 @@ void create()
         map_skill("force", "yiqiforce");
         map_skill("unarmed", "yiqiforce");
 
-	create_family("äìÒ£ÅÉ", 1, "×æÊ¦");
+	create_family("æ½‡é¥æ´¾", 1, "ç¥–å¸ˆ");
 
 	setup();
 
@@ -49,7 +49,7 @@ void create()
 }
 int accept_fight(object me)
 {
-        command("say ÉúÃü¿É¹ó£¡²»Òª×ÔÑ°ËÀÂ·£¡");
+        command("say ç”Ÿå‘½å¯è´µï¼ä¸è¦è‡ªå¯»æ­»è·¯ï¼");
         return 0;
 }
 void init()
@@ -90,7 +90,7 @@ int give_quest()
 // Let's see if this player is a ghost
 	if((int) me->is_ghost())
 	{
-		write("¹í»ê²»¿ÉÒªÈÎÎñ£®\n");
+		write("é¬¼é­‚ä¸å¯è¦ä»»åŠ¡ï¼\n");
 		return 1;
 	}
 // Let's see if this player still carries an un-expired task
@@ -100,8 +100,8 @@ int give_quest()
 		return 0;
 	else
 	{
-		message_vision("Öì°ëÏÉÏò$NÒ»Ë¦ÅÛĞä£¬ËµµÀ£º 
-ÕæÃ»ÓÃ£¡²»¹ı¿´ÔÚÄã»¹»ØÀ´¼ûÀÏ·òµÄ·İÉÏ£¬¾ÍÔÚ¸øÄãÒ»´Î»ú»á£®\n", me);
+		message_vision("æœ±åŠä»™å‘$Nä¸€ç”©è¢è¢–ï¼Œè¯´é“ï¼š 
+çœŸæ²¡ç”¨ï¼ä¸è¿‡çœ‹åœ¨ä½ è¿˜å›æ¥è§è€å¤«çš„ä»½ä¸Šï¼Œå°±åœ¨ç»™ä½ ä¸€æ¬¡æœºä¼šï¼\n", me);
 		me->set("kee", me->query("kee")/2+1);
 	}
 	}
@@ -124,19 +124,19 @@ int give_quest()
 // A factor here to make time random
 	timep = timep / (random(2)+1);
 	time_period(timep, me);
-	if (quest["quest_type"] == "Ñ°")
+	if (quest["quest_type"] == "å¯»")
 	{
-        tell_object(me,"ÕÒ»Ø¡º"+quest["quest"]+"¡»¸øÎÒ¡£\n" NOR);
-	sysmsg +="ÕÒ»Ø¡º"+quest["quest"]+"¡»¡£";
+        tell_object(me,"æ‰¾å›ã€"+quest["quest"]+"ã€ç»™æˆ‘ã€‚\n" NOR);
+	sysmsg +="æ‰¾å›ã€"+quest["quest"]+"ã€ã€‚";
 	}
-	        if (quest["quest_type"] == "É±")
+	        if (quest["quest_type"] == "æ€")
         {
-        tell_object(me,"ÌæÎÒÉ±ÁË¡º"+quest["quest"]+"¡»¡£\n" NOR);
-	sysmsg +="É±ÁË¡º"+quest["quest"]+"¡»¡£";
+        tell_object(me,"æ›¿æˆ‘æ€äº†ã€"+quest["quest"]+"ã€ã€‚\n" NOR);
+	sysmsg +="æ€äº†ã€"+quest["quest"]+"ã€ã€‚";
         }
  	me->set("quest", quest);
 	me->set("task_time", (int) time()+(int) timep);
-	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)£º%s", 
+	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)ï¼š%s", 
 	me->query("name"),me->query("id"),sysmsg));
 
 return 1;
@@ -152,15 +152,15 @@ int time_period(int timep, object me)
         h = t % 24;             t /= 24;
         d = t;
 
-        if(d) time = chinese_number(d) + "Ìì";
+        if(d) time = chinese_number(d) + "å¤©";
         else time = "";
 
-        if(h) time += chinese_number(h) + "Ğ¡Ê±";
-        if(m) time += chinese_number(m) + "·Ö";
-        time += chinese_number(s) + "Ãë";
+        if(h) time += chinese_number(h) + "å°æ—¶";
+        if(m) time += chinese_number(m) + "åˆ†";
+        time += chinese_number(s) + "ç§’";
 
-        tell_object(me,HIW "Öì°ëÏÉ³ÁË¼ÁËÒ»»á¶ù£¬ËµµÀ£º\nÇëÔÚ" + time + "ÄÚ");
-	sysmsg = "ÔÚ" + time + "ÄÚ";
+        tell_object(me,HIW "æœ±åŠä»™æ²‰æ€äº†ä¸€ä¼šå„¿ï¼Œè¯´é“ï¼š\nè¯·åœ¨" + time + "å†…");
+	sysmsg = "åœ¨" + time + "å†…";
         return 1;
 }
 int accept_object(object who, object ob)
@@ -172,38 +172,38 @@ int accept_object(object who, object ob)
 	if (val)
 	{
 		if( val < (33 - random((int)who->query("kar"))) * 10000)
-	tell_object(who,"Öì°ëÏÉÔÚÄã¶ú±ßÇÄÇÄËµµÀ£ºÕâ£®£®ÕâÌ«ÉÙÁËµã¶ù°É£®£®\n");
+	tell_object(who,"æœ±åŠä»™åœ¨ä½ è€³è¾¹æ‚„æ‚„è¯´é“ï¼šè¿™ï¼ï¼è¿™å¤ªå°‘äº†ç‚¹å„¿å§ï¼ï¼\n");
 		else
 		{
 		       who->set("quest", 0 );
-       	 	tell_object(who,"Öì°ëÏÉËµµÀ£ººÃ°É£¬Õâ¸öÈÎÎñ¾ÍËãÁË°É£®£®\n");
+       	 	tell_object(who,"æœ±åŠä»™è¯´é“ï¼šå¥½å§ï¼Œè¿™ä¸ªä»»åŠ¡å°±ç®—äº†å§ï¼ï¼\n");
 	
 		}
 		return 1;
 	}
         if(!(quest =  who->query("quest")))
 	{
-        tell_object(who,"Öì°ëÏÉËµµÀ£ºÕâ²»ÊÇÎÒÏëÒªµÄ¡£\n");
+        tell_object(who,"æœ±åŠä»™è¯´é“ï¼šè¿™ä¸æ˜¯æˆ‘æƒ³è¦çš„ã€‚\n");
 	return 0;
 	}
         if( ob->name() != quest["quest"])
         {
-        tell_object(who,"Öì°ëÏÉËµµÀ£ºÕâ²»ÊÇÎÒÏëÒªµÄ¡£\n");
+        tell_object(who,"æœ±åŠä»™è¯´é“ï¼šè¿™ä¸æ˜¯æˆ‘æƒ³è¦çš„ã€‚\n");
         return 0;
         }
 	if( ob->is_character())
         {
-        tell_object(who,"Öì°ëÏÉËµµÀ£ºÕâ²»ÊÇÎÒÏëÒªµÄ¡£\n");
+        tell_object(who,"æœ±åŠä»™è¯´é“ï¼šè¿™ä¸æ˜¯æˆ‘æƒ³è¦çš„ã€‚\n");
         return 0;
         }
         if ((int) who->query("task_time") < time() )
         {
-        tell_object(who,"Öì°ëÏÉËµµÀ£ºÕæ¿ÉÏ§£¡ÄãÃ»ÓĞÔÚÖ¸¶¨µÄÊ±¼äÄÚÍê³É£¡\n");
+        tell_object(who,"æœ±åŠä»™è¯´é“ï¼šçœŸå¯æƒœï¼ä½ æ²¡æœ‰åœ¨æŒ‡å®šçš„æ—¶é—´å†…å®Œæˆï¼\n");
                         return 1;
         }
         else
         {
-        tell_object(who,"Öì°ëÏÉËµµÀ£º¹§Ï²Äã£¡ÄãÓÖÍê³ÉÁËÒ»ÏîÈÎÎñ£¡\n");
+        tell_object(who,"æœ±åŠä»™è¯´é“ï¼šæ­å–œä½ ï¼ä½ åˆå®Œæˆäº†ä¸€é¡¹ä»»åŠ¡ï¼\n");
 	exp = quest["exp_bonus"]/2 + random(quest["exp_bonus"]/2)+1;
 	pot = quest["pot_bonus"]/4 + random(quest["pot_bonus"]/4)+1;
 //	due to weekly quest, each quet worth 20
@@ -221,10 +221,10 @@ int accept_object(object who, object ob)
 	bonus = (int) who->query("score");
 	bonus += score;
         who->set("score", bonus);
-        tell_object(who,HIW"Äã±»½±ÀøÁË£º\n" +
-	chinese_number(exp) + "µãÊµÕ½¾­Ñé\n"+
-	chinese_number(pot) + "µãÇ±ÄÜ\n" +
-	chinese_number(score)+"µã×ÛºÏÆÀ¼Û\n"NOR);
+        tell_object(who,HIW"ä½ è¢«å¥–åŠ±äº†ï¼š\n" +
+	chinese_number(exp) + "ç‚¹å®æˆ˜ç»éªŒ\n"+
+	chinese_number(pot) + "ç‚¹æ½œèƒ½\n" +
+	chinese_number(score)+"ç‚¹ç»¼åˆè¯„ä»·\n"NOR);
 	who->set("quest", 0 );
                         return 1;
         }

@@ -4,18 +4,18 @@ inherit FINGER;
 
 void create()
 {
-        set_name( "±ùÓñ½äÖ¸" , ({ "ice ring", "ring" }) );
+        set_name( "å†°ç‰æˆ’æŒ‡" , ({ "ice ring", "ring" }) );
         set_weight(60);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¸ö");
+                set("unit", "ä¸ª");
                 set("value", 3000);
                 set("material", "gold");
                 set("armor_prop/unarmed", 2);
                 set("armor_prop/armor", 1);
                 set("armor_prop/spells", 2);
-        set("wear_msg", "$N½«$nÄÃ³ö´÷ÔÚÓÒÊÖÎŞÃûÖ¸ÉÏ¡£\n");
+        set("wear_msg", "$Nå°†$næ‹¿å‡ºæˆ´åœ¨å³æ‰‹æ— åæŒ‡ä¸Šã€‚\n");
         }
         setup();
 }

@@ -4,16 +4,16 @@ inherit HEAD;
 
 void create()
 {
-        set_name( "Òø³á½ğô¢" , ({ "clasp" }) );
+        set_name( "é“¶ç¿…é‡‘ç°ª" , ({ "clasp" }) );
         set_weight(100);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ö§");
+                set("unit", "æ”¯");
                 set("value", 1500);
                 set("material", "gold");
                 set("armor_prop/armor", 1);
-        set("wear_msg", "$N½«$nÄÃ³ö²åÔÚÍ··¢ÉÏ¡£\n");
+        set("wear_msg", "$Nå°†$næ‹¿å‡ºæ’åœ¨å¤´å‘ä¸Šã€‚\n");
         }
         setup();
 }

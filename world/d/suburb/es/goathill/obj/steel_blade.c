@@ -6,17 +6,17 @@ inherit BLADE;
 
 void create()
 {
-	set_name("¸Öµ¶", ({ "steel blade", "blade" }) );
+	set_name("é’¢åˆ€", ({ "steel blade", "blade" }) );
 	set_weight(9000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "±ú");
+		set("unit", "æŸ„");
 		set("value", 700);
 		set("material", "steel");
-		set("long", "Ò»°ÑÉòÖØµÄ¸Öµ¶£¬Ä¥µÃÓÖÀûÓÖ¿ì£¬¿´ÆğÀ´Ïàµ±¾ßÉ±ÉËÁ¦¡£\n");
-		set("wield_msg", "$N³é³öÒ»°ÑÃ÷»Î»ÎµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unequip_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄµ¶ÇÊ¡£\n");
+		set("long", "ä¸€æŠŠæ²ˆé‡çš„é’¢åˆ€ï¼Œç£¨å¾—åˆåˆ©åˆå¿«ï¼Œçœ‹èµ·æ¥ç›¸å½“å…·æ€ä¼¤åŠ›ã€‚\n");
+		set("wield_msg", "$NæŠ½å‡ºä¸€æŠŠæ˜æ™ƒæ™ƒçš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„åˆ€é˜ã€‚\n");
 		set("weapon_prop/karma", -4);
 	}
 	init_blade(30);

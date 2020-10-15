@@ -1,18 +1,18 @@
 inherit NPC;
 void create()
 {
-        set_name("ÀäÑª´Ì¿Í", ({ "hitman", "man" }) );
-        set("gender", "ÄĞĞÔ");
+        set_name("å†·è¡€åˆºå®¢", ({ "hitman", "man" }) );
+        set("gender", "ç”·æ€§");
         set("age", 34+random(20));
         set("long",
-"ÕâÊÇÒ»¸öÃæÄ¿²»ÇåµÄ´Ì¿Í£®£®£®\n"
+"è¿™æ˜¯ä¸€ä¸ªé¢ç›®ä¸æ¸…çš„åˆºå®¢ï¼ï¼ï¼\n"
                ); 
 
         set("attitude", "peaceful");
         set("combat_exp", 1000000);
         set("chat_chance", 10);
         set("chat_msg", ({
-                "´Ì¿ÍÂîµÀ£ºÕâÃ´À÷º¦£¡ Õâ»Ø¿ÉÒªÌáÍ·¼û½ÌÖ÷ÁË£¡\n",
+                "åˆºå®¢éª‚é“ï¼šè¿™ä¹ˆå‰å®³ï¼ è¿™å›å¯è¦æå¤´è§æ•™ä¸»äº†ï¼\n",
 		(: random_move :)
         }) );
         set_skill("sword", 150);
@@ -23,8 +23,8 @@ void create()
                (: random_move :) 
         }) );
 
-        set("arrive_msg", "£¢à²£¢µÄÒ»Éù´ÚÁË¹ıÀ´");
-        set("leave_msg", "£¢à²£¢µÄÒ»Éù£¬ÏûÊ§ÁË");
+        set("arrive_msg", "ï¼‚å—–ï¼‚çš„ä¸€å£°è¹¿äº†è¿‡æ¥");
+        set("leave_msg", "ï¼‚å—–ï¼‚çš„ä¸€å£°ï¼Œæ¶ˆå¤±äº†");
         setup();
 	carry_object(__DIR__"obj/kcloth")->wear();
 	carry_object(__DIR__"obj/ksword")->wield();
@@ -41,8 +41,8 @@ void hunting()
  object tar;
 if(objectp(tar=present("master ximen",environment())))
 {
-	command("say ÄãÀÏÆÅ±»Â½Ğ¡·ïÇÀÁË£¬ÏÖÔÚËûÓÖ½ĞÎÒÀ´É±ÁËÄã£¬Ëû¾Í¿ÉÒÔºÍÄãÀÏÆÅ
-ÎŞÓÇÎŞÂÇÁË£¡¹ş¹ş¹ş£¡\n");
+	command("say ä½ è€å©†è¢«é™†å°å‡¤æŠ¢äº†ï¼Œç°åœ¨ä»–åˆå«æˆ‘æ¥æ€äº†ä½ ï¼Œä»–å°±å¯ä»¥å’Œä½ è€å©†
+æ— å¿§æ— è™‘äº†ï¼å“ˆå“ˆå“ˆï¼\n");
 	kill_ob(tar);
 }
 

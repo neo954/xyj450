@@ -1,20 +1,20 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
-// ��ֵ����
+// 夏值功曹
 //created 4-8-97 pickle
 inherit NPC;
  
 void create()
 {
-        set_name("��ֵ����", ({ "yuezhi gongcao", "yue", "month",
+        set_name("月值功曹", ({ "yuezhi gongcao", "yue", "month",
 "gongcao" }) );
-        set("gender", "����" );
+        set("gender", "男性" );
         set("long","
-��ֵ��������������������ǰ�ͽ������鲻���
-��սʧ��������ΪѲ�߹١�������Ϊ־ͬ���Ͻ�Ϊ
-�����ֵܡ���ֵ���������϶�������ʦ�¹���һ��
-����ѩɽ���������ڰٻ������м������ּ��\n"
+四值功曹乃是托塔李天王帐前猛将。因经验不足而
+出战失利，被罚为巡逻官。四人因为志同道合结为
+金兰兄弟。月值功曹排行老二。他出师月宫，一手
+灵活的雪山剑法，且在百花掌上有极深的造旨。\n"
         );
         set("age",38);
         set("str",20);
@@ -48,8 +48,8 @@ void create()
         map_skill("parry","snowsword");
    map_skill("sword", "snowsword");
         set("inquiry", ([
-                "name" : "���¾�����ֵ���ܣ�������������ǰ�󽫡�",
-                "here" : "��������칬���¹ٷ���������ڴ�Ѳ�顣",
+                "name" : "在下就是月值功曹，乃托塔天王帐前大将。",
+                "here" : "这里就是天宫。下官奉天王将令，在此巡查。",
         ]) );
         setup();
         carry_object("/d/obj/weapon/sword/qingfeng")->wield();

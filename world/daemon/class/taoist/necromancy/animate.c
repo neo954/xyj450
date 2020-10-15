@@ -5,19 +5,19 @@ inherit F_CLEAN_UP;
 int cast(object me, object target)
 {
         if( me->is_fighting() ) 
-		return notify_fail("ÄãÕýÔÚÕ½¶·ÖÐ£¡\n");
+		return notify_fail("ä½ æ­£åœ¨æˆ˜æ–—ä¸­ï¼\n");
         
         if( (int)me->query_skill("spells") < 10 )
-		return notify_fail("ÄãµÄ·¨Êõ²»¹»¸ß£¡\n");
+		return notify_fail("ä½ çš„æ³•æœ¯ä¸å¤Ÿé«˜ï¼\n");
 
         if( !target || !target->is_corpse() ) 
-        	return notify_fail("ÄãÒªÇý¶¯ÄÄÒ»¾ßÊ¬Ìå£¿\n");
+        	return notify_fail("ä½ è¦é©±åŠ¨å“ªä¸€å…·å°¸ä½“ï¼Ÿ\n");
         
         if( (int)me->query("mana") < 50 )
-		return notify_fail("ÄãµÄ·¨Á¦²»¹»ÁË£¡\n");
+		return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿäº†ï¼\n");
 
         message_vision(
-	"$N¶ÔÖøµØÉÏµÄ$nà«à«µØÄîÁË¼¸¾äÖäÓï£¬$n³é´¤ÁË¼¸ÏÂ¾¹Õ¾ÁËÆðÀ´£¡\n", me, target);
+	"$Nå¯¹è‘—åœ°ä¸Šçš„$nå–ƒå–ƒåœ°å¿µäº†å‡ å¥å’’è¯­ï¼Œ$næŠ½æäº†å‡ ä¸‹ç«Ÿç«™äº†èµ·æ¥ï¼\n", me, target);
 
         target->animate(me, (int)me->query_skill("spells"));
         me->add("mana", -50);

@@ -3,17 +3,17 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÌË×ÓÊÖ", ({ "tang", "zhi"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("è¶Ÿå­æ‰‹", ({ "tang", "zhi"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 32);
-        set("long", "ÕâÊÇÒ»Î»ÌåÌ¬ÇáÓ¯µÄÌË×ÓÊÖ¡£\n");
+        set("long", "è¿™æ˜¯ä¸€ä½ä½“æ€è½»ç›ˆçš„è¶Ÿå­æ‰‹ã€‚\n");
         set("combat_exp", 50000);
         set("attitude", "friendly");
         set_skill("unarmed", 90);
 	set_skill("dodge", 100);
         set("chat_chance", 5);
         set("chat_msg", ({
-                "ÌË×ÓÊÖÓÖÔÚÒ»ÈË¶à¸ßµÄÃ·»¨×®ÉÏÁ·Ï°ÁËÒ»±é¡£\n",
+                "è¶Ÿå­æ‰‹åˆåœ¨ä¸€äººå¤šé«˜çš„æ¢…èŠ±æ¡©ä¸Šç»ƒä¹ äº†ä¸€éã€‚\n",
         }) );
 	
 	setup();

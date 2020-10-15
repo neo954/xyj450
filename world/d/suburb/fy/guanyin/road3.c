@@ -4,10 +4,10 @@
 inherit ROOM;
 void create()
 {
-        set("short", "С·");
+        set("short", "小路");
         set("long", @LONG
-ʯ���о���һ��С·���������ۣ����������������ٶ��߼���
-Ҳ�޷���������......����֮������˭�������Ҳ�������׳�ȥ��
+石峰中竟有一条小路，蜿蜒曲折，如羊肠盘旋，就算再多走几次
+也无法辨出方向的......普天之下无论谁到了这里，也休想轻易出去。
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */

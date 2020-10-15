@@ -1,16 +1,16 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
-//¡¾ÁÒ»ð±Þ¡¿hellfire-whip.c
+//ã€çƒˆç«éž­ã€‘hellfire-whip.c
 
 /*
-ÁÒ»ð±Þ    dodge  -10    parry  -10    damage  20
-ÁÒ»ð±ÞÉÆ²øÈÆ¹¥µÐ£¬Ò»µ©±»¾íÈëÆä¹¥»÷·¶Î§Ôò¼«ÄÑÐÒÃâ£¬
-ÇÒ´Ë±ÞÇúÕÛ×ª¹Õ£¬À´È¥ÎÞ×Ù£¬ÒªÕÐ¼ÜµÖµ²Ò²ÉõÎª²»Ò×¡£
-ÌØµãÊÇÉ±ÉË²»´ó¡£
+çƒˆç«éž­    dodge  -10    parry  -10    damage  20
+çƒˆç«éž­å–„ç¼ ç»•æ”»æ•Œï¼Œä¸€æ—¦è¢«å·å…¥å…¶æ”»å‡»èŒƒå›´åˆ™æžéš¾å¹¸å…ï¼Œ
+ä¸”æ­¤éž­æ›²æŠ˜è½¬æ‹ï¼Œæ¥åŽ»æ— è¸ªï¼Œè¦æ‹›æž¶æŠµæŒ¡ä¹Ÿç”šä¸ºä¸æ˜“ã€‚
+ç‰¹ç‚¹æ˜¯æ€ä¼¤ä¸å¤§ã€‚
 
-Attention: ÁÒ»ð±ÞÖ»ÓÐÇ°ÁùÕÐ£¬¶øµÚÆß£¬°ËÁ½ÕÐÊÇ¿àÉ¥°ô
-ºÍ¾ª»êÕÆÖÐ£¬ÓÃÀ´ Perform µÄ£¬¶øÍæ¼ÒÆ½³£²¢²»»áÓÃµ½¡£
+Attention: çƒˆç«éž­åªæœ‰å‰å…­æ‹›ï¼Œè€Œç¬¬ä¸ƒï¼Œå…«ä¸¤æ‹›æ˜¯è‹¦ä¸§æ£’
+å’ŒæƒŠé­‚æŽŒä¸­ï¼Œç”¨æ¥ Perform çš„ï¼Œè€ŒçŽ©å®¶å¹³å¸¸å¹¶ä¸ä¼šç”¨åˆ°ã€‚
 */
 
 #include <ansi.h>
@@ -21,74 +21,74 @@ inherit SSERVER;
 void second_attack();
 
 mapping *action = ({
-        ([      "name":                 "µØÓüÁÒ»ð",
+        ([      "name":                 "åœ°ç‹±çƒˆç«",
                 "action":
-"$NÊÖÍóÒ»·­£¬$w¶¶µÃ±ÊÖ±£¬´ø³öÒ»¹ÉÈñÐ¥ÃÍ´Ì$n$l",
+"$Næ‰‹è…•ä¸€ç¿»ï¼Œ$wæŠ–å¾—ç¬”ç›´ï¼Œå¸¦å‡ºä¸€è‚¡é”å•¸çŒ›åˆº$n$l",
                 "dodge":                0,
                 "parry":                -5,
                 "damage":               15,
-                "damage_type":  "´ÌÉË",
+                "damage_type":  "åˆºä¼¤",
      "post_action":     (: second_attack :),
         ]),
-        ([      "name":                 "µØÓüÁÒ»ð",
+        ([      "name":                 "åœ°ç‹±çƒˆç«",
                 "action":               
-"$N´óºÈÒ»Éù£¬ÊÖÖÐ$wÍðÈô½ÃÁú·ÉÔÚ°ë¿Õ£¬´óÓÐ¡¸ºá¿Õ³öÊÀ¡¹µÄÆø¸Å¡£\n$nÖ»¾õµÃÈ«Éí¾ãÔÚ$wÁýÕÖÖ®ÏÂ",
+"$Nå¤§å–ä¸€å£°ï¼Œæ‰‹ä¸­$wå®›è‹¥çŸ«é¾™é£žåœ¨åŠç©ºï¼Œå¤§æœ‰ã€Œæ¨ªç©ºå‡ºä¸–ã€çš„æ°”æ¦‚ã€‚\n$nåªè§‰å¾—å…¨èº«ä¿±åœ¨$wç¬¼ç½©ä¹‹ä¸‹",
                 "dodge":                -20,
                 "parry":                -20,
                 "damage":               30,
-                "damage_type":  "³éÉË",
+                "damage_type":  "æŠ½ä¼¤",
                 "post_action":          (: second_attack :),
         ]),
-        ([      "name":                 "µØÓüÁÒ»ð",
+        ([      "name":                 "åœ°ç‹±çƒˆç«",
                 "action":
-"$NÓÒÊÖÒ»Òý£¬$wÌùµØ¶ø·É£¬ÔÙ¼²¾í¶øÉÏ£¬·Â·ð´ø³öÁËµØÓüÖÐµÄÁÒ»ð£¬¼ÐÍ·¼ÐÄÔµØÆËÏò$n",
+"$Nå³æ‰‹ä¸€å¼•ï¼Œ$wè´´åœ°è€Œé£žï¼Œå†ç–¾å·è€Œä¸Šï¼Œä»¿ä½›å¸¦å‡ºäº†åœ°ç‹±ä¸­çš„çƒˆç«ï¼Œå¤¹å¤´å¤¹è„‘åœ°æ‰‘å‘$n",
                 "dodge":                -5,
                 "parry":                -15,
                 "damage":               25,
-                "damage_type":  "³éÉË",
+                "damage_type":  "æŠ½ä¼¤",
                 "post_action":          (: second_attack :),
         ]),
-        ([      "name":                 "µØÓüÁÒ»ð",
+        ([      "name":                 "åœ°ç‹±çƒˆç«",
                 "action":
-"Ò²²»Öª$NÈçºÎ¶¯ÁËÒ»¶¯£¬µ«¼û³¤¿ÕÖÐÇà¹âÒ»ÉÁ£¬$nÖ»¾õ$wÒÑ»÷ÉÏÁË$l",
+"ä¹Ÿä¸çŸ¥$Nå¦‚ä½•åŠ¨äº†ä¸€åŠ¨ï¼Œä½†è§é•¿ç©ºä¸­é’å…‰ä¸€é—ªï¼Œ$nåªè§‰$wå·²å‡»ä¸Šäº†$l",
                 "dodge":                -15,
                 "parry":                -5,
                 "damage":               15,
-                "damage_type":  "³éÉË",
+                "damage_type":  "æŠ½ä¼¤",
                 "post_action":          (: second_attack :),
         ]),
-        ([      "name":                 "µØÓüÁÒ»ð",
+        ([      "name":                 "åœ°ç‹±çƒˆç«",
                 "action":
-"$NÉíÐÎÍùÇ°»¬³ö£¬ÊÖÖÐ$wÅùÅ¾ÓÐÉù£¬Ò»È¦Ì×Ò»È¦µØ¾íÏò$n",
+"$Nèº«å½¢å¾€å‰æ»‘å‡ºï¼Œæ‰‹ä¸­$wéœ¹å•ªæœ‰å£°ï¼Œä¸€åœˆå¥—ä¸€åœˆåœ°å·å‘$n",
                 "dodge":                -5,
                 "parry":                0,
                 "damage":               15,
-                "damage_type":  "³éÉË",
+                "damage_type":  "æŠ½ä¼¤",
                 "post_action":          (: second_attack :),
         ]),
-        ([      "name":                 "µØÓüÁÒ»ð",
+        ([      "name":                 "åœ°ç‹±çƒˆç«",
                 "action":
-"³¤Ð¦ÉùÖÐ$NÒ»¸öµ¹·­£¬ÊÖÖÐ$w¼±½Ê£¬µ«¼û·½Ô²ÕÉÐí·ÉÉ³×ßÊ¯£¬¾¢Æø×Ýºá£¡\n$n²»ÖªÈçºÎ²ÅÄÜÍÑÀ§¶ø³ö£¬Á³¶¼ÂÌÁË",
+"é•¿ç¬‘å£°ä¸­$Nä¸€ä¸ªå€’ç¿»ï¼Œæ‰‹ä¸­$wæ€¥ç»žï¼Œä½†è§æ–¹åœ†ä¸ˆè®¸é£žæ²™èµ°çŸ³ï¼ŒåŠ²æ°”çºµæ¨ªï¼\n$nä¸çŸ¥å¦‚ä½•æ‰èƒ½è„±å›°è€Œå‡ºï¼Œè„¸éƒ½ç»¿äº†",
                 "dodge":                -15,
                 "parry":                -20,
                 "damage":               25,
-                "damage_type":  "³éÉË",
+                "damage_type":  "æŠ½ä¼¤",
                 "post_action":          (: second_attack :),
         ]),
-        ([      "name":                 "Ð¡Â¥Ò¹¿Þ",
+        ([      "name":                 "å°æ¥¼å¤œå“­",
                 "action":
-"$NºíÁüÀï·¢³ö¼¸Éùº¿½Ð£¬¸ß¾Ù$w£¬²»¹ËÒ»ÇÐµØ³åÏò$n£¬¼¸ºõÓë$nÌùÁ³¶øÁ¢£¡\nÊÖÖÐ$wÈ´ÇÄÎÞÉùÏ¢µØ´ÌÏò$nµÄ$l£¬ºÃÀ÷º¦µÄ¡¸Ð¡Â¥Ò¹¿Þ¡¹",
+"$Nå–‰å’™é‡Œå‘å‡ºå‡ å£°åšŽå«ï¼Œé«˜ä¸¾$wï¼Œä¸é¡¾ä¸€åˆ‡åœ°å†²å‘$nï¼Œå‡ ä¹Žä¸Ž$nè´´è„¸è€Œç«‹ï¼\næ‰‹ä¸­$wå´æ‚„æ— å£°æ¯åœ°åˆºå‘$nçš„$lï¼Œå¥½åŽ‰å®³çš„ã€Œå°æ¥¼å¤œå“­ã€",
                 "dodge":                -15,
                 "parry":                -15,
                 "damage":               30,
-                "damage_type":  "´ÌÉË"
+                "damage_type":  "åˆºä¼¤"
         ]),
-        ([      "name":        "Çï·Ø¹í³ª",
-     "action":     "$N×óÊÖÐé»Î£¬ÓÒÕÆÆ®Æ®£¬ÕÆÐÄ³Ê±ÌÂÌ£¬Ò»ÕÐ¡¸Çï·Ø¹í³ª¡¹»÷Ïò$n$l",
+        ([      "name":        "ç§‹åŸé¬¼å”±",
+     "action":     "$Nå·¦æ‰‹è™šæ™ƒï¼Œå³æŽŒé£˜é£˜ï¼ŒæŽŒå¿ƒå‘ˆç¢§ç»¿ï¼Œä¸€æ‹›ã€Œç§‹åŸé¬¼å”±ã€å‡»å‘$n$l",
                 "dodge":                -10,
                 "parry":                -10,
                 "damage":                30,
-                "damage_type":  "ðöÉË"
+                "damage_type":  "ç˜€ä¼¤"
         ]),
 
 });
@@ -98,11 +98,11 @@ int valid_learn(object me)
         object ob;
 
         if( (int)me->query("max_force") < 150 )
-                return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬Ã»ÓÐ°ì·¨Á·ÁÒ»ð±Þ¡£\n");
+                return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒçƒˆç«éž­ã€‚\n");
 
         if( !(ob = me->query_temp("weapon"))
         ||      (string)ob->query("skill_type") != "whip" )
-                return notify_fail("Äã±ØÐëÏÈÕÒÒ»¸ù±Þ×Ó²ÅÄÜÁ·ÁÒ»ð±Þ¡£\n");
+                return notify_fail("ä½ å¿…é¡»å…ˆæ‰¾ä¸€æ ¹éž­å­æ‰èƒ½ç»ƒçƒˆç«éž­ã€‚\n");
 
         return 1;
 }
@@ -129,10 +129,10 @@ int practice_skill(object me)
 {
         if( (int)me->query("kee") < 25
         ||      (int)me->query("force") < 5 )
-                return notify_fail("ÄãµÄÄÚÁ¦»òÆø²»¹»£¬Ã»ÓÐ°ì·¨Á·Ï°ÁÒ»ð±Þ¡£\n");
+                return notify_fail("ä½ çš„å†…åŠ›æˆ–æ°”ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒä¹ çƒˆç«éž­ã€‚\n");
         me->receive_damage("kee", 25);
         me->add("force", -5);
-        write("Äã°´×ÅËùÑ§Á·ÁËÒ»±éÁÒ»ð±Þ¡£\n");
+        write("ä½ æŒ‰ç€æ‰€å­¦ç»ƒäº†ä¸€éçƒˆç«éž­ã€‚\n");
         return 1;
 }
 
@@ -198,7 +198,7 @@ void second_attack()
    me->set_temp("weapon", second);
    me->reset_action();
 
-   message_vision(RED"\n$NÒ»ÕÐÕ¼ÁËÏÈ»ú£¬Á¬Ðø·¢¶¯½ø¹¥¡£\n"NOR, me);
+   message_vision(RED"\n$Nä¸€æ‹›å äº†å…ˆæœºï¼Œè¿žç»­å‘åŠ¨è¿›æ”»ã€‚\n"NOR, me);
    COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
         
    second->set("equipped", "second_wield");

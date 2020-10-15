@@ -3,13 +3,13 @@ inherit ITEM;
 #include <ansi.h>
 void create()
 {
-	set_name("É±ÊÖÅÆ", ({ "pai" , "É±ÊÖÅÆ"}) );
+	set_name("æ€æ‰‹ç‰Œ", ({ "pai" , "æ€æ‰‹ç‰Œ"}) );
 	set_weight(50);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¿é");
-		set("long", HIR "ÏÊºìËÆÑªµÄÉ±ÊÖÅÆ\n" NOR);
+		set("unit", "å—");
+		set("long", HIR "é²œçº¢ä¼¼è¡€çš„æ€æ‰‹ç‰Œ\n" NOR);
 		set("value", 1000);
 	}
 }

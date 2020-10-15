@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("»ï¼Æ", ({ "huoji" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("ä¼™è®¡", ({ "huoji" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 22);
-        set("long", "Õâ¸ö»ï¼ÆÕıÔÚÊÖÃ¦½ÅÂÒµÄÍùïÚ³µÉÏ×°ÔØ»õÎï. \n");
+        set("long", "è¿™ä¸ªä¼™è®¡æ­£åœ¨æ‰‹å¿™è„šä¹±çš„å¾€é•–è½¦ä¸Šè£…è½½è´§ç‰©. \n");
 
         set("combat_exp", 1000);
         set("attitude", "heroism");

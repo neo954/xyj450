@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // celestrike.c
@@ -6,57 +6,57 @@
 inherit SKILL;
 
 mapping *action = ({
-   ([   "action":     "$NÊ¹³öÒ»ÕĞ¡¸´óÌìÂŞÊ½¡¹£¬ÓÒÕÆ´©³ö»÷Ïò$nµÄ$l",
+   ([   "action":     "$Nä½¿å‡ºä¸€æ‹›ã€Œå¤§å¤©ç½—å¼ã€ï¼Œå³æŒç©¿å‡ºå‡»å‘$nçš„$l",
      "dodge":     -30,
      "parry":     10,
      "force":     200,
-     "damage_type":   "ğöÉË"
+     "damage_type":   "ç˜€ä¼¤"
    ]),
-   ([   "action":     "$NÊ¹³öÒ»ÕĞ¡¸´óÌìÂŞÊ½¡¹£¬×óÕÆ»¯ĞéÎªÊµ»÷Ïò$nµÄ$l",
+   ([   "action":     "$Nä½¿å‡ºä¸€æ‹›ã€Œå¤§å¤©ç½—å¼ã€ï¼Œå·¦æŒåŒ–è™šä¸ºå®å‡»å‘$nçš„$l",
      "dodge":     -10,
      "parry":     -30,
      "force":     170,
-     "damage_type":   "ğöÉË"
+     "damage_type":   "ç˜€ä¼¤"
    ]),
-   ([   "action":     "$NÊ¹³öÌìĞ°ÕÆ·¨¡¸Ğ¡ÌìÂŞÊ½¡¹£¬Èç¹í÷È°ãÆÛÖÁ$nÉíÇ°£¬Ò»ÕÆÅÄÏò$nµÄ$l",
+   ([   "action":     "$Nä½¿å‡ºå¤©é‚ªæŒæ³•ã€Œå°å¤©ç½—å¼ã€ï¼Œå¦‚é¬¼é­…èˆ¬æ¬ºè‡³$nèº«å‰ï¼Œä¸€æŒæ‹å‘$nçš„$l",
      "dodge":     -30,
      "parry":     10,
      "force":     150,
-     "damage_type":   "ğöÉË"
+     "damage_type":   "ç˜€ä¼¤"
    ]),
-   ([   "action":     "$NË«ÕÆÒ»´í£¬Ê¹³ö¡¸Ñ©ÑôÈıÁ¬ÔÂ¡¹£¬¶Ô×¼$nµÄ$lÁ¬ĞøÅÄ³öÈıÕÆ",
+   ([   "action":     "$NåŒæŒä¸€é”™ï¼Œä½¿å‡ºã€Œé›ªé˜³ä¸‰è¿æœˆã€ï¼Œå¯¹å‡†$nçš„$lè¿ç»­æ‹å‡ºä¸‰æŒ",
      "dodge":     10,
      "parry":     -30,
      "force":     260,
-     "damage_type":   "ğöÉË"
+     "damage_type":   "ç˜€ä¼¤"
    ]),
-   ([   "action":     "$N×óÕÆ»­ÁË¸öÈ¦È¦£¬ÓÒÕÆÍÆ³ö£¬Ò»ÕĞ¡¸Áé¶¯Îå·½¹Ä¡¹»÷Ïò$n$l",
+   ([   "action":     "$Nå·¦æŒç”»äº†ä¸ªåœˆåœˆï¼Œå³æŒæ¨å‡ºï¼Œä¸€æ‹›ã€ŒçµåŠ¨äº”æ–¹é¼“ã€å‡»å‘$n$l",
      "dodge":     -20,
      "parry":     -30,
      "force":     240,
-     "damage_type":   "ğöÉË"
+     "damage_type":   "ç˜€ä¼¤"
    ]),
-   ([   "action":     "$NÊ¹³ö¡¸·çÀ×ÆßĞÇ¶Ï¡¹£¬ÉíĞÎÉ¢×÷Æß´¦Í¬Ê±Ïò$nµÄ$l³öÕÆ¹¥»÷",
+   ([   "action":     "$Nä½¿å‡ºã€Œé£é›·ä¸ƒæ˜Ÿæ–­ã€ï¼Œèº«å½¢æ•£ä½œä¸ƒå¤„åŒæ—¶å‘$nçš„$lå‡ºæŒæ”»å‡»",
      "dodge":     -70,
      "parry":     -10,
      "force":     280,
-     "damage_type":   "ğöÉË"
+     "damage_type":   "ç˜€ä¼¤"
    ]),
-   ([   "action":     "$NÍÂÆøÑïÉù£¬Ò»ÕĞ¡¸Æøº³¾ÅÖØÌì¡¹Ë«ÕÆ²¢Á¦ÍÆ³ö",
+   ([   "action":     "$Nåæ°”æ‰¬å£°ï¼Œä¸€æ‹›ã€Œæ°”æ’¼ä¹é‡å¤©ã€åŒæŒå¹¶åŠ›æ¨å‡º",
      "parry":     -40,
      "force":     320,
-     "damage_type":   "ğöÉË"
+     "damage_type":   "ç˜€ä¼¤"
    ]),
 });
 
 int valid_learn(object me)
 {
    if( me->query_temp("weapon") || me->query_temp("secondary_weapon") )
-     return notify_fail("Á·ÌìĞ°ÉñÕÆ±ØĞë¿ÕÊÖ¡£\n");
+     return notify_fail("ç»ƒå¤©é‚ªç¥æŒå¿…é¡»ç©ºæ‰‹ã€‚\n");
    if( (int)me->query_skill("celestial", 1) < 20 )
-     return notify_fail("ÄãµÄÌìĞ°Éñ¹¦\»ğºò²»×ã£¬ÎŞ·¨Á·ÌìĞ°ÕÆ·¨¡£\n");
+     return notify_fail("ä½ çš„å¤©é‚ªç¥åŠŸ\ç«å€™ä¸è¶³ï¼Œæ— æ³•ç»ƒå¤©é‚ªæŒæ³•ã€‚\n");
    if( (int)me->query("max_force") < 100 )
-     return notify_fail("ÄãµÄÄÚÁ¦Ì«Èõ£¬ÎŞ·¨Á·ÌìĞ°ÕÆ·¨¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›å¤ªå¼±ï¼Œæ— æ³•ç»ƒå¤©é‚ªæŒæ³•ã€‚\n");
    return 1;
 }
 
@@ -70,9 +70,9 @@ mapping query_action(object me, object weapon)
 int practice_skill(object me)
 {
    if( (int)me->query("kee") < 30 )
-     return notify_fail("ÄãµÄÌåÁ¦²»¹»ÁË£¬ĞİÏ¢Ò»ÏÂÔÙÁ·°É¡£\n");
+     return notify_fail("ä½ çš„ä½“åŠ›ä¸å¤Ÿäº†ï¼Œä¼‘æ¯ä¸€ä¸‹å†ç»ƒå§ã€‚\n");
    if( (int)me->query("force") < 5 )
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»ÁË£¬ĞİÏ¢Ò»ÏÂÔÙÁ·°É¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿäº†ï¼Œä¼‘æ¯ä¸€ä¸‹å†ç»ƒå§ã€‚\n");
    me->receive_damage("kee", 30);
    me->add("force", -5);
    return 1;

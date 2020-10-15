@@ -4,17 +4,17 @@
 inherit NPC;
 void create()
 {
-	set_name("ºì×ìĞ¡ÂéÈ¸", ({ "maque", "que" }) );
-	set("race", "Ò°ÊŞ");
-	set("gender", "ĞÛĞÔ");
+	set_name("çº¢å˜´å°éº»é›€", ({ "maque", "que" }) );
+	set("race", "é‡å…½");
+	set("gender", "é›„æ€§");
 	set("age", 3);
-	set("long", "ÕâÊÇÒ»Ö»ºì×ìĞ¡ÂéÈ¸\n");
+	set("long", "è¿™æ˜¯ä¸€åªçº¢å˜´å°éº»é›€\n");
 	set("attitude", "peaceful");
-	set("limbs", ({ "Í·²¿", "ÉíÌå", "×ó½Å", "ÓÒ½Å", "Î²°Í" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å·¦è„š", "å³è„š", "å°¾å·´" }) );
 	set("verbs", ({ "bite", "claw" }) );
         set("chat_chance", 1);
         set("chat_msg", ({
-"Ğ¡ÂéÈ¸£¢ß´¡«¡«ß´ß´£¢µØÃù½ĞÁË¼¸Éù\n",
+"å°éº»é›€ï¼‚å½ï½ï½å½å½ï¼‚åœ°é¸£å«äº†å‡ å£°\n",
         }) );
 	set_temp("apply/attack", 60);
 	set_temp("apply/armor", 40);

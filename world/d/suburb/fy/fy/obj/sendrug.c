@@ -4,14 +4,14 @@ inherit ITEM;
 
 void create()
 {
-	set_name("´ó·çÍè",({"dafeng"}));
+	set_name("å¤§é£ä¸¸",({"dafeng"}));
         set_weight(60);
         if( clonep() )
                 set_default_object(__FILE__);
 	else {
 	    set("long",
-     	        "Ò»¿Å´ó·çÍè£¬ ¿ÉÒÔÓÃ£¨£õ£ó£å£©À´ÔöÉñ ¡£\n");
-	    set("unit","¿Å");
+     	        "ä¸€é¢—å¤§é£ä¸¸ï¼Œ å¯ä»¥ç”¨ï¼ˆï½•ï½“ï½…ï¼‰æ¥å¢ç¥ ã€‚\n");
+	    set("unit","é¢—");
 	    set("value", 2000);
 	}
 }
@@ -28,12 +28,12 @@ int apply_medicine()
 	int diff;
 
 	if(this_player()->is_fighting())
-	    return notify_fail("Õ½¶·ÖĞ²»ÄÜÓÃÒ©£¡£¡\n");
+	    return notify_fail("æˆ˜æ–—ä¸­ä¸èƒ½ç”¨è¯ï¼ï¼\n");
 	diff = this_player()->query("max_sen")-this_player()->query("eff_sen");
-	if(!(diff))    return notify_fail("ÄãÃ»ÓĞÊÜÉË£¡\n");
+	if(!(diff))    return notify_fail("ä½ æ²¡æœ‰å—ä¼¤ï¼\n");
 	if(value > diff) value = diff;
 	    
-	message_vision("$NÓÃ´ó·çÍèÔöÉñ£®\n",this_player());
+	message_vision("$Nç”¨å¤§é£ä¸¸å¢ç¥ï¼\n",this_player());
 	this_player()->add("eff_sen",value);
 	destruct(this_object());
 	return 1;

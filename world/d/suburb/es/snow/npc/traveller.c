@@ -3,14 +3,14 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÂÃ¿Í", ({ "traveller"}));
+        set_name("æ—…å®¢", ({ "traveller"}));
         if(random(10)<7)
-            set("gender", "ÄÐÐÔ" );
+            set("gender", "ç”·æ€§" );
         else
-            set("gender", "Å®ÐÔ" );
+            set("gender", "å¥³æ€§" );
         set("age", 15+random(50));
         set("long",
-                "ÕâÊÇÒ»Î»À´Ñ©Í¤ÕòµÄÍâµØÂÃ¿Í.\n");
+                "è¿™æ˜¯ä¸€ä½æ¥é›ªäº­é•‡çš„å¤–åœ°æ—…å®¢.\n");
         set("chat_chance", 40);
         set("chat_msg", ({
 (: random_move :)

@@ -2,8 +2,8 @@ inherit NPC;
  
 void create()
 {
-        set_name("�Ů", ({ "girl","servant" }) );
-        set("gender", "Ů��" );
+        set_name("婢女", ({ "girl","servant" }) );
+        set("gender", "女性" );
         set("age",20);
         set("long", @TEXT
 TEXT

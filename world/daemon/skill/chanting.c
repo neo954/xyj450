@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // literate.c
@@ -13,9 +13,9 @@ string type() { return "knowledge"; }
 int valid_learn(object me)
 {
    if( (int)me->query_skill("buddhism") <= (int)me->query_skill("chanting") )
-     return notify_fail("ÄãµÄ´ó³Ë·ğ·¨ĞŞÎª»¹²»¹»¸ßÉî£¬ÎŞ·¨Ñ§Ï°ËĞ¾­¡£\n");
+     return notify_fail("ä½ çš„å¤§ä¹˜ä½›æ³•ä¿®ä¸ºè¿˜ä¸å¤Ÿé«˜æ·±ï¼Œæ— æ³•å­¦ä¹ è¯µç»ã€‚\n");
    if( (int)me->query("bellicosity") > 100 )
-     return notify_fail("ÄãµÄÉ±ÆøÌ«ÖØ£¬ÎŞ·¨ĞŞÁ¶ËĞ¾­¡£\n");
+     return notify_fail("ä½ çš„æ€æ°”å¤ªé‡ï¼Œæ— æ³•ä¿®ç‚¼è¯µç»ã€‚\n");
    return 1;
 }
 

@@ -3,21 +3,21 @@
 inherit BLADE;
 void create()
 {
-        set_name( HIR "»ğÑæ³¤µ¶" NOR, ({ "fireblade" }) );
+        set_name( HIR "ç«ç„°é•¿åˆ€" NOR, ({ "fireblade" }) );
         set_weight(7000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "°Ñ");
+                set("unit", "æŠŠ");
                 set("long",
                         
-"Ò»°Ñ·Ç½ğ·ÇÄ¾£¬Í¨Ìå°µºìµÄ³¤µ¶\n"
+"ä¸€æŠŠéé‡‘éæœ¨ï¼Œé€šä½“æš—çº¢çš„é•¿åˆ€\n"
 );
                 set("value", 18000);
 		set("for_bandit",1);
                 set("material", "steel");
-                set("wield_msg", "$N¡¸à§¡¹µØÒ»Éù³é³öÒ»°Ñ$nÎÕÔÚÊÖÖĞ¡£\n");
-                set("unequip_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄµ¶ÇÊ¡£\n");
+                set("wield_msg", "$Nã€Œå”°ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+                set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„åˆ€é˜ã€‚\n");
         }
 
         init_blade(25);
@@ -34,7 +34,7 @@ mixed hit_ob(object me, object victim, int damage_bonus)
 	if(dam > pro)
 	{
 	victim->receive_wound("kee",5);
-	return HIR "»ğÑæ³¤µ¶Åç³öÒ»¹ÉĞÉºìµÄ»ğÑæ£¬ÁÇ¿¾×Å$nµÄÈ«Éí¡£\n" NOR;
+	return HIR "ç«ç„°é•¿åˆ€å–·å‡ºä¸€è‚¡çŒ©çº¢çš„ç«ç„°ï¼Œç‡çƒ¤ç€$nçš„å…¨èº«ã€‚\n" NOR;
 	}
 }
  

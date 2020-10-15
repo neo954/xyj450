@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 //standroom.c used by weiqi...others may hate this format:D
@@ -8,11 +8,11 @@ inherit ROOM;
 
 void create ()
 {
-   set ("short", "ããѩ��");
+   set ("short", "茫茫雪峰");
    set ("long", @LONG
 
-�����Х����ѩãã��������ȥ�������Ӳ�����ѩ�塣���֮��
-���Ѻ�������������ѩ����ѩ��
+北风呼啸，飞雪茫茫，四面望去均是绵延不尽的雪峰。天地之间
+似已毫无生迹，除了雪还是雪。
 LONG);
 
    //set("item_desc", ([" *** " : " *** \n", ]));

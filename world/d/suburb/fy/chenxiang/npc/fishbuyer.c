@@ -4,16 +4,16 @@
 inherit NPC;
 void create()
 {
-	set_name("ÂòÓãµÄĞ¡¹ÃÄï", ({ "fishbuyer" }) );
-	set("gender", "Å®ĞÔ" );
+	set_name("ä¹°é±¼çš„å°å§‘å¨˜", ({ "fishbuyer" }) );
+	set("gender", "å¥³æ€§" );
 	set("age", 15);
 	set("combat_exp", 5);
 	set("attitude", "friendly");
 	set("per",20);
         set("chat_chance", 15);
         set("chat_msg", ({
-                "ÂòÓãµÄĞ¡¹ÃÄïÎÊµÀ£ºÕâÓãÔõÃ´Âô£¿\n",
-                "ÂòÓãµÄĞ¡¹ÃÄïµÀ£º°ËÎÄÒ»½ïÂô²»Âô£¿\n",
+                "ä¹°é±¼çš„å°å§‘å¨˜é—®é“ï¼šè¿™é±¼æ€ä¹ˆå–ï¼Ÿ\n",
+                "ä¹°é±¼çš„å°å§‘å¨˜é“ï¼šå…«æ–‡ä¸€æ–¤å–ä¸å–ï¼Ÿ\n",
         }) );
 
 	setup();

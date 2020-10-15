@@ -3,13 +3,13 @@ inherit NPC;
 int big_blowing();
 void create()
 {
-	set_name(HIR "ÁÒ»ðÄõÁú" NOR, ({ "dragon lord", "dragon" }) );
-	set("race", "Ò°ÊÞ");
-	set("gender", "ÐÛÐÔ");
+	set_name(HIR "çƒˆç«å­½é¾™" NOR, ({ "dragon lord", "dragon" }) );
+	set("race", "é‡Žå…½");
+	set("gender", "é›„æ€§");
 	set("age", 200);
 	set("long", 
-"ÕâÊÇÒ»ÌõÈ«Éí³àºì£¬ÎüÌìµØÖ®¼äµÄ»ðÆø¶ø³¤´óµÄÄõÁú£¡
-ËüÈ«ÉíÉ¢·¢×Å³àºìÉ«µÄ»ðÑæ\n");
+"è¿™æ˜¯ä¸€æ¡å…¨èº«èµ¤çº¢ï¼Œå¸å¤©åœ°ä¹‹é—´çš„ç«æ°”è€Œé•¿å¤§çš„å­½é¾™ï¼
+å®ƒå…¨èº«æ•£å‘ç€èµ¤çº¢è‰²çš„ç«ç„°\n");
 	
 	set("str", 48);
 	set("cor", 52);
@@ -19,7 +19,7 @@ void create()
 	set("max_gin", 30000);
 	set("max_sen", 30000);
 	set("attitude", "aggressive");
-	set("limbs", ({ "Í·²¿", "ÉíÌå", "Î²°Í" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å°¾å·´" }) );
 	set("verbs", ({ "bite", "claw" }) );
         set("chat_chance_combat", 10);
         set("chat_msg_combat", ({
@@ -39,7 +39,7 @@ void create()
 int big_blowing()
 {
 remove_call_out("hurting");
-message_vision( HIR "\n\n$N´ÓºÚË®ÀïÉîÉîµØÎüÈëÒ»¿Ú»ðÆø£¬È«Éí×ªÎªÏÊºìµÄ»ðÉ«£¬Õû¸öÁú¸¹ÕÍ´óÁË¼¸±¶£¡£¡\n\n" NOR,
+message_vision( HIR "\n\n$Nä»Žé»‘æ°´é‡Œæ·±æ·±åœ°å¸å…¥ä¸€å£ç«æ°”ï¼Œå…¨èº«è½¬ä¸ºé²œçº¢çš„ç«è‰²ï¼Œæ•´ä¸ªé¾™è…¹èƒ€å¤§äº†å‡ å€ï¼ï¼\n\n" NOR,
 this_object());
 call_out("hurting",random(10)+2);
 
@@ -52,7 +52,7 @@ int hurting()
 	int i;
 	int dam;
 	object *inv;
-	message_vision( HIR "\n\n$NÍÂ³öÒ»¹É³ã¿É·Ù½ðµÄ»ðÑæ£®£®Õû¸öÌìµØËÆºõ¶¼±»È¼ÉÕ×Å£¡£¡£¡\n\n",this_object());
+	message_vision( HIR "\n\n$Nåå‡ºä¸€è‚¡ç‚½å¯ç„šé‡‘çš„ç«ç„°ï¼Žï¼Žæ•´ä¸ªå¤©åœ°ä¼¼ä¹Žéƒ½è¢«ç‡ƒçƒ§ç€ï¼ï¼ï¼\n\n",this_object());
 	inv = all_inventory(environment(this_object()));
         for(i=sizeof(inv)-1; i>=0; i--)
 	if( living(inv[i]))

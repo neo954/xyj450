@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // Room: /moon/yunu1.c
@@ -8,9 +8,9 @@ inherit ROOM;
 
 void create ()
 {
-  set ("short", "����Ҷ��");
+  set ("short", "桂树叶间");
   set ("long", @LONG
-���ܻ���������֦Ҷ��ï��ȴ�ѿ������ء�
+四周花香弥漫，枝叶繁茂，却已看不见地。
 LONG);
 
   set("exits", ([ /* sizeof() == 2 */

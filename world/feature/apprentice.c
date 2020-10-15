@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // apprentice.c
@@ -30,9 +30,9 @@ void assign_apprentice(string title, int privs)
 
    if( userp(this_object()) || !query("title") ) {
      if( family["generation"]==1 )
-        set("title", family["family_name"] + "¿ªÉ½×æÊ¦");
+        set("title", family["family_name"] + "å¼€å±±ç¥–å¸ˆ");
      else
-        set("title", sprintf("%sµÚ%s´ú%s", family["family_name"],
+        set("title", sprintf("%sç¬¬%sä»£%s", family["family_name"],
           chinese_number(family["generation"]), family["title"]));
    }
 }
@@ -67,7 +67,7 @@ int recruit_apprentice(object ob)
    family["generation"] = my_family["generation"] + 1;
    family["enter_time"] = time();
    ob->set("family", family);
-   ob->assign_apprentice("µÜ×Ó", 0);
+   ob->assign_apprentice("å¼Ÿå­", 0);
    return 1;
 }
 

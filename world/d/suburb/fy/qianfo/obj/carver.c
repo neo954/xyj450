@@ -6,17 +6,17 @@ inherit BLADE;
 
 void create()
 {
-    set_name("Ìú²Ëµ¶", ({ "carver" }) );
+    set_name("é“èœåˆ€", ({ "carver" }) );
     set_weight(2000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "±ú");
+                set("unit", "æŸ„");
                 set("value", 300);
                 set("material", "iron");
-        set("long", "Ò»°Ñ²»ºÜÀûµÄ²Ëµ¶, ²»¹ıÄÃÀ´ÇĞ²Ë¿³Èâ»¹ÊÇ´Â´ÂÓĞâÅµÄ¡£\n");
-                set("wield_msg", "$N³é³öÒ»°ÑÃ÷»Î»ÎµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-        set("unwield_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄÅ£Æ¤µ¶Ì×ÖĞ¡£\n");
+        set("long", "ä¸€æŠŠä¸å¾ˆåˆ©çš„èœåˆ€, ä¸è¿‡æ‹¿æ¥åˆ‡èœç è‚‰è¿˜æ˜¯ç»°ç»°æœ‰é¦€çš„ã€‚\n");
+                set("wield_msg", "$NæŠ½å‡ºä¸€æŠŠæ˜æ™ƒæ™ƒçš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+        set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„ç‰›çš®åˆ€å¥—ä¸­ã€‚\n");
         }
     init_blade(10);
         setup();

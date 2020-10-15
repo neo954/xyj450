@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÍÁ·Ë×¦ÑÀ", ({ "bandit minion", "bandit", "minion" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("åœŸåŒªçˆªç‰™", ({ "bandit minion", "bandit", "minion" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 26);
 	set("long",
-		"Ò»¸öÑÛÉñĞ×¶ñµÄÍÁ·Ë£¬Á³ÉÏºÃ¼¸Ìõ³¤³¤µÄµ¶°Ì£¬¿´ÆğÀ´¾ÍÖªµÀ²»ºÃÈÇ¡£\n");
+		"ä¸€ä¸ªçœ¼ç¥å‡¶æ¶çš„åœŸåŒªï¼Œè„¸ä¸Šå¥½å‡ æ¡é•¿é•¿çš„åˆ€ç–¤ï¼Œçœ‹èµ·æ¥å°±çŸ¥é“ä¸å¥½æƒ¹ã€‚\n");
 	set("combat_exp", 6000);
 	set("attitude", "aggressive");
 	set_skill("blade", 40);

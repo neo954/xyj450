@@ -6,13 +6,13 @@ inherit CLOTH;
 
 void create()
 {
-	set_name("´ó»¹µ¤", ({ "dan" }) );
+	set_name("å¤§è¿˜ä¸¹", ({ "dan" }) );
 	set_weight(1);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long","·çÔÆµÚÒ»µÄ½±Æ· ÓÃ·¨£ºboost\n");
-		set("unit", "¿Å");
+		set("long","é£äº‘ç¬¬ä¸€çš„å¥–å“ ç”¨æ³•ï¼šboost\n");
+		set("unit", "é¢—");
 		set("value", 5000000);
 		set("no_drop",1);
 	}
@@ -37,7 +37,7 @@ int boost_skill()
 	ob = this_player();
         skl = ob->query_skills();
         if(!sizeof(skl)) {
-                write( "ÄãÄ¿Ç°²¢Ã»ÓĞÑ§»áÈÎºÎ¼¼ÄÜ¡£\n");
+                write( "ä½ ç›®å‰å¹¶æ²¡æœ‰å­¦ä¼šä»»ä½•æŠ€èƒ½ã€‚\n");
                 return 1;
         }
         sname  = sort_array( keys(skl), (: strcmp :) );
@@ -53,7 +53,7 @@ int boost_skill()
 		if(skl[sname[i]] > thelevel) {theskill = sname[i]; thelevel = skl[sname[i]];}	
 	}
 	ob->set_skill(theskill, (int)thelevel+1);
-message_vision("$NµÄ"+to_chinese(theskill)+"ÔöÇ¿ÁË¡£\n", this_player());
+message_vision("$Nçš„"+to_chinese(theskill)+"å¢å¼ºäº†ã€‚\n", this_player());
 destruct(this_object());
 return 1;
 }

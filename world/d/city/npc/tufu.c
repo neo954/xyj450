@@ -1,16 +1,16 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit NPC;
 
 void create()
 {
-        set_name("ÍõÁÖ", ({"wang lin", "wang"}));
+        set_name("ç‹æ—", ({"wang lin", "wang"}));
         set("age", 32);
-        set("gender", "ÄĞĞÔ");
-        set("long", "ÈâÆÌµÄÀÏ°å£¬³¤µÄ»¢±³ĞÜÑü¡£\n");
+        set("gender", "ç”·æ€§");
+        set("long", "è‚‰é“ºçš„è€æ¿ï¼Œé•¿çš„è™èƒŒç†Šè…°ã€‚\n");
         set("attitude", "peaceful");
-   set("title", "ÈâÆÌÀÏ°å");
+   set("title", "è‚‰é“ºè€æ¿");
         set("combat_exp", 40000);
         set("shen_type", 1);
    set("max_force", 400);

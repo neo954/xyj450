@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // look.c
@@ -15,66 +15,66 @@ int look_living(object me, object obj);
 int look_room_item(object me, string arg);
 
 string *per_msg_male1 = ({
-        CYN "����ΰ��Ӣͦ������֮�䣬��ɷ��\n" NOR,
-        CYN "����Ӣΰ������������ȷʵ���������\n" NOR,
+        CYN "长得伟岸英挺，顾盼之间，神采飞扬。\n" NOR,
+        CYN "丰姿英伟，气宇轩昂，确实是人中龙凤。\n" NOR,
 });
 
 string *per_msg_male2 = ({
-        CYN "Ӣ��������������档\n" NOR,
-        CYN "��ò���ڣ���Ŀ���ʡ�\n" NOR,
-        CYN "��ò���棬���˷��ס�\n" NOR,
+        CYN "英俊潇洒，风度翩翩。\n" NOR,
+        CYN "相貌出众，面目俊朗。\n" NOR,
+        CYN "面貌清奇，丰姿非俗。\n" NOR,
 });
 string *per_msg_male3 = ({
-        CYN "��òƽƽ��ûʲô�ÿ��ġ�\n" NOR,
-        CYN "��ò�׶��������⡣\n" NOR,
-        CYN "�������ۣ��������硣\n" NOR,
+        CYN "相貌平平，没什么好看的。\n" NOR,
+        CYN "相貌凶恶，满脸横肉。\n" NOR,
+        CYN "暴睛环眼，嘴脸凶顽。\n" NOR,
 });
 string *per_msg_male4 = ({
-        CYN "����һ�����Ѳ��ۣ��˾˲�����ģ����\n" NOR,
-        CYN "��������ģ�һ���޾���ɵ�ģ���� \n" NOR, 
-        CYN "������֣���ͷ�������������˽�ı��ҡ� \n" NOR, 
+        CYN "长得一副姥姥不疼，舅舅不爱的模样。\n" NOR,
+        CYN "长得蔫蔫的，一副无精打采的模样。 \n" NOR, 
+        CYN "五短三粗，肥头大耳，大概是猪八戒的本家。 \n" NOR, 
 });
 string *per_msg_female1 = ({
-        CYN "�������ƣ�����ʤѩ����֪�㵹�˶���Ӣ�ۺ��ܡ� \n" NOR,
-        CYN "������������Ŀ���飬����һЦ������������Ȼ�Ķ��� \n" NOR,
-        CYN "�������֣��������ˣ��������Ҽ������� \n" NOR, 
+        CYN "长发如云，肌肤胜雪，不知倾倒了多少英雄豪杰。 \n" NOR,
+        CYN "俏脸生春，妙目含情，轻轻一笑，不觉让人怦然心动。 \n" NOR,
+        CYN "风情万种，楚楚动人，当真是我见犹怜。 \n" NOR, 
 });
 string *per_msg_female2 = ({
-        CYN "������������ɫ���������˶��ˡ� \n" NOR,
-        CYN "���潿�ݻ���¶������ϸ�������̡� \n" NOR,
-        CYN "����κ죬�ۺ��ﲨ������Ͷ��֮�䣬ȷ��һ�����ϡ� \n" NOR,
+        CYN "婷婷玉立，容色秀丽，风姿动人。 \n" NOR,
+        CYN "玉面娇容花含露，纤足细腰柳带烟。 \n" NOR,
+        CYN "面带晕红，眼含秋波。举手投足之间，确有一番风韵。 \n" NOR,
 });
 string *per_msg_female3 = ({
-        CYN "���㲻�Ͼ������ˣ�Ҳ���м�����ɫ�� \n" NOR,
-        CYN "���û����������м�����ɫ��  \n" NOR,
+        CYN "虽算不上绝世佳人，也颇有几份姿色。 \n" NOR,
+        CYN "长得还不错，颇有几份姿色。  \n" NOR,
 });
 string *per_msg_female4 = ({
-        CYN "���ñȽ��ѿ��� \n" NOR,
-        CYN "���á���������  \n" NOR,
+        CYN "长得比较难看。 \n" NOR,
+        CYN "长得………唉！  \n" NOR,
 });
 
 string *per_msg_kid1 = ({
-        CYN "��ü���ۣ�����ʮ�㡣\n" NOR,
-        CYN "������ã���̬�Ƿ���\n" NOR,
-        CYN "�������£�ɫ��������\n" NOR,
+        CYN "月眉星眼，灵气十足。\n" NOR,
+        CYN "机灵活泼，神态非凡。\n" NOR,
+        CYN "面若秋月，色如晓花。\n" NOR,
 });
 
 string *per_msg_kid2 = ({
-        CYN "¡����ۣ���ɫ����\n" NOR,
-        CYN "�����ལ�����ϲ����\n" NOR,
-        CYN "ϸƤ���⣬�ڳ�������\n" NOR,
+        CYN "隆额大眼，脸色红润。\n" NOR,
+        CYN "胖胖嘟嘟，逗人喜欢。\n" NOR,
+        CYN "细皮嫩肉，口齿伶俐。\n" NOR,
 });
 
 string *per_msg_kid3 = ({
-        CYN "�����󰫣�ɵ��ɵ����\n" NOR,
-        CYN "�ʷ����֣�С��С�ۡ�\n" NOR,
-        CYN "��ͷ���ԣ����ֱ��š�\n" NOR,
+        CYN "身材矬矮，傻里傻气。\n" NOR,
+        CYN "肥肥胖胖，小鼻小眼。\n" NOR,
+        CYN "呆头呆脑，笨手笨脚。\n" NOR,
 });
 
 string *per_msg_kid4 = ({
-        CYN "��ͷ���ţ����Ƽ��ݡ�\n" NOR,
-        CYN "����ľ�������в�ɫ��\n" NOR,
-        CYN "��ٲ�������֫���ࡣ\n" NOR,
+        CYN "蓬头垢脚，脸黄肌瘦。\n" NOR,
+        CYN "神如木鸡，面有病色。\n" NOR,
+        CYN "五官不整，四肢不洁。\n" NOR,
 });
 
 // snowcat 12/20/97
@@ -92,7 +92,7 @@ string ride_suffix (object me)
      ridee = 0;
     }
     else
-      ridemsg = " <"+ridee->query("ride/msg")+"��"+ridee->name()+"��>";
+      ridemsg = " <"+ridee->query("ride/msg")+"在"+ridee->name()+"上>";
   }
   if (! ridee) {
     me->add_temp("apply/dodge",-me->query_temp("ride/dodge"));
@@ -125,7 +125,7 @@ int look_room(object me, object env)
    string str, *dirs;
 
    if( !env ) {
-     write("������ܻ����ɵ�һƬ��ʲôҲû�С�\n");
+     write("你的四周灰蒙蒙地一片，什么也没有。\n");
      return 1;
    }
    str = sprintf( "%s - %s\n    %s%s",
@@ -141,12 +141,12 @@ int look_room(object me, object env)
           dirs[i] = 0;
      dirs -= ({ 0 });
      if( sizeof(dirs)==0 )
-        str += "    ����û���κ����Եĳ�·��\n";
+        str += "    这里没有任何明显的出路。\n";
      else if( sizeof(dirs)==1 )
-        str += "    ����Ψһ�ĳ����� " + BOLD + dirs[0] + NOR + "��\n";
+        str += "    这里唯一的出口是 " + BOLD + dirs[0] + NOR + "。\n";
      else
-        str += sprintf("    �������Եĳ����� " + BOLD + "%s" + NOR + " �� " + BOLD + "%s" + NOR + "��\n",
-          implode(dirs[0..sizeof(dirs)-2], "��"), dirs[sizeof(dirs)-1]);
+        str += sprintf("    这里明显的出口是 " + BOLD + "%s" + NOR + " 和 " + BOLD + "%s" + NOR + "。\n",
+          implode(dirs[0..sizeof(dirs)-2], "、"), dirs[sizeof(dirs)-1]);
    }
 //   str += env->door_description();
 
@@ -171,7 +171,7 @@ int look_item(object me, object obj)
    inv = all_inventory(obj);
    if( sizeof(inv) ) {
      inv = map_array(inv, "inventory_look", this_object() );
-     message("vision", sprintf("�����У�\n  %s\n",
+     message("vision", sprintf("里面有：\n  %s\n",
         implode(inv, "\n  ") ), me);
    }
    return 1;
@@ -189,7 +189,7 @@ string per_status_msg(int age, int per, string gender)
      else    return ( per_msg_kid4[random(sizeof(per_msg_kid4))]);
      }
      
-   if ( gender == "����" ) {
+   if ( gender == "男性" ) {
      if ( per>=25 )
         return ( per_msg_male1[random(sizeof(per_msg_male1))]);
      else if ( per>=20 )
@@ -199,7 +199,7 @@ string per_status_msg(int age, int per, string gender)
      else    return ( per_msg_male4[random(sizeof(per_msg_male4))]);
      }
      
-   if ( gender == "Ů��" ) {
+   if ( gender == "女性" ) {
      if ( per>=25 )
                            return ( per_msg_female1[random(sizeof(per_msg_female1))]);
                    else if ( per>=20 )
@@ -209,7 +209,7 @@ string per_status_msg(int age, int per, string gender)
          else   return ( per_msg_female4[random(sizeof(per_msg_female4))]);
                 }
    else return "";
-//   else return "����������ûʲô���\n";
+//   else return "长得怎样你没什么概念。\n";
 }
 
 int look_living(object me, object obj)
@@ -232,7 +232,7 @@ int look_living(object me, object obj)
      ogender=obj->query("gender");
      orace=obj->query("race");
      oage=obj->query("age");
-//fake_age is set as the age when player gets dao-xing:�����ֻء�
+//fake_age is set as the age when player gets dao-xing:不堕轮回。
 //so later on, he/she always looks like the age of that time:)
 //but need a "look" to activate all the relatived settings...weiqi
 //only when one is not in the status of "bian", check his/her
@@ -257,10 +257,10 @@ int look_living(object me, object obj)
 
 
    if( me!=obj )
-     message("vision", me->name() + "�������㿴����֪����Щʲô���⡣\n", obj);
+     message("vision", me->name() + "正盯着你看，不知道打些什么主意。\n", obj);
 
    str = obj->long();
-   str = replace_string(str, "��\n", ride_suffix(obj)+"��\n");
+   str = replace_string(str, "。\n", ride_suffix(obj)+"。\n");
 
    str = replace_string(str, "$n", me->name());
    str = replace_string(str, "$N", obj->name());
@@ -274,22 +274,22 @@ int look_living(object me, object obj)
 
         if(obj->query_temp("d_mana")==0 || obj->query_temp("is_character")) {
    
-   if( orace=="����"
+   if( orace=="人类"
    &&   intp(oage) )
      if(oage<10) {
-        str += sprintf("%s��������Ȼ������ʮ�ꡣ\n", pro);
+        str += sprintf("%s看起来显然还不到十岁。\n", pro);
      }
      else{
-        str += sprintf("%s������Լ%s���ꡣ\n", pro, chinese_number(oage / 10 * 10));
+        str += sprintf("%s看起来约%s多岁。\n", pro, chinese_number(oage / 10 * 10));
      }
 
    //check about wife and husband
    if((obj->parse_command_id_list())[0]==me->query("couple/id") ) {
-     if( (string)me->query("gender")=="Ů��" ){
-     str += sprintf("%s������ɷ�\n", pro);
+     if( (string)me->query("gender")=="女性" ){
+     str += sprintf("%s是你的丈夫。\n", pro);
      }
      else{
-        str += sprintf("%s��������ӡ�\n", pro);
+        str += sprintf("%s是你的妻子。\n", pro);
      }
    }
    // If we both has family, check if we have any relations.
@@ -299,31 +299,31 @@ int look_living(object me, object obj)
    &&   fam["family_name"] == my_fam["family_name"] ) {
    
      if( fam["generation"]==my_fam["generation"] ) {
-        if( ogender == "����" )
-          str += sprintf( pro + "�����%s%s��\n",
-             my_fam["master_id"] == fam["master_id"] ? "": "ͬ��",
-             my_fam["enter_time"] > fam["enter_time"] ? "ʦ��": "ʦ��");
+        if( ogender == "男性" )
+          str += sprintf( pro + "是你的%s%s。\n",
+             my_fam["master_id"] == fam["master_id"] ? "": "同门",
+             my_fam["enter_time"] > fam["enter_time"] ? "师兄": "师弟");
         else
-          str += sprintf( pro + "�����%s%s��\n",
-             my_fam["master_id"] == fam["master_id"] ? "": "ͬ��",
-             my_fam["enter_time"] > fam["enter_time"] ? "ʦ��": "ʦ��");
+          str += sprintf( pro + "是你的%s%s。\n",
+             my_fam["master_id"] == fam["master_id"] ? "": "同门",
+             my_fam["enter_time"] > fam["enter_time"] ? "师姐": "师妹");
      } else if( fam["generation"] < my_fam["generation"] ) {
         if( member_array(my_fam["master_id"],
             obj->parse_command_id_list())>-1  )
-          str += pro + "�����ʦ����\n";
+          str += pro + "是你的师父。\n";
         else if( my_fam["generation"] - fam["generation"] > 1 )
-          str += pro + "�����ͬ�ų�����\n";
+          str += pro + "是你的同门长辈。\n";
         else if( fam["enter_time"] < my_fam["enter_time"] )
-          str += pro + "�����ʦ����\n";
+          str += pro + "是你的师伯。\n";
         else
-          str += pro + "�����ʦ�塣\n";
+          str += pro + "是你的师叔。\n";
      } else {
         if( fam["generation"] - my_fam["generation"] > 1 )
-          str += pro + "�����ͬ��������\n";
+          str += pro + "是你的同门晚辈。\n";
         else if( fam["master_id"] == me->query("id") )
-          str += pro + "����ĵ��ӡ�\n";
+          str += pro + "是你的弟子。\n";
         else
-          str += pro + "�����ʦֶ��\n";
+          str += pro + "是你的师侄。\n";
      }
    }
 
@@ -347,7 +347,7 @@ int look_living(object me, object obj)
      inv = map_array(inv, "inventory_look", this_object(), obj->is_corpse()? 0 : 1 );
      inv -= ({ 0 });
      if( sizeof(inv) )
-        str += sprintf( obj->is_corpse() ? "%s�������У�\n%s\n" : "%s���ϴ��ţ�\n%s\n",
+        str += sprintf( obj->is_corpse() ? "%s的遗物有：\n%s\n" : "%s身上带着：\n%s\n",
           pro, implode(inv, "\n") );
    }
         
@@ -358,7 +358,7 @@ int look_living(object me, object obj)
    if( obj!=me 
    &&   living(obj)
    &&   random((int)obj->query("bellicosity")/10) > (int)me->query_per() ) {
-     write( obj->name() + "ͻȻת��ͷ������һ�ۡ�\n");
+     write( obj->name() + "突然转过头来瞪你一眼。\n");
      COMBAT_D->auto_fight(obj, me, "berserk");
      return 1;
    }
@@ -381,7 +381,7 @@ string inventory_look(object obj, int flag)
 
    str = obj->short();
    if( obj->query("equipped") )
-     str = HIC "  ��" NOR + str;
+     str = HIC "  □" NOR + str;
    else if( !flag )
      str = "    " + str;
    else
@@ -396,7 +396,7 @@ int look_room_item(object me, string arg)
    mapping item, exits;
 
    if( !objectp(env = environment(me)) )
-     return notify_fail("����ֻ�л����ɵ�һƬ��ʲôҲû�С�\n");
+     return notify_fail("这里只有灰蒙蒙地一片，什么也没有。\n");
 
    if( mapp(item = env->query("item_desc")) && !undefinedp(item[arg]) ) {
      if( stringp(item[arg]) )
@@ -410,19 +410,19 @@ int look_room_item(object me, string arg)
      if( objectp(env = load_object(exits[arg])) )
         look_room(me, env);
      else {
-       return notify_fail("��ʲôҲ��������\n");
+       return notify_fail("你什么也看不见。\n");
      }
      return 1;
    }
-   return notify_fail("��Ҫ��ʲô��\n");
+   return notify_fail("你要看什么？\n");
 }
 
 int help (object me)
 {
    write(@HELP
-ָ���ʽ: look [<��Ʒ>|<����>|<����>]
+指令格式: look [<物品>|<生物>|<方向>]
  
-���ָ������鿴�����ڵĻ�����ĳ����Ʒ��������Ƿ���
+这个指令让你查看你所在的环境、某件物品、生物、或是方向。
  
 HELP
 );

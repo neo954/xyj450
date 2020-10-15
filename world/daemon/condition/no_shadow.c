@@ -8,9 +8,9 @@ int update_condition(object me, int duration)
 	me->receive_damage("sen", 10);
 	me->apply_condition("no_shadow", duration - 1);
         if( duration < 1 )
-	tell_object(me, HIW "ÄãÖÐµÄ" HIC "ÎÞÓ°¶¾" HIW "ÖÕÓÚÇå³ýÁË£¡\n" NOR );
+	tell_object(me, HIW "ä½ ä¸­çš„" HIC "æ— å½±æ¯’" HIW "ç»ˆäºŽæ¸…é™¤äº†ï¼\n" NOR );
 	else
-	tell_object(me, HIW "ÄãÖÐµÄ" HIC "ÎÞÓ°¶¾" HIW "·¢×÷ÁË£¡\n" NOR );
+	tell_object(me, HIW "ä½ ä¸­çš„" HIC "æ— å½±æ¯’" HIW "å‘ä½œäº†ï¼\n" NOR );
 	if( duration < 1 ) 
 		return 0;
 	return 1;

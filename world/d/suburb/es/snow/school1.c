@@ -6,11 +6,11 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "´¾·çÎä¹Ý´óÃÅ");
+	set("short", "æ·³é£Žæ­¦é¦†å¤§é—¨");
 	set("long", @LONG
-ÄãÏÖÔÚÕýÕ¾ÔÚÒ»¼ä´óÕ¬ÔºµÄÈë¿Ú£¬Á½Ö»¾Þ´óµÄÊ¯Ê¨ÕòÊØÔÚ´óÃÅµÄÁ½
-²à£¬Ò»ÕóÕóßººÈÓëµ¶½£Åö×²µÄÉùÒô´ÓÔº×ÓÖÐ´«À´£¬Í¨¹ý´óÃÅÍù¶«¿ÉÒÔÍû
-¼ûÐí¶àÉí´©»ÒÒÂµÄºº×ÓÕýÔÚ²ÙÁ·¡£
+ä½ çŽ°åœ¨æ­£ç«™åœ¨ä¸€é—´å¤§å®…é™¢çš„å…¥å£ï¼Œä¸¤åªå·¨å¤§çš„çŸ³ç‹®é•‡å®ˆåœ¨å¤§é—¨çš„ä¸¤
+ä¾§ï¼Œä¸€é˜µé˜µå†å–ä¸Žåˆ€å‰‘ç¢°æ’žçš„å£°éŸ³ä»Žé™¢å­ä¸­ä¼ æ¥ï¼Œé€šè¿‡å¤§é—¨å¾€ä¸œå¯ä»¥æœ›
+è§è®¸å¤šèº«ç©¿ç°è¡£çš„æ±‰å­æ­£åœ¨æ“ç»ƒã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -21,7 +21,7 @@ LONG
 	set("objects", ([
 		__DIR__"npc/guard": 1 ]) );
 
-	create_door("east", "ºìÆá´óÃÅ", "west", DOOR_CLOSED);
+	create_door("east", "çº¢æ¼†å¤§é—¨", "west", DOOR_CLOSED);
 
 	setup();
 	replace_program(ROOM);

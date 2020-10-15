@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("Îä¹İµÜ×Ó", ({ "trainee" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("æ­¦é¦†å¼Ÿå­", ({ "trainee" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 19);
-	set("long", "Äã¿´µ½Ò»Î»Éí²Ä¸ß´óµÄºº×Ó£¬ÕıÔÚĞÁ¿àµØ²ÙÁ·Öø¡£\n");
+	set("long", "ä½ çœ‹åˆ°ä¸€ä½èº«æé«˜å¤§çš„æ±‰å­ï¼Œæ­£åœ¨è¾›è‹¦åœ°æ“ç»ƒè‘—ã€‚\n");
 	set("combat_exp", 100);
 	setup();
 	carry_object(__DIR__"obj/linen")->wear();

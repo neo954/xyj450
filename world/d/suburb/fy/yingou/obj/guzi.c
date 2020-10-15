@@ -5,14 +5,14 @@ inherit THROWING;
 
 void create()
 {
-	set_name("÷½×Ó", ({ "guzi" }) );
+	set_name("é¹˜å­", ({ "guzi" }) );
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long",	"Ò»¿Å¾§äŞÌŞÍ¸µÄÏóÑÀ÷»×Ó\n");
-		set("unit", "¶Ñ");
+		set("long",	"ä¸€é¢—æ™¶æ»¢å‰”é€çš„è±¡ç‰™éª°å­\n");
+		set("unit", "å †");
 		set("value", 100);
-		set("base_unit", "Á£");
+		set("base_unit", "ç²’");
 		set("base_weight", 1);
 		set("base_value", 1);
 	}

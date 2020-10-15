@@ -2,12 +2,12 @@
 inherit THROWING;
 void create()
 {
-	set_name("°ë¸ÉµÄÄ¾²ñ", ({ "woods", "half-dry woods" }) );
+	set_name("åŠå¹²çš„æœ¨æŸ´", ({ "woods", "half-dry woods" }) );
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
-		set("base_unit", "Ìõ");
+		set("unit", "æŠŠ");
+		set("base_unit", "æ¡");
 		set("base_weight", 1);
 		set("base_value", 1);
 	}

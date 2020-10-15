@@ -13,15 +13,15 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("ÌìÍâ·ÉÏÉÖ»ÄÜ¶ÔÕ½¶·ÖÐµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("å¤©å¤–é£žä»™åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 
 	extra = me->query_skill("feixian-sword",1) / 10;
 	me->add_temp("apply/attack", extra);	
 	me->add_temp("apply/damage", extra);
-	msg = HIW  "$NÄÚ´øÌìÍâ·ÉÏÉ½£·¨ÖÐµÄ¾«Ëè£¬ÉÁµç°ãµÄ»÷Ïò$n£¬\n" NOR;
+	msg = HIW  "$Nå†…å¸¦å¤©å¤–é£žä»™å‰‘æ³•ä¸­çš„ç²¾é«“ï¼Œé—ªç”µèˆ¬çš„å‡»å‘$nï¼Œ\n" NOR;
 	message_vision(msg, me, target);
 	COMBAT_D->do_attack(me,target, me->query_temp("weapon"));
-	msg =  HIW "½£¹âÒ»ÉÁ£¬ÏûÊ§£®£®£®£®\n" NOR;
+	msg =  HIW "å‰‘å…‰ä¸€é—ªï¼Œæ¶ˆå¤±ï¼Žï¼Žï¼Žï¼Ž\n" NOR;
 	message_vision(msg, me, target);
 	me->add_temp("apply/attack", -extra);
 	me->add_temp("apply/damage", -extra);

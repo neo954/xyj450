@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // /d/changan/playerhomes/stdhome.c
@@ -12,14 +12,14 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "öùÓãºÍºÚÊİÃÃµÄ¼Ò");
+        set("short", "é³„é±¼å’Œé»‘ç˜¦å¦¹çš„å®¶");
         set("long", @LONG
 
-Ò»ÇĞ¶¼ÉèÖÃºÃÁË£¬Ö»µÈÒ»Ğ©ÊÒÄÚ×°ĞŞ¡£Ç½ÉÏ(wall)»¹¹Ò×Å¼¸ÕÅ×Ö»­£®
+ä¸€åˆ‡éƒ½è®¾ç½®å¥½äº†ï¼Œåªç­‰ä¸€äº›å®¤å†…è£…ä¿®ã€‚å¢™ä¸Š(wall)è¿˜æŒ‚ç€å‡ å¼ å­—ç”»ï¼
 LONG
         );
 set("item_desc",(["wall": 
-"ÁæÀş¹íµ½´ËÒ»ÓÎ£®£®£®£®£®£®\n"]));
+"ä¼¶ä¿é¬¼åˆ°æ­¤ä¸€æ¸¸ï¼ï¼ï¼ï¼ï¼ï¼\n"]));
             set("valid_startroom",1);
         
         set("exits", ([
@@ -42,13 +42,13 @@ void init()
         id=(me->parse_command_id_list())[0];
 
         if (!(id=="croc" || id=="slimia" || (id=="baby" ))) {
-                tell_object(me, "°¡¹ş£¡ ´³½øÀ´ÁË£¡\n");
-                tell_object(me, "öùÓã·ÉÆğÒ»½Å£¬ÕıºÃÌßÖĞÄãµÄÆ¨¹É ¡£
+                tell_object(me, "å•Šå“ˆï¼ é—¯è¿›æ¥äº†ï¼\n");
+                tell_object(me, "é³„é±¼é£èµ·ä¸€è„šï¼Œæ­£å¥½è¸¢ä¸­ä½ çš„å±è‚¡ ã€‚
 \n");
-                tell_object(me, "ºÚÊİÃÃ·ÉÆğÒ»½Å£¬ÕıºÃÌßÖĞÄãµÄÆ¨¹É ¡£
+                tell_object(me, "é»‘ç˜¦å¦¹é£èµ·ä¸€è„šï¼Œæ­£å¥½è¸¢ä¸­ä½ çš„å±è‚¡ ã€‚
 \n");
                 me->move("/d/changan/phomes");
-                message_vision("$NËÆºõ±»ÈËÒ»½ÅÌßÁË³öÀ´£¬ÉñÉ«ÓĞµãÀÇ±·¡£\n",
+                message_vision("$Nä¼¼ä¹è¢«äººä¸€è„šè¸¢äº†å‡ºæ¥ï¼Œç¥è‰²æœ‰ç‚¹ç‹¼ç‹ˆã€‚\n",
 me);
         }
         add_action("do_bed", "gosleep");
@@ -59,9 +59,9 @@ me);
 int do_bed()
 {       object me;
         me=this_player();
-        message_vision(HIY "$NÏÆ¿ªÉ´ÕÊ£¬×¼±¸ÉÏ´²ÁË¡£\n\n" NOR, me);
+        message_vision(HIY "$Næ€å¼€çº±å¸ï¼Œå‡†å¤‡ä¸ŠåºŠäº†ã€‚\n\n" NOR, me);
         me->move("/d/changan/playerhomes/bed_croc");
-            message_vision(HIY "\nÉ³ÕÊÇáÇáÒ»¶¯£¬$N×êÁË½øÀ´¡£\n" NOR, me);
+            message_vision(HIY "\næ²™å¸è½»è½»ä¸€åŠ¨ï¼Œ$Né’»äº†è¿›æ¥ã€‚\n" NOR, me);
                 return 1;
 }
 

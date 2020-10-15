@@ -7,24 +7,24 @@ inherit F_SAVE;
 
 void create()
 {
-	set_name( "ËïÎò¿Õ", ({ "sun goku", "sun", "goku" }) );
+	set_name( "å­™æ‚Ÿç©º", ({ "sun goku", "sun", "goku" }) );
 	if( !restore() ) {
-		set("short", "À´×Ô¡¸ÆßÁúÖé¡¹µÄ" HIC "ËïÎò¿Õ" NOR "(Sun goku)");
+		set("short", "æ¥è‡ªã€Œä¸ƒé¾™ç ã€çš„" HIC "å­™æ‚Ÿç©º" NOR "(Sun goku)");
 		set("long",
-			"ËïÎò¿ÕÊÇÀ´×ÔÄñÉ½Ã÷µÄÂþ»­¡¸ÆßÁúÖé¡¹£¬Äã±ðÐ¡¿´ËûÏÖÔÚÒ»¸¶ÉµÍ·ÉµÄÔµÄÑù×Ó\n"
-			"£¬Ëû¿ÉÊÇ ESII µÚÒ»¸ö×ÔÎÒ³É³¤ÐÍµÄ NPC£¬´ÓËû±»´´Ôì³öÀ´ÒÔºó£¬ËûËù»ñµÃµÄ\n"
-			"Õ½¶·¾­Ñé¶¼»á´¢´æÏÂÀ´¡£\n" );
-		set("gender", "ÄÐÐÔ" );
-		set("race", "ÈüÑÇÈË");
+			"å­™æ‚Ÿç©ºæ˜¯æ¥è‡ªé¸Ÿå±±æ˜Žçš„æ¼«ç”»ã€Œä¸ƒé¾™ç ã€ï¼Œä½ åˆ«å°çœ‹ä»–çŽ°åœ¨ä¸€ä»˜å‚»å¤´å‚»è„‘çš„æ ·å­\n"
+			"ï¼Œä»–å¯æ˜¯ ESII ç¬¬ä¸€ä¸ªè‡ªæˆ‘æˆé•¿åž‹çš„ NPCï¼Œä»Žä»–è¢«åˆ›é€ å‡ºæ¥ä»¥åŽï¼Œä»–æ‰€èŽ·å¾—çš„\n"
+			"æˆ˜æ–—ç»éªŒéƒ½ä¼šå‚¨å­˜ä¸‹æ¥ã€‚\n" );
+		set("gender", "ç”·æ€§" );
+		set("race", "èµ›äºšäºº");
 		set("chat_chance", 15);
 		set("chat_msg", ({
 			(: this_object(), "random_move" :),
-			CYN "ËïÎò¿ÕËµµÀ£º¹þÂÞ£¡À´±ÈÎä°É£¿\n" NOR,
-			CYN "ËïÎò¿Õ·­ÁË¸ö¸ú¶·£¬ÓÃÒ»Ö»ÊÖÖ¸³ÅÔÚµØÏÂ£¬ËµµÀ£ºÕâÕÐÄã»á²»»á°¡£¿\n" NOR,
+			CYN "å­™æ‚Ÿç©ºè¯´é“ï¼šå“ˆç½—ï¼æ¥æ¯”æ­¦å§ï¼Ÿ\n" NOR,
+			CYN "å­™æ‚Ÿç©ºç¿»äº†ä¸ªè·Ÿæ–—ï¼Œç”¨ä¸€åªæ‰‹æŒ‡æ’‘åœ¨åœ°ä¸‹ï¼Œè¯´é“ï¼šè¿™æ‹›ä½ ä¼šä¸ä¼šå•Šï¼Ÿ\n" NOR,
 		}) );
 		set("chat_msg_coombat", ({
-			CYN "\nËïÎò¿Õ°ç¸ö¹íÁ³£¬ËµµÀ£ºÀ´Ñ½£¡ÔÙÀ´Ñ½£¡\n" NOR,
-			CYN "\nËïÎò¿ÕËµµÀ£ºÕâÒ»ÕÐÊÇÒ¯Ò¯½ÌÎÒµÄ£¬À÷º¦°É£¡\n" NOR,
+			CYN "\nå­™æ‚Ÿç©ºæ‰®ä¸ªé¬¼è„¸ï¼Œè¯´é“ï¼šæ¥å‘€ï¼å†æ¥å‘€ï¼\n" NOR,
+			CYN "\nå­™æ‚Ÿç©ºè¯´é“ï¼šè¿™ä¸€æ‹›æ˜¯çˆ·çˆ·æ•™æˆ‘çš„ï¼ŒåŽ‰å®³å§ï¼\n" NOR,
 		}) );
 
 		// We have 7 pills per reset.
@@ -83,14 +83,14 @@ int accept_fight(object who)
 {
 	if( is_fighting() ) {
 		if( random(query("eff_kee")) > (int)query("kee") ) {
-			say( CYN "ËïÎò¿Õ´ó½Ð£ºÕâÃ´¶àÈËÎÒ´òÒ»¸ö£¿²»ÐÐ²»ÐÐ£¬µÈÎÒ´ò°ÜÕâÐ©ÈËÔÙ¸úÄã´ò£¡\n" NOR);
+			say( CYN "å­™æ‚Ÿç©ºå¤§å«ï¼šè¿™ä¹ˆå¤šäººæˆ‘æ‰“ä¸€ä¸ªï¼Ÿä¸è¡Œä¸è¡Œï¼Œç­‰æˆ‘æ‰“è´¥è¿™äº›äººå†è·Ÿä½ æ‰“ï¼\n" NOR);
 			return 0;
 		} else {
-			say( CYN "ËïÎò¿Õ´ó½Ð£ºÕâÃ´¶àÈËÎÒ´òÒ»¸ö£¿Ã»¹ØÏµ£¬ÎÒÒ»¶¨ÈÃÄãÃÇºÃ¿´£¡\n" NOR);
+			say( CYN "å­™æ‚Ÿç©ºå¤§å«ï¼šè¿™ä¹ˆå¤šäººæˆ‘æ‰“ä¸€ä¸ªï¼Ÿæ²¡å…³ç³»ï¼Œæˆ‘ä¸€å®šè®©ä½ ä»¬å¥½çœ‹ï¼\n" NOR);
 			return 1;
 		}
 	}
-	say( CYN "ËïÎò¿ÕºÜ¸ßÐËµØËµµÀ£ººÃ°¡£¬ºÃ°¡£¬ÎÒÒª³öÕÐÁË...\n" NOR);
+	say( CYN "å­™æ‚Ÿç©ºå¾ˆé«˜å…´åœ°è¯´é“ï¼šå¥½å•Šï¼Œå¥½å•Šï¼Œæˆ‘è¦å‡ºæ‹›äº†...\n" NOR);
 	return 1;
 }
 
@@ -100,7 +100,7 @@ int receive_damage(string type, int pts)
 
 	damage = ::receive_damage(type, pts);
 	if( (type=="kee") && (damage > (int)query("max_kee") / 5) ) {
-		say( CYN "ËïÎò¿ÕÎæÖøÊÜÉËµÄµØ·½£¬ËµµÀ£ººÃÍ´°¡...ÕæÓÐÄãµÄ....\n" NOR);
+		say( CYN "å­™æ‚Ÿç©ºæ‚è‘—å—ä¼¤çš„åœ°æ–¹ï¼Œè¯´é“ï¼šå¥½ç—›å•Š...çœŸæœ‰ä½ çš„....\n" NOR);
 		if( random(query("kee")) < damage)
 			random_move();
 	}
@@ -109,7 +109,7 @@ int receive_damage(string type, int pts)
 	&&	(((int)query("kee")) < 20 
 		|| ((int)query("gin") < 20) 
 		|| ((int)query("sen") < 20) )) {
-		say( HIY "ËïÎò¿Õ´Ó¿Ú´üÃþ³öÒ»Á£»¨ÀæËþÃ¨ÏÉÈË¸øËûµÄÏÉ¶¹ÍÌÁËÏÂÈ¥¡£\n" NOR);
+		say( HIY "å­™æ‚Ÿç©ºä»Žå£è¢‹æ‘¸å‡ºä¸€ç²’èŠ±æ¢¨å¡”çŒ«ä»™äººç»™ä»–çš„ä»™è±†åžäº†ä¸‹åŽ»ã€‚\n" NOR);
 		set("gin", query("eff_gin"));
 		set("kee", query("eff_kee"));
 		set("sen", query("eff_sen"));
@@ -139,6 +139,6 @@ void kill_ob(object ob)
 
 void defeated_enemy(object ob)
 {
-	say(CYN "ËïÎò¿Õ×÷³öÒ»¸ö V ×ÖÐÍµÄÊÖÊÆ£¬ËµµÀ£ºÎÒÓ®ÁË£¡" NOR);
+	say(CYN "å­™æ‚Ÿç©ºä½œå‡ºä¸€ä¸ª V å­—åž‹çš„æ‰‹åŠ¿ï¼Œè¯´é“ï¼šæˆ‘èµ¢äº†ï¼" NOR);
 	remove_killer(ob);
 }

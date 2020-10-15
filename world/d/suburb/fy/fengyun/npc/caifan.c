@@ -5,17 +5,17 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("Âô²ËµÄ", ({ "caifan" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å–èœçš„", ({ "caifan" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 40);
         set("long",
-                "Ò»¸öÎªÉú»î¶øÖÕÈÕ±¼²¨µÄĞ¡ÉÌÈË£®\n");
+                "ä¸€ä¸ªä¸ºç”Ÿæ´»è€Œç»ˆæ—¥å¥”æ³¢çš„å°å•†äººï¼\n");
 	set("combat_exp", 5);
         set("attitude", "friendly");
-        set("rank_info/respect", "ÀÏ¶ş¸ç");
+        set("rank_info/respect", "è€äºŒå“¥");
         set("chat_chance", 3);
         set("chat_msg", ({
-                "Âô²ËµÄĞ¦µÀ£ºÄÇÒ»×ÅÌìÍâ·ÉÏÉ£¬Æß²«Ò»¶ÄÒ¶¹Â³ÇÊ¤£®£®\n",
+                "å–èœçš„ç¬‘é“ï¼šé‚£ä¸€ç€å¤©å¤–é£ä»™ï¼Œä¸ƒæä¸€èµŒå¶å­¤åŸèƒœï¼ï¼\n",
         }) );
 
         set("vendor_goods", ([

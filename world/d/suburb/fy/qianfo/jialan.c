@@ -5,10 +5,10 @@
 inherit ROOM;
 void create()
 {
-  set("short","٤����");
+  set("short","伽蓝殿");
   set("long",@LONG
-٤�����ڹ�������ػ�٤�����ص���������Ϊʩ����԰�����
-���¶����ߣ�����Ϊ����̫�ӣ��丸��˹�������ҡ�
+伽蓝殿内供奉的是守护伽蓝土地的神像，最左为施造祗园精舍的
+给孤独长者，居中为祗陀太子，其父波斯匿王在右。
 LONG
   );
   set("exits",([

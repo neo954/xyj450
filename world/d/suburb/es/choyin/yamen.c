@@ -4,16 +4,16 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "´óÌÃ");
+	set("short", "å¤§å ‚");
 	set("long", @LONG
-ÕıÖĞ¸ßĞüÒ»ØÒ(borad),ØÒÏÂµÄÊé°¸ÉÏ·Å×Å±Ê,Ä«,Ö½,Ñâ,¾ªÌÃÄ¾µÈÎï.Á½ÅÔ¸÷ÖÃÆÁ·ç.ÌÃÏÂ°Ú×Å¸÷Ê½ĞÌ¾ß,Äã´ÓÎ´¼û¹ı.
+æ­£ä¸­é«˜æ‚¬ä¸€åŒ¾(borad),åŒ¾ä¸‹çš„ä¹¦æ¡ˆä¸Šæ”¾ç€ç¬”,å¢¨,çº¸,ç š,æƒŠå ‚æœ¨ç­‰ç‰©.ä¸¤æ—å„ç½®å±é£.å ‚ä¸‹æ‘†ç€å„å¼åˆ‘å…·,ä½ ä»æœªè§è¿‡.
 LONG
 	);
 	set("exits", ([ /* sizeof() == 1 */
                 "north" : __DIR__"yamen_iner",
                 "south" : __DIR__"yamen_yard",
                       ]));
-   create_door("south", "Í­¶¤´óÃÅ", "north", DOOR_CLOSED);
+   create_door("south", "é“œé’‰å¤§é—¨", "north", DOOR_CLOSED);
 	set("no_clean_up", 0);
  set("objects", ([
                 __DIR__"npc/judgeman" : 1,     

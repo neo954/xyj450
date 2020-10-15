@@ -4,20 +4,20 @@ inherit BLADE;
 
 void create()
 {
-        set_name("ºúµ¶", ({ "hu-blade" }) );
+        set_name("èƒ¡åˆ€", ({ "hu-blade" }) );
         set_weight(6500);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "°Ñ");
-                set("long", "ÕâÊÇÒ»°ÑÍäÈçÔÂÑÀ¶ùµÄºúµ¶");
+                set("unit", "æŠŠ");
+                set("long", "è¿™æ˜¯ä¸€æŠŠå¼¯å¦‚æœˆç‰™å„¿çš„èƒ¡åˆ€");
                 set("value", 2000);
                 set("material", "steel");
         }
         init_blade(30);
 
-        set("wield_msg", "$N´ÓÑü¼ä³é³öÒ»°ÑÁÁÉÁÉÁµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-        set("unwield_msg", "$N½«ÊÖÖĞµÄ$n±ğÔÚÑü¼ä¡£\n");
+        set("wield_msg", "$Nä»è…°é—´æŠ½å‡ºä¸€æŠŠäº®é—ªé—ªçš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+        set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$nåˆ«åœ¨è…°é—´ã€‚\n");
 
 
         setup();

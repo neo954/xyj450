@@ -5,11 +5,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "Ð¡Ä¾ÎÝ");
+        set("short", "å°æœ¨å±‹");
         set("long", @LONG
-Ä¾ÎÝÖ»ÓÐ°ë±ß¶¥£¬Ò»¿ÃÀÏÃ·Ê÷¸Ç×¡ÁËÄÇ°ë±ß¡£Ç½ÉÏ¹Ò×Å¼¸ÌõÔ¡½í£¬
-Ñô¹âÍ¸¹ýÊ÷Ö¦ÕÕÔÚÔ¡½íÉÏ¡£Ò»ÌõÖñ¹Ü´Ó·¿¶¥´¹ÏÂ£¬Öñ¹ÜµÄ¾¡Í·Èû×ÅÒ»¸ö
-Ä¾Èû×Ó£¬Å¼¶û»¹ÓÐË®ÖéµÎÏÂ¡£
+æœ¨å±‹åªæœ‰åŠè¾¹é¡¶ï¼Œä¸€æ£µè€æ¢…æ ‘ç›–ä½äº†é‚£åŠè¾¹ã€‚å¢™ä¸ŠæŒ‚ç€å‡ æ¡æµ´å·¾ï¼Œ
+é˜³å…‰é€è¿‡æ ‘æžç…§åœ¨æµ´å·¾ä¸Šã€‚ä¸€æ¡ç«¹ç®¡ä»Žæˆ¿é¡¶åž‚ä¸‹ï¼Œç«¹ç®¡çš„å°½å¤´å¡žç€ä¸€ä¸ª
+æœ¨å¡žå­ï¼Œå¶å°”è¿˜æœ‰æ°´ç æ»´ä¸‹ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -19,8 +19,8 @@ LONG
         __DIR__"obj/towel": 1,
                         ]) );
         set("item_desc", ([
-                "Ä¾Èû×Ó": "
-                        ÄãËÆºõ¿ÉÒÔ°ÑËü°Î£¨£ð£õ£ì£ì£©ÏÂÀ´£¡\n",
+                "æœ¨å¡žå­": "
+                        ä½ ä¼¼ä¹Žå¯ä»¥æŠŠå®ƒæ‹”ï¼ˆï½ï½•ï½Œï½Œï¼‰ä¸‹æ¥ï¼\n",
 
         ]) );
         setup();
@@ -35,18 +35,18 @@ int do_pull()
 {
 	object me;
 	if(query("resource/water"))
-		return notify_fail("Ä¾Èû×ÓÒÑ¾­±»°ÎÏÂÀ´ÁË¡£\n");
+		return notify_fail("æœ¨å¡žå­å·²ç»è¢«æ‹”ä¸‹æ¥äº†ã€‚\n");
 	me = this_player();
-	message_vision("$N£¢àÛ£¢µÄÒ»Éù½«Ä¾Èû×Ó°ÎÁËÏÂÀ´£¬Ã°×ÅÈÈÆøµÄË®ÂíÉÏÁ÷ÁËÏÂÀ´¡£\n",me);
+	message_vision("$Nï¼‚å™—ï¼‚çš„ä¸€å£°å°†æœ¨å¡žå­æ‹”äº†ä¸‹æ¥ï¼Œå†’ç€çƒ­æ°”çš„æ°´é©¬ä¸Šæµäº†ä¸‹æ¥ã€‚\n",me);
 	set("resource/water",1);
-	set("liquid/name","ÈÈË®");
+	set("liquid/name","çƒ­æ°´");
 	call_out("remove_water",50);
 	return 1;
 }
 
 int remove_water()
 {
-	tell_object(this_object(),"ÈÈË®µÎÁË¼¸µÎ£¬¾ÍÁ÷¹âÁË¡£\n");
+	tell_object(this_object(),"çƒ­æ°´æ»´äº†å‡ æ»´ï¼Œå°±æµå…‰äº†ã€‚\n");
 	delete("resource/water");
         delete("liquid/name");
 	return 1;
@@ -70,21 +70,21 @@ int do_fillwater(string arg)
                         can_fillwater = 1;
                         ob->set("liquid", ([
                                 "type": "water",
-                                "name": "ÈÈË®",
+                                "name": "çƒ­æ°´",
                                 "remaining": 15,
                                 "drunk_apply": 0,
                         ]) );
-                        write("Äã´ÓÖñ¹ÜÀï½ÓÂúÁËÈÈË®! \n");
+                        write("ä½ ä»Žç«¹ç®¡é‡ŒæŽ¥æ»¡äº†çƒ­æ°´! \n");
                         return 1;
                    }
                 }
                 if (can_fillwater ==0) {
-                        write("ÄãÃ»ÓÐ×°Ë®µÄ¶«Î÷°¡....\n");
+                        write("ä½ æ²¡æœ‰è£…æ°´çš„ä¸œè¥¿å•Š....\n");
                         return 1;
                 }
         }
         else {
-                write("ÄãÒªÍùÊ²Ã´¶«Î÷Àï¹àÈÈË®£¿");
+                write("ä½ è¦å¾€ä»€ä¹ˆä¸œè¥¿é‡ŒçŒçƒ­æ°´ï¼Ÿ");
         }
         return 1;
 }
@@ -92,7 +92,7 @@ int do_climb()
 {
 	object me,room;
 	me = this_player();
-	message_vision("$N£¢à²£¢µÄÒ»Éù£¬Ë³×ÅÀÏÃ·Ê÷´ÜÉÏÎÝ¶¥¡£\n",me);
+	message_vision("$Nï¼‚å—–ï¼‚çš„ä¸€å£°ï¼Œé¡ºç€è€æ¢…æ ‘çªœä¸Šå±‹é¡¶ã€‚\n",me);
 	room = load_object(__DIR__"roof");
 	me->move(room);
 	return 1;	

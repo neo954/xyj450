@@ -3,14 +3,14 @@ inherit F_FOOD;
 
 void create()
 {
-	set_name("Ñ©»¨¸â", ({ "cake" }));
+	set_name("é›ªèŠ±ç³•", ({ "cake" }));
 	set_weight(1000);
 
 	if( clonep() )
 		set_default_object(__FILE__);
 	    else {
-		set("long", "ÕâÊÇÒ»¿é¾«ÖÂ¿É¿ÚµÄĞ¡µãĞÄ£¬ËÆÑ©»¨°ãÈáÈí¡£\n");
-		set("unit", "¿é");
+		set("long", "è¿™æ˜¯ä¸€å—ç²¾è‡´å¯å£çš„å°ç‚¹å¿ƒï¼Œä¼¼é›ªèŠ±èˆ¬æŸ”è½¯ã€‚\n");
+		set("unit", "å—");
 		set("value", 300);
 		set("food_remaining", 5);
 		set("food_supply", 80);

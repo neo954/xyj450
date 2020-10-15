@@ -3,10 +3,10 @@ inherit ROOM;
 #include <room.h>
 void create()
 {
-        set("short", "×ßÀÈ");
+        set("short", "èµ°å»Š");
         set("long", @LONG
-Ò»ÈË¶à¸ß£¬Ö»ÈİÁ½ÈË²¢ĞĞµÄÌ´ÏãÄ¾×ßÀÈ£¬ÀÈÖĞµÄÁ½²à³ÂÁĞ×ÅÒ»Ğ©Ææ»¨Òì²İ¡£¹ö¹ö
-ÈÈÆø´Ó×ßÀÈµÄÒ»Í·Ã°³ö£¬½«Ì´Ä¾µØ°å´òµÃÓÖÊªÓÖ»¬£¬Äã¼¸ºõÒª·ö×ÅÀ¸¸Ë²Å²»»á»¬µ¹¡£
+ä¸€äººå¤šé«˜ï¼Œåªå®¹ä¸¤äººå¹¶è¡Œçš„æª€é¦™æœ¨èµ°å»Šï¼Œå»Šä¸­çš„ä¸¤ä¾§é™ˆåˆ—ç€ä¸€äº›å¥‡èŠ±å¼‚è‰ã€‚æ»šæ»š
+çƒ­æ°”ä»èµ°å»Šçš„ä¸€å¤´å†’å‡ºï¼Œå°†æª€æœ¨åœ°æ¿æ‰“å¾—åˆæ¹¿åˆæ»‘ï¼Œä½ å‡ ä¹è¦æ‰¶ç€æ æ†æ‰ä¸ä¼šæ»‘å€’ã€‚
 LONG
         );
         set("exits", ([
@@ -19,7 +19,7 @@ LONG
 	set("no_fight",1);
 	set("no_magic",1);
         setup();
-        create_door("west", "Ì´Ä¾ÃÅ", "east", DOOR_CLOSED);
+        create_door("west", "æª€æœ¨é—¨", "east", DOOR_CLOSED);
 
 }
 int valid_leave(object me, string dir)
@@ -34,15 +34,15 @@ int valid_leave(object me, string dir)
                 for(i=0; i<sizeof(inv); i++)
                 {
 			if ((string)(inv[i]->query("id")) != "white towel")
-                        return notify_fail(ob->name()+"ÏòÄãĞ¦µÀ£ºÉíÉÏ´©´÷ÄÇÃ´¶à£¬ÔõÃ´ÄÜÏ´Ôè£¿\n");
+                        return notify_fail(ob->name()+"å‘ä½ ç¬‘é“ï¼šèº«ä¸Šç©¿æˆ´é‚£ä¹ˆå¤šï¼Œæ€ä¹ˆèƒ½æ´—æ¾¡ï¼Ÿ\n");
 			if( (string)(inv[i]->query("id")) == "white towel" &&
 			    !(int)(inv[i]->query("equipped")))
-			return notify_fail(ob->name()+"ÏòÄãĞ¦µÀ£º»¹ÊÇÎ§ÉÏÃ«½íÔÙ½øÈ¥°É£¬²»ÒªÏÅµ½±ğÈË£®\n");
+			return notify_fail(ob->name()+"å‘ä½ ç¬‘é“ï¼šè¿˜æ˜¯å›´ä¸Šæ¯›å·¾å†è¿›å»å§ï¼Œä¸è¦å“åˆ°åˆ«äººï¼\n");
 			if( (string)(inv[i]->query("id")) == "white towel" )
 				withtowel = 1;
                 }
 	if( !withtowel)
-	return notify_fail(ob->name()+"ÏòÄãĞ¦µÀ£ºÃ»ÓĞ°×Ã«½íÔõÃ´Ï´£¿\n");
+	return notify_fail(ob->name()+"å‘ä½ ç¬‘é“ï¼šæ²¡æœ‰ç™½æ¯›å·¾æ€ä¹ˆæ´—ï¼Ÿ\n");
         }
 	if( dir == "east" && ob=present("chuchu", this_object()))
 	{
@@ -51,8 +51,8 @@ int valid_leave(object me, string dir)
                 {
 		if( (string)(inv[i]->query("id")) == "white towel")
 			{
-		tell_object(me,ob->name()+"Ğ¦ßäßäµÄ½«ÄãÉíÉÏÊªµÄ"+
-		inv[i]->name()+"ÄÃÁË»ØÈ¥£®\n\n\n");	
+		tell_object(me,ob->name()+"ç¬‘å’ªå’ªçš„å°†ä½ èº«ä¸Šæ¹¿çš„"+
+		inv[i]->name()+"æ‹¿äº†å›å»ï¼\n\n\n");	
 		destruct(inv[i]);
 			}
                 }

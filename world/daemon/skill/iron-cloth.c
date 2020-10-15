@@ -8,14 +8,14 @@ void skill_improved(object me)
 
         s = me->query_skill("iron-cloth", 1);
         if( (int)me->query("fle") < s/5) {
-                tell_object(me, HIW "ÓÉì¶ÄãÇÚÁ·Ìú²¼ÉÀ£¬ÄãµÄÈÍÐÔÌá¸ßÁË¡£\n" NOR);
+                tell_object(me, HIW "ç”±æ–¼ä½ å‹¤ç»ƒé“å¸ƒè¡«ï¼Œä½ çš„éŸ§æ€§æé«˜äº†ã€‚\n" NOR);
                 me->add("fle", 1);
         }
 }
 string *absorb_msg = ({
-	"$nÒÑÓÐ×¼±¸£¬²»»Å²»Ã¦µÄÔËÆðÌú²¼ÉÀ¡£\n",
-        "$n±ÕÄ¿ÄýÉñ£¬Æø×ßÈ«Éí£¬»¤ÌåÓ²¹¦´ïµ½áÛ·å×´Ì¬¡£\n",
-        "$n¡¸ºÙ¡¹µÄÒ»Éù£¬²»¶ã²»ÉÁ£¬ÔËÆðÌú²¼ÉÀÓ­Ïò$N£¡\n",
+	"$nå·²æœ‰å‡†å¤‡ï¼Œä¸æ…Œä¸å¿™çš„è¿èµ·é“å¸ƒè¡«ã€‚\n",
+        "$né—­ç›®å‡ç¥žï¼Œæ°”èµ°å…¨èº«ï¼ŒæŠ¤ä½“ç¡¬åŠŸè¾¾åˆ°å·…å³°çŠ¶æ€ã€‚\n",
+        "$nã€Œå˜¿ã€çš„ä¸€å£°ï¼Œä¸èº²ä¸é—ªï¼Œè¿èµ·é“å¸ƒè¡«è¿Žå‘$Nï¼\n",
 });
 
 string query_absorb_msg()

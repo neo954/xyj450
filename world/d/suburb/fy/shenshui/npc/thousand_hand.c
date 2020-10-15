@@ -7,16 +7,16 @@ string	summon_more( object who);
 void create()
 {
 	int i,amun;
-	string *order = ({"ÕÅ", "Íõ", "Àî", "ÕÔ", "Ëï", "Ğì", "Ö£", "ÖÜ", "Îâ", "½¯", "Éò", "Ñî", "Ãç", "Òü", "½ğ", "Îº", "ÌÕ", "Óá", "Áø", "Öì"});
-	set_name( (order[random(20)]) + "»¤·¨", ({ "hu fa", "hu", "fa" }) );
-	set("long", "ÕâÊÇÒ»Î»ÉñË®¹¬µÄ»¤·¨£¬×¨ÃÅµ£ÈÎÎ¬³ÖÖÎ°²¡£\n");
+	string *order = ({"å¼ ", "ç‹", "æ", "èµµ", "å­™", "å¾", "éƒ‘", "å‘¨", "å´", "è’‹", "æ²ˆ", "æ¨", "è‹—", "å°¹", "é‡‘", "é­", "é™¶", "ä¿", "æŸ³", "æœ±"});
+	set_name( (order[random(20)]) + "æŠ¤æ³•", ({ "hu fa", "hu", "fa" }) );
+	set("long", "è¿™æ˜¯ä¸€ä½ç¥æ°´å®«çš„æŠ¤æ³•ï¼Œä¸“é—¨æ‹…ä»»ç»´æŒæ²»å®‰ã€‚\n");
 	set("attitude", "friendly");
-	set("title", "Ç§ÊÖ¹ÛÒô");
+	set("title", "åƒæ‰‹è§‚éŸ³");
 	set("max_gin", 500);
 	set("max_kee", 500);
 	set("max_sen", 500);
 	set("age", 33);
-        set("gender", "Å®ĞÔ" );
+        set("gender", "å¥³æ€§" );
 
 
 	set("str", 35);
@@ -32,7 +32,7 @@ void create()
 	set("chat_msg_combat", ({
 		(: summon_more(this_object()) :),
 	}) );
-        create_family("¾ÅÒõÅÉ", 12, "µÜ×Ó");
+        create_family("ä¹é˜´æ´¾", 12, "å¼Ÿå­");
 	set_skill("throwing",100+random(90));
 	set_skill("parry", 1+random(170));
 	set_skill("dodge", 1+random(150));
@@ -59,7 +59,7 @@ string summon_more(object who)
 	seteuid(getuid());
 	another = new(__DIR__"thousand_hand");
 	another->move(environment(who));
-	message_vision(another->name()+ "×ßÁË¹ıÀ´¡£\n"
+	message_vision(another->name()+ "èµ°äº†è¿‡æ¥ã€‚\n"
 		, this_object() );
 	enemy = who->query_enemy();
 	i = sizeof(enemy);
@@ -85,9 +85,9 @@ void init()
 && (string) environment(ob)->query("outdoors") == "girlvillage"
 )
 	{
-	if( (string)ob->query("gender") == "ÄĞĞÔ")
+	if( (string)ob->query("gender") == "ç”·æ€§")
 	{
-	command("say ´óµ¨£¡¾¹¸ÒÌ¤ÈëÉñË®¹¬£¡\n");
+	command("say å¤§èƒ†ï¼ç«Ÿæ•¢è¸å…¥ç¥æ°´å®«ï¼\n");
 	kill_ob(ob);
 	}
 	}

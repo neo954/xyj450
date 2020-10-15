@@ -6,12 +6,12 @@
 inherit ROOM;
 void create()
 {
-  set("short","Ǭ��¥");
+  set("short","乾角楼");
   set("long",@LONG
-�������Χǽ����Ľ�¥���ֱ�������Ϊ�����������������¥��
-��һ��󱮣�������һ���֣�
+这是岱庙围墙四隅的角楼，分别以四卦为名，以求避凶趋吉，楼中
+有一面大碑，碑上书一大字：
 [33m
-				Ǭ
+				乾
 [37m
 LONG
   );

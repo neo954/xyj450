@@ -5,12 +5,12 @@
 inherit ITEM;
 void create()
 {
-    set_name( "·çÔÆÔŞ¸è", ({ "poem song","poem"  }) );
-    set("unit", "Ê×");
+    set_name( "é£äº‘èµæ­Œ", ({ "poem song","poem"  }) );
+    set("unit", "é¦–");
     set("long","
-		ÊÇ·Ç³É°Ü×ªÍ·¿Õ£¬
-                	·çÔÆÒÀ¾ÉÔÚ£¬
-                		¼¸¶ÈÑª¹âºì¡£
+		æ˜¯éæˆè´¥è½¬å¤´ç©ºï¼Œ
+                	é£äº‘ä¾æ—§åœ¨ï¼Œ
+                		å‡ åº¦è¡€å…‰çº¢ã€‚
 
 \n");
     set_weight(1);

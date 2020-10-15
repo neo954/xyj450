@@ -7,19 +7,19 @@ string receive_mail();
 
 void create()
 {
-	set_name("Íõ·ç", ({ "officer", "post officer" }) );
-	set("title", "·çÔÆÒïæä³¤");
-	set("gender", "ÄÐÐÔ" );
+	set_name("çŽ‹é£Ž", ({ "officer", "post officer" }) );
+	set("title", "é£Žäº‘ç»Žé©¿é•¿");
+	set("gender", "ç”·æ€§" );
 	set("age", 43);
 	set("long",
-		"Íõ·çµ£ÈÎ·çÔÆæäµÄæä³¤ÒÑ¾­ÓÐ¼¸ÄêÁË£¬ÈËºÜºÃ£¬\n"
-		"¾ÓÃñ¶ÔÍõ·çµÄ·çÆÀÏàµ±²»´í£¬³£³£»áÀ´µ½æäÕ¾¸úËûÁÄÌì¡£\n");
+		"çŽ‹é£Žæ‹…ä»»é£Žäº‘é©¿çš„é©¿é•¿å·²ç»æœ‰å‡ å¹´äº†ï¼Œäººå¾ˆå¥½ï¼Œ\n"
+		"å±…æ°‘å¯¹çŽ‹é£Žçš„é£Žè¯„ç›¸å½“ä¸é”™ï¼Œå¸¸å¸¸ä¼šæ¥åˆ°é©¿ç«™è·Ÿä»–èŠå¤©ã€‚\n");
 	set("combat_exp", 800);
 	set("attitude", "friendly");
 	set("inquiry", ([
-		"æäÕ¾" : "ÊÇ°¡... ÕâÀï¾ÍÊÇ·çÔÆÒï£¬ÄãÒª¼ÄÐÅÂð£¿",
-		"¼ÄÐÅ" : (: send_mail :),
-		"ÊÕÐÅ" : (: receive_mail :),
+		"é©¿ç«™" : "æ˜¯å•Š... è¿™é‡Œå°±æ˜¯é£Žäº‘ç»Žï¼Œä½ è¦å¯„ä¿¡å—ï¼Ÿ",
+		"å¯„ä¿¡" : (: send_mail :),
+		"æ”¶ä¿¡" : (: receive_mail :),
 		"mail" : (: receive_mail :),
 	]) );
 	set_skill("literate", 70);
@@ -33,14 +33,14 @@ string send_mail()
 	object mbox;
 
 	if( this_player()->query_temp("mbox_ob") )
-		return "ÄãµÄÐÅÏä»¹ÔÚ°É£¿ÓÃÐÅÏä¾Í¿ÉÒÔ¼ÄÐÅÁË¡£\n";
+		return "ä½ çš„ä¿¡ç®±è¿˜åœ¨å§ï¼Ÿç”¨ä¿¡ç®±å°±å¯ä»¥å¯„ä¿¡äº†ã€‚\n";
 	if( !environment()
 	||	base_name(environment()) != query("startroom") )
-		return "ÕæÊÇ±§Ç¸£¬ÇëÄúµÈÒ»ÏÂµ½æäÕ¾À´ÕÒÎÒ°É¡£\n";
+		return "çœŸæ˜¯æŠ±æ­‰ï¼Œè¯·æ‚¨ç­‰ä¸€ä¸‹åˆ°é©¿ç«™æ¥æ‰¾æˆ‘å§ã€‚\n";
 	seteuid(getuid());
 	mbox = new(MAILBOX_OB);
 	mbox->move(this_player());
-	return "Å¶... Òª¼ÄÐÅÊÇÂð£¿ÕâÊÇÄãµÄÐÅÏä£¬¼ÄÐÅµÄ·½·¨ÐÅÏäÉÏÓÐËµÃ÷¡£\n";
+	return "å“¦... è¦å¯„ä¿¡æ˜¯å—ï¼Ÿè¿™æ˜¯ä½ çš„ä¿¡ç®±ï¼Œå¯„ä¿¡çš„æ–¹æ³•ä¿¡ç®±ä¸Šæœ‰è¯´æ˜Žã€‚\n";
 }
 
 string receive_mail()
@@ -48,12 +48,12 @@ string receive_mail()
 	object mbox;
 
 	if( this_player()->query_temp("mbox_ob") )
-		return "ÄãµÄÐÅÏä»¹ÔÚ°É£¿ÄãËùÓÐµÄÐÅ¶¼ÔÚÀïÃæ¡£\n";
+		return "ä½ çš„ä¿¡ç®±è¿˜åœ¨å§ï¼Ÿä½ æ‰€æœ‰çš„ä¿¡éƒ½åœ¨é‡Œé¢ã€‚\n";
 	if( !environment()
 	||	base_name(environment()) != query("startroom") )
-		return "ÕæÊÇ±§Ç¸£¬ÇëÄúµÈÒ»ÏÂµ½æäÕ¾À´ÕÒÎÒ°É¡£\n";
+		return "çœŸæ˜¯æŠ±æ­‰ï¼Œè¯·æ‚¨ç­‰ä¸€ä¸‹åˆ°é©¿ç«™æ¥æ‰¾æˆ‘å§ã€‚\n";
 	seteuid(getuid());
 	mbox = new(MAILBOX_OB);
 	mbox->move(this_player());
-	return "ºÃ£¬´ýÎÒÕÒÕÒ....ÓÐÁË£¬ÄãµÄÐÅÏäÔÚÕâ£¬ÂýÂý¿´°É£¬²»´ò½ÁÄãÁË¡£\n";
+	return "å¥½ï¼Œå¾…æˆ‘æ‰¾æ‰¾....æœ‰äº†ï¼Œä½ çš„ä¿¡ç®±åœ¨è¿™ï¼Œæ…¢æ…¢çœ‹å§ï¼Œä¸æ‰“æ…ä½ äº†ã€‚\n";
 }

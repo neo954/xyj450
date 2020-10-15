@@ -6,13 +6,13 @@ inherit NECK;
 
 void create()
 {
-	set_name("Æ½°²·û", ({ "amulet" }) );
+	set_name("å¹³å®‰ç¬¦", ({ "amulet" }) );
 	set_weight(200);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
-		set("long", "Ò»¸öÓÃºìÏß°óÖøµÄÆ½°²·û£¬¾İËµ¿ÉÒÔ±ÜĞ°¡£\n");
+		set("unit", "ä¸ª");
+		set("long", "ä¸€ä¸ªç”¨çº¢çº¿ç»‘è‘—çš„å¹³å®‰ç¬¦ï¼Œæ®è¯´å¯ä»¥é¿é‚ªã€‚\n");
 		set("material", "paper");
 		set("value", 60);
 		set("armor_prop/karma", 1);

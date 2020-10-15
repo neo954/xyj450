@@ -2,10 +2,10 @@ inherit COMBINED_ITEM;
 
 void create()
 {
-    set_name("Ð¡»¨Èï", ({ "pistil" }));
-    set("long", "ÕâÊÇÒ»¶ä½ð»ÆÉ«µÄÆæÌØ»¨Èï£¬ÓÐÒ»ÖÖµ­µ­ÏãÆø¡£\n");
-    set("unit", "¶ä");
-    set("base_unit", "Öê");
+    set_name("å°èŠ±è•Š", ({ "pistil" }));
+    set("long", "è¿™æ˜¯ä¸€æœµé‡‘é»„è‰²çš„å¥‡ç‰¹èŠ±è•Šï¼Œæœ‰ä¸€ç§æ·¡æ·¡é¦™æ°”ã€‚\n");
+    set("unit", "æœµ");
+    set("base_unit", "æ ª");
     set("base_weight", 20);
 	set_amount(1);
 }
@@ -25,11 +25,11 @@ int do_eat(string arg)
     J = me->query_condition("rose_poison");
     if ( J < 10)  I = 0;
     if ( J >= 10) I = J - 10;
-    if( !arg || arg != "pistil" ) return notify_fail("ÄãÒª³ÔÉõÃ´ÄØ? \n");
+    if( !arg || arg != "pistil" ) return notify_fail("ä½ è¦åƒç”šä¹ˆå‘¢? \n");
 
 	message_vision(
-       "$NÄÃ³öÒ»¶äÐ¡»¨Èï£¬Ò»¿Ú¸øÍÌÁËÏÂÈ¥¡£\n"
-       "Ö»¼û$NÁ³ÉÏ·ºÆðÒ»ÕóºìÔÎ£¬Õû¸öÈË¿´ÆðÀ´ºÃ¶àÁË! \n",me );
+       "$Næ‹¿å‡ºä¸€æœµå°èŠ±è•Šï¼Œä¸€å£ç»™åžäº†ä¸‹åŽ»ã€‚\n"
+       "åªè§$Nè„¸ä¸Šæ³›èµ·ä¸€é˜µçº¢æ™•ï¼Œæ•´ä¸ªäººçœ‹èµ·æ¥å¥½å¤šäº†! \n",me );
     me->receive_heal("sen", 50);
     me->apply_condition("rose_poison", I);
 

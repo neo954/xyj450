@@ -5,10 +5,10 @@
 inherit ROOM;
 void create()
 {
-  set("short","����");
+  set("short","禅堂");
   set("long",@LONG
-����Ҳ��ɮ�û����ã���ɮ��ҹ�ڴ��е���������������ʦ��ʥ
-ɮ�񣬴����뷨�ã���������������Ҫ������
+禅堂也称僧堂或云堂，禅僧昼夜于此行道，正中央设文殊师利圣
+僧像，此堂与法堂，大殿并称禅宗三大主要建筑。
 LONG
   );
   set("exits",([

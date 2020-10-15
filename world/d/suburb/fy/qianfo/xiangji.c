@@ -6,10 +6,10 @@ inherit ROOM;
 int close_path();
 void create()
 {
-  set("short","Ïã»ı³ø");
+  set("short","é¦™ç§¯å¨");
   set("long",@LONG
-Ïã»ı³øÎªìøËÂµÄ³ø·¿£¬¹©·îµÄÊÇÍò½ôÄÇÂŞÍõ£¬Ïà´«ÔøÏÔ»¯ÎªÒ»»ğ
-Í·É®£¬ÔËÈı³ß¹÷Ç÷É¢ºì½íÊ×ÁìµÄ·¸ËÂ¡£
+é¦™ç§¯å¨ä¸ºç¦…å¯ºçš„å¨æˆ¿ï¼Œä¾›å¥‰çš„æ˜¯ä¸‡ç´§é‚£ç½—ç‹ï¼Œç›¸ä¼ æ›¾æ˜¾åŒ–ä¸ºä¸€ç«
+å¤´åƒ§ï¼Œè¿ä¸‰å°ºæ£è¶‹æ•£çº¢å·¾é¦–é¢†çš„çŠ¯å¯ºã€‚
 LONG
   );
   set("exits",([
@@ -32,13 +32,13 @@ int do_push(string arg)
         object me;
         if(!arg || arg=="")
         {
-                write("ÄãÒªÍÆ¿ªÊ²Ã´£¿\n");
+                write("ä½ è¦æ¨å¼€ä»€ä¹ˆï¼Ÿ\n");
                 return 1;
         }
-        if( arg == "luowang" || arg == "Íò½ôÄÇÂŞÍõ" || arg == "ÂŞÍõ")
+        if( arg == "luowang" || arg == "ä¸‡ç´§é‚£ç½—ç‹" || arg == "ç½—ç‹")
         {
         me = this_player();
-        message_vision("$NÍÆ¿ªÍò½ôÄÇÂŞÍõ£¬·¢ÏÖÁËÒ»ÌõÃÜµÀ¡£\n", me);
+        message_vision("$Næ¨å¼€ä¸‡ç´§é‚£ç½—ç‹ï¼Œå‘ç°äº†ä¸€æ¡å¯†é“ã€‚\n", me);
         if( !query("exits/north") ) {
         set("exits/north", __DIR__"changlang4");
         call_out("close_path", 5);
@@ -47,7 +47,7 @@ int do_push(string arg)
         }
         else
         {
-                write("ÄãÍÆÁËÍÆ"+arg+"¡£\n");
+                write("ä½ æ¨äº†æ¨"+arg+"ã€‚\n");
                 return 1;
         }
 }
@@ -55,7 +55,7 @@ int close_path()
 {
         if( !query("exits/north") ) return;
         message("vision",
-"Íò½ôÄÇÂŞÍõÓÖ×ªÁË»ØÀ´£¬¶Â×¡ÁËÏò±±µÄÂ·¡£\n",
+"ä¸‡ç´§é‚£ç½—ç‹åˆè½¬äº†å›æ¥ï¼Œå µä½äº†å‘åŒ—çš„è·¯ã€‚\n",
                 this_object() );
                 delete("exits/north");
 }

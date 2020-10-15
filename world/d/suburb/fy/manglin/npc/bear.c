@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("°×¾±»ÒĞÜ", ({ "bear", "big bear" }) );
-	set("race", "Ò°ÊŞ");
-	set("gender", "ĞÛĞÔ");
+	set_name("ç™½é¢ˆç°ç†Š", ({ "bear", "big bear" }) );
+	set("race", "é‡å…½");
+	set("gender", "é›„æ€§");
 	set("age", 20);
-	set("long", "ÕâÊÇÒ»Ö»Ğ×ÃÍÎŞ±ÈµÄ»ÒÉ«ĞÜ\n");
+	set("long", "è¿™æ˜¯ä¸€åªå‡¶çŒ›æ— æ¯”çš„ç°è‰²ç†Š\n");
 	
 	set("str", 48);
 	set("cor", 52);
@@ -17,7 +17,7 @@ void create()
 	set("max_gin", 600);
 	set("max_sen", 900);
 	set("attitude", "aggressive");
-	set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "áá½Å", "Î²°Í" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰è„š", "å¾Œè„š", "å°¾å·´" }) );
 	set("verbs", ({ "bite", "claw" }) );
 
 		set("combat_exp", 20000);

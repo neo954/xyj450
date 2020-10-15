@@ -4,13 +4,13 @@ inherit NPC;
 
 void create()
 {
-	set_name("ºÕÔì»ù", ({ "adviser" }));
-	set("title","¾üÊ¦");
-	set("gender", "ÄĞĞÔ");
+	set_name("èµ«é€ åŸº", ({ "adviser" }));
+	set("title","å†›å¸ˆ");
+	set("gender", "ç”·æ€§");
 	set("age", 44);
 	set("long",
-        	"µÀ¹âÂúÃæ£¬¡õÖÇ²»ÑÔ¶øÏÖ£¬ÆøÏóÍòÇ§£¬ÏÔÈ»ÊÇÃ©É½Êõ¸ßÊÖÖĞµÄ¸ß\n"
-        	"ÊÖ£¬¾­ÂÚÓğÉÈ£¬ºÍ´ó½«¾üÕıÊÇ¾øÅä¡£\n");
+        	"é“å…‰æ»¡é¢ï¼Œâ–¡æ™ºä¸è¨€è€Œç°ï¼Œæ°”è±¡ä¸‡åƒï¼Œæ˜¾ç„¶æ˜¯èŒ…å±±æœ¯é«˜æ‰‹ä¸­çš„é«˜\n"
+        	"æ‰‹ï¼Œç»çº¶ç¾½æ‰‡ï¼Œå’Œå¤§å°†å†›æ­£æ˜¯ç»é…ã€‚\n");
 
 	set("attitude", "peaceful");
 
@@ -20,7 +20,7 @@ void create()
 	set("combat_exp", 300000);
         
         set("inquiry", ([
-        	"±øÆ÷¿â" : "ÏÈ¿´¿´ÄãµÄ³ÏÒâÔÙËµÂŞ¡£\n",
+        	"å…µå™¨åº“" : "å…ˆçœ‹çœ‹ä½ çš„è¯šæ„å†è¯´ç½—ã€‚\n",
         ]) );
         
         set("chat_chance_combat", 80);
@@ -71,25 +71,25 @@ void create()
 int accept_object(object who,object ob)
 {
         if ( !ob->value() ) {
-        	command("say ¨ß....£Ôhank £Ùou!!!");
+        	command("say ã„Ÿ....ï¼´hank ï¼¹ou!!!");
                 command("grin");
               //  call_out( (: destruct :), 1, ob);
                 return 1;
 	}
                                                                                                                                                                 
-	if( !who->query_temp("¾üÓª/swear") ) {
+	if( !who->query_temp("å†›è¥/swear") ) {
 		if( ob->value() >= 800 ) {
-            	   command("say ºÃ¼«ÁË£¬ÎÒ¾Í¸æËßÄãÒ»ÏîÃØÃÜ°É¡£");
-            	   command("say ÔÚÄÇÆ¬¹â»¬µÄÉ½±ÚÇ°·¢ÊÄ(swear) ÎÒ°®.....¡£");
-                   command("say »òĞíÄã¿ÉÒÔ·¢ÏÖÆæÌØµÄÊÂà¸¡£");
-                   who->set_temp("¾üÓª/swear", 1);
+            	   command("say å¥½æäº†ï¼Œæˆ‘å°±å‘Šè¯‰ä½ ä¸€é¡¹ç§˜å¯†å§ã€‚");
+            	   command("say åœ¨é‚£ç‰‡å…‰æ»‘çš„å±±å£å‰å‘èª“(swear) æˆ‘çˆ±.....ã€‚");
+                   command("say æˆ–è®¸ä½ å¯ä»¥å‘ç°å¥‡ç‰¹çš„äº‹å–”ã€‚");
+                   who->set_temp("å†›è¥/swear", 1);
 		   return 1;
 		} else {
-		   command("say Ç®Ì«ÉÙÁË°É£¡Ã»ÊÕ¡£");
+		   command("say é’±å¤ªå°‘äº†å§ï¼æ²¡æ”¶ã€‚");
 		   return 1;
 		}
 	} else 
-		command("say ¼´È»ÄãÄÇÃ´ÓĞĞÄ£¬ÄÇÎÒ¾ÍÃãÇ¿ÊÕÆğÀ´ÁË¡£");
+		command("say å³ç„¶ä½ é‚£ä¹ˆæœ‰å¿ƒï¼Œé‚£æˆ‘å°±å‹‰å¼ºæ”¶èµ·æ¥äº†ã€‚");
 	
 	return 1;
 }

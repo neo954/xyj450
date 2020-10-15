@@ -4,8 +4,8 @@ inherit NPC;
 
 void create()
 {
-        set_name("Óü×ä", ({ "prison guard", "guard" }) );
-        set("long", "ÕâÊÇºÚËÉ±¤µÄÓü×ä\n");
+        set_name("ç‹±å’", ({ "prison guard", "guard" }) );
+        set("long", "è¿™æ˜¯é»‘æ¾å ¡çš„ç‹±å’\n");
         set("attitude", "heroism");
 
         set("str", 27);

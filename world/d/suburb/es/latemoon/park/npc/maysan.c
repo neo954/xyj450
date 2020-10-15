@@ -2,12 +2,12 @@ inherit NPC;
  
 void create()
 {
-        set_name("ÃÀÉº", ({ "maysan","may" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("ç¾çŠ", ({ "maysan","may" }) );
+        set("gender", "å¥³æ€§" );
         set("age",20);
         set("long", @TEXT
-Ëı¿´ÆğÀ´³ÉÊìÖĞ´øÓĞÒ»Ğ©ÔÏÎ¶¡£Æ®ÒİµÄ³¤·¢
-Ê®·ÖÃÔÈË¡£
+å¥¹çœ‹èµ·æ¥æˆç†Ÿä¸­å¸¦æœ‰ä¸€äº›éŸµå‘³ã€‚é£˜é€¸çš„é•¿å‘
+ååˆ†è¿·äººã€‚
 TEXT
 );
        set("class", "dancer");
@@ -22,7 +22,7 @@ TEXT
         set("force", 300);
         set("max_force", 300);
 
-       create_family("ÍíÔÂ×¯",4,"µÜ×Ó");
+       create_family("æ™šæœˆåº„",4,"å¼Ÿå­");
         setup();
          carry_object("/d/suburb/es/latemoon/obj/flower_boot")->wear();
 }

@@ -1,13 +1,13 @@
 inherit NPC;
 void create()
 {
-    set_name("±Ú»¢", ({ "bihu" }) );
-        set("race", "Ò°ÊŞ");
+    set_name("å£è™", ({ "bihu" }) );
+        set("race", "é‡å…½");
         set("age", 1);
-        set("gender", "´ÆĞÔ");
+        set("gender", "é›Œæ€§");
     	set("combat_exp", 1000);
         set("attitude","peaceful");
-        set("limbs", ({ "Í·²¿", "ÉíÌå","Î²°Í" }) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“","å°¾å·´" }) );
     	set("verbs", ({ "bite","claw" }) );
         set_temp("apply/dodge", 100);
 	set("chat_chance", 7);

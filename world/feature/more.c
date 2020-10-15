@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // more.c
@@ -25,8 +25,8 @@ varargs void more(string cmd, string *text, int line, int force)
    case "q":
     return;
   }
-  printf("== Î´Íê¼ÌĞø " HIY "%d%%" NOR 
-   " == (ENTER ¼ÌĞøÏÂÒ»Ò³£¬q Àë¿ª£¬b Ç°Ò»Ò³)",
+  printf("== æœªå®Œç»§ç»­ " HIY "%d%%" NOR 
+   " == (ENTER ç»§ç»­ä¸‹ä¸€é¡µï¼Œq ç¦»å¼€ï¼Œb å‰ä¸€é¡µ)",
    (line*100/sizeof(text)) );
   input_to("more", text, line);
 }

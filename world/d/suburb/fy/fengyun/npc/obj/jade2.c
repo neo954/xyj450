@@ -6,18 +6,18 @@ inherit HEAD;
 
 void create()
 {
-	set_name("Óñ»¨", ({ "jade flower"}) );
+	set_name("ç‰èŠ±", ({ "jade flower"}) );
 	set_weight(1);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¸ö´äÂÌÓûµÎµÄÓñ»¨\n");
-		set("unit", "¸ö");
+		set("long", "ä¸€ä¸ªç¿ ç»¿æ¬²æ»´çš„ç‰èŠ±\n");
+		set("unit", "ä¸ª");
 		set("value", 20000);
 		set("armor_prop/armor", 0);
 		set("armor_prop/personality", 3);
-		set("wear_msg", "$NÇáÇáµØ°ÑÒ»¶ä$n´÷ÔÚÍ·ÉÏ¡£\n");
-		set("unwield_msg", "$NÇáÇáµØ°Ñ$n´ÓÍ·ÉÏ³ıÁËÏÂÀ´¡£\n");
+		set("wear_msg", "$Nè½»è½»åœ°æŠŠä¸€æœµ$næˆ´åœ¨å¤´ä¸Šã€‚\n");
+		set("unwield_msg", "$Nè½»è½»åœ°æŠŠ$nä»å¤´ä¸Šé™¤äº†ä¸‹æ¥ã€‚\n");
 
 
 	}

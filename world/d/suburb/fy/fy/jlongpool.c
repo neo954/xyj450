@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "½þÁúÔ¡³Ø");
+        set("short", "æµ¸é¾™æµ´æ± ");
         set("long", @LONG
-Ò»ÈëÃÅ£¬ÈÈÆøÆËÃæ£¬°×°×µÄË®ÆøÁ¢¿Ì°üÎ§ÁËÄã¡£ÄãÒÀÏ¡¿´µ½Ò»¸ö¾Þ´óµÄÌ´Ä¾Ë®³Ø,
-Ë®³Ê±ÌÂÌ£¬É¢·¢×ÅÒ»ÖÖÆæÌØµÄÒ©Ïã£¬Ë®ÃæÉÏ»¹Æ¯×ÅÒ»Æ¬Æ¬ºìºìµÄ»¨°ê¶ù£¬ÄãÕæÏëÒ»ÏÂ
-×ÓÌø£¨£ê£õ£í£ð£©½øÈ¥£¬±ÕÉÏÑÛ¾¦ºÃºÃµÄ·ÅËÉÒ»ÏÂ¡£
+ä¸€å…¥é—¨ï¼Œçƒ­æ°”æ‰‘é¢ï¼Œç™½ç™½çš„æ°´æ°”ç«‹åˆ»åŒ…å›´äº†ä½ ã€‚ä½ ä¾ç¨€çœ‹åˆ°ä¸€ä¸ªå·¨å¤§çš„æª€æœ¨æ°´æ± ,
+æ°´å‘ˆç¢§ç»¿ï¼Œæ•£å‘ç€ä¸€ç§å¥‡ç‰¹çš„è¯é¦™ï¼Œæ°´é¢ä¸Šè¿˜æ¼‚ç€ä¸€ç‰‡ç‰‡çº¢çº¢çš„èŠ±ç“£å„¿ï¼Œä½ çœŸæƒ³ä¸€ä¸‹
+å­è·³ï¼ˆï½Šï½•ï½ï½ï¼‰è¿›åŽ»ï¼Œé—­ä¸Šçœ¼ç›å¥½å¥½çš„æ”¾æ¾ä¸€ä¸‹ã€‚
 LONG
         );
         set("exits", ([
@@ -18,7 +18,7 @@ LONG
                 __DIR__"npc/troublemaker": 2,
         ]) );
         setup();
-        create_door("east", "Ì´Ä¾ÃÅ", "west", DOOR_CLOSED);
+        create_door("east", "æª€æœ¨é—¨", "west", DOOR_CLOSED);
 
 }
 
@@ -35,8 +35,8 @@ int do_jump()
 	me = this_player();
 	wait = random( 40 - (int)(me->query("con"))) * 2;
 	if ( wait <= 20) wait = 21;
-	message_vision("$NàÛàÌÒ»ÉùÌø½øÔ¡³Ø£®\n",me);
-	tell_object(me,"Äã¸Ðµ½È«ÉíÎÞ±ÈµÄÊæÌ©£®£®\n");
+	message_vision("$Nå™—å—µä¸€å£°è·³è¿›æµ´æ± ï¼Ž\n",me);
+	tell_object(me,"ä½ æ„Ÿåˆ°å…¨èº«æ— æ¯”çš„èˆ’æ³°ï¼Žï¼Ž\n");
 	remove_call_out("curehimup");
 	call_out("curehimup", wait, me);
 return 1;
@@ -50,7 +50,7 @@ void curehimup(object me)
         sen=(int)me->query("max_sen");
 if( me && environment(me) == this_object())
 	{
-	message_vision("$NµÄ¾«ÆøÉñÈ«»Ö¸´ÁË£¡£¡\n", me);
+	message_vision("$Nçš„ç²¾æ°”ç¥žå…¨æ¢å¤äº†ï¼ï¼\n", me);
 	me->set("eff_gin",gin);
         me->set("eff_kee",kee);
         me->set("eff_sen",sen);

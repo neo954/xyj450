@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("»ÆÒÂÎÀ", ({ "guard", "yellow guard"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("é»„è¡£å«", ({ "guard", "yellow guard"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 32);
-        set("long", "ÕâÊÇÒ»Î»½ğÇ®°ï×Ü¶æµÄ»ÆÒÂÎÀ¡£\n");
+        set("long", "è¿™æ˜¯ä¸€ä½é‡‘é’±å¸®æ€»èˆµçš„é»„è¡£å«ã€‚\n");
         set("combat_exp", 50000);
         set("attitude", "friendly");
         set_skill("sword", 90+random(100));
@@ -14,8 +14,8 @@ void create()
         set("iron-cloth", 200);
         set("chat_chance", 1);
         set("chat_msg", ({
-                "»ÆÒÂÎÀÏòÄãºÈµÀ£º¿ÚÁî£¿£¿\n",
-                "»ÆÒÂÎÀÏòÄãºÈµÀ£ºÕ¾×¡£®ÁÁÄãµÄÑüÅÆ£¿\n",
+                "é»„è¡£å«å‘ä½ å–é“ï¼šå£ä»¤ï¼Ÿï¼Ÿ\n",
+                "é»„è¡£å«å‘ä½ å–é“ï¼šç«™ä½ï¼äº®ä½ çš„è…°ç‰Œï¼Ÿ\n",
         }) );
 	
 	setup();

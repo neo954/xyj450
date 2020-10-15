@@ -1,4 +1,4 @@
-// puti-zi.c ÆĞÌá×Ó
+// puti-zi.c è©æå­
 
 #include <ansi.h>
 
@@ -14,13 +14,13 @@ void init()
 
 void create()
 {
-	set_name("ÆĞÌá×Ó", ({"puti zi", "zi"}));
+	set_name("è©æå­", ({"puti zi", "zi"}));
 	if (clonep())
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¿Å");
-		set("long", "ÕâÊÇÒ»¿Å¾§Ó¨ÈçÓñµÄÆĞÌá×Ó£¬²É×ÔÁéÉ½·ğ×æ×ùÇ°£¬ÕäÏ¡ÎŞ±È£¬
-ÄËÍòÄêÆĞÌáÊ÷Ö®Êµ£¬¹¦ÄÜ»¯°Ù½Ù£¬¶ÉÇ§ÔÖ£¬ÓëÌìµØÍ¬ÊÙ¡£\n");
+		set("unit", "é¢—");
+		set("long", "è¿™æ˜¯ä¸€é¢—æ™¶è¹å¦‚ç‰çš„è©æå­ï¼Œé‡‡è‡ªçµå±±ä½›ç¥–åº§å‰ï¼Œçç¨€æ— æ¯”ï¼Œ
+ä¹ƒä¸‡å¹´è©ææ ‘ä¹‹å®ï¼ŒåŠŸèƒ½åŒ–ç™¾åŠ«ï¼Œæ¸¡åƒç¾ï¼Œä¸å¤©åœ°åŒå¯¿ã€‚\n");
 		set("value", 1000000);
 	}
 	setup();
@@ -35,7 +35,7 @@ int do_eat(string arg)
 	force_skill = (int)this_player()->query_skill("force", 1);
 	
 	if (!id(arg))
-	return notify_fail("ÄãÒª³ÔÊ²Ã´£¿\n");
+	return notify_fail("ä½ è¦åƒä»€ä¹ˆï¼Ÿ\n");
 //39
 	if ( neili_limit <= force_limit  )
 	{
@@ -51,7 +51,7 @@ int do_eat(string arg)
 	this_player()->add("max_force", 100);
 	this_player()->add("force", 100);
 
-	message_vision(HIY "$N³ÔÏÂÒ»¿ÅÆĞÌá×Ó£¬¶ÙÈ»¼äÖ»¾õÒ»¹ÉºÆµ´ÎŞ±ÈµÄÕæÆøÖ±³å¶¥ÃÅ...\n" NOR, this_player());
+	message_vision(HIY "$Nåƒä¸‹ä¸€é¢—è©æå­ï¼Œé¡¿ç„¶é—´åªè§‰ä¸€è‚¡æµ©è¡æ— æ¯”çš„çœŸæ°”ç›´å†²é¡¶é—¨...\n" NOR, this_player());
 	this_player()->unconcious();
 	destruct(this_object());
 	return 1;

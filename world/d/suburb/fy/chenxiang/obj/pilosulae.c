@@ -5,11 +5,11 @@
 inherit ITEM;
 void create()
 {
-    set_name( "è½×Ó", ({ "pilosulae"  }) );
-    set("unit", "¿é");
+    set_name( "æå­", ({ "pilosulae"  }) );
+    set("unit", "å—");
     set("value",20);
     set("long","
-Ò»¿éÉÏºÃµÄè½×Ó
+ä¸€å—ä¸Šå¥½çš„æå­
 \n");
     set_weight(5);
 }

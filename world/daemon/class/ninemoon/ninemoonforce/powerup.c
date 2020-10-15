@@ -11,12 +11,12 @@ int exert(object me, object target, int amount)
         int skill;
 
         if( target != me ) return 
-notify_fail("你只能用九阴心经提升自己的战斗力。\n");
+notify_fail("浣犲彧鑳界敤涔濋槾蹇冪粡鎻愬崌鑷繁鐨勬垬鏂楀姏銆俓n");
 
         if( (int)me->query("force") < 100 )     return 
-notify_fail("你的内力不够。\n");
+notify_fail("浣犵殑鍐呭姏涓嶅銆俓n");
         if( (int)me->query_temp("powerup") ) return 
-notify_fail("你已经在运功中了。\n");
+notify_fail("浣犲凡缁忓湪杩愬姛涓簡銆俓n");
 
         skill = me->query_skill("force");
 
@@ -26,7 +26,7 @@ notify_fail("你已经在运功中了。\n");
 
         message_vision(
                 HIR 
-"$N眼观鼻，鼻观口，口观心，施展九阴心经，聚虚为实，全身透出阴寒无比的真气！\n" NOR, me);
+"$N鐪艰榧伙紝榧昏鍙ｏ紝鍙ｈ蹇冿紝鏂藉睍涔濋槾蹇冪粡锛岃仛铏氫负瀹烇紝鍏ㄨ韩閫忓嚭闃村瘨鏃犳瘮鐨勭湡姘旓紒\n" NOR, me);
 
         me->add_temp("apply/attack", skill/4);
         me->add_temp("apply/dodge", skill/4);
@@ -45,6 +45,6 @@ void remove_effect(object me, int amount)
         me->add_temp("apply/attack", - amount);
         me->add_temp("apply/dodge", - amount);
         me->delete_temp("powerup");
-        tell_object(me, "你的九阴心经运行完毕，将内力收回丹田。\n");
+        tell_object(me, "浣犵殑涔濋槾蹇冪粡杩愯瀹屾瘯锛屽皢鍐呭姏鏀跺洖涓圭敯銆俓n");
 }
  

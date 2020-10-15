@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
 
 #include <ansi.h>
@@ -9,11 +9,11 @@ inherit F_CLEAN_UP;
 int update_condition(object me, int duration)
 {
    if( !living(me) ) {
-      message("vision", me->name() + "ʹ��غ���һ����\n", environment(me), me);
+      message("vision", me->name() + "痛苦地哼了一声。\n", environment(me), me);
    }
    else {
-      tell_object(me, HIB "��Ȼһ��̹ǵ��溮Ϯ�������е������ƶ������ˣ�\n" NOR );
-      message("vision", me->name() + "������ͻȻ�������Σ����ظ�������������\n",
+      tell_object(me, HIB "忽然一阵刺骨的奇寒袭来，你中的星宿掌毒发作了！\n" NOR );
+      message("vision", me->name() + "的身子突然晃了两晃，牙关格格地响了起来。\n",
             environment(me), me);
    }
       me->receive_damage("kee", 25);

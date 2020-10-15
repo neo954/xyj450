@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // master.c
@@ -8,9 +8,9 @@ inherit F_MASTER;
 
 void create()
 {
-   set_name("Áø´¾·ç", ({ "master swordsman", "swordsman", "master" }) );
-   set("nickname", "·çÓêË«ÏÀ");
-   set("gender", "ÄÐÐÔ" );
+   set_name("æŸ³æ·³é£Ž", ({ "master swordsman", "swordsman", "master" }) );
+   set("nickname", "é£Žé›¨åŒä¾ ");
+   set("gender", "ç”·æ€§" );
    set("age", 44);
    set("str", 27);
    set("cor", 30);
@@ -21,13 +21,13 @@ void create()
    set("force", 1500);
    set("force_factor", 3);
 
-   set("rank_info/respect", "Áø¹ÝÖ÷");
+   set("rank_info/respect", "æŸ³é¦†ä¸»");
 
    set("long",
-     "Áø´¾·çÊÇ¸öÏàµ±¸ß´óµÄÖÐÄêÈåÉú£¬Èô²»ÊÇ´ÓËûÑü¼ä¹Ò×ÅµÄ¡¸ÐþËÕ½£¡¹Äã\n"
-     "´ó¸Å²Â²»µ½ÑÛÇ°Õâ¸öÎÂÎÄÈåÑÅµÄÖÐÄêÈË¾¹ÊÇ¼Ò´óÎä¹ÝµÄ¹ÝÖ÷¡£\n");
+     "æŸ³æ·³é£Žæ˜¯ä¸ªç›¸å½“é«˜å¤§çš„ä¸­å¹´å„’ç”Ÿï¼Œè‹¥ä¸æ˜¯ä»Žä»–è…°é—´æŒ‚ç€çš„ã€ŒçŽ„è‹å‰‘ã€ä½ \n"
+     "å¤§æ¦‚çŒœä¸åˆ°çœ¼å‰è¿™ä¸ªæ¸©æ–‡å„’é›…çš„ä¸­å¹´äººç«Ÿæ˜¯å®¶å¤§æ­¦é¦†çš„é¦†ä¸»ã€‚\n");
 
-   create_family("·âÉ½½£ÅÉ", 13, "ÕÆÃÅÈË");
+   create_family("å°å±±å‰‘æ´¾", 13, "æŽŒé—¨äºº");
 
    set("combat_exp", 1000000);
    set("score", 200000);
@@ -56,11 +56,11 @@ void create()
    map_skill("dodge", "chaos-steps");
 
    set("inquiry", ([
-     "´¾·çÎä¹Ý" : "´¾·çÎä¹ÝÊÇÏÈ¸¸Ëù´´£¬ÔÚÏÂÈè³ÐÆäÃû£¬ËäãÃÕÆ·âÉ½ÃÅ»§£¬²»¸ÒÍüÁËÏÈÈËÒÅÖ¾¡£",
-     "ÏÈÈËÒÅÖ¾" : "ÏÈ¸¸ÁÙÖÕÖ®Ê±½«ÕâÎä¹Ý½»µ½ÔÚÏÂÊÖÖÐ£¬ÐèµÃºÃºÃÕÕ¿´¡£",
-     "Áõ°²Â»" : "ÁõÐÖµÜÔÚº®Éá¹ÜÊÂÒÑ¾­ÎåÄêÁË£¬¹ýÈ¥Ö®ÊÂ²»ÐëÔÙÌá¡£",
-     "name": "Äã¼ÈÈ»ÖªµÀÎÒÊÇÁø¡õÖ÷£¬ÔõÃ´²»ÖªµÀÎÒÊÇÁø´¾·ç£¿",
-     "here": "ÕâÀï±ãÊÇ´¾·çÎä¹Ý¡£",
+     "æ·³é£Žæ­¦é¦†" : "æ·³é£Žæ­¦é¦†æ˜¯å…ˆçˆ¶æ‰€åˆ›ï¼Œåœ¨ä¸‹è¾±æ‰¿å…¶åï¼Œè™½å¿æŽŒå°å±±é—¨æˆ·ï¼Œä¸æ•¢å¿˜äº†å…ˆäººé—å¿—ã€‚",
+     "å…ˆäººé—å¿—" : "å…ˆçˆ¶ä¸´ç»ˆä¹‹æ—¶å°†è¿™æ­¦é¦†äº¤åˆ°åœ¨ä¸‹æ‰‹ä¸­ï¼Œéœ€å¾—å¥½å¥½ç…§çœ‹ã€‚",
+     "åˆ˜å®‰ç¦„" : "åˆ˜å…„å¼Ÿåœ¨å¯’èˆç®¡äº‹å·²ç»äº”å¹´äº†ï¼Œè¿‡åŽ»ä¹‹äº‹ä¸é¡»å†æã€‚",
+     "name": "ä½ æ—¢ç„¶çŸ¥é“æˆ‘æ˜¯æŸ³â–¡ä¸»ï¼Œæ€Žä¹ˆä¸çŸ¥é“æˆ‘æ˜¯æŸ³æ·³é£Žï¼Ÿ",
+     "here": "è¿™é‡Œä¾¿æ˜¯æ·³é£Žæ­¦é¦†ã€‚",
    ]) );
 
    setup();
@@ -72,11 +72,11 @@ void attempt_apprentice(object ob)
 {
    if( ((int)ob->query("cor") < 20) 
    ||   ((int)ob->query("cps") < 20)) {
-     command("say Ñ§½£Ö®ÈË±ØÐëµ¨´óÐÄÏ¸£¬ÒÀÎÒ¿´" + RANK_D->query_respect(ob) + "µÄ×ÊÖÊËÆºõ²»ÒË£¿");
+     command("say å­¦å‰‘ä¹‹äººå¿…é¡»èƒ†å¤§å¿ƒç»†ï¼Œä¾æˆ‘çœ‹" + RANK_D->query_respect(ob) + "çš„èµ„è´¨ä¼¼ä¹Žä¸å®œï¼Ÿ");
      return;
    }
    command("smile");
-   command("say ºÜºÃ£¬" + RANK_D->query_respect(ob) + "¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓÐ³É¡£\n");
+   command("say å¾ˆå¥½ï¼Œ" + RANK_D->query_respect(ob) + "å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
    command("recruit " + ob->query("id") );
 }
 

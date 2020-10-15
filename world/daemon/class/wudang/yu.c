@@ -1,17 +1,17 @@
-// yu.c ÓáÁ«ÖÛ
+// yu.c ä¿žèŽ²èˆŸ
 
 inherit NPC;
 inherit F_MASTER;
 
 void create()
 {
-	set_name("ÓáÁ«ÖÛ", ({ "yu lianzhou", "yu" }));
-	set("nickname", "Îäµ±¶þÏÀ");
+	set_name("ä¿žèŽ²èˆŸ", ({ "yu lianzhou", "yu" }));
+	set("nickname", "æ­¦å½“äºŒä¾ ");
 	set("long", 
-		"Ëû¾ÍÊÇÕÅÈý·áµÄ¶þµÜ×ÓÓáÁ«ÖÛ¡£\n"
-		"Ëû½ñÄêÎåÊ®Ëê£¬Éí²Ä¿ýÎà£¬Æø¶ÈÄýÖØ¡£\n"
-		"ËäÔÚÎäµ±ÆßÏÀÖÐÅÅÃûµÚ¶þ£¬¹¦·òÈ´ÊÇ×î¾«¡£\n");
-	set("gender", "ÄÐÐÔ");
+		"ä»–å°±æ˜¯å¼ ä¸‰ä¸°çš„äºŒå¼Ÿå­ä¿žèŽ²èˆŸã€‚\n"
+		"ä»–ä»Šå¹´äº”åå²ï¼Œèº«æé­æ¢§ï¼Œæ°”åº¦å‡é‡ã€‚\n"
+		"è™½åœ¨æ­¦å½“ä¸ƒä¾ ä¸­æŽ’åç¬¬äºŒï¼ŒåŠŸå¤«å´æ˜¯æœ€ç²¾ã€‚\n");
+	set("gender", "ç”·æ€§");
 	set("age", 50);
 	set("attitude", "peaceful");
 	set("shen_type", 1);
@@ -46,7 +46,7 @@ void create()
 	map_skill("parry", "taiji-jian");
 	map_skill("sword", "taiji-jian");
 
-	create_family("Îäµ±ÅÉ", 2, "µÜ×Ó");
+	create_family("æ­¦å½“æ´¾", 2, "å¼Ÿå­");
 
 	setup();
 	carry_object("/d/obj/clone/weapon/changjian")->wield();
@@ -56,12 +56,12 @@ void create()
 void attempt_apprentice(object ob)
 {
 	if ((int)ob->query("sen") < 100) {
-		command("say ÎÒÎäµ±ÄËÊÇÌÃÌÃÃûÃÅÕýÅÉ£¬¶ÔµÜ×ÓÒªÇó¼«ÑÏ¡£");
-		command("say " + RANK_D->query_respect(ob) + "ÈôÄÜ×ö³ö" +
-			"¼¸¼þÏÀÒåÖ®ÊÂ£¬ÎÒÒ»¶¨ÊÕÄã¡£");
+		command("say æˆ‘æ­¦å½“ä¹ƒæ˜¯å ‚å ‚åé—¨æ­£æ´¾ï¼Œå¯¹å¼Ÿå­è¦æ±‚æžä¸¥ã€‚");
+		command("say " + RANK_D->query_respect(ob) + "è‹¥èƒ½åšå‡º" +
+			"å‡ ä»¶ä¾ ä¹‰ä¹‹äº‹ï¼Œæˆ‘ä¸€å®šæ”¶ä½ ã€‚");
 		return;
 	}
-	command("say ºÃ°É£¬¼ÈÈ»" + RANK_D->query_respect(ob) + "Ò²ÊÇ" +
-		"ÎÒ±²ÖÐÈË£¬½ñÌì¾ÍÊÕÏÂÄã°É¡£");
+	command("say å¥½å§ï¼Œæ—¢ç„¶" + RANK_D->query_respect(ob) + "ä¹Ÿæ˜¯" +
+		"æˆ‘è¾ˆä¸­äººï¼Œä»Šå¤©å°±æ”¶ä¸‹ä½ å§ã€‚");
 	command("recruit " + ob->query("id"));
 }

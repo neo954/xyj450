@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-     set_name("ÉÕ·¹É®", ({"cook bonze", "bonze"}));
-     set("gender", "ÄĞĞÔ");
+     set_name("çƒ§é¥­åƒ§", ({"cook bonze", "bonze"}));
+     set("gender", "ç”·æ€§");
      set("class", "bonze");
      set("age",35);
-     set("long","Ò»Î»³¤µÃ·Ê·ÊÅÖÅÖ, ¸£¸£Ì©Ì©µÄÖĞÄêÉ®ÈË¡£\n");
+     set("long","ä¸€ä½é•¿å¾—è‚¥è‚¥èƒ–èƒ–, ç¦ç¦æ³°æ³°çš„ä¸­å¹´åƒ§äººã€‚\n");
      set("combat_exp", 1100);
      set("attitude", "friendly");
 
@@ -33,6 +33,6 @@ void create()
 
 int accept_fight(object me)
 {
-     command("say °¢ÃÖÍÓ·ğ !! Æ¶É®µÄ²Ëµ¶ÊÇÓÃÀ´ÇĞ²ËµÄ, ²»ÊÇÓÃÀ´¿³ÈËµÄ¡£\n");
+     command("say é˜¿å¼¥é™€ä½› !! è´«åƒ§çš„èœåˆ€æ˜¯ç”¨æ¥åˆ‡èœçš„, ä¸æ˜¯ç”¨æ¥ç äººçš„ã€‚\n");
      return 0;
 }

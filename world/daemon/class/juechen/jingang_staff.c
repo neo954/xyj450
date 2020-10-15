@@ -6,17 +6,17 @@ inherit STAFF;
 
 void create()
 {
-        set_name( HIY "½ğ¸ÕÕÈ" NOR, ({ "jingang staff", "staff" }) );
+        set_name( HIY "é‡‘åˆšæ–" NOR, ({ "jingang staff", "staff" }) );
         set_weight(13000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ìõ");
-                set("long", "ÕâÊÇÒ»Ìõ×ÏÍ­ÕÈ£¬ÕÈµÄÁ½¶ËËÆºõ·âÕâÃÜÎÄ¡£\n");
+                set("unit", "æ¡");
+                set("long", "è¿™æ˜¯ä¸€æ¡ç´«é“œæ–ï¼Œæ–çš„ä¸¤ç«¯ä¼¼ä¹å°è¿™å¯†æ–‡ã€‚\n");
                 set("value", 80000);
                 set("material", "brass");
-                set("wield_msg", "$N¡¸à§¡¹µØÒ»Éù³é³öÒ»Ìõ$nÇæÔÚÊÖÖĞ¡£\n");
-                set("unequip_msg", "$N½«ÊÖÖĞµÄ$nÖôÔÚµØÉÏ¡£\n");
+                set("wield_msg", "$Nã€Œå”°ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æ¡$næ“åœ¨æ‰‹ä¸­ã€‚\n");
+                set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ‹„åœ¨åœ°ä¸Šã€‚\n");
                 set("weapon_prop/spells",10);
                 set("weapon_prop/dodge",-5);
         }

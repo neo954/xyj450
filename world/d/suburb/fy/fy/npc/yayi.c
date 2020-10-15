@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-        set_name("风云衙役", ({ "yayi", "ya" }) );
+        set_name("椋庝簯琛欏焦", ({ "yayi", "ya" }) );
         set("long",
-                "正在上堂的衙役，千万不要惹他们\n");
+                "姝ｅ湪涓婂爞鐨勮褰癸紝鍗冧竾涓嶈鎯逛粬浠琝n");
 
         set("attitude", "heroism");
 	set("vendetta_mark", "authority");
@@ -33,7 +33,7 @@ void create()
         set_temp("apply/move", 100);
         set("chat_chance", 1);
         set("chat_msg", ({
-"风云衙役低声宣道：威～～～～武～～～～\n"
+"椋庝簯琛欏焦浣庡０瀹ｉ亾锛氬▉锝烇綖锝烇綖姝︼綖锝烇綖锝瀄n"
         }) );
 
         setup();

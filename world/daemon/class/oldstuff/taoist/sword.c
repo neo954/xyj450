@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // sword.c
@@ -11,19 +11,19 @@ inherit SWORD;
 
 void create()
 {
-   set_name( HIR "Öä½£Íõ¡õ" NOR, ({ "sword" }) );
+   set_name( HIR "å’’å‰‘çŽ‹â–¡" NOR, ({ "sword" }) );
    set_weight(7000);
    if( clonep() )
      set_default_object(__FILE__);
    else {
-     set("unit", "°Ñ");
+     set("unit", "æŠŠ");
      set("long",
-        "ÕâÊÇÒ»°ÑÌÒÄ¾µñ³ÉµÄ¹Å½££¬ÎÅÆðÀ´ÓÐÒ»¹ÉÏãÎ¶£¬½£Éí¿Ì×ÅÐí\¶àÄã´ÓÎ´¼û¹ýµÄÖä\n"
-        "ÎÄ£¬Ö»ÓÐ½£±ú²¿·ÝÓÐÁ½¸öÒÀÏ¡¿ÉÒÔ±æÈÏµÄ×­×Ö£º¡¸ Íõ ¡õ ¡¹\n");
+        "è¿™æ˜¯ä¸€æŠŠæ¡ƒæœ¨é›•æˆçš„å¤å‰‘ï¼Œé—»èµ·æ¥æœ‰ä¸€è‚¡é¦™å‘³ï¼Œå‰‘èº«åˆ»ç€è®¸\å¤šä½ ä»Žæœªè§è¿‡çš„å’’\n"
+        "æ–‡ï¼Œåªæœ‰å‰‘æŸ„éƒ¨ä»½æœ‰ä¸¤ä¸ªä¾ç¨€å¯ä»¥è¾¨è®¤çš„ç¯†å­—ï¼šã€Œ çŽ‹ â–¡ ã€\n");
      set("value", 18000);
      set("material", "steel");
-     set("wield_msg", "$N¡¸à§¡¹µØÒ»Éù³é³öÒ»°Ñ$nÎÕÔÚÊÖÖÐ¡£\n");
-     set("unequip_msg", "$N½«ÊÖÖÐµÄ$n²åÈëÑü¼äµÄ½£ÇÊ¡£\n");
+     set("wield_msg", "$Nã€Œå”°ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+     set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„å‰‘éž˜ã€‚\n");
    }
 
    init_sword(44);
@@ -43,7 +43,7 @@ mixed hit_ob(object me, object victim, int damage_bonus)
         me->receive_heal("gin", damage);
         me->receive_heal("kee", damage);
         me->receive_heal("sen", damage);
-        return HIY "Íõ¡õ½£·¢³öÒ»¹É½ðÉ«µÄî¸\Æø£¬Á÷±é$NµÄÈ«Éí¡£\n" NOR;
+        return HIY "çŽ‹â–¡å‰‘å‘å‡ºä¸€è‚¡é‡‘è‰²çš„ç½¡\æ°”ï¼Œæµé$Nçš„å…¨èº«ã€‚\n" NOR;
      }
      return random(me->query_spi());
    }

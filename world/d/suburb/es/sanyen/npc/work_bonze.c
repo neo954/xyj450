@@ -6,8 +6,8 @@ inherit NPC;
 
 void create()
 {
-	set_name("É¨µØÉ®", ({ "work bonze","bonze" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("æ‰«åœ°åƒ§", ({ "work bonze","bonze" }) );
+	set("gender", "ç”·æ€§" );
 	set("class", "bonze");
 	set("age", 26);
 	set("str", 16);
@@ -15,8 +15,8 @@ void create()
 	set("cps", 12);
 	set("int", 20);
 	set("long",
-		"Ò»¸ö·Ê·ÊÅÖÅÖµÄÉ®ÈË, ¿´ËûÄÃÖøÉ¨°ÑÓĞÒ»ÏÂÃ»Ò»ÏÂµÄÉ¨Öø, ¾ÍÖªµÀËû\n"
-		"Æ½³£Ò²ÊÇÃşÓã´óÍõ¡£\n" );
+		"ä¸€ä¸ªè‚¥è‚¥èƒ–èƒ–çš„åƒ§äºº, çœ‹ä»–æ‹¿è‘—æ‰«æŠŠæœ‰ä¸€ä¸‹æ²¡ä¸€ä¸‹çš„æ‰«è‘—, å°±çŸ¥é“ä»–\n"
+		"å¹³å¸¸ä¹Ÿæ˜¯æ‘¸é±¼å¤§ç‹ã€‚\n" );
 
 	set("combat_exp", 200);
 	set("attitude", "friendly");
@@ -43,6 +43,6 @@ void create()
 
 int accept_fight(object me)
 {
-    command("say °¢ÃÖÍÓ·ğ£¡Æ¶É®Îä¹¦µÍÎ¢£¬Ê©Ö÷²»Òª¿ªÕâÖÖÍæĞ¦¡£\n");
+    command("say é˜¿å¼¥é™€ä½›ï¼è´«åƒ§æ­¦åŠŸä½å¾®ï¼Œæ–½ä¸»ä¸è¦å¼€è¿™ç§ç©ç¬‘ã€‚\n");
     return 0;
 }

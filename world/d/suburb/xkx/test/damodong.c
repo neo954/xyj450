@@ -5,9 +5,9 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "�Ͼ�");
+	set("short", "废井");
 	set("long", @LONG
-��ھ������Ѿã���ҳ�ܲݣ��Ѽ����ã������������ࡣ
+这口井废置已久，落页败草，堆集腐烂，都化成了软泥。
 LONG
 	);
 

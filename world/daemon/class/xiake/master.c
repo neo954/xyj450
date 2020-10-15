@@ -8,12 +8,12 @@ void consider();
 
 void create()
 {
-	set_name("ÁúÒà·²", ({"island master", "long", "master"}));
-	set("nickname", "²»°ÜÉñÁú");
-	set("gender", "ÄĞĞÔ");
+	set_name("é¾™äº¦å‡¡", ({"island master", "long", "master"}));
+	set("nickname", "ä¸è´¥ç¥é¾™");
+	set("gender", "ç”·æ€§");
 	set("age", 80);
 	set("long", 
-		"ÕâÄÑµÀ¾ÍÊÇ´«ËµÖĞµÄÏÀ¿ÍµºµºÖ÷ÁúÒà·²Âğ£¿\nËû¿´ÉÏÈ¥¸úÒ»°ãµÄÖĞÄêÈËÎŞÒì£¬¿ÉÊÇËûÒÑÓĞ°ÙËê¸ßÁä¡£\n");
+		"è¿™éš¾é“å°±æ˜¯ä¼ è¯´ä¸­çš„ä¾ å®¢å²›å²›ä¸»é¾™äº¦å‡¡å—ï¼Ÿ\nä»–çœ‹ä¸Šå»è·Ÿä¸€èˆ¬çš„ä¸­å¹´äººæ— å¼‚ï¼Œå¯æ˜¯ä»–å·²æœ‰ç™¾å²é«˜é¾„ã€‚\n");
 	set("attitude", "peaceful");
 	
 	set("str", 30);
@@ -44,6 +44,6 @@ void create()
 	
 	setup();
 }
-	create_family("ÏÀ¿Íµº", 3, "µÜ×Ó");
+	create_family("ä¾ å®¢å²›", 3, "å¼Ÿå­");
 	
 

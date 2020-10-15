@@ -3,18 +3,18 @@ inherit F_LIQUID;
 
 void create()
 {
-        set_name("×´Ôªºì", ({"wine"}));
+        set_name("çŠ¶å…ƒçº¢", ({"wine"}));
         set_weight(20000);
         if( clonep() )
             set_default_object(__FILE__);
           else {
-        	set("long", "ÕâÊÇÒ»Ì³ÏãÎ¶Å¨ÓôµÄ³ÂÄêÀÏ¾Æ£¬ÊÇ×¨´ı×´Ôª¸ßÖĞÊ±ºÈµÄ¾Æ¡£\n");
-                set("unit", "Ì³");
+        	set("long", "è¿™æ˜¯ä¸€å›é¦™å‘³æµ“éƒçš„é™ˆå¹´è€é…’ï¼Œæ˜¯ä¸“å¾…çŠ¶å…ƒé«˜ä¸­æ—¶å–çš„é…’ã€‚\n");
+                set("unit", "å›");
                 set("value", 350);
                 set("max_liquid", 30);
         }
         set("liquid", ([
-                "name" : "ºì¾Æ",
+                "name" : "çº¢é…’",
                 "remaining" : 30,
                 "drunk_bonus" : 7,
                 "type" : "alcohol"

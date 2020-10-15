@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // gargoyle.c
@@ -11,15 +11,15 @@ inherit F_MASTER;
 
 void create()
 {
-        set_name("������", ({ "yin changsheng", "yin", "changsheng" }));
-        set("long","���������Ǹ������ţ����ڷᶼɽ�������ɣ����⡸��������\n");
+        set_name("阴长生", ({ "yin changsheng", "yin", "changsheng" }));
+        set("long","阴长生本是个落弟秀才，后在丰都山修练成仙，御封「阴王」。\n");
         set("attitude", "peaceful");
    set("per", 30);
    set("str", 25);
    set("int", 25);
         set("age", 30);
-   set("title", "����˾��");
-   set("nickname", "����");
+   set("title", "寂灭司主");
+   set("nickname", "阴王");
         set("combat_exp", 800000);
         set("max_gin", 1400);
         set("max_kee", 1400);
@@ -62,7 +62,7 @@ void create()
    set_temp("apply/armor", 50);
 
 
-create_family("���޵ظ�", 2, "���");
+create_family("阎罗地府", 2, "你好");
 
         setup();
    carry_object("/d/obj/weapon/stick/wuchangbang")->wield();
@@ -76,8 +76,8 @@ void attempt_apprentice()
    me = this_player();
         command("grin");
 
-        command("say �ܺã�" + RANK_D->query_respect(me) +
-"���Ŭ�������ձض��гɡ�\n");
+        command("say 很好，" + RANK_D->query_respect(me) +
+"多加努力，他日必定有成。\n");
        command("recruit " + me->query("id") );
         return;
 }
@@ -86,7 +86,7 @@ int recruit_apprentice(object ob)
 {
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "youling");
-     ob->set("title", "�ظ��л�˾����");
+     ob->set("title", "地府招魂司阴兵");
 }
 
 */

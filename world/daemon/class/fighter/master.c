@@ -7,13 +7,13 @@ void consider();
 
 void create()
 {
-	set_name("Ïô±Ù³¾", ({ "master fighter", "master", "fighter" }) );
+	set_name("è§è¾Ÿå°˜", ({ "master fighter", "master", "fighter" }) );
 
-	set("nickname", "Ğ¡ÌìĞ°");
-	set("gender", "ÄĞĞÔ");
+	set("nickname", "å°å¤©é‚ª");
+	set("gender", "ç”·æ€§");
 	set("age", 24);
 	set("long",
-		"Ïô±Ù³¾×ÔÓ×Éú³¤ì¶á°³ÇÖ®ÖĞ£¬¿´ÆğÀ´ÏÉ·çµÀ¹Ç£¬²»Ê³ÈË¼äÑÌ»ğ¡£\n");
+		"è§è¾Ÿå°˜è‡ªå¹¼ç”Ÿé•¿æ–¼å²šåŸä¹‹ä¸­ï¼Œçœ‹èµ·æ¥ä»™é£é“éª¨ï¼Œä¸é£Ÿäººé—´çƒŸç«ã€‚\n");
 	set("attitude", "peaceful");
 
 	set("str", 26);
@@ -58,7 +58,7 @@ void create()
 	map_skill("dodge", "pyrobat-steps");
 	map_skill("move", "pyrobat-steps");
 
-	create_family("ÌìĞ°ÅÉ", 16, "µÜ×Ó");
+	create_family("å¤©é‚ªæ´¾", 16, "å¼Ÿå­");
 
 	setup();
 
@@ -77,11 +77,11 @@ void init()
 void attempt_apprentice(object me)
 {
 	if( me->query_temp("pending/celestial_swear") ) {
-		command("say ¶àËµÎŞÒæ£¬Èô²»·¢ÊÄã¡ÊØÃÅ¹æ£¬±ãÊÇ¹òÖøÇóÎÒÒ²Ã»ÓÃ¡£");
+		command("say å¤šè¯´æ— ç›Šï¼Œè‹¥ä¸å‘èª“æªå®ˆé—¨è§„ï¼Œä¾¿æ˜¯è·ªè‘—æ±‚æˆ‘ä¹Ÿæ²¡ç”¨ã€‚");
 		return;
 	} else {
-		command("say ÎÒÌìĞ°ÅÉÃÅ¹æÉõÑÏ£¬" + RANK_D->query_respect(me)
-			+ "Èç¹ûÕæµÄÓĞĞÄ£¬ÇÒ·¢¸öÊÄ(swear)À´¡£");
+		command("say æˆ‘å¤©é‚ªæ´¾é—¨è§„ç”šä¸¥ï¼Œ" + RANK_D->query_respect(me)
+			+ "å¦‚æœçœŸçš„æœ‰å¿ƒï¼Œä¸”å‘ä¸ªèª“(swear)æ¥ã€‚");
 		me->set_temp("pending/celestial_swear", 1);
 	}
 }
@@ -90,16 +90,16 @@ int do_swear(string arg)
 {
 	if( !this_player()->query_temp("pending/celestial_swear") )
 		return 0;
-	if( !arg ) return notify_fail("ÄãÒª·¢Ê²÷áÊÄ£¿\n");
+	if( !arg ) return notify_fail("ä½ è¦å‘ä»€éº½èª“ï¼Ÿ\n");
 	this_player()->set_temp("pending/celestial_swear", 0);
-	message_vision("$N·¢ÊÄµÀ£º" + arg + "\n", this_player());
-//	if( strsrch(arg, "ÊØ") >=0 && strsrch(arg, "ÃÅ¹æ") >=0 ) {
-	if (arg == "ÊØÃÅ¹æ") {
+	message_vision("$Nå‘èª“é“ï¼š" + arg + "\n", this_player());
+//	if( strsrch(arg, "å®ˆ") >=0 && strsrch(arg, "é—¨è§„") >=0 ) {
+	if (arg == "å®ˆé—¨è§„") {
 		command("smile");
-		command("say Õâ¾ÍÊÇÁË¡£\n");
+		command("say è¿™å°±æ˜¯äº†ã€‚\n");
 		command("recruit " + this_player()->query("id"));
 	} else {
-		command("say Äã·¢µÄÊÇÊ²÷á¹íÊÄ£¬±ğÒÔÎªÎÒÃ»Ìıµ½£¡");
+		command("say ä½ å‘çš„æ˜¯ä»€éº½é¬¼èª“ï¼Œåˆ«ä»¥ä¸ºæˆ‘æ²¡å¬åˆ°ï¼");
 	}
 	return 1;
 }
@@ -121,18 +121,18 @@ void consider()
 		if( enemy[i]->query_temp("weapon") ) {
 			flag++;
 			if(	!query_temp("weapon") ) {
-				command("say " + RANK_D->query_respect(enemy[i]) + "¼ÈÈ»Ê¹±øÈĞ£¬ÔÚÏÂ¿ÕÊÖ½ÓÕĞÎ´Ãâ²»¾´¡£");
+				command("say " + RANK_D->query_respect(enemy[i]) + "æ—¢ç„¶ä½¿å…µåˆƒï¼Œåœ¨ä¸‹ç©ºæ‰‹æ¥æ‹›æœªå…ä¸æ•¬ã€‚");
 				command("wield sword");
-				command("say ½øÕĞ°É£¡");
+				command("say è¿›æ‹›å§ï¼");
 				break;
 			}
 		}
 	}
 	if( !flag && query_temp("weapon") ) {
 		if( sizeof(enemy) > 1 )
-			command("say àÅ... ¼ÈÈ»" + chinese_number(sizeof(enemy)) + "Î»¶¼ÊÇ¿ÕÊÖ£¬ÔÚÏÂÀíµ±·îÅã£¡");
+			command("say å—¯... æ—¢ç„¶" + chinese_number(sizeof(enemy)) + "ä½éƒ½æ˜¯ç©ºæ‰‹ï¼Œåœ¨ä¸‹ç†å½“å¥‰é™ªï¼");
 		else
-			command("say ¼ÈÈ»" + RANK_D->query_respect(enemy[0]) + "²»Ê¹±øÈĞ£¬ÔÚÏÂ×ÔÈ»·îÅã£¡\n");
+			command("say æ—¢ç„¶" + RANK_D->query_respect(enemy[0]) + "ä¸ä½¿å…µåˆƒï¼Œåœ¨ä¸‹è‡ªç„¶å¥‰é™ªï¼\n");
 		command("unwield sword");
 	}
 }

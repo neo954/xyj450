@@ -4,8 +4,8 @@ inherit NPC;
 inherit F_MASTER;
 void create()
 {
-	set_name("¾ø³¾×Ó",({"master outer","master","outer"}) );
-	set("gender","ÄÐÐÔ");
+	set_name("ç»å°˜å­",({"master outer","master","outer"}) );
+	set("gender","ç”·æ€§");
 	set("age",48);
 	set("str",21);
 	set("cor",24);
@@ -24,18 +24,18 @@ void create()
 	set("max_mana",2000);
 	set("mana",4000);
 	set("long",
-	"¾ø³¾×Ó±¾ÎªÊÍ¼ÒÈË£¬ºóµÃÆæÈËÖ¸µã£¬µÃÎòµÀ¼ÒÕæÚÐ£¬·ðµÀË«ÐÞ£¬\n"
-	"½ÔÈë»¯¾³¡£ºó·Ã±éÃûÉ½´ó´¨£¬×ÔºÅ¾ø³¾£¬´´´Ë¾ø³¾Ò»ÅÉ¡£\n" );
+	"ç»å°˜å­æœ¬ä¸ºé‡Šå®¶äººï¼ŒåŽå¾—å¥‡äººæŒ‡ç‚¹ï¼Œå¾—æ‚Ÿé“å®¶çœŸè°›ï¼Œä½›é“åŒä¿®ï¼Œ\n"
+	"çš†å…¥åŒ–å¢ƒã€‚åŽè®¿éåå±±å¤§å·ï¼Œè‡ªå·ç»å°˜ï¼Œåˆ›æ­¤ç»å°˜ä¸€æ´¾ã€‚\n" );
 	
-	create_family("¾ø³¾ÅÉ",1,"×æÊ¦");
+	create_family("ç»å°˜æ´¾",1,"ç¥–å¸ˆ");
 	set("combat_exp",2000000);
 	set("score",200000);
 	set("chat_chance_combat",40);
 	set("chat_msg_combat", ({
 		(:cast_spell, "dun" :),
 		(:cast_spell, "saveme" :),
-		"¾ø³¾×ÓµÀ£ºÄãÎªºÎÎÞ¹Ê×ÌÊÂ£¬ÎóÎÒÇåÐÞ£¡\n",
-"¾ø³¾×ÓµÀ£ºÆ¶µÀÏòÒÔ¶ÝÊÀÎªÀÖ£¬ÄãºÎ¿àÈç´ËÏà±Æ£¿\n",
+		"ç»å°˜å­é“ï¼šä½ ä¸ºä½•æ— æ•…æ»‹äº‹ï¼Œè¯¯æˆ‘æ¸…ä¿®ï¼\n",
+"ç»å°˜å­é“ï¼šè´«é“å‘ä»¥éä¸–ä¸ºä¹ï¼Œä½ ä½•è‹¦å¦‚æ­¤ç›¸é€¼ï¼Ÿ\n",
 
 	}) ) ;
 	
@@ -60,9 +60,9 @@ void create()
 	map_skill("force","juechen-force");
 
         set("inquiry", ([
-                "¾ø³¾ÅÉ" : "¾ø³¾ÅÉÊÇÎÒËù´´£¬ÄãÓÐºÎÖ¸½Ì£¿",
-                "°ÝÊ¦"   : "ÈëÎÒÅÉÕß£¬ÐèÓÐ»Û¸ù¡£",
-                "name": "ÎÒ±ãÊÇ¾ø³¾×Ó¡£",
+                "ç»å°˜æ´¾" : "ç»å°˜æ´¾æ˜¯æˆ‘æ‰€åˆ›ï¼Œä½ æœ‰ä½•æŒ‡æ•™ï¼Ÿ",
+                "æ‹œå¸ˆ"   : "å…¥æˆ‘æ´¾è€…ï¼Œéœ€æœ‰æ…§æ ¹ã€‚",
+                "name": "æˆ‘ä¾¿æ˜¯ç»å°˜å­ã€‚",
               ]) );
                 setup();
                 carry_object(__DIR__"jingang_staff")->wield();
@@ -72,28 +72,28 @@ void create()
 void attempt_apprentice(object ob)
  {
 
-        if((string)ob->query("title")!="ÆÕÍ¨°ÙÐÕ")
+        if((string)ob->query("title")!="æ™®é€šç™¾å§“")
          {
             command("chat "+ob->query("title")+ob->query("nickname")+
-            ob->query("name")+"ÒªÅÑÊ¦£¡£¡£¡");
+            ob->query("name")+"è¦å›å¸ˆï¼ï¼ï¼");
             command("grin");
             kill_ob(ob);
             return;
          }
 
         if( ((int)ob->query("spi") < 24))
-          {     command("say ÈëÎÒÅÉÕß£¬ÐèÓÐ»Û¸ù¡£" +
-              RANK_D->query_respect(ob) + "µÄ×ÊÖÊ²»ÒË£¡");
+          {     command("say å…¥æˆ‘æ´¾è€…ï¼Œéœ€æœ‰æ…§æ ¹ã€‚" +
+              RANK_D->query_respect(ob) + "çš„èµ„è´¨ä¸å®œï¼");
                return; }
 
 	if ( ob->query("combat_exp") < 100000 ) {
-		command("say "+RANK_D->query_respect(ob) + "ËÆºõÉÐÈ±½­ºþÀúÁ·£¬²»ÒËÍ¶Èë¾ø³¾ÃÅÏÂ¡£" );
+		command("say "+RANK_D->query_respect(ob) + "ä¼¼ä¹Žå°šç¼ºæ±Ÿæ¹–åŽ†ç»ƒï¼Œä¸å®œæŠ•å…¥ç»å°˜é—¨ä¸‹ã€‚" );
 		return ;
 	} 
 
         command("smile");
-        command("say ºÜºÃª¬" + RANK_D->query_respect(ob) +
-        "¶à¼ÓÅ¬Á¦ª¬ËûÈÕ±Ø¶¨ÓÐ³É¡£\n");
+        command("say å¾ˆå¥½ï¿½" + RANK_D->query_respect(ob) +
+        "å¤šåŠ åŠªåŠ›ï¿½ä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
         command("recruit " + ob->query("id") );}
 
 void recruit_apprentice(object ob)

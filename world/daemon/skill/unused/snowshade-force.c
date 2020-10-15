@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // fonxanforce.c
@@ -13,4 +13,4 @@ int valid_learn(object me) { return 1; }
 
 int practice_skill(object me)
 {
-   return notify_fail("·âÉ½ÅÉÄÚ¹¦\Ö»ÄÜÓÃÑ§µÄ»òÊÇ´ÓÔËÓÃ(exert)ÖĞÔö¼ÓÊìÁ·¶È¡£\n");
+   return notify_fail("å°å±±æ´¾å†…åŠŸ\åªèƒ½ç”¨å­¦çš„æˆ–æ˜¯ä»è¿ç”¨(exert)ä¸­å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");

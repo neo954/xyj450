@@ -2,13 +2,13 @@ inherit NPC;
  
 void create()
 {
-         set_name("ÃçÓôÊç", ({ "yushou","yu","shou" }) );
-        set("gender", "Å®ĞÔ" );
+         set_name("è‹—éƒæ·‘", ({ "yushou","yu","shou" }) );
+        set("gender", "å¥³æ€§" );
         set("age",18);
         set("long", @TEXT
-Ëı¿´ÆğÀ´ºÜÓĞ»îÁ¦£¬Á½ÑÛÃ÷ÁÁÓĞÉñ¡£¸øÄã
-Ò»ÖÖ½íàş²»ÈÃĞëÃ¼µÄÆøÊÆ£¬µ«¸ÕÒãÖ®ÖĞËÆ
-ÓÖÒşº¬ÖøÅ®º¢×ÓÓĞµÄ½¿Èá¡£
+å¥¹çœ‹èµ·æ¥å¾ˆæœ‰æ´»åŠ›ï¼Œä¸¤çœ¼æ˜äº®æœ‰ç¥ã€‚ç»™ä½ 
+ä¸€ç§å·¾å¸¼ä¸è®©é¡»çœ‰çš„æ°”åŠ¿ï¼Œä½†åˆšæ¯…ä¹‹ä¸­ä¼¼
+åˆéšå«è‘—å¥³å­©å­æœ‰çš„å¨‡æŸ”ã€‚
 TEXT
 );
        set("class", "dancer");
@@ -24,7 +24,7 @@ TEXT
         set("max_force", 400);
         set_temp("apply/armor", 100);
 
-       create_family("ÍíÔÂ×¯",3,"µÜ×Ó");
+       create_family("æ™šæœˆåº„",3,"å¼Ÿå­");
         setup();
         carry_object(__DIR__"obj/earring")->wear();
         carry_object(__DIR__"obj/brooch")->wear();
@@ -45,6 +45,6 @@ void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
         command("close door");
-        say ("¸óÏÂ! ÕâÀïÊÇ×¯ÄÚºóÌüÏá·¿¡£²»·½±ãÄĞ¿Í½øÈëÅ¶! \n" +
-              "ÇëËæÊÖ¹ØÃÅ£¬²¢±£³Ö°²¾²! Ğ»Ğ»! \n" );
+        say ("é˜ä¸‹! è¿™é‡Œæ˜¯åº„å†…åå…å¢æˆ¿ã€‚ä¸æ–¹ä¾¿ç”·å®¢è¿›å…¥å“¦! \n" +
+              "è¯·éšæ‰‹å…³é—¨ï¼Œå¹¶ä¿æŒå®‰é™! è°¢è°¢! \n" );
 }

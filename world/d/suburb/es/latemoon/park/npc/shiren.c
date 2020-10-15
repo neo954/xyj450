@@ -2,8 +2,8 @@ inherit NPC;
  
 void create()
 {
-        set_name("Ï®ÈË", ({ "Shi Ren", "shi ren","shi" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("è¢­äºº", ({ "Shi Ren", "shi ren","shi" }) );
+        set("gender", "å¥³æ€§" );
         set("age",28);
         set("long", @TEXT
 TEXT
@@ -19,7 +19,7 @@ TEXT
         set("max_force", 400);
         set("force_factor", 2);
 
-        create_family("ÍíÔÂ×¯",4,"µÜ×Ó");
+        create_family("æ™šæœˆåº„",4,"å¼Ÿå­");
         setup();
         carry_object("/d/suburb/es/latemoon/obj/skirt4")->wear();
         carry_object(__DIR__"obj/amulet")->wear();

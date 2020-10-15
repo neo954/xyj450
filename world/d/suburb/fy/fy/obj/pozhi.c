@@ -3,11 +3,11 @@ inherit ITEM;
 #include <ansi.h>
 void create()
 {
-	set_name("ÖåÖåµÄÆÆÖ½Æ¬", ({"pozhi"}) );
+	set_name("çš±çš±çš„ç ´çº¸ç‰‡", ({"pozhi"}) );
 	set_weight(5);
 	set("long",
-		"ÕâÊÇÒ»ÕÅÖåÖåµÄÆÆÖ½Æ¬¶ù¡£¿ÉÍùÉÏĞ´¶«Î÷(print)\n");
-	set("unit", "ÕÅ");
+		"è¿™æ˜¯ä¸€å¼ çš±çš±çš„ç ´çº¸ç‰‡å„¿ã€‚å¯å¾€ä¸Šå†™ä¸œè¥¿(print)\n");
+	set("unit", "å¼ ");
         set("value", 100000);
 }
 
@@ -24,20 +24,20 @@ int do_print(string arg)
         string sheet, target;
 
 	if( !arg || sscanf(arg, "%s", target)!=1 )
-		return notify_fail("Ö¸Áî¸ñÊ½£ºprint <ĞÕÃû> \n");
+		return notify_fail("æŒ‡ä»¤æ ¼å¼ï¼šprint <å§“å> \n");
 	tarobj = present(target, environment(this_player()));
 	if( !tarobj) tarobj = find_living(target);
 	if( !tarobj ) {
-	   message_vision("$N°Ñ" + target + "Ğ´ÔÚ$nÉÏ¡£\n", this_player(), this_object());
+	   message_vision("$NæŠŠ" + target + "å†™åœ¨$nä¸Šã€‚\n", this_player(), this_object());
 	   this_object()->set("long",
-		"ÕâÊÇÒ»ÕÅ" + this_object()->name() + "£¬ÉÏÃæĞ´×Å£¢" + target + "£¢¼¸¸öĞ¡×Ö£®\n");
+		"è¿™æ˜¯ä¸€å¼ " + this_object()->name() + "ï¼Œä¸Šé¢å†™ç€ï¼‚" + target + "ï¼‚å‡ ä¸ªå°å­—ï¼\n");
         }
         else {
-	   message_vision("$N°Ñ" + tarobj->name() + "Ğ´ÔÚ$nÉÏ¡£\n", this_player(), this_object());
+	   message_vision("$NæŠŠ" + tarobj->name() + "å†™åœ¨$nä¸Šã€‚\n", this_player(), this_object());
 	   this_object()->set("targetname",tarobj->name());
 	   this_object()->set("targetgender",tarobj->query("gender"));
 	   this_object()->set("long",
-		"ÕâÊÇÒ»ÕÅ" + this_object()->name() + "£¬ÉÏÃæĞ´×Å£¢" + tarobj->name() + "£¢¼¸¸öĞ¡×Ö£®\n");
+		"è¿™æ˜¯ä¸€å¼ " + this_object()->name() + "ï¼Œä¸Šé¢å†™ç€ï¼‚" + tarobj->name() + "ï¼‚å‡ ä¸ªå°å­—ï¼\n");
         }
         this_object()->set("targetid", target);
         return 1;

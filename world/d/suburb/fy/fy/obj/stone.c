@@ -6,13 +6,13 @@ inherit THROWING;
 
 void create()
 {
-	set_name("Ğ¡Ê¯×Ó", ({ "stone", "stone piece" }) );
+	set_name("å°çŸ³å­", ({ "stone", "stone piece" }) );
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long",	"Ò»¿éÆÕÍ¨µÄĞ¡Ê¯×Ó\n");
-		set("unit", "¶Ñ");
-		set("base_unit", "Á£");
+		set("long",	"ä¸€å—æ™®é€šçš„å°çŸ³å­\n");
+		set("unit", "å †");
+		set("base_unit", "ç²’");
 		set("base_weight", 1);
 		set("base_value", 1);
 	}

@@ -5,13 +5,13 @@ inherit F_FOOD;
 
 void create()
 {
-	set_name("ÈË²Î", ({ "ginseng" }) );
+	set_name("äººå‚", ({ "ginseng" }) );
 	set_weight(50);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¸ùÔ¼Ê³Ö¸³¤µÄÈË²Î£¬¾İËµ³£³ÔÕâÖÖ²¹Æ·¿ÉÒÔÑÓÄêÒæÊÙ¡£\n");
-		set("unit", "¸ù");
+		set("long", "ä¸€æ ¹çº¦é£ŸæŒ‡é•¿çš„äººå‚ï¼Œæ®è¯´å¸¸åƒè¿™ç§è¡¥å“å¯ä»¥å»¶å¹´ç›Šå¯¿ã€‚\n");
+		set("unit", "æ ¹");
 		set("value", 3000);
 		set("food_remaining", 1);
 		//set("eat_func", (: eat_tonic :) );

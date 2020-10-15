@@ -6,17 +6,17 @@ void sell_drug();
 void create()
 {
         seteuid(getuid());
-        set_name("ÉòÍòÄê",({"shen wen-nien","shen"}));
-        set("title","Éò¼ÇÉÌĞĞÕÆ¹ñ");
-        set("gender", "ÄĞĞÔ" );
+        set_name("æ²ˆä¸‡å¹´",({"shen wen-nien","shen"}));
+        set("title","æ²ˆè®°å•†è¡ŒæŒæŸœ");
+        set("gender", "ç”·æ€§" );
         set("age",45);
         set("combat_exp",30);
         set("attitude", "friendly" );
         set_temp("apply/dodge",5);
         set_temp("apply/attack",3);
         set("inquiry", ([
-            "ÓñÅå" : (: give_jade :),
-            "ÃÉº¹Ò©" : (: sell_drug :),
+            "ç‰ä½©" : (: give_jade :),
+            "è’™æ±—è¯" : (: sell_drug :),
         ]) );
         setup();
         carry_object("/obj/cloth")->wear();
@@ -31,17 +31,17 @@ void init()
  
 int list_item()
 {
-        write("Äã¿´µ½:\n");
-        write("¹ñ×ÓÉÏÒ»¶ÑÚ¤Ö½ºÍÏãÖòµÈ, ±ê¼Û 10 ÎÄÇ®. Ç½ÉÏ¹ÒÖø¼¸°ÑÖñÉ¨Öã,\n");
-        write("Ã¿°Ñ 50 ÎÄÇ®. ¹ñÌ¨ÉÏ°Ú\ÖøÒ»¿éÄ¾ÅÆ, ÉÏÃæĞ´Öø:\n");
-        write("¹×²Ä: Ê±¼Û. Ã»¿´µ½µÄ¶«Î÷ÎÊÒ»ÏÂÕÆ¹ñµÄ, ÎÒÃÇÓ¦¸Ã¶¼ÓĞ.\n");
+        write("ä½ çœ‹åˆ°:\n");
+        write("æŸœå­ä¸Šä¸€å †å†¥çº¸å’Œé¦™çƒ›ç­‰, æ ‡ä»· 10 æ–‡é’±. å¢™ä¸ŠæŒ‚è‘—å‡ æŠŠç«¹æ‰«å¸š,\n");
+        write("æ¯æŠŠ 50 æ–‡é’±. æŸœå°ä¸Šæ‘†\è‘—ä¸€å—æœ¨ç‰Œ, ä¸Šé¢å†™è‘—:\n");
+        write("æ£ºæ: æ—¶ä»·. æ²¡çœ‹åˆ°çš„ä¸œè¥¿é—®ä¸€ä¸‹æŒæŸœçš„, æˆ‘ä»¬åº”è¯¥éƒ½æœ‰.\n");
         return 1;
 }
  
 int buy_item()
 {
         command("shake");
-        command("say ÎÒ²»Âô¶«Î÷¸øÄ°ÉúÈË!");
+        command("say æˆ‘ä¸å–ä¸œè¥¿ç»™é™Œç”Ÿäºº!");
         return 1;
 }
  
@@ -50,13 +50,13 @@ void give_jade()
         object ob;
         if (this_player()->query_temp("give_alcohol")) {
                if(this_player()->query_temp("had_jade")) {
-                    command("say ÄãÕæÌ°ĞÄÒ®... ");
+                    command("say ä½ çœŸè´ªå¿ƒè€¶... ");
                     return;
                 }
                 ob = new("/d/suburb/es/green/obj/jade");
 		if (ob->violate_unique()) {
 		command("hmm");
-		command("say ÕâÑù¶«Î÷... ¸Õ¸ÕÓĞÈËÀ´Òª¹ıÁË.");
+		command("say è¿™æ ·ä¸œè¥¿... åˆšåˆšæœ‰äººæ¥è¦è¿‡äº†.");
 		command("shrug");
 		destruct(ob);
 		return;
@@ -74,7 +74,7 @@ void sell_drug()
 {
         if (this_player()->query_temp("know_drug")) {
             command("whisper "+(string)this_player()->query("id")+
-            " Ò»·İÖ»Òª 10 Á½Òø×Ó, ±£Ö¤ÓĞĞ§à¸.\n");
+            " ä¸€ä»½åªè¦ 10 ä¸¤é“¶å­, ä¿è¯æœ‰æ•ˆå–”.\n");
             command("grin");
             this_player()->set_temp("can_buy_drug",1);
         }
@@ -90,20 +90,20 @@ int accept_object(object who, object ob)
 		drug = new("/obj/slumber_drug");
                 drug->move(this_player());
                 tell_room(environment(this_player()),
-                "ÀÏ°å¹í¹íËîËîµØÈûÁËÒ»Ñù¶«Î÷¸ø"
-                    +(string)this_player()->name()+"¡£\n",
+                "è€æ¿é¬¼é¬¼ç¥Ÿç¥Ÿåœ°å¡äº†ä¸€æ ·ä¸œè¥¿ç»™"
+                    +(string)this_player()->name()+"ã€‚\n",
                     ({this_object(), this_player()}) );
-                tell_object(this_player(),"ÀÏ°åÈûÁËÒ»°üÃÉº¹Ò©¸øÄã¡£\n");
+                tell_object(this_player(),"è€æ¿å¡äº†ä¸€åŒ…è’™æ±—è¯ç»™ä½ ã€‚\n");
                 }
                 else {
                 command("shake");
-                command("say ÏëÆ­ÎÒ°¡?\n");
+                command("say æƒ³éª—æˆ‘å•Š?\n");
                 this_player()->delete_temp("give_alcohol");
                 this_player()->delete_temp("know_drug");
                 }
         } else {
 				if(!ob->value()) { return 0;} else {
-                command("say ÎÒ²»ÖªµÀÄã¸øÎÒÇ®¸ÉÂï, ²»¹ıĞ»À²!");
+                command("say æˆ‘ä¸çŸ¥é“ä½ ç»™æˆ‘é’±å¹²å˜›, ä¸è¿‡è°¢å•¦!");
                 command("grin");
                 }
         }

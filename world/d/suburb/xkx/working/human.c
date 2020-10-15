@@ -9,34 +9,34 @@ inherit F_DBASE;
 inherit F_SKILL;
 
 mapping *combat_action = ({
-	([	"action":		"$N»ÓÈ­¹¥»÷$nµÄ$l",
-		"damage_type":	"ğöÉË",
+	([	"action":		"$NæŒ¥æ‹³æ”»å‡»$nçš„$l",
+		"damage_type":	"ç˜€ä¼¤",
 	]),
-	([	"action":		"$NÍù$nµÄ$lÒ»×¥",
-		"damage_type":	"×¥ÉË",
+	([	"action":		"$Nå¾€$nçš„$lä¸€æŠ“",
+		"damage_type":	"æŠ“ä¼¤",
 	]),
-	([	"action":		"$NÍù$nµÄ$lºİºİµØÌßÁËÒ»½Å",
-		"damage_type":	"ğöÉË",
+	([	"action":		"$Nå¾€$nçš„$lç‹ ç‹ åœ°è¸¢äº†ä¸€è„š",
+		"damage_type":	"ç˜€ä¼¤",
 	]),
-	([	"action":		"$NÌáÆğÈ­Í·Íù$nµÄ$l´·È¥",
-		"damage_type":	"ğöÉË",
+	([	"action":		"$Næèµ·æ‹³å¤´å¾€$nçš„$læ¶å»",
+		"damage_type":	"ç˜€ä¼¤",
 	]),
-	([	"action":		"$N¶Ô×¼$nµÄ$lÓÃÁ¦»Ó³öÒ»È­",
-		"damage_type":	"ğöÉË",
+	([	"action":		"$Nå¯¹å‡†$nçš„$lç”¨åŠ›æŒ¥å‡ºä¸€æ‹³",
+		"damage_type":	"ç˜€ä¼¤",
 	]),
 });
 
 void create()
 {
 	seteuid(getuid());
-	set("unit", "Î»");
-	set("gender", "ÄĞĞÔ");
+	set("unit", "ä½");
+	set("gender", "ç”·æ€§");
 	set("can_speak", 1);
 	set("attitude", "peaceful");
 	set("limbs", ({
-		"Í·²¿",	"¾±²¿",	"ĞØ¿Ú",	"ºóĞÄ",	"×ó¼ç",	"ÓÒ¼ç",	"×ó±Û",
-		"ÓÒ±Û",	"×óÊÖ",	"ÓÒÊÖ",	"Ñü¼ä",	"Ğ¡¸¹",	"×óÍÈ",	"ÓÒÍÈ",
-		"×ó½Å",	"ÓÒ½Å"
+		"å¤´éƒ¨",	"é¢ˆéƒ¨",	"èƒ¸å£",	"åå¿ƒ",	"å·¦è‚©",	"å³è‚©",	"å·¦è‡‚",
+		"å³è‡‚",	"å·¦æ‰‹",	"å³æ‰‹",	"è…°é—´",	"å°è…¹",	"å·¦è…¿",	"å³è…¿",
+		"å·¦è„š",	"å³è„š"
 	}) );
 }
 
@@ -75,7 +75,7 @@ void setup_human(object ob)
 		else if( my["age"] >= 60 ) my["max_kee"] -= (my["age"] - 60) * 5;
 		else my["max_kee"] = my["con"] * 16 + 100;
 		
-		// µÀ¼ÒÁ·Æø£º£³£°ËêÇ°²¹Æø£¬£³£°Ëêºó³¤Æø
+		// é“å®¶ç»ƒæ°”ï¼šï¼“ï¼å²å‰è¡¥æ°”ï¼Œï¼“ï¼å²åé•¿æ°”
 		if((qi_age=(int)ob->query_skill("taoism", 1)) > 39);
 		{
 			qi_age = qi_age/2;

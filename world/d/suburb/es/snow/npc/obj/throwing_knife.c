@@ -6,16 +6,16 @@ inherit THROWING;
 
 void create()
 {
-	set_name("·Éµ¶", ({ "throwing knife", "knife" }) );
+	set_name("é£åˆ€", ({ "throwing knife", "knife" }) );
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ğ©");
-		set("base_unit", "°Ñ");
+		set("unit", "äº›");
+		set("base_unit", "æŠŠ");
 		set("base_weight", 300);
 		set("base_value", 80);
 		set("material", "iron");
-		set("long",	"·Éµ¶ÊÇÒ»ÖÖÊ®·ÖÇá¡¢ÈñÀûµÄØ°Ê×£¬ÓÃÀ´µ±×÷°µÆ÷Ê¹ÓÃ¡£\n");
+		set("long",	"é£åˆ€æ˜¯ä¸€ç§ååˆ†è½»ã€é”åˆ©çš„åŒ•é¦–ï¼Œç”¨æ¥å½“ä½œæš—å™¨ä½¿ç”¨ã€‚\n");
 	}
 	set_amount(100);
 	init_throwing(20);

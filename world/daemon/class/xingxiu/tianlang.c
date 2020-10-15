@@ -1,4 +1,4 @@
-// tianlang.c ÌìÀÇ×Ó
+// tianlang.c å¤©ç‹¼å­
 
 inherit NPC;
 inherit F_MASTER;
@@ -7,11 +7,11 @@ string ask_me();
 
 void create()
 {
-	set_name("ÌìÀÇ×Ó", ({ "tianlang zi", "tianlang" }));
-	set("nickname", "ÐÇËÞÅÉÈýÊ¦ÐÖ");
+	set_name("å¤©ç‹¼å­", ({ "tianlang zi", "tianlang" }));
+	set("nickname", "æ˜Ÿå®¿æ´¾ä¸‰å¸ˆå…„");
 	set("long", 
-		"Ëû¾ÍÊÇ¶¡´ºÇïµÄÈýµÜ×ÓÌìÀÇ×Ó¡£\n");
-	set("gender", "ÄÐÐÔ");
+		"ä»–å°±æ˜¯ä¸æ˜¥ç§‹çš„ä¸‰å¼Ÿå­å¤©ç‹¼å­ã€‚\n");
+	set("gender", "ç”·æ€§");
 	set("age", 30);
 	set("attitude", "peaceful");
 	set("shen_type", -1);
@@ -45,7 +45,7 @@ void create()
   	map_skill("parry", "tianshan-zhang");
   	map_skill("staff", "tianshan-zhang");
 
-	create_family("ÐÇËÞÅÉ", 2, "µÜ×Ó");
+	create_family("æ˜Ÿå®¿æ´¾", 2, "å¼Ÿå­");
 
 	setup();
   	carry_object("/d/obj/clone/weapon/gangzhang")->wield();
@@ -53,6 +53,6 @@ void create()
 
 void attempt_apprentice(object ob)
 {
-	command("say ºÃ°É£¬ÎÒ¾ÍÊÕÏÂÄãÁË¡£");
+	command("say å¥½å§ï¼Œæˆ‘å°±æ”¶ä¸‹ä½ äº†ã€‚");
 	command("recruit " + ob->query("id"));
 }

@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÎŞÃûÀÏ¸¾", ({ "old" }) );
-      set("title", "¿´¹ÜÈË" );
-	set("long", "Õâ¸öÀÏ¸¾ÈË²»ÖªĞÕÉõÃûË­, ËıÔÚÍíÔÂºÜ¾ÃÁË, Ò»Ö±¿´¹Ü\nÊé·¿, Á¬×¯Ö÷¶¼¶ÔËıºÜ×ğ¾´¡£\n");
-      set("gender", "Å®ĞÔ" );
+	set_name("æ— åè€å¦‡", ({ "old" }) );
+      set("title", "çœ‹ç®¡äºº" );
+	set("long", "è¿™ä¸ªè€å¦‡äººä¸çŸ¥å§“ç”šåè°, å¥¹åœ¨æ™šæœˆå¾ˆä¹…äº†, ä¸€ç›´çœ‹ç®¡\nä¹¦æˆ¿, è¿åº„ä¸»éƒ½å¯¹å¥¹å¾ˆå°Šæ•¬ã€‚\n");
+      set("gender", "å¥³æ€§" );
 	set("age", 62);
 	set("attitude", "peaceful");
 	set("str", 20);
@@ -16,10 +16,10 @@ void create()
 	set("cps", 26);
 	set("per", 29);
 	set("inquiry", ([
-		"here": "ÕâÀïÊÇÊé·¿£¬ÓĞĞ©±Ş·¨½Ì²Ä´æ·ÅÔÚÕâ¶ù¡£",
+		"here": "è¿™é‡Œæ˜¯ä¹¦æˆ¿ï¼Œæœ‰äº›é­æ³•æ•™æå­˜æ”¾åœ¨è¿™å„¿ã€‚",
 		"trouble":
-			"Êµ²»ÏàÂ÷£¬ÕâÉ±ÊÖÊÇÎÒµÄË½ÉúÅ®£¬µ«ÒÑÎóÈëÆçÍ¾ ...\nÎÒÒ»Ö±Éá²»µÃÇ×ÊÖÉ±ÁËËı£¬ÄãÈôÄÜ°ïÃ¦ÎÒ»á·Ç³£¸ĞĞ»¡£ \nÖ»ÊÇÒªÒÔÁîÅÆÎªÖ¤£¬°¦ ...",
-		"ÁîÅÆ" : "¾ÍÔÚÎÒ¶ùÉíÉÏ ...ÄãÄÃµ½ÁË¾Í¸øÎÒ¡£",
+			"å®ä¸ç›¸ç’ï¼Œè¿™æ€æ‰‹æ˜¯æˆ‘çš„ç§ç”Ÿå¥³ï¼Œä½†å·²è¯¯å…¥æ­§é€” ...\næˆ‘ä¸€ç›´èˆä¸å¾—äº²æ‰‹æ€äº†å¥¹ï¼Œä½ è‹¥èƒ½å¸®å¿™æˆ‘ä¼šéå¸¸æ„Ÿè°¢ã€‚ \nåªæ˜¯è¦ä»¥ä»¤ç‰Œä¸ºè¯ï¼Œå”‰ ...",
+		"ä»¤ç‰Œ" : "å°±åœ¨æˆ‘å„¿èº«ä¸Š ...ä½ æ‹¿åˆ°äº†å°±ç»™æˆ‘ã€‚",
 	]) );
       set("class", "dancer");
       set("combat_exp", 500000);
@@ -34,7 +34,7 @@ void create()
       set("force", 1000);
       set("max_force", 800);
       set("force_factor", 10);
-      create_family("ÍíÔÂ×¯", 1, "Ç°±²");
+      create_family("æ™šæœˆåº„", 1, "å‰è¾ˆ");
 
       setup();
       carry_object("/d/suburb/es/latemoon/obj/deer_boot")->wear();
@@ -49,11 +49,11 @@ int accept_object(object me, object ob)
 	if( !ob->id("###token###") ) return 0;
 	command("sigh");
       if( (int)me->query( "max_force" ) < 160 
-               && ((string)me->query("family/family_name")=="ÍíÔÂ×¯") )
+               && ((string)me->query("family/family_name")=="æ™šæœˆåº„") )
       {
-         command("say ×÷Îª¸ĞĞ»£¬ÎÒ´«ÄãÒ»Ğ©ÄÚÁ¦¡£");
-         message_vision( "ÎŞÃûÀÏ¸¾ÊÖµÖÔÚ$NµÄºóĞÄ£¬Í·ÉÏÃ°³öË¿Ë¿°×Æø¡£ \n", me );
-         message( "vision", "Äã¸Ğ¾õµ½Ò»¹ÉÈÈÆø´«ÁË¹ıÀ´¡£ \n", me );
+         command("say ä½œä¸ºæ„Ÿè°¢ï¼Œæˆ‘ä¼ ä½ ä¸€äº›å†…åŠ›ã€‚");
+         message_vision( "æ— åè€å¦‡æ‰‹æŠµåœ¨$Nçš„åå¿ƒï¼Œå¤´ä¸Šå†’å‡ºä¸ä¸ç™½æ°”ã€‚ \n", me );
+         message( "vision", "ä½ æ„Ÿè§‰åˆ°ä¸€è‚¡çƒ­æ°”ä¼ äº†è¿‡æ¥ã€‚ \n", me );
          iNeiLiTrans = 160-(int)me->query( "max_force" );
          if( iNeiLiTrans>50 ) 
              iNeiLiTrans = random( 50 );
@@ -66,11 +66,11 @@ int accept_object(object me, object ob)
       }
       else
       {
-         command("say ×÷Îª¸ĞĞ»£¬ÎÒ¸øÄãÒ»±¾º®Ñ©±Ş·¨ÃÜóÅ¡£");
+         command("say ä½œä¸ºæ„Ÿè°¢ï¼Œæˆ‘ç»™ä½ ä¸€æœ¬å¯’é›ªé­æ³•å¯†ç¬ˆã€‚");
          book = new(__DIR__"obj/whip_book");
          book->move(me);	
         //delete("inquiry/trouble");
-	//delete("inquiry/ÁîÅÆ");
+	//delete("inquiry/ä»¤ç‰Œ");
       }
 	return 1;	
 }

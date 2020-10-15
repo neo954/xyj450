@@ -5,17 +5,17 @@ inherit SWORD;
 
 void create()
 {
-    set_name( HIW"ÎŞÇé½£" NOR,({"cool sword","sword"}));
+    set_name( HIW"æ— æƒ…å‰‘" NOR,({"cool sword","sword"}));
         set_weight(4500);
         if( clonep() )
                 set_default_object(__FILE__);
         else{
-                set("unit", "°Ñ");
-        set("long", "½£·æº®Æø±ÆÈË£¬½£Éí·¢³öÒìÑùµÄÇà¹â¡£\n");
+                set("unit", "æŠŠ");
+        set("long", "å‰‘é”‹å¯’æ°”é€¼äººï¼Œå‰‘èº«å‘å‡ºå¼‚æ ·çš„é’å…‰ã€‚\n");
                 set("value", 24000);
-                set("material", "ÒìÀà½ğÊô");
-        set("wield_msg", "$N¡¸à§¡¹µØÒ»Éù³é³öÒ»°Ñº®Æø±ÆÈËµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-        set("unwield_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄ½£ÇÊ¡£\n");
+                set("material", "å¼‚ç±»é‡‘å±");
+        set("wield_msg", "$Nã€Œå”°ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æŠŠå¯’æ°”é€¼äººçš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+        set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„å‰‘é˜ã€‚\n");
         set("replica_ob", "/obj/weapon/longsword");
     }
         init_sword(45);

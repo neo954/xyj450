@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // Room: /u/wuliao/housingoffice
@@ -6,10 +6,10 @@ inherit ROOM;
 
 void create ()
 {
-  set ("short", "·¿¹ÜËù");
+  set ("short", "æˆ¿ç®¡æ‰€");
   set ("long", @LONG
-ãþË®ºÓ±ßµÄ¾ÓÃñÖð½¥Ôö¶à£¬Òò´ËÌØ±ðÔÚ´ËÉèÁ¢·¿¹ÜËù£¬ÁÙÊ±ÓÉ
-Ò»¸ö²»ÖªÃûµÄÀÏÍ·¸ºÔð¡£
+æ³¾æ°´æ²³è¾¹çš„å±…æ°‘é€æ¸å¢žå¤šï¼Œå› æ­¤ç‰¹åˆ«åœ¨æ­¤è®¾ç«‹æˆ¿ç®¡æ‰€ï¼Œä¸´æ—¶ç”±
+ä¸€ä¸ªä¸çŸ¥åçš„è€å¤´è´Ÿè´£ã€‚
 LONG);
 
 

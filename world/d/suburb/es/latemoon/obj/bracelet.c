@@ -5,20 +5,20 @@ inherit WRISTS;
 
 void create()
 {
-    set_name(HIC "Âêè§ÊÖïí" NOR, ({"bracelet onyx","bracelet"}) );
+    set_name(HIC "çŽ›ç‘™æ‰‹é•¯" NOR, ({"bracelet onyx","bracelet"}) );
      set_weight(50);
      if ( clonep() )
               set_default_object(__FILE__);
      else {
-            set("long", "Ò»¸öÓÉÂêè§×÷³ÉµÄÃÀÀöÊÖïí¡£\n"
-            "ÔÙ×ÐÏ¸Íæ¿´£¬ËÆºõÓÐÆäËü×÷ÓÃ (info bracelet)¡£\n");
-            set("unit", "´®");
+            set("long", "ä¸€ä¸ªç”±çŽ›ç‘™ä½œæˆçš„ç¾Žä¸½æ‰‹é•¯ã€‚\n"
+            "å†ä»”ç»†çŽ©çœ‹ï¼Œä¼¼ä¹Žæœ‰å…¶å®ƒä½œç”¨ (info bracelet)ã€‚\n");
+            set("unit", "ä¸²");
             set("value", 5000);
             set("no_drop", 1);
             set("armor_prop/armor",2);
             set("armor_prop/dodge", 2);
             set("armor_prop/spells", 2);
-            set("wear_msg", "$N°Ñ$n´øÔÚÊÖÉÏ¡£\n");
+            set("wear_msg", "$NæŠŠ$nå¸¦åœ¨æ‰‹ä¸Šã€‚\n");
      }
      setup();
 }
@@ -32,8 +32,8 @@ void init()
 
 int do_info(string arg)
 {
-        if( !arg ) return notify_fail("ÄãÏëÖªµÀÊ²Ã´? \n");
-        write("Ê¹ÓÃ (pray start) £¬Ëü»á´«ËÍÄã»ØÆðµã¡£\n");
+        if( !arg ) return notify_fail("ä½ æƒ³çŸ¥é“ä»€ä¹ˆ? \n");
+        write("ä½¿ç”¨ (pray start) ï¼Œå®ƒä¼šä¼ é€ä½ å›žèµ·ç‚¹ã€‚\n");
          return 1;
 }
 
@@ -42,15 +42,15 @@ int do_pray(string arg)
       string name;
        name = (string)this_player()->query("name");
 
-         if( !arg || arg!="start" ) return notify_fail("ÄãÒªÆíÇóÊ²Ã´? \n");
+         if( !arg || arg!="start" ) return notify_fail("ä½ è¦ç¥ˆæ±‚ä»€ä¹ˆ? \n");
          {
-         message_vision("$NË«ÊÖºÏÕÆ£¬ò¯³ÏµÄÆíµ»¡£\n"
-             "ÊÖÉÏµÄïí×ÓÎËÎË×÷Ïì¡£ Í»È»Ò»ÕóÑÌÎí.... \n",this_player() );
+         message_vision("$NåŒæ‰‹åˆæŽŒï¼Œè™”è¯šçš„ç¥ˆç¥·ã€‚\n"
+             "æ‰‹ä¸Šçš„é•¯å­å—¡å—¡ä½œå“ã€‚ çªç„¶ä¸€é˜µçƒŸé›¾.... \n",this_player() );
          this_player()->receive_damage("sen",50);
          tell_room(environment(this_player()),
-               name+"µÄÉíÓ°ÏûÊ§ÔÚ¿ÕÆøÖÐ¡£\n",this_player() );
+               name+"çš„èº«å½±æ¶ˆå¤±åœ¨ç©ºæ°”ä¸­ã€‚\n",this_player() );
          tell_room("/d/suburb/es/snow/inn",
-              name+"µÄÉíÓ°³öÏÖÔÚÒ»ÕóÑÌÎíÖ®ÖÐ¡£\n",this_player() );
+              name+"çš„èº«å½±å‡ºçŽ°åœ¨ä¸€é˜µçƒŸé›¾ä¹‹ä¸­ã€‚\n",this_player() );
          this_player()->move("/d/suburb/es/snow/temple");
           }
           return 1;

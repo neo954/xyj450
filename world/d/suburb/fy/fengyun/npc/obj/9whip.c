@@ -5,19 +5,19 @@
 inherit WHIP;
 void create()
 {
-        set_name( "¾Å½Ø±Ş", ({ "whip" }) );
+        set_name( "ä¹æˆªé­", ({ "whip" }) );
         set_weight(500);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ìõ");
+                set("unit", "æ¡");
                 set("value", 500);
                 set("material", "skin");
         }
         init_whip(10);
 
-        set("wield_msg", "$N´ÓÑü¼äÃş³öÒ»Ìõ$nÎÕÔÚÊÖÖĞ¡£\n");
-        set("unwield_msg", "$N½«ÊÖÖĞµÄ$nÊøÔÚÑü¼ä¡£\n");
+        set("wield_msg", "$Nä»è…°é—´æ‘¸å‡ºä¸€æ¡$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+        set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næŸåœ¨è…°é—´ã€‚\n");
 
         setup();
 }

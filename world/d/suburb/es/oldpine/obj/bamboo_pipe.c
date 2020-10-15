@@ -4,14 +4,14 @@ inherit ITEM;
 
 void create()
 {
-	set_name("Öñ¹Ü",({ "bamboo pipe", "pipe" }) );
+	set_name("ç«¹ç®¡",({ "bamboo pipe", "pipe" }) );
 	set_weight(100);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ù");
+		set("unit", "æ ¹");
 		set("material", "bamboo");
-		set("long", "Ò»¸ùÔ¼Á½´ç¶à³¤µÄÖñ¹Ü£¬ÉÏÃæ´ÁÁËÈý¸öÐ¡¿×£¬Ò²Ðí\¿ÉÒÔÓÃÀ´´µ×à£¿\n");
+		set("long", "ä¸€æ ¹çº¦ä¸¤å¯¸å¤šé•¿çš„ç«¹ç®¡ï¼Œä¸Šé¢æˆ³äº†ä¸‰ä¸ªå°å­”ï¼Œä¹Ÿè®¸\å¯ä»¥ç”¨æ¥å¹å¥ï¼Ÿ\n");
 	}
 }
 
@@ -24,7 +24,7 @@ int do_play(string arg)
 {
 	if( !id(arg) ) return 0;
 
-	message_vision("$NÄÃÆðÒ»¸ù" + name() + "ÎØà½à½µØ´µÁËÆðÀ´¡£\n",
+	message_vision("$Næ‹¿èµ·ä¸€æ ¹" + name() + "å‘œå˜Ÿå˜Ÿåœ°å¹äº†èµ·æ¥ã€‚\n",
 		this_player() );
 	environment(this_player())->pipe_notify();
 

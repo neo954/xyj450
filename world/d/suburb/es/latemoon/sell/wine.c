@@ -2,12 +2,12 @@ inherit COMBINED_ITEM;
 
 void create()
 {
-        set_name("Å®¶ùºì", ({"wine"}));
+        set_name("å¥³å„¿çº¢", ({"wine"}));
         set("long",
-   "ÕâÊÇÒ»Ì³ÏãÎ¶Å¨ÓôµÄ³ÂÄêÀÏ¾Æ£¬ÊÇ´æ¸ø´ý¼ÞÅ®¶ùºÈµÄ¾Æ¡£\n"
-   "ÄãÎÅÁËÎÅ£¬ºÃÏãºÃÏãÅ¶!ÄãÓÐµãÏëºÈËü (drink)\n");
-        set("unit", "Ì³");
-        set("base_unit", "Ì³");
+   "è¿™æ˜¯ä¸€å›é¦™å‘³æµ“éƒçš„é™ˆå¹´è€é…’ï¼Œæ˜¯å­˜ç»™å¾…å«å¥³å„¿å–çš„é…’ã€‚\n"
+   "ä½ é—»äº†é—»ï¼Œå¥½é¦™å¥½é¦™å“¦!ä½ æœ‰ç‚¹æƒ³å–å®ƒ (drink)\n");
+        set("unit", "å›");
+        set("base_unit", "å›");
         set("base_weight", 20000);
         set_amount(1);
 }
@@ -20,10 +20,10 @@ void init()
 
 int do_drink(string arg)
 {
-        if( !arg ) return notify_fail("ÄãÒªºÈÉõÃ´ÄØ? \n");
+        if( !arg ) return notify_fail("ä½ è¦å–ç”šä¹ˆå‘¢? \n");
         message_vision(
-           "$NÌáÆðÒ»Ì³¾Æ£¬ºôààºôààµÄ´ó¿ÚºÈÁËÏÂÈ¥¡£\n"
-           "Ö»¼û$NÁ³ÉÏ·ºÆðÒ»ÕóºìÔÎ£¬Éí×Ó²»¾õ»ÎÁËÆðÀ´! \n",this_player()  );
+           "$Næèµ·ä¸€å›é…’ï¼Œå‘¼å™œå‘¼å™œçš„å¤§å£å–äº†ä¸‹åŽ»ã€‚\n"
+           "åªè§$Nè„¸ä¸Šæ³›èµ·ä¸€é˜µçº¢æ™•ï¼Œèº«å­ä¸è§‰æ™ƒäº†èµ·æ¥! \n",this_player()  );
         this_player()->receive_damage("gin",10);
         this_player()->receive_heal("sen",20);
 

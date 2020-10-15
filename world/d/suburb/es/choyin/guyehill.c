@@ -3,19 +3,19 @@
 inherit ROOM;
 void create()
 {
-        set("short","¾ø±Ú");
+        set("short","ç»å£");
         set("long",@LONG
-    ²ÉÒ©ÈËÑÔÔ»£ºÓÐÏÉÈË³Ëº×·ÉÉý£¬¾¶Èë´ËÉ½£¬²»ÖªËùÖÕ.....
-´ËµØÁÖÄ¾(tree)·±Ã¯£¬ÌÙÂû(vine)´íÔÓ¡£ÄÏËÊ¾ø±Ú£¬ÏÂÁÙÉî¹È.
-°ëÉ½Ñü´¦£¬ÒþÒþ¿É¼ûÒ»¶´£¬Á÷ÔÆ³öá¶¡£
+    é‡‡è¯äººè¨€æ›°ï¼šæœ‰ä»™äººä¹˜é¹¤é£žå‡ï¼Œå¾„å…¥æ­¤å±±ï¼Œä¸çŸ¥æ‰€ç»ˆ.....
+æ­¤åœ°æž—æœ¨(tree)ç¹èŒ‚ï¼Œè—¤è”“(vine)é”™æ‚ã€‚å—è€¸ç»å£ï¼Œä¸‹ä¸´æ·±è°·.
+åŠå±±è…°å¤„ï¼Œéšéšå¯è§ä¸€æ´žï¼Œæµäº‘å‡ºå²«ã€‚
 LONG
        );
         set("item_desc", ([
                 "vine":
-                    "ÆäÖÐÓÐÒ»¸ùÌÙÂû¾àÀëÄã±È½Ï½ü£¬Äã¿ÉÒÔÊÔÖø×¥×¡(hold)ÌÙÂû\n",
+                    "å…¶ä¸­æœ‰ä¸€æ ¹è—¤è”“è·ç¦»ä½ æ¯”è¾ƒè¿‘ï¼Œä½ å¯ä»¥è¯•è‘—æŠ“ä½(hold)è—¤è”“\n",
 
                 "tree":
-                    "ÕâÊÇÒ»ÖêÍòÄê¹ÅÊ÷£¬Ñ°³£ÈËµÈÐÝÏëÅÀµÃÉÏÈ¥.\n"
+                    "è¿™æ˜¯ä¸€æ ªä¸‡å¹´å¤æ ‘ï¼Œå¯»å¸¸äººç­‰ä¼‘æƒ³çˆ¬å¾—ä¸ŠåŽ».\n"
 
                           ]) );
         set("exits", ([ /* sizeof() == 1 */
@@ -33,9 +33,9 @@ void init()
 int do_climb(string arg)
 {
         if( !arg || arg!="tree" ) return 0;
-        message_vision("$NÆßÊÖ°Ë½ÅµØÅÀÉÏÁË¹ÅÊ÷¡£\n",
+        message_vision("$Nä¸ƒæ‰‹å…«è„šåœ°çˆ¬ä¸Šäº†å¤æ ‘ã€‚\n",
                 this_player());
-        tell_room(__DIR__"craneroom",this_player()->query("name") + "Ê÷ÏÂÅÀÁËÉÏÀ´¡£\n");
+        tell_room(__DIR__"craneroom",this_player()->query("name") + "æ ‘ä¸‹çˆ¬äº†ä¸Šæ¥ã€‚\n");
         this_player()->move(__DIR__"craneroom");
         return 1;
 }
@@ -43,15 +43,15 @@ int do_climb(string arg)
 int do_hold(string arg)
 {
         if( !arg || arg!= "vine" )
-                return notify_fail("ÄãÒª×¥×¡Ê²Ã´£¿\n");
-        message_vision("$NÉìÊÖÍù²»Ô¶´¦µÄÒ»¸ùÌÙÂû×¥È¥....\n\n",
+                return notify_fail("ä½ è¦æŠ“ä½ä»€ä¹ˆï¼Ÿ\n");
+        message_vision("$Nä¼¸æ‰‹å¾€ä¸è¿œå¤„çš„ä¸€æ ¹è—¤è”“æŠ“åŽ»....\n\n",
                 this_player());
         if( random((int)this_player()->query_skill("dodge")) < 30 ) {
-                message_vision("\nÖ»Ìý¼ûÒ»ÉùÉ±Öí°ãµÄ²Ò½Ð£¬$NÒÑ×¹ÂäÉî¹È¡£¡£\n\n
+                message_vision("\nåªå¬è§ä¸€å£°æ€çŒªèˆ¬çš„æƒ¨å«ï¼Œ$Nå·²å è½æ·±è°·ã€‚ã€‚\n\n
 ", this_player());  
         this_player()->move(__DIR__"hollow");        
       } else {
-                message_vision("$NÊÖ½ÅÀþÂäµØÅÊ¸½ÖøÌÙÂû£¬ÂýÂýµØÅÀ½üÉ½¶´¡£\n\n",
+                message_vision("$Næ‰‹è„šä¿è½åœ°æ”€é™„è‘—è—¤è”“ï¼Œæ…¢æ…¢åœ°çˆ¬è¿‘å±±æ´žã€‚\n\n",
                       this_player() );
         this_player()->move(__DIR__"halfhole");  
         }

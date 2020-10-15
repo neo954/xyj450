@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
  
@@ -7,9 +7,9 @@ inherit NPC;
 void create()
 {
  
-        set_name("Ò©²æ½«", ({ "yaocha jiang", "jiang", "yaocha" }) );
-        set("gender", "ÄĞĞÔ" );
-        set("long","ÍĞËşÀîÌìÍõÕÊÏÂ´ó½«£¬°òÀ«ÑüÔ²£¬Á¦´óÎŞÇî¡£\n");
+        set_name("è¯å‰å°†", ({ "yaocha jiang", "jiang", "yaocha" }) );
+        set("gender", "ç”·æ€§" );
+        set("long","æ‰˜å¡”æå¤©ç‹å¸ä¸‹å¤§å°†ï¼Œè†€é˜”è…°åœ†ï¼ŒåŠ›å¤§æ— ç©·ã€‚\n");
         set("age",40);
         set("str", 30);
         set("int", 20);

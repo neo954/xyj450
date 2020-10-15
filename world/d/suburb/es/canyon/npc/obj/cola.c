@@ -4,10 +4,10 @@ inherit ITEM;
 
 void create()
 {
-	set_name(HIB"Ò»Æ¿ÉîÀ¶É«µÄ¿ÉÀÖ"NOR,({ "cola" }) );
-	set("long", "ÕâÊÇÒ»Æ¿Ö»ÓĞÔÚVoid ²Å¼ûµÄµ½µÄ½±Æ·£¬¿Ú¿ÊÊ¹ÄãÈÌ²»×¡Ïë
-ºÈËûÒ»¿Ú(drink)¡£\n");
-	set("unit", "Æ¿");
+	set_name(HIB"ä¸€ç“¶æ·±è“è‰²çš„å¯ä¹"NOR,({ "cola" }) );
+	set("long", "è¿™æ˜¯ä¸€ç“¶åªæœ‰åœ¨Void æ‰è§çš„åˆ°çš„å¥–å“ï¼Œå£æ¸´ä½¿ä½ å¿ä¸ä½æƒ³
+å–ä»–ä¸€å£(drink)ã€‚\n");
+	set("unit", "ç“¶");
 	set("base_weight", 200);
 }
 
@@ -22,13 +22,13 @@ int do_drink(string arg)
 	object ob;
 
 	if( !arg || arg != "cola") 
-		return notify_fail("ÄãÒªºÈÉõÃ´ÄØ? \n");
+		return notify_fail("ä½ è¦å–ç”šä¹ˆå‘¢? \n");
 
 	message_vision( MAG
- 	"$NºÈÁË¿Ú¿ÉÀÖ,ÌòÁËÌò×ì±ß,ËÆºõ»ØÎ¶ÎŞÇî.....\n"+HIR
- 	"$NÁ³ÉÏÂ¶³ö¹îÒìµÄ±íÇé....\n" NOR,this_player()  
+ 	"$Nå–äº†å£å¯ä¹,èˆ”äº†èˆ”å˜´è¾¹,ä¼¼ä¹å›å‘³æ— ç©·.....\n"+HIR
+ 	"$Nè„¸ä¸Šéœ²å‡ºè¯¡å¼‚çš„è¡¨æƒ…....\n" NOR,this_player()  
  	); //end_message_vision
-	message_vision(WHT"ÕâÆ¿¿ÉÀÖ±»$NºÈÍêÁË£¬$NËæÊÖÒ»¶ª£¬ËµÒ²Ææ¹ÖµØ¾Í²»¼ûÁË¡£
+	message_vision(WHT"è¿™ç“¶å¯ä¹è¢«$Nå–å®Œäº†ï¼Œ$Néšæ‰‹ä¸€ä¸¢ï¼Œè¯´ä¹Ÿå¥‡æ€ªåœ°å°±ä¸è§äº†ã€‚
 				\n"NOR,this_player() );
 
     	

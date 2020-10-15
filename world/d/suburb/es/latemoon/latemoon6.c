@@ -4,10 +4,10 @@ inherit ROOM;
 
 void create()
 {
-    set("short","½û±Õ·¿");
+    set("short","ç¦é—­æˆ¿");
 	set("long", @LONG
-ÕâÀïËÄÃæ¶¼ÊÇµ¥µ÷µÄÇ½±Ú(wall)¡£Í¨³£×¯ÄÚµÜ×Ó·¸´í¾ÍÊÇ
-¹ØÔÚÕâ¶ù£¡·´Ê¡Ë¼¹ý¡£
+è¿™é‡Œå››é¢éƒ½æ˜¯å•è°ƒçš„å¢™å£(wall)ã€‚é€šå¸¸åº„å†…å¼Ÿå­çŠ¯é”™å°±æ˜¯
+å…³åœ¨è¿™å„¿ï¼åçœæ€è¿‡ã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -16,15 +16,15 @@ LONG
 
         set("item_desc", ([
                 "wall": @TEXT
-    Äã×ÐÏ¸¹Û¿´Ê¯Ç½£¬Í»È»·¢ÏÖÔ­±¾µ¥µ÷µÄÇ½ÉÏÒþÒþÔ¼Ô¼³öÏÖÁË
-Ò»·ùÃìÃìÃ£Ã££¬ËÆÓÐËÆÎÞµÄ¾°Ïñ¡£áÝ·ðÊÇ»Ã¾³£¬µ«ÓÖËÆÕæÊµ£¬Äã
-Çå³þµÄ¿´µ½Ò»Ê×´Ê£º¡¸ÃÎÀïÏû»êÎÞËµ´¦£¬¾õÀ´ã°âêÏû»êÎó¡£¡¹
+    ä½ ä»”ç»†è§‚çœ‹çŸ³å¢™ï¼Œçªç„¶å‘çŽ°åŽŸæœ¬å•è°ƒçš„å¢™ä¸Šéšéšçº¦çº¦å‡ºçŽ°äº†
+ä¸€å¹…æ¸ºæ¸ºèŒ«èŒ«ï¼Œä¼¼æœ‰ä¼¼æ— çš„æ™¯åƒã€‚å½·ä½›æ˜¯å¹»å¢ƒï¼Œä½†åˆä¼¼çœŸå®žï¼Œä½ 
+æ¸…æ¥šçš„çœ‹åˆ°ä¸€é¦–è¯ï¼šã€Œæ¢¦é‡Œæ¶ˆé­‚æ— è¯´å¤„ï¼Œè§‰æ¥æƒ†æ€…æ¶ˆé­‚è¯¯ã€‚ã€
 TEXT
         ]) );
 
       set("objects", ([
          __DIR__"npc/funlin" : 1 ]) );
-     create_door("east","Í­ÃÅ","west", DOOR_CLOSED);
+     create_door("east","é“œé—¨","west", DOOR_CLOSED);
 	setup();
 	replace_program(ROOM);
 }

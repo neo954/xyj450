@@ -5,13 +5,13 @@ inherit BLADE;
 
 void create()
 {
-        set_name("ÌìÈ±¹ÅÔÂº® ", ({ "destblade" }) );
+        set_name("å¤©ç¼ºå¤æœˆå¯’ ", ({ "destblade" }) );
         set_weight(1000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "°Ñ");
-                set("long", "ÕâÊÇÒ»°ÑÈĞÉÏÓĞÒ»¸öÈ±¿ÚµÄÀûÆ÷£¡");
+                set("unit", "æŠŠ");
+                set("long", "è¿™æ˜¯ä¸€æŠŠåˆƒä¸Šæœ‰ä¸€ä¸ªç¼ºå£çš„åˆ©å™¨ï¼");
                 set("value", 500000);
 		set("rigidity", 2000);
                 set("material", "steel");

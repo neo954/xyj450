@@ -3,12 +3,12 @@ inherit ROOM;
 
 void create()
 {
-   set("short", "Î÷Ïá·¿×ßµÀ");
+   set("short", "è¥¿åŽ¢æˆ¿èµ°é“");
 	set("long", @LONG
-Äã×ßÔÚÎ÷Ïá·¿×ßµÀÉÏ¡£³¤³¤µÄ×ßµÀÖÐ£¬´¿½ð³ÉµÄ³¤µÆ¼ÜÉÏ¹ÒÁËÒ»ÅÅ
-ÊÎÀöµÄ¹¬µÆ! ×ßµÀÁ½ÅÔ°ÚÉèÁËÐí¶àÆæ»¨Òì²Ý£¬¿ÕÆøÖÐÃÖÂþÒ»ÖÖµ­µ­µÄÏã
-Æø¡£ÔÚÒ»ÖùÖùµñÊÎ»ªÀöµÄ³¤Öù£¬¿Ì»­Ðí¶à²Ê»æµÄÍ¼ÐÎ£¬ÃÀ²»Ê¤ÊÕ¡£Î÷Ãæ
-Äã¿´µ½Ò»ÉÈÃÅ¡£
+ä½ èµ°åœ¨è¥¿åŽ¢æˆ¿èµ°é“ä¸Šã€‚é•¿é•¿çš„èµ°é“ä¸­ï¼Œçº¯é‡‘æˆçš„é•¿ç¯æž¶ä¸ŠæŒ‚äº†ä¸€æŽ’
+é¥°ä¸½çš„å®«ç¯! èµ°é“ä¸¤æ—æ‘†è®¾äº†è®¸å¤šå¥‡èŠ±å¼‚è‰ï¼Œç©ºæ°”ä¸­å¼¥æ¼«ä¸€ç§æ·¡æ·¡çš„é¦™
+æ°”ã€‚åœ¨ä¸€æŸ±æŸ±é›•é¥°åŽä¸½çš„é•¿æŸ±ï¼Œåˆ»ç”»è®¸å¤šå½©ç»˜çš„å›¾å½¢ï¼Œç¾Žä¸èƒœæ”¶ã€‚è¥¿é¢
+ä½ çœ‹åˆ°ä¸€æ‰‡é—¨ã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -19,7 +19,7 @@ LONG
 
 ]));
 
-   create_door("west","µñÊÎÏáÃÅ","east", DOOR_CLOSED);
+   create_door("west","é›•é¥°åŽ¢é—¨","east", DOOR_CLOSED);
 	setup();
 	replace_program(ROOM);
 }

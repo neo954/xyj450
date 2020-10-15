@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //cglaem...12/17/96.
@@ -15,54 +15,54 @@ int main(object me, string arg)
         seteuid(getuid());
 
         if( me->is_fighting() )
-                return notify_fail("ÄãÕıÔÚÕ½¶·£¬·É²»¿ª¡£\n");
+                return notify_fail("ä½ æ­£åœ¨æˆ˜æ–—ï¼Œé£ä¸å¼€ã€‚\n");
         if( me->is_busy() || me->query_temp("pending/exercising"))
-                return notify_fail("ÄãÕıÃ¦×ÅÄØ£¬Ã»¹¤·òÌÚÔÆ¼İÎí¡£\n");
+                return notify_fail("ä½ æ­£å¿™ç€å‘¢ï¼Œæ²¡å·¥å¤«è…¾äº‘é©¾é›¾ã€‚\n");
    if( !wizardp(me) && !environment(me)->query("outdoors") )
-     return notify_fail("ÖÜÎ§Ã»ÓĞÒ»Æ¬ÔÆ£¬Ã»°ì·¨ÌÚÔÆ¼İÎí¡£\n");
+     return notify_fail("å‘¨å›´æ²¡æœ‰ä¸€ç‰‡äº‘ï¼Œæ²¡åŠæ³•è…¾äº‘é©¾é›¾ã€‚\n");
    if( me->is_ghost() )
-     return notify_fail("×öÁË¹íÁË£¬¾ÍÀÏÊµµã°É£¡\n");
+     return notify_fail("åšäº†é¬¼äº†ï¼Œå°±è€å®ç‚¹å§ï¼\n");
         if( !arg )
-                return notify_fail("ÄãÒª·Éµ½ÄÄÀïÈ¥£¿\n");
+                return notify_fail("ä½ è¦é£åˆ°å“ªé‡Œå»ï¼Ÿ\n");
    if( me->query_temp("no_move") )
-     return notify_fail("Äã±»¶¨×¡ÁË£¬ÄÄÀï·ÉµÃÆğÀ´£¡\n");
+     return notify_fail("ä½ è¢«å®šä½äº†ï¼Œå“ªé‡Œé£å¾—èµ·æ¥ï¼\n");
 
         if( (int)me->query("combat_exp") < 10000 ){
                 message_vision(HIY
-"$N·ÜÁ¦ÍûÉÏÒ»Ìø£¬ËÆºõÏë·ÉÆğÀ´¡£½á¹ûÀëµØ²»µ½Èı³ß¾ÍÒ»¸öµ¹ÔÔ´ĞË¤ÁËÏÂÀ´¡£\n"
+"$Nå¥‹åŠ›æœ›ä¸Šä¸€è·³ï¼Œä¼¼ä¹æƒ³é£èµ·æ¥ã€‚ç»“æœç¦»åœ°ä¸åˆ°ä¸‰å°ºå°±ä¸€ä¸ªå€’æ ½è‘±æ‘”äº†ä¸‹æ¥ã€‚\n"
 NOR, me);
-                return notify_fail("¿ÉÄÜÊÇÄãµÀĞĞ»¹²»¹»¡£\n");
+                return notify_fail("å¯èƒ½æ˜¯ä½ é“è¡Œè¿˜ä¸å¤Ÿã€‚\n");
         }
 
         if( (int)me->query("mana") < 200 ){
                 message_vision(HIY
-"$N·ÜÁ¦ÍûÉÏÒ»Ìø£¬ËÆºõÏë·ÉÆğÀ´¡£½á¹ûÀëµØ²»µ½Èı³ß¾ÍÒ»¸öµ¹ÔÔ´ĞË¤ÁËÏÂÀ´¡£\n"
+"$Nå¥‹åŠ›æœ›ä¸Šä¸€è·³ï¼Œä¼¼ä¹æƒ³é£èµ·æ¥ã€‚ç»“æœç¦»åœ°ä¸åˆ°ä¸‰å°ºå°±ä¸€ä¸ªå€’æ ½è‘±æ‘”äº†ä¸‹æ¥ã€‚\n"
 NOR, me);
-                return notify_fail("¿ÉÄÜÊÇÄã·¨Á¦»¹²»¹»¡£\n");
+                return notify_fail("å¯èƒ½æ˜¯ä½ æ³•åŠ›è¿˜ä¸å¤Ÿã€‚\n");
         }
 
         if( (int)me->query("sen") * 100 / (int)me->query("max_sen") < 50 )
                 return
-notify_fail("ÄãÏÖÔÚÍ·ÄÔ²»Ì«ÇåĞÑ£¬µ±ĞÄµôÏÂÀ´Ë¤ËÀ¡£\n");
+notify_fail("ä½ ç°åœ¨å¤´è„‘ä¸å¤ªæ¸…é†’ï¼Œå½“å¿ƒæ‰ä¸‹æ¥æ‘”æ­»ã€‚\n");
 
         if( (int)me->query("kee") * 100 / (int)me->query("max_kee") < 50 )
                 return
-notify_fail("ÄãÏë·ÉÆğÀ´£¬¿ÉÊÇÌåÁ¦ËÆºõÓĞµã²»Ö§¡£\n");
+notify_fail("ä½ æƒ³é£èµ·æ¥ï¼Œå¯æ˜¯ä½“åŠ›ä¼¼ä¹æœ‰ç‚¹ä¸æ”¯ã€‚\n");
 
         mana_cost=-(100-(int)me->query_skill("spells"))/4-40;
         if(mana_cost > 0) mana_cost=0;
 
-   if( (string)me->query("family/family_name") == "ÑÖÂŞµØ¸®") {
-     message_vision(HIY"$NÊÖÒ»Ö¸£¬Æ½µØ¼äÒ»¹ÉÒõ·ç¹ÎÆğ£¬½«$N¹üÁËÆğÀ´£¬\n"+
-"ÔÙ´µÒ»Éù¿ÚÉÚ£¬ËæÖ®Æ®È¥²»¼ûÁË¡£¡£¡£\n\n"NOR, me);
-   }else if( (string)me->query("family/family_name") == "´óÑ©É½"
-     || (string)me->query("family/family_name") == "Ïİ¿ÕÉ½ÎŞµ×¶´" ) {
-     message_vision(HIY"$NÊÖÒ»Ö¸£¬¡¸ºô¡¹µØÒ»Õó¿ñ·ç¹ÎÆğ£¬´µµÄÈË¶¼Õö²»¿ªÑÛ¾¦£¬\n"+
-"ÔÙ´µÒ»Éù¿ÚÉÚ£¬ËæÖ®Æ®È¥²»¼ûÁË¡£¡£¡£\n\n"NOR, me);
+   if( (string)me->query("family/family_name") == "é˜ç½—åœ°åºœ") {
+     message_vision(HIY"$Næ‰‹ä¸€æŒ‡ï¼Œå¹³åœ°é—´ä¸€è‚¡é˜´é£åˆ®èµ·ï¼Œå°†$Nè£¹äº†èµ·æ¥ï¼Œ\n"+
+"å†å¹ä¸€å£°å£å“¨ï¼Œéšä¹‹é£˜å»ä¸è§äº†ã€‚ã€‚ã€‚\n\n"NOR, me);
+   }else if( (string)me->query("family/family_name") == "å¤§é›ªå±±"
+     || (string)me->query("family/family_name") == "é™·ç©ºå±±æ— åº•æ´" ) {
+     message_vision(HIY"$Næ‰‹ä¸€æŒ‡ï¼Œã€Œå‘¼ã€åœ°ä¸€é˜µç‹‚é£åˆ®èµ·ï¼Œå¹çš„äººéƒ½çä¸å¼€çœ¼ç›ï¼Œ\n"+
+"å†å¹ä¸€å£°å£å“¨ï¼Œéšä¹‹é£˜å»ä¸è§äº†ã€‚ã€‚ã€‚\n\n"NOR, me);
    }else {   
         message_vision(HIY
-"$NÊÖÒ»Ö¸£¬ÕÙÀ´Ò»¶äÔÆ²Ê£¬¸ß¸ßĞËĞËµØ×øÁËÉÏÈ¥£¬\n"+
-"ÔÙ´µÒ»Éù¿ÚÉÚ£¬ËæÖ®ÍùÉÏÈ½È½µØÉıÆğ¡£¡£¡£\n\n"NOR, me);
+"$Næ‰‹ä¸€æŒ‡ï¼Œå¬æ¥ä¸€æœµäº‘å½©ï¼Œé«˜é«˜å…´å…´åœ°åäº†ä¸Šå»ï¼Œ\n"+
+"å†å¹ä¸€å£°å£å“¨ï¼Œéšä¹‹å¾€ä¸Šå†‰å†‰åœ°å‡èµ·ã€‚ã€‚ã€‚\n\n"NOR, me);
    }
 
         me->add("mana", mana_cost);
@@ -79,30 +79,30 @@ notify_fail("ÄãÏë·ÉÆğÀ´£¬¿ÉÊÇÌåÁ¦ËÆºõÓĞµã²»Ö§¡£\n");
 
    else if(arg=="penglai") {
      if(!(map=present("eastsea map", me)) && !wizardp(me)) {
-        write("ÄãÔÚÌìÉÏ×ªÁË°ëÌìÒ²²»Öª¸ÃÍùÄÇ±ß·É¡£¡£¡£\n");
-        message_vision("\n$NÊ§ÍûµØ´ÓÔÆÉÏÌøÁËÏÂÀ´£¡\n", me);
+        write("ä½ åœ¨å¤©ä¸Šè½¬äº†åŠå¤©ä¹Ÿä¸çŸ¥è¯¥å¾€é‚£è¾¹é£ã€‚ã€‚ã€‚\n");
+        message_vision("\n$Nå¤±æœ›åœ°ä»äº‘ä¸Šè·³äº†ä¸‹æ¥ï¼\n", me);
         return 1;
         }
-     if( !wizardp(me)&&(string)map->query("unit")!="ÕÅ" ){
-        write("ÄãÔÚÌìÉÏ×ªÁË°ëÌìÒ²²»Öª¸ÃÍùÄÇ±ß·É¡£¡£¡£\n");
-                        message_vision("\n$NÊ§ÍûµØ´ÓÔÆÉÏÌøÁËÏÂÀ´£¡\n", me);
+     if( !wizardp(me)&&(string)map->query("unit")!="å¼ " ){
+        write("ä½ åœ¨å¤©ä¸Šè½¬äº†åŠå¤©ä¹Ÿä¸çŸ¥è¯¥å¾€é‚£è¾¹é£ã€‚ã€‚ã€‚\n");
+                        message_vision("\n$Nå¤±æœ›åœ°ä»äº‘ä¸Šè·³äº†ä¸‹æ¥ï¼\n", me);
                         return 1;
                         }
-//     write("Äã¼İ×ÅÏéÔÆÏò¶«±ßº£ÖĞ·ÉÈ¥¡£¡£¡£\n\n");
+//     write("ä½ é©¾ç€ç¥¥äº‘å‘ä¸œè¾¹æµ·ä¸­é£å»ã€‚ã€‚ã€‚\n\n");
      loc="/d/penglai/penglai";
    }
    else if(arg=="xueshan") {
      if(!(map=present("xueshan map", me)) && !wizardp(me)) {
-        write("ÄãÔÚÌìÉÏ×ªÁË°ëÌìÒ²²»Öª¸ÃÍùÄÇ±ß·É¡£¡£¡£\n");
-        message_vision("\n$NÊ§ÍûµØ´ÓÔÆÉÏÌøÁËÏÂÀ´£¡\n", me);
+        write("ä½ åœ¨å¤©ä¸Šè½¬äº†åŠå¤©ä¹Ÿä¸çŸ¥è¯¥å¾€é‚£è¾¹é£ã€‚ã€‚ã€‚\n");
+        message_vision("\n$Nå¤±æœ›åœ°ä»äº‘ä¸Šè·³äº†ä¸‹æ¥ï¼\n", me);
         return 1;
         }
-     if( !wizardp(me)&&(string)map->query("unit")!="ÕÅ" ){
-                        write("ÄãÔÚÌìÉÏ×ªÁË°ëÌìÒ²²»Öª¸ÃÍùÄÇ±ß·É¡£¡£¡£\n");
-                        message_vision("\n$NÊ§ÍûµØ´ÓÔÆÉÏÌøÁËÏÂÀ´£¡\n", me);
+     if( !wizardp(me)&&(string)map->query("unit")!="å¼ " ){
+                        write("ä½ åœ¨å¤©ä¸Šè½¬äº†åŠå¤©ä¹Ÿä¸çŸ¥è¯¥å¾€é‚£è¾¹é£ã€‚ã€‚ã€‚\n");
+                        message_vision("\n$Nå¤±æœ›åœ°ä»äº‘ä¸Šè·³äº†ä¸‹æ¥ï¼\n", me);
                         return 1;
                         }
-//     write("Äã¼İ×ÅÏéÔÆÏò´óÑ©É½·ÉÈ¥¡£¡£¡£\n\n");
+//     write("ä½ é©¾ç€ç¥¥äº‘å‘å¤§é›ªå±±é£å»ã€‚ã€‚ã€‚\n\n");
      loc="/d/xueshan/binggu";
    }
    else if(arg=="baoxiang"){
@@ -130,8 +130,8 @@ notify_fail("ÄãÏë·ÉÆğÀ´£¬¿ÉÊÇÌåÁ¦ËÆºõÓĞµã²»Ö§¡£\n");
      loc = "/d/qujing/nuerguo/towna1.c";
      /*
      if (me->query("obstacle/nuerguo")!="done" && !wizardp(me)){
-        write("\nÒ»Õó·ç°ÑÄã¶«µ¹Î÷ÍáµØ´µÁË»ØÀ´£¡\n");
-        write("¿´Ñù×Ó·É²»¹ıÈ¥¡£\n");
+        write("\nä¸€é˜µé£æŠŠä½ ä¸œå€’è¥¿æ­ªåœ°å¹äº†å›æ¥ï¼\n");
+        write("çœ‹æ ·å­é£ä¸è¿‡å»ã€‚\n");
         return 1;
         }
      */
@@ -213,36 +213,36 @@ notify_fail("ÄãÏë·ÉÆğÀ´£¬¿ÉÊÇÌåÁ¦ËÆºõÓĞµã²»Ö§¡£\n");
             if (file_size(loc)==-1)
                 loc = 0;
         }else{
-                write("\n\nµ½ÁË£¡Äã°´ÏÂÔÆÍ·ÌøÁËÏÂÀ´¡£\n");
-                write("ß×£¿£®£®£®ÔõÃ´»¹ÔÚÔ­À´µÄµØ·½£¿\n");
+                write("\n\nåˆ°äº†ï¼ä½ æŒ‰ä¸‹äº‘å¤´è·³äº†ä¸‹æ¥ã€‚\n");
+                write("å’¦ï¼Ÿï¼ï¼ï¼æ€ä¹ˆè¿˜åœ¨åŸæ¥çš„åœ°æ–¹ï¼Ÿ\n");
                 return 1;
         }
 
    if (! loc) {
-     write("\n\nµ½ÁË£¡Äã°´ÏÂÔÆÍ·ÌøÁËÏÂÀ´¡£\n");
-     write("ß×£¿£®£®£®ÔõÃ´»¹ÔÚÔ­À´µÄµØ·½£¿\n");
+     write("\n\nåˆ°äº†ï¼ä½ æŒ‰ä¸‹äº‘å¤´è·³äº†ä¸‹æ¥ã€‚\n");
+     write("å’¦ï¼Ÿï¼ï¼ï¼æ€ä¹ˆè¿˜åœ¨åŸæ¥çš„åœ°æ–¹ï¼Ÿ\n");
      return 1;
    }
      
    if (ridee = me->ride()) {
-     ridemsg = ridee->query("ride/msg")+"×Å"+ridee->name();
+     ridemsg = ridee->query("ride/msg")+"ç€"+ridee->name();
      ridee->move(loc);
    }  
    else  
      ridemsg = "";
                                                  
    me->move(loc);
-        write("\n\nµ½ÁË£¡Äã°´ÏÂÔÆÍ·ÌøÁËÏÂÀ´¡£\n");
+        write("\n\nåˆ°äº†ï¼ä½ æŒ‰ä¸‹äº‘å¤´è·³äº†ä¸‹æ¥ã€‚\n");
 
-   if( (string)me->query("family/family_name")=="ÑÖÂŞµØ¸®") {
-     message_vision(HIY"\nÖ»¼ûÆ½µØ´µÆğÒ»ÕóÒõ·ç£¬$N"+ridemsg+"´ÓÀïÃæ×ßÁË³öÀ´¡£\n"
+   if( (string)me->query("family/family_name")=="é˜ç½—åœ°åºœ") {
+     message_vision(HIY"\nåªè§å¹³åœ°å¹èµ·ä¸€é˜µé˜´é£ï¼Œ$N"+ridemsg+"ä»é‡Œé¢èµ°äº†å‡ºæ¥ã€‚\n"
 NOR, me);
-   }else if( (string)me->query("family/family_name") == "´óÑ©É½"
-     || (string)me->query("family/family_name") == "Ïİ¿ÕÉ½ÎŞµ×¶´") {
-     message_vision(HIY"\nÖ»¼û¿ñ·ç´ó×÷£¬$N"+ridemsg+"´ÓÀïÃæ×ßÁË³öÀ´¡£\n"NOR, me);
+   }else if( (string)me->query("family/family_name") == "å¤§é›ªå±±"
+     || (string)me->query("family/family_name") == "é™·ç©ºå±±æ— åº•æ´") {
+     message_vision(HIY"\nåªè§ç‹‚é£å¤§ä½œï¼Œ$N"+ridemsg+"ä»é‡Œé¢èµ°äº†å‡ºæ¥ã€‚\n"NOR, me);
    }else{
         message_vision(HIY
-"\nÖ»¼û°ë¿ÕÖĞ½µÏÂÒ»¶äÔÆ²Ê£¬$N"+ridemsg+"´ÓÀïÃæ×ßÁË³öÀ´¡£\n" NOR, me);
+"\nåªè§åŠç©ºä¸­é™ä¸‹ä¸€æœµäº‘å½©ï¼Œ$N"+ridemsg+"ä»é‡Œé¢èµ°äº†å‡ºæ¥ã€‚\n" NOR, me);
    }
 
         return 1;
@@ -251,38 +251,38 @@ NOR, me);
 int help(object me)
 {
         write(@HELP
-Ö¸Áî¸ñÊ½ : fly|fei [Ä¿µÄµØ]
+æŒ‡ä»¤æ ¼å¼ : fly|fei [ç›®çš„åœ°]
 
-µ±ÄãµÄµÀĞĞºÍ·¨Á¦¸ßÇ¿Ê±£¬Äã¿ÉÒÔÌÚÔÆ¼İÎí¡£
+å½“ä½ çš„é“è¡Œå’Œæ³•åŠ›é«˜å¼ºæ—¶ï¼Œä½ å¯ä»¥è…¾äº‘é©¾é›¾ã€‚
 
-Ä¿Ç°Äã¿ÉÒÔ·Éµ½µÄµØ·½£º
-changan     ->³¤°²³Ç            kaifeng     ->¿ª·â³Ç
-stone       ->»¨¹ûÉ½ÏÉÊ¯        sky         ->ÄÏÌìÃÅ
-moon        ->À¥ÂØÉ½ÔÂ¹¬        penglai     ->ÅîÀ³ÏÉµº
-lingtai     ->ÁéÌ¨·½´çÉ½        putuo       ->ÄÏº£ÆÕÍÓÉ½
-xueshan     ->´óÑ©É½º®±ù¹È      meishan     ->Ã·É½¹à½­¿Ú
-wuzhuang    ->ÍòÊÙÉ½Îå×¯¹Û
+ç›®å‰ä½ å¯ä»¥é£åˆ°çš„åœ°æ–¹ï¼š
+changan     ->é•¿å®‰åŸ            kaifeng     ->å¼€å°åŸ
+stone       ->èŠ±æœå±±ä»™çŸ³        sky         ->å—å¤©é—¨
+moon        ->æ˜†ä»‘å±±æœˆå®«        penglai     ->è“¬è±ä»™å²›
+lingtai     ->çµå°æ–¹å¯¸å±±        putuo       ->å—æµ·æ™®é™€å±±
+xueshan     ->å¤§é›ªå±±å¯’å†°è°·      meishan     ->æ¢…å±±çŒæ±Ÿå£
+wuzhuang    ->ä¸‡å¯¿å±±äº”åº„è§‚
 
-baoxiang    ->±¦Ïó¹ú            pingding    ->Æ½¶¥É½
-yalong      ->Ñ¹ÁúÉ½            wuji        ->ÎÚ¼¦¹ú
-chechi      ->³µ³Ù¹ú            tongtian    ->Í¨ÌìºÓ
-jindou      ->½ğ¶µÉ½            nuerguo     ->Å®¶ù¹ú
-dudi        ->¶¾µĞÉ½            firemount   ->»ğÑæÉ½
-jilei       ->»ıÀ×É½            jisaiguo    ->¼ÀÈü¹ú
-jingjiling  ->¾£¼¬Áë            xiaoxitian  ->Ğ¡Î÷Ìì
-zhuzi       ->Öì×Ï¹ú            qilin       ->÷è÷ëÉ½
-pansi       ->ÅÌË¿Áë            biqiu       ->±ÈÇğ¹ú 
-qinghua     ->Çå»ª×¯            wudidong    ->ÎŞµ×¶´
-qinfa       ->ÇÕ·¨¹ú            fengxian    ->·ïÏÉ¿¤ 
-yinwu       ->ÒşÎíÉ½            yuhua       ->Óñ»ªÏØ 
-baotou      ->±ªÍ·É½            zhujie      ->Öñ½ÚÉ½
-jinping     ->½ğÆ½¸®            qinglong    ->ÇàÁúÉ½ 
-tianzhu     ->ÌìóÃ¹ú            maoying     ->Ã«Ó±É½ 
-lingshan    ->ÁéÉ½                   
+baoxiang    ->å®è±¡å›½            pingding    ->å¹³é¡¶å±±
+yalong      ->å‹é¾™å±±            wuji        ->ä¹Œé¸¡å›½
+chechi      ->è½¦è¿Ÿå›½            tongtian    ->é€šå¤©æ²³
+jindou      ->é‡‘å…œå±±            nuerguo     ->å¥³å„¿å›½
+dudi        ->æ¯’æ•Œå±±            firemount   ->ç«ç„°å±±
+jilei       ->ç§¯é›·å±±            jisaiguo    ->ç¥­èµ›å›½
+jingjiling  ->è†æ£˜å²­            xiaoxitian  ->å°è¥¿å¤©
+zhuzi       ->æœ±ç´«å›½            qilin       ->éº’éºŸå±±
+pansi       ->ç›˜ä¸å²­            biqiu       ->æ¯”ä¸˜å›½ 
+qinghua     ->æ¸…ååº„            wudidong    ->æ— åº•æ´
+qinfa       ->é’¦æ³•å›½            fengxian    ->å‡¤ä»™éƒ¡ 
+yinwu       ->éšé›¾å±±            yuhua       ->ç‰åå¿ 
+baotou      ->è±¹å¤´å±±            zhujie      ->ç«¹èŠ‚å±±
+jinping     ->é‡‘å¹³åºœ            qinglong    ->é’é¾™å±± 
+tianzhu     ->å¤©ç«ºå›½            maoying     ->æ¯›é¢–å±± 
+lingshan    ->çµå±±                   
 
-Èç¹ûÊÇ¡¶Î÷ÓÎ¼Ç¡·À©³ä°æ£¬Äã¿ÉÒÔ·Éµ½£º
-es          ->¶«·½¹ÊÊÂ          xkx         ->ÏÀ¿ÍĞĞ
-fy          ->·çÔÆ
+å¦‚æœæ˜¯ã€Šè¥¿æ¸¸è®°ã€‹æ‰©å……ç‰ˆï¼Œä½ å¯ä»¥é£åˆ°ï¼š
+es          ->ä¸œæ–¹æ•…äº‹          xkx         ->ä¾ å®¢è¡Œ
+fy          ->é£äº‘
 
 HELP
         );

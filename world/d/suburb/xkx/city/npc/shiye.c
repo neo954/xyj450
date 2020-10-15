@@ -1,12 +1,12 @@
-// shiye.c ֪��ʦү
+// shiye.c 知府师爷
 
 inherit NPC;
 
 void create()
 {
-	set_name("̷�Ѽ�", ({ "tan youji", "tan" }));
-	set("title", "֪��ʦү");
-	set("gender", "����");
+	set_name("谭友纪", ({ "tan youji", "tan" }));
+	set("title", "知府师爷");
+	set("gender", "男性");
 	set("age", 57);
 
 	set("combat_exp", 30000);

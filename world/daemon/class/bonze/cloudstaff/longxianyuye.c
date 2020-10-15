@@ -12,12 +12,12 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("£ÛÁúÏÖÓÚÒ°£ÝÖ»ÄÜ¶ÔÕ½¶·ÖÐµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("ï¼»é¾™çŽ°äºŽé‡Žï¼½åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 	weapon = me->query_temp("weapon");
 	extra = me->query_skill("staff") / 10;
 	me->add_temp("apply/attack", extra);	
 	me->add_temp("apply/damage", extra);
-	msg = HIR  "$NµÍºô·ðºÅ£¬ÄÚÁ¦¾ÛÓÚË«±Û£¬ÊÖÖÐµÄ"+ weapon->name() +"»Ã³öÒ»Ìõ½ðÁ×·ÉÁú£¬ÉÁµç°ãµÄÆËÏò$n£¡" NOR;
+	msg = HIR  "$Nä½Žå‘¼ä½›å·ï¼Œå†…åŠ›èšäºŽåŒè‡‚ï¼Œæ‰‹ä¸­çš„"+ weapon->name() +"å¹»å‡ºä¸€æ¡é‡‘ç£·é£žé¾™ï¼Œé—ªç”µèˆ¬çš„æ‰‘å‘$nï¼" NOR;
 	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
 	me->add_temp("apply/attack", -extra);
 	me->add_temp("apply/damage", -extra);

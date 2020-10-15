@@ -5,13 +5,13 @@ inherit F_FOOD;
 
 void create()
 {
-	set_name("ÌÇºùÂ«", ({ "sugar cucurbit", "cucurbit", "sugar" }) );
+	set_name("ç³–è‘«èŠ¦", ({ "sugar cucurbit", "cucurbit", "sugar" }) );
 	set_weight(180);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»´®¿´ÆğÀ´¾ÍÈÃÈË´¹ÏÑÓûµÎµÄÌÇ×ÕºùÂ«¡£\n");
-		set("unit", "´®");
+		set("long", "ä¸€ä¸²çœ‹èµ·æ¥å°±è®©äººå‚æ¶æ¬²æ»´çš„ç³–æ¸è‘«èŠ¦ã€‚\n");
+		set("unit", "ä¸²");
 		set("value", 40);
 		set("food_remaining", 4);
 		set("food_supply", 50);

@@ -2,10 +2,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÉÌÈË", ({ "trader"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å•†äºº", ({ "trader"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 42);
-        set("long", "ÕâÊÇÒ»Î»´Ó¹ØÍâÀ´µÄÉÌÈË¡£\n");
+        set("long", "è¿™æ˜¯ä¸€ä½ä»å…³å¤–æ¥çš„å•†äººã€‚\n");
         set("combat_exp", 5000);
         set("attitude", "friendly");
         set("env/wimpy", 30);
@@ -19,8 +19,8 @@ void create()
         map_skill("dodge", "fall-steps");
         set("chat_chance", 20);
         set("chat_msg", ({
-                "Ê²Ã´ÊÀµÀ£¬¼¸¸ö³ôÇ®¾Í¿ÉÒÔÂò¹Ù×÷¡£\n",
-		"ÕâÄêÍ·£¬ÉúÒâ²»ºÃ×ö°¡£¡\n",
+                "ä»€ä¹ˆä¸–é“ï¼Œå‡ ä¸ªè‡­é’±å°±å¯ä»¥ä¹°å®˜ä½œã€‚\n",
+		"è¿™å¹´å¤´ï¼Œç”Ÿæ„ä¸å¥½åšå•Šï¼\n",
 		(: random_move :),
         }) );
         setup();

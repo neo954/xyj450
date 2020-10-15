@@ -2,10 +2,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("Ğ¡Ô°¹¤", ({ "young gardener", "gardener" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å°å›­å·¥", ({ "young gardener", "gardener" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 42);
-        set("long", "Ò»Î»ÄêÇáµÄĞ¡Ô°¹¤\n");
+        set("long", "ä¸€ä½å¹´è½»çš„å°å›­å·¥\n");
         set("str", 12);
         set("int", 24);
         set("combat_exp", 500);

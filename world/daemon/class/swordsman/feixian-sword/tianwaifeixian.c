@@ -13,14 +13,14 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("ÌìÍâ·ÉÏÉÖ»ÄÜ¶ÔÕ½¶·ÖÐµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("å¤©å¤–é£žä»™åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 	weapon = me->query_temp("weapon");
 	extra = me->query_skill("feixian-sword",1) / 10;
 	me->add_temp("apply/attack", extra);	
 	me->add_temp("apply/damage", extra);
-	msg = HIR  "$NÊ¹³ö·ÉÏÉ½£·¨ÖÐµÄ¾«Ëè£ÛÌìÍâ·ÉÏÉ£Ý£¬ÊÖÖÐµÄ"+ weapon->name() +"»®³öÒ»µÀ³¤ºç£¬ÉÁµç°ãµÄ»÷Ïò$n£¡" NOR;
+	msg = HIR  "$Nä½¿å‡ºé£žä»™å‰‘æ³•ä¸­çš„ç²¾é«“ï¼»å¤©å¤–é£žä»™ï¼½ï¼Œæ‰‹ä¸­çš„"+ weapon->name() +"åˆ’å‡ºä¸€é“é•¿è™¹ï¼Œé—ªç”µèˆ¬çš„å‡»å‘$nï¼" NOR;
 	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
-	msg =  HIW "½£¹âÒ»ÉÁ£¬ÏûÊ§£®£®£®£®\n" NOR;
+	msg =  HIW "å‰‘å…‰ä¸€é—ªï¼Œæ¶ˆå¤±ï¼Žï¼Žï¼Žï¼Ž\n" NOR;
 	message_vision(msg, me, target);
 	me->add_temp("apply/attack", -extra);
 	me->add_temp("apply/damage", -extra);

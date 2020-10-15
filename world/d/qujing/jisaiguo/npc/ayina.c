@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit F_VENDOR_SALE;
@@ -6,12 +6,12 @@ inherit F_VENDOR_SALE;
 void create()
 {
   reload("jisaoguo_a_yina");
-  set_name("°¢ÒÀÄÈ", ({"a yina","yina"}));
+  set_name("é˜¿ä¾å¨œ", ({"a yina","yina"}));
   set("shop_id",({"yina"}));
-  set("gender", "Å®ÐÔ" );
+  set("gender", "å¥³æ€§" );
   set("age", 22);
   set("per", 25);
-  set("long", "Ò»Î»´óÑÛ¾¦£¬³¤±è×ÓµÄ¹ÃÄï¡£\n");
+  set("long", "ä¸€ä½å¤§çœ¼ç›ï¼Œé•¿è¾«å­çš„å§‘å¨˜ã€‚\n");
   set("combat_exp", 1000);
   set("max_kee", 300);
   set("max_sen", 300);
@@ -44,9 +44,9 @@ void greeting(object ob)
         if( !ob || !visible(ob) || environment(ob) != environment() ) return;
         switch( random(3) ) { 
                 case 0:
-                say(name()+ "Ð¦ßäßäµØËµµÀ£ºÕâÎ»" +
+                say(name()+ "ç¬‘å’ªå’ªåœ°è¯´é“ï¼šè¿™ä½" +
 RANK_D->query_respect(ob)
-                                + "£¬À´¸øÒâÖÐÈËÂò¼þÒøÆ÷°É¡£\n");
+                                + "ï¼Œæ¥ç»™æ„ä¸­äººä¹°ä»¶é“¶å™¨å§ã€‚\n");
                         break;
         }
 }

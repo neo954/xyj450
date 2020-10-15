@@ -4,10 +4,10 @@
 inherit NPC;
 void create()
 {
-	set_name("Ä¥²Ëµ¶µÄ", ({ "moman" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("ç£¨èœåˆ€çš„", ({ "moman" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 47);
-	set("long", "Õâ¸öÈËÊÇ×¨ÃÅ°ïÈËÄ¥¼ô×ÓºÍïÏ²Ëµ¶µÄ¡£\n");
+	set("long", "è¿™ä¸ªäººæ˜¯ä¸“é—¨å¸®äººç£¨å‰ªå­å’Œé”µèœåˆ€çš„ã€‚\n");
 	set("combat_exp", 10);
 	set("str", 27);
 	set("force", 30);
@@ -16,7 +16,7 @@ void create()
 	setup();
 	set("chat_chance", 10);
 	set("chat_msg", ({
-		"Ä¥²Ëµ¶µÄ¸ßÉùßººÈµÀ£ºÄ¥¼ô×Óà¶¡«ïÏ²Ëµ¶¡«¡«¡«\n",
+		"ç£¨èœåˆ€çš„é«˜å£°å†å–é“ï¼šç£¨å‰ªå­å–½ï½é”µèœåˆ€ï½ï½ï½\n",
 		(: random_move :)
 	}) );
 	carry_object("/obj/cloth")->wear();
@@ -26,12 +26,12 @@ void create()
 int accept_object(object me, object obj)
 {
 	command("smile");
-	command("say ¶àĞ»ÕâÎ»" + RANK_D->query_respect(me) + "£¡");
+	command("say å¤šè°¢è¿™ä½" + RANK_D->query_respect(me) + "ï¼");
 	return 1;
 }
 
 int accept_fight(object me)
 {
-	command("say " + RANK_D->query_respect(me) + "ÈÄÃü£¡Ğ¡µÄÕâ¾ÍÀë¿ª£¡\n");
+	command("say " + RANK_D->query_respect(me) + "é¥¶å‘½ï¼å°çš„è¿™å°±ç¦»å¼€ï¼\n");
 	return 0;
 }

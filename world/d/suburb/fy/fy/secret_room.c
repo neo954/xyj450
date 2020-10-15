@@ -4,10 +4,10 @@ inherit ROOM;
 void create()
 {
 	object silver;
-	set("short", "µØÏÂÃÜÊÒ");
+	set("short", "åœ°ä¸‹å¯†å®¤");
 	set("long", @LONG
-ÕâÀïÊÇÒ»¼äÕ­Ð¡µÄÃÜÊÒ£¬ÄãµÄÃæÇ°Ö»ÓÐÒ»¸öÆÆ¾ÉµÄÐ¡´²¸úÒ»
-Ð©Ç¬²Ý¡£
+è¿™é‡Œæ˜¯ä¸€é—´çª„å°çš„å¯†å®¤ï¼Œä½ çš„é¢å‰åªæœ‰ä¸€ä¸ªç ´æ—§çš„å°åºŠè·Ÿä¸€
+äº›ä¹¾è‰ã€‚
 LONG
 	);
 
@@ -18,5 +18,5 @@ LONG
 	setup();
 	silver = present("silver",this_object());
 	silver->set_amount(random(10000)+1000);	
-	silver->set("name", "ïÚÒø");
+	silver->set("name", "é•–é“¶");
 }

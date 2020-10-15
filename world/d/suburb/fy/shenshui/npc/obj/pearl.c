@@ -6,13 +6,13 @@ inherit THROWING;
 
 void create()
 {
-	set_name("´óÕäÖé", ({ "big pearl", "pearl" }) );
+	set_name("å¤§çç ", ({ "big pearl", "pearl" }) );
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long",	"¼ÛÖµÁ¬³ÇµÄÒ¹Ã÷Öé£¬·¢³öÒ»ÖÖÀ¶ÓÄÓÄµÄ¹âÔó¡£\n");
-		set("unit", "´®");
-		set("base_unit", "¿Å");
+		set("long",	"ä»·å€¼è¿åŸçš„å¤œæ˜ç ï¼Œå‘å‡ºä¸€ç§è“å¹½å¹½çš„å…‰æ³½ã€‚\n");
+		set("unit", "ä¸²");
+		set("base_unit", "é¢—");
 		set("base_weight", 1);
 		set("base_value", 1000);
 	}

@@ -5,8 +5,8 @@
 inherit ITEM;
 void create()
 {
-    set_name( "Ğ¡Öñ·÷³¾", ({ "fuchen","fuchen"  }) );
-    set("unit", "¿é");
+    set_name( "å°ç«¹æ‹‚å°˜", ({ "fuchen","fuchen"  }) );
+    set("unit", "å—");
     set("value",20);
     set_weight(5);
 }

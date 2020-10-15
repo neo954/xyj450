@@ -6,11 +6,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "Ğ¡¾¶");
+        set("short", "å°å¾„");
         set("long",@LONG
-ÕâÀïÊÇÉĞÊé¸®µÄĞ¡¾¶¡£Ğ¡¾¶¼ÌĞøÏò±±ÑÓÉì×Å£¬Í¸¹ıÊ÷´ÔÒşÒşÔ¼Ô¼
-µØ¿´µ½ÄÇ¶ùËÆºõÓĞÒ»¼äĞ¡Îİ¡£´ÓÕâ¶ùÏò¶«×ß¾ÍÊÇÒ»¼ä¿Í·¿£¬¾İËµ¿Í·¿
-Àï×¡µÄÊÇÒ»Î»¹ó¿Í¡£²»¹ıÒ»°ãÈË²»ÔÊĞí½ø¡£
+è¿™é‡Œæ˜¯å°šä¹¦åºœçš„å°å¾„ã€‚å°å¾„ç»§ç»­å‘åŒ—å»¶ä¼¸ç€ï¼Œé€è¿‡æ ‘ä¸›éšéšçº¦çº¦
+åœ°çœ‹åˆ°é‚£å„¿ä¼¼ä¹æœ‰ä¸€é—´å°å±‹ã€‚ä»è¿™å„¿å‘ä¸œèµ°å°±æ˜¯ä¸€é—´å®¢æˆ¿ï¼Œæ®è¯´å®¢æˆ¿
+é‡Œä½çš„æ˜¯ä¸€ä½è´µå®¢ã€‚ä¸è¿‡ä¸€èˆ¬äººä¸å…è®¸è¿›ã€‚
 LONG
         );
 
@@ -27,7 +27,7 @@ LONG
 
 	set("outdoors", "city");
 	
-	create_door ("east", "Ä¾ÃÅ", "west", DOOR_CLOSED);
+	create_door ("east", "æœ¨é—¨", "west", DOOR_CLOSED);
 
         setup();
 }
@@ -35,8 +35,8 @@ LONG
 int valid_leave(object me,string dir)
 {
         if ( dir!="south" &&  present("trainer", environment(this_player()))
-                && !(string)me->query("marks/ÉĞÊé") )
-        return notify_fail("»¤ÔºÉìÊÖÀ¹×¡ÁËÄãµÄÈ¥Â·£¬ºÈµÀ£º´³Ê²Ã´´³£¡\n");
+                && !(string)me->query("marks/å°šä¹¦") )
+        return notify_fail("æŠ¤é™¢ä¼¸æ‰‹æ‹¦ä½äº†ä½ çš„å»è·¯ï¼Œå–é“ï¼šé—¯ä»€ä¹ˆé—¯ï¼\n");
 
         return ::valid_leave(me,dir);
 }

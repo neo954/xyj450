@@ -4,8 +4,8 @@ void create()
 {
          object ob;
 
-        set_name("�Ů", ({ "girl","servant" }) );
-        set("gender", "Ů��" );
+        set_name("婢女", ({ "girl","servant" }) );
+        set("gender", "女性" );
         set("age",30);
         set("long", @TEXT
 TEXT

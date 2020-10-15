@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // by snowcat oct 15 1997
@@ -9,10 +9,10 @@ inherit F_VENDOR_SALE;
 void create()
 {
   reload("qinfa_zhou_xiaoer");
-  set_name("ÖÜĞ¡¶ş", ({"zhou xiaoer", "zhou", "xiaoer", "xiao", "er"}));
-  set("shop_title", "Ğ¡¶ş");
+  set_name("å‘¨å°äºŒ", ({"zhou xiaoer", "zhou", "xiaoer", "xiao", "er"}));
+  set("shop_title", "å°äºŒ");
   set("shop_id", ({"xiaoer", "xiao", "er"}));
-  set("gender", "ÄĞĞÔ");
+  set("gender", "ç”·æ€§");
   set("combat_exp", 5000);
   set("age", 30);
   set("per", 21);

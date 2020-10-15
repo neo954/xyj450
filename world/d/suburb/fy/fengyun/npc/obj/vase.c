@@ -3,7 +3,7 @@ inherit ITEM;
 
 void create()
 {
-	set_name("°×ÓñÆ¿", ({ "vase" , "°×ÓñÆ¿"}) );
+	set_name("ç™½ç‰ç“¶", ({ "vase" , "ç™½ç‰ç“¶"}) );
 	set_weight(500);
 	set_max_encumbrance(8000);
 	set("no_get", 1);
@@ -11,8 +11,8 @@ void create()
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
-		set("long", "Ò»¸öÖÆ×÷¾«ÃÀµÄÉÏµÈ°×ÓñÆ¿\n");
+		set("unit", "ä¸ª");
+		set("long", "ä¸€ä¸ªåˆ¶ä½œç²¾ç¾çš„ä¸Šç­‰ç™½ç‰ç“¶\n");
 		set("value", 1);
 	}
 }

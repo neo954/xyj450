@@ -3,16 +3,16 @@ inherit NPC;
 
 void create()
 {
-        set_name("¹Ø¶«´óºº", ({ "dahan"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å…³ä¸œå¤§æ±‰", ({ "dahan"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 32+ random(10));
-        set("long", "ÕâÊÇÒ»Î»´Ó°×É½ºÚË®À´µÄ¹Ø¶«´óºº¡£\n");
+        set("long", "è¿™æ˜¯ä¸€ä½ä»ç™½å±±é»‘æ°´æ¥çš„å…³ä¸œå¤§æ±‰ã€‚\n");
         set("combat_exp", 5000);
         set("attitude", "aggrensive");
         set_skill("unarmed", 30 + random(100));
         set("chat_chance", 10);
         set("chat_msg", ({
-                "¹Ø¶«´óºººÀË¬µÃÏòÄã´óĞ¦£¡\n",
+                "å…³ä¸œå¤§æ±‰è±ªçˆ½å¾—å‘ä½ å¤§ç¬‘ï¼\n",
                 (: random_move :),
         }) );
 	setup();

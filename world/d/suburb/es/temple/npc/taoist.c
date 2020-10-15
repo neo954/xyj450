@@ -2,12 +2,12 @@ inherit NPC;
 
 void create()
 {
-     set_name("ÇåĞé", ({"ching-shiu", "ching", "shiu"}) );
-     set("gender", "ÄĞĞÔ");
+     set_name("æ¸…è™š", ({"ching-shiu", "ching", "shiu"}) );
+     set("gender", "ç”·æ€§");
      set("age", 36);
      set("class", "taoist");
-     set("title", "Ã©É½ÅÉµÚÁù´úµÜ×Ó");
-     set("long", "Ò»Î»ÉñÉ«ºÍÆ½µÄÖĞÄêµÀÊ¿, ËûÕıÔÚ½ÌÊÚËûµÄÍ½µÜÈçºÎÔË¹¦\µ¼Æø\n");
+     set("title", "èŒ…å±±æ´¾ç¬¬å…­ä»£å¼Ÿå­");
+     set("long", "ä¸€ä½ç¥è‰²å’Œå¹³çš„ä¸­å¹´é“å£«, ä»–æ­£åœ¨æ•™æˆä»–çš„å¾’å¼Ÿå¦‚ä½•è¿åŠŸ\å¯¼æ°”\n");
      set("attitude", "peaceful");
      set("combat_exp", 10000);
 

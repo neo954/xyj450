@@ -4,17 +4,17 @@
 inherit NPC;
 void create()
 {
-        string *order=({"Áú", "·ï", "ÎŞµ¶", "ÎŞ½£",
-"»¢","Ğû","·Ê","ÊŞ"});
-        set_name("Ìì" + (order[random(8)]), ({ "dashi", "heshang"}) );
-        set("gender", "ÄĞĞÔ" );
+        string *order=({"é¾™", "å‡¤", "æ— åˆ€", "æ— å‰‘",
+"è™","å®£","è‚¥","å…½"});
+        set_name("å¤©" + (order[random(8)]), ({ "dashi", "heshang"}) );
+        set("gender", "ç”·æ€§" );
         set("class", "bonze");
-	set("title","ĞË¹úìøËÂÌì×Ö±²´óÊ¦");
+	set("title","å…´å›½ç¦…å¯ºå¤©å­—è¾ˆå¤§å¸ˆ");
         set("age", random(40)+20);
         set("cor", 24);
         set("cps", 29);
         set("int", 25);
-        set("long", "ËûÊÇĞË¹úìøËÂÖĞÆÄÓĞÍşÍûµÄÌì×Ö±²´óÊ¦\n");
+        set("long", "ä»–æ˜¯å…´å›½ç¦…å¯ºä¸­é¢‡æœ‰å¨æœ›çš„å¤©å­—è¾ˆå¤§å¸ˆ\n");
         set("combat_exp", random(1000000)+1000);
         set("attitude", "friendly");
         set("max_force", 500);
@@ -30,6 +30,6 @@ void create()
 }
 int accept_fight(object me)
 {
-        command("say °¢ÃÖÍÓ·ğ£¡Æ¶É®Îä¹¦µÍÎ¢£¬Ê©Ö÷²»Òª¿ªÕâÖÖÍæĞ¦¡£\n");
+        command("say é˜¿å¼¥é™€ä½›ï¼è´«åƒ§æ­¦åŠŸä½å¾®ï¼Œæ–½ä¸»ä¸è¦å¼€è¿™ç§ç©ç¬‘ã€‚\n");
         return 0;
 }

@@ -6,13 +6,13 @@ inherit CLOTH;
 #include <ansi.h>
 void create()
 {
-	set_name(HIY "Ç³»ÆĞ¡¹Ó" NOR, ({ "yellow cloth", "cloth" }) );
+	set_name(HIY "æµ…é»„å°è¤‚" NOR, ({ "yellow cloth", "cloth" }) );
 	set_weight(1000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Õâ¼şÇ³»ÆÉ«µÄĞ¡¹ÓÉÏÃæĞåÖø¼¸Ö»»ÆÈµ£¬ÎÅÆğÀ´»¹ÓĞÒ»¹Éµ­Ïã¡£\n");
-		set("unit", "¼ş");
+		set("long", "è¿™ä»¶æµ…é»„è‰²çš„å°è¤‚ä¸Šé¢ç»£è‘—å‡ åªé»„é¹Šï¼Œé—»èµ·æ¥è¿˜æœ‰ä¸€è‚¡æ·¡é¦™ã€‚\n");
+		set("unit", "ä»¶");
 		set("value", 600);
 		set("material", "cloth");
 		set("armor_prop/armor", 1);

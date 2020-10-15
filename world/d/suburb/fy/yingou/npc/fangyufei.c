@@ -6,11 +6,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("·½Óñ·É", ({ "fang", "fangyufei" }) );
+        set_name("æ–¹ç‰é£", ({ "fang", "fangyufei" }) );
         set("long",
-"ÒøğÎ×Ó·½Óñ·ÉÊÇÒø¹³¶Ä·»´óÀÏ°åµÄĞ¡¾Ë×Ó£¬³ÔºÈæÎ¶ÄÑùÑù¾«Í¨\n");
+"é“¶é¹å­æ–¹ç‰é£æ˜¯é“¶é’©èµŒåŠå¤§è€æ¿çš„å°èˆ…å­ï¼Œåƒå–å«–èµŒæ ·æ ·ç²¾é€š\n");
         set("attitude", "heroism");
-	set("title", HIW "ÒøğÎ×Ó" NOR);
+	set("title", HIW "é“¶é¹å­" NOR);
         set("str", 27);
         set("cor", 26);
         set("cps", 25);

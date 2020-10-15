@@ -3,15 +3,15 @@ inherit F_MASTER ;
 
 void create()
 {
-        set_name("è¨Â×",  ({ "eelon"  }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("ç‘·ä¼¦",  ({ "eelon"  }) );
+        set("gender", "å¥³æ€§" );
          set("age", 37);
         set("long", @TEXT
 TEXT
 );
         set("attitude", "peaceful");
         set("class", "dancer");
-	set("title","ÍíÔÂ×¯¿ªÉ½×æÊ¦");
+	set("title","æ™šæœˆåº„å¼€å±±ç¥–å¸ˆ");
         set("combat_exp", 3000000);
         set("score", 1000);
 
@@ -38,11 +38,11 @@ TEXT
         set("force_factor", 5);
 	
 	set("inquiry", ([
-                "°İÊ¦":
-		"Å¶....Ïë°İÀÏÉíÎªÊ¦£¬ºÃ...\n²»¹ıµÃÏÈ½ÓÊÜ²âÊÔ(accept test)£¬½ÓÏÂÎÒÈı±Ş¡£"
+                "æ‹œå¸ˆ":
+		"å“¦....æƒ³æ‹œè€èº«ä¸ºå¸ˆï¼Œå¥½...\nä¸è¿‡å¾—å…ˆæ¥å—æµ‹è¯•(accept test)ï¼Œæ¥ä¸‹æˆ‘ä¸‰é­ã€‚"
         ]) );
 
-        create_family("ÍíÔÂ×¯", 0, "µÜ×Ó");
+        create_family("æ™šæœˆåº„", 0, "å¼Ÿå­");
 
         setup();
         carry_object("/d/suburb/es/latemoon/obj/deer_boot")->wear();
@@ -61,13 +61,13 @@ int do_accept(string arg)
         mapping guild;
 
         if( arg== "test" ) {
-		if ( this_player()->query("gender") != "Å®ĞÔ" ) {
-			command("say ÀÏÉí²»ÊÕÄĞÍ½!\n");
+		if ( this_player()->query("gender") != "å¥³æ€§" ) {
+			command("say è€èº«ä¸æ”¶ç”·å¾’!\n");
 			return(1);
 		}
 		if ( this_player()->query("combat_exp") < 100000 )
 			return 1 ;			
-		say("\nè¨Â×ËµµÀ£ºĞ¡ĞÄÁË£¬ÕâÊÇµÚÒ»±Ş...\n\n");
+		say("\nç‘·ä¼¦è¯´é“ï¼šå°å¿ƒäº†ï¼Œè¿™æ˜¯ç¬¬ä¸€é­...\n\n");
 
                 COMBAT_D->do_attack(this_object(), this_player(),
 query_temp("weapon"));
@@ -78,30 +78,30 @@ query_temp("weapon"));
 			command("shake");
                         return 1;
                 }
-		say("\nè¨Â×ÃæÂ¶Î¢Ğ¦£ººÃ£¡µÚ¶ş±ŞÀ´ÁË...\n\n");
+		say("\nç‘·ä¼¦é¢éœ²å¾®ç¬‘ï¼šå¥½ï¼ç¬¬äºŒé­æ¥äº†...\n\n");
 
                 COMBAT_D->do_attack(this_object(), this_player(),
 query_temp("weapon"));
                 if( (int)this_player()->query("kee") < 0
                 || !present(this_player(), environment())) {
 
-			say("\nè¨Â×Ì¾ÁË¿ÚÆøµÀ£º¿´À´»¹ÊÇ²»ĞĞ°¡...\n\n");
+			say("\nç‘·ä¼¦å¹äº†å£æ°”é“ï¼šçœ‹æ¥è¿˜æ˜¯ä¸è¡Œå•Š...\n\n");
                         return 1;
                 }
-		say("\nè¨Â×¹ÄÀøµÀ£ººÜ²»´í£¬¿´Õâ×îºóÒ»±Ş...\n\n");
+		say("\nç‘·ä¼¦é¼“åŠ±é“ï¼šå¾ˆä¸é”™ï¼Œçœ‹è¿™æœ€åä¸€é­...\n\n");
 
                 COMBAT_D->do_attack(this_object(), this_player(),
 query_temp("weapon"));
                 if( (int)this_player()->query("kee") < 0
                 || !present(this_player(), environment())) {
-			say("\nè¨Â×Ì¾ÁË¿ÚÆøµÀ£ºÌ«¿ÉÏ§ÁË£¡\n\n");
+			say("\nç‘·ä¼¦å¹äº†å£æ°”é“ï¼šå¤ªå¯æƒœäº†ï¼\n\n");
 			command("shake");
                         return 1;
                 }
-		say("\nè¨Â×Â¶³ö´ÈÏéµÄÃæÈİ£º¿´À´ÎÒÃ»¿´´íÈË¡£\n\n");
+		say("\nç‘·ä¼¦éœ²å‡ºæ…ˆç¥¥çš„é¢å®¹ï¼šçœ‹æ¥æˆ‘æ²¡çœ‹é”™äººã€‚\n\n");
 
                 command("recruit " + this_player()->query("id") );
-		this_player()->set("title","ÍíÔÂ×¯µÚÒ»´úµÜ×Ó");
+		this_player()->set("title","æ™šæœˆåº„ç¬¬ä¸€ä»£å¼Ÿå­");
                 return 1;
         }
         return 0;
@@ -110,24 +110,24 @@ query_temp("weapon"));
 void attempt_apprentice(object me)
 {
 	if ( me->query("combat_exp") < 100000 ) {
-     command("say °İÊ¦! ²»¸Òµ±£¬ÎÒ¶¼ÀÏÁË!ÄãÈ¥ÕÒ¡¸ÜÆÆ¼¡¹ºÃÁË£¬¿´ËıÊÕ²»ÊÕÄã? ");
+     command("say æ‹œå¸ˆ! ä¸æ•¢å½“ï¼Œæˆ‘éƒ½è€äº†!ä½ å»æ‰¾ã€ŒèŠ·èã€å¥½äº†ï¼Œçœ‹å¥¹æ”¶ä¸æ”¶ä½ ? ");
 	}
 	else
-	if ( me->query("gender") != "Å®ĞÔ" )
-	command("say ÀÏÉí²»ÊÕÄĞÍ½!\n");
+	if ( me->query("gender") != "å¥³æ€§" )
+	command("say è€èº«ä¸æ”¶ç”·å¾’!\n");
 	else
-        if((string)me->query("title")!="ÆÕÍ¨°ÙĞÕ")
+        if((string)me->query("title")!="æ™®é€šç™¾å§“")
          {
             command("chat "+me->query("title")+me->query("nickname")+
-            me->query("name")+"ÒªÅÑÊ¦£¡£¡£¡");
+            me->query("name")+"è¦å›å¸ˆï¼ï¼ï¼");
             command("angry");
             kill_ob(me);
             return;
          }
 
 	else {
-        say(RANK_D->query_respect(me) + "ÈôÕæµÄÓĞĞÄ£¬²»·ÁÈÃÎÒ¿´¿´ÄãµÄËùÑ§\n");
+        say(RANK_D->query_respect(me) + "è‹¥çœŸçš„æœ‰å¿ƒï¼Œä¸å¦¨è®©æˆ‘çœ‹çœ‹ä½ çš„æ‰€å­¦\n");
 
-        tell_object(me, "Èç¹ûÏë°İÊ¦µÄ»°£¬¾ÍÇë½ÓÊÜ²âÊÔ£¨accept test£©\n");
+        tell_object(me, "å¦‚æœæƒ³æ‹œå¸ˆçš„è¯ï¼Œå°±è¯·æ¥å—æµ‹è¯•ï¼ˆaccept testï¼‰\n");
 }
 }

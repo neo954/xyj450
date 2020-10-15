@@ -5,19 +5,19 @@ string look_shield();
 
 void create()
 {
-	set("short", "²ÆÖ÷¼ÒÄÏ·¿");
+	set("short", "è´¢ä¸»å®¶å—æˆ¿");
 	set("long", @LONG
-ÄÏ·¿²¼ÖÃµÃÏó¸öÊé·¿£¬ÔÚÎÝ×ÓµÄÖÐ¼äÓÐÒ»ÕÅ´óÊé×À£¬¿¿Î÷²àµÄÇ½ÉÏÁ¢
-×ÅÒ»¸öÊé¼Ü(shield)£¬ÉÏÃæºÜ°ÚÁË¼¸±¾Êé¡£ÏòÄÏºÍÏòÎ÷¿ªÁËÁ½Ãæ´ó´°»§£¬
-ÏòÄÏÍûÈ¥£¬ÄÜÄ£Ä£ºýºýµØÍû¼û¾©³ÇÁÖÁ¢µÄÂ¥¸ó£»ÏòÎ÷¿ÉÒÔ¿´µ½ÔÚÌï¼äÃ¦Âµ
-µÄÌïÅ©¡£
+å—æˆ¿å¸ƒç½®å¾—è±¡ä¸ªä¹¦æˆ¿ï¼Œåœ¨å±‹å­çš„ä¸­é—´æœ‰ä¸€å¼ å¤§ä¹¦æ¡Œï¼Œé è¥¿ä¾§çš„å¢™ä¸Šç«‹
+ç€ä¸€ä¸ªä¹¦æž¶(shield)ï¼Œä¸Šé¢å¾ˆæ‘†äº†å‡ æœ¬ä¹¦ã€‚å‘å—å’Œå‘è¥¿å¼€äº†ä¸¤é¢å¤§çª—æˆ·ï¼Œ
+å‘å—æœ›åŽ»ï¼Œèƒ½æ¨¡æ¨¡ç³Šç³Šåœ°æœ›è§äº¬åŸŽæž—ç«‹çš„æ¥¼é˜ï¼›å‘è¥¿å¯ä»¥çœ‹åˆ°åœ¨ç”°é—´å¿™ç¢Œ
+çš„ç”°å†œã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 1 */
   "north" : __DIR__"lordhouse1",
 ]));
 	set("item_desc",([
-	//	"shield": "ÕâÊé¼ÜÉÏºÃÏó°Ú×Å°Ë±¾Êé£¬Äã¿ÉÒÔ½«ËüÃÇÖÐµÄÄ³Ò»±¾³é(take)³öÀ´£¬\n»ò½«³é³öÀ´µÄÊé·Å»ØÈ¥(putback)¡£\n",
+	//	"shield": "è¿™ä¹¦æž¶ä¸Šå¥½è±¡æ‘†ç€å…«æœ¬ä¹¦ï¼Œä½ å¯ä»¥å°†å®ƒä»¬ä¸­çš„æŸä¸€æœ¬æŠ½(take)å‡ºæ¥ï¼Œ\næˆ–å°†æŠ½å‡ºæ¥çš„ä¹¦æ”¾å›žåŽ»(putback)ã€‚\n",
 		"shield": look_shield(),
 	]) );
 	
@@ -39,15 +39,15 @@ int do_takeout(string arg)
 	string num;
 	
 	if( !arg || arg=="" )
-		return notify_fail("ÄãÒªÄÃÊ²Ã´£¿\n");
+		return notify_fail("ä½ è¦æ‹¿ä»€ä¹ˆï¼Ÿ\n");
 	if( arg=="book" ) {
-	write("ÄãÏëÄÃµÚ¼¸±¾Ê¯Êé£¿\n");
+	write("ä½ æƒ³æ‹¿ç¬¬å‡ æœ¬çŸ³ä¹¦ï¼Ÿ\n");
 	return 1;
 	}
 	
 	if( sscanf(arg, "book %s", num)==1 ) {
 	    if( num <"0" || num >"12" ){
-	    	return notify_fail("ÓÐ¶àÉÙ±¾Êé£¬Äã×ÐÏ¸µãÇå³þÁË£¡\n");
+	    	return notify_fail("æœ‰å¤šå°‘æœ¬ä¹¦ï¼Œä½ ä»”ç»†ç‚¹æ¸…æ¥šäº†ï¼\n");
 	    }
 	    switch( num ){
 	    	case "9":

@@ -2,13 +2,13 @@ inherit NPC;
  
 void create()
 {
-        set_name("Çúğ¥ç÷", ({ "fochin","chin" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("æ›²é¦¥çª", ({ "fochin","chin" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 27);
         set("long", @TEXT
-Ëı¹úÉ«ÌìÏã£¬½¿ÀöÎŞÂ×£»ÎÂÈáæµ¾²£¬Ğã¾øÈËå¾¡£
-Ëı×ËÈİ¾øÃÀ£¬ÊÀËùº±¼û¡£´ÓËıÉíÅÔÄãÎÅµÀÒ»º®¹È
-ÓÄÏã¡£
+å¥¹å›½è‰²å¤©é¦™ï¼Œå¨‡ä¸½æ— ä¼¦ï¼›æ¸©æŸ”å¨´é™ï¼Œç§€ç»äººå¯°ã€‚
+å¥¹å§¿å®¹ç»ç¾ï¼Œä¸–æ‰€ç½•è§ã€‚ä»å¥¹èº«æ—ä½ é—»é“ä¸€å¯’è°·
+å¹½é¦™ã€‚
 TEXT
 );
        set("class", "dancer");
@@ -24,7 +24,7 @@ TEXT
         set("max_force", 500);
        set_temp("apply/armor", 70);
 
-        create_family("ÍíÔÂ×¯",2,"µÜ×Ó");
+        create_family("æ™šæœˆåº„",2,"å¼Ÿå­");
         setup();
         carry_object("/d/suburb/es/latemoon/obj/deer_boot")->wear();
         carry_object("/d/suburb/es/latemoon/obj/belt")->wear();

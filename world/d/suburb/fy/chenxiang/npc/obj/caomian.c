@@ -2,13 +2,13 @@ inherit ITEM;
 inherit F_FOOD;
 void create()
 {
-	set_name("²ÚÃæ", ({ "caomian" }) );
+	set_name("ç³™é¢", ({ "caomian" }) );
 	set_weight(80);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»ÍÅ·¢»ÆµÄ²ÚÃæ\n");
-		set("unit", "ÍÅ");
+		set("long", "ä¸€å›¢å‘é»„çš„ç³™é¢\n");
+		set("unit", "å›¢");
 		set("value", 5);
 		set("food_remaining", 3);
 		set("food_supply", 16);

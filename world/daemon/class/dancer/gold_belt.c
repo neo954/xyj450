@@ -6,12 +6,12 @@ inherit EQUIP;
 
 void create()
 {
-	set_name( HIY "Èí½ğÊø´ø" NOR, ({ "gold belt", "belt" }) );
+	set_name( HIY "è½¯é‡‘æŸå¸¦" NOR, ({ "gold belt", "belt" }) );
 	set_weight(1000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ìõ");
+		set("unit", "æ¡");
 		set("value", 27000);
 		set("material", "cloth");
 		set("armor_type", "waist");

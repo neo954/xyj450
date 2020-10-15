@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create()
 {
-     set("short","°øÌü");
+     set("short","å‚å…");
 	set("long", @LONG
-ÕâÀïÊÇÍíÔÂ×¯½Ó´ı±ö¿ÍµÄ°øÌü£¬ÌüÖĞ°ÚÁËÒ»ÕÅ×À¼¸£¬ÉÏÃæ°ÚÖø
-Ò»¿é´óºìÏâ½ğ×À½í£¬¿¿¶«±ÚÃæÎ÷ÉèÖø°ë¾ÉÇà¶Ğ¿¿±³ÒıÕí£¬Á½ÕÅÌ«Ê¦
-ÒÎ×ù¡£×À¼¸ÉÏÓĞÒ»¾«ÖÂµÄ²èºø£¬ÅÔÓĞÊ¢ºÃµÄÉÏµÈÜø²è¡£
+è¿™é‡Œæ˜¯æ™šæœˆåº„æ¥å¾…å®¾å®¢çš„å‚å…ï¼Œå…ä¸­æ‘†äº†ä¸€å¼ æ¡Œå‡ ï¼Œä¸Šé¢æ‘†è‘—
+ä¸€å—å¤§çº¢é•¶é‡‘æ¡Œå·¾ï¼Œé ä¸œå£é¢è¥¿è®¾è‘—åŠæ—§é’ç¼é èƒŒå¼•æ•ï¼Œä¸¤å¼ å¤ªå¸ˆ
+æ¤…åº§ã€‚æ¡Œå‡ ä¸Šæœ‰ä¸€ç²¾è‡´çš„èŒ¶å£¶ï¼Œæ—æœ‰ç››å¥½çš„ä¸Šç­‰èŒ—èŒ¶ã€‚
 LONG
 	);
     set("resource/water", 1);
@@ -27,11 +27,11 @@ int valid_leave(object me, string dir)
 
         item = "tea cup";
         if( !objectp(obj = present(item, me)) )  {
-                tell_object(me, "ÄãÆğÉíÍùÄÏÀë¿ª!\n" NOR );
+                tell_object(me, "ä½ èµ·èº«å¾€å—ç¦»å¼€!\n" NOR );
         }  else  {
-        if ( me->query_temp("latemoon/²è") ) {
-                tell_object(me, HIC "Äã½«´É±­½»»Ø¸øÓêÃ·¡£\n" NOR);
-                me->set_temp("latemoon/²è", 0);
+        if ( me->query_temp("latemoon/èŒ¶") ) {
+                tell_object(me, HIC "ä½ å°†ç“·æ¯äº¤å›ç»™é›¨æ¢…ã€‚\n" NOR);
+                me->set_temp("latemoon/èŒ¶", 0);
         destruct(obj);
            }
         }

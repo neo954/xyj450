@@ -2,9 +2,9 @@ inherit ROOM;
 #include <room.h>
 void create()
 {
-        set("short", "й╞╪╤П╝╣ю");
+        set("short", "Г÷ЁГ╨╖Г■╛И│⌠");
         set("long", @LONG
-╟╣це╨СцФй╝ю╢╪╤й╞╫вё╛мЫобясиЛЁилУП╝╣юё╛П╝╣ююОх╪ве╣фё╛╣ф╩Побсжспр╩╣юце║ё
+Ф ≈И≈╗Е░▌И²╒Е█│Ф²╔Г╨╖Г÷ЁИ≤╤О╪▄Е╬─Д╦▀Е╩╤Д╪╦Ф┬░Ф²║Г■╛И│⌠О╪▄Г■╛И│⌠И┤▄Г┤┐Г²─Г│╞О╪▄Г│╞Г│╚Д╦▀Е▐┬Ф°┴Д╦─И│⌠И≈╗Ц─┌
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -13,6 +13,6 @@ LONG
 ]));
         setup();
 //door here
-        create_door("north", "╬╚лЗце", "south", DOOR_CLOSED);
+        create_door("north", "Г╡╬И⌠│И≈╗", "south", DOOR_CLOSED);
 
 }

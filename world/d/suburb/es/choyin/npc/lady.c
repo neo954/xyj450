@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("¸¾ÈË", ({ "lady" }) );
-	set("long", "Ò»¸öÒÂÊÎ»ªÀöµÄ¸¾ÈËÕı¹òÔÚÕâÀïò¯³ÏµØÄ¤°İÖø¡£\n");
+	set_name("å¦‡äºº", ({ "lady" }) );
+	set("long", "ä¸€ä¸ªè¡£é¥°åä¸½çš„å¦‡äººæ­£è·ªåœ¨è¿™é‡Œè™”è¯šåœ°è†œæ‹œè‘—ã€‚\n");
 	set("age", 32);
-	set("gender", "Å®ĞÔ");
+	set("gender", "å¥³æ€§");
 	set("attitude", "peaceful");
 	set("combat_exp", 10);
 	set("env/wimpy", 100);

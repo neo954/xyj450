@@ -9,9 +9,9 @@ inherit F_QUEST;
 int kill_him();
 void create()
 {
-        set_name("ÓğÌì°×", ({ "master yu", "master"}) );
-        set("nickname", HIR "ÍòÊ¤µ¶Ä§" NOR);
-        set("gender", "ÄĞĞÔ" );
+        set_name("ç¾½å¤©ç™½", ({ "master yu", "master"}) );
+        set("nickname", HIR "ä¸‡èƒœåˆ€é­”" NOR);
+        set("gender", "ç”·æ€§" );
         set("age", 64);
 	set("per", 3);
         set("agi",25);
@@ -22,12 +22,12 @@ void create()
         set("force_factor", 30);
         set("long",
 "
-ÓğÌì°×ÊÇÎ÷·½Éñ½ÌÖĞµÄ½ÌÖ÷£¬ÓğÌì°×µÄÀ´ÀúË­Ò²²»Çå³ş£¬
-Ò²Ã»ÈË¸ÒÎÊ¡£·²ÊÇÎÊ¹ı»òÖªµÀÓğÌì°×À´ÀúµÄÈË¶¼²»Ã÷²»°×µÄ
-ÏûÊ§ÁË¡£
+ç¾½å¤©ç™½æ˜¯è¥¿æ–¹ç¥æ•™ä¸­çš„æ•™ä¸»ï¼Œç¾½å¤©ç™½çš„æ¥å†è°ä¹Ÿä¸æ¸…æ¥šï¼Œ
+ä¹Ÿæ²¡äººæ•¢é—®ã€‚å‡¡æ˜¯é—®è¿‡æˆ–çŸ¥é“ç¾½å¤©ç™½æ¥å†çš„äººéƒ½ä¸æ˜ä¸ç™½çš„
+æ¶ˆå¤±äº†ã€‚
 \n"
 	);
-        create_family("Î÷·½Éñ½Ì", 1, "½ÌÖ÷");
+        create_family("è¥¿æ–¹ç¥æ•™", 1, "æ•™ä¸»");
         set("chat_chance_combat", 90);
         set("chat_msg_combat", ({
                 (: perform_action, "blade.tiandirenmo" :),
@@ -55,8 +55,8 @@ void create()
 	map_skill("blade","demon-blade");
 	map_skill("parry","demon-blade");
         set("inquiry", ([
-                "°×ÌìÓğ" : (: kill_him :),
-                "ÍòÂíÌÃ" : (: kill_him :),
+                "ç™½å¤©ç¾½" : (: kill_him :),
+                "ä¸‡é©¬å ‚" : (: kill_him :),
         ]));
         setup();
         carry_object(__DIR__"obj/wufu")->wear();
@@ -68,15 +68,15 @@ void attempt_apprentice(object me)
 {
 	if(me->query_temp("for_bandit"))
 	{
-	command("say ºÃ£¡ºÃ£¡ÀÏ·ò½ñÌì¿ÉÕÒµ½¿éÓĞÓÃÖ®²Ä¡£\n");
+	command("say å¥½ï¼å¥½ï¼è€å¤«ä»Šå¤©å¯æ‰¾åˆ°å—æœ‰ç”¨ä¹‹æã€‚\n");
         command("recruit " + me->query("id") );
 		return;
 	}
 	else
 	{
 	command("sigh");
-        command("say ×î½ü±¾½Ì²ã³öÒâÍâ£¬ÏÈÊÇÂŞÉ²ÅÆ±»µÁ£¬ÔÙÕß¸±½ÌÖ÷±»´Ì¡£\n");
-	command("say ÄãÈôÓĞÄÜÁ¦²ìÇå´ËÊÂ£¬ÀÏ·ò±ãÊÕÄãÎªÍ½¡£\n");
+        command("say æœ€è¿‘æœ¬æ•™å±‚å‡ºæ„å¤–ï¼Œå…ˆæ˜¯ç½—åˆ¹ç‰Œè¢«ç›—ï¼Œå†è€…å‰¯æ•™ä¸»è¢«åˆºã€‚\n");
+	command("say ä½ è‹¥æœ‰èƒ½åŠ›å¯Ÿæ¸…æ­¤äº‹ï¼Œè€å¤«ä¾¿æ”¶ä½ ä¸ºå¾’ã€‚\n");
 
 	}
 }
@@ -95,7 +95,7 @@ int kill_him()
 {
 	object me;
 	me = this_player();
-	command("say ¿´À´ÄãÒÑ¾­ÖªµÀÎÒµÄÀ´ÀúÁË£¡£¡ \n");
+	command("say çœ‹æ¥ä½ å·²ç»çŸ¥é“æˆ‘çš„æ¥å†äº†ï¼ï¼ \n");
 	this_object()->kill_ob(me);
 	me->kill_ob(this_object());
 	return 1;
@@ -105,7 +105,7 @@ int accept_object(object me, object obj)
 	if(obj->query("for_bandit"))
 	{
 	me->set_temp("for_bandit",1);
-        command("say ºÃ£¬ÕæÊÇºÃ£¡ÕæÊÇ¿é¿ÉµñÖ®²Ä£¡\n");
+        command("say å¥½ï¼ŒçœŸæ˜¯å¥½ï¼çœŸæ˜¯å—å¯é›•ä¹‹æï¼\n");
 	return 1;
 	}
 	return 0;
@@ -115,40 +115,40 @@ void re_rank(object student)
 	int exp;
 	exp = (int) student->query("combat_exp");
 	if( exp <= 32000 ) {
-		student->set("title","Î÷·½Éñ½Ì½ÌÍ½");
+		student->set("title","è¥¿æ–¹ç¥æ•™æ•™å¾’");
 		return ;	
 	} else if ( exp <= 64000 ) {
-		student->set("title","Î÷·½Éñ½Ì¸±ÌÃÖ÷");
+		student->set("title","è¥¿æ–¹ç¥æ•™å‰¯å ‚ä¸»");
 		return ;
         } else if ( exp <= 128000 ) {
-                student->set("title","Î÷·½Éñ½ÌÌÃÖ÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å ‚ä¸»");
                 return ;
         } else if ( exp <= 256000 ) {
-                student->set("title","Î÷·½Éñ½Ì¸±Ì³Ö÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å‰¯å›ä¸»");
                 return ;
         } else if ( exp <= 512000 ) {
-                student->set("title","Î÷·½Éñ½ÌÌ³Ö÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å›ä¸»");
                 return ;
         } else if ( exp <= 1024000 ) {
-                student->set("title","Î÷·½Éñ½Ì¸±¶æÖ÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å‰¯èˆµä¸»");
                 return ;
         } else if ( exp <= 1536000 ) {
-                student->set("title","Î÷·½Éñ½Ì¶æÖ÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™èˆµä¸»");
                 return ;
         } else if ( exp <= 2304000 ) {
-                student->set("title","Î÷·½Éñ½Ì»¤·¨");
+                student->set("title","è¥¿æ–¹ç¥æ•™æŠ¤æ³•");
                 return ;
         } else if ( exp <= 3456000 ) {
-                student->set("title","Î÷·½Éñ½Ì´ó»¤·¨");
+                student->set("title","è¥¿æ–¹ç¥æ•™å¤§æŠ¤æ³•");
                 return ;
         } else if ( exp <= 5187000 ) {
-                student->set("title","Î÷·½Éñ½Ì³¤ÀÏ");
+                student->set("title","è¥¿æ–¹ç¥æ•™é•¿è€");
                 return ;
         } else if ( exp <= 26244000 ) {
-                student->set("title","Î÷·½Éñ½Ì´ó³¤ÀÏ");
+                student->set("title","è¥¿æ–¹ç¥æ•™å¤§é•¿è€");
                 return ;
         } else 
-                student->set("title","Î÷·½Éñ½Ì¸±½ÌÖ÷");
+                student->set("title","è¥¿æ–¹ç¥æ•™å‰¯æ•™ä¸»");
                 return ;
 
 }

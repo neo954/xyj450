@@ -7,17 +7,17 @@ inherit STAFF;
 
 void create()
 {
-	set_name( "É®¹÷", ({ "monk stick", "stick" }) );
+	set_name( "åƒ§æ£", ({ "monk stick", "stick" }) );
 	set_weight(3000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ìõ");
-		set("long", "Ò»ÌõÓÖ´ÖÓÖ³¤É®¹÷£¬±íÃæÒÑ±»Ä¥µÃÊ®·Ö¹â»¬¡£\n");
+		set("unit", "æ¡");
+		set("long", "ä¸€æ¡åˆç²—åˆé•¿åƒ§æ£ï¼Œè¡¨é¢å·²è¢«ç£¨å¾—ååˆ†å…‰æ»‘ã€‚\n");
 		set("value", 100);
 		set("material", "wood");
-		set("wield_msg", "$NÄÃ³öÒ»¸ù$n³­ÔÚÊÖÖĞ¡£\n");
-		set("unwield_msg", "$N·ÅÏÂÊÖÖĞµÄ$n¡£\n");
+		set("wield_msg", "$Næ‹¿å‡ºä¸€æ ¹$næŠ„åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unwield_msg", "$Næ”¾ä¸‹æ‰‹ä¸­çš„$nã€‚\n");
 	}
 
 	init_staff(13);

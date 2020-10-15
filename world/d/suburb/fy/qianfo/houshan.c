@@ -5,10 +5,10 @@ inherit ROOM;
 
 void create()
 {
-  set("short","��ɽƽ��");
+  set("short","後山平地");
   set("long",@LONG
-������һ�鿪��ƽ�أ��ڴ�ɽ�ϱ�֮�У��������λ��ƣ�����
-����ɮ����ϰ��ĵط������Ϸ������������õ���е��
+这里是一块开阔平地，在从山合抱之中，四面松涛环绕，是寺
+中众僧健身习武的地方。地上放了许多练功用的器械。
 LONG
   );
   set("exits",([

@@ -2,20 +2,20 @@
 inherit SWORD;
 void create()
 {
-	set_name("¶©×÷µÄ", ({ "order" }) );
+	set_name("è®¢ä½œçš„", ({ "order" }) );
 	set_weight(3000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
-		set("long", "ÕâÊÇÒ»°Ñ¿´ºÚÉ«µÄ³¤½££¬·İÁ¿²»Çá¡£\n");
+		set("unit", "æŠŠ");
+		set("long", "è¿™æ˜¯ä¸€æŠŠçœ‹é»‘è‰²çš„é•¿å‰‘ï¼Œä»½é‡ä¸è½»ã€‚\n");
                 set("no_drop",1);
                 set("no_get",1);
                 set("owner","fengyun");
                 set("rigidity",300);
 		set("material", "steel");
-		set("wield_msg", "$N¡¸à§¡¹µØÒ»Éù³é³öÒ»°Ñ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unwield_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄ½£ÇÊ¡£\n");
+		set("wield_msg", "$Nã€Œå”°ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„å‰‘é˜ã€‚\n");
 	}
 	init_sword(30);
 	setup();

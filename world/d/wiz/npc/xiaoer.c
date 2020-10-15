@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 inherit F_VENDOR_SALE;
@@ -6,12 +6,12 @@ inherit F_VENDOR_SALE;
 void create()
 {
    reload("jin");
-          set_name("�𲻻�", ({"jin buhuan","jin","buhuan"}));
-          set("gender", "����");
+          set_name("金不换", ({"jin buhuan","jin","buhuan"}));
+          set("gender", "男性");
         set("combat_exp", 10000);
           set("age", 26);
-//   set("title", "�鱦���ϰ�");
-//   set("shop_title","�鱦��");
+//   set("title", "珠宝行老板");
+//   set("shop_title","珠宝行");
    set("shop_id",({"laoban","jin","buhuan"}));
           set("per", 14);
           set("attitude", "friendly");
@@ -48,9 +48,9 @@ void greeting(object ob)
         if( !ob || !visible(ob) || environment(ob) != environment() ) return;
         switch( random(3) ) {  // 1/3 chance to greet.
                 case 0:
-                        say( name()+"Ц�����˵������λ" +
+                        say( name()+"笑咪咪地说道：这位" +
 RANK_D->query_respect(ob)
-                                + "���������������»��Ȼ��������㲻ʶ���ϡ�\n");
+                                + "，进来看看，不怕货比货，就怕你不识货呦。\n");
                         break;
         }
 }
@@ -68,7 +68,7 @@ void accept_kill(object me)
                 ob=new("/d/city/npc/xunluobing");
                 ob->move(environment());
         }
-        message_vision("\n��Ȼ������������Ѳ�߹ٱ�����$N��һ������ʲô����ɱ��ı��ô��\n\n",me);        
+        message_vision("\n忽然从门外冲进来个巡逻官兵，对$N大喊一声“干什么？想杀人谋财么！\n\n",me);        
 
         ob->kill_ob(me);
         ob->set_leader(me);

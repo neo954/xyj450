@@ -8,14 +8,14 @@ inherit F_QUEST;
 
 void create()
 {
-        set_name("¶¨°î´óÊ¦", ({ "master ding", "master", "ding" }) );
+        set_name("å®šé‚¦å¤§å¸ˆ", ({ "master ding", "master", "ding" }) );
 
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("age", 74);
         set("attitude", "peaceful");
         set("class", "bonze");
         set("apprentice_available", 3);
-	set("student_title","Ë×¼ÒµÜ×Ó");
+	set("student_title","ä¿—å®¶å¼Ÿå­");
         set("str", 27);
         set("int", 30);
         set("spi", 30);
@@ -46,7 +46,7 @@ void create()
         map_skill("force", "lotusforce");
         map_skill("dodge","notracesnow");
 	map_skill("unarmed","changquan");
-        create_family("ĞË¹úìøËÂ", 4, "´óÊ¦");
+        create_family("å…´å›½ç¦…å¯º", 4, "å¤§å¸ˆ");
         setup();
         carry_object(__DIR__"obj/staff")->wield();
 	carry_object("/obj/cloth")->wear();
@@ -61,18 +61,18 @@ void attempt_apprentice(object ob)
 {
         if( query("apprentice_available") ) {
                 if( find_call_out("do_recruit") != -1 )
-                        command("say ÂıÖø£¬Ò»¸öÒ»¸öÀ´¡£");
+                        command("say æ…¢è‘—ï¼Œä¸€ä¸ªä¸€ä¸ªæ¥ã€‚");
                 else
                         call_out("do_recruit", 2, ob);
         } else {
-                command("say ÀÏÄÉ½ñÌìÒÑ¾­ÊÕ¹»ÁËµÜ×Ó£¬²»ÏëÔÙÊÕÍ½ÁË¡£");
+                command("say è€çº³ä»Šå¤©å·²ç»æ”¶å¤Ÿäº†å¼Ÿå­ï¼Œä¸æƒ³å†æ”¶å¾’äº†ã€‚");
         }
 }
 
 void do_recruit(object ob)
 {
                 ob->set("class","bonze");
-                command("say °¢ÃÖÍÓ·ğ£¬ÉÆÔÕ£¡ÉÆÔÕ£¡");
+                command("say é˜¿å¼¥é™€ä½›ï¼Œå–„å“‰ï¼å–„å“‰ï¼");
                 command("recruit " + ob->query("id") );
 }
 
@@ -87,15 +87,15 @@ int recruit_apprentice(object ob)
 int accept_fight(object me)
 {
         if( (string)me->query("class")=="bonze" )
-                command("say °¢ÃÖÍÓ·ğ£¡³ö¼ÒÈË½ä³ÑÇ¿¶ñ¶·£¡ÀÏñÄ²»¸ÒÎ¥·´Çå¹æ¡£");
+                command("say é˜¿å¼¥é™€ä½›ï¼å‡ºå®¶äººæˆ’é€å¼ºæ¶æ–—ï¼è€è¡²ä¸æ•¢è¿åæ¸…è§„ã€‚");
         else
-                command("say Ê©Ö÷¼ÈÈ»Éí¸º¾øÒÕ£¬ÀÏñÄÅå·ş±ãÊÇ£¬Ò²²»±Ø½ÏÁ¿ÁË¡£");
+                command("say æ–½ä¸»æ—¢ç„¶èº«è´Ÿç»è‰ºï¼Œè€è¡²ä½©æœä¾¿æ˜¯ï¼Œä¹Ÿä¸å¿…è¾ƒé‡äº†ã€‚");
 
         return 0;
 }
 void re_rank(object student)
 {
-                student->set("title","ĞË¹úìøËÂË×¼ÒµÜ×Ó");
+                student->set("title","å…´å›½ç¦…å¯ºä¿—å®¶å¼Ÿå­");
                 return ;
 
 }

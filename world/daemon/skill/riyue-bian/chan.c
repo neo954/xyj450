@@ -1,7 +1,7 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
-// chan.c ÈÕÔÂ±Ş·¨¡¸²øÈÆ¡¹¾÷
+// chan.c æ—¥æœˆé­æ³•ã€Œç¼ ç»•ã€è¯€
 
 #include <ansi.h>
 
@@ -15,19 +15,19 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("Ç£ÖÆ¹¥»÷Ö»ÄÜ¶ÔÕ½¶·ÖĞµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("ç‰µåˆ¶æ”»å‡»åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 
 	if( target->is_busy() )
-		return notify_fail(target->name() + "Ä¿Ç°Õı×Ô¹Ë²»Ï¾£¬·Åµ¨¹¥»÷°É¢¦\n");
+		return notify_fail(target->name() + "ç›®å‰æ­£è‡ªé¡¾ä¸æš‡ï¼Œæ”¾èƒ†æ”»å‡»å§â…µ\n");
 
-	msg = CYN "$NÊ¹³öÈÕÔÂ±Ş·¨¡¸²øÈÆ¡¹¾÷£¬Á¬»ÓÊı±ŞÆóÍ¼°Ñ$nµÄÈ«Éí²øÈÆÆğÀ´¡£\n";
+	msg = CYN "$Nä½¿å‡ºæ—¥æœˆé­æ³•ã€Œç¼ ç»•ã€è¯€ï¼Œè¿æŒ¥æ•°é­ä¼å›¾æŠŠ$nçš„å…¨èº«ç¼ ç»•èµ·æ¥ã€‚\n";
 
 	me->start_busy(random(1));
 	if( random(me->query("combat_exp")) > (int)target->query("combat_exp")/2 ) {
-		msg += "½á¹û$p±»$P¹¥ÁË¸ö´ëÊÖ²»¼°¢¦\n" NOR;
+		msg += "ç»“æœ$pè¢«$Pæ”»äº†ä¸ªæªæ‰‹ä¸åŠâ…µ\n" NOR;
 		target->start_busy( (int)me->query_skill("taiji-jian") / 20 + 2);
 	} else {
-		msg += "¿ÉÊÇ$p¿´ÆÆÁË$PµÄÆóÍ¼£¬²¢Ã»ÓĞÉÏµ±¡£\n" NOR;
+		msg += "å¯æ˜¯$pçœ‹ç ´äº†$Pçš„ä¼å›¾ï¼Œå¹¶æ²¡æœ‰ä¸Šå½“ã€‚\n" NOR;
 	}
 	message_vision(msg, me, target);
 

@@ -3,8 +3,8 @@ inherit ITEM;
 
 void create()
 {
-    set_name("ÖñòßòÑ", ({ "dragonfly"  }) );
-    set("unit", "¸ö");
-     set("long","ÕâÊÇÒ»¸öÖñòßòÑ£¬ÊÖ¹¤Ïàµ±Ï¸Äå¡£\n");
+    set_name("ç«¹èœ»èœ“", ({ "dragonfly"  }) );
+    set("unit", "ä¸ª");
+     set("long","è¿™æ˜¯ä¸€ä¸ªç«¹èœ»èœ“ï¼Œæ‰‹å·¥ç›¸å½“ç»†è…»ã€‚\n");
     set_weight(300);
 }

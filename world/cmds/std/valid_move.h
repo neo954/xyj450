@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // mon 9/25/97
@@ -6,15 +6,15 @@
 int valid_move(object me)
 {
         if( me->over_encumbranced() )
-                return notify_fail("ÄãµÄ¸ººÉ¹ıÖØ£¬¶¯µ¯²»µÃ¡£\n");
+                return notify_fail("ä½ çš„è´Ÿè·è¿‡é‡ï¼ŒåŠ¨å¼¹ä¸å¾—ã€‚\n");
 
         if( me->is_busy() )
-                return notify_fail("ÄãµÄ¶¯×÷»¹Ã»ÓĞÍê³É£¬²»ÄÜÒÆ¶¯¡£\n");
+                return notify_fail("ä½ çš„åŠ¨ä½œè¿˜æ²¡æœ‰å®Œæˆï¼Œä¸èƒ½ç§»åŠ¨ã€‚\n");
 
         if( me->query_temp("no_move") )
-//              return notify_fail("Äã±»¶¨×¡ÁË£¬ÄÄÀï¶¯µÃÁË£¡\n");
+//              return notify_fail("ä½ è¢«å®šä½äº†ï¼Œå“ªé‡ŒåŠ¨å¾—äº†ï¼\n");
 // mon 8/11/97. change the fail message since not only dingshen
 // can lead to no_move.
-                return notify_fail("ÄãÏÖÔÚ²»ÄÜÒÆ¶¯£¡\n");
+                return notify_fail("ä½ ç°åœ¨ä¸èƒ½ç§»åŠ¨ï¼\n");
         return 1;
 }

@@ -3,9 +3,9 @@ inherit NPC;
  
 void create()
 {
-        set_name("Ü½ÔÆ", ({ "fuyun" }) );
-        set("title", "ÍíÔÂ×¯µÚÈý´úµÜ×Ó");
-        set("gender", "Å®ÐÔ" );
+        set_name("èŠ™äº‘", ({ "fuyun" }) );
+        set("title", "æ™šæœˆåº„ç¬¬ä¸‰ä»£å¼Ÿå­");
+        set("gender", "å¥³æ€§" );
         set("age",17);
         set("long", @TEXT
 TEXT
@@ -41,8 +41,8 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-     if ((string)ob->query("gender") == "ÄÐÐÔ" ) {
-          say( HIY "Ü½ÔÆ¾ª»ÅÉúÆøµÄÅ­³â£º Î¹! É«ÀÇ! Õâ²»×¼ÄÐÈË½øÀ´!\n" NOR);
+     if ((string)ob->query("gender") == "ç”·æ€§" ) {
+          say( HIY "èŠ™äº‘æƒŠæ…Œç”Ÿæ°”çš„æ€’æ–¥ï¼š å–‚! è‰²ç‹¼! è¿™ä¸å‡†ç”·äººè¿›æ¥!\n" NOR);
           kill_ob(ob);
           ob->fight_ob(this_object());
           return;

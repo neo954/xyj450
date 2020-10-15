@@ -4,23 +4,23 @@ inherit WAIST;
 
 void create()
 {
-       set_name( "ÃàÈ¹" , ({ "skirt" }) );
+       set_name( "ç»µè£™" , ({ "skirt" }) );
         set_weight(1000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¼ş");
+                set("unit", "ä»¶");
                set("value", 700);
                 set("material", "cloth");
                 set("armor_prop/armor",2);
-        set("wear_msg", "$N½«$nÄÃ³öÏµÔÚÑüÉÏ¡£\n");
+        set("wear_msg", "$Nå°†$næ‹¿å‡ºç³»åœ¨è…°ä¸Šã€‚\n");
         }
         setup();
 }
 int wear()
 {
-     if ((string)this_player()->query("gender") !="Å®ĞÔ")
-           return notify_fail("Ö»ÓĞÅ®Éú²Å¿É´©Å¶!Äã±äÌ¬Ñ½! \n");
+     if ((string)this_player()->query("gender") !="å¥³æ€§")
+           return notify_fail("åªæœ‰å¥³ç”Ÿæ‰å¯ç©¿å“¦!ä½ å˜æ€å‘€! \n");
      else {
            ::wear();
           }

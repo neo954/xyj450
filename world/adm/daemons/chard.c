@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // chard.c
@@ -13,19 +13,19 @@ void setup_char(object ob)
    mapping my;
 
    if( !stringp(race = ob->query("race")) ) {
-     race = "ÈËÀà";
-     ob->set("race", "ÈËÀà");
+     race = "äººç±»";
+     ob->set("race", "äººç±»");
    }
      
    switch(race) {
-     case "ÈüÑÇÈË":
-     case "ÈËÀà":
+     case "èµ›äºšäºº":
+     case "äººç±»":
         HUMAN_RACE->setup_human(ob);
         break;
-     case "ÑýÄ§":
+     case "å¦–é­”":
         MONSTER_RACE->setup_monster(ob);
         break;
-     case "Ò°ÊÞ":
+     case "é‡Žå…½":
         BEAST_RACE->setup_beast(ob);
         break;
      default:
@@ -64,13 +64,13 @@ varargs object make_corpse(object victim, object killer)
    }
 
    corpse = new(CORPSE_OB);
-//   corpse->set_name( victim->name(1) + "µÄÊ¬Ìå", ({ "corpse" }) );
+//   corpse->set_name( victim->name(1) + "çš„å°¸ä½“", ({ "corpse" }) );
    
    // mon changed name(1) to name(), 5/9/98
-   corpse->set_name( victim->name() + "µÄÊ¬Ìå", ({ "corpse" }) );
+   corpse->set_name( victim->name() + "çš„å°¸ä½“", ({ "corpse" }) );
    corpse->set("long", victim->long()
-     + "È»¶ø£¬" + gender_pronoun(victim->query("gender")) 
-     + "ÒÑ¾­ËÀÁË£¬Ö»Ê£ÏÂÒ»¾ßÊ¬Ìå¾²¾²µØÌÉÔÚÕâÀï¡£\n");
+     + "ç„¶è€Œï¼Œ" + gender_pronoun(victim->query("gender")) 
+     + "å·²ç»æ­»äº†ï¼Œåªå‰©ä¸‹ä¸€å…·å°¸ä½“é™é™åœ°èººåœ¨è¿™é‡Œã€‚\n");
    corpse->set("age", victim->query("age"));
    corpse->set("gender", victim->query("gender"));
    corpse->set("victim_name", victim->name(1));

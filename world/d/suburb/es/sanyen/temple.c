@@ -6,13 +6,13 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "´óÐÛ±¦µî");
+	set("short", "å¤§é›„å®æ®¿");
 	set("long", @LONG
-Ò»ÕóÒ«ÑÛµÄ½ð¹âÏòÄãÏ®À´, Äã¶¨ÉñÒ»¿´Ô­À´ÊÇ×ùÒ»ÕÉ°Ë³ßµÄÈçÀ´
-·ð×æ½ðÉí, ×øÔÚÒ»×ùÈý³ß¸ßµÄÁ«Ì¨ÉÏ, Ç°·½µÄÏãÂ¯ÀïÏãÑÌ»º»ºÆ®ÉÏÌì
-¡£ÕâÕû×ùÉ½ÑÌËÂ¶¼ÊÇÓÉÉÏºÃµÄèíÄ¾´î½¨¶ø³É, ÄÏ·½ÔòÊÇÁ½ÉÈ³¨¿ªµÄ½ð
-ÃÅ, ¼ÛÖµ²»·Æ, ÆøÊÆ²»·², ÔÚ·ðÏñµÄÓÒ²àÓÐµÀ»Æ²¼á£, ²¼á£ºóËÆºõÊÇ
-ÌõÍ¨µÀ¡£Î÷±ßÔò´«À´ÕóÕóµÄÁ÷Ë®Éù¡£
+ä¸€é˜µè€€çœ¼çš„é‡‘å…‰å‘ä½ è¢­æ¥, ä½ å®šç¥žä¸€çœ‹åŽŸæ¥æ˜¯åº§ä¸€ä¸ˆå…«å°ºçš„å¦‚æ¥
+ä½›ç¥–é‡‘èº«, ååœ¨ä¸€åº§ä¸‰å°ºé«˜çš„èŽ²å°ä¸Š, å‰æ–¹çš„é¦™ç‚‰é‡Œé¦™çƒŸç¼“ç¼“é£˜ä¸Šå¤©
+ã€‚è¿™æ•´åº§å±±çƒŸå¯ºéƒ½æ˜¯ç”±ä¸Šå¥½çš„æ¡§æœ¨æ­å»ºè€Œæˆ, å—æ–¹åˆ™æ˜¯ä¸¤æ‰‡æ•žå¼€çš„é‡‘
+é—¨, ä»·å€¼ä¸è², æ°”åŠ¿ä¸å‡¡, åœ¨ä½›åƒçš„å³ä¾§æœ‰é“é»„å¸ƒå¹”, å¸ƒå¹”åŽä¼¼ä¹Žæ˜¯
+æ¡é€šé“ã€‚è¥¿è¾¹åˆ™ä¼ æ¥é˜µé˜µçš„æµæ°´å£°ã€‚
 LONG
 	);
 	set("valid_startroom", 1);
@@ -26,7 +26,7 @@ LONG
 		CLASS_D("bonze") + "/master": 1
 	]) );
 
-	create_door("south", "½ðÃÅ", "north", DOOR_CLOSED);
+	create_door("south", "é‡‘é—¨", "north", DOOR_CLOSED);
 
 	setup();
 	call_other("/obj/board/bonze_b", "???");

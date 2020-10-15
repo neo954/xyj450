@@ -8,7 +8,7 @@ void skill_improved(object me)
 
         s = me->query_skill("yoga", 1);
         if( (int)me->query("dur") < s/5) {
-                tell_object(me, HIW "ÓÉì¶ÄãÇÚÁ·è¤çì£¬ÄãµÄÄÍÁ¦Ìá¸ßÁË¡£\n" NOR);
+                tell_object(me, HIW "ç”±æ–¼ä½ å‹¤ç»ƒç‘œçˆï¼Œä½ çš„è€åŠ›æé«˜äº†ã€‚\n" NOR);
                 me->add("dur", 1);
         }
 }

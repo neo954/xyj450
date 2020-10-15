@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("Ìú´«¼×", ({ "royal servant" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("é“ä¼ ç”²", ({ "royal servant" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 42);
 	set("long",
-		"ËûÊÇĞ¡Àî·Éµ¶µÄÌùĞÄÓ¶ÈË£¬ÏòÀ´ºÍÀîÌ½»¨ĞÎÓ°²»Àë¡£\n");
+		"ä»–æ˜¯å°æé£åˆ€çš„è´´å¿ƒä½£äººï¼Œå‘æ¥å’Œææ¢èŠ±å½¢å½±ä¸ç¦»ã€‚\n");
 	set("combat_exp", 500000);
 	set("per",10);
 	set("attitude", "friendly");
@@ -36,13 +36,13 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(10) ) {
 		case 0:
-message_vision("$NÒ»ÑöÍ·£¬¹àÏÂÒ»¿ÚÁÒ¾Æ¡£\n",this_object());
+message_vision("$Nä¸€ä»°å¤´ï¼ŒçŒä¸‹ä¸€å£çƒˆé…’ã€‚\n",this_object());
 			break;
 		case 1:
-message_vision("$NÓÃÓÇÉËµÄÑÛÉñÉ¨ÁË$nÒ»ÑÛ£¬ËÆºõĞÄÀïÓĞ»¯²»¿ªµÄ³î¡£\n",this_object(),ob);
+message_vision("$Nç”¨å¿§ä¼¤çš„çœ¼ç¥æ‰«äº†$nä¸€çœ¼ï¼Œä¼¼ä¹å¿ƒé‡Œæœ‰åŒ–ä¸å¼€çš„æ„ã€‚\n",this_object(),ob);
 			break;
 		case 2:
-message_vision("$NÓÃ¾¯ÌèµÄÑÛÉñÉÏÏÂ´òÁ¿×Å$n£¬ÎŞÒâÖĞÉ¨ÁËÒ»ÑÛÇ½ÉÏµÄºì²¼¹ÒÁ±¡£\n",this_object(),ob);
+message_vision("$Nç”¨è­¦æƒ•çš„çœ¼ç¥ä¸Šä¸‹æ‰“é‡ç€$nï¼Œæ— æ„ä¸­æ‰«äº†ä¸€çœ¼å¢™ä¸Šçš„çº¢å¸ƒæŒ‚å¸˜ã€‚\n",this_object(),ob);
 			break;
 	}
 }

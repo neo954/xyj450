@@ -5,11 +5,11 @@
 inherit ITEM;
 void create()
 {
-    set_name( "µ±¹é", ({ "lycii","fructus lycii"  }) );
-    set("unit", "¿é");
+    set_name( "å½“å½’", ({ "lycii","fructus lycii"  }) );
+    set("unit", "å—");
     set("value",20);
     set("long","
-Ò»¿éÉÏºÃµÄµ±¹é
+ä¸€å—ä¸Šå¥½çš„å½“å½’
 \n");
     set_weight(5);
 }

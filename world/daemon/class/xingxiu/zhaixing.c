@@ -1,4 +1,4 @@
-// zhaixing.c ÕªÐÇ×Ó
+// zhaixing.c æ‘˜æ˜Ÿå­
 
 inherit NPC;
 inherit F_MASTER;
@@ -7,12 +7,12 @@ string ask_me();
 
 void create()
 {
-	set_name("ÕªÐÇ×Ó", ({ "zhaixing zi", "zhaixing" }));
-	set("nickname", "ÐÇËÞÅÉ´óÊ¦ÐÖ");
+	set_name("æ‘˜æ˜Ÿå­", ({ "zhaixing zi", "zhaixing" }));
+	set("nickname", "æ˜Ÿå®¿æ´¾å¤§å¸ˆå…„");
 	set("long", 
-		"Ëû¾ÍÊÇ¶¡´ºÇïµÄ´óµÜ×Ó¡¢ÐÇËÞÅÉ´óÊ¦ÐÖÕªÐÇ×Ó¡£\n"
-		"ËûÈýÊ®¶àËê£¬Á³ÅÓÊÝÏ÷£¬ÑÛ¹âÖÐÍ¸³öÒ»Ë¿¹ÔìåÖ®Æø¡£\n");
-	set("gender", "ÄÐÐÔ");
+		"ä»–å°±æ˜¯ä¸æ˜¥ç§‹çš„å¤§å¼Ÿå­ã€æ˜Ÿå®¿æ´¾å¤§å¸ˆå…„æ‘˜æ˜Ÿå­ã€‚\n"
+		"ä»–ä¸‰åå¤šå²ï¼Œè„¸åºžç˜¦å‰Šï¼Œçœ¼å…‰ä¸­é€å‡ºä¸€ä¸ä¹–æˆ¾ä¹‹æ°”ã€‚\n");
+	set("gender", "ç”·æ€§");
 	set("age", 35);
 	set("attitude", "peaceful");
 	set("shen_type", -1);
@@ -46,7 +46,7 @@ void create()
 //	map_skill("parry", "tianshan-zhang");
 //	map_skill("staff", "tianshan-zhang");
 
-	create_family("ÐÇËÞÅÉ", 2, "µÜ×Ó");
+	create_family("æ˜Ÿå®¿æ´¾", 2, "å¼Ÿå­");
 
 	setup();
 //	carry_object("/d/obj/clone/weapon/gangzhang")->wield();
@@ -54,6 +54,6 @@ void create()
 
 void attempt_apprentice(object ob)
 {
-	command("say ºÃ°É£¬ÎÒ¾ÍÊÕÏÂÄãÁË¡£");
+	command("say å¥½å§ï¼Œæˆ‘å°±æ”¶ä¸‹ä½ äº†ã€‚");
 	command("recruit " + ob->query("id"));
 }

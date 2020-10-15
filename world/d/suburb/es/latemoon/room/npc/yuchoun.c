@@ -3,9 +3,9 @@ inherit NPC;
  
 void create()
 {
-        set_name("ÓÝÇíÒÂ" , ({ "chungyu","chung","yu" }) );
-        set("title", "ÍíÔÂ×¯µÜ×Ó");
-        set("gender", "Å®ÐÔ" );
+        set_name("è™žç¼è¡£" , ({ "chungyu","chung","yu" }) );
+        set("title", "æ™šæœˆåº„å¼Ÿå­");
+        set("gender", "å¥³æ€§" );
         set("age",17);
         set("long", @TEXT
 TEXT
@@ -40,9 +40,9 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-     if ((string)ob->query("gender") == "ÄÐÐÔ" ) {
-          say( HIY "ÇíÒÂºÜÀñÃ²µÄÏòÄãÎ¢Ð¦! \n" NOR);
-          say ( HIY "ËµµÀ£ºÇë±£³Ö°²¾²Å¶! \n" NOR);
+     if ((string)ob->query("gender") == "ç”·æ€§" ) {
+          say( HIY "ç¼è¡£å¾ˆç¤¼è²Œçš„å‘ä½ å¾®ç¬‘! \n" NOR);
+          say ( HIY "è¯´é“ï¼šè¯·ä¿æŒå®‰é™å“¦! \n" NOR);
           ob->receive_damage("sen", 10);
           this_object()->add("force", 50);
           command("close door");

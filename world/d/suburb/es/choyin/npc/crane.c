@@ -2,14 +2,14 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÏÉº×",({"crane"}) );
-        set("long", "°×ÓğÈçÑ©£¬²»ËÆ·²¼äÖ®Îï¡£ \n");
-        set("race", "Ò°ÊŞ");
-        set("unit", "Ö»");
+        set_name("ä»™é¹¤",({"crane"}) );
+        set("long", "ç™½ç¾½å¦‚é›ªï¼Œä¸ä¼¼å‡¡é—´ä¹‹ç‰©ã€‚ \n");
+        set("race", "é‡å…½");
+        set("unit", "åª");
         set("max_gin", 300);
         set("max_kee", 900);
         set("max_sen", 900);
-        set("limbs", ({"³á"}));
+        set("limbs", ({"ç¿…"}));
         set("attitude", "peaceful");
         set("combat_exp", 1000000);
         set("env/wimpy",100);

@@ -4,11 +4,11 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("ÍòÏþÉú", ({ "weaponor" }) );
-        set("title", "ÎäÆ÷µêÕÆ¹ñ");
-        set("gender", "ÄÐÐÔ" );
+        set_name("ä¸‡æ™“ç”Ÿ", ({ "weaponor" }) );
+        set("title", "æ­¦å™¨åº—æŽŒæŸœ");
+        set("gender", "ç”·æ€§" );
         set("age", 52);
-        set("long", "ÍòÏþÉúÊÇ¸öÐë·¢½Ô°×µÄÀÏÈË£¬´³µ´½­ºþÒÑ½üÎåÊ®Äê¡£\n");
+        set("long", "ä¸‡æ™“ç”Ÿæ˜¯ä¸ªé¡»å‘çš†ç™½çš„è€äººï¼Œé—¯è¡æ±Ÿæ¹–å·²è¿‘äº”åå¹´ã€‚\n");
         set("combat_exp", 120000);
         set("attitude", "friendly");
         set_skill("unarmed", 100);
@@ -16,18 +16,18 @@ void create()
         set_skill("sword", 100);
 
         set("inquiry", ([
-                "ÎäÆ÷" : "±¾µê×¨Âô¸÷ÖÖ³¤¶Ì±øÆ÷",
+                "æ­¦å™¨" : "æœ¬åº—ä¸“å–å„ç§é•¿çŸ­å…µå™¨",
         ]) );
        set("vendor_goods", ([
-		"×ÏÍ­Õ½¿ø": __DIR__"obj/armor1",
-                "ÑÌÓê±Þ"  : __DIR__"obj/rain_whip",
-                "ÎÞÇé½£"  : __DIR__"obj/wuqing_sword",
-                "¶àÇéµ¶"  : __DIR__"obj/duoqing_blade",
-                "ÌìÄ§èÆ"  : __DIR__"obj/demon_staff",
-                "Å£Æ¤¶Ü"  : "/obj/weapon/shield",
-                "°Ë½Ç´¸"  : "/obj/weapon/sixhammer",
-                "Ï¸½£"    : "/obj/weapon/thin_sword",
-                "Ø°Ê×"    : "/obj/weapon/dagger",
+		"ç´«é“œæˆ˜ç›”": __DIR__"obj/armor1",
+                "çƒŸé›¨éž­"  : __DIR__"obj/rain_whip",
+                "æ— æƒ…å‰‘"  : __DIR__"obj/wuqing_sword",
+                "å¤šæƒ…åˆ€"  : __DIR__"obj/duoqing_blade",
+                "å¤©é­”æµ"  : __DIR__"obj/demon_staff",
+                "ç‰›çš®ç›¾"  : "/obj/weapon/shield",
+                "å…«è§’é”¤"  : "/obj/weapon/sixhammer",
+                "ç»†å‰‘"    : "/obj/weapon/thin_sword",
+                "åŒ•é¦–"    : "/obj/weapon/dagger",
         ]) );
 
         setup();
@@ -56,15 +56,15 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) return;
         switch( random(4) ) {
                 case 0:
-                        say( "ÍòÏþÉúµÀ£ºÕâÎ»"
+                        say( "ä¸‡æ™“ç”Ÿé“ï¼šè¿™ä½"
                                 + RANK_D->query_respect(ob)
-                                + "£¬×Ô¸ö¶ùÌôÒ»¼þ³ÆÊÖµÄ±øÆ÷°É¡£\n");
+                                + "ï¼Œè‡ªä¸ªå„¿æŒ‘ä¸€ä»¶ç§°æ‰‹çš„å…µå™¨å§ã€‚\n");
                         break;
                 case 1:
-                        say( "ÍòÏþÉúÀäÀäµØËµ£º¿Í¹ÙÇë¸¶ÏÖ³®¡£\n");
+                        say( "ä¸‡æ™“ç”Ÿå†·å†·åœ°è¯´ï¼šå®¢å®˜è¯·ä»˜çŽ°é’žã€‚\n");
                         break;                       
                 case 2:
-say( "ÍòÏþÉúºöÈ»¼äËÆºõÏëÆðÁËÔ¶ÔÚÃÀ¹úµÄÅóÓÑºÍµ±ÄêÍ¬´³½­ºþµÄÇéÐÎ¡£\n");
+say( "ä¸‡æ™“ç”Ÿå¿½ç„¶é—´ä¼¼ä¹Žæƒ³èµ·äº†è¿œåœ¨ç¾Žå›½çš„æœ‹å‹å’Œå½“å¹´åŒé—¯æ±Ÿæ¹–çš„æƒ…å½¢ã€‚\n");
                         break;
         }
 }

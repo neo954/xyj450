@@ -6,21 +6,21 @@ string kill_passenger(object who);
 
 void create()
 {
-        set_name("ÁõÀÏÅ©", ({ "liu" }) );
-        set("gender", "ÄÐÐÔ" );
+        set_name("åˆ˜è€å†œ", ({ "liu" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 57);
         set("str", 27);
         set("int", 12);
         set("per", 10);
         set("long", @LONG
-ÁõÀÏÅ©½ñÄê¿ìÁùÊ®ÁË¡£µ«ÊÖ½Å»¹ËãÁé»î¡£
+åˆ˜è€å†œä»Šå¹´å¿«å…­åäº†ã€‚ä½†æ‰‹è„šè¿˜ç®—çµæ´»ã€‚
 LONG
 );
         set("attitude", "peaceful");
 
         set("combat_exp", 10000);
         set("bellicosity", 0);
-        set("marks/ÀÏÁõ±¾ÈË", 1);
+        set("marks/è€åˆ˜æœ¬äºº", 1);
 
         set_skill("sword", 150);
         set_skill("unarmed", 100);
@@ -42,7 +42,7 @@ LONG
 }
 int accept_fight(object me)
 {
-        command("say ÀÏÍ·×ÓÄÄÀïÊÇÄúµÄ¶ÔÊÖ£¿");
+        command("say è€å¤´å­å“ªé‡Œæ˜¯æ‚¨çš„å¯¹æ‰‹ï¼Ÿ");
         return 0;
 }
 
@@ -62,23 +62,23 @@ void greeting(object ob)
         object sword;
         if((int) ob->query("marks/murder") == 0)
         {
-        if( (int) ob->query("marks/ÀÏÁõ") == 0 ) 
-        say( "ÁõÀÏÅ©ËµµÀ£º¡°ÕâÎ»"+ RANK_D->query_respect(ob) 
-+"£¬¿É·ñ¼ûµ½Ð¡Å®¾ê¶ù£¿¡± \n");
+        if( (int) ob->query("marks/è€åˆ˜") == 0 ) 
+        say( "åˆ˜è€å†œè¯´é“ï¼šâ€œè¿™ä½"+ RANK_D->query_respect(ob) 
++"ï¼Œå¯å¦è§åˆ°å°å¥³å¨Ÿå„¿ï¼Ÿâ€ \n");
         else
         {
 
         set_skill("six-chaos-sword",150);
         set_skill("pyrobat-steps", 80);
         map_skill("unarmed","liuh-ken");
-        say( "ÁõÀÏÅ©ËµµÀ£º¡°ÕâÎ»"+ RANK_D->query_respect(ob) 
-+"£¬¶àÐ»´ð¾ÈÐ¡Å®¾ê¶ù¡£¡± \n");
-        say( "ÁõÀÏÅ©ËµµÀ£º¡°Õâ¿Ú½££¬Õâ±¾ÃÜóÅÔùÓÚ"+ RANK_D->query_respect(ob) 
-+"¡£¡± \n");
-        say( "ÁõÀÏÅ©ËµµÀ£º¡°Õâ´¦·Ç¾ÃÁôÖ®µØ£¬ÎÒµÈÈ¥Ò²¡£¡± \n");
-        say( "ÁõÀÏÅ©Áì×Å¾ê¶ù´Ò´ÒÀëÈ¥¡£¡± \n");
+        say( "åˆ˜è€å†œè¯´é“ï¼šâ€œè¿™ä½"+ RANK_D->query_respect(ob) 
++"ï¼Œå¤šè°¢ç­”æ•‘å°å¥³å¨Ÿå„¿ã€‚â€ \n");
+        say( "åˆ˜è€å†œè¯´é“ï¼šâ€œè¿™å£å‰‘ï¼Œè¿™æœ¬å¯†ç¬ˆèµ äºŽ"+ RANK_D->query_respect(ob) 
++"ã€‚â€ \n");
+        say( "åˆ˜è€å†œè¯´é“ï¼šâ€œè¿™å¤„éžä¹…ç•™ä¹‹åœ°ï¼Œæˆ‘ç­‰åŽ»ä¹Ÿã€‚â€ \n");
+        say( "åˆ˜è€å†œé¢†ç€å¨Ÿå„¿åŒ†åŒ†ç¦»åŽ»ã€‚â€ \n");
 
-         ob->set("marks/ÀÏÁõ", 0);
+         ob->set("marks/è€åˆ˜", 0);
         sword = new(__DIR__"obj/hengbing");
         book = new(__DIR__"obj/parrybook");
         sword->move(ob);
@@ -93,18 +93,18 @@ void greeting(object ob)
 void killhim(object ob)
 {
         ob->set("marks/murder", 0);
-        ob->set("marks/ÀÏÁõ", 0);
-        set("title", "±¯·ßÓû¾ø");
+        ob->set("marks/è€åˆ˜", 0);
+        set("title", "æ‚²æ„¤æ¬²ç»");
         
-say("ÁõÀÏÅ©±¯·ßÓû¾øµÄÂîµÀ£ºÄã£®£®Äã£®£®ÄãÃÇ¾ÓÈ»É±ÁËÎÒÅ®¶ù£¬ÄÉÃüÀ´£¡\n");  
+say("åˆ˜è€å†œæ‚²æ„¤æ¬²ç»çš„éª‚é“ï¼šä½ ï¼Žï¼Žä½ ï¼Žï¼Žä½ ä»¬å±…ç„¶æ€äº†æˆ‘å¥³å„¿ï¼Œçº³å‘½æ¥ï¼\n");  
 
                 set("chat_msg_combat", ({
-"ÁõÀÏÅ©±¯·ßÓû¾øµÄÂîµÀ£ºÄã£®£®Äã£®£®ÄãÃÇ¾ÓÈ»É±ÁËÎÒÅ®¶ù£¬ÄÉÃüÀ´£¡",
+"åˆ˜è€å†œæ‚²æ„¤æ¬²ç»çš„éª‚é“ï¼šä½ ï¼Žï¼Žä½ ï¼Žï¼Žä½ ä»¬å±…ç„¶æ€äº†æˆ‘å¥³å„¿ï¼Œçº³å‘½æ¥ï¼",
                 (: random_move :),
         }) );
         set("chat_chance", 15);
         set("chat_msg", ({
-"ÁõÀÏÅ©±¯·ßÓû¾øµÄÂîµÀ£ºÄã£®£®Äã£®£®ÄãÃÇ¾ÓÈ»É±ÁËÎÒÅ®¶ù£¬ÄÉÃüÀ´£¡",
+"åˆ˜è€å†œæ‚²æ„¤æ¬²ç»çš„éª‚é“ï¼šä½ ï¼Žï¼Žä½ ï¼Žï¼Žä½ ä»¬å±…ç„¶æ€äº†æˆ‘å¥³å„¿ï¼Œçº³å‘½æ¥ï¼",
                 (: random_move :),
         }) );
         set_temp("apply/force",4000);

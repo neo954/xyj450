@@ -3,10 +3,10 @@
 inherit ROOM;
 void create()
 {
-        set("short","С��Ӫ��");
+        set("short","小兵营帐");
 	set("long",@LONG                                   
-�����һ��Ⱥ��С������֪��������ʲô��Ӫ��������һ�����ӣ���
-������˸�ʽ�����Ķľߣ�С��ʣ��Ͳ�ˮ��
+这□有一大群的小兵，不知道是在做什么，营帐中央有一张桌子，上
+面堆满了各式各样的赌具，小板凳，和茶水。
 LONG
 	); // eof(long)
 	

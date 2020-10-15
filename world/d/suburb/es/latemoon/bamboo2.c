@@ -2,9 +2,9 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "竹林");
+        set("short", "绔规灄");
         set("long", @LONG
-这是一座茂密的竹林。当你进入后彷佛迷失了方向！
+杩欐槸涓�搴ц寕瀵嗙殑绔规灄銆傚綋浣犺繘鍏ュ悗褰蜂經杩峰け浜嗘柟鍚戯紒
 LONG
         );
         set("exits", ([ /* sizeof() == 2 */

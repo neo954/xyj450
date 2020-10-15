@@ -4,15 +4,15 @@
 inherit NPC;
 void create()
 {
-        set_name("Ó­¿ÍÉ®", ({ "welcome bonze","bonze" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("è¿å®¢åƒ§", ({ "welcome bonze","bonze" }) );
+        set("gender", "ç”·æ€§" );
         set("class", "bonze");
         set("age", 32);
         set("str", 26);
         set("cor", 14);
         set("cps", 29);
         set("int", 25);
-        set("long", "Ò»¸öĞ¦ßäßäµÄĞË¹úìøËÂµÄÓ­¿ÍÉ®¡£\n");
+        set("long", "ä¸€ä¸ªç¬‘å’ªå’ªçš„å…´å›½ç¦…å¯ºçš„è¿å®¢åƒ§ã€‚\n");
         set("combat_exp", 1000+random(5000));
         set("attitude", "friendly");
         set("max_force", 500);
@@ -23,9 +23,9 @@ void create()
         set_skill("dodge", 60);
         set("chat_chance", 1);
         set("chat_msg", ({
-                "Ó­¿ÍÉ®ÏòÄãË«ÕÆºÏÊ®£¬Ğ¦µÀ£º»¶Ó­£¬»¶Ó­£¡\n",
-		"Ó­¿ÍÉ®ËµµÀ£ºÊ©Ö÷£¬ÄãµÄÉ±ÆøÌ«ÖØÁË£¡\n",
-		"Ó­¿ÍÉ®Ğ¦µÀ£ºÊ©Ö÷£¬Ê©Ö÷£¬Ò»¶¨Òª¶à¶àÊ©Éá£¡\n",
+                "è¿å®¢åƒ§å‘ä½ åŒæŒåˆåï¼Œç¬‘é“ï¼šæ¬¢è¿ï¼Œæ¬¢è¿ï¼\n",
+		"è¿å®¢åƒ§è¯´é“ï¼šæ–½ä¸»ï¼Œä½ çš„æ€æ°”å¤ªé‡äº†ï¼\n",
+		"è¿å®¢åƒ§ç¬‘é“ï¼šæ–½ä¸»ï¼Œæ–½ä¸»ï¼Œä¸€å®šè¦å¤šå¤šæ–½èˆï¼\n",
 	}) );
         setup();
         carry_object(__DIR__"obj/cloth")->wear();
@@ -34,6 +34,6 @@ void create()
 
 int accept_fight(object me)
 {
-        command("say °¢ÃÖÍÓ·ğ£¡Æ¶É®Îä¹¦µÍÎ¢£¬Ê©Ö÷²»Òª¿ªÕâÖÖÍæĞ¦¡£\n");
+        command("say é˜¿å¼¥é™€ä½›ï¼è´«åƒ§æ­¦åŠŸä½å¾®ï¼Œæ–½ä¸»ä¸è¦å¼€è¿™ç§ç©ç¬‘ã€‚\n");
         return 0;
 }

@@ -10,7 +10,7 @@ int valid_learn(object me)
         if( (int)me->query("bellicosity") < (int)me->query_skill("doomforce") 
 * 50 )
                 return 
-notify_fail("ÄãµÄÉ±Æø²»¹»£¬ÎŞ·¨ÁìÎò¸ü¸ßÉîµÄ´µÑªÉñ¹¦¡£\n");
+notify_fail("ä½ çš„æ€æ°”ä¸å¤Ÿï¼Œæ— æ³•é¢†æ‚Ÿæ›´é«˜æ·±çš„å¹è¡€ç¥åŠŸã€‚\n");
 
         return 1;
 }
@@ -18,7 +18,7 @@ notify_fail("ÄãµÄÉ±Æø²»¹»£¬ÎŞ·¨ÁìÎò¸ü¸ßÉîµÄ´µÑªÉñ¹¦¡£\n");
 int practice_skill(object me)
 {
         return 
-notify_fail("´µÑªÉñ¹¦Ö»ÄÜÓÃÑ§µÄ£¬»òÊÇ´ÓÔËÓÃ(exert)ÖĞÔö¼ÓÊìÁ·¶È¡£\n");
+notify_fail("å¹è¡€ç¥åŠŸåªèƒ½ç”¨å­¦çš„ï¼Œæˆ–æ˜¯ä»è¿ç”¨(exert)ä¸­å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");
 }
 
 string exert_function_file(string func)

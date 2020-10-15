@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("¹ùáÔÑô", ({ "guo", "yang"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("éƒ­åµ©é˜³", ({ "guo", "yang"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 32);
-        set("long", "ÕâÊÇÒ»Î»±øÆ÷Æ×ÉÏÓĞÃûµÄ¸ßÊÖ£¬µ«ËûÏÖÔÚÃ»½££®£®£®\n");
-	set("title", "áÔÑôÌú½£");
+        set("long", "è¿™æ˜¯ä¸€ä½å…µå™¨è°±ä¸Šæœ‰åçš„é«˜æ‰‹ï¼Œä½†ä»–ç°åœ¨æ²¡å‰‘ï¼ï¼ï¼\n");
+	set("title", "åµ©é˜³é“å‰‘");
         set("combat_exp", 50000);
         set("attitude", "friendly");
         set_skill("unarmed", 90);

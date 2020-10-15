@@ -4,10 +4,10 @@
 inherit NPC;
 void create()
 {
-        set_name("µÇÉ½Õß", ({ "climber" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("ç™»å±±è€…", ({ "climber" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 52);
-        set("long", "Ò»¸öÀÛµÃ²»ĞĞÁËµÄµÇÉ½Õß£¬ÕıÔÚĞª½Å£®\n");
+        set("long", "ä¸€ä¸ªç´¯å¾—ä¸è¡Œäº†çš„ç™»å±±è€…ï¼Œæ­£åœ¨æ­‡è„šï¼\n");
         set("combat_exp", 600);
         set("attitude", "friendly");
         set_skill("unarmed", 50);
@@ -17,6 +17,6 @@ void create()
 
 int accept_fight(object me)
 {
-        command("say ·ğÃÅ¾»µØ£¬²»¿É·ÅËÁ£¡\n");
+        command("say ä½›é—¨å‡€åœ°ï¼Œä¸å¯æ”¾è‚†ï¼\n");
         return 0;
 }

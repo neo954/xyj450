@@ -6,10 +6,10 @@ inherit NPC;
 
 void create()
 {
-	string *order = ({"×Ó", "³ó", "Òú", "Ã®", "³½", "ËÈ", "Îç", "Î´", "Éê", "ÓÏ", "Ðç", "º¥"});
+	string *order = ({"å­", "ä¸‘", "å¯…", "å¯", "è¾°", "å·³", "åˆ", "æœª", "ç”³", "é…‰", "æˆŒ", "äº¥"});
 
-	set_name( (order[random(12)]) + "Òõ¹í×ä", ({ "hell guard", "guard" }) );
-	set("long", "ÕâÊÇÒ»Î»À´×ÔÒõ½çµÄÊØ»¤Éñ£¬×¨ÃÅµ£ÈÎ»¤·¨Ö®Ôð¡£\n");
+	set_name( (order[random(12)]) + "é˜´é¬¼å’", ({ "hell guard", "guard" }) );
+	set("long", "è¿™æ˜¯ä¸€ä½æ¥è‡ªé˜´ç•Œçš„å®ˆæŠ¤ç¥žï¼Œä¸“é—¨æ‹…ä»»æŠ¤æ³•ä¹‹è´£ã€‚\n");
 	set("attitude", "friendly");
 
 	set("max_gin", 1000);
@@ -29,7 +29,7 @@ void create()
 
 	set("chat_chance", 15);
 	set("chat_msg_combat", ({
-		name() + "ºÈµÀ£ºÄõÕÏ£¡ËæÎÒ¸°ÒõË¾ÊÜÉó°É¡£\n"
+		name() + "å–é“ï¼šå­½éšœï¼éšæˆ‘èµ´é˜´å¸å—å®¡å§ã€‚\n"
 	}) );
 
 	set_skill("fork", 90);
@@ -55,8 +55,8 @@ int heal_up()
 void leave()
 {
 	message("vision",
-		HIB + name() + "ËµµÀ£ºÄ©½«·î·¨Ö÷ÕÙ»½£¬ÏÖÔÚÒÑ¾­Íê³É»¤·¨ÈÎÎñ£¬¾Í´Ë¸æ´Ç£¡\n\n"
-		+ name() + "µÄÉíÐÎ·¢³öÓÄ°µµÄÀ¶¹â£¬ÉòÈëµØÏÂ²»¼ûÁË¡£\n" NOR, environment(),
+		HIB + name() + "è¯´é“ï¼šæœ«å°†å¥‰æ³•ä¸»å¬å”¤ï¼ŒçŽ°åœ¨å·²ç»å®ŒæˆæŠ¤æ³•ä»»åŠ¡ï¼Œå°±æ­¤å‘Šè¾žï¼\n\n"
+		+ name() + "çš„èº«å½¢å‘å‡ºå¹½æš—çš„è“å…‰ï¼Œæ²ˆå…¥åœ°ä¸‹ä¸è§äº†ã€‚\n" NOR, environment(),
 		this_object() );
 	destruct(this_object());
 }
@@ -72,8 +72,8 @@ void invocation(object who, int level)
 	set_skill("move", 70 + random(level/2));
 	set("combat_exp", 100000 + random(level*level*level));
 	message("vision",
-		HIB "Ò»µÀÀ¶¹â´ÓµØµ×ÉýÆð£¬À¶¹âÖÐ³öÏÖÒ»¸öÊÖÖ´¸Ö²æ¡¢ÃæÄ¿ÕøÄüµÄ¹í×ä¡£\n\n"
-		+ name() + "ËµµÀ£ºÄ©½«·î·¨Ö÷ÕÙ»½£¬ÌØÀ´»¤·¨£¡\n" NOR,
+		HIB "ä¸€é“è“å…‰ä»Žåœ°åº•å‡èµ·ï¼Œè“å…‰ä¸­å‡ºçŽ°ä¸€ä¸ªæ‰‹æ‰§é’¢å‰ã€é¢ç›®ç‹°ç‹žçš„é¬¼å’ã€‚\n\n"
+		+ name() + "è¯´é“ï¼šæœ«å°†å¥‰æ³•ä¸»å¬å”¤ï¼Œç‰¹æ¥æŠ¤æ³•ï¼\n" NOR,
 		environment(), this_object() );
 	enemy = who->query_enemy();
 	i = sizeof(enemy);

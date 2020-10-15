@@ -4,17 +4,17 @@ inherit NECK;
 
 void create()
 {
-        set_name( "»¤Éí·û", ({ "amulet" }) );
+        set_name( "æŠ¤èº«ç¬¦", ({ "amulet" }) );
         set_weight(60);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¸ö");
+                set("unit", "ä¸ª");
                 set("value", 100);
                 set("material", "paper");
                 set("armor_prop/armor", 2);
                 set("armor_prop/spells", 1);
-        set("wear_msg", "$N½«$nÄÃ³ö´÷ÔÚ¾±×ÓÉÏ¡£\n");
+        set("wear_msg", "$Nå°†$næ‹¿å‡ºæˆ´åœ¨é¢ˆå­ä¸Šã€‚\n");
         }
         setup();
 }

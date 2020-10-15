@@ -4,8 +4,8 @@ inherit NPC;
 
 void create()
 {
-        set_name("护院", ({ "castle guard", "guard" }) );
-        set("long", "这是黑松堡的护院\n");
+        set_name("鎶ら櫌", ({ "castle guard", "guard" }) );
+        set("long", "杩欐槸榛戞澗鍫＄殑鎶ら櫌\n");
         set("attitude", "heroism");
         set("pursuer", 1);
 
@@ -17,18 +17,18 @@ void create()
 
         set("chat_chance", 30);
         set("chat_msg", ({
-                "护院喝道：大胆刁民，私闯民宅，该当何罪？\n",
+                "鎶ら櫌鍠濋亾锛氬ぇ鑳嗗垇姘戯紝绉侀棷姘戝畢锛岃褰撲綍缃紵\n",
                 (: random_move :),
         }) );
 
         set("chat_chance_combat", 15);
         set("chat_msg_combat", ({
-                "护院喝道：来人啦！抓小贼呀！\n",
+                "鎶ら櫌鍠濋亾锛氭潵浜哄暒锛佹姄灏忚醇鍛�锛乗n",
         }) );
 
         set("chat_chance_combat", 15);
         set("chat_msg_combat", ({
-                "护院喝道：来人啦！抓小贼呀！\n",
+                "鎶ら櫌鍠濋亾锛氭潵浜哄暒锛佹姄灏忚醇鍛�锛乗n",
         }) );
 
         set_skill("unarmed", 20);

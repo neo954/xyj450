@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("½ğÍ¯", ({ "jintong" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("é‡‘ç«¥", ({ "jintong" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 14);
 	set("long",
-		"Ò»¸öÌìÕæÎŞĞ°£¬Î´¶®ÊÀÊÂµÄĞ¡½ğÍ¯\n");
+		"ä¸€ä¸ªå¤©çœŸæ— é‚ªï¼Œæœªæ‡‚ä¸–äº‹çš„å°é‡‘ç«¥\n");
 	set("combat_exp", 500000);
 	set("attitude", "friendly");
 	set("per",30);
@@ -33,10 +33,10 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(3) ) {
 		case 0:
-message_vision("$N¿´ÁË$nÒ»ÑÛ£¬È»ºóÎæ×¡×ì¿ªÊ¼£¢³Ô³Ô£¢µÄĞ¦¡£\n",this_object(),ob);
+message_vision("$Nçœ‹äº†$nä¸€çœ¼ï¼Œç„¶åæ‚ä½å˜´å¼€å§‹ï¼‚åƒåƒï¼‚çš„ç¬‘ã€‚\n",this_object(),ob);
 			break;
 		case 1:
-message_vision("$N¶¢ÁË$nÉíÉÏÒ»ÑÛ£¬È»ºóº¦ĞßµØ×ª¹ıÉí£¬¿ªÊ¼£¢³Ô³Ô£¢µÄĞ¦¡£\n",this_object(),ob);
+message_vision("$Nç›¯äº†$nèº«ä¸Šä¸€çœ¼ï¼Œç„¶åå®³ç¾åœ°è½¬è¿‡èº«ï¼Œå¼€å§‹ï¼‚åƒåƒï¼‚çš„ç¬‘ã€‚\n",this_object(),ob);
 			break;
 		case 2:
 			command("snicker");

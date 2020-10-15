@@ -6,11 +6,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("À¶ºú×Ó", ({ "lang", "langhuzi" }) );
+        set_name("è“èƒ¡å­", ({ "lang", "langhuzi" }) );
         set("long",
-"À¶ºú×ÓÊÇÒø¹³¶Ä·»µÄ´óÀÏ°å£®\n");
+"è“èƒ¡å­æ˜¯é“¶é’©èµŒåŠçš„å¤§è€æ¿ï¼\n");
         set("attitude", "heroism");
-	set("title", HIB "Òø¹³¶Ä·»´óÀÏ°å" NOR);
+	set("title", HIB "é“¶é’©èµŒåŠå¤§è€æ¿" NOR);
         set("str", 27);
         set("cor", 26);
 	set("age",33);
@@ -19,7 +19,7 @@ void create()
         set("combat_exp", 100000);
         set("chat_chance", 1);
         set("chat_msg", ({
-"À¶ºú×ÓÌ¾µÀ£ºÂŞÉ²ÅÆ±»ÀîÏ¼Íµµ½ÀÏÎİ£¬Î÷·½Ä§½ÌÓÖÈÇ²»Æğ£¬Ö»ºÃÕÒÌæËÀ¹í£®\n",
+"è“èƒ¡å­å¹é“ï¼šç½—åˆ¹ç‰Œè¢«æéœå·åˆ°è€å±‹ï¼Œè¥¿æ–¹é­”æ•™åˆæƒ¹ä¸èµ·ï¼Œåªå¥½æ‰¾æ›¿æ­»é¬¼ï¼\n",
         }) );
 
         set_skill("unarmed", 170);

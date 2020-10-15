@@ -10,10 +10,10 @@ int exert(object me, object target, int amount)
 	int i, skill, damage;
 
 	if( !me->is_fighting() )
-		return notify_fail("［无南佛号］只能在战斗中使用。\n");
+		return notify_fail("锛绘棤鍗椾經鍙凤冀鍙兘鍦ㄦ垬鏂椾腑浣跨敤銆俓n");
 
 	if( (int)me->query("force") < 150 )
-		return notify_fail("你的内力不够。\n");
+		return notify_fail("浣犵殑鍐呭姏涓嶅銆俓n");
 
 	skill = me->query_skill("force");
 
@@ -22,7 +22,7 @@ int exert(object me, object target, int amount)
 
 	me->start_busy(7);
 	message_vision(
-		HIR "$N气起丹田，突然咏出低沉有力的佛号！\n" NOR, me);
+		HIR "$N姘旇捣涓圭敯锛岀獊鐒跺拸鍑轰綆娌夋湁鍔涚殑浣涘彿锛乗n" NOR, me);
 
 	ob = all_inventory(environment(me));
 	for(i=0; i<sizeof(ob); i++) {
@@ -34,7 +34,7 @@ int exert(object me, object target, int amount)
 			ob[i]->receive_damage("sen", damage);
 			if( (int)ob[i]->query("force") < skill * 2 )
 				ob[i]->receive_wound("sen", damage);
-			message_vision("$N觉得头痛欲裂，差点儿晕了过去。\n",ob[i]);
+			message_vision("$N瑙夊緱澶寸棝娆茶锛屽樊鐐瑰効鏅曚簡杩囧幓銆俓n",ob[i]);
 		}
 		
 		if( userp(ob[i]) ) ob[i]->fight_ob(me);

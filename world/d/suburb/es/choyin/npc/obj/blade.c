@@ -6,17 +6,17 @@ inherit BLADE;
 
 void create()
 {
-	set_name("ÎÚÌ´Ä¾µ¶", ({ "ebony blade", "blade" }) );
+	set_name("ä¹Œæª€æœ¨åˆ€", ({ "ebony blade", "blade" }) );
 	set_weight(7000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
-		set("long", "ÕâÊÇÒ»°ÑºÚ÷î÷îµÄÎÚÌ´Ä¾µ¶£¬ÎÅÆğÀ´ÓĞÒ»¹Éµ­µ­µÄÏãÆø¡£\n");
+		set("unit", "æŠŠ");
+		set("long", "è¿™æ˜¯ä¸€æŠŠé»‘é»é»çš„ä¹Œæª€æœ¨åˆ€ï¼Œé—»èµ·æ¥æœ‰ä¸€è‚¡æ·¡æ·¡çš„é¦™æ°”ã€‚\n");
 		set("value", 600);
 		set("material", "wood");
-		set("wield_msg", "$N¡¸ì¬¡¹µØÒ»Éù³é³öÒ»°Ñ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unwield_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄµ¶ÇÊ¡£\n");
+		set("wield_msg", "$Nã€Œé£•ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„åˆ€é˜ã€‚\n");
 	}
 	init_blade(37);
 	setup();

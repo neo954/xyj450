@@ -13,13 +13,13 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("£ÛÁúÎè¾ÅÌì£ÝÖ»ÄÜ¶ÔÕ½¶·ÖÐµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("ï¼»é¾™èˆžä¹å¤©ï¼½åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 	weapon = me->query_temp("weapon");
 	extra = me->query_skill("flying-dragon",1) / 5;
-	if( extra <=10) return notify_fail("ÄãµÄ·ÉÁúÌ½ÔÆÊÖ»¹²»¹»ÊìÁ·£¡\n");
+	if( extra <=10) return notify_fail("ä½ çš„é£žé¾™æŽ¢äº‘æ‰‹è¿˜ä¸å¤Ÿç†Ÿç»ƒï¼\n");
 	me->add_temp("apply/attack", extra);	
 	me->add_temp("apply/damage", extra);
-	msg = HIR  "$NË«ÊÖ³ÊÓ¥×¦×´£¬È«ÉíÌÚ¿Õ£¬×óÓÒÕÆ´©²å·­·É£¬¼²Ïò$n×¥È¥£¡" NOR;
+	msg = HIR  "$NåŒæ‰‹å‘ˆé¹°çˆªçŠ¶ï¼Œå…¨èº«è…¾ç©ºï¼Œå·¦å³æŽŒç©¿æ’ç¿»é£žï¼Œç–¾å‘$næŠ“åŽ»ï¼" NOR;
 	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
 	me->add_temp("apply/attack", -extra);
 	me->add_temp("apply/damage", -extra);

@@ -1,12 +1,12 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // tian-ding2.c
 // created 4-8-97 pickle
 #include <ansi.h>
 inherit NPC;
-string *first_name = ({ "µË¹úÑÒ","ĞÁ¾ÆÈª","ÕÅÑ§ËÉ","ÌÕê¿¸Ú"});
-// ÅÓ£¬Áõ£¬¹¶£¬±Ï£¬µË£¬ĞÁ£¬ÕÅ£¬ÌÕ
+string *first_name = ({ "é‚“å›½å²©","è¾›é…’æ³‰","å¼ å­¦æ¾","é™¶æ˜•å²—"});
+// åºï¼Œåˆ˜ï¼Œè‹Ÿï¼Œæ¯•ï¼Œé‚“ï¼Œè¾›ï¼Œå¼ ï¼Œé™¶
 
 varargs void drool(string msg, string who);
 
@@ -17,13 +17,13 @@ void create()
   name = first_name[random(sizeof(first_name))];
 
   set_name(name, ({ "tian ding", "tian", "ding" }) );
-  set("gender", "ÄĞĞÔ" );
+  set("gender", "ç”·æ€§" );
   set("long", "
 
-¶ÔÓÚÄãµÄ´æÔÚ£¬"+name+"ËÆºõË¿ºÁÃ»ÓĞ×¢Òâ¡£
-Ö±µ½Äã×ß½üÌìÃÅ£¬Ëû²Å½÷É÷ÆğÀ´£¬Ä¿¹â³¯ÄãÉ¨ÁËÒ»É¨¡£
+å¯¹äºä½ çš„å­˜åœ¨ï¼Œ"+name+"ä¼¼ä¹ä¸æ¯«æ²¡æœ‰æ³¨æ„ã€‚
+ç›´åˆ°ä½ èµ°è¿‘å¤©é—¨ï¼Œä»–æ‰è°¨æ…èµ·æ¥ï¼Œç›®å…‰æœä½ æ‰«äº†ä¸€æ‰«ã€‚
 ");
-  set("title", "´óÁ¦Ìì¶¡");
+  set("title", "å¤§åŠ›å¤©ä¸");
   set("attitude", "peaceful");
   set("age", 35+random(10));
   set("str", 27);

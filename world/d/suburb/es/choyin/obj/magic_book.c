@@ -4,10 +4,10 @@ inherit ITEM;
 
 void create()
 {
-	set_name( "¡¸°×Ñî¾­¡¹", ({ "book" }) );
+	set_name( "ã€Œç™½æ¨ç»ã€", ({ "book" }) );
 	set_weight(600);
-	set("unit", "±¾");
-	set("long", "ÕâÊÇÒ»±¾½²ÊöÍÂÄÉ¡¢ÑøÉúÖ®·¨µÄ¹ÅÊé£¬ÏÖÔÚÒÑ¾­²»¶à¼ûÁË¡£\n");
+	set("unit", "æœ¬");
+	set("long", "è¿™æ˜¯ä¸€æœ¬è®²è¿°åçº³ã€å…»ç”Ÿä¹‹æ³•çš„å¤ä¹¦ï¼Œç°åœ¨å·²ç»ä¸å¤šè§äº†ã€‚\n");
 	set("value", 200);
 	set("skill", ([
 		"name": 		"magic",		// name of the skill

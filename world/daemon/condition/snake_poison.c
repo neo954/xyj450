@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // snake_poison.c
@@ -9,9 +9,9 @@ int update_condition(object me, int duration)
 {
    me->receive_wound("kee", 10);
    me->receive_damage("sen", 10);
-   me->set_temp("death_msg","Éß¶¾·¢×÷ËÀÁË¡£\n");
+   me->set_temp("death_msg","è›‡æ¯’å‘ä½œæ­»äº†ã€‚\n");
    me->apply_condition("snake_poison", duration - 1);
-   tell_object(me, HIG "ÄãÖĞµÄÉß¶¾·¢×÷ÁË£¡\n" NOR );
+   tell_object(me, HIG "ä½ ä¸­çš„è›‡æ¯’å‘ä½œäº†ï¼\n" NOR );
    if( duration < 1 ) return 0;
    return 1;
 }

@@ -3,8 +3,8 @@ inherit ITEM;
 
 void create()
 {
-    set_name("Öñ×Ó", ({ "bamboo" }) );
-    set("unit", "¸ù");
-    set("long","ÕâÊÇÒ»¸ùÓñÖñ£¬»¹ÓĞÒ»Ğ©ÖñÒ¶ÔÚÉÏÃæ¡£\n");
+    set_name("ç«¹å­", ({ "bamboo" }) );
+    set("unit", "æ ¹");
+    set("long","è¿™æ˜¯ä¸€æ ¹ç‰ç«¹ï¼Œè¿˜æœ‰ä¸€äº›ç«¹å¶åœ¨ä¸Šé¢ã€‚\n");
     set_weight(300);
 }

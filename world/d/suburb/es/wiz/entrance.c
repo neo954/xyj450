@@ -8,11 +8,11 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "Î×Ê¦»á¿ÍÊÒ");
+	set("short", "å·«å¸ˆä¼šå®¢å®¤");
 	set("long",
-		"ÕâÀïÊÇÎ×Ê¦ºÍÍæ¼ÒÁÄÌìµÄµØ·½£¬Èç¹ûÄãÓĞÊ²Ã´Òâ¼ûÒªÈÃÎ×Ê¦ÃÇÖªµÀ£¬ÔÚÕâÀï\n"
-	"ÁôÑÔÊÇ×î¿ìµÄÍ¾¾¶£¬²»¹ıÈç¹ûÊÇ¶ÔÓÚÓÎÏ·ÖĞµÄÎÊÌâ£¬ÇëÄúÏÈÈ·¶¨ÎÒÃÇÌá¹©µÄËµÃ÷\n"
-	"ÎÄ¼şÀïÃ»ÓĞËµÃ÷£¬ÔÙÌá³öÒÉÎÊ£¬Î×Ê¦µÄÖ÷ÒªÖ°Ôğ²¢²»ÊÇ½ÌÍæ¼ÒÈçºÎÍæ¡£\n");
+		"è¿™é‡Œæ˜¯å·«å¸ˆå’Œç©å®¶èŠå¤©çš„åœ°æ–¹ï¼Œå¦‚æœä½ æœ‰ä»€ä¹ˆæ„è§è¦è®©å·«å¸ˆä»¬çŸ¥é“ï¼Œåœ¨è¿™é‡Œ\n"
+	"ç•™è¨€æ˜¯æœ€å¿«çš„é€”å¾„ï¼Œä¸è¿‡å¦‚æœæ˜¯å¯¹äºæ¸¸æˆä¸­çš„é—®é¢˜ï¼Œè¯·æ‚¨å…ˆç¡®å®šæˆ‘ä»¬æä¾›çš„è¯´æ˜\n"
+	"æ–‡ä»¶é‡Œæ²¡æœ‰è¯´æ˜ï¼Œå†æå‡ºç–‘é—®ï¼Œå·«å¸ˆçš„ä¸»è¦èŒè´£å¹¶ä¸æ˜¯æ•™ç©å®¶å¦‚ä½•ç©ã€‚\n");
 	set("exits", ([
 		"west" : "/d/suburb/es/wiz/hall1",
 		"southeast": "/d/suburb/es/snow/inn" ]) );
@@ -20,7 +20,7 @@ void create()
 	set("no_magic", 1);
         set("objects", ([
                 "/d/suburb/es/wiz/npc/chpn" : 1 ]) );
-	create_door("southeast", "Ä¾ÃÅ", "northwest", DOOR_CLOSED);
+	create_door("southeast", "æœ¨é—¨", "northwest", DOOR_CLOSED);
 
 	setup();
 	call_other( "/obj/board/query_b", "???" );
@@ -29,7 +29,7 @@ void create()
 int valid_leave(object me, string dir)
 {
 	if( dir=="west" && !wizardp(me) )
-		return notify_fail("ÄÇÀïÖ»ÓĞÎ×Ê¦²ÅÄÜ½øÈ¥¡£\n");
+		return notify_fail("é‚£é‡Œåªæœ‰å·«å¸ˆæ‰èƒ½è¿›å»ã€‚\n");
 	return ::valid_leave(me, dir);
 }
 
@@ -49,7 +49,7 @@ int re_route_cmd(string str)
                        });
         i = member_array(cmd, invalid_cmds);
         if (i == -1) return 0;
-        else write("ÕâÀïÊÇÎ×Ê¦»á¿ÍÊÒ, ²»ÊÇÈÃÄãÄÃÀ´Á·¹¦µÄµØ·½Å¶!\n");
+        else write("è¿™é‡Œæ˜¯å·«å¸ˆä¼šå®¢å®¤, ä¸æ˜¯è®©ä½ æ‹¿æ¥ç»ƒåŠŸçš„åœ°æ–¹å“¦!\n");
         return 1;
 }
 

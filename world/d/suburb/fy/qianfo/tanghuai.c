@@ -5,11 +5,11 @@
 inherit ROOM;
 void create()
 {
-  set("short","ÌÆ»±Í¤");
+  set("short","å”æ§äº­");
   set("long",@LONG
-É½ÐÐ´Ó´ËÏò¶«¿ªÊ¼¶¸ÇÍ£¬Ò»×ùÁ¹Í¤Ç°ÓÐÒ»¿Ã´ó»±Ê÷£¬¾Ý³ÆÌÆ½«
-ÇØÇíÔøÔÚ´ËË¨Âí£¬´ËÊ÷µÃ·çÆøÖ®ÏÈ³¤µÄÓôÓô´Ð´Ð£¬ÕÚÌì±ÎÈÕ¡£Ðí¶à
-µÇÉ½Õß¶¼ÔÚ´ËÐª½Å¡£
+å±±è¡Œä»Žæ­¤å‘ä¸œå¼€å§‹é™¡å³­ï¼Œä¸€åº§å‡‰äº­å‰æœ‰ä¸€æ£µå¤§æ§æ ‘ï¼Œæ®ç§°å”å°†
+ç§¦ç¼æ›¾åœ¨æ­¤æ “é©¬ï¼Œæ­¤æ ‘å¾—é£Žæ°”ä¹‹å…ˆé•¿çš„éƒéƒè‘±è‘±ï¼Œé®å¤©è”½æ—¥ã€‚è®¸å¤š
+ç™»å±±è€…éƒ½åœ¨æ­¤æ­‡è„šã€‚
 LONG
   );
   set("exits",([
@@ -27,7 +27,7 @@ void init()
 {
         add_action("do_climb", "climb");
         if( this_player() ) {
-                tell_room(__DIR__"tree1", this_player()->name() + "ÍùÊ÷ÏÂ×ßÁË¹ýÀ´¡£\n");
+                tell_room(__DIR__"tree1", this_player()->name() + "å¾€æ ‘ä¸‹èµ°äº†è¿‡æ¥ã€‚\n");
         }
 }
 
@@ -35,10 +35,10 @@ int do_climb(string arg)
 {
         if( arg!="tree" ) return 0;
 
-        message_vision("$NÊÖ½Å²¢ÓÃ£¬Ãô½ÝµØÅÀÉÏÁËÁ¹Í¤Ç°µÄ´ó»±Ê÷¡£\n",
+        message_vision("$Næ‰‹è„šå¹¶ç”¨ï¼Œæ•æ·åœ°çˆ¬ä¸Šäº†å‡‰äº­å‰çš„å¤§æ§æ ‘ã€‚\n",
                 this_player());
 
-        tell_room(__DIR__"tree1", this_player()->name() + "´ÓÊ÷ÏÂÅÀÁËÉÏÀ´¡£\n");
+        tell_room(__DIR__"tree1", this_player()->name() + "ä»Žæ ‘ä¸‹çˆ¬äº†ä¸Šæ¥ã€‚\n");
         this_player()->move(__DIR__"tree1");
 
         return 1;
@@ -47,7 +47,7 @@ int do_climb(string arg)
 int valid_leave(object me, string dir)
 {
         tell_room(__DIR__"tree1",
-                "Ê÷ÏÂµÄ" + me->name() + "Íù" + to_chinese(dir) + "Àë¿ªÁË¡£\n");
+                "æ ‘ä¸‹çš„" + me->name() + "å¾€" + to_chinese(dir) + "ç¦»å¼€äº†ã€‚\n");
         return 1;
 }
 

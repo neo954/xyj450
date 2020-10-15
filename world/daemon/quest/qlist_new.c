@@ -1,8 +1,8 @@
 #include <ansi.h>
 inherit SKILL;
 mapping *quest = ({
-        ([      "quest":                "╢©╫Пр╤вс",
-                "quest_type":           "я╟",
+        ([      "quest":                "Г╨╞И┤▒Е▐╤Е╜░",
+                "quest_type":           "Е╞╩",
                 "time":                 300,
                 "exp_bonus":            30,
         ]),

@@ -4,19 +4,19 @@ inherit NECK;
 
 void create()
 {
-        set_name( "»Æ½ğÁîÅÆ" , ({ "gold ream","ream" }) );
-         set("long", "Ò»¸öÉÁÉÁ·¢ÁÁµÄ»Æ½ğÁîÅÆ£¬ÉÏÓĞÒ»Ğ©Í¼ÌÚ±êÖ¾¡£\n");
+        set_name( "é»„é‡‘ä»¤ç‰Œ" , ({ "gold ream","ream" }) );
+         set("long", "ä¸€ä¸ªé—ªé—ªå‘äº®çš„é»„é‡‘ä»¤ç‰Œï¼Œä¸Šæœ‰ä¸€äº›å›¾è…¾æ ‡å¿—ã€‚\n");
         set_weight(300);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¸ö");
+                set("unit", "ä¸ª");
                 set("value", 3000);
                 set("no_drop", 1);
                 set("material", "gold");
                 set("armor_prop/unarmed", 1);
                 set("armor_prop/dodge", 1);
-        set("wear_msg", "$N½«$nÄÃ³ö´÷ÔÚ¾±×ÓÉÏ¡£\n");
+        set("wear_msg", "$Nå°†$næ‹¿å‡ºæˆ´åœ¨é¢ˆå­ä¸Šã€‚\n");
         }
         setup();
 }

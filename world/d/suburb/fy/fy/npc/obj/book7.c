@@ -1,12 +1,12 @@
 inherit ITEM;
 void create()
 {
-        set_name("ÓñÆÑÍÅ", ({ "yuputuan" }));
+        set_name("ç‰è’²å›¢", ({ "yuputuan" }));
         set_weight(300);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "±¾");
+                set("unit", "æœ¬");
                 set("long",
 "                        
   ,,,,,,,,,;,  ,,,;;,,,,,;;,;,;,,,,,,,,,,,;,
@@ -36,41 +36,41 @@ int do_study(string arg)
         me = this_player();
 	cps = random((int)me->query("cps"));
        if(!arg || sscanf(arg, "%s %d", book, sena)!=2 )
-                return notify_fail("Ö¸Áî¸ñÊ½£ºstudy <Êé> <ÉñÊıÁ¿>\n");
+                return notify_fail("æŒ‡ä»¤æ ¼å¼ï¼šstudy <ä¹¦> <ç¥æ•°é‡>\n");
         if( (string) book != "yuputuan")
-                return notify_fail("ÄãÒª¶ÁÊ²÷á£¿\n");
+                return notify_fail("ä½ è¦è¯»ä»€éº½ï¼Ÿ\n");
         if(!objectp(ob = present(book, me)) )
-                return notify_fail("ÄãÒª¶ÁÊ²÷á£¿\n");
+                return notify_fail("ä½ è¦è¯»ä»€éº½ï¼Ÿ\n");
        switch( random(3) ) {
                 case 0:
-        message("vision", me->name() + "ÕıĞÀÏ²Èô¿ñµØ·­¶Á×Å" + ob->name()
-                + "¡£\n", environment(me), me);
+        message("vision", me->name() + "æ­£æ¬£å–œè‹¥ç‹‚åœ°ç¿»è¯»ç€" + ob->name()
+                + "ã€‚\n", environment(me), me);
                         break;
                 case 1:
-        message("vision", me->name() + "·­ÁËÒ»Ò³" + ob->name()
-                + "£¬Ì§ÆğÍ·ÓÃÉ«ÃÔÃÔÑÛÉñÉÏÉÏÏÂÏÂµÄ´òÁ¿×ÅÄã¡£\n", environment(me), me);
+        message("vision", me->name() + "ç¿»äº†ä¸€é¡µ" + ob->name()
+                + "ï¼ŒæŠ¬èµ·å¤´ç”¨è‰²è¿·è¿·çœ¼ç¥ä¸Šä¸Šä¸‹ä¸‹çš„æ‰“é‡ç€ä½ ã€‚\n", environment(me), me);
                         break;
                 case 2:
-        message("vision", me->name() + "·É¿ìµØ·­¶Á×Å" + ob->name()
-                + "£¬£¢Å¾£¢µÄÒ»Éù£¬Ò»µÎ¿ÚË®µÎÔÚÊéÉÏ¡£\n", environment(me), me);
+        message("vision", me->name() + "é£å¿«åœ°ç¿»è¯»ç€" + ob->name()
+                + "ï¼Œï¼‚å•ªï¼‚çš„ä¸€å£°ï¼Œä¸€æ»´å£æ°´æ»´åœ¨ä¹¦ä¸Šã€‚\n", environment(me), me);
                         break;
         }
 		write("
-                    ÌìÏÂµÚÒ»·çÁ÷Ğ¡Ëµ
+                    å¤©ä¸‹ç¬¬ä¸€é£æµå°è¯´
 
-                      ¡¶ÈâÆÑÍÅ¡·
+                      ã€Šè‚‰è’²å›¢ã€‹
 
-                      Ò»Ãû¡¶¾õºóìø¡·
+                      ä¸€åã€Šè§‰åç¦…ã€‹
 \n");
 	if( cps >20 )
-	{	write("ÄãÔ½¶ÁÔ½Ïë¶Á£®£®£®\n");
+	{	write("ä½ è¶Šè¯»è¶Šæƒ³è¯»ï¼ï¼ï¼\n");
 		return 1;
 	}
 	if( cps >15)
-        {       write("Äã¸Ğµ½È«Éí·¢ÈÈ£¬Ô½¶ÁÔ½Ïë¶Á£®£®£®\n");
+        {       write("ä½ æ„Ÿåˆ°å…¨èº«å‘çƒ­ï¼Œè¶Šè¯»è¶Šæƒ³è¯»ï¼ï¼ï¼\n");
                 return 1;
         }
-		write("Äã¸Ğµ½Ò»¹ÉÈÈÆø´Óµ¤ÌïÖ±Éı¶øÆğ£®£®£®\n");
+		write("ä½ æ„Ÿåˆ°ä¸€è‚¡çƒ­æ°”ä»ä¸¹ç”°ç›´å‡è€Œèµ·ï¼ï¼ï¼\n");
 		me->unconcious();
 		return 1;
 

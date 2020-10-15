@@ -5,15 +5,15 @@
 inherit HAMMER;
 void create()
 {
-	set_name("Í­·ðÖÓ", ({ "fezhong" }) );
+	set_name("é“œä½›é’Ÿ", ({ "fezhong" }) );
 	set_weight(40000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
+		set("unit", "ä¸ª");
 		set("value", 500);
 		set("material", "wood");
-		set("long", "Ò»¸öÂÌ°ß°ßµÄÍ­·ðÖÓ\n");
+		set("long", "ä¸€ä¸ªç»¿æ–‘æ–‘çš„é“œä½›é’Ÿ\n");
 		set("weapon_prop/karma",1);
 	}
 	init_hammer(5);

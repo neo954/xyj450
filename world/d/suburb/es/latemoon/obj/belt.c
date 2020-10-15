@@ -6,17 +6,17 @@ inherit WAIST;
 
 void create()
 {
-        set_name( "Ñü´ø" , ({ "belt" }) );
+        set_name( "è…°å¸¦" , ({ "belt" }) );
         set_weight(1000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ìõ");
+                set("unit", "æ¡");
                 set("value", 700);
                 set("material", "cloth");
                 set("armor_prop/armor", 4);
                 set("armor_prop/dodge", 1);
-       set("wear_msg", "$N½«$nÄÃ³öÏµÔÚÑüÉÏ¡£\n");
+       set("wear_msg", "$Nå°†$næ‹¿å‡ºç³»åœ¨è…°ä¸Šã€‚\n");
         }
    setup();
 }

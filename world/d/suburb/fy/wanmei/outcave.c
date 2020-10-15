@@ -5,11 +5,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "ÆÙºóÉ½¶´");
+        set("short", "ç€‘åå±±æ´");
         set("long", @LONG
-·ÉÁ÷µÄË®Öé²»Ê±µØ½¦ÈëÉ½¶´£¬µØÏÂ²¼Âú±ù²ê£¬ÓÖíÑÓÖÔú¡£É½¶´ÄÚºÜ°µ£¬µ«
-ÒşÔ¼»¹¿É¿´³öÀïÃæ¿Õ¼äºÜ´ó£¬ÂıÂıÍùÇ°×ßÈ¥£¬·¢ÏÖÇ°ÃæÓĞ¼¸¸ö°«Ğ¡µÄ¶´·Ö±ğÍ¨
-Ïò¸üÉîµÄÉ½¸¹ÖĞ¡£µ«ÊÇÓÉÓÚ¶´ÄÚ¼«Àä£¬¶´¿Ú¶¼±»º®±ù¸Ç×¡ÁË¡£
+é£æµçš„æ°´ç ä¸æ—¶åœ°æº…å…¥å±±æ´ï¼Œåœ°ä¸‹å¸ƒæ»¡å†°ç¢´ï¼Œåˆç¡Œåˆæ‰ã€‚å±±æ´å†…å¾ˆæš—ï¼Œä½†
+éšçº¦è¿˜å¯çœ‹å‡ºé‡Œé¢ç©ºé—´å¾ˆå¤§ï¼Œæ…¢æ…¢å¾€å‰èµ°å»ï¼Œå‘ç°å‰é¢æœ‰å‡ ä¸ªçŸ®å°çš„æ´åˆ†åˆ«é€š
+å‘æ›´æ·±çš„å±±è…¹ä¸­ã€‚ä½†æ˜¯ç”±äºæ´å†…æå†·ï¼Œæ´å£éƒ½è¢«å¯’å†°ç›–ä½äº†ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -20,8 +20,8 @@ LONG
                         ]) );
 	set("frozen",10);
         set("item_desc", ([
-                "º®±ù": "
-³ı·Ç°Ñº®±ù»¯¿ª£¨£ğ£ï£õ£ò£©£¬¸ù±¾Ã»°ì·¨½øÈëÉ½¸¹ÖĞ¡£\n",
+                "å¯’å†°": "
+é™¤éæŠŠå¯’å†°åŒ–å¼€ï¼ˆï½ï½ï½•ï½’ï¼‰ï¼Œæ ¹æœ¬æ²¡åŠæ³•è¿›å…¥å±±è…¹ä¸­ã€‚\n",
         ]) );
 
         setup();
@@ -42,18 +42,18 @@ int do_pour(string arg)
 	if(!con->query("liquid"))
 	return 0;
 	if(!con->query("liquid/remaining"))
-	return notify_fail( con->name() + "ÊÇ¿ÕµÄ¡£\n");
+	return notify_fail( con->name() + "æ˜¯ç©ºçš„ã€‚\n");
 	con->add("liquid/remaining", -1);
-	message_vision("$NÄÃÆğ" + con->name() + "µ¹ÁËÒ»Ğ©" +
-	con->query("liquid/name")  + "ÔÚº®±ùÉÏ¡£\n",me);
-	if(con->query("liquid/name") == "ÈÈË®")
+	message_vision("$Næ‹¿èµ·" + con->name() + "å€’äº†ä¸€äº›" +
+	con->query("liquid/name")  + "åœ¨å¯’å†°ä¸Šã€‚\n",me);
+	if(con->query("liquid/name") == "çƒ­æ°´")
 	{
-	tell_object(me,"º®±ù»¯¿ªÁËÒ»µã£¡£¡\n");
+	tell_object(me,"å¯’å†°åŒ–å¼€äº†ä¸€ç‚¹ï¼ï¼\n");
 	add("frozen",-1);
 	}
 	if( query("frozen") <= 0 )
 	{
-	tell_object(me,"º®±ùÖÕÓÚ»¯¿ªÁËÒ»¸öĞ¡¶´£®£®£®\n");
+	tell_object(me,"å¯’å†°ç»ˆäºåŒ–å¼€äº†ä¸€ä¸ªå°æ´ï¼ï¼ï¼\n");
 	if(!query("exits/north"))
 		set("exits/north",__DIR__"leftcave");
 	call_out("close_path",10);		
@@ -65,7 +65,7 @@ void close_path()
 {
         if( !query("exits/north") ) return;
         message("vision",
-"Æ®¹ıÀ´µÄË®µÎÕ£ÑÛ¼ä¶³³É±ùÖé£¬½¥½¥µØ·â×¡ÁË¶´¿Ú£®£®\n",
+"é£˜è¿‡æ¥çš„æ°´æ»´çœ¨çœ¼é—´å†»æˆå†°ç ï¼Œæ¸æ¸åœ°å°ä½äº†æ´å£ï¼ï¼\n",
                 this_object() );
                 delete("exits/north");
 		set("frozen",10+random(5));

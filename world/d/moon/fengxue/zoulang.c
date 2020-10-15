@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 //zoulang.c
@@ -9,10 +9,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "��¥������");
+        set("short", "三楼：走廊");
         set("long", @LONG
 
-���ȵľ�ͷ������ľ�ţ��ź��м�̸���ҡ�
+走廊的尽头有扇桃木门，门后有间谈心室。
 LONG
         );
 
@@ -21,7 +21,7 @@ LONG
                 "east" : __DIR__"living",
         ]));
 
-        create_door("enter", "��ľ��", "out", DOOR_CLOSED);
+        create_door("enter", "桃木门", "out", DOOR_CLOSED);
 
         setup();
 }
@@ -48,7 +48,7 @@ int do_open(string arg)
         }
 
         if ( num >= 2 && room->query("locked") ) {
-                write("�������ˣ����������أ�\n");
+                write("房里有人，门正锁着呢！\n");
                 return 0;
         }
 

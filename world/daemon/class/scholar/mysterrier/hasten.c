@@ -10,13 +10,13 @@ int perform(object me, object target)
         int count;
 
         if( !me->is_fighting() )
-                return notify_fail("¡¸ÐþÓðÂÒÎè¡¹Ö»ÄÜÔÚÕ½¶·ÖÐÊ¹ÓÃ¡£\n");
+                return notify_fail("ã€ŒçŽ„ç¾½ä¹±èˆžã€åªèƒ½åœ¨æˆ˜æ–—ä¸­ä½¿ç”¨ã€‚\n");
 
-        if( (int)me->query("kee") < 70 ) return notify_fail("ÄãµÄÆø²»¹»£¡\n");
+        if( (int)me->query("kee") < 70 ) return notify_fail("ä½ çš„æ°”ä¸å¤Ÿï¼\n");
         if( (int)me->query("force") - (int)me->query("max_force") < 70 )
-                return notify_fail("ÄãµÄÕæÆø²»¹»£¡\n");
+                return notify_fail("ä½ çš„çœŸæ°”ä¸å¤Ÿï¼\n");
 
-        msg = HIY "$NÊ¹³ö²½ÐþÆß¾÷µÚÒ»Ê½¡¸ÐþÓðÂÒÎè¡¹£¬Éí·¨¶¸È»¼Ó¿ì£¡\n" NOR;
+        msg = HIY "$Nä½¿å‡ºæ­¥çŽ„ä¸ƒè¯€ç¬¬ä¸€å¼ã€ŒçŽ„ç¾½ä¹±èˆžã€ï¼Œèº«æ³•é™¡ç„¶åŠ å¿«ï¼\n" NOR;
 
         message_vision(msg, me);
         count = (int)me->query_skill("mysterrier") / 20 + 2;
@@ -27,13 +27,13 @@ int perform(object me, object target)
                 me->clean_up_enemy();
                 ob = me->select_opponent();
                 if( !ob || (environment(ob) != environment(me))) {
-                        message_vision(CYN "$NµÄÉíÐÎ×ªÁË¼¸×ª£¬Ù¿µØÍ£×¡ÁË½Å²½¡£\n" NOR, me);
+                        message_vision(CYN "$Nçš„èº«å½¢è½¬äº†å‡ è½¬ï¼Œå€åœ°åœä½äº†è„šæ­¥ã€‚\n" NOR, me);
                         break;
                 } else
-                        message_vision(CYN "$NÑ¸½ÝÎÞÂ×µØÔÚ$nÉíÅÔÈÆÁËÒ»È¦ ...\n" NOR, me, ob);
+                        message_vision(CYN "$Nè¿…æ·æ— ä¼¦åœ°åœ¨$nèº«æ—ç»•äº†ä¸€åœˆ ...\n" NOR, me, ob);
 
                 if( !COMBAT_D->fight(me, ob) )
-                        message_vision(CYN "µ«ÊÇ$NÕÒ²»µ½»ú»á³öÊÖ£¡\n" NOR, me);
+                        message_vision(CYN "ä½†æ˜¯$Næ‰¾ä¸åˆ°æœºä¼šå‡ºæ‰‹ï¼\n" NOR, me);
                 me->receive_damage("kee", 10);
                 me->add("force", -10);
         }

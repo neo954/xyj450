@@ -6,12 +6,12 @@ inherit ARMOR;
 
 void create()
 {
-	set_name("Ú¤¸®Õ½¼×", ({ "hell armor", "armor" }) );
+	set_name("å†¥åºœæˆ˜ç”²", ({ "hell armor", "armor" }) );
 	set_weight(70000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¼þ");
+		set("unit", "ä»¶");
 		set("material", "steel");
 		set("value", 19000);
 		set("armor_prop/armor", 50);

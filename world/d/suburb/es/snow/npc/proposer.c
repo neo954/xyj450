@@ -6,17 +6,17 @@ string ask_for_employment();
 
 void create()
 {
-	set_name("Ã½ÆÅ", ({ "proposer" }) );
-	set("gender", "Å®ÐÔ" );
+	set_name("åª’å©†", ({ "proposer" }) );
+	set("gender", "å¥³æ€§" );
 	set("long",
-		"Ò»¸ö´ò°çµÃ»¨Ö¦ÕÐÕ¹µÄÖÐÄê¸¾ÈË£¬Èç¹ûÄã¶ÔÄÄ¼Ò¹ÃÄïÓÐÒâË¼£¬¿ÉÒÔÇëËý\n"
-		"°ïÄãÈ¥ÌáÇ×¡£\n");
+		"ä¸€ä¸ªæ‰“æ‰®å¾—èŠ±æžæ‹›å±•çš„ä¸­å¹´å¦‡äººï¼Œå¦‚æžœä½ å¯¹å“ªå®¶å§‘å¨˜æœ‰æ„æ€ï¼Œå¯ä»¥è¯·å¥¹\n"
+		"å¸®ä½ åŽ»æäº²ã€‚\n");
 	set("attitude", "friendly");
 	set("inquiry", ([
 		"employment" : (: ask_for_employment :),
-		"ÌáÇ×" : (: ask_for_employment :),
+		"æäº²" : (: ask_for_employment :),
 	]) );
-	set("rank_info/respect", "´óÄï");
+	set("rank_info/respect", "å¤§å¨˜");
 	set("age", 38);
 	set("env/wimpy", 100);
 	setup();
@@ -31,21 +31,21 @@ string ask_for_employment()
 
 	me = this_player();
 	if( !me->query("can_speak") )
-		return "°¥Ó´ ... ±ð¸úÎÒ¿ªÍæÐ¦ ... È¥ÕÒ¸öÇ£Öí¸çµÄ°É£¬ºÇºÇºÇ ...\n";
+		return "å“Žå“Ÿ ... åˆ«è·Ÿæˆ‘å¼€çŽ©ç¬‘ ... åŽ»æ‰¾ä¸ªç‰µçŒªå“¥çš„å§ï¼Œå‘µå‘µå‘µ ...\n";
 	if( (string)me->query("class")=="bonze" )
-		return "°¡£¿ÕâÎ»" + RANK_D->query_respect(me) + "ÄúµÃÏÈ»¹Ë×°É£¿ºÇºÇºÇ ...\n";
-	if( me->query("gender") != "ÄÐÐÔ" )
-		return "ÕâÎ»" + RANK_D->query_respect(me) + "±ðÐÄ¼±£¬ÓÐµãÄÍÐÄÂýÂýµÈ£¬ºÇºÇºÇ ...\n";
+		return "å•Šï¼Ÿè¿™ä½" + RANK_D->query_respect(me) + "æ‚¨å¾—å…ˆè¿˜ä¿—å§ï¼Ÿå‘µå‘µå‘µ ...\n";
+	if( me->query("gender") != "ç”·æ€§" )
+		return "è¿™ä½" + RANK_D->query_respect(me) + "åˆ«å¿ƒæ€¥ï¼Œæœ‰ç‚¹è€å¿ƒæ…¢æ…¢ç­‰ï¼Œå‘µå‘µå‘µ ...\n";
 	command("giggle");
 	if( me->query("spouce") ) 
-		return "ÕâÎ»" + RANK_D->query_respect(me) + "ÄúµÄÎ¸¿Ú»¹Õæ²»Ð¡°¡£¬ºÇºÇºÇ ...\n";
+		return "è¿™ä½" + RANK_D->query_respect(me) + "æ‚¨çš„èƒƒå£è¿˜çœŸä¸å°å•Šï¼Œå‘µå‘µå‘µ ...\n";
 	if( query_temp("custom") )
 		return me==query_temp("custom") ?
-			  "ÊÇ¡«ÊÇ¡« ÔÛÃÇ»¹µÈÊ²Ã´£¬´øÎÒÈ¥¼ûÄÇÎ»¹ÃÄï°É£¡\n"
-			: "µÈÒ»»á¶ù£¬´ýÎÒËµ¶¨ÕâÎ»´óÒ¯µÄÇ×ÊÂ£¬ÏÂÒ»¸ö¾ÍÂÖµ½Äú ...\n";
-	command("say ºÃºÃºÃ£¬ÎÒ°ïÄúÈ¥Ëµ(propose)×¼³É£¬±ðÍüÁË×¼±¸Ò»¸ö´óºì°üÓ´ ...");
+			  "æ˜¯ï½žæ˜¯ï½ž å’±ä»¬è¿˜ç­‰ä»€ä¹ˆï¼Œå¸¦æˆ‘åŽ»è§é‚£ä½å§‘å¨˜å§ï¼\n"
+			: "ç­‰ä¸€ä¼šå„¿ï¼Œå¾…æˆ‘è¯´å®šè¿™ä½å¤§çˆ·çš„äº²äº‹ï¼Œä¸‹ä¸€ä¸ªå°±è½®åˆ°æ‚¨ ...\n";
+	command("say å¥½å¥½å¥½ï¼Œæˆ‘å¸®æ‚¨åŽ»è¯´(propose)å‡†æˆï¼Œåˆ«å¿˜äº†å‡†å¤‡ä¸€ä¸ªå¤§çº¢åŒ…å“Ÿ ...");
 	set_leader(me);
-	command("say ÔÛÃÇ×ß°É£¡");
+	command("say å’±ä»¬èµ°å§ï¼");
 	set_temp("custom", me);
 }
 
@@ -53,7 +53,7 @@ int accept_order(object me, string verb)
 {
 	if( me==query_temp("custom") && verb=="propose" ) {
 //		command("grin");
-//		command("say ÄúÕæÊÇ¹óÈË¶àÍüÊÂ£¬Õâ¸ö ... Õâ¸ö ... ×¼±¸ºÃÁËÂð£¿");
+//		command("say æ‚¨çœŸæ˜¯è´µäººå¤šå¿˜äº‹ï¼Œè¿™ä¸ª ... è¿™ä¸ª ... å‡†å¤‡å¥½äº†å—ï¼Ÿ");
 		return 1;
 	}
 	return 0;
@@ -62,7 +62,7 @@ int accept_order(object me, string verb)
 int perform_propose(object ob)
 {
 	if( !ob || environment(ob)!=environment() ) {
-		command("say ß×£¿ÄÇÎ»¹ÃÄïÈËÄØ£¿");
+		command("say å’¦ï¼Ÿé‚£ä½å§‘å¨˜äººå‘¢ï¼Ÿ");
 		set_leader(query_temp("custom"));
 		delete_temp("proposing");
 		return 0;
@@ -71,37 +71,37 @@ int perform_propose(object ob)
 	switch(query_temp("proposing")) {
 		case 1:
 			command("whisper " + ob->query("id") + query_temp("custom")->name()
-				+ "ÑöÄ½ÄúÒÑ¾­ºÜ¾ÃÁË£¬ÌØµØÍÐÎÒÀ´ÌæËûËµÇ× ...");
+				+ "ä»°æ…•æ‚¨å·²ç»å¾ˆä¹…äº†ï¼Œç‰¹åœ°æ‰˜æˆ‘æ¥æ›¿ä»–è¯´äº² ...");
 			add_temp("proposing", 1);
 			return 1;
 		case 2:
-			command("whisper " + ob->query("id") + "ÄÄ ... ¾ÍÊÇÄúÃæÇ°ÕâÒ»Î»£¬ÈËÆ·²»´í°É£¡");
+			command("whisper " + ob->query("id") + "å“ª ... å°±æ˜¯æ‚¨é¢å‰è¿™ä¸€ä½ï¼Œäººå“ä¸é”™å§ï¼");
 			add_temp("proposing", 1);
 			return 1;
 		case 3:
 			command("nod " + query_temp("custom")->query("id") );
-			command("whisper " + ob->query("id") + "Èç¹ûÄúÖÐÒâ£¬¾Í¸úÎÒµãµãÍ·(nod)°É£¬²»È»Ò¡Ò¡Í·(shake)ÎÒÔÙÈ¥ÎïÉ«±ðµÄ¶ÔÏó ...");
+			command("whisper " + ob->query("id") + "å¦‚æžœæ‚¨ä¸­æ„ï¼Œå°±è·Ÿæˆ‘ç‚¹ç‚¹å¤´(nod)å§ï¼Œä¸ç„¶æ‘‡æ‘‡å¤´(shake)æˆ‘å†åŽ»ç‰©è‰²åˆ«çš„å¯¹è±¡ ...");
 			add_temp("proposing", 1);
 			return 1;
 		default:
 			if( (int)query_temp("proposing") > 100 ) {
 				command("sigh");
-				command("say ¿´À´ÕâÎ»¹ÃÄï¸ù±¾²»ÀíÎÒ ...");
+				command("say çœ‹æ¥è¿™ä½å§‘å¨˜æ ¹æœ¬ä¸ç†æˆ‘ ...");
 				delete_temp("proposing");
 				return 0;
 			}
 			switch(random(30)) {
 				case 0:
 					command("say " + query_temp("custom")->name()
-					+ "ÑöÄ½ÄúÒÑ¾­ºÜ¾ÃÁË£¬²»Öª¹ÃÄï¿¼ÂÇµÃÔõÑù£¿");
+					+ "ä»°æ…•æ‚¨å·²ç»å¾ˆä¹…äº†ï¼Œä¸çŸ¥å§‘å¨˜è€ƒè™‘å¾—æ€Žæ ·ï¼Ÿ");
 					break;
 				case 1:
 					command("say " + query_temp("custom")->name()
-					+ "ÕâÑùµÄÈËÆ·ÕæÊÇ²»´íÁË£¬¹ÃÄïÄúÈÏÎªÄØ£¿");
+					+ "è¿™æ ·çš„äººå“çœŸæ˜¯ä¸é”™äº†ï¼Œå§‘å¨˜æ‚¨è®¤ä¸ºå‘¢ï¼Ÿ");
 					break;
 				case 2:
 					command("whisper " + ob->query("id") 
-					+ "Èç¹ûÄúÖÐÒâ£¬¾ÍµãµãÍ·(nod)°É£¬²»È»Ò¡Ò¡Í·(shake)ÎÒÔÙÈ¥ÎïÉ«±ðµÄ¶ÔÏó ...");
+					+ "å¦‚æžœæ‚¨ä¸­æ„ï¼Œå°±ç‚¹ç‚¹å¤´(nod)å§ï¼Œä¸ç„¶æ‘‡æ‘‡å¤´(shake)æˆ‘å†åŽ»ç‰©è‰²åˆ«çš„å¯¹è±¡ ...");
 					break;
 				case 3:		command("smile"); break;
 				case 4:		command("giggle"); break;
@@ -121,17 +121,17 @@ int force_me(string cmd)
 		me = this_player(1);
 		ob = present(target, environment());
 		if( !ob || !userp(ob) || !ob->query("can_speak")
-		||	(string)ob->query("gender") != "Å®ÐÔ") {
+		||	(string)ob->query("gender") != "å¥³æ€§") {
 			command("?");
-			command("say Ë­£¿ÄúÖÐÒâµÄ¹ÃÄïÊÇÄÄÒ»Î»£¿");
+			command("say è°ï¼Ÿæ‚¨ä¸­æ„çš„å§‘å¨˜æ˜¯å“ªä¸€ä½ï¼Ÿ");
 			return 0;
 		}
 		if( ob->query("spouce") ) {
-			command("whisper " + me->query("id") + "ÈË¼Ò¿ÉÊÇÓÐ·òÖ®¸¾Ó´£¬Äú»¹ÊÇ¿¼ÂÇ¿¼ÂÇ°É£¡");
+			command("whisper " + me->query("id") + "äººå®¶å¯æ˜¯æœ‰å¤«ä¹‹å¦‡å“Ÿï¼Œæ‚¨è¿˜æ˜¯è€ƒè™‘è€ƒè™‘å§ï¼");
 			return 0;
 		}
 		command("smile");
-		command("whisper " + me->query("id") + " Äú·ÅÐÄ£¬¿´ÎÒµÄ£¡");
+		command("whisper " + me->query("id") + " æ‚¨æ”¾å¿ƒï¼Œçœ‹æˆ‘çš„ï¼");
 		command("smile " + ob->query("id"));
 		set_temp("proposing", 1);
 		set_leader(ob);

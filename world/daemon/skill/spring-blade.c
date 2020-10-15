@@ -3,33 +3,33 @@
 inherit SKILL;
 
 mapping *action = ({
-	([	"action":		"$Nʹһ�С������������������$w��ƮƮ����$n��$lնȥ��",
+	([	"action":		"$N使一招「春风拂人醉」，手中$w轻飘飘地向$n的$l斩去！",
 		"damage":		100,
 		"dodge":		70,
-		"damage_type":	"����"
+		"damage_type":	"割伤"
 	]),
-	([	"action":		"$N�������磬$w����һ�С�Զɽ���˳ա����¶�������$n��$l",
+	([	"action":		"$N金刃劈风，$w随著一招「远山伴人痴」由下而上撩往$n的$l",
 		"damage":		40,
-		"damage_type":	"����"
+		"damage_type":	"割伤"
 	]),
-	([	"action":		"$N����һת��һ�С��ɻ������㡹$w���ⲻ����ն��$n��$l",
+	([	"action":		"$N身形一转，一招「飞花逐人香」$w刀光不定，斩向$n的$l",
 		"damage":		20,
-		"damage_type":	"����"
+		"damage_type":	"割伤"
 	]),
-	([	"action":		"$N�趯$w��һ�С���Ҷ����Ц��Ѹ�����׵�����$n��$l",
-		"damage_type":	"����"
+	([	"action":		"$N舞动$w，一招「柳叶随人笑」迅捷无伦地劈向$n的$l",
+		"damage_type":	"割伤"
 	]),
-	([	"action":		"$N����$wһ�Σ�һ�С�ٻӰ����������$n��$lбб����һ��",
+	([	"action":		"$N手中$w一晃，一招「倩影惹人怜」往$n的$l斜斜砍出一刀",
 		"damage":		40,
-		"damage_type":	"����"
+		"damage_type":	"割伤"
 	]),
-	([	"action":		"$N�ᵶ���磬�������һ�С�«ѩ����Ӱ��ֱ��$n$l",
+	([	"action":		"$N提刀过肩，蓄劲发力，一招「芦雪碎人影」直劈$n$l",
 		"damage":		40,
-		"damage_type":	"����"
+		"damage_type":	"割伤"
 	]),
-	([	"action":		"$N�Ʋ�������ʹһ�С��ʵ������¡��������ն��$n��$l",
+	([	"action":		"$N移步侧身，使一招「彩蝶灼人衣」刀光霍霍斩向$n的$l",
 		"damage":		40,
-		"damage_type":	"����"
+		"damage_type":	"割伤"
 	]),
 });
 
@@ -54,27 +54,27 @@ int practice_skill(object me)
 
 	if( !objectp(weapon = me->query_temp("weapon"))
 	||	(string)weapon->query("skill_type") != "blade" )
-		return notify_fail("���������һ�ѵ���������������\n");
+		return notify_fail("你必须先找一把刀，才能练刀法。\n");
 
 	if( (int)me->query("kee") < 40 )
-		return notify_fail("����������������ŵ�������������Ϣ��Ϣ�ɡ�\n");
+		return notify_fail("你的体力不够练这门刀法，还是先休息休息吧。\n");
 	me->receive_damage("kee", 40);
 	return 1;
 }
 int effective_level() { return 20;}
 
 string *parry_msg = ({
-        "$nʹ��һ�С�����ͼ���𡹣������е�$v����$N����ָ��\n",
-	"$n���̤ǰһ����һ�С����紵б���������е�$v�Ӳ���Ʈ��$N֮�ؾȡ�\n",
-	"$n���е�$vһ�������һƬ������һ�С�������Ϧ����������$N��ȫ����\n",
-	"$n΢��һ�������е�$v����һ��Բ����һ�С����߲�֪�ء�����$N��ȫ��Χס��\n",
+        "$n使出一招「快意图恩仇」，用手中的$v急削$N的五指。\n",
+	"$n左脚踏前一步，一招「春风吹斜柳」，手中的$v从侧面飘向$N之必救。\n",
+	"$n手中的$v一抖，挽出一片刀花，一招「晚春怜夕阳」，撒向$N的全身。\n",
+	"$n微退一步，手中的$v划出一条圆弧，一招「春眠不知哓」，将$N的全身围住。\n",
 });
 
 string *unarmed_parry_msg = ({
-"$nʹ��һ�С�����ͼ���𡹣������е�$v����$N����ָ��\n",
-"$n���̤ǰһ����һ�С����紵б���������е�$v�Ӳ���Ʈ��$N֮�ؾȡ�\n",
-"$n���е�$vһ�������һƬ������һ�С�������Ϧ����������$N��ȫ����\n",
-"$n΢��һ�������е�$v����һ��Բ����һ�С����߲�֪�ء�����$N��ȫ��Χס��\n",
+"$n使出一招「快意图恩仇」，用手中的$v急削$N的五指。\n",
+"$n左脚踏前一步，一招「春风吹斜柳」，手中的$v从侧面飘向$N之必救。\n",
+"$n手中的$v一抖，挽出一片刀花，一招「晚春怜夕阳」，撒向$N的全身。\n",
+"$n微退一步，手中的$v划出一条圆弧，一招「春眠不知哓」，将$N的全身围住。\n",
 });
 
 string query_parry_msg(object weapon)

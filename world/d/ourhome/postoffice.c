@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // Room: /d/ourhome/mbox.c
@@ -8,17 +8,17 @@ inherit ROOM;
 
 void create()
 {
-   set("short", "������ž�");
+   set("short", "害虫电信局");
    set("long", @LONG
 
-    �����Ǻ�����ž֡�(instructions)�
+    这里是害虫电信局。(instructions)�
 
 LONG
    );
    set("item_desc", ([ /* sizeof() == 1 */
   "instructions" : "
-    ������д����
-    �����ʮ����ư��С��ѯ�ʼ��Ż����ŵĳ���
+    牌子上写道：
+    请向二十八星瓢虫小姐询问寄信或收信的程序。
 
 ",
 ]));
@@ -38,7 +38,7 @@ int valid_leave(object me, string dir)
    object mbox;
 
    if( mbox = me->query_temp("mbox_ob") ) {
-     tell_object(me, "�㽫���佻�ظ���ʮ����ư��С�㡣\n");
+     tell_object(me, "你将信箱交回给二十八星瓢虫小姐。\n");
      destruct(mbox);
    }
    return 1;

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
  
@@ -6,11 +6,11 @@ inherit NPC;
  
 void create()
 {
-   set_name("µä²¾", ({"dian bu"})); 
-        set("gender", "ÄĞĞÔ" );
-   set("long", "ÓùÂí¼àµä²¾¡£\n");
+   set_name("å…¸ç°¿", ({"dian bu"})); 
+        set("gender", "ç”·æ€§" );
+   set("long", "å¾¡é©¬ç›‘å…¸ç°¿ã€‚\n");
         set("age",40);
-   set("title", "ÓùÂí¼à");
+   set("title", "å¾¡é©¬ç›‘");
         set("str", 30);
         set("int", 20);
    set("con", 30);

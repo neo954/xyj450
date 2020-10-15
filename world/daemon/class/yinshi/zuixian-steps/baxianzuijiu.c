@@ -7,18 +7,18 @@ int perform(object me, object target)
 {
         int skill;
         if( target != me ) return 
-	notify_fail("你只能将［八仙醉酒］用在自己的身上。\n");
+	notify_fail("浣犲彧鑳藉皢锛诲叓浠欓唹閰掞冀鐢ㄥ湪鑷繁鐨勮韩涓娿�俓n");
 	if(!me->query_condition("drunk"))
-	return notify_fail("你现在好象一点醉意也没有耶！\n");
+	return notify_fail("浣犵幇鍦ㄥソ璞′竴鐐归唹鎰忎篃娌℃湁鑰讹紒\n");
         if( (int)me->query("force") < 100 )     return
-        notify_fail("你的内力不够。\n");
+        notify_fail("浣犵殑鍐呭姏涓嶅銆俓n");
         if( (int)me->query_temp("zuixian") ) return 
-	notify_fail("你已经在施展［八仙醉酒］了。\n");
+	notify_fail("浣犲凡缁忓湪鏂藉睍锛诲叓浠欓唹閰掞冀浜嗐�俓n");
 	skill = me->query_skill_eff_lvl("zuixian-steps");
-	if(skill < 100) return notify_fail("你的醉仙望月步太差了！\n");
+	if(skill < 100) return notify_fail("浣犵殑閱変粰鏈涙湀姝ュお宸簡锛乗n");
 	 me->add("force", -100);
         message_vision( HIR
-"$N左摇右摆，俨然是醉仙望月步中的［八仙醉酒］，整个身形摇摆不定！\n" NOR, me);
+"$N宸︽憞鍙虫憜锛屼卡鐒舵槸閱変粰鏈涙湀姝ヤ腑鐨勶蓟鍏粰閱夐厭锛斤紝鏁翠釜韬舰鎽囨憜涓嶅畾锛乗n" NOR, me);
         me->add_temp("apply/dodge", skill/3);
         me->set_temp("zuixian", 1);
         me->start_call_out( (: call_other, __FILE__, "remove_effect", me, 
@@ -31,6 +31,6 @@ void remove_effect(object me, int amount)
 {
         me->add_temp("apply/dodge", - amount);
         me->delete_temp("zuixian");
-        tell_object(me, "你的［八仙醉酒］施展完毕，身行稳定了下来。\n");
+        tell_object(me, "浣犵殑锛诲叓浠欓唹閰掞冀鏂藉睍瀹屾瘯锛岃韩琛岀ǔ瀹氫簡涓嬫潵銆俓n");
 }
  

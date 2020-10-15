@@ -3,14 +3,14 @@ inherit ITEM;
 
 void create()
 {
-	string *name = ({"»¨Éú","Ğ¡»Æ¹Ï","ÂŞ²·Ìõ"});
+	string *name = ({"èŠ±ç”Ÿ","å°é»„ç“œ","ç½—åœæ¡"});
 	set_name(name[random(sizeof(name))], ({ "small dish" }) );
 	set_weight(350);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»ÅÌĞ¡²Ë¡£\n");
-		set("unit", "ÅÌ");
+		set("long", "ä¸€ç›˜å°èœã€‚\n");
+		set("unit", "ç›˜");
 		set("value", 2);
 		set("food_remaining", 5);
 		set("food_supply", 6);
@@ -21,10 +21,10 @@ void create()
 int finish_eat()
 {
 	if( random(2))
-        set_name("±ÀÁË¿ÚµÄĞ¡µú¶ù", ({"diezi"}));
+        set_name("å´©äº†å£çš„å°ç¢Ÿå„¿", ({"diezi"}));
 	else
-        set_name("Ğ¡µú¶ù", ({"diezi"}));
+        set_name("å°ç¢Ÿå„¿", ({"diezi"}));
 	set("value",0);
-        set("long", "Ò»Ö»Ğ¡ÅÌ×Ó¡£\n");
+        set("long", "ä¸€åªå°ç›˜å­ã€‚\n");
         return 1;
 }

@@ -5,15 +5,15 @@ inherit F_UNIQUE;
 
 void create()
 {
-	set_name("¾ÉÊé", ({ "book" }));
+	set_name("æ—§ä¹¦", ({ "book" }));
 	set_weight(600);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "±¾");
+		set("unit", "æœ¬");
 		set("long",
-			"Õâ±¾¾ÉÊéµÄÖ½ÕÅ¶¼ÒÑ¾­·º»ÆÁË£¬ÉÏÃæÖ»ÓĞÒ»Ğ©×Ö¼£Ä£ºıµÄ×Ö¾ä£¬ËÆºõ\n"
-			"Ìáµ½Ò»Ğ©ºôÎü·½·¨Ê²Ã´µÄ¡£\n");
+			"è¿™æœ¬æ—§ä¹¦çš„çº¸å¼ éƒ½å·²ç»æ³›é»„äº†ï¼Œä¸Šé¢åªæœ‰ä¸€äº›å­—è¿¹æ¨¡ç³Šçš„å­—å¥ï¼Œä¼¼ä¹\n"
+			"æåˆ°ä¸€äº›å‘¼å¸æ–¹æ³•ä»€ä¹ˆçš„ã€‚\n");
 		set("value", 70);
 		set("material", "paper");
 		set("replica_ob", __DIR__"old_book_r");

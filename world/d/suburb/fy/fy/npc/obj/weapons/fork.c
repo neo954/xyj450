@@ -2,12 +2,12 @@
 inherit FORK;
 void create()
 {
-	set_name("¶©×÷µÄ", ({ "order" }) );
+	set_name("è®¢ä½œçš„", ({ "order" }) );
 	set_weight(3000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
+		set("unit", "æŠŠ");
                 set("no_drop",1);
                 set("no_get",1);
                 set("owner","fengyun");

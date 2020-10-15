@@ -6,11 +6,11 @@ void create()
 {
         object ob;
 
-        set_name("ºÚÒÂÃÉÃæÈË", ({ "figure" }) );
-        set("gender", "ÄĞĞÔ");
+        set_name("é»‘è¡£è’™é¢äºº", ({ "figure" }) );
+        set("gender", "ç”·æ€§");
         set("age", 24);
         set("long",
-                "Õâ¸öÈËÒ»ÉíºÚÉ«·ş×°£¬¶¯×÷¹îÃÜ£®\n");
+                "è¿™ä¸ªäººä¸€èº«é»‘è‰²æœè£…ï¼ŒåŠ¨ä½œè¯¡å¯†ï¼\n");
         set("combat_exp", 6000);
         set("score", 400);
         set_skill("throwing", 20);
@@ -30,7 +30,7 @@ void create()
 
 void killed_enemy(object who)
 {
-        command("say ¹ş¹ş¹ş¹ş¹ş¹ş¡£");
+        command("say å“ˆå“ˆå“ˆå“ˆå“ˆå“ˆã€‚");
         call_out("dissolve", 1);
 }
 

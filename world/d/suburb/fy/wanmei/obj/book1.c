@@ -4,12 +4,12 @@
 inherit ITEM;
 void create()
 {
-	set_name("²ÐÆå", ({ "²ÐÆå","canqi", "Ò»¾ÖÎ´ÍêµÄ²ÐÆå" }));
+	set_name("æ®‹æ£‹", ({ "æ®‹æ£‹","canqi", "ä¸€å±€æœªå®Œçš„æ®‹æ£‹" }));
 	set_weight(600);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¾Ö");
+		set("unit", "å±€");
 		set("value", 70);
 		set("material", "wood");
 		set("no_shown",1);

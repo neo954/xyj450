@@ -3,9 +3,9 @@ inherit NPC;
  
 void create()
 {
-        set_name("ÉÏ¹ÙîÚôá", ({ "yulin","yu-girl" }) );
-        set("nickname", "Óñº­Ïæ");
-        set("gender", "Å®ĞÔ" );
+        set_name("ä¸Šå®˜é’°ç¿", ({ "yulin","yu-girl" }) );
+        set("nickname", "ç‰æ¶µæ¹˜");
+        set("gender", "å¥³æ€§" );
         set("age", 20);
         set("long", @TEXT
 TEXT

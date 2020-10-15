@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÆÍÒÛ", ({ "servant" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("ä»†å½¹", ({ "servant" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 34);
-	set("long", "Õâ¸öÈË¿´ÆğÀ´Ê®·ÖºÍ°ª¿ÉÇ×£¬¿´ÆğÀ´²»ÏñÊÇ»áÎä¹¦µÄÈË¡£\n");
+	set("long", "è¿™ä¸ªäººçœ‹èµ·æ¥ååˆ†å’Œè”¼å¯äº²ï¼Œçœ‹èµ·æ¥ä¸åƒæ˜¯ä¼šæ­¦åŠŸçš„äººã€‚\n");
 
 	set("attitude", "friendly");
 	set("combat_exp", 100);

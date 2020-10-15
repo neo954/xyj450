@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // dao
@@ -11,7 +11,7 @@ int valid_enable(string usage) { return usage=="spells"; }
 int valid_learn(object me)
 {
         if( (int)me->query_skill("spells") <= (int)me->query_skill("mo") )
-        return notify_fail("ÄãµÄ·¨ÊõĞŞÎª»¹²»¹»¸ßÉî£¬ÎŞ·¨Ñ§Ï°ÌìÄ§´ó·¨¡£\n");
+        return notify_fail("ä½ çš„æ³•æœ¯ä¿®ä¸ºè¿˜ä¸å¤Ÿé«˜æ·±ï¼Œæ— æ³•å­¦ä¹ å¤©é­”å¤§æ³•ã€‚\n");
         return 1;
 }
 

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // heal.c
@@ -8,19 +8,19 @@
 int exert(object me, object target)
 {
 	if( me->is_fighting() )
-		return notify_fail("Õ½¶·ÖĞÔË¹¦ÁÆÉË£¿ÕÒËÀÂğ£¿\n");
+		return notify_fail("æˆ˜æ–—ä¸­è¿åŠŸç–—ä¼¤ï¼Ÿæ‰¾æ­»å—ï¼Ÿ\n");
 
 	if ((int)me->query_skill("hunyuan-yiqi", 1) < 20)
-		return notify_fail("ÄãµÄ»ìÔªÒ»Æø¹¦ĞŞÎª»¹²»¹»¡£\n");
+		return notify_fail("ä½ çš„æ··å…ƒä¸€æ°”åŠŸä¿®ä¸ºè¿˜ä¸å¤Ÿã€‚\n");
 	if( (int)me->query("force") < 50 )
-		return notify_fail("ÄãµÄÕæÆø²»¹»¡£\n");
+		return notify_fail("ä½ çš„çœŸæ°”ä¸å¤Ÿã€‚\n");
 
 	if( (int)me->query("eff_kee") < (int)me->query("max_kee") / 2 )
-		return notify_fail("ÄãÒÑ¾­ÊÜÉË¹ıÖØ£¬Ö»ÅÂÒ»ÔËÕæÆø±ãÓĞÉúÃüÎ£ÏÕ£¡\n");
+		return notify_fail("ä½ å·²ç»å—ä¼¤è¿‡é‡ï¼Œåªæ€•ä¸€è¿çœŸæ°”ä¾¿æœ‰ç”Ÿå‘½å±é™©ï¼\n");
 
-	write( HIW "ÄãÈ«Éí·ÅËÉ£¬×øÏÂÀ´¿ªÊ¼ÔË¹¦ÁÆÉË¡£\n" NOR);
+	write( HIW "ä½ å…¨èº«æ”¾æ¾ï¼Œåä¸‹æ¥å¼€å§‹è¿åŠŸç–—ä¼¤ã€‚\n" NOR);
 	message("vision",
-		HIW + me->name() + "ÍÂ³öÒ»¿ÚğöÑª£¬Á³É«¿´ÆğÀ´ºÃ¶àÁË¡£\n" NOR,
+		HIW + me->name() + "åå‡ºä¸€å£ç˜€è¡€ï¼Œè„¸è‰²çœ‹èµ·æ¥å¥½å¤šäº†ã€‚\n" NOR,
 		environment(me), me);
 
 	me->receive_curing("kee", 10 + (int)me->query_skill("force")/5 );

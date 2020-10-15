@@ -5,14 +5,14 @@ inherit ROOM;
 #include <ansi.h>
 void create()
 {
-	set("short", "Î×Ê¦»á¿ÍÊÒ");
+	set("short", "å·«å¸ˆä¼šå®¢å®¤");
 	set("long", @LONG
-ÕâÀïÊÇÎ×Ê¦ºÍÍæ¼ÒÁÄÌìµÄµØ·½£¬Èç¹ûÄãÓÐÊ²÷áÒâ¼ûÒªÈÃÎ×Ê¦ÃÇÖªµÀ£¬ÔÚÕâÀï
-ÁôÑÔÊÇ×î¿ìµÄÍ¾¾¶£¬²»¹ýÈç¹ûÊÇ¶Ôì¶ÓÎÏ·ÖÐµÄÎÊÌâ£¬ÇëÄúÏÈÈ·¶¨ÎÒÃÇÌá¹©µÄËµÃ÷
-ÎÄ¼þÀïÃ»ÓÐËµÃ÷£¬ÔÙÌá³öÒÉÎÊ£¬Î×Ê¦µÄÖ÷ÒªÖ°Ôð²¢²»ÊÇ½ÌÍæ¼ÒÈçºÎÍæ¡£
+è¿™é‡Œæ˜¯å·«å¸ˆå’ŒçŽ©å®¶èŠå¤©çš„åœ°æ–¹ï¼Œå¦‚æžœä½ æœ‰ä»€éº½æ„è§è¦è®©å·«å¸ˆä»¬çŸ¥é“ï¼Œåœ¨è¿™é‡Œ
+ç•™è¨€æ˜¯æœ€å¿«çš„é€”å¾„ï¼Œä¸è¿‡å¦‚æžœæ˜¯å¯¹æ–¼æ¸¸æˆä¸­çš„é—®é¢˜ï¼Œè¯·æ‚¨å…ˆç¡®å®šæˆ‘ä»¬æä¾›çš„è¯´æ˜Ž
+æ–‡ä»¶é‡Œæ²¡æœ‰è¯´æ˜Žï¼Œå†æå‡ºç–‘é—®ï¼Œå·«å¸ˆçš„ä¸»è¦èŒè´£å¹¶ä¸æ˜¯æ•™çŽ©å®¶å¦‚ä½•çŽ©ã€‚
     
-ÎªÁË¶Å¾ø»úÆ÷ÈË£¬Äú¿ÉÒÔÔÚÕâÀï¼ì¾Ù(accuse)Ä³¸öÍæ¼Ò£¬¸ÃÃûÍæ¼Ò»á±»×¥È¥
-×öÒ»Ð©Ð¡Ð¡µÄ²âÑé£¬Ä¿Ç°ÕâÏî¹¦ÄÜÉÐÎ´×öÈÎºÎÏÞÖÆ£¬ÇëÎðÀûÓÃÀ´É§ÈÅ±ðÈË¡£
+ä¸ºäº†æœç»æœºå™¨äººï¼Œæ‚¨å¯ä»¥åœ¨è¿™é‡Œæ£€ä¸¾(accuse)æŸä¸ªçŽ©å®¶ï¼Œè¯¥åçŽ©å®¶ä¼šè¢«æŠ“åŽ»
+åšä¸€äº›å°å°çš„æµ‹éªŒï¼Œç›®å‰è¿™é¡¹åŠŸèƒ½å°šæœªåšä»»ä½•é™åˆ¶ï¼Œè¯·å‹¿åˆ©ç”¨æ¥éªšæ‰°åˆ«äººã€‚
 LONG
 	);
 	set("item_desc", ([ /* sizeof() == 1 */
@@ -27,7 +27,7 @@ LONG
 	set("no_clean_up", 0);
 	set("NONPC",1);
 	set("no_magic", 1);
-//	create_door("southeast", "Ä¾ÃÅ", "northwest", DOOR_CLOSED);
+//	create_door("southeast", "æœ¨é—¨", "northwest", DOOR_CLOSED);
 	setup();
 }
 
@@ -39,12 +39,12 @@ void init()
 int do_accuse(string arg)
 {
 	object me, room;
-	if( !arg ) return notify_fail("¼ì¾ÙË­£¿\n");
+	if( !arg ) return notify_fail("æ£€ä¸¾è°ï¼Ÿ\n");
 	me = find_player(arg);
-	if( !me) return notify_fail("¼ì¾ÙË­£¿\n");
-	tell_object(me,HIR"Äã±»"+this_player()->name()+"¼ì¾ÙÎª»úÆ÷ÈË£®\n"NOR);
-	tell_object(this_player(), "Äã¼ì¾Ù"+me->name()+"Îª»úÆ÷ÈË£®\n");
-	message_vision(HIY"ºöÈ»Ò»ÕóÉÁ¹âÕÖ×¡ÁË$N¡£\n"NOR,me);
+	if( !me) return notify_fail("æ£€ä¸¾è°ï¼Ÿ\n");
+	tell_object(me,HIR"ä½ è¢«"+this_player()->name()+"æ£€ä¸¾ä¸ºæœºå™¨äººï¼Ž\n"NOR);
+	tell_object(this_player(), "ä½ æ£€ä¸¾"+me->name()+"ä¸ºæœºå™¨äººï¼Ž\n");
+	message_vision(HIY"å¿½ç„¶ä¸€é˜µé—ªå…‰ç½©ä½äº†$Nã€‚\n"NOR,me);
         me->set_temp("last_location", base_name(environment(me)));
 	room = load_object("/d/suburb/fy/wiz/courthouse");
 	me->move(room);

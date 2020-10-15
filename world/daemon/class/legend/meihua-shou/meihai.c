@@ -12,16 +12,16 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("£ÛÃ·º££İÖ»ÄÜ¶ÔÕ½¶·ÖĞµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("ï¼»æ¢…æµ·ï¼½åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 	weapon = me->query_temp("weapon");
 	myexp = (int) me->query("combat_exp");
 	yourexp = (int) target->query("combat_exp");
 	lvl = (int) me->query_skill("unarmed") / 10 + 1;
-	msg = HIR "$NË«ÊÖ»Ã³öÂşÌìÃ·»¨£¬·ÉÑ©ËÆµÄÏò$nÂäÀ´£¡" NOR;
+	msg = HIR "$NåŒæ‰‹å¹»å‡ºæ¼«å¤©æ¢…èŠ±ï¼Œé£é›ªä¼¼çš„å‘$nè½æ¥ï¼" NOR;
 	if( random(myexp * lvl) > yourexp )
 	{
 		message_vision(msg + "\n", me, target);
-		msg = "½á¹û$n±»$N¹¥ÁË¸öÊÖÃ¦½ÅÂÒ£¡\n";
+		msg = "ç»“æœ$nè¢«$Næ”»äº†ä¸ªæ‰‹å¿™è„šä¹±ï¼\n";
 		message_vision(msg, me, target);
 		target->start_busy(3);
 	}

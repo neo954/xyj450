@@ -5,15 +5,15 @@
 inherit SWORD;
 void create()
 {
-	set_name("ÇàÉ«±¦½£", ({ "sword" }) );
+	set_name("é’è‰²å®å‰‘", ({ "sword" }) );
 	set_weight(40000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "±ú");
+		set("unit", "æŸ„");
 		set("value", 500);
 		set("material", "stone");
-		set("long", "Ò»°Ñ¼«³ÁµÄÇàÉ«±¦½£¡£\n");
+		set("long", "ä¸€æŠŠææ²‰çš„é’è‰²å®å‰‘ã€‚\n");
 		set("weapon_prop/agility",1);
 	}
 	init_sword(5);

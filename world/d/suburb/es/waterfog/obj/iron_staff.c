@@ -6,17 +6,17 @@ inherit STAFF;
 
 void create()
 {
-	set_name("ºÚÌúÕÈ", ({ "iron staff", "staff" }) );
+	set_name("é»‘é“æ–", ({ "iron staff", "staff" }) );
 	set_weight(70000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ìõ");
-		set("long", "ÕâÌõºÚÌúÕÈ¹â¿´¾ÍÖªµÀ·Ç³£ÉòÖØ£¬ÄÃÔÚÊÖÀï²ÅÖªµÀ±ÈÏëÏñÖĞ¸üÖØ¡£\n");
+		set("unit", "æ¡");
+		set("long", "è¿™æ¡é»‘é“æ–å…‰çœ‹å°±çŸ¥é“éå¸¸æ²ˆé‡ï¼Œæ‹¿åœ¨æ‰‹é‡Œæ‰çŸ¥é“æ¯”æƒ³åƒä¸­æ›´é‡ã€‚\n");
 		set("value", 2800);
 		set("material", "iron");
-		set("wield_msg", "$NÄÃ³öÒ»ÌõºÚ÷î÷îµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unwield_msg", "$N·ÅÏÂÊÖÖĞµÄ$n¡£\n");
+		set("wield_msg", "$Næ‹¿å‡ºä¸€æ¡é»‘é»é»çš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unwield_msg", "$Næ”¾ä¸‹æ‰‹ä¸­çš„$nã€‚\n");
 	}
 
 	init_staff(54);

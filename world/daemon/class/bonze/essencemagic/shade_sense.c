@@ -10,14 +10,14 @@ int conjure(object me, object target)
 	lvl = (int) me->query_skill("magic");
 	lvl += (int) me->query("spi");
         if ( lvl <= 200)
-                return notify_fail("你法术不够高！\n");
+                return notify_fail("浣犳硶鏈笉澶熼珮锛乗n");
 	if( me->query("atman") < 30 )
-		return notify_fail("你的灵力不够！\n");
+		return notify_fail("浣犵殑鐏靛姏涓嶅锛乗n");
         if( me->query("gin") <= 15 )
-                return notify_fail("你的精不够！\n");
+                return notify_fail("浣犵殑绮句笉澶燂紒\n");
 	me->add("atman", -30);
 	me->receive_damage("gin", 15);
-	message_vision(HIW "$N凝神提气，一团白芒乍出体内，整个人渐渐虚化．．．\n" NOR, me);
+	message_vision(HIW "$N鍑濈鎻愭皵锛屼竴鍥㈢櫧鑺掍箥鍑轰綋鍐咃紝鏁翠釜浜烘笎娓愯櫄鍖栵紟锛庯紟\n" NOR, me);
 	        me->set("env/invisibility", 1);
         me->start_call_out( (: call_other, __FILE__, "remove_effect", me :), lvl/10);
         if( me->is_fighting() ) me->start_busy(3);
@@ -27,5 +27,5 @@ int conjure(object me, object target)
 void remove_effect(object me)
 {
         me->set("env/invisibility", 0);
-        tell_object(me, "你的隐识失效了。\n");
+        tell_object(me, "浣犵殑闅愯瘑澶辨晥浜嗐�俓n");
 }

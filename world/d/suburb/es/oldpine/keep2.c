@@ -6,12 +6,12 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "����կ");
+	set("short", "老松寨");
 	set("long", @LONG
-����Ӧ��������կ�ˣ���ȻΧ�������ǽ����ľͷ��ɵģ�������
-ϸһ������������Ҫ��λ�ö����˲���ɳ��ʯ�ѣ�������Ȼ���������
-�ĺõط����������óȻ�Ӵ��ſڹ��������϶���Դ���ģ���կ����
-��������ߣ�����Խ��һ��ľ׮֮����Ǵ�����
+这里应该是老松寨了，虽然围绕著你的墙都是木头搭成的，但是仔
+细一看，在许多险要的位置都放了不少沙包石堆，后面显然是埋伏人手
+的好地方，如果有人贸然从大门口攻进来，肯定会吃大亏的，大寨的门
+在你的西边，东边越过一排木桩之后就是大厅。
 LONG
 	);
 	
@@ -37,8 +37,8 @@ int valid_leave(object me, string exit)
 		return 1;
 
 	message("vision",
-		HIY "�������������м���������У����Ź��ϣ����Ź��ϣ�һ��Ҳ����\���������ߣ�\n" NOR
-			"�������䡹��һ����ͨ������Ĵ����Ѿ���һ���ʯ�����ˡ�\n",
+		HIY "你听到你身后有几个声音大叫：把门关上！把门关上！一个也不许\让他们溜走！\n" NOR
+			"接著「轰」地一声，通往外面的大门已经被一块大石堵死了。\n",
 		this_object() );
 	delete("exits/west");
 	if( ob = find_object(__DIR__"keep1") )
@@ -69,7 +69,7 @@ void pipe_notify()
 	object ob;
 
 	message("vision",
-		"������һ�����������̽ʶ�������ס�ſڵĴ�ʯ�����ر��ƿ��ˡ�\n",
+		"你听到一阵轧轧的轮盘绞动声，堵住门口的大石慢慢地被移开了。\n",
 		this_object() );
 	set("exits/west", __DIR__"keep1" );
 	if( ob = find_object(__DIR__"keep1") )

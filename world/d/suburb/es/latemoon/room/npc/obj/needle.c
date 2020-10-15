@@ -4,13 +4,13 @@ inherit THROWING;
 
 void create()
 {
-    set_name( "»¨Õë" , ({"needle" }) );
+    set_name( "èŠ±é’ˆ" , ({"needle" }) );
      if ( clonep() )
               set_default_object(__FILE__);
      else {
-             set("long", "Ò»ÖÖÌú×ö³ÉµÄĞå»¨Õë\n");
-          set("unit", "Ğ©");
-          set("base_unit", "¸ù");
+             set("long", "ä¸€ç§é“åšæˆçš„ç»£èŠ±é’ˆ\n");
+          set("unit", "äº›");
+          set("base_unit", "æ ¹");
           set("base_weight", 30);
           set("base_value", 100);
           set("material", "iron");

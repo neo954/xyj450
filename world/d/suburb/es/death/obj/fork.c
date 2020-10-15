@@ -6,13 +6,13 @@ inherit FORK;
 
 void create()
 {
-	set_name("Æß¹É¸Ö²æ", ({ "steel fork" }) );
+	set_name("ä¸ƒè‚¡é’¢å‰", ({ "steel fork" }) );
 	set_weight(30000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
-		set("long", "Ò»°ÑÉòÖØµÄ´ó¸Ö²æ£¬Æß¸ù¼â´Ì·¢³öºÚ÷î÷îµÄ¹âÃ¢¡£\n");
+		set("unit", "æŠŠ");
+		set("long", "ä¸€æŠŠæ²ˆé‡çš„å¤§é’¢å‰ï¼Œä¸ƒæ ¹å°–åˆºå‘å‡ºé»‘é»é»çš„å…‰èŠ’ã€‚\n");
 		set("value", 5100);
 		set("material", "steel");
 	}

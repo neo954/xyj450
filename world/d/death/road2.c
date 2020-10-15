@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // Room: /d/death/road2.c
@@ -7,10 +7,10 @@ inherit ROOM;
  
 void create()
 {
-        set("short", "¹íÃÅ´óµÀ");
+        set("short", "é¬¼é—¨å¤§é“");
         set("long", @LONG
-Äã×ßÔÚÒ»ÌõÒõÉ­É­µÄÂ·ÉÏ, Å¨Å¨µÄÎí»·ÈÆÔÚÄãµÄËÄÖÜ, ºÃÏñÓÀ
-Ô¶¶¼²»»áÉ¢È¥ËÆµÄ. ÕûÌõÂ·Ç°ºóÖ»¿´µ½ÁãÐÇµÄ¼¸ÕµµÆÁý........
+ä½ èµ°åœ¨ä¸€æ¡é˜´æ£®æ£®çš„è·¯ä¸Š, æµ“æµ“çš„é›¾çŽ¯ç»•åœ¨ä½ çš„å››å‘¨, å¥½åƒæ°¸
+è¿œéƒ½ä¸ä¼šæ•£åŽ»ä¼¼çš„. æ•´æ¡è·¯å‰åŽåªçœ‹åˆ°é›¶æ˜Ÿçš„å‡ ç›ç¯ç¬¼........
  
 LONG
         );
@@ -33,7 +33,7 @@ int valid_leave(object me, string dir)
                 }
                 else {
                         me->set_temp("long_road",i);
-                        return notify_fail("Äã×ß×Å×ß×Å..... ·¢ÏÖËÄÖÜ¾°É«¾ÓÈ»¶¼Ã»ÓÐ±ä....\n");
+                        return notify_fail("ä½ èµ°ç€èµ°ç€..... å‘çŽ°å››å‘¨æ™¯è‰²å±…ç„¶éƒ½æ²¡æœ‰å˜....\n");
                 }
         }
         else {

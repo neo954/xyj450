@@ -5,17 +5,17 @@ inherit WAIST;
 
 void create()
 {                              
-     set_name(HIG "±ÌÓñ"+ HIM "ºìñÎ´ø" NOR, ({"Red belt","belt"}) );
+     set_name(HIG "ç¢§ç‰"+ HIM "çº¢è£å¸¦" NOR, ({"Red belt","belt"}) );
      set_weight(500);
      if ( clonep() )
               set_default_object(__FILE__);
      else {
-     set("long", "ÕâÊÇÒ»ÌõË¿³ñÖÆµÄ²Ê´ø£¬ÖÊ¸Ğ¼Ñ£¬ÉÏĞåÓĞ²Ê¡õ½­Ë®ÎÆ¡£\n");
-            set("unit", "Ìõ");
+     set("long", "è¿™æ˜¯ä¸€æ¡ä¸ç»¸åˆ¶çš„å½©å¸¦ï¼Œè´¨æ„Ÿä½³ï¼Œä¸Šç»£æœ‰å½©â–¡æ±Ÿæ°´çº¹ã€‚\n");
+            set("unit", "æ¡");
             set("value", 2000);
             set("material", "cloth");
             set("armor_prop/armor", 4);
-     set("wear_msg", "$N½«$nÄÃ³öÏµÔÚÑüÉÏ¡£\n");
+     set("wear_msg", "$Nå°†$næ‹¿å‡ºç³»åœ¨è…°ä¸Šã€‚\n");
     }
     setup();
 }

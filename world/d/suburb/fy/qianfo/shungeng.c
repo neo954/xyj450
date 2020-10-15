@@ -6,11 +6,11 @@ inherit ROOM;
 int do_callwaiter(object room);
 void create()
 {
-  set("short","Ë´¸ûÉ½×¯");
+  set("short","èˆœè€•å±±åº„");
   set("long",@LONG
-Õâ±ãÊÇºÕºÕÓĞÃûµÄË´¸ûÉ½×¯£¬´«ËµË´µÛÔøÔÚ´Ë¸û×÷¹ı¡£
-ÊÇÕæÊÇ¼ÙÒÑ²»µÃ¶øÖª£¬µ«ÕâÀïµÄ·¿×ÓÈ·ÊµÇ§½ğÄÑÇó¡£ÄÜÔÚ´ËÓĞ
-Ò»´¦·¿²úĞí¶àÈËÒ»ÉúµÄÃÎ¡£´óÃÅÉîËø£¬ÄúÇë½ĞÈË¿ªÃÅ¡£ 
+è¿™ä¾¿æ˜¯èµ«èµ«æœ‰åçš„èˆœè€•å±±åº„ï¼Œä¼ è¯´èˆœå¸æ›¾åœ¨æ­¤è€•ä½œè¿‡ã€‚
+æ˜¯çœŸæ˜¯å‡å·²ä¸å¾—è€ŒçŸ¥ï¼Œä½†è¿™é‡Œçš„æˆ¿å­ç¡®å®åƒé‡‘éš¾æ±‚ã€‚èƒ½åœ¨æ­¤æœ‰
+ä¸€å¤„æˆ¿äº§è®¸å¤šäººä¸€ç”Ÿçš„æ¢¦ã€‚å¤§é—¨æ·±é”ï¼Œæ‚¨è¯·å«äººå¼€é—¨ã€‚ 
 (callwaiter)
 LONG
   );
@@ -45,7 +45,7 @@ int callwaiter()
        return do_callwaiter(room);
        }
     }
-   return notify_fail("ÄúµÄ·¿×ÓÕıÔÚÇåÀí£¬ÇëÉÔµÈÆ¬¿Ì¡£\n");
+   return notify_fail("æ‚¨çš„æˆ¿å­æ­£åœ¨æ¸…ç†ï¼Œè¯·ç¨ç­‰ç‰‡åˆ»ã€‚\n");
 }
 int do_callwaiter(object room)
 {
@@ -59,7 +59,7 @@ int do_callwaiter(object room)
    me=this_player();
    seteuid(geteuid(me));
    homestaff=me->query("homestaff");  
-   tell_object(me,"Ò»¸öÁì°àĞ¡ÅÜ¹ıÀ´°ÑÄãÁìÈëÄãµÄ·¿¼ä¡£\n");    
+   tell_object(me,"ä¸€ä¸ªé¢†ç­å°è·‘è¿‡æ¥æŠŠä½ é¢†å…¥ä½ çš„æˆ¿é—´ã€‚\n");    
 
    if(mapp(homestaff) && sizeof(homestaff)){
       terms=keys(homestaff);  
@@ -88,9 +88,9 @@ int do_callwaiter(object room)
    } 
 //   me->move("/ftp/mac/private.c");
      me->move(room);
-     tell_object(me,"Å¶...ÕâÊÇÄãµÄĞÅÏä \n");    
+     tell_object(me,"å“¦...è¿™æ˜¯ä½ çš„ä¿¡ç®± \n");    
      mbox=new(MAILBOX_OB);
      mbox->move(me);
-   tell_object(me,"ºÜ¿ìÍËÁËÏÂÈ¥¡£\n");
+   tell_object(me,"å¾ˆå¿«é€€äº†ä¸‹å»ã€‚\n");
    return 1; 
 }

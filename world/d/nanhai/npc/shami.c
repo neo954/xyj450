@@ -1,15 +1,15 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
-// shami.c Ğ¡É³ÃÖº
+// shami.c å°æ²™å¼¥ï¿½
 // By Dream Dec. 20, 1996
 
 inherit NPC;
 
 void create()
 {
-   set_name("Ğ¡É³ÃÖ", ({ "shami", "bonze" }));
-   set("gender", "ÄĞĞÔ");
+   set_name("å°æ²™å¼¥", ({ "shami", "bonze" }));
+   set("gender", "ç”·æ€§");
    set("age", 10);
    set("attitude", "peaceful");
    set("class", "bonze");

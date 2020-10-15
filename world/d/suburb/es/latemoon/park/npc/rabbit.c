@@ -2,26 +2,26 @@ inherit NPC;
 
 void create()
 {
-     set_name("Ğ¡°×ÍÃ", ({ "rabbit" }) );
-	set("race", "Ò°ÊŞ");
+     set_name("å°ç™½å…”", ({ "rabbit" }) );
+	set("race", "é‡å…½");
 	set("age", 1);
-	set("gender", "´ÆĞÔ");
-     set("long", "Ò»Ö»ºìÑÛ¾¦µÄĞ¡°×ÍÃ¡£\n");
+	set("gender", "é›Œæ€§");
+     set("long", "ä¸€åªçº¢çœ¼ç›çš„å°ç™½å…”ã€‚\n");
 
     set("str", 20);
 
     set("combat_exp", 1000);
 	set("attitude","peaceful");
 
-     set("limbs", ({ "Í·²¿", "ÉíÌå","Ç°½Å","ºóÍÈ" }) );
+     set("limbs", ({ "å¤´éƒ¨", "èº«ä½“","å‰è„š","åè…¿" }) );
     set("verbs", ({ "bite","claw" }) );
     set_temp("apply/dodge", 30);
 
     set("chat_chance", 7);
 	set("chat_msg", ({
 		(: random_move :),
-        "Ğ¡°×ÍÃ±Ä±ÄÌøÌøµÄ¡£\n",
-        "Ğ¡°×ÍÃÓÃ×ìÌòÇ°Ö«¡£ \n"
+        "å°ç™½å…”è¹¦è¹¦è·³è·³çš„ã€‚\n",
+        "å°ç™½å…”ç”¨å˜´èˆ”å‰è‚¢ã€‚ \n"
 	}) );
 
 	setup();

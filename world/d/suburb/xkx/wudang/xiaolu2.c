@@ -1,4 +1,4 @@
-// xiaolu2.c ÁÖ¼äÐ¡¾¶
+// xiaolu2.c æž—é—´å°å¾„
 // by Xiang
 
 #include <room.h>
@@ -6,10 +6,10 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "ÁÖ¼äÐ¡¾¶");
+	set("short", "æž—é—´å°å¾„");
 	set("long", @LONG
-	Äã×ßÔÚÒ»ÌõÐ¡¾¶ÉÏ£¬Á½ÅÔÖÖÂúÁËÖñ×Ó£¬ÐÞóòÉ­É­£¬ÂÌÒñÂúµØ£¬³ýÁËÖñÒ¶
-ÉùºÍÄñÃùÉù£¬Ìý²»µ½±ðµÄ¶¯¾²¡£±±ÃæËÆºõÓÐÒ»×ù¼òÂªµÄÐ¡Ôº¡£
+	ä½ èµ°åœ¨ä¸€æ¡å°å¾„ä¸Šï¼Œä¸¤æ—ç§æ»¡äº†ç«¹å­ï¼Œä¿®ç¯æ£®æ£®ï¼Œç»¿è«æ»¡åœ°ï¼Œé™¤äº†ç«¹å¶
+å£°å’Œé¸Ÿé¸£å£°ï¼Œå¬ä¸åˆ°åˆ«çš„åŠ¨é™ã€‚åŒ—é¢ä¼¼ä¹Žæœ‰ä¸€åº§ç®€é™‹çš„å°é™¢ã€‚
 LONG
 	);
 
@@ -17,7 +17,7 @@ LONG
 		"north" : __DIR__"xiaoyuan.c",
 		"south" : __DIR__"xiaolu1",
 	]));
-	create_door("north", "ÖñÃÅ", "south", DOOR_CLOSED);
+	create_door("north", "ç«¹é—¨", "south", DOOR_CLOSED);
 	setup();
 	replace_program(ROOM);
 }

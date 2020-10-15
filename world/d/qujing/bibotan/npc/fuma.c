@@ -1,13 +1,13 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit NPC;
 void create()
 {
-       set_name("¾ÅÍ·æâÂí", ({"jiutou fuma","fuma"}));
+       set_name("ä¹å¤´é©¸é©¬", ({"jiutou fuma","fuma"}));
 
-        set("long","¾ÅÍ·æâÂíÔ­ÔÚ±±Ú¤´óÔóÔóÖĞĞŞÁ·£¬ºó±»ÕĞÎªæâÂí¡£\n");
-       set("gender", "ÄĞĞÔ");
+        set("long","ä¹å¤´é©¸é©¬åŸåœ¨åŒ—å†¥å¤§æ³½æ³½ä¸­ä¿®ç»ƒï¼Œåè¢«æ‹›ä¸ºé©¸é©¬ã€‚\n");
+       set("gender", "ç”·æ€§");
        set("age", 20);
         set("int", 25);
        set("attitude", "heroism");
@@ -44,7 +44,7 @@ void create()
 
 int recognize_apprentice(object who)
 {   who= this_player();
-   if( who->query("family/family_name")=="ÂÒÊ¯É½±Ì²¨Ì¶" 
+   if( who->query("family/family_name")=="ä¹±çŸ³å±±ç¢§æ³¢æ½­" 
      && who->query("can_learn_staff") ) { 
            return 1;
    }

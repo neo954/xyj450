@@ -1,20 +1,20 @@
 inherit NPC;
 void create()
 {
-    set_name("½ğË¿È¸", ({ "sparrow" }) );
-        set("race", "Ò°ÊŞ");
+    set_name("é‡‘ä¸é›€", ({ "sparrow" }) );
+        set("race", "é‡å…½");
         set("age", 1);
-        set("gender", "´ÆĞÔ");
-        set("long", "Ò»Ö»ÉÁÁÁµÄ½ğË¿È¸ \n");
+        set("gender", "é›Œæ€§");
+        set("long", "ä¸€åªé—ªäº®çš„é‡‘ä¸é›€ \n");
     set("combat_exp", 1000);
         set("attitude","peaceful");
-        set("limbs", ({ "Í·²¿", "ÉíÌå","³á°ò" }) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“","ç¿…è†€" }) );
     	set("verbs", ({ "bite","claw" }) );
         set_temp("apply/dodge", 100);
 	    set("chat_chance", 7);
         set("chat_msg", ({
-        "Ğ¡½ğË¿È¸ß´ß´µÄ½Ğ£¡ \n",
-        "½ğË¿È¸ÓÃ×ìÕûÀíÓğÃ«¡£ \n"
+        "å°é‡‘ä¸é›€å½å½çš„å«ï¼ \n",
+        "é‡‘ä¸é›€ç”¨å˜´æ•´ç†ç¾½æ¯›ã€‚ \n"
         }) );
         setup();
 }

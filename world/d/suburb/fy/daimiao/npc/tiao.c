@@ -4,10 +4,10 @@
 inherit NPC;
 void create()
 {
-	set_name("ÌôÉ½·ò", ({ "labor" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("æŒ‘å±±å¤«", ({ "labor" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 47);
-	set("long", "Õâ¸öÈËÊÇÒÔÍùÉ½ÉÏÌô¶«Î÷ÎªÉúµÄ¡£\n");
+	set("long", "è¿™ä¸ªäººæ˜¯ä»¥å¾€å±±ä¸ŠæŒ‘ä¸œè¥¿ä¸ºç”Ÿçš„ã€‚\n");
 	set("combat_exp", 1000);
 	set("str", 27);
 	set("force", 30);
@@ -27,12 +27,12 @@ void create()
 int accept_object(object me, object obj)
 {
 	command("smile");
-	command("say ¶àĞ»ÕâÎ»" + RANK_D->query_respect(me) + "£¡");
+	command("say å¤šè°¢è¿™ä½" + RANK_D->query_respect(me) + "ï¼");
 	return 1;
 }
 
 int accept_fight(object me)
 {
-	command("say " + RANK_D->query_respect(me) + "ÈÄÃü£¡Ğ¡µÄÕâ¾ÍÀë¿ª£¡\n");
+	command("say " + RANK_D->query_respect(me) + "é¥¶å‘½ï¼å°çš„è¿™å°±ç¦»å¼€ï¼\n");
 	return 0;
 }

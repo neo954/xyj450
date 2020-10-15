@@ -4,17 +4,17 @@ inherit NPC;
 string mark_you();
 void create()
 {
-        set_name("ÀîÏ¼", ({ "lixia" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("æéœ", ({ "lixia" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 24);
 	set("per",5);
         set("long",
                 
-"Õâ¸öÅ®ÈË¿´ÆğÀ´¶şÊ®¶àËêÁË£¬¿´ÖøËı´Ö×³µÄÉíĞÎ£¬Äã¾õµÃ£®£®£®¡£\n");
+"è¿™ä¸ªå¥³äººçœ‹èµ·æ¥äºŒåå¤šå²äº†ï¼Œçœ‹è‘—å¥¹ç²—å£®çš„èº«å½¢ï¼Œä½ è§‰å¾—ï¼ï¼ï¼ã€‚\n");
         set("combat_exp", 1);
         set("chat_chance", 1);
         set("chat_msg", ({
-"ÀîÏ¼ËµµÀ£º¸øÎÒ°ÙÁ½»Æ½ğ£¬ÅÆ¾ÍÊÇÄãµÄ£®\n",
+"æéœè¯´é“ï¼šç»™æˆ‘ç™¾ä¸¤é»„é‡‘ï¼Œç‰Œå°±æ˜¯ä½ çš„ï¼\n",
         }) );
 
         set("attitude", "friendly");
@@ -29,9 +29,9 @@ int accept_object(object who, object ob)
                 return 0;
         if( val >= 100000 ) 
 	{
-        say( "ÀîÏ¼ËµµÀ£ºÕâÎ»" + RANK_D->query_respect(who)
-                + "£¬ÄãÈ¥±ùºÓ£¬°ÑËüÕ¨£¨£â£ï£í£â£©³öÀ´£®\n");
-	who->set("marks/ÀîÏ¼",1);
+        say( "æéœè¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(who)
+                + "ï¼Œä½ å»å†°æ²³ï¼ŒæŠŠå®ƒç‚¸ï¼ˆï½‚ï½ï½ï½‚ï¼‰å‡ºæ¥ï¼\n");
+	who->set("marks/æéœ",1);
         return 1;
 	}
 	return 0;

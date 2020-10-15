@@ -5,12 +5,12 @@
 inherit ITEM;
 void create()
 {
-    set_name( "Ğ¡Ä¾·¤", ({ "boat","little boat"  }) );
-    set("unit", "¿é");
+    set_name( "å°æœ¨ç­", ({ "boat","little boat"  }) );
+    set("unit", "å—");
     set("value",20);
     set("floating",1);
     set("long","
-Ò»¸öĞ¡Ğ¡µÄĞ¡Ä¾·¤
+ä¸€ä¸ªå°å°çš„å°æœ¨ç­
 \n");
     set_weight(150000);
 }

@@ -3,13 +3,13 @@ inherit ITEM;
 
 void create()
 {
-	set_name("ÑòÍ·", ({ "yangtou", "tou" }) );
+	set_name("ç¾Šå¤´", ({ "yangtou", "tou" }) );
 	set_weight(350);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¿é°ë¸¯ÀÃµÄÑòÍ·\n");
-		set("unit", "¿é");
+		set("long", "ä¸€å—åŠè…çƒ‚çš„ç¾Šå¤´\n");
+		set("unit", "å—");
 		set("value", 2000);
 		set("food_remaining", 5);
 		set("food_supply", 60);
@@ -20,9 +20,9 @@ void create()
 int finish_eat()
 {
 	object qu;
-        set_name("ÑòÍ·¹Ç", ({"bone"}));
+        set_name("ç¾Šå¤´éª¨", ({"bone"}));
 	set("value",0);
-        set("long", "Ò»¸ö¿ÐµÃ¸É¸É¾»¾»µÄÑòÍ·¹Ç\n");
+        set("long", "ä¸€ä¸ªå•ƒå¾—å¹²å¹²å‡€å‡€çš„ç¾Šå¤´éª¨\n");
         set_max_encumbrance(10);
 	qu = new(__DIR__"qu");
 	qu->move(this_object());
@@ -31,7 +31,7 @@ int finish_eat()
 
 int is_container()
 {
-	if(this_object()->query("name") == "ÑòÍ·¹Ç" )
+	if(this_object()->query("name") == "ç¾Šå¤´éª¨" )
 			return 1;
 	else  return 0;
 }

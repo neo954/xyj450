@@ -12,7 +12,7 @@ void skill_improved(object me)
 
 	s = me->query_skill("foreknowledge", 1);
 	if( (int)me->query("kar") < s/5) {
-		tell_object(me, HIW "由於对占卜学的更深一步的理解，你的运气提高了。\n" NOR);
+		tell_object(me, HIW "鐢辨柤瀵瑰崰鍗滃鐨勬洿娣变竴姝ョ殑鐞嗚В锛屼綘鐨勮繍姘旀彁楂樹簡銆俓n" NOR);
 		me->add("kar", 1);
 	}
 }

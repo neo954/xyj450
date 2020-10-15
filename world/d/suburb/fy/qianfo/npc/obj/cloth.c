@@ -6,14 +6,14 @@ inherit CLOTH;
 
 void create()
 {
-        string *order=({"´Ö²¼", "ÃŞ²¼", "À¶²¼", "Ï´µÃ·¢°×µÄ",
-"Çà²¼","×Ï²¼","ºÚ²¼","°×²¼"});
-        set_name((order[random(8)]) +"É®ÒÂ", ({ "monk cloth", "cloth"}) );
+        string *order=({"ç²—å¸ƒ", "æ£‰å¸ƒ", "è“å¸ƒ", "æ´—å¾—å‘ç™½çš„",
+"é’å¸ƒ","ç´«å¸ƒ","é»‘å¸ƒ","ç™½å¸ƒ"});
+        set_name((order[random(8)]) +"åƒ§è¡£", ({ "monk cloth", "cloth"}) );
         set_weight(3000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¼ş");
+                set("unit", "ä»¶");
                 set("material", "cloth");
                 set("armor_prop/armor", 1);
                 set("armor_prop/dodge", 1);

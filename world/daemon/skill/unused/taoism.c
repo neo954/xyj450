@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // taoism.c
@@ -12,11 +12,11 @@ string type() { return "knowledge"; }
 int valid_learn(object me) 
 {
    if( (int)me->query("bellicosity") > 100 )
-     return notify_fail("ÄãµÄÉ±ÆøÌ«ÖØ£¬ÎŞ·¨ĞŞÁ¶ÌìÊ¦ÕıµÀ¡£\n");
+     return notify_fail("ä½ çš„æ€æ°”å¤ªé‡ï¼Œæ— æ³•ä¿®ç‚¼å¤©å¸ˆæ­£é“ã€‚\n");
    return 1;
 }
 
 int practice_skill(object me)
 {   
-   return notify_fail("·¨ÊõÀà¼¼ÄÜ±ØĞëÓÃÑ§µÄ»òÊÇ´ÓÊµÕ½ÖĞ»ñÈ¡¾­Ñé¡£\n");
+   return notify_fail("æ³•æœ¯ç±»æŠ€èƒ½å¿…é¡»ç”¨å­¦çš„æˆ–æ˜¯ä»å®æˆ˜ä¸­è·å–ç»éªŒã€‚\n");
 }

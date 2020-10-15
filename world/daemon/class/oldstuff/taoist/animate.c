@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // animate.c
@@ -7,14 +7,14 @@ inherit F_CLEAN_UP;
 
 int cast(object me, object target)
 {
-   if( me->is_fighting() )   return notify_fail("ÄãÕıÔÚÕ½¶·ÖĞ£¡\n");
+   if( me->is_fighting() )   return notify_fail("ä½ æ­£åœ¨æˆ˜æ–—ä¸­ï¼\n");
    
-   if( !target || !target->is_corpse() ) return notify_fail("ÄãÒªÇı¶¯ÄÄÒ»¾ß¡õÌå£¿\n");
+   if( !target || !target->is_corpse() ) return notify_fail("ä½ è¦é©±åŠ¨å“ªä¸€å…·â–¡ä½“ï¼Ÿ\n");
    
-   if( (int)me->query("mana") < 50 ) return notify_fail("ÄãµÄ·¨Á¦²»¹»ÁË£¡\n");
+   if( (int)me->query("mana") < 50 ) return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿäº†ï¼\n");
 
    message_vision(
-     "$N¶Ô×ÅµØÉÏµÄ$nà«à«µØÄîÁË¼¸¾äÖäÓï£¬$n³é´¤ÁË¼¸ÏÂ¾¹Õ¾ÁËÆğÀ´£¡\n", me, target);
+     "$Nå¯¹ç€åœ°ä¸Šçš„$nå–ƒå–ƒåœ°å¿µäº†å‡ å¥å’’è¯­ï¼Œ$næŠ½æäº†å‡ ä¸‹ç«Ÿç«™äº†èµ·æ¥ï¼\n", me, target);
 
    target->animate(me, (int)me->query_skill("spells") * 3 + 30);
 

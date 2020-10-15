@@ -4,14 +4,14 @@ string show_dragon();
  
 void create()
 {
-        set_name("ÕÑÒÇ", ({ "zauyi", "joe" }) );
-        set("title", "ÍíÔÂ×¯µÚÈý´úµÜ×Ó");
-        set("gender", "Å®ÐÔ" );
+        set_name("æ˜­ä»ª", ({ "zauyi", "joe" }) );
+        set("title", "æ™šæœˆåº„ç¬¬ä¸‰ä»£å¼Ÿå­");
+        set("gender", "å¥³æ€§" );
         set("age",17);
         set("long", @TEXT
-Ëý¿´ÆðÀ´·Ç³£¿É°®¡£Éí²ÄÁáççÓÐÖÂ£¬ÇúÏßÃçÌõ¡£
-µÚÒ»ÑÛÓ¡Ïó£¬Äã¾õµÄËýÎèµ¸Ò»¶¨ÌøµÄ²»´í£¬¿´ËýµÄÒ»¾ÙÒ»¶¯
-ÓÐÒ»ÖÖËµ²»³öµÄÁ÷³©ÓÅÑÅ£¡
+å¥¹çœ‹èµ·æ¥éžå¸¸å¯çˆ±ã€‚èº«æçŽ²ç‘æœ‰è‡´ï¼Œæ›²çº¿è‹—æ¡ã€‚
+ç¬¬ä¸€çœ¼å°è±¡ï¼Œä½ è§‰çš„å¥¹èˆžè¹ˆä¸€å®šè·³çš„ä¸é”™ï¼Œçœ‹å¥¹çš„ä¸€ä¸¾ä¸€åŠ¨
+æœ‰ä¸€ç§è¯´ä¸å‡ºçš„æµç•…ä¼˜é›…ï¼
 TEXT
 );
        set("class", "dancer");
@@ -30,20 +30,20 @@ TEXT
         set("force_factor", 2);
         set_temp("apply/armor", 30);
         set("inquiry", ([
-         "Í¼" : "ÕâÊÇÒ»ÕÅ·Ç³£Õæ¹óµÄÏæÐåÎèÇúÍ¼£¬ÎÒÒ²ÔÚÑÐ¾¿ÖÐ¡£\n",
-         "²×º£ÁúÒ÷" : "àÅ ...ÎªÕâÎèÇúÃû¡£ËÆºõÓêÃ·æ¢ÖªµÀ¡£\n",
-         "ÓÐ·ïÀ´ÒÇ" : "àÅ ...ÎªÕâÎèÇúÃû¡£(dancing yu-fong)ºÜÓÐÃû£¡ \n",
-         "Î÷³öÑô¹Ø" : "¡¸»ÃÓ°Ê½Îè²½¡¹²½·¨ÓëµØµã¶¼ºÜÖØÒª¡£\n",
-         "·¼ç±" : "Ëý´ÏÃ÷ÁæÀþ£¬»áÌøÒ»Ð©×Ô´´µÄÎè²½¡£\n",
-         "»­" : "²×º£ÁúÒ÷ÊÇÒ»·ùÏæÐåÎèÇúÍ¼£¬¼ÇÔØÒ»Ð©Õä¹óÎè²½¡£\n",
-            "º®¹ÈÁúÎè" : (: this_object(), "show_dance" :),
-            "Îè" : (: this_object(), "show_dragon" :)
+         "å›¾" : "è¿™æ˜¯ä¸€å¼ éžå¸¸çœŸè´µçš„æ¹˜ç»£èˆžæ›²å›¾ï¼Œæˆ‘ä¹Ÿåœ¨ç ”ç©¶ä¸­ã€‚\n",
+         "æ²§æµ·é¾™åŸ" : "å—¯ ...ä¸ºè¿™èˆžæ›²åã€‚ä¼¼ä¹Žé›¨æ¢…å§ŠçŸ¥é“ã€‚\n",
+         "æœ‰å‡¤æ¥ä»ª" : "å—¯ ...ä¸ºè¿™èˆžæ›²åã€‚(dancing yu-fong)å¾ˆæœ‰åï¼ \n",
+         "è¥¿å‡ºé˜³å…³" : "ã€Œå¹»å½±å¼èˆžæ­¥ã€æ­¥æ³•ä¸Žåœ°ç‚¹éƒ½å¾ˆé‡è¦ã€‚\n",
+         "èŠ³ç»«" : "å¥¹èªæ˜Žä¼¶ä¿ï¼Œä¼šè·³ä¸€äº›è‡ªåˆ›çš„èˆžæ­¥ã€‚\n",
+         "ç”»" : "æ²§æµ·é¾™åŸæ˜¯ä¸€å¹…æ¹˜ç»£èˆžæ›²å›¾ï¼Œè®°è½½ä¸€äº›çè´µèˆžæ­¥ã€‚\n",
+            "å¯’è°·é¾™èˆž" : (: this_object(), "show_dance" :),
+            "èˆž" : (: this_object(), "show_dragon" :)
         ]));
         setup();
         set("chat_chance", 8);
         set("chat_msg", ({
-"ÕÑÒÇÒÔÇáÃîµÄÎè²½£¬ÔÚ·¿ÄÚÌøÁËÆðÀ´!Äã¿´µÄÈëÉñ¡£\n",
-"ÕÑÒÇÌ§Í·ÍûÖøÄÇ·ùÍ¼»­£¬ÂÔÓÐËùË¼... \n"
+"æ˜­ä»ªä»¥è½»å¦™çš„èˆžæ­¥ï¼Œåœ¨æˆ¿å†…è·³äº†èµ·æ¥!ä½ çœ‹çš„å…¥ç¥žã€‚\n",
+"æ˜­ä»ªæŠ¬å¤´æœ›è‘—é‚£å¹…å›¾ç”»ï¼Œç•¥æœ‰æ‰€æ€... \n"
         }) );
       carry_object(__DIR__"obj/yu_blade")->wield();
       carry_object(__DIR__"obj/flower_boot")->wear();
@@ -55,10 +55,10 @@ string show_dance()
         string str;
         str = (string)this_object()->query("name");
         me = this_player();
-        tell_object(me, str+"ºÜÆæ¹ÖµÄÍûÖøÄã£¬ËµµÀ:Îû!Äã¶ÔÎèÓÐÐËÈ¤Ñ½! \n");
-        tell_object(me,"Ö»¼ûÁ½ÑÛÁïÀ´ÁïÈ¥£¬Ò»ÖÖºÜÉñÃØµÄ±íÇé£¬à½Öø×ì¡£\n");
-        tell_object(me,"¹ýÁËÒ»»áËµ£ººÃ°É!ÍµÍµ¸úÄãËµ£¬Äã¿ÉÒÔ²é¿´Ç½ÉÏ"
-     +"µÄÍ¼¡£(dragon-dance) \n");
+        tell_object(me, str+"å¾ˆå¥‡æ€ªçš„æœ›è‘—ä½ ï¼Œè¯´é“:å˜»!ä½ å¯¹èˆžæœ‰å…´è¶£å‘€! \n");
+        tell_object(me,"åªè§ä¸¤çœ¼æºœæ¥æºœåŽ»ï¼Œä¸€ç§å¾ˆç¥žç§˜çš„è¡¨æƒ…ï¼Œå˜Ÿè‘—å˜´ã€‚\n");
+        tell_object(me,"è¿‡äº†ä¸€ä¼šè¯´ï¼šå¥½å§!å·å·è·Ÿä½ è¯´ï¼Œä½ å¯ä»¥æŸ¥çœ‹å¢™ä¸Š"
+     +"çš„å›¾ã€‚(dragon-dance) \n");
         return "....\n";
 }
 string show_dragon()
@@ -67,9 +67,9 @@ string show_dragon()
       string str;
       str = (string)this_object()->query("name");
       me = this_player();
-      tell_object(me, str+"ºÜ¸ßÐËµÄ¿´ÖøÄã£¬ËµµÀ:Îû!Äã¶ÔÎèÓÐÐËÈ¤Ñ½!\n");
-      tell_object(me,"ÕâÓÐÒ»·ùÍ¼»­£¬ÎÒ´ÓÄÇÎòµ½ºÃ¶àÐÂÎè²½Å¶! \n");
-      tell_object(me,"¡º ²×º£ÁúÒ÷¡»ÊÇÒ»Ê×Ê§´«ÒÔ¾ÃµÄÎèÇú¡£´«Ëµ....\n");
+      tell_object(me, str+"å¾ˆé«˜å…´çš„çœ‹è‘—ä½ ï¼Œè¯´é“:å˜»!ä½ å¯¹èˆžæœ‰å…´è¶£å‘€!\n");
+      tell_object(me,"è¿™æœ‰ä¸€å¹…å›¾ç”»ï¼Œæˆ‘ä»Žé‚£æ‚Ÿåˆ°å¥½å¤šæ–°èˆžæ­¥å“¦! \n");
+      tell_object(me,"ã€Ž æ²§æµ·é¾™åŸã€æ˜¯ä¸€é¦–å¤±ä¼ ä»¥ä¹…çš„èˆžæ›²ã€‚ä¼ è¯´....\n");
       return "......\n";
 }
 

@@ -4,7 +4,7 @@
 inherit ITEM;
 void create()
 {
-	set_name("Í­ÈËµÄ¸Î", ({ "liver" , "¸Î", "Í­ÈËµÄ¸Î"}) );
+	set_name("é“œäººçš„è‚", ({ "liver" , "è‚", "é“œäººçš„è‚"}) );
 	set_weight(500);
 	set_max_encumbrance(1);
 	set("no_get", 1);
@@ -12,8 +12,8 @@ void create()
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
-		set("long", "ÕâÊÇÒ»¸öÔÚÍ­ÈË¸ÎµÄ²¿Î»£¬ÕëÑÛ´óĞ¡°ãµÄÒ»¸ö¿×¡£\n");
+		set("unit", "ä¸ª");
+		set("long", "è¿™æ˜¯ä¸€ä¸ªåœ¨é“œäººè‚çš„éƒ¨ä½ï¼Œé’ˆçœ¼å¤§å°èˆ¬çš„ä¸€ä¸ªå­”ã€‚\n");
 		set("value", 1);
 	}
 }

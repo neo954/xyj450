@@ -5,20 +5,20 @@ inherit NPC;
 int give_him();
 void create()
 {
-	set_name("´©¿ªñÉ¿ãµÄĞ¡º¢¶ù", ({ "boy","little boy" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("ç©¿å¼€è£†è£¤çš„å°å­©å„¿", ({ "boy","little boy" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 5);
 	set("combat_exp", 5);
 	set("attitude", "friendly");
 	set("per",2);
-	set("arrive_msg", "ÍáÍáÅ¤æ¤µØÅÀÁË¹ıÀ´");
-	set("leave_msg", "ÍáÍáÅ¤æ¤µØÅÀ¿ªÁË");
+	set("arrive_msg", "æ­ªæ­ªæ‰­å¦åœ°çˆ¬äº†è¿‡æ¥");
+	set("leave_msg", "æ­ªæ­ªæ‰­å¦åœ°çˆ¬å¼€äº†");
         set("chat_chance", 15);
         set("chat_msg", ({
 		                (: random_move :)
         }) );
         set("inquiry", ([
-                "¿ªñÉ¿ã" : (: give_him :),
+                "å¼€è£†è£¤" : (: give_him :),
 		"kaidang" : (: give_him :),
         ]));
 	setup();
@@ -29,7 +29,7 @@ int give_him()
 	me = this_player();
 	if( !query("given")) {
 	obj = new(__DIR__"obj/kaidang");
-	message_vision("$N½«¿ªñÉ¿ãÍÑÏÂÀ´£¬¸øÁË$n¡£\n",this_object(), me);
+	message_vision("$Nå°†å¼€è£†è£¤è„±ä¸‹æ¥ï¼Œç»™äº†$nã€‚\n",this_object(), me);
 	obj->move(me);
 	set("given",1);
 	return 1;

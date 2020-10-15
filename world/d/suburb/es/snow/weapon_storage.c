@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "±øÆ÷´¢²ØÊÒ");
+	set("short", "å…µå™¨å‚¨è—å®¤");
 	set("long", @LONG
-ÕâÊÇÒ»¼ä¶ÑÂú¸÷Ê½±øÆ÷¡¢µ¶ĞµµÄ´¢²ØÊÒ£¬¸÷Ê½ÎäÆ÷¶¼ÒÀÕÕÖÖÀà¡¢³¤
-¶Ì¡¢ÒÀ´Î·ÅÔÚÒ»Æğ£¬²¢ÇÒ²ÁÊÃµÃÒ»³¾²»È¾£¬´¢²ØÊÒµÄ³ö¿ÚÔÚÄãµÄÄÏ±ß£¬
-Ãæ¶Ô³ö¿ÚµÄ×óÊÖ±ßÓĞÒ»¸ö¼Ü×Ó(shelf)¡£
+è¿™æ˜¯ä¸€é—´å †æ»¡å„å¼å…µå™¨ã€åˆ€æ¢°çš„å‚¨è—å®¤ï¼Œå„å¼æ­¦å™¨éƒ½ä¾ç…§ç§ç±»ã€é•¿
+çŸ­ã€ä¾æ¬¡æ”¾åœ¨ä¸€èµ·ï¼Œå¹¶ä¸”æ“¦æ‹­å¾—ä¸€å°˜ä¸æŸ“ï¼Œå‚¨è—å®¤çš„å‡ºå£åœ¨ä½ çš„å—è¾¹ï¼Œ
+é¢å¯¹å‡ºå£çš„å·¦æ‰‹è¾¹æœ‰ä¸€ä¸ªæ¶å­(shelf)ã€‚
 LONG
 	);
 	set("exits", ([
@@ -18,7 +18,7 @@ LONG
 		__DIR__"npc/obj/bamboo_sword": 1,
 	]) );
 	set("item_desc", ([
-		"shelf": "Õâ¸ö¼Ü×ÓÉÏ¿Õµ´µ´µÄ£¬Ê²Ã´Ò²Ã»ÓĞ¡ª¡ªÁ¬»Ò³¾Ò²Ã»ÓĞ¡£\n"
+		"shelf": "è¿™ä¸ªæ¶å­ä¸Šç©ºè¡è¡çš„ï¼Œä»€ä¹ˆä¹Ÿæ²¡æœ‰â€”â€”è¿ç°å°˜ä¹Ÿæ²¡æœ‰ã€‚\n"
 	]) );
 
 	setup();
@@ -36,12 +36,12 @@ void check_trigger()
 	if( (int)query("left_trigger")==3
 	&&	(int)query("right_trigger")==5
 	&&	!query("exits/down") ) {
-		message("vision", "µØ°åºöÈ»·¢³öÔşÔşµÄÉùÒô£¬Ò»¿éµØÃæ»º»ºÒÆ¶¯Öø£¬Â¶³öÒ»¸öÏòÏÂµÄ½×Ìİ¡£\n",
+		message("vision", "åœ°æ¿å¿½ç„¶å‘å‡ºè½§è½§çš„å£°éŸ³ï¼Œä¸€å—åœ°é¢ç¼“ç¼“ç§»åŠ¨è‘—ï¼Œéœ²å‡ºä¸€ä¸ªå‘ä¸‹çš„é˜¶æ¢¯ã€‚\n",
 			this_object() );
 		set("exits/down", __DIR__"secrect_storage");
 		if( room = find_object(__DIR__"secrect_storage") ) {
 			room->set("exits/up", __FILE__);
-			message("vision", "Ìì»¨°åºöÈ»·¢³öÔşÔşµÄÉùÒô£¬Â¶³öÒ»¸öÏòÉÏµÄ½×Ìİ¡£\n",
+			message("vision", "å¤©èŠ±æ¿å¿½ç„¶å‘å‡ºè½§è½§çš„å£°éŸ³ï¼Œéœ²å‡ºä¸€ä¸ªå‘ä¸Šçš„é˜¶æ¢¯ã€‚\n",
 				room );
 		}
 		delete("left_trigger");
@@ -55,11 +55,11 @@ void close_passage()
 	object room;
 
 	if( !query("exits/down") ) return;
-	message("vision", "µØ°åºöÈ»·¢³öÔşÔşµÄÉùÒô£¬Ò»¿éµØÃæ»º»ºÒÆ¶¯Öø£¬½«ÏòÏÂµÄÍ¨µÀ¸Ç×¡ÁË¡£\n",
+	message("vision", "åœ°æ¿å¿½ç„¶å‘å‡ºè½§è½§çš„å£°éŸ³ï¼Œä¸€å—åœ°é¢ç¼“ç¼“ç§»åŠ¨è‘—ï¼Œå°†å‘ä¸‹çš„é€šé“ç›–ä½äº†ã€‚\n",
 		this_object() );
 	if( room = find_object(__DIR__"secrect_storage") ) {
 		room->delete("exits/up");
-		message("vision", "Ìì»¨°åºöÈ»·¢³öÔşÔşµÄÉùÒô£¬ÏòÉÏµÄ½×ÌİÓÖ»º»ºµØÊÕÁË»ØÈ¥¡£\n",
+		message("vision", "å¤©èŠ±æ¿å¿½ç„¶å‘å‡ºè½§è½§çš„å£°éŸ³ï¼Œå‘ä¸Šçš„é˜¶æ¢¯åˆç¼“ç¼“åœ°æ”¶äº†å›å»ã€‚\n",
 			room );
 	}
 	delete("exits/down");
@@ -73,22 +73,22 @@ int do_push(string arg)
 	if( !arg || arg=="" ) return 0;
 
 	if( arg=="shelf" ) {
-		write("ÄãÊÔÖøÍÆ¶¯Õâ¸ö¼Ü×Ó£¬ËÆºõ¿ÉÒÔ×óÓÒ»¬¶¯....\n");
+		write("ä½ è¯•è‘—æ¨åŠ¨è¿™ä¸ªæ¶å­ï¼Œä¼¼ä¹å¯ä»¥å·¦å³æ»‘åŠ¨....\n");
 		return 1;
 	}
 	if( sscanf(arg, "shelf %s", dir)==1 ) {
 		if( dir=="right" ) {
-			message_vision("$N½«¼Ü×ÓÍùÓÒÍÆ...£¬ºöÈ»¡¸¿¦¡¹Ò»Éù¼Ü×ÓÓÖÒÆ»ØÔ­Î»¡£\n", this_player());
+			message_vision("$Nå°†æ¶å­å¾€å³æ¨...ï¼Œå¿½ç„¶ã€Œå–€ã€ä¸€å£°æ¶å­åˆç§»å›åŸä½ã€‚\n", this_player());
 			add("right_trigger", 1);
 			check_trigger();
 			return 1;
 		} else if( dir=="left" ) {
-			message_vision("$N½«¼Ü×ÓÍù×óÍÆ...£¬ºöÈ»¡¸¿¦¡¹Ò»Éù¼Ü×ÓÓÖÒÆ»ØÔ­Î»¡£\n", this_player());
+			message_vision("$Nå°†æ¶å­å¾€å·¦æ¨...ï¼Œå¿½ç„¶ã€Œå–€ã€ä¸€å£°æ¶å­åˆç§»å›åŸä½ã€‚\n", this_player());
 			add("left_trigger", 1);
 			check_trigger();
 			return 1;
 		} else {
-			write("ÄãÒª½«¼Ü×ÓÍÆÏòÄÇ¸ö·½Ïò£¿\n");
+			write("ä½ è¦å°†æ¶å­æ¨å‘é‚£ä¸ªæ–¹å‘ï¼Ÿ\n");
 			return 1;
 		}
 	}

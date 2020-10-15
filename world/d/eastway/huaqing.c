@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // create by snowcat.c 4/20/1997
@@ -8,12 +8,12 @@ inherit ROOM;
 
 void create ()
 {
-  set ("short", "������");
+  set ("short", "曲江池");
   set ("long", @LONG
 
-�����ѵ��˳Ǳߣ����˽�������һ�����ص���Ȫ��Ȫˮ�峺����
-�����ƣ�Ϊ�޲����ɵļ��ѳ���������������˷׷�Զ��������
-���һԡ��
+这里已到了城边，听人讲这里有一个神秘的温泉，泉水清澈，雾
+气缭绕，为修补成仙的极佳场所。因此有许多人纷纷远道而来，
+求得一浴。
 LONG);
 
   set("exits", ([

@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("°×ÁÛ±ùÁú", ({ "icedragon","dragon" }) );
+	set_name("ç™½é³å†°é¾™", ({ "icedragon","dragon" }) );
 	set("long",
-		"Ò»Ö»»ëÉí³¤Âú°×ÁÛµÄÁú£¬\n");
+		"ä¸€åªæµ‘èº«é•¿æ»¡ç™½é³çš„é¾™ï¼Œ\n");
 
-	set("race", "Ò°ÊŞ");
+	set("race", "é‡å…½");
 	set("age", 600);
 	set("attitude", "aggressive");
 
@@ -22,7 +22,7 @@ void create()
 	set("spi", 70);
 	set("int", 20);
         set("con",1000);
-	set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°×¦", "áá×¦", "Î²°Í" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰çˆª", "å¾Œçˆª", "å°¾å·´" }) );
 	set("verbs", ({ "bite", "claw" }) );
 
 	set_temp("apply/attack", 50);

@@ -6,13 +6,13 @@ inherit HEAD;
 
 void create()
 {
-	set_name("ÇàÍ­µÀ¹Ú", ({"copper hat", "hat"}) );
+	set_name("é’é“œé“å† ", ({"copper hat", "hat"}) );
 	set_weight(1500);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¶¥ÇàÍ­µÀ¹Ú\n");
-		set("unit", "¶¥");
+		set("long", "ä¸€é¡¶é’é“œé“å† \n");
+		set("unit", "é¡¶");
 		set("value", 500);
 		set("material", "copper");
 		set("armor_prop/armor", 1);

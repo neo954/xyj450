@@ -6,13 +6,13 @@ inherit THROWING;
 
 void create()
 {
-        set_name("ºì¹ğ»¨", ({ "osmanthus flower", "flower" }) );
+        set_name("çº¢æ¡‚èŠ±", ({ "osmanthus flower", "flower" }) );
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("long",     "²ÅÕªµÄ¹ğ»¨£¬·¢³öÕóÕóµ­µ­µÄÓÄÏã¡£\n");
-                set("unit", "°Ñ");
-                set("base_unit", "Á£");
+                set("long",     "æ‰æ‘˜çš„æ¡‚èŠ±ï¼Œå‘å‡ºé˜µé˜µæ·¡æ·¡çš„å¹½é¦™ã€‚\n");
+                set("unit", "æŠŠ");
+                set("base_unit", "ç²’");
                 set("base_weight", 1);
                 set("base_value", 1);
         }

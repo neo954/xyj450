@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //dongmenting.c
@@ -8,13 +8,13 @@ inherit ROOM;
  
 void create()
 {
-        set("short", "¶«ÃÅÌü");
+        set("short", "ä¸œé—¨åŽ…");
         set("long", @LONG
 
-½øÁË¶«ÌìÃÅ£¬ÒÑ¾­¿ÉÒÔ¿´µ½Ò»×ù×ùÌì¹¬·Å×ÅÆß²ÊÏ¼¹â£¬ºöÒþºöÏÖ
-ÓÚÔÆÕÚÎíÈÆÖ®ÖÐ¡£Ò»×ù°×ÓñÇÅÍäÍäÇúÇúµØÏò±±ÑÓÉì£¬¶«Î÷Á½±ß¸÷
-ÓÐÒ»×ù´óµî£¬Ò²²»ÖªÊÇ¸ÉÊ²Ã´ÓÃµÄ£¬Äã¿ÉÒÔÒþÔ¼Ìýµ½¶«±ßµîÄÚË»
-Ë»ÂíÃù¡£
+è¿›äº†ä¸œå¤©é—¨ï¼Œå·²ç»å¯ä»¥çœ‹åˆ°ä¸€åº§åº§å¤©å®«æ”¾ç€ä¸ƒå½©éœžå…‰ï¼Œå¿½éšå¿½çŽ°
+äºŽäº‘é®é›¾ç»•ä¹‹ä¸­ã€‚ä¸€åº§ç™½çŽ‰æ¡¥å¼¯å¼¯æ›²æ›²åœ°å‘åŒ—å»¶ä¼¸ï¼Œä¸œè¥¿ä¸¤è¾¹å„
+æœ‰ä¸€åº§å¤§æ®¿ï¼Œä¹Ÿä¸çŸ¥æ˜¯å¹²ä»€ä¹ˆç”¨çš„ï¼Œä½ å¯ä»¥éšçº¦å¬åˆ°ä¸œè¾¹æ®¿å†…å˜¶
+å˜¶é©¬é¸£ã€‚
 LONG
         );
  
@@ -23,7 +23,7 @@ LONG
      "north":__DIR__"yumajian",
         ]));
  
-        create_door("east", "¶«ÌìÃÅ", "west", DOOR_CLOSED);
+        create_door("east", "ä¸œå¤©é—¨", "west", DOOR_CLOSED);
  
         set("objects", ([
                 __DIR__"npc/tong-nan" : 2,

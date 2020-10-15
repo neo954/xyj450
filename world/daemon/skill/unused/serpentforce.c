@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // serpentforce.c
@@ -12,11 +12,11 @@ int valid_learn(object me) { return 1; }
 int practice_skill(object me)
 {
    if( !environment(me)->query("resource/water") )
-     return notify_fail("·üòÔ¹¦\Ö»ÄÜÔÚÓÐË®µÄµØ·½Á·¡£\n");
+     return notify_fail("ä¼è›ŸåŠŸ\åªèƒ½åœ¨æœ‰æ°´çš„åœ°æ–¹ç»ƒã€‚\n");
    if( (int)me->query("kee") < 30 )
-     return notify_fail("ÄãµÄÆø²»¹»¡£\n");
+     return notify_fail("ä½ çš„æ°”ä¸å¤Ÿã€‚\n");
    if( (int)me->query("force") < 10 )
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿ");
    me->receive_damage("kee", 30);
    me->add("force", -10);
    return 1;

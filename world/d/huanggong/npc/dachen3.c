@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // by snowcat
@@ -11,9 +11,9 @@ void do_improve(object who, string name, int points, int level);
 
 void create()
 {
-  set_name("¶ÅÈç»Ş", ({ "du ruhui", "du", "ruhui", "da chen" }));
-  set("title", "´ó³¼");
-  set("gender", "ÄĞĞÔ");
+  set_name("æœå¦‚æ™¦", ({ "du ruhui", "du", "ruhui", "da chen" }));
+  set("title", "å¤§è‡£");
+  set("gender", "ç”·æ€§");
   set("age", 60);
   set("per", 30);
   set("combat_exp", 300000);
@@ -65,14 +65,14 @@ void reward (object who)
   }
 
   points = points * (who->query("kar")/2+1);
-  message_vision ("$N¶Ô$nÒ»°İ£º±İÏÂÓĞÖ¼£¬´Í"+RANK_D->query_respect(who)+
-                  chinese_number(points)+"µã"+to_chinese(name)+"¼¼ÄÜ£¡\n",me,who);
+  message_vision ("$Nå¯¹$nä¸€æ‹œï¼šé™›ä¸‹æœ‰æ—¨ï¼Œèµ"+RANK_D->query_respect(who)+
+                  chinese_number(points)+"ç‚¹"+to_chinese(name)+"æŠ€èƒ½ï¼\n",me,who);
 /*  
-  command (channel+" "+who->query("name")+who->query("quest/reason")+"±İÏÂÓĞÖ¼£¬´Í"+
-           chinese_number(points)+"µã"+to_chinese(name)+"¼¼ÄÜ£¡");
+  command (channel+" "+who->query("name")+who->query("quest/reason")+"é™›ä¸‹æœ‰æ—¨ï¼Œèµ"+
+           chinese_number(points)+"ç‚¹"+to_chinese(name)+"æŠ€èƒ½ï¼");
 */                  
   who->add("quest/gain/skills/"+name,points);
-  reporting (who, who->query("quest/reason"), points, "µã"+to_chinese(name)+"¼¼ÄÜ");
+  reporting (who, who->query("quest/reason"), points, "ç‚¹"+to_chinese(name)+"æŠ€èƒ½");
 
   do_improve(who, name, points, level);
 }

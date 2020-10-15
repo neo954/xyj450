@@ -1,4 +1,4 @@
-// song.c ËÎÔ¶ÇÅ
+// song.c å®‹è¿œæ¡¥
 
 inherit NPC;
 inherit F_MASTER;
@@ -7,13 +7,13 @@ string ask_me();
 
 void create()
 {
-	set_name("ËÎÔ¶ÇÅ", ({ "song yuanqiao", "song" }));
-	set("nickname", "Îäµ±Ê×ÏÀ");
+	set_name("å®‹è¿œæ¡¥", ({ "song yuanqiao", "song" }));
+	set("nickname", "æ­¦å½“é¦–ä¾ ");
 	set("long", 
-		"Ëû¾ÍÊÇÕÅÈı·áµÄ´óµÜ×Ó¡¢Îäµ±ÆßÏÀÖ®Ê×µÄËÎÔ¶ÇÅ¡£\n"
-		"Éí´©Ò»¼ş¸É¸É¾»¾»µÄ»ÒÉ«µÀÅÛ¡£\n"
-		"ËûÒÑÄê¹ıÁùÊ®£¬Éí²ÄÊİ³¤£¬ÂúÁ³ºì¹â¡£Ìñµ­³åºÍ£¬³ÁÄ¬¹ÑÑÔ¡£\n");
-	set("gender", "ÄĞĞÔ");
+		"ä»–å°±æ˜¯å¼ ä¸‰ä¸°çš„å¤§å¼Ÿå­ã€æ­¦å½“ä¸ƒä¾ ä¹‹é¦–çš„å®‹è¿œæ¡¥ã€‚\n"
+		"èº«ç©¿ä¸€ä»¶å¹²å¹²å‡€å‡€çš„ç°è‰²é“è¢ã€‚\n"
+		"ä»–å·²å¹´è¿‡å…­åï¼Œèº«æç˜¦é•¿ï¼Œæ»¡è„¸çº¢å…‰ã€‚æ¬æ·¡å†²å’Œï¼Œæ²‰é»˜å¯¡è¨€ã€‚\n");
+	set("gender", "ç”·æ€§");
 	set("age", 61);
 	set("attitude", "peaceful");
 	set("shen_type", 1);
@@ -47,10 +47,10 @@ void create()
 //	map_skill("parry", "taiji-jian");
 //	map_skill("sword", "taiji-jian");
 
-	create_family("Îäµ±ÅÉ", 2, "µÜ×Ó");
+	create_family("æ­¦å½“æ´¾", 2, "å¼Ÿå­");
 
 	set("inquiry", ([
-		"ÃØ¼®" : (: ask_me :),
+		"ç§˜ç±" : (: ask_me :),
 	]));
 
 	set("book_count", 1);
@@ -64,12 +64,12 @@ void create()
 void attempt_apprentice(object ob)
 {
 	if ((int)ob->query("sen") < 0) {
-		command("say ÎÒÎäµ±ÄËÊÇÌÃÌÃÃûÃÅÕıÅÉ£¬¶ÔµÜ×ÓÒªÇó¼«ÑÏ¡£");
-		command("say ÔÚµÂĞĞ·½Ãæ£¬" + RANK_D->query_respect(ob) +
-			"ÊÇ·ñ»¹×öµÃ²»¹»£¿");
+		command("say æˆ‘æ­¦å½“ä¹ƒæ˜¯å ‚å ‚åé—¨æ­£æ´¾ï¼Œå¯¹å¼Ÿå­è¦æ±‚æä¸¥ã€‚");
+		command("say åœ¨å¾·è¡Œæ–¹é¢ï¼Œ" + RANK_D->query_respect(ob) +
+			"æ˜¯å¦è¿˜åšå¾—ä¸å¤Ÿï¼Ÿ");
 		return;
 	}
-	command("say ºÃ°É£¬Æ¶µÀ¾ÍÊÕÏÂÄãÁË¡£");
+	command("say å¥½å§ï¼Œè´«é“å°±æ”¶ä¸‹ä½ äº†ã€‚");
 	command("recruit " + ob->query("id"));
 }
 
@@ -78,13 +78,13 @@ string ask_me()
 	mapping fam; 
 	object ob;
 	
-	if (!(fam = this_player()->query("family")) || fam["family_name"] != "Îäµ±ÅÉ")
+	if (!(fam = this_player()->query("family")) || fam["family_name"] != "æ­¦å½“æ´¾")
 		return RANK_D->query_respect(this_player()) + 
-		"Óë±¾ÅÉËØÎŞÀ´Íù£¬²»Öª´Ë»°´ÓºÎÌ¸Æğ£¿";
+		"ä¸æœ¬æ´¾ç´ æ— æ¥å¾€ï¼Œä¸çŸ¥æ­¤è¯ä»ä½•è°ˆèµ·ï¼Ÿ";
 	if (query("book_count") < 1)
-		return "ÄãÀ´ÍíÁË£¬±¾ÅÉµÄÄÚ¹¦ĞÄ·¨²»ÔÚ´Ë´¦¡£";
+		return "ä½ æ¥æ™šäº†ï¼Œæœ¬æ´¾çš„å†…åŠŸå¿ƒæ³•ä¸åœ¨æ­¤å¤„ã€‚";
 	add("book_count", -1);
 	ob = new(__DIR__"force_book");
 	ob->move(this_player());
-	return "ºÃ°É£¬Õâ±¾¡¸Ì«¼«Ê®ÈıÊ½¡¹ÄãÄÃ»ØÈ¥ºÃºÃ×êÑĞ¡£";
+	return "å¥½å§ï¼Œè¿™æœ¬ã€Œå¤ªæåä¸‰å¼ã€ä½ æ‹¿å›å»å¥½å¥½é’»ç ”ã€‚";
 }

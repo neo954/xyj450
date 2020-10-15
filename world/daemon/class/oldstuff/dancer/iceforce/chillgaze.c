@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // chillgaze.c
@@ -13,15 +13,15 @@ int exert(object me, object target)
    int i, skill, damage;
 
    if( !me->is_fighting() )
-     return notify_fail("¡¸Òâº®íş¡¹Ö®ÊõÖ»ÄÜÔÚÕ½¶·ÖĞÊ¹ÓÃ¡£\n");
+     return notify_fail("ã€Œæ„å¯’ç¨ã€ä¹‹æœ¯åªèƒ½åœ¨æˆ˜æ–—ä¸­ä½¿ç”¨ã€‚\n");
    me->start_busy(4);
 
    if( (int)me->query("force") < 50 )
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
 
    if( !target || target==me ) {
      target = offensive_target(me);
-     if( !target) return notify_fail("ÄãÒª¶ÔË­Ê©Õ¹¡¸Òâº®íş¡¹Ö®Êõ£¿\n");
+     if( !target) return notify_fail("ä½ è¦å¯¹è°æ–½å±•ã€Œæ„å¯’ç¨ã€ä¹‹æœ¯ï¼Ÿ\n");
    }
 
    skill = me->query_skill("force");
@@ -30,23 +30,23 @@ int exert(object me, object target)
    me->receive_damage("sen", 20);
 
    message_vision(
-     HIB "$NÑÛÉñºöÈ»·¢³öÒì¹â£¬Ë«Í«ÓÌÈçÁ½°ÑÀûÈĞ°ã¶¢Öø$n£¡\n" NOR, me, target);
+     HIB "$Nçœ¼ç¥å¿½ç„¶å‘å‡ºå¼‚å…‰ï¼ŒåŒç³çŠ¹å¦‚ä¸¤æŠŠåˆ©åˆƒèˆ¬ç›¯è‘—$nï¼\n" NOR, me, target);
    
    if( random(target->query("combat_exp")) > (int)me->query("combat_exp") / 2 ) {
-     message_vision("$NºÜ¿ìµØ×ª¹ıÍ·È¥£¬±Ü¿ªÁË$nµÄÄ¿¹â¡£\n", target, me);
+     message_vision("$Nå¾ˆå¿«åœ°è½¬è¿‡å¤´å»ï¼Œé¿å¼€äº†$nçš„ç›®å…‰ã€‚\n", target, me);
      return 1;
    }
 
    damage = (int)me->query("force_factor") * 2 - target->query("max_force") / 15;
    if( damage < 1 ) {
-     message_vision("µ«ÊÇ$N¶Ô$nµÄ×¢ÊÓÊÓÈôÎŞ¶Ã....¡£\n", target, me);
+     message_vision("ä½†æ˜¯$Nå¯¹$nçš„æ³¨è§†è§†è‹¥æ— ç¹....ã€‚\n", target, me);
      return 1;
    }
 
    target->receive_damage("gin", damage);
    if( random(skill) > (int)target->query("cps") * 2 )
      target->receive_wound("gin", damage/2);
-   message_vision("$N±»$nµÄÄ¿¹âËùÉã£¬²»×Ô½ûµØ´òÁË¸öº®àä¡£\n", target, me);
+   message_vision("$Nè¢«$nçš„ç›®å…‰æ‰€æ‘„ï¼Œä¸è‡ªç¦åœ°æ‰“äº†ä¸ªå¯’å™¤ã€‚\n", target, me);
 
    return 1;
 }

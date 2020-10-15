@@ -4,9 +4,9 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "��ʯС·");
+	set("short", "青石小路");
 	set("long", @LONG
-С·�����������ݺ��������ǵ������ϲƵ�լԺ��������һƬ���
+小路的西侧是玉螺湖，东南是地主田老财的宅院，西南是一片稻田。
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */

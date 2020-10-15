@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("³£ÀÏ´ó", ({ "boss tsang", "boss", "tsang" }) );
-	set("title", "ÀÏËÉÕ¯Õ¯Ö÷");
-	set("nickname", "ÆÃ·çµ¶Íõ");
-	set("gender", "ÄĞĞÔ");
+	set_name("å¸¸è€å¤§", ({ "boss tsang", "boss", "tsang" }) );
+	set("title", "è€æ¾å¯¨å¯¨ä¸»");
+	set("nickname", "æ³¼é£åˆ€ç‹");
+	set("gender", "ç”·æ€§");
 	set("age", 53);
 	set("combat_exp", 260000);
 	set("score", 17000);

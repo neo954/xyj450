@@ -6,18 +6,18 @@
 inherit BLADE;
 void create()
 {
-	set_name("¿³ÁÖµ¶", ({ "lindao" }) );
+	set_name("ç æ—åˆ€", ({ "lindao" }) );
 	set_weight(4000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "±ú");
+		set("unit", "æŸ„");
 		set("value", 60);
 		set("jungle",1);
 		set("material", "iron");
-		set("long", "ÕâÊÇÒ»Ñ°³£µÄ¿³ÁÖµ¶£¬×¨ÃÅÓÃÀ´¿³Ğ¡Ê÷ºÍ¹àÄ¾£®\n");
-		set("wield_msg", "$N³é³öÒ»°ÑºÚÓÍÓÍµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unequip_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼ä¡£\n");
+		set("long", "è¿™æ˜¯ä¸€å¯»å¸¸çš„ç æ—åˆ€ï¼Œä¸“é—¨ç”¨æ¥ç å°æ ‘å’ŒçŒæœ¨ï¼\n");
+		set("wield_msg", "$NæŠ½å‡ºä¸€æŠŠé»‘æ²¹æ²¹çš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´ã€‚\n");
 	}
 	init_blade(5);
 	setup();

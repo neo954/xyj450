@@ -1,11 +1,11 @@
 inherit NPC;
 void create()
 {
-        set_name("Á¦Ê¿", ({ "lishi","Á¦Ê¿" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("åŠ›å£«", ({ "lishi","åŠ›å£«" }) );
+        set("gender", "ç”·æ€§" );
         set("class", "bonze");
         set("str", 26);
-        set("long", "ÃæÃ²ĞÛÎ°£¬×÷·ŞÅ­Ïà£¬ÉÏ°ëÉí³àÂã£¬Á½½ÅÕÅ¿ª£¬³Ê½ôÕÅ×´£®\n");
+        set("long", "é¢è²Œé›„ä¼Ÿï¼Œä½œå¿¿æ€’ç›¸ï¼Œä¸ŠåŠèº«èµ¤è£¸ï¼Œä¸¤è„šå¼ å¼€ï¼Œå‘ˆç´§å¼ çŠ¶ï¼\n");
         set("combat_exp", 6000);
         set("attitude", "friendly");
         set("max_force", 500);
@@ -34,9 +34,9 @@ add_action("do_look","look");
 int do_look(string arg)
 {
 
-if (arg == "lishi" || arg == "Á¦Ê¿")
+if (arg == "lishi" || arg == "åŠ›å£«")
 {
-write("ÃæÃ²ĞÛÎ°£¬×÷·ŞÅ­Ïà£¬ÉÏ°ëÉí³àÂã£¬Á½½ÅÕÅ¿ª£¬³Ê½ôÕÅ×´£®\n");
+write("é¢è²Œé›„ä¼Ÿï¼Œä½œå¿¿æ€’ç›¸ï¼Œä¸ŠåŠèº«èµ¤è£¸ï¼Œä¸¤è„šå¼ å¼€ï¼Œå‘ˆç´§å¼ çŠ¶ï¼\n");
 return 1;
 }
 return 0;

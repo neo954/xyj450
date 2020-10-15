@@ -7,8 +7,8 @@ void catch_thief();
 
 void create()
 {
-	set_name("¹ÏÅ©", ({ "meloner" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("ç“œå†œ", ({ "meloner" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 46);
 	set("str", 29);
 	set("cor", 26);
@@ -19,8 +19,8 @@ void create()
 	set("kar", 25);
 	set("con", 27);
 	set("long", @LONG
-Ò»¸öÖĞÄê¹ÏÅ©£¬Á³ÉÏ±»Ñô¹âÉ¹µÃ÷îºÚ£¬Ò»ÉíµÄ¼ü×Ó
-Èâ£¬¸øÈËµÄ¸Ğ¾õÊÇÔúÊµÍşÃÍ¡£
+ä¸€ä¸ªä¸­å¹´ç“œå†œï¼Œè„¸ä¸Šè¢«é˜³å…‰æ™’å¾—é»é»‘ï¼Œä¸€èº«çš„é”®å­
+è‚‰ï¼Œç»™äººçš„æ„Ÿè§‰æ˜¯æ‰å®å¨çŒ›ã€‚
 LONG
 );
 	set("attitude", "friendly");
@@ -32,7 +32,7 @@ LONG
 //	]) );
 
 	set("vendor_goods", ([
-                "Î÷¹Ï": "/d/suburb/es/village/obj/melon",
+                "è¥¿ç“œ": "/d/suburb/es/village/obj/melon",
         ]) );      
         
 	set("force", 500);
@@ -76,31 +76,31 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-        say( "ÕâÎ»" + RANK_D->query_respect(ob)
-                + "Òª²»ÒªÂò¸öÎ÷¹Ï½â½â¿Ê£¿\n");
+        say( "è¿™ä½" + RANK_D->query_respect(ob)
+                + "è¦ä¸è¦ä¹°ä¸ªè¥¿ç“œè§£è§£æ¸´ï¼Ÿ\n");
 }
 
 int do_return(string arg)
 {
 	if( !this_player()->query_temp("melon/catch_thief") )
-	  return notify_fail("ÄãÓÖÃ»Ç·ËûÊ²Ã´£¬ÎªÊ²Ã´Òª»¹£¿\n" );
-	if(!arg) return notify_fail("ÄãÒª»¹Ê²Ã´£¿\n");
-	if( arg=="melon cost" || arg=="¹ÏÇ®" )
+	  return notify_fail("ä½ åˆæ²¡æ¬ ä»–ä»€ä¹ˆï¼Œä¸ºä»€ä¹ˆè¦è¿˜ï¼Ÿ\n" );
+	if(!arg) return notify_fail("ä½ è¦è¿˜ä»€ä¹ˆï¼Ÿ\n");
+	if( arg=="melon cost" || arg=="ç“œé’±" )
 	{
-	  command("say ºÃ£¬ÔÛÁ©µÄÕË¾ÍËã½áÁË¡£\n");
+	  command("say å¥½ï¼Œå’±ä¿©çš„è´¦å°±ç®—ç»“äº†ã€‚\n");
 	  set_temp("melon/catch_thief",0);
 	  this_player()->set_temp("melon/catch_thief",0);
 	  set_leader(0);
 	  move(find_object("/d/suburb/es/village/melonguard"));
 	  return 1;
 	}
-	return notify_fail("³ıÁË¹ÏÇ®£¬ÎÒÊ²Ã´¶¼²»Òª¡£\n");
+	return notify_fail("é™¤äº†ç“œé’±ï¼Œæˆ‘ä»€ä¹ˆéƒ½ä¸è¦ã€‚\n");
 }
 
 void catch_thief()
 {
 	if( query_temp("melon/catch_thief") )
-	  command( "say ÄãÒª²»»¹ÎÒ¹ÏÇ®(return melon cost)£©£¬ÔÛÁ©¾ÍÃ»Íê£¡\n" );
+	  command( "say ä½ è¦ä¸è¿˜æˆ‘ç“œé’±(return melon cost)ï¼‰ï¼Œå’±ä¿©å°±æ²¡å®Œï¼\n" );
 	else
 	  command( "heihei this_player()" );
 }

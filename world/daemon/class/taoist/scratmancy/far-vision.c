@@ -10,26 +10,26 @@ int scribe(object me, object sheet)
   	string err;
 
         if((int)me->query_skill("scratching") < 50 )
-                return notify_fail("ÄãµÄ·ûÖ®Êõ²»¹»¸ß£¡\n");
+                return notify_fail("ä½ çš„ç¬¦ä¹‹æœ¯ä¸å¤Ÿé«˜ï¼\n");
 
-        if( sheet->name() != "ÌÒ·ûÖ½" ) 
-                return notify_fail("ÌìÍ¨ÑÛ·ûÒª»­ÔÚÌÒ·ûÖ½ÉÏ£¡\n");
+        if( sheet->name() != "æ¡ƒç¬¦çº¸" ) 
+                return notify_fail("å¤©é€šçœ¼ç¬¦è¦ç”»åœ¨æ¡ƒç¬¦çº¸ä¸Šï¼\n");
 
         if( (int)me->query("mana") < 5 ) 
-                return notify_fail("ÄãµÄ·¨Á¦²»¹»ÁË£¡\n");
+                return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿäº†ï¼\n");
 
         sheet->set_amount((int)sheet->query_amount() - 1);
         me->save();
         seteuid( geteuid(me));
         newsheet = new("/obj/magic_seal");
-        newsheet->set_name(YEL "ÌìÍ¨ÑÛ·û" NOR, 
+        newsheet->set_name(YEL "å¤©é€šçœ¼ç¬¦" NOR, 
                 ({ "far-vision sheet", "sheet"}));      
         newsheet->set("burn_func", (: call_other, __FILE__, "do_burn" :));
         newsheet->move(me);
         me->add("mana", -5);
         me->receive_damage("sen", 5);
         me->save();
-        message_vision("$NĞ´ÁËÒ»µÀÌìÍ¨ÑÛ·û¡£\n" NOR, me);
+        message_vision("$Nå†™äº†ä¸€é“å¤©é€šçœ¼ç¬¦ã€‚\n" NOR, me);
         return 1;
 }
 
@@ -39,22 +39,22 @@ int do_burn(object sheet)
         object obj;
 
         if( !(sheet->query("targetname")) )
-                return notify_fail("ÄãÏëÓÃÕâµÀ·û" NOR 
-"¿´ÄÄÀï£¿\n");
-        message_vision("$N¼¯ÖĞ¾«Éñ£¬¼ÀÆğÈıÎ¶Õæ»ğ£¬ßüµÄÒ»Éù" + sheet->name() +
-     		"×ÅÁËÆğÀ´£¡\n", this_player());
+                return notify_fail("ä½ æƒ³ç”¨è¿™é“ç¬¦" NOR 
+"çœ‹å“ªé‡Œï¼Ÿ\n");
+        message_vision("$Né›†ä¸­ç²¾ç¥ï¼Œç¥­èµ·ä¸‰å‘³çœŸç«ï¼Œå”¿çš„ä¸€å£°" + sheet->name() +
+     		"ç€äº†èµ·æ¥ï¼\n", this_player());
 	this_player()->receive_damage("sen", 5);
         target = sheet->query("targetname");
         obj = find_player(target);
         if(!obj) obj = find_living(target);
         if(!obj) {
-        	message("vision", "Äã¸Ğµ½ÑÛ¾¦ËáËáµÄ£¬È´Ê²Ã´Ò²Ã»¿´µ½£¡\n", this_player());
+        	message("vision", "ä½ æ„Ÿåˆ°çœ¼ç›é…¸é…¸çš„ï¼Œå´ä»€ä¹ˆä¹Ÿæ²¡çœ‹åˆ°ï¼\n", this_player());
         } else
         {
-        	message("vision", "ÔÚÉÁË¸µÄ»ğ¹âÖĞ£¬Äã¿´µ½£º\n", this_player());
+        	message("vision", "åœ¨é—ªçƒçš„ç«å…‰ä¸­ï¼Œä½ çœ‹åˆ°ï¼š\n", this_player());
 		"/cmds/std/look"->look_room(this_player(), environment(obj));
-        	message("vision", "Äã¸Ğµ½²±×Ó·¢Á¹£¬ºÚ°µ´¦ºÃÏñÓĞË«ÑÛ¾¦¶¢×ÅÄã£¡\n", obj);
-        	message("vision", "Äã×ĞÏ¸µØ¿´ÁËÒ»ÏÂËÄÖÜ£¬È´Ê²Ã´Ò²Ã»ÓĞ£¡\n", obj);
+        	message("vision", "ä½ æ„Ÿåˆ°è„–å­å‘å‡‰ï¼Œé»‘æš—å¤„å¥½åƒæœ‰åŒçœ¼ç›ç›¯ç€ä½ ï¼\n", obj);
+        	message("vision", "ä½ ä»”ç»†åœ°çœ‹äº†ä¸€ä¸‹å››å‘¨ï¼Œå´ä»€ä¹ˆä¹Ÿæ²¡æœ‰ï¼\n", obj);
         }
         return 1;
 }

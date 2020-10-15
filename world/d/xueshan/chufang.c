@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 //standroom.c used by weiqi...others may hate this format:D
@@ -8,13 +8,13 @@ inherit ROOM;
 
 void create ()
 {
-   set ("short", "����");
+   set ("short", "厨房");
    set ("long", @LONG
 
-�����ǳ�����ѩɽ�����ڶ����ȴ���󣬳Զ������õ�����ȥ��
-��Ȼ���������������������оͲ͵ĵط����и���ͷ���Ե�С��
-��������æ��æȥ�������Ϲ���һ�����ӣ���������չյ�д�ţ�
-��С��硱��
+这里是厨房。雪山弟子众多厨房却不大，吃东西得拿到外面去。
+当然，明王及护法尊者们另有就餐的地方。有个怪头怪脑的小妖
+正在里面忙来忙去。他腰上挂着一块牌子，上面歪歪拐拐地写着：
+“小钻风”。
 LONG);
 
    //set("item_desc", ([" *** " : " *** \n", ]));

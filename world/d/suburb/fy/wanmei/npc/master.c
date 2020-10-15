@@ -6,12 +6,12 @@ inherit F_QUEST;
 
 void create()
 {
-        set_name("Î÷ÃÅ´µÑ©", ({ "master ximen", "ximen", "master" }) );
-        set("title", "ÍòÃ·×¯Ö÷");
-        set("gender", "ÄĞĞÔ");
+        set_name("è¥¿é—¨å¹é›ª", ({ "master ximen", "ximen", "master" }) );
+        set("title", "ä¸‡æ¢…åº„ä¸»");
+        set("gender", "ç”·æ€§");
         set("age", 34);
         set("long",
-"Î÷ÃÅ´µÑ©ÄËÊÇµ±´ú¾ø¶¥¸ßÊÖÖ®Ò»£®½£·¨ÒÑ¾­µ½´ïÁË£¢ÎŞ½££¢µÄ¾³½ç£®£®\n"
+"è¥¿é—¨å¹é›ªä¹ƒæ˜¯å½“ä»£ç»é¡¶é«˜æ‰‹ä¹‹ä¸€ï¼å‰‘æ³•å·²ç»åˆ°è¾¾äº†ï¼‚æ— å‰‘ï¼‚çš„å¢ƒç•Œï¼ï¼\n"
                ); 
 
         set("attitude", "peaceful");
@@ -25,11 +25,11 @@ void create()
                 (: perform_action, "dodge.feitiantui" :),
                 (: exert_function, "powerup" :),
                 (: exert_function, "recover" :),
-		"Î÷ÃÅ´µÑ©ÀäĞ¦µÀ£ºÈç´Ë·ÏÎï£¬»¹À´É±ÎÒ£¿\n"
+		"è¥¿é—¨å¹é›ªå†·ç¬‘é“ï¼šå¦‚æ­¤åºŸç‰©ï¼Œè¿˜æ¥æ€æˆ‘ï¼Ÿ\n"
         }) );
         set("chat_chance", 1);
         set("chat_msg", ({
-                "Î÷ÃÅ´µÑ©Å­ÂîµÀ£ºÂ½Ğ¡·ï£¬Äã¾ÍÊÇÌÓµ½ÓÄÁéÉ½×¯£¬ÎÒÒ²ÒªÉ±ÁËÄã£¡£¡\n",
+                "è¥¿é—¨å¹é›ªæ€’éª‚é“ï¼šé™†å°å‡¤ï¼Œä½ å°±æ˜¯é€ƒåˆ°å¹½çµå±±åº„ï¼Œæˆ‘ä¹Ÿè¦æ€äº†ä½ ï¼ï¼\n",
         }) );
         set("str", 30);
         set("int", 30);
@@ -42,16 +42,16 @@ void create()
         set("force_factor", 30);
 
         set("inquiry", ([
-                "°İÊ¦": 
-"ÎÒÏòÀ´ÓĞ¸ö¹æ¾Ø£¬·²ÊÇÏë°İÎÒÎªÊ¦µÄ£¬µÃ½ÓÎÒÈıÕĞ²»ËÀ£¬ÄãÏëÊÔÊÔ(accept 
-test)£¿\n",
+                "æ‹œå¸ˆ": 
+"æˆ‘å‘æ¥æœ‰ä¸ªè§„çŸ©ï¼Œå‡¡æ˜¯æƒ³æ‹œæˆ‘ä¸ºå¸ˆçš„ï¼Œå¾—æ¥æˆ‘ä¸‰æ‹›ä¸æ­»ï¼Œä½ æƒ³è¯•è¯•(accept 
+test)ï¼Ÿ\n",
 		"apprentice" :
-"ÎÒÏòÀ´ÓĞ¸ö¹æ¾Ø£¬·²ÊÇÏë°İÎÒÎªÊ¦µÄ£¬µÃ½ÓÎÒÈıÕĞ²»ËÀ£¬ÄãÏëÊÔÊÔ(accept
-test)£¿\n"
+"æˆ‘å‘æ¥æœ‰ä¸ªè§„çŸ©ï¼Œå‡¡æ˜¯æƒ³æ‹œæˆ‘ä¸ºå¸ˆçš„ï¼Œå¾—æ¥æˆ‘ä¸‰æ‹›ä¸æ­»ï¼Œä½ æƒ³è¯•è¯•(accept
+test)ï¼Ÿ\n"
 
         ]) );
 
-        create_family("ÍòÃ·É½×¯", 1, "×¯Ö÷");
+        create_family("ä¸‡æ¢…å±±åº„", 1, "åº„ä¸»");
 
         set_skill("force", 100);
         set_skill("unarmed", 100);
@@ -90,35 +90,35 @@ int do_accept(string arg)
         mapping guild;
 
         if( arg== "test" ) {
-                say("\nÎ÷ÃÅ´µÑ©µãÁËµãÍ·£¬ËµµÀ£ººÜºÃ£¬ÕâÊÇµÚÒ»ÕĞ....\n\n");
+                say("\nè¥¿é—¨å¹é›ªç‚¹äº†ç‚¹å¤´ï¼Œè¯´é“ï¼šå¾ˆå¥½ï¼Œè¿™æ˜¯ç¬¬ä¸€æ‹›....\n\n");
                 COMBAT_D->do_attack(this_object(), this_player(), 
 query_temp("weapon"));
                 if( (int)this_player()->query("kee") < 0 
                 || !present(this_player(), environment())) {
                         
-say("Î÷ÃÅ´µÑ©Ì¾ÁË¿ÚÆø£¬ËµµÀ£ºÁ¬µÚÒ»ÕĞ¶¼³Å²»¹ı£¬ÕæÊÇ×Ô²»Á¿Á¦....\n");
+say("è¥¿é—¨å¹é›ªå¹äº†å£æ°”ï¼Œè¯´é“ï¼šè¿ç¬¬ä¸€æ‹›éƒ½æ’‘ä¸è¿‡ï¼ŒçœŸæ˜¯è‡ªä¸é‡åŠ›....\n");
                         return 1;
 		}
-                say("\nÎ÷ÃÅ´µÑ©ËµµÀ£ºÕâÊÇµÚ¶şÕĞ....\n\n");
+                say("\nè¥¿é—¨å¹é›ªè¯´é“ï¼šè¿™æ˜¯ç¬¬äºŒæ‹›....\n\n");
                 COMBAT_D->do_attack(this_object(), this_player(), 
 query_temp("weapon"));
                 if( (int)this_player()->query("kee") < 0 
                 || !present(this_player(), environment())) {
                         
-say("Î÷ÃÅ´µÑ©¡¸ºß¡¹µØÒ»Éù£¬ËµµÀ£º±ãÊÇÓĞÕâĞí¶à²»ÅÂËÀµÄ¼Ò»ï....\n");
+say("è¥¿é—¨å¹é›ªã€Œå“¼ã€åœ°ä¸€å£°ï¼Œè¯´é“ï¼šä¾¿æ˜¯æœ‰è¿™è®¸å¤šä¸æ€•æ­»çš„å®¶ä¼™....\n");
                         return 1;
                 }
-                say("\nÎ÷ÃÅ´µÑ©ËµµÀ£ºµÚÈıÕĞÀ´ÁË....\n\n");
+                say("\nè¥¿é—¨å¹é›ªè¯´é“ï¼šç¬¬ä¸‰æ‹›æ¥äº†....\n\n");
                 COMBAT_D->do_attack(this_object(), this_player(), 
 query_temp("weapon"));
                 if( (int)this_player()->query("kee") < 0 
                 || !present(this_player(), environment())) {
                         
-say("Î÷ÃÅ´µÑ©Ì¾µÀ£º¿ÉÏ§£¬ÄÑµÀÎÒÒ»ÉíÎä¹¦¾¹ÎŞ´«ÈË....\n");
+say("è¥¿é—¨å¹é›ªå¹é“ï¼šå¯æƒœï¼Œéš¾é“æˆ‘ä¸€èº«æ­¦åŠŸç«Ÿæ— ä¼ äºº....\n");
                         return 1;
                 }
                 
-say("\nÎ÷ÃÅ´µÑ©¹ş¹ş´óĞ¦£¬ËµµÀ£º½ñÈÕÖÕì¶ÃÙµÃÒ»¸ö¿ÉÔìÖ®²Å£¡\n\n");
+say("\nè¥¿é—¨å¹é›ªå“ˆå“ˆå¤§ç¬‘ï¼Œè¯´é“ï¼šä»Šæ—¥ç»ˆæ–¼è§…å¾—ä¸€ä¸ªå¯é€ ä¹‹æ‰ï¼\n\n");
                 command("recruit " + this_player()->query("id") );
                 return 1;
         }
@@ -130,34 +130,34 @@ void re_rank(object student)
         int exp;
         exp = (int) student->query("combat_exp");
         if( exp <= 32000 ) {
-                student->set("title","ÍòÃ·É½×¯µÜ×Ó");
+                student->set("title","ä¸‡æ¢…å±±åº„å¼Ÿå­");
                 return ;
         } else if ( exp <= 128000 ) {
-                student->set("title","ÍòÃ·É½×¯Áì°à");
+                student->set("title","ä¸‡æ¢…å±±åº„é¢†ç­");
                 return ;
         } else if ( exp <= 512000 ) {
-                student->set("title","ÍòÃ·É½×¯Ğ¡¹Ü¼Ò");
+                student->set("title","ä¸‡æ¢…å±±åº„å°ç®¡å®¶");
                 return ;
         } else if ( exp <= 1536000 ) {
-                student->set("title","ÍòÃ·É½×¯¹Ü¼Ò");
+                student->set("title","ä¸‡æ¢…å±±åº„ç®¡å®¶");
                 return ;
         } else if ( exp <= 3456000 ) {
-                student->set("title","ÍòÃ·É½×¯´ó¹Ü¼Ò");
+                student->set("title","ä¸‡æ¢…å±±åº„å¤§ç®¡å®¶");
                 return ;
         } else if ( exp <= 5187000 ) {
-                student->set("title","ÍòÃ·É½×¯×Ü¹Ü");
+                student->set("title","ä¸‡æ¢…å±±åº„æ€»ç®¡");
                 return ;
         } else if ( exp <= 26244000 ) {
-                student->set("title","ÍòÃ·É½×¯´ó×Ü¹Ü");
+                student->set("title","ä¸‡æ¢…å±±åº„å¤§æ€»ç®¡");
                 return ;
         } else
-                student->set("title","ÍòÃ·É½×¯¸±×¯Ö÷");
+                student->set("title","ä¸‡æ¢…å±±åº„å‰¯åº„ä¸»");
                 return ;
 
 }
 
 void killed_enemy(object who)
 {
-        command("say ¿ñÍıÖ®Í½£¬ËÀ²»×ãÏ§£¡\n");
+        command("say ç‹‚å¦„ä¹‹å¾’ï¼Œæ­»ä¸è¶³æƒœï¼\n");
 }
 

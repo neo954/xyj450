@@ -5,15 +5,15 @@
 inherit STAFF;
 void create()
 {
-	set_name("ÅşÉ³ÃÅËş", ({ "staff" }) );
+	set_name("æ¯—æ²™é—¨å¡”", ({ "staff" }) );
 	set_weight(40000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ìõ");
+		set("unit", "æ¡");
 		set("value", 500);
 		set("material", "stone");
-		set("long", "Ò»Ìõ¼«³ÁµÄËş¡£\n");
+		set("long", "ä¸€æ¡ææ²‰çš„å¡”ã€‚\n");
 		set("weapon_prop/karma",3);
 	}
 	init_staff(5);

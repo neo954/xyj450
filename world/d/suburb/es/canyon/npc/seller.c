@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("ºó±¸±ø", ({ "guard" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("åå¤‡å…µ", ({ "guard" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 28);
 	set("long",
-		"»·¹ËËÄ·½£¬ÑÛÉñÈñÀû£¬¿´À´ÏëÉ±¼ÛÊÇ²»¿ÉÄÜµÄÊÂÁË¡£\n");
+		"ç¯é¡¾å››æ–¹ï¼Œçœ¼ç¥é”åˆ©ï¼Œçœ‹æ¥æƒ³æ€ä»·æ˜¯ä¸å¯èƒ½çš„äº‹äº†ã€‚\n");
 	set("combat_exp", 50000);
 	set("attitude", "friendly");
 	setup();
@@ -26,22 +26,22 @@ int accept_object(object who,object ob)
 	
 	if ( ob->value()==30000 ) {
 		if ( this_player()->query_temp("Get_seal") ) {
-			command("say ÎÒÒÑ¾­¸øÄãÁË°¡¡£");
-			command("say ÄÇÃ´¶àÇ®£¬ÄÇÎÒ¾ÍÃ»ÊÕÁË:P");
+			command("say æˆ‘å·²ç»ç»™ä½ äº†å•Šã€‚");
+			command("say é‚£ä¹ˆå¤šé’±ï¼Œé‚£æˆ‘å°±æ²¡æ”¶äº†:P");
 			return 1;
 		}
 
 		obj1=new(__DIR__"obj/fake_seal");
 		if ( obj1->violate_unique() ) {
 			command("say .......");
-			command("say ÄÚĞĞÈË£¬ÄãÀ´ÍíÒ»²½ÁË.. seal ±»ÄÃ×ßÁË¡£");
-			command("say Õâ¶«Î÷ÄãÄÃ»ØÈ¥°É¡£");
+			command("say å†…è¡Œäººï¼Œä½ æ¥æ™šä¸€æ­¥äº†.. seal è¢«æ‹¿èµ°äº†ã€‚");
+			command("say è¿™ä¸œè¥¿ä½ æ‹¿å›å»å§ã€‚");
 			destruct(obj1);
 			return 0;
 		}
 
-		command("say ²»¿÷ÊÇÎäÁÖÖĞÈË£¬Ò»ÑÛ¾Í¿´³ö¶ËÄßÁË");
-		command("say Õâ¸öÓ¡¼ø¾Í¿´ÔÚÇ®µÄ·İÉÏºÍÄã½»»»ÁË");
+		command("say ä¸äºæ˜¯æ­¦æ—ä¸­äººï¼Œä¸€çœ¼å°±çœ‹å‡ºç«¯å€ªäº†");
+		command("say è¿™ä¸ªå°é‰´å°±çœ‹åœ¨é’±çš„ä»½ä¸Šå’Œä½ äº¤æ¢äº†");
 		obj1=new(__DIR__"obj/fake_seal");
 		obj1->move(who);
         this_player()->set_temp("Get_seal", 1);
@@ -49,22 +49,22 @@ int accept_object(object who,object ob)
 	}
 	
 	if ( !query_temp("check") ) {
-		if ( ((string)ob->name() == "Ó¡¼ø") && 
-		     who->query_temp("½«¾ü/kick") ) {
-			command("say ºÃ°É£¡¼´È»±»Äã·¢ÏÖÁË£¬Ö»ºÃÈÏÔÔÁË¡£");
-			command("say Õâ¸öÕæµÄÄã¾ÍÄÃÈ¥°É");
+		if ( ((string)ob->name() == "å°é‰´") && 
+		     who->query_temp("å°†å†›/kick") ) {
+			command("say å¥½å§ï¼å³ç„¶è¢«ä½ å‘ç°äº†ï¼Œåªå¥½è®¤æ ½äº†ã€‚");
+			command("say è¿™ä¸ªçœŸçš„ä½ å°±æ‹¿å»å§");
 			obj2=new(__DIR__"obj/seal");
 			obj2->move(who);
-			who->delete_temp("½«¾ü/kick");
+			who->delete_temp("å°†å†›/kick");
 			set_temp("check", 1);
 			return 1;
 		} else {
-			command("say Äã¸øÎÒÕâ¸ö×öÊ²Ã´£¿ÎÒ²»Òª£¬ÄãÄÃ»ØÈ¥°É¡£");
+			command("say ä½ ç»™æˆ‘è¿™ä¸ªåšä»€ä¹ˆï¼Ÿæˆ‘ä¸è¦ï¼Œä½ æ‹¿å›å»å§ã€‚");
 			return 0;
 		}
 	} 
-	command("say Èç¹ûÊÇÇ®µÄ»°£¬ÎÒÏÈÃ»ÊÕÁË¡£");
-	command("say ÆäËûµÄ¶«Î÷ÎÒ¶¼²»Òª£¬±ğÔÙÀ´·³ÎÒÁË¡£");
+	command("say å¦‚æœæ˜¯é’±çš„è¯ï¼Œæˆ‘å…ˆæ²¡æ”¶äº†ã€‚");
+	command("say å…¶ä»–çš„ä¸œè¥¿æˆ‘éƒ½ä¸è¦ï¼Œåˆ«å†æ¥çƒ¦æˆ‘äº†ã€‚");
 	return 0;
 }
 			

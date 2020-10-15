@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÑÅ·¼", ({ "yafang", "shu" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("é›…èŠ³", ({ "yafang", "shu" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 9);
-	set("title","Ğ¡ÊéÍ¯");
-        set("long", "ÌìÕæµÄĞ¡ÊéÍ¯ÕıÔÚÕûÀí·¿¼ä¡£ \n");
+	set("title","å°ä¹¦ç«¥");
+        set("long", "å¤©çœŸçš„å°ä¹¦ç«¥æ­£åœ¨æ•´ç†æˆ¿é—´ã€‚ \n");
         set("combat_exp", 700);
         set("attitude", "friendly");
         set_skill("unarmed", 10);

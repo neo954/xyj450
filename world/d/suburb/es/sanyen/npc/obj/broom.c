@@ -5,17 +5,17 @@ inherit STAFF;
 
 void create()
 {
-    set_name("ÖñÉ¨°Ñ", ({"bamboo broom", "broom"}) );
+    set_name("ç«¹æ‰«æŠŠ", ({"bamboo broom", "broom"}) );
     set_weight(1000);
     if( clonep() )
              set_default_object(__FILE__);
     else {
-          set("unit", "°Ñ");
-          set("long", "Ò»°Ñ¿ìÍºÁËÍ·µÄÖñÉ¨°Ñ¡£\n");
+          set("unit", "æŠŠ");
+          set("long", "ä¸€æŠŠå¿«ç§ƒäº†å¤´çš„ç«¹æ‰«æŠŠã€‚\n");
           set("value", 50);
           set("material", "bamboo");
-          set("wield_msg", "$NÄÃÆğÒ»°Ñ$nÎÕÔÚÊÖÖĞ¡£\n");
-          set("unwield_msg", "$N·ÅÏÂÊÖÖĞµÄ$n¡£\n");
+          set("wield_msg", "$Næ‹¿èµ·ä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+          set("unwield_msg", "$Næ”¾ä¸‹æ‰‹ä¸­çš„$nã€‚\n");
          } 
    init_staff(3);
 

@@ -10,8 +10,8 @@ void greeting(object);
 
 void create()
 {
-        set_name("´øµ¶ÊÌÎÀ", ({ "magistrate waiter","waiter" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å¸¦åˆ€ä¾å«", ({ "magistrate waiter","waiter" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 44);
         set("str", 45);
         set("cor", 28);
@@ -19,7 +19,7 @@ void create()
         set("int", 10);
         set("per", 10);
         set("long", @LONG
-´øµ¶ÊÌÎÀ½ÔÎª»±ÑôÍõ³ÌÀÏÍõÒ¯÷âÏÂæç½«,Éí¸º¾øÒÕ.
+å¸¦åˆ€ä¾å«çš†ä¸ºæ§é˜³ç‹ç¨‹è€ç‹çˆ·éº¾ä¸‹éªå°†,èº«è´Ÿç»è‰º.
 LONG
 );
         set("combat_exp", 1000000);
@@ -42,22 +42,22 @@ void greeting(object who)
 {
 return_home(find_object("/d/suburb/es/choyin/yamen.c"));
 command("open door");
-command("go south");           //ÕâĞ©×ß·¨ÓëÂ·¾¶ÓĞ¹Ø
+command("go south");           //è¿™äº›èµ°æ³•ä¸è·¯å¾„æœ‰å…³
 command("go south");
 if (!find_player(who->query("id"))||environment()!=environment(who))
         {
-                say("Ææ¹Ö£¬¸Õ²ÅÊÇË­°¡£¿\n");
+                say("å¥‡æ€ªï¼Œåˆšæ‰æ˜¯è°å•Šï¼Ÿ\n");
                 go_in();
         }
 who->delete_temp("have_beat_drum");
 add("pending/charge",1);
 if (query("pending/charge")>20)
         {
-        say("ÀÏÒ¯½ñÌìÌ«ÀÛÁË£¬ÇëÃ÷ÌìÔÙÀ´°É¡£\n");
+        say("è€çˆ·ä»Šå¤©å¤ªç´¯äº†ï¼Œè¯·æ˜å¤©å†æ¥å§ã€‚\n");
         call_out("go_in",10);
         return;
         }
-message_vision("$N´ÓÑÃÃÅÄÚÔº×ßÁË³öÀ´£¬¿´ÁË¿´$n£¬ËµµÀ£ºÊÇÄã»÷¹ÄÉêÔ©Âğ£¿(yes/no)\n
+message_vision("$Nä»è¡™é—¨å†…é™¢èµ°äº†å‡ºæ¥ï¼Œçœ‹äº†çœ‹$nï¼Œè¯´é“ï¼šæ˜¯ä½ å‡»é¼“ç”³å†¤å—ï¼Ÿ(yes/no)\n
 ",this_object(),who);
 set_temp("pending/beat",who);
 add_action("do_nod",({"yes","no"}));
@@ -70,13 +70,13 @@ object who,waiter;
 who=this_player();
 waiter=this_object();
 if (who!=query_temp("pending/beat"))
-        return notify_fail("Ã»ËµÄãÄØ£¡µ·Ê²Ã´ÂÒ£¡È¥È¥È¥...Ò»±ß´ô×Å£¡\n" );
+        return notify_fail("æ²¡è¯´ä½ å‘¢ï¼æ£ä»€ä¹ˆä¹±ï¼å»å»å»...ä¸€è¾¹å‘†ç€ï¼\n" );
 remove_call_out("remove_effect");
 if (query_verb()=="no")
         {
-        write(waiter->query("name")+"Ë«ÑÛÒ»µÉ£¬ºÈµÀ£ºÃ»Ô©ÇéÄã»÷Ê²Ã´¹Ä£¿£¡\n");
+        write(waiter->query("name")+"åŒçœ¼ä¸€çªï¼Œå–é“ï¼šæ²¡å†¤æƒ…ä½ å‡»ä»€ä¹ˆé¼“ï¼Ÿï¼\n");
         COMBAT_D->do_attack(this_object(),who);
-        write("Ò»±ßÁ¹¿ìÁ¹¿ì.\n");
+        write("ä¸€è¾¹å‡‰å¿«å‡‰å¿«.\n");
         COMBAT_D->do_attack(this_object(),who);
         who->move(find_object("/d/suburb/es/choyin/yamen_yard.c"));
         delete_temp("pending/beat");
@@ -87,7 +87,7 @@ else
         {
         who->set_leader(waiter);
         command("hmm");
-        say("ºÃ°É£¬¸úÎÒÀ´....\n");
+        say("å¥½å§ï¼Œè·Ÿæˆ‘æ¥....\n");
         GO_CMD->main(this_object(),"east");
         command("close door");
         call_out("greeting2",3,who);
@@ -101,7 +101,7 @@ if (file_name(environment())!="/d/suburb/es/choyin/court1")
         return;
 if (objectp(find_player(quire))&&environment()==environment(find_player(quire)))
         {
-        say(RANK_D->query_self_rude(this_object())+"Ã»¹¦·òºÍÄãÂŞàÂ£¡£¡\n");
+        say(RANK_D->query_self_rude(this_object())+"æ²¡åŠŸå¤«å’Œä½ ç½—å—¦ï¼ï¼\n");
         delete_temp("pending/beat");
         go_in();
         }
@@ -118,10 +118,10 @@ void go_in()
 
 void greeting2(object who)
 {
-        write(this_object()->query("name")+"¸ßÉùËµµÀ, ÀÏÒ¯......ÎÒ°Ñ»÷¹ÄÈË´øÉÏÀ´
-ÁË£¡.....\n");
-        say("ÀÏÒ¯¾ÍÔÚÌÃÉÏ£¬Õâ±ß×ß......\n");
+        write(this_object()->query("name")+"é«˜å£°è¯´é“, è€çˆ·......æˆ‘æŠŠå‡»é¼“äººå¸¦ä¸Šæ¥
+äº†ï¼.....\n");
+        say("è€çˆ·å°±åœ¨å ‚ä¸Šï¼Œè¿™è¾¹èµ°......\n");
         command("go north");
         who->set_leader(0);
-        tell_object(who,"µ½ÁË£¬......ÓĞÔ©¾ÍÉê(charge)°É¡£\n");
+        tell_object(who,"åˆ°äº†ï¼Œ......æœ‰å†¤å°±ç”³(charge)å§ã€‚\n");
 }

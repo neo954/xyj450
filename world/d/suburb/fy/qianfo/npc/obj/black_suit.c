@@ -6,20 +6,20 @@ inherit CLOTH;
 
 void create()
 {
-        set_name("Ò¹ĞĞÒÂ", ({ "black suit", "suit" }) );
+        set_name("å¤œè¡Œè¡£", ({ "black suit", "suit" }) );
         set_weight(3000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¼ş");
+                set("unit", "ä»¶");
                 set("value", 1100);
                 set("material", "cloth");
                 set("armor_prop/armor", 1);
                 set("armor_prop/id", ({"figure"}) );
-                set("armor_prop/name", ({"ºÚÒÂÈË"}) );
-                set("armor_prop/short", ({"ºÚÒÂÈË(figure)"}) );
+                set("armor_prop/name", ({"é»‘è¡£äºº"}) );
+                set("armor_prop/short", ({"é»‘è¡£äºº(figure)"}) );
                 set("armor_prop/long", ({
-                        "Ò»¸öÉí´©ºÚÉ«Ò¹ĞĞÒÂ£¬¿´ÆğÀ´ÉñÃØÙâÙâµÄ¼Ò»ï¡£\n"
+                        "ä¸€ä¸ªèº«ç©¿é»‘è‰²å¤œè¡Œè¡£ï¼Œçœ‹èµ·æ¥ç¥ç§˜å…®å…®çš„å®¶ä¼™ã€‚\n"
                 }) );
         }
         setup();

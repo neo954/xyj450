@@ -8,9 +8,9 @@ inherit F_QUEST;
 #include <ansi.h>
 void create()
 {
-        set_name("¾£ÎŞÃü", ({ "master jin", "master", "master jinwu" }) );
-        set("nickname", RED"×óÊÖ½£"NOR);
-        set("gender", "ÄĞĞÔ" );
+        set_name("è†æ— å‘½", ({ "master jin", "master", "master jinwu" }) );
+        set("nickname", RED"å·¦æ‰‹å‰‘"NOR);
+        set("gender", "ç”·æ€§" );
         set("age", 44);
         set("str", 30);
         set("cor", 30);
@@ -25,11 +25,11 @@ void create()
 
         set("long",
 "
-ÕâÈËµÄÉí×ÓÕ¾µÃ¸üÖ±£¬¸üÍ¦£¬¾ÍÏñÊÇÒ»¸ËÇ¹¡£ËûÕû¸öÈËËÆÒÑÂéÄ¾£¬¼È²»ÖªÍ´Ñ÷£¬
-Ò²²»Öª°§ÀÖ¡£
+è¿™äººçš„èº«å­ç«™å¾—æ›´ç›´ï¼Œæ›´æŒºï¼Œå°±åƒæ˜¯ä¸€æ†æªã€‚ä»–æ•´ä¸ªäººä¼¼å·²éº»æœ¨ï¼Œæ—¢ä¸çŸ¥ç—›ç—’ï¼Œ
+ä¹Ÿä¸çŸ¥å“€ä¹ã€‚
 \n"
 	);
-        create_family("½ğÇ®°ï", 2, "»¤·¨");
+        create_family("é‡‘é’±å¸®", 2, "æŠ¤æ³•");
 
         set("combat_exp", 1000000);
         set("score", 200000);
@@ -85,40 +85,40 @@ void re_rank(object student)
         int exp;
         exp = (int) student->query("combat_exp");
         if( exp <= 32000 ) {
-                student->set("title","½ğÇ®°ï°ïÖÚ");
+                student->set("title","é‡‘é’±å¸®å¸®ä¼—");
                 return ;
         } else if ( exp <= 64000 ) {
-                student->set("title","½ğÇ®°ï¸±ÌÃÖ÷");
+                student->set("title","é‡‘é’±å¸®å‰¯å ‚ä¸»");
                 return ;
         } else if ( exp <= 128000 ) {
-                student->set("title","½ğÇ®°ïÌÃÖ÷");
+                student->set("title","é‡‘é’±å¸®å ‚ä¸»");
                 return ;
         } else if ( exp <= 256000 ) {
-                student->set("title","½ğÇ®°ï¸±Ì³Ö÷");
+                student->set("title","é‡‘é’±å¸®å‰¯å›ä¸»");
                 return ;
         } else if ( exp <= 512000 ) {
-                student->set("title","½ğÇ®°ïÌ³Ö÷");
+                student->set("title","é‡‘é’±å¸®å›ä¸»");
                 return ;
         } else if ( exp <= 1024000 ) {
-                student->set("title","½ğÇ®°ï¸±¶æÖ÷");
+                student->set("title","é‡‘é’±å¸®å‰¯èˆµä¸»");
                 return ;
         } else if ( exp <= 1536000 ) {
-                student->set("title","½ğÇ®°ï¶æÖ÷");
+                student->set("title","é‡‘é’±å¸®èˆµä¸»");
                 return ;
         } else if ( exp <= 2304000 ) {
-                student->set("title","½ğÇ®°ï»¤·¨");
+                student->set("title","é‡‘é’±å¸®æŠ¤æ³•");
                 return ;
         } else if ( exp <= 3456000 ) {
-                student->set("title","½ğÇ®°ï´ó»¤·¨");
+                student->set("title","é‡‘é’±å¸®å¤§æŠ¤æ³•");
                 return ;
         } else if ( exp <= 5187000 ) {
-                student->set("title","½ğÇ®°ï³¤ÀÏ");
+                student->set("title","é‡‘é’±å¸®é•¿è€");
                 return ;
         } else if ( exp <= 26244000 ) {
-                student->set("title","½ğÇ®°ï´ó³¤ÀÏ");
+                student->set("title","é‡‘é’±å¸®å¤§é•¿è€");
                 return ;
         } else
-                student->set("title","½ğÇ®°ï¸±°ïÖ÷");
+                student->set("title","é‡‘é’±å¸®å‰¯å¸®ä¸»");
                 return ;
 
 }

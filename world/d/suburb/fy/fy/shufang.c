@@ -1,11 +1,11 @@
 inherit ROOM;
 void create()
 {
-        set("short", "÷™∏Æ È∑ø");
+        set("short", "Áü•Â∫ú‰π¶Êàø");
         set("long", @LONG
-’‚ È “Õ•ªß–È≥®£¨’˝÷–π““ª∑˘√˚»À…ΩÀÆ°£π©“ª∏ˆπ≈Õ≠œ„¬Ø£¨¬Ø¿Ôœ„—Ã∆Æ√Ï°£◊Û±ﬂ
-…Ë“ª’≈œÊÂ˙÷ÒÈΩ£¨”“±ﬂº‹…œ∂—¬˙»Ù∏…Õº È°£—ÿ¥∞“ª÷ªº∏…œ£¨∞⁄¡–Œƒ∑øÀƒ±¶°£¥∞Õ‚Õ•÷–
-÷÷÷≤–Ì∂‡ª®ƒæ£¨∆Ã…Ëµ√ Æ∑÷«Â—≈£¨∑≤≥ØÕ¢√¸πŸ∂ºø…‘⁄’‚∑¢∫≈¡Ó£®£·£Ú£Ú£Â£Û£Ù£©°£
+Ëøô‰π¶ÂÆ§Â∫≠Êà∑ËôöÊïûÔºåÊ≠£‰∏≠ÊåÇ‰∏ÄÂπÖÂêç‰∫∫Â±±Ê∞¥„ÄÇ‰æõ‰∏Ä‰∏™Âè§ÈìúÈ¶ôÁÇâÔºåÁÇâÈáåÈ¶ôÁÉüÈ£òÊ∏∫„ÄÇÂ∑¶Ëæπ
+ËÆæ‰∏ÄÂº†ÊπòÂ¶ÉÁ´πÊ¶ªÔºåÂè≥ËæπÊû∂‰∏äÂ†ÜÊª°Ëã•Âπ≤Âõæ‰π¶„ÄÇÊ≤øÁ™ó‰∏ÄÂè™Âá†‰∏äÔºåÊëÜÂàóÊñáÊàøÂõõÂÆù„ÄÇÁ™óÂ§ñÂ∫≠‰∏≠
+ÁßçÊ§çËÆ∏Â§öËä±Êú®ÔºåÈì∫ËÆæÂæóÂçÅÂàÜÊ∏ÖÈõÖÔºåÂá°ÊúùÂª∑ÂëΩÂÆòÈÉΩÂèØÂú®ËøôÂèëÂè∑‰ª§ÔºàÔΩÅÔΩíÔΩíÔΩÖÔΩìÔΩîÔºâ„ÄÇ
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -28,9 +28,9 @@ add_action("do_convert","convert");
 }
 int gethim(object target,object me)
 {
-        message_vision("$N“ªæ‰ª∞≤ªÀµ£¨¥“¥“√¶√¶µÿ¿Îø™¡À°£\n",target);
+        message_vision("$N‰∏ÄÂè•ËØù‰∏çËØ¥ÔºåÂåÜÂåÜÂøôÂøôÂú∞Á¶ªÂºÄ‰∫Ü„ÄÇ\n",target);
         target->move(this_object());
-        message_vision("$N±ªπŸ±¯—∫¡ÀΩ¯¿¥°£\n",target);
+        message_vision("$NË¢´ÂÆòÂÖµÊäº‰∫ÜËøõÊù•„ÄÇ\n",target);
 	if(me){
 	me->kill_ob(target);
 	target->kill_ob(me);
@@ -47,27 +47,27 @@ int do_arrest(string arg)
 	object me, target;
 	int exp, stra,leader,factor;
 	if(!arg)
-	return notify_fail("ƒ„“™œ¬¡Óº©ƒ√À≠£ø\n");
+	return notify_fail("‰Ω†Ë¶Å‰∏ã‰ª§ÁºâÊãøË∞ÅÔºü\n");
 	me = this_player();
 	if((string) me->query("class") != "official" )
-	return notify_fail("ƒ„≤ª «≥ØÕ¢πŸ‘±£¨≤ªø…º©ƒ√“…∑∏£°\n");
+	return notify_fail("‰Ω†‰∏çÊòØÊúùÂª∑ÂÆòÂëòÔºå‰∏çÂèØÁºâÊãøÁñëÁäØÔºÅ\n");
 	if((int) me->query("sen") < 50 )
-	return notify_fail("ƒ„µƒ–ƒ…Ò≤ªπª£°\n");	
+	return notify_fail("‰Ω†ÁöÑÂøÉÁ•û‰∏çÂ§üÔºÅ\n");	
 	me->add("sen",-50);
 	if(!objectp(target = find_living(arg)))
-	return notify_fail("’“≤ªµΩƒ„œÎ“™µƒ“…∑∏£°\n");
+	return notify_fail("Êâæ‰∏çÂà∞‰Ω†ÊÉ≥Ë¶ÅÁöÑÁñëÁäØÔºÅ\n");
 	if( interactive(target))
-	return notify_fail("’“≤ªµΩƒ„œÎ“™µƒ“…∑∏£°\n");
+	return notify_fail("Êâæ‰∏çÂà∞‰Ω†ÊÉ≥Ë¶ÅÁöÑÁñëÁäØÔºÅ\n");
 	if( target->query("no_arrest") )
-	return notify_fail("’“≤ªµΩƒ„œÎ“™µƒ“…∑∏£°\n");
-	message_vision("$N¥Û…˘œ¬¡Óµ¿£∫¿¥»Àƒ«£Æ£Æ∞—$n∏¯Œ“ƒ√¿¥£°£°\n",me,target);
+	return notify_fail("Êâæ‰∏çÂà∞‰Ω†ÊÉ≥Ë¶ÅÁöÑÁñëÁäØÔºÅ\n");
+	message_vision("$NÂ§ßÂ£∞‰∏ã‰ª§ÈÅìÔºöÊù•‰∫∫ÈÇ£ÔºéÔºéÊää$nÁªôÊàëÊãøÊù•ÔºÅÔºÅ\n",me,target);
 	exp = (int) target->query("combat_exp");
 	stra = (int) me->query_skill("strategy",1);
 	leader = (int) me->query_skill("leadership",1);
 	factor = stra * stra * leader * leader;
 	factor = (factor + ((int) me->query("combat_exp") ) - 2000 )/1000;			
 	if( random(factor) <= exp)
-	return notify_fail("“‘ƒ„œ÷‘⁄µƒƒ‹¡¶£¨ªπ≤ª◊„“‘º©ƒ√"+target->query("name")+"£°\n");
+	return notify_fail("‰ª•‰Ω†Áé∞Âú®ÁöÑËÉΩÂäõÔºåËøò‰∏çË∂≥‰ª•ÁºâÊãø"+target->query("name")+"ÔºÅ\n");
 	call_out("gethim",5,target,me);
 	return 1;
 }

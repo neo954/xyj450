@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 
@@ -18,14 +18,14 @@ int main(object me, string arg)
 
    if( !arg ) {
      ob = me;
-     name = "Äã";
+     name = "ä½ ";
    } else if (wizardp (me)) {
      ob = find_player(arg);
      if(!ob) ob = find_living(arg);
    
      if(!ob) ob = LOGIN_D->find_body(arg);
 
-     if(!ob || !me->visible(ob)) return notify_fail("Ã»ÓĞÕâ¸öÈË¡£\n");
+     if(!ob || !me->visible(ob)) return notify_fail("æ²¡æœ‰è¿™ä¸ªäººã€‚\n");
 
      name = ob->query("name");
    } else
@@ -40,11 +40,11 @@ int main(object me, string arg)
 int help()
 {
    write(@TEXT
-Ö¸Áî¸ñÊ½£ºobstacles <Ä³ÈË>
+æŒ‡ä»¤æ ¼å¼ï¼šobstacles <æŸäºº>
 
-ÏÔÊ¾Ä³ÈËÎ÷ĞĞÇóÈ¡Õæ¾­µÄ×ÊÁÏ¡£ 
+æ˜¾ç¤ºæŸäººè¥¿è¡Œæ±‚å–çœŸç»çš„èµ„æ–™ã€‚ 
 
-Çë¼û£ºhelp qujing
+è¯·è§ï¼šhelp qujing
 TEXT
    );
    return 1;
@@ -74,11 +74,11 @@ int telling1 (object who)
 
   if (nb == 0)
   {
-    write (name+"ÉĞÎ´Î÷ĞĞÇóÈ¡Õæ¾­¡£\n");
+    write (name+"å°šæœªè¥¿è¡Œæ±‚å–çœŸç»ã€‚\n");
   }
   else
   {
-    write (name+"Î÷ĞĞÇóÈ¡Õæ¾­ÒÑ¹ıÁË"+chinese_number(nb)+"¹Ø£º\n");
+    write (name+"è¥¿è¡Œæ±‚å–çœŸç»å·²è¿‡äº†"+chinese_number(nb)+"å…³ï¼š\n");
     who->set("obstacle/number",nb);
     strs = (string *)sort_array (strs, 1);
     for (i = 0; i < nb; i++)
@@ -113,11 +113,11 @@ int telling2 (object who)
 
   if (nb == 0)
   {
-    write (name+"Î÷ĞĞÇóÈ¡Õæ¾­ÒÑÀú¾¡ÁËËùÓĞµÄÄÑ¹Ø¡£\n");
+    write (name+"è¥¿è¡Œæ±‚å–çœŸç»å·²å†å°½äº†æ‰€æœ‰çš„éš¾å…³ã€‚\n");
   }
   else
   {
-    write (name+"Î÷ĞĞÇóÈ¡Õæ¾­»¹Ğë¹ı"+chinese_number(nb)+"¹Ø£º\n");
+    write (name+"è¥¿è¡Œæ±‚å–çœŸç»è¿˜é¡»è¿‡"+chinese_number(nb)+"å…³ï¼š\n");
     strs = (string *)sort_array (strs, 1);
     for (i = 0; i < nb; i++)
     {

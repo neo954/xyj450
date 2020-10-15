@@ -13,12 +13,12 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("£Û¾ÅÖØº®ÌìÕÆ£ÝÖ»ÄÜ¶ÔÕ½¶·ÖÐµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("ï¼»ä¹é‡å¯’å¤©æŽŒï¼½åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 	weapon = me->query_temp("weapon");
 	extra = me->query_skill("doomstrike",1) / 10;
 	me->add_temp("apply/attack", extra);	
 	me->add_temp("apply/damage", extra);
-	msg = HIR  "$NÊ¹³ö£Û¾ÅÖØº®ÌìÕÆ£Ý£¬È«Éí·ÉËÙÐý×ª£¬Ë«ÕÆÒ»Ç°Ò»ºó£¬ÉÁµç°ãµÄ»÷Ïò$n£¡" NOR;
+	msg = HIR  "$Nä½¿å‡ºï¼»ä¹é‡å¯’å¤©æŽŒï¼½ï¼Œå…¨èº«é£žé€Ÿæ—‹è½¬ï¼ŒåŒæŽŒä¸€å‰ä¸€åŽï¼Œé—ªç”µèˆ¬çš„å‡»å‘$nï¼" NOR;
 	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
 	me->add_temp("apply/attack", -extra);
 	me->add_temp("apply/damage", -extra);

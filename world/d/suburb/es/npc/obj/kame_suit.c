@@ -4,13 +4,13 @@ inherit EQUIP;
 
 void create()
 {
-	set_name("¹êÏÉÅÉÎäµÀ·ş", ({ "kame suit", "suit" }) );
+	set_name("é¾Ÿä»™æ´¾æ­¦é“æœ", ({ "kame suit", "suit" }) );
 	set_weight(1500);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¼şÓ¡ÓĞ¹êÏÉÅÉ±ê¼ÇµÄÎäµÀ·ş£¬ÓÖÇáÓÖÄÍ´©¡£\n");
-		set("unit", "¼ş");
+		set("long", "ä¸€ä»¶å°æœ‰é¾Ÿä»™æ´¾æ ‡è®°çš„æ­¦é“æœï¼Œåˆè½»åˆè€ç©¿ã€‚\n");
+		set("unit", "ä»¶");
 		set("material", "cloth");
 		set("armor_type", "cloth");
 		set("armor_prop/armor", 2);

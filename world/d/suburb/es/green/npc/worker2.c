@@ -2,8 +2,8 @@ inherit NPC;
 void create()
 {
 	seteuid(getuid());
-        set_name("²ÉÊ¯¹¤",({"worker"}));
-        set("gender","ÄĞĞÔ");
+        set_name("é‡‡çŸ³å·¥",({"worker"}));
+        set("gender","ç”·æ€§");
         set("age",(random(10)+32));
         set("str",30);
         set("con",20);

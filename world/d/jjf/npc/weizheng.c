@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //created 5-20-97 pickle
@@ -8,15 +8,15 @@ inherit F_MASTER;
  
 void create()
 {
-  set_name("Îºáç", ({"wei zheng", "wei", "zheng", "weizheng", "shifu", "master"}));
+  set_name("é­å¾µ", ({"wei zheng", "wei", "zheng", "weizheng", "shifu", "master"}));
   set ("long", @LONG
-ÎºáçÏÈÊËÆë¸®ÎªÌ«×ÓÀî½¨³ÉÂÅÉèÃî¼Æ¡£µ«Àî½¨³É²»ÌıÆä
-È°¸æ£¬ÖÕÎªÌ«×ÚËùÉ±¡£Ì«×Ú°®ÎºáçÖ®²Å£¬½«ÆäÊÕÂŞ£¬²¢
-·âÎªÖ£¹ú¹«¡£
+é­å¾µå…ˆä»•é½åºœä¸ºå¤ªå­æå»ºæˆå±¡è®¾å¦™è®¡ã€‚ä½†æå»ºæˆä¸å¬å…¶
+åŠå‘Šï¼Œç»ˆä¸ºå¤ªå®—æ‰€æ€ã€‚å¤ªå®—çˆ±é­å¾µä¹‹æ‰ï¼Œå°†å…¶æ”¶ç½—ï¼Œå¹¶
+å°ä¸ºéƒ‘å›½å…¬ã€‚
 LONG);
  
-  set("title", "Ö£¹ú¹«");
-  set("gender", "ÄĞĞÔ");
+  set("title", "éƒ‘å›½å…¬");
+  set("gender", "ç”·æ€§");
   set("age", 55);
   set("str", 15);
   set("per", 25);
@@ -46,7 +46,7 @@ LONG);
   set("max_mana", 700);
   set("mana_factor", 70);
  
-  create_family("½«¾ü¸®", 2, "ÎÄÈË");
+  create_family("å°†å†›åºœ", 2, "æ–‡äºº");
   setup();
  
   carry_object("/d/obj/weapon/spear/gangqiang");
@@ -56,6 +56,6 @@ LONG);
  
 int accept_fight(object me)
 {
-  command("say ÀÏ·òÊÖÖØ£¬ÈôÊÇÉËÈË·´¶ø²»ÃÀÁË¡£\n");
+  command("say è€å¤«æ‰‹é‡ï¼Œè‹¥æ˜¯ä¼¤äººåè€Œä¸ç¾äº†ã€‚\n");
   return 0;
 }

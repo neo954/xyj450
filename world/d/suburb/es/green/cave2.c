@@ -4,10 +4,10 @@ inherit ROOM;
 
 void create()
 {
-	set("short","�ڰ�ɽ��");
+	set("short","黑暗山洞");
 	set("long",@LONG
-ɽ���ܰ�������վ��ֱ���ӣ�����ż���ȵ�ʯͷ����ЩĪ������Ķ�����
-�����溮���ǣ������ƺ�����ǰ�У�������һ���ڡ�
+山洞很矮，几乎站不直身子，脚下偶尔踩到石头或是些莫名其妙的东西，
+洞内奇寒澈骨，南面似乎可以前行，北面是一出口。
 LONG
 );
 	set("exits",([

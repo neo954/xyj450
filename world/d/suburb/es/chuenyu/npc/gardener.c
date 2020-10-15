@@ -2,12 +2,12 @@ inherit NPC;
 
 void create()
 {
-        set_name("Ô°¹¤", ({ "gardener" }) );
-        set("nickname", "ºÚËÉÒ»¼ô");
-        set("gender", "ÄĞĞÔ");
+        set_name("å›­å·¥", ({ "gardener" }) );
+        set("nickname", "é»‘æ¾ä¸€å‰ª");
+        set("gender", "ç”·æ€§");
         set("age", 32);
         set("long",
-"ºÚËÉÒ»¼ôÊÇ·½Ô°¼¸Ê®ÀïÓĞÃûµÄÔ°¹¤¡£Ò»°Ñ´ó¼ôÊ¹µÄ³öÉñÈç»¯¡£");
+"é»‘æ¾ä¸€å‰ªæ˜¯æ–¹å›­å‡ åé‡Œæœ‰åçš„å›­å·¥ã€‚ä¸€æŠŠå¤§å‰ªä½¿çš„å‡ºç¥å¦‚åŒ–ã€‚");
         set("combat_exp", 2000);
         set("score", 200);
         set("str", 20);

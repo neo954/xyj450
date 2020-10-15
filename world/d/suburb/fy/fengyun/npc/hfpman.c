@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("»ï¼Æ", ({ "waiter" }) );
-        set("gender", "ÄÐÐÔ" );
+        set_name("ä¼™è®¡", ({ "waiter" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 42);
-        set("long", "»¨·ÛÆÌ»ï¼Æ\n");
+        set("long", "èŠ±ç²‰é“ºä¼™è®¡\n");
 
         set("combat_exp", 100);
         set("attitude", "heroism");

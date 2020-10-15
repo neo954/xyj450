@@ -12,26 +12,26 @@ int scribe(object me, object sheet, string arg)
         string err;
 
         if((int)me->query_skill("scratching") < 20 )
-                return notify_fail("ÄãµÄ·ûÖ®Êõ²»¹»¸ß£¡\n");
+                return notify_fail("ä½ çš„ç¬¦ä¹‹æœ¯ä¸å¤Ÿé«˜ï¼\n");
 
-        if( sheet->name() != "ÌÒ·ûÖ½" )
-                return notify_fail("Òõ½ç´«ËÍ·ûÒª»­ÔÚÌÒ·ûÖ½ÉÏ£¡\n");
+        if( sheet->name() != "æ¡ƒç¬¦çº¸" )
+                return notify_fail("é˜´ç•Œä¼ é€ç¬¦è¦ç”»åœ¨æ¡ƒç¬¦çº¸ä¸Šï¼\n");
 
         if( (int)me->query("mana") < 50 ) 
-		return notify_fail("ÄãµÄ·¨Á¦²»¹»ÁË£¡\n");
+		return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿäº†ï¼\n");
 
         sheet->set_amount((int)sheet->query_amount() - 1);
         me->save();
         seteuid( geteuid(me));
         newsheet = new("/obj/magic_seal");
-        newsheet->set_name(YEL "Òõ½ç´«ËÍ·û" NOR, 
+        newsheet->set_name(YEL "é˜´ç•Œä¼ é€ç¬¦" NOR, 
 		({ "earth-warp sheet", "sheet"}) );    
         newsheet->set("burn_func", (: call_other, __FILE__, "do_warp":));
         newsheet->move(me);
         me->add("mana", -50);
         me->receive_damage("sen", 10);
         me->save();
-        message_vision("$NÐ´ÁËÒ»µÀÒõ½ç´«ËÍ·û¡£\n" NOR, me);
+        message_vision("$Nå†™äº†ä¸€é“é˜´ç•Œä¼ é€ç¬¦ã€‚\n" NOR, me);
         return 1;
 }
 
@@ -40,21 +40,21 @@ int do_warp(string target, object who)
         object env;
 
         if( who && who!=this_player() )
-                return notify_fail("Òõ½ç´«ËÍ·ûÖ»ÄÜ¶Ô×Ô¼ºÊ¹ÓÃ¡£\n");
+                return notify_fail("é˜´ç•Œä¼ é€ç¬¦åªèƒ½å¯¹è‡ªå·±ä½¿ç”¨ã€‚\n");
 
         env = environment(this_player());
         message("vision",
-                HIB + this_player()->name() + "¼ÀÆðÒ»ÕÅÒõ½ç´«ËÍ·û¡£\n"
-"ºöÈ»ËÄÖÜ´µÆðÁËÒ»ÕóÁ¹ì¬ì¬µÄÒõ·ç£¬Òõ·çÖ®ÖÐáÝ·ðÓÐÐí¶àÈËÓ°ÔÚ»Î¶¯...\n"
-                "È»ááÒ»Õó»ð¹âÍ»È»±¬Æð£¡\n" NOR, env);
-        message("vision", "¿ÉÊÇ...." + this_player()->name() + 
-"ÒÑ¾­²»¼ûÁË¡£\n", environment(this_player()), ({this_player()}));
+                HIB + this_player()->name() + "ç¥­èµ·ä¸€å¼ é˜´ç•Œä¼ é€ç¬¦ã€‚\n"
+"å¿½ç„¶å››å‘¨å¹èµ·äº†ä¸€é˜µå‡‰é£•é£•çš„é˜´é£Žï¼Œé˜´é£Žä¹‹ä¸­å½·ä½›æœ‰è®¸å¤šäººå½±åœ¨æ™ƒåŠ¨...\n"
+                "ç„¶å¾Œä¸€é˜µç«å…‰çªç„¶çˆ†èµ·ï¼\n" NOR, env);
+        message("vision", "å¯æ˜¯...." + this_player()->name() + 
+"å·²ç»ä¸è§äº†ã€‚\n", environment(this_player()), ({this_player()}));
         message("vision",
                 CYN 
-"ÄãÖ»¾õµÃÉí×Ó²»¶ÏÏÂ×¹£¬Ò»Ö±ÏÂ×¹£¬Ò»Ö±ÏÂ×¹£¬Ò»Ö±ÏÂ×¹£¬Ò»Ö±ÏÂ×¹ .....\n"
+"ä½ åªè§‰å¾—èº«å­ä¸æ–­ä¸‹å ï¼Œä¸€ç›´ä¸‹å ï¼Œä¸€ç›´ä¸‹å ï¼Œä¸€ç›´ä¸‹å ï¼Œä¸€ç›´ä¸‹å  .....\n"
                 NOR     
-"²»ÖªµÀÊ²÷áÊ±ºò£¬Äã·¢ÏÖÄãÆäÊµÒ»Ö±¶¼Õ¾ÔÚ¼áÓ²µÄµØÃæÉÏ£¬¿ÉÊÇËÄÖÜµÄ¾°Îï\n"
-                        "È´²»Ò»ÑùÁË....\n", this_player() );
+"ä¸çŸ¥é“ä»€éº½æ—¶å€™ï¼Œä½ å‘çŽ°ä½ å…¶å®žä¸€ç›´éƒ½ç«™åœ¨åšç¡¬çš„åœ°é¢ä¸Šï¼Œå¯æ˜¯å››å‘¨çš„æ™¯ç‰©\n"
+                        "å´ä¸ä¸€æ ·äº†....\n", this_player() );
         this_player()->move(DEATH_ROOM);
         return 1;
 }

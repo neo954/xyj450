@@ -3,11 +3,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "ÉÅ·¿");
+        set("short", "è†³æˆ¿");
         set("long", @LONG
-ÕâÊÇ´¾ÓÚ±¤Ö÷µÄÓÃÉÅ·¿¡£Õû¸ö·¿¼äÆ®µ´×ÅÉÏµÈÖñÒ¶ÇàµÄ¾ÆÏãºÍ
-ÁîÈË´¹äÙÓûµÎµÄ¿¾É½ÖíµÄÏãÆø¡£ÄãËÆºõÌýµ½ÄãµÄ¶Ç×ÓÔÚ¡°¹¾¹¾¹¾¡±
-µÄ½ÐÁËÆðÀ´¡£
+è¿™æ˜¯æ·³äºŽå ¡ä¸»çš„ç”¨è†³æˆ¿ã€‚æ•´ä¸ªæˆ¿é—´é£˜è¡ç€ä¸Šç­‰ç«¹å¶é’çš„é…’é¦™å’Œ
+ä»¤äººåž‚æ»Ÿæ¬²æ»´çš„çƒ¤å±±çŒªçš„é¦™æ°”ã€‚ä½ ä¼¼ä¹Žå¬åˆ°ä½ çš„è‚šå­åœ¨â€œå’•å’•å’•â€
+çš„å«äº†èµ·æ¥ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 1 */
@@ -20,7 +20,7 @@ LONG
         ]) );
         
         
-        create_door("north", "ÓñÁ±ÃÅ", "south", DOOR_CLOSED);
+        create_door("north", "çŽ‰å¸˜é—¨", "south", DOOR_CLOSED);
         
         setup();
 }

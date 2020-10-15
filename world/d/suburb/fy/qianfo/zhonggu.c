@@ -5,10 +5,10 @@
 inherit ROOM;
 void create()
 {
-  set("short","�ӹ�¥");
+  set("short","钟鼓楼");
   set("long",@LONG
-�����ǰ��÷��ӣ���ĵĵط������ڳ����ӣ�ĺ���ģ�����������
-������࣬����ʾ�������е�ɮ�ڡ�
+这里是安置佛钟，佛鼓的地方，禅宗晨鸣钟，暮击鼓，钟声嘹亮，
+鼓声清脆，以提示寺中修行的僧众。
 LONG
   );
   set("exits",([

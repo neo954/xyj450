@@ -5,13 +5,13 @@ inherit ITEM;
 inherit F_LIQUID;
 void create()
 {
-	set_name("ºÚ´ÉÒ©ÎÍ", ({ "medvase", "vase" }) );
+	set_name("é»‘ç“·è¯ç“®", ({ "medvase", "vase" }) );
 	set_weight(700);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¸öÉ¢·¢×ÅÅ¨ÁÒµÄÖĞ²İÒ©Î¶µÄÒ©ÎÍ\n");
-		set("unit", "¸ö");
+		set("long", "ä¸€ä¸ªæ•£å‘ç€æµ“çƒˆçš„ä¸­è‰è¯å‘³çš„è¯ç“®\n");
+		set("unit", "ä¸ª");
 		set("value", 100);
 		set("max_liquid", 5);
 	}
@@ -20,7 +20,7 @@ void create()
 	// in each cloned copy.
 	set("liquid", ([
 		"type": "soup",
-		"name": "µ±¹é²¹ÑªÓãÌÀ",
+		"name": "å½“å½’è¡¥è¡€é±¼æ±¤",
 		"remaining": 5,
 		"drunk_apply": 0,
 	]) );

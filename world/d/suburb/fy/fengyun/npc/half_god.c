@@ -5,13 +5,13 @@ inherit F_QUEST;
 
 void create()
 {
-	set_name(HIY "Ìì»úÀÏÈË" NOR, ({ "tianji", "Tian ji", "Tian" }) );
+	set_name(HIY "å¤©æœºè€äºº" NOR, ({ "tianji", "Tian ji", "Tian" }) );
 
-	set("gender", "ÄĞĞÔ");
+	set("gender", "ç”·æ€§");
 	set("age", 99);
 	set("long",
-		"Ìì»úÀÏÈËÄê¹ıÁù¼×£¬º×·¢Í¯ÑÕ¡£ÔÚ±øÆ÷Æ×ÉÏÅÅÃûµÚÒ»£¬
-ÓÈÔÚÉÏ¹Ù£¬Ğ¡ÀîÖ®ÉÏ£®Ìì»úÀÏÈËÊÕÍ½¼«ÌôÌŞ£®£®£®£®\n");
+		"å¤©æœºè€äººå¹´è¿‡å…­ç”²ï¼Œé¹¤å‘ç«¥é¢œã€‚åœ¨å…µå™¨è°±ä¸Šæ’åç¬¬ä¸€ï¼Œ
+å°¤åœ¨ä¸Šå®˜ï¼Œå°æä¹‹ä¸Šï¼å¤©æœºè€äººæ”¶å¾’ææŒ‘å‰”ï¼ï¼ï¼ï¼\n");
 	set("attitude", "peaceful");
         set("skill_public",1);
 	set("str", 26000);
@@ -20,7 +20,7 @@ void create()
 	set("cps", 30);
         set("chat_chance", 1);
         set("chat_msg", ({
-                "Ìì»úÀÏÈËÄÃÆğºµÑÌ³éÁË¼¸¿Ú£®£®£®£®\n",
+                "å¤©æœºè€äººæ‹¿èµ·æ—±çƒŸæŠ½äº†å‡ å£ï¼ï¼ï¼ï¼\n",
         }) );
 
 	set("force", 40000);
@@ -41,8 +41,8 @@ void create()
         map_skill("force", "yiqiforce");
         map_skill("unarmed", "yiqiforce");
 
-	create_family("äìÒ£ÅÉ", 1, "×æÊ¦");
-	set("title", "ÏĞÔÆÒ°º×");
+	create_family("æ½‡é¥æ´¾", 1, "ç¥–å¸ˆ");
+	set("title", "é—²äº‘é‡é¹¤");
 	setup();
 
 	carry_object(__DIR__"obj/jade-ring")->wear();
@@ -53,7 +53,7 @@ void create()
 }
 int accept_fight(object me)
 {
-        command("say ÉúÃü¿É¹ó£¡²»Òª×ÔÑ°ËÀÂ·£¡");
+        command("say ç”Ÿå‘½å¯è´µï¼ä¸è¦è‡ªå¯»æ­»è·¯ï¼");
         return 0;
 }
 void init()
@@ -69,33 +69,33 @@ int accept_object(object who, object ob)
 	if (val && val >10000 && val < 20000)
 	{
 		       who->set("quest", 0 );
-       	 	tell_object(who,"Ìì»úÀÏÈËËµµÀ£ººÃ°É£¬Õâ¸öÈÎÎñ¾ÍËãÁË°É£®£®\n");
+       	 	tell_object(who,"å¤©æœºè€äººè¯´é“ï¼šå¥½å§ï¼Œè¿™ä¸ªä»»åŠ¡å°±ç®—äº†å§ï¼ï¼\n");
 		who->delete_temp("quest_number");
 		return 1;
 	}
         if(!(quest =  who->query("quest")))
 	{
-        tell_object(who,"Ìì»úÀÏÈËËµµÀ£ºÕâ²»ÊÇÎÒÏëÒªµÄ¡£\n");
+        tell_object(who,"å¤©æœºè€äººè¯´é“ï¼šè¿™ä¸æ˜¯æˆ‘æƒ³è¦çš„ã€‚\n");
 	return 0;
 	}
         if( (string)ob->query("name") != quest["quest"])
         {
-        tell_object(who,"Ìì»úÀÏÈËËµµÀ£ºÕâ²»ÊÇÎÒÏëÒªµÄ¡£\n");
+        tell_object(who,"å¤©æœºè€äººè¯´é“ï¼šè¿™ä¸æ˜¯æˆ‘æƒ³è¦çš„ã€‚\n");
         return 0;
         }
 	if( ob->is_character())
         {
-        tell_object(who,"Ìì»úÀÏÈËËµµÀ£ºÕâ²»ÊÇÎÒÏëÒªµÄ¡£\n");
+        tell_object(who,"å¤©æœºè€äººè¯´é“ï¼šè¿™ä¸æ˜¯æˆ‘æƒ³è¦çš„ã€‚\n");
         return 0;
         }
         if ((int) who->query("task_time") < time() )
         {
-        tell_object(who,"Ìì»úÀÏÈËËµµÀ£ºÕæ¿ÉÏ§£¡ÄãÃ»ÓĞÔÚÖ¸¶¨µÄÊ±¼äÄÚÍê³É£¡\n");
+        tell_object(who,"å¤©æœºè€äººè¯´é“ï¼šçœŸå¯æƒœï¼ä½ æ²¡æœ‰åœ¨æŒ‡å®šçš„æ—¶é—´å†…å®Œæˆï¼\n");
                         return 1;
         }
         else
         {
-        tell_object(who,"Ìì»úÀÏÈËËµµÀ£º¹§Ï²Äã£¡ÄãÓÖÍê³ÉÁËÒ»ÏîÈÎÎñ£¡\n");
+        tell_object(who,"å¤©æœºè€äººè¯´é“ï¼šæ­å–œä½ ï¼ä½ åˆå®Œæˆäº†ä¸€é¡¹ä»»åŠ¡ï¼\n");
 	exp = quest["exp_bonus"]/2 + random(quest["exp_bonus"]/2)+1;
 // put a cap
 	if(exp > 150) exp = 150;
@@ -107,10 +107,10 @@ int accept_object(object who, object ob)
 	who->add("combat_exp",exp);
 	who->add("potential",pot);
 	who->add("score",score);
-        tell_object(who,HIW"Äã±»½±ÀøÁË£º\n" +
-	chinese_number(exp) + "µãÊµÕ½¾­Ñé\n"+
-	chinese_number(pot) + "µãÇ±ÄÜ\n" +
-	chinese_number(score)+"µã×ÛºÏÆÀ¼Û\n"NOR);
+        tell_object(who,HIW"ä½ è¢«å¥–åŠ±äº†ï¼š\n" +
+	chinese_number(exp) + "ç‚¹å®æˆ˜ç»éªŒ\n"+
+	chinese_number(pot) + "ç‚¹æ½œèƒ½\n" +
+	chinese_number(score)+"ç‚¹ç»¼åˆè¯„ä»·\n"NOR);
 	who->set("quest", 0 );
                         return 1;
         }
@@ -120,16 +120,16 @@ void attempt_apprentice(object me)
 {
 	switch(random(4)) {
 		case 0:
-message_vision("$N¶Ô$nĞ¦ÎÊµÀ£ºÊ²Ã´ÊÇĞÄ½££¿\n", this_object(),me);
+message_vision("$Nå¯¹$nç¬‘é—®é“ï¼šä»€ä¹ˆæ˜¯å¿ƒå‰‘ï¼Ÿ\n", this_object(),me);
 			break;
 		case 1:
-message_vision("$N¶Ô$nĞ¦ÎÊµÀ£ºÊ²Ã´ÊÇ£¢µĞ²»¶¯£¬ÎÒ²»¶¯£»µĞÒ»¶¯£¬ÎÒÏÈ¶¯£¿£¢\n", this_object(),me);	
+message_vision("$Nå¯¹$nç¬‘é—®é“ï¼šä»€ä¹ˆæ˜¯ï¼‚æ•Œä¸åŠ¨ï¼Œæˆ‘ä¸åŠ¨ï¼›æ•Œä¸€åŠ¨ï¼Œæˆ‘å…ˆåŠ¨ï¼Ÿï¼‚\n", this_object(),me);	
 			break;
 		case 2:
-message_vision("$N¶Ô$nĞ¦ÎÊµÀ£º£¢ÓĞĞÎ£¬ÎŞĞÎ£¢ÊÇÊ²Ã´£¿\n", this_object(),me);		
+message_vision("$Nå¯¹$nç¬‘é—®é“ï¼šï¼‚æœ‰å½¢ï¼Œæ— å½¢ï¼‚æ˜¯ä»€ä¹ˆï¼Ÿ\n", this_object(),me);		
 			break;
 		case 3:
-message_vision("$N¶Ô$nĞ¦ÎÊµÀ£ºÎäÑ§µÄ×î¸ß¾³½çÊÇÊ²Ã´£¿\n", this_object(),me);
+message_vision("$Nå¯¹$nç¬‘é—®é“ï¼šæ­¦å­¦çš„æœ€é«˜å¢ƒç•Œæ˜¯ä»€ä¹ˆï¼Ÿ\n", this_object(),me);
 			break;
 	}
                         return;

@@ -12,7 +12,7 @@ void skill_improved(object me)
 
 	s = me->query_skill("dormancy", 1);
 	if((int)me->query("tol") < s/5) {
-		tell_object(me, HIW "由於你的勤学修养术，你的气量提高了。\n" NOR);
+		tell_object(me, HIW "鐢辨柤浣犵殑鍕ゅ淇吇鏈紝浣犵殑姘旈噺鎻愰珮浜嗐�俓n" NOR);
 		me->add("tol", 1);
 	}
 }

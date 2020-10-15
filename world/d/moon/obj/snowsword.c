@@ -1,33 +1,33 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
-// snowsword. ¡¾Ñ©É½½£·¨¡¿
+// snowsword. ã€é›ªå±±å‰‘æ³•ã€‘
 
 inherit SKILL;
 
 mapping *action = ({
-   ([   "action":     "$NÊ¹Ò»ÕÐ¡¸É½ÎèÒøÉß¡¹£¬ÊÖÖÐ$w»¯ÎªÒ»µÀ¼²¹â´ÌÏò$nµÄ$l",
+   ([   "action":     "$Nä½¿ä¸€æ‹›ã€Œå±±èˆžé“¶è›‡ã€ï¼Œæ‰‹ä¸­$wåŒ–ä¸ºä¸€é“ç–¾å…‰åˆºå‘$nçš„$l",
      "dodge":     -20,
      "damage":     20,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
-   ([   "action":     "Ö»¼û$N¼¸¸ö¼±×ª£¬Ê¹³ö¡¸¶ÀÁ¢ÔÆº£¡¹£¬Ò»Éù³¤Ð¦ÖÐ½£¹â³åÌì¶øÆð£¬É¨Ïò$nµÄ$l",
+   ([   "action":     "åªè§$Nå‡ ä¸ªæ€¥è½¬ï¼Œä½¿å‡ºã€Œç‹¬ç«‹äº‘æµ·ã€ï¼Œä¸€å£°é•¿ç¬‘ä¸­å‰‘å…‰å†²å¤©è€Œèµ·ï¼Œæ‰«å‘$nçš„$l",
      "dodge":     -20,
      "damage":     20,
-     "damage_type":   "¸îÉË"
+     "damage_type":   "å‰²ä¼¤"
    ]),
-   ([   "action":     "Ö»¼û$N×ÝÉíÆËÆð£¬ÊÖÖÐ$wÓÉÖÐ¹¬Ö±½ø£¬¾¶´Ì$nµÄ$l¡£ÕâÒ»ÕÐ¡¸°ÁÔ½Ç§É½¡¹µ±ÕæÊÇÆøÊÆ·Ç·²",
+   ([   "action":     "åªè§$Nçºµèº«æ‰‘èµ·ï¼Œæ‰‹ä¸­$wç”±ä¸­å®«ç›´è¿›ï¼Œå¾„åˆº$nçš„$lã€‚è¿™ä¸€æ‹›ã€Œå‚²è¶Šåƒå±±ã€å½“çœŸæ˜¯æ°”åŠ¿éžå‡¡",
      "dodge":     -30,
      "damage":     25,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
-   ([   "action":     "$NÊÖÖÐ$wÇáÇáÒ»¶¶£¬Ò»Ê½¡¸Ç§Àï±ù·â¡¹»Ã³öÒ»±éº®¹âÕÖÏò$n¡£$nÖ»¾õµÃÁ¬ºôÎü¶¼±»¶³×¡ÁË",
+   ([   "action":     "$Næ‰‹ä¸­$wè½»è½»ä¸€æŠ–ï¼Œä¸€å¼ã€Œåƒé‡Œå†°å°ã€å¹»å‡ºä¸€éå¯’å…‰ç½©å‘$nã€‚$nåªè§‰å¾—è¿žå‘¼å¸éƒ½è¢«å†»ä½äº†",
      "dodge":     -40,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
-   ([   "action":     "$NÊÖÖÐ$wÔÙÒ»¶¶£¬Ö»¼ûº®¹âµãµã£¬Æ®¸¡²»¶¨¡£\nÕâÒ»ÕÐ¡¸ÍòÀïÑ©Æ®¡¹Ö»¿´µÃ$nÑÛ»¨çÔÂÒ£¬ÄÄÀï»¹ÄÜÕÐ¼Ü",
+   ([   "action":     "$Næ‰‹ä¸­$wå†ä¸€æŠ–ï¼Œåªè§å¯’å…‰ç‚¹ç‚¹ï¼Œé£˜æµ®ä¸å®šã€‚\nè¿™ä¸€æ‹›ã€Œä¸‡é‡Œé›ªé£˜ã€åªçœ‹å¾—$nçœ¼èŠ±ç¼­ä¹±ï¼Œå“ªé‡Œè¿˜èƒ½æ‹›æž¶",
      "dodge":     -20,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
    
 });
@@ -37,14 +37,14 @@ int valid_learn(object me)
    object ob;
 
    if( (int)me->query("max_force") < 50 )
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬Ã»ÓÐ°ì·¨Á·Ñ©É½½£·¨¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒé›ªå±±å‰‘æ³•ã€‚\n");
 
    if( (string)me->query_skill_mapped("force")!= "moonforce")
-     return notify_fail("Ñ©É½½£·¨±ØÐëÅäºÏÀ¥ÂØÉ½ÓñÅ®·åµÄÔ²ÔÂÐÄ·¨²ÅÄÜÁ·¡£\n");
+     return notify_fail("é›ªå±±å‰‘æ³•å¿…é¡»é…åˆæ˜†ä»‘å±±çŽ‰å¥³å³°çš„åœ†æœˆå¿ƒæ³•æ‰èƒ½ç»ƒã€‚\n");
 
    if( !(ob = me->query_temp("weapon"))
    ||   (string)ob->query("skill_type") != "sword" )
-     return notify_fail("Äã±ØÐëÏÈÕÒÒ»°Ñ½£²ÅÄÜÁ·½£·¨¡£\n");
+     return notify_fail("ä½ å¿…é¡»å…ˆæ‰¾ä¸€æŠŠå‰‘æ‰èƒ½ç»ƒå‰‘æ³•ã€‚\n");
 
    return 1;
 }
@@ -63,9 +63,9 @@ int practice_skill(object me)
 {
    if( (int)me->query("kee") < 30
    ||   (int)me->query("force") < 3 )
-     return notify_fail("ÄãµÄÄÚÁ¦»òÆø²»¹»£¬Ã»ÓÐ°ì·¨Á·Ï°Ñ©É½½£·¨¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›æˆ–æ°”ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒä¹ é›ªå±±å‰‘æ³•ã€‚\n");
    me->receive_damage("kee", 30);
    me->add("force", -3);
-   write("Äã°´ÖøËùÑ§Á·ÁËÒ»±éÑ©É½½£·¨¡£\n");
+   write("ä½ æŒ‰è‘—æ‰€å­¦ç»ƒäº†ä¸€éé›ªå±±å‰‘æ³•ã€‚\n");
    return 1;
 }

@@ -6,11 +6,11 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "ѩͤ��ֵ�");
+	set("short", "雪亭镇街道");
 	set("long", @LONG
-������ѩͤ��Ĵ�֣�������һ���¾ɵĽ���������������ʲô��
-�̣����ǲ�û���κ����ƣ�ֻ��һ����(door)����д��һ�����ġ���
-���֣�������һ��ҩ�̣�������ϱ������������졣
+这里是雪亭镇的大街，东边有一栋陈旧的建筑，看起来像是什么店
+铺，但是并没有任何招牌，只有一扇门(door)上面写著一个大大的「当
+」字，往西是一间药铺，大街往南北两个方向延伸。
 LONG
 	);
 
@@ -24,7 +24,7 @@ LONG
 
 	setup();
 
-	create_door("east", "������", "west", DOOR_CLOSED);
+	create_door("east", "店铺门", "west", DOOR_CLOSED);
 
 	replace_program(ROOM);
 }

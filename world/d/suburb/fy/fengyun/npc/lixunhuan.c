@@ -7,9 +7,9 @@ inherit F_QUEST;
 #include <ansi.h>
 void create()
 {
-        set_name("ÀîÑ°»¶", ({ "master li", "master", "master li xunhuan" }) );
-        set("nickname", RED"Ð¡Àî·Éµ¶"NOR);
-        set("gender", "ÄÐÐÔ" );
+        set_name("æŽå¯»æ¬¢", ({ "master li", "master", "master li xunhuan" }) );
+        set("nickname", RED"å°æŽé£žåˆ€"NOR);
+        set("gender", "ç”·æ€§" );
         set("age", 44);
         set("str", 30);
         set("cor", 30);
@@ -21,23 +21,23 @@ void create()
         set("force", 15000);
         set("force_factor", 3);
 
-        set("rank_info/respect", "ÀîÌ½»¨");
+        set("rank_info/respect", "æŽæŽ¢èŠ±");
 
         set("long",
-"ÀîÑ°»¶±ðºÅÀîÌ½»¨£¬ÓÖÓÐ½­ºþ´ÂºÅÐ¡Àî·Éµ¶¡£
-Ò»ÊÖ·Éµ¶¾ø¼¼£¬ÔÚ°ÙÏþÉúµÄ±øÆ÷Æ×ÉÏÅÅÐÐµÚÈý¡£
-²»·¢ÔòÒÑ£¬µ«ÀýÎÞÐé·¢¡£\n"                
+"æŽå¯»æ¬¢åˆ«å·æŽæŽ¢èŠ±ï¼Œåˆæœ‰æ±Ÿæ¹–ç»°å·å°æŽé£žåˆ€ã€‚
+ä¸€æ‰‹é£žåˆ€ç»æŠ€ï¼Œåœ¨ç™¾æ™“ç”Ÿçš„å…µå™¨è°±ä¸ŠæŽ’è¡Œç¬¬ä¸‰ã€‚
+ä¸å‘åˆ™å·²ï¼Œä½†ä¾‹æ— è™šå‘ã€‚\n"                
 	);
-        create_family("·çÔÆÒ»µ¶", 2, "ÈË½Ü");
-	set("student_title","ÈË½Ü");
+        create_family("é£Žäº‘ä¸€åˆ€", 2, "äººæ°");
+	set("student_title","äººæ°");
         set("combat_exp", 10000000);
         set("score", 200000);
 
         set("chat_chance", 10);
         set("chat_msg", ({
-                "ÀîÑ°»¶²»Í£µÄÔÚ¿È£¬×ì½ÇÁ÷ÏÂÒ»Ë¿ÏÊÑª¡£\n",
-                "ÀîÑ°»¶µÄÁ³É«Ô½·¢²Ô°×ÁË¡£\n",
-"ÀîÑ°»¶Ì¾¿ÚÆø£¬´ô´ôµØÍû×ÅÊÖÀïµÄÄ¾Ïñ¡£\n",
+                "æŽå¯»æ¬¢ä¸åœçš„åœ¨å’³ï¼Œå˜´è§’æµä¸‹ä¸€ä¸é²œè¡€ã€‚\n",
+                "æŽå¯»æ¬¢çš„è„¸è‰²è¶Šå‘è‹ç™½äº†ã€‚\n",
+"æŽå¯»æ¬¢å¹å£æ°”ï¼Œå‘†å‘†åœ°æœ›ç€æ‰‹é‡Œçš„æœ¨åƒã€‚\n",
         }) );
 
         set("chat_chance_combat", 50);
@@ -65,13 +65,13 @@ void attempt_apprentice(object ob)
 {
 	if(time()-(int) ob->query("last_time_app_master_li") < 600)
 	{
-	         message_vision("$NÐ¦µÀ£ºÄãÔõÃ´ÕâÃ´¿ìÓÖ»ØÀ´ÁË£®£®£®\n",
+	         message_vision("$Nç¬‘é“ï¼šä½ æ€Žä¹ˆè¿™ä¹ˆå¿«åˆå›žæ¥äº†ï¼Žï¼Žï¼Ž\n",
         this_object());
         return;
         }
 	if((int) ob->query("force_factor") < 100)
 	{
-	 message_vision("$NÐ¦µÀ£ºÄã¶ÔÎä¹¦µÄÁË½â»¹²»¹»£®£®£®\n",
+	 message_vision("$Nç¬‘é“ï¼šä½ å¯¹æ­¦åŠŸçš„äº†è§£è¿˜ä¸å¤Ÿï¼Žï¼Žï¼Ž\n",
         this_object());
 	return;
 
@@ -79,14 +79,14 @@ void attempt_apprentice(object ob)
 	if( random(100) || random((int)ob->query("kar")) <  25 ||
 	   query("already"))
 	{
-	message_vision("$N¿ÈÁËÁ½Éù£¬ËµµÀ£º²»Òª¿ªÍæÐ¦£¬ÎÒ¿É²»ÏëÎóÈË×ÓµÜ¡£\n",
+	message_vision("$Nå’³äº†ä¸¤å£°ï¼Œè¯´é“ï¼šä¸è¦å¼€çŽ©ç¬‘ï¼Œæˆ‘å¯ä¸æƒ³è¯¯äººå­å¼Ÿã€‚\n",
 	this_object());
 	ob->set("last_time_app_master_li",time());
                 return;
         }
         command("sigh");
-        command("say ºÜºÃ£¬" + RANK_D->query_respect(ob) + 
-"ËûÈÕÇÐ²»¿ÉÎª·Ç×÷´õ¡£\n");
+        command("say å¾ˆå¥½ï¼Œ" + RANK_D->query_respect(ob) + 
+"ä»–æ—¥åˆ‡ä¸å¯ä¸ºéžä½œæ­¹ã€‚\n");
         command("recruit " + ob->query("id") );
 	ob->delete("betrayer");
 }

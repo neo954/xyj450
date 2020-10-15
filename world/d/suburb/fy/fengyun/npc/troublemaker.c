@@ -4,8 +4,8 @@ inherit NPC;
 string kill_passenger(object who);
 void create()
 {
-        set_name("ÂãÌåÄĞÈË", ({ "naked man" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("è£¸ä½“ç”·äºº", ({ "naked man" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 28);
         set("str", 28);
         set("cor", 27);
@@ -13,7 +13,7 @@ void create()
         set("int", 23);
         set("attitude", "aggrensive");
 
-        set("long","ÕâÊÇÒ»Î»ÕıÔÚÏ´ÔèµÄÂãÌåÄĞÈË\n");
+        set("long","è¿™æ˜¯ä¸€ä½æ­£åœ¨æ´—æ¾¡çš„è£¸ä½“ç”·äºº\n");
 
         set("combat_exp", 200000);
         set("score", 50);

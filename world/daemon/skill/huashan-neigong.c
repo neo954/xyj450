@@ -1,7 +1,7 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
 
-// huashan-neigong.c »ªÉ½ÄÚ¹¦
+// huashan-neigong.c åŽå±±å†…åŠŸ
 
 inherit FORCE;
 
@@ -12,15 +12,15 @@ int valid_learn(object me)
 {
 	int i = (int)me->query_skill("taiji-shengong", 1);
 	if ((int)me->query_skill("force", 1) < 10)
-		return notify_fail("ÄãµÄ»ù±¾ÄÚ¹¦»ðºò»¹²»¹»¡£\n");
+		return notify_fail("ä½ çš„åŸºæœ¬å†…åŠŸç«å€™è¿˜ä¸å¤Ÿã€‚\n");
 	if ((int)me->query("sen") < (int)pow(i/10, 2) * 100)
-		return notify_fail("ÄãµÄÉñÌ«µÍÁË¡£\n");
+		return notify_fail("ä½ çš„ç¥žå¤ªä½Žäº†ã€‚\n");
 	return 1;
 }
 
 int practice_skill(object me)
 {
-	return notify_fail("Ì«¼«Æø¹¦Ö»ÄÜÓÃÑ§(learn)µÄÀ´Ôö¼ÓÊìÁ·¶È¡£\n");
+	return notify_fail("å¤ªæžæ°”åŠŸåªèƒ½ç”¨å­¦(learn)çš„æ¥å¢žåŠ ç†Ÿç»ƒåº¦ã€‚\n");
 }
 
 string exert_function_file(string func)

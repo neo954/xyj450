@@ -13,10 +13,10 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("［腰斩］只能对战斗中的对手使用。\n");
+		return notify_fail("锛昏叞鏂╋冀鍙兘瀵规垬鏂椾腑鐨勫鎵嬩娇鐢ㄣ�俓n");
 	extra = me->query_skill("kongshoudao",1) ;
-	if(extra <= 80 ) return notify_fail("你的［空手道］不够熟练！\n");
-	msg = HIR "$N突然绕到$n身后，右膝猛然上顶，双手同时抓向$n，企图将$n的后腰磕断！" NOR;
+	if(extra <= 80 ) return notify_fail("浣犵殑锛荤┖鎵嬮亾锛戒笉澶熺啛缁冿紒\n");
+	msg = HIR "$N绐佺劧缁曞埌$n韬悗锛屽彸鑶濈寷鐒朵笂椤讹紝鍙屾墜鍚屾椂鎶撳悜$n锛屼紒鍥惧皢$n鐨勫悗鑵扮鏂紒" NOR;
         weapon = me->query_temp("weapon");
 	me->add_temp("apply/damage",extra);
         COMBAT_D->do_attack(me,target, me->query_temp("weapon"),TYPE_REGULAR,msg);

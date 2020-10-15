@@ -8,20 +8,20 @@ int exert(object me, object target)
 {
 	string msg;
 	int i,b;
-        if (me->query("force")<10) return notify_fail("ÄãÄÚÁ¦²»¹»ÁË£¡£¡\n");
+        if (me->query("force")<10) return notify_fail("ä½ å†…åŠ›ä¸å¤Ÿäº†ï¼ï¼\n");
 	if( !target ) target = offensive_target(me);
 
 	/*if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("Ö»ÄÜ¶ÔÕ½¶·ÖÐµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");*/
+		return notify_fail("åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");*/
 
-	msg = HIR "$NÊ¹³öºÓº£ÄÚ¹¦µÄ¾«»ª----ÌìÄ§Îü»ê´ó·¨£¡\n";
+	msg = HIR "$Nä½¿å‡ºæ²³æµ·å†…åŠŸçš„ç²¾åŽ----å¤©é­”å¸é­‚å¤§æ³•ï¼\n";
             b=me->query_skill("force");
 	if( random(100) <(b/2)) {
-	//	msg += "$pÒÑÏÔ³ÔÁ¦¡£\n" NOR;
+	//	msg += "$på·²æ˜¾åƒåŠ›ã€‚\n" NOR;
 	//	for (i=0; i<random (3)+1; i++)
-        msg+=HIG "$p´ó½ÐÒ»Éù²»ºÃ£¡¾«ÆøÉñÕý²»¶ÏÍâÐº£¡£¡£¡£¡\n" NOR;
+        msg+=HIG "$på¤§å«ä¸€å£°ä¸å¥½ï¼ç²¾æ°”ç¥žæ­£ä¸æ–­å¤–æ³»ï¼ï¼ï¼ï¼\n" NOR;
                   i=target->query("kee");i=i*b/150;
               if (i>0) {      target->add("kee",-i);me->add("kee",i);}
                   i=target->query("sen");i=i*b/150;
@@ -33,7 +33,7 @@ int exert(object me, object target)
 	//		COMBAT_D->do_attack(me, target, me->query("weapon"));
 		} 
 	    else {
-		msg +=HIB "µ«ÊÇ±»$p´ÓÈÝ»¯½âÁË£¬$p´óºðÒ»Éù£º¡°Äã¸Ò°µËãÎÒ£¿£¬ÄÉÃüÀ´£¡¡±\n" NOR;
+		msg +=HIB "ä½†æ˜¯è¢«$pä»Žå®¹åŒ–è§£äº†ï¼Œ$på¤§å¼ä¸€å£°ï¼šâ€œä½ æ•¢æš—ç®—æˆ‘ï¼Ÿï¼Œçº³å‘½æ¥ï¼â€\n" NOR;
                         target->kill_ob(me);	     
                         //   me->kill_ob(target);
 	}

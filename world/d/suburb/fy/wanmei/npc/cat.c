@@ -1,21 +1,21 @@
 inherit NPC;
 void create()
 {
-    set_name("Ğ¡Ã¨ßä", ({ "catty" }) );
-        set("race", "Ò°ÊŞ");
+    set_name("å°çŒ«å’ª", ({ "catty" }) );
+        set("race", "é‡å…½");
         set("age", 1);
-        set("gender", "´ÆĞÔ");
-        set("long", "Ò»Ö»Ğ¡Ğ¡µÄ£¬Ã¨Í·Ã¨ÄÔµÄĞ¡»¨Ã¨\n");
+        set("gender", "é›Œæ€§");
+        set("long", "ä¸€åªå°å°çš„ï¼ŒçŒ«å¤´çŒ«è„‘çš„å°èŠ±çŒ«\n");
     	set("combat_exp", 1000);
         set("attitude","peaceful");
-        set("limbs", ({ "Í·²¿", "ÉíÌå","Î²°Í" }) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“","å°¾å·´" }) );
     	set("verbs", ({ "bite","claw" }) );
         set_temp("apply/dodge", 100);
 	set("chat_chance", 7);
         set("chat_msg", ({
 	(: random_move :)
         }) );
-        set("arrive_msg", "ÌøÁË¹ıÀ´");
-        set("leave_msg", "£¢ß÷¡«£¢µÄÒ»Éù£¬Ìø¿ªÁË");
+        set("arrive_msg", "è·³äº†è¿‡æ¥");
+        set("leave_msg", "ï¼‚å–µï½ï¼‚çš„ä¸€å£°ï¼Œè·³å¼€äº†");
         setup();
 }

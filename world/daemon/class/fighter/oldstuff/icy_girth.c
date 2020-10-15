@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // icy_girth.c
@@ -10,12 +10,12 @@ inherit WAIST;
 
 void create()
 {
-   set_name( HIC "´µÑ©²ĞÔÆ´ø" NOR, ({ "icy girth", "girth" }) );
+   set_name( HIC "å¹é›ªæ®‹äº‘å¸¦" NOR, ({ "icy girth", "girth" }) );
    set_weight(600);
    if( clonep() )
      set_default_object(__FILE__);
    else {
-     set("unit", "Ìõ");
+     set("unit", "æ¡");
      set("value", 7000);
      set("material", "cloth");
      set("armor_prop/armor", 1);

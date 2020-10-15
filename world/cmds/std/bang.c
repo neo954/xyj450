@@ -9,9 +9,9 @@ int main(object me, string arg)
 	object *t;
 	string ss,st,t1,t2,s1,s2;
 
-	if (!arg) return notify_fail("ÓÃ·¨²»¶Ô!\n");
+	if (!arg) return notify_fail("ç”¨æ³•ä¸å¯¹!\n");
 
-	ss=me->query("marks/°ïÅÉ");
+	ss=me->query("marks/å¸®æ´¾");
 	if (ss!=0)
 	{
 		t1="marks/"+ss;
@@ -19,11 +19,11 @@ int main(object me, string arg)
 	}
 	if( arg=="dismiss" ) {
 		if( ss==0 )
-			return notify_fail("ÄãÏÖÔÚ²¢Ã»ÓĞ²Î¼ÓÈÎºÎ°ï»á¡£\n");
-		write("ÄãÍÑÀëÁË"+ss+"¡£\n");
-		me->delete("marks/°ïÅÉ");
+			return notify_fail("ä½ ç°åœ¨å¹¶æ²¡æœ‰å‚åŠ ä»»ä½•å¸®ä¼šã€‚\n");
+		write("ä½ è„±ç¦»äº†"+ss+"ã€‚\n");
+		me->delete("marks/å¸®æ´¾");
 		me->delete(t1);
-		me->set("title","ÆÕÍ¨°ÙĞÕ");
+		me->set("title","æ™®é€šç™¾å§“");
 		return 1;
 	}
 	if( sscanf(arg, "with %s", arg)==1 ) {
@@ -32,9 +32,9 @@ int main(object me, string arg)
 		|| 	!living(ob)
 		||	!ob->is_character()
 		||	ob==me )
-			return notify_fail("ÄãÏëºÍË­³ÉÎªÍ¬°ïµÄ»ï°é£¿\n");
+			return notify_fail("ä½ æƒ³å’Œè°æˆä¸ºåŒå¸®çš„ä¼™ä¼´ï¼Ÿ\n");
 
-		s1=ob->query("marks/°ïÅÉ");
+		s1=ob->query("marks/å¸®æ´¾");
 		if (s1!=0)
 		{
 			t2="marks/"+s1;
@@ -45,51 +45,51 @@ int main(object me, string arg)
 			if ((ss!=0)&&(s1!=0))
 			{
 				ob->dellete_temp("pending/bang");
-				return notify_fail("Ë«·½¶¼¼ÓÈë°ï»á¡£\n");
+				return notify_fail("åŒæ–¹éƒ½åŠ å…¥å¸®ä¼šã€‚\n");
 			}
 		}		
-		if( (ss==0) || (st=="¶æÖ÷" )) {
+		if( (ss==0) || (st=="èˆµä¸»" )) {
 		       if( me==(object)ob->query_temp("pending/bang") ) {
 				if( ss==0 ) {
-					me->set("marks/°ïÅÉ",s1);
-					me->set(t2,"°ïÖÚ");
-					message_vision("$N¾ö¶¨¼ÓÈë$nµÄ"+s1+"¡£\n", me, ob);
+					me->set("marks/å¸®æ´¾",s1);
+					me->set(t2,"å¸®ä¼—");
+					message_vision("$Nå†³å®šåŠ å…¥$nçš„"+s1+"ã€‚\n", me, ob);
 				} else {
-					ob->set("marks/°ïÅÉ",ss);
-					ob->set(t1,"°ïÖÚ");
-					message_vision("$N¾ö¶¨ÈÃ$n¼ÓÈë"+ss+"¡£\n", me, ob);
+					ob->set("marks/å¸®æ´¾",ss);
+					ob->set(t1,"å¸®ä¼—");
+					message_vision("$Nå†³å®šè®©$nåŠ å…¥"+ss+"ã€‚\n", me, ob);
 				}
 				ob->dellete_temp("pending/bang");
 				return 1;
 			} else {
-				if (st=="¶æÖ÷")
+				if (st=="èˆµä¸»")
 				{
-					message_vision("$NÑûÇë$n¼ÓÈë"+ss+"¡£\n", me, ob);
-					tell_object(ob, YEL "Èç¹ûÄãÔ¸Òâ¼ÓÈë£¬ÇëÓÃ bang with " + me->query("id") + "¡£\n" NOR);
+					message_vision("$Né‚€è¯·$nåŠ å…¥"+ss+"ã€‚\n", me, ob);
+					tell_object(ob, YEL "å¦‚æœä½ æ„¿æ„åŠ å…¥ï¼Œè¯·ç”¨ bang with " + me->query("id") + "ã€‚\n" NOR);
 				} else {
-					if (s2=="¶æÖ÷")
+					if (s2=="èˆµä¸»")
 					{
-						message_vision("$NÉêÇë¼ÓÈë$nµÄ"+s1+"¡£\n", me, ob);
-						tell_object(ob, YEL "Èç¹ûÄãÍ¬Òâ¼ÓÈë£¬ÇëÓÃ bang with " + me->query("id") + "¡£\n" NOR);
+						message_vision("$Nç”³è¯·åŠ å…¥$nçš„"+s1+"ã€‚\n", me, ob);
+						tell_object(ob, YEL "å¦‚æœä½ åŒæ„åŠ å…¥ï¼Œè¯·ç”¨ bang with " + me->query("id") + "ã€‚\n" NOR);
 					} else {
-						return notify_fail("Ö»ÄÜÏò¶æÖ÷ÉêÇë¼ÓÈë°ï»á¡£\n");
+						return notify_fail("åªèƒ½å‘èˆµä¸»ç”³è¯·åŠ å…¥å¸®ä¼šã€‚\n");
 					}
 				}
 				me->set_temp("pending/bang", ob);
 				return 1;
 			}
 		} else
-			return notify_fail("Ö»ÓĞ¶æÖ÷¿ÉÒÔÑûÇë±ğÈË¼ÓÈë¡£\n");
+			return notify_fail("åªæœ‰èˆµä¸»å¯ä»¥é‚€è¯·åˆ«äººåŠ å…¥ã€‚\n");
 	}
 }
 
 int help(object me)
 {
 	write(@HELP
-°ï»áÖ¸ÁîÊ¹ÓÃ·½·¨:
+å¸®ä¼šæŒ‡ä»¤ä½¿ç”¨æ–¹æ³•:
 
-bang with <Ä³ÈË> - ¸úÄ³ÈËÍ¬°ï. ±ØĞëÒªË«·½¶¼Í¬Òâ¼ÓÈëÇÒÆäÖĞÒ»ÈËÊÇ¶æÖ÷²Å»áÉúĞ§¡£
-bang dismiss     - Àë¿ª°ï»á. 
+bang with <æŸäºº> - è·ŸæŸäººåŒå¸®. å¿…é¡»è¦åŒæ–¹éƒ½åŒæ„åŠ å…¥ä¸”å…¶ä¸­ä¸€äººæ˜¯èˆµä¸»æ‰ä¼šç”Ÿæ•ˆã€‚
+bang dismiss     - ç¦»å¼€å¸®ä¼š. 
 HELP
 	);
 	return 1;

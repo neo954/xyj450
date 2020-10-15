@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("´ó³ø", ({ "cook" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å¤§å¨", ({ "cook" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 42);
-        set("long", "ÕâÊÇÒ»¸öÊÖÒÕ¾«Õ¿µÄ´ó³ø.\n");
+        set("long", "è¿™æ˜¯ä¸€ä¸ªæ‰‹è‰ºç²¾æ¹›çš„å¤§å¨.\n");
 
         set("combat_exp", 1000);
         set("attitude", "heroism");

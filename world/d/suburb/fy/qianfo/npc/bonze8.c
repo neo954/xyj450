@@ -5,15 +5,15 @@ inherit NPC;
 int give_qin();
 void create()
 {
-        set_name("ÔÆº£", ({ "yunhai" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("äº‘æµ·", ({ "yunhai" }) );
+        set("gender", "ç”·æ€§" );
         set("class", "bonze");
-	set("title","ĞË¹úìøËÂÔÆ×Ö±²´óÊ¦");
+	set("title","å…´å›½ç¦…å¯ºäº‘å­—è¾ˆå¤§å¸ˆ");
         set("age", random(40)+20);
         set("cor", 24);
         set("cps", 29);
         set("int", 25);
-        set("long", "ËûÊÇĞË¹úìøËÂÖĞÆÄÓĞÍşÍûµÄÔÆ×Ö±²´óÊ¦\n");
+        set("long", "ä»–æ˜¯å…´å›½ç¦…å¯ºä¸­é¢‡æœ‰å¨æœ›çš„äº‘å­—è¾ˆå¤§å¸ˆ\n");
         set("combat_exp", 6000000);
         set("attitude", "friendly");
         set("max_force", 500);
@@ -21,10 +21,10 @@ void create()
         set("force_factor", 5);
         set("chat_chance", 1);
         set("chat_msg", ({
-                "ÔÆº£ËµµÀ£ºÄãÏë¹éÒÀ·ğÃÅÂğ£¿\n",
+                "äº‘æµ·è¯´é“ï¼šä½ æƒ³å½’ä¾ä½›é—¨å—ï¼Ÿ\n",
         }) );
         set("inquiry", ([
-		"¹éÒÀ·ğÃÅ" : (: give_qin :),
+		"å½’ä¾ä½›é—¨" : (: give_qin :),
 		"femen" : (: give_qin :),
 	]));
         setup();
@@ -33,7 +33,7 @@ void create()
 }
 int accept_fight(object me)
 {
-        command("say °¢ÃÖÍÓ·ğ£¡Æ¶É®Îä¹¦µÍÎ¢£¬Ê©Ö÷²»Òª¿ªÕâÖÖÍæĞ¦¡£\n");
+        command("say é˜¿å¼¥é™€ä½›ï¼è´«åƒ§æ­¦åŠŸä½å¾®ï¼Œæ–½ä¸»ä¸è¦å¼€è¿™ç§ç©ç¬‘ã€‚\n");
         return 0;
 }
 
@@ -42,13 +42,13 @@ int give_qin()
         object obj;
 if( !query("given"))
         {
-command("say ÎÒ°ï²»µ½ÄãºÜ¶à£¬µ«ÎÒ²»ÈëµØÓü£¬Ë­ÈëµØÓü£¡£¡Õâ¸öÄãÄÃÈ¥°É£¡\n");
+command("say æˆ‘å¸®ä¸åˆ°ä½ å¾ˆå¤šï¼Œä½†æˆ‘ä¸å…¥åœ°ç‹±ï¼Œè°å…¥åœ°ç‹±ï¼ï¼è¿™ä¸ªä½ æ‹¿å»å§ï¼\n");
 obj = new(__DIR__"obj/shoe2");
 command("give shoes to "+this_player()->query("id"));
 set("given",1);
         }
 else
-command("say ÎÒÒ²°ï²»µ½Äã£¡\n");
+command("say æˆ‘ä¹Ÿå¸®ä¸åˆ°ä½ ï¼\n");
         return 1;
 }
 

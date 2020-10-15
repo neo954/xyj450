@@ -5,11 +5,11 @@ inherit ROOM;
 string look_sign(object me);
 void create()
 {
-        set("short", "ԧ��ͤ");
+        set("short", "鸳鸯亭");
         set("long", @LONG
-��������վ��ԧ��ͤ�������ר�����˵޽��Լ�ͽ����Լ�ĵط���
-�������еķ򸾶���������ϲ����Ե�ģ�������������Ҳ������Ľ��������
-�����ˣ������ſڵĵط���һ����ľ��ɵ����ƣ�������
+你现在正站在鸳鸯亭里，这里是专门替人缔结婚约和解除婚约的地方，
+城里所有的夫妇都是在这里喜结良缘的，就连附近镇子也有许多慕名而来的
+年青人．靠近门口的地方有一块乌木雕成的招牌（ｓｉｇｎ）。
 LONG
         );
         set("exits", ([
@@ -30,6 +30,6 @@ LONG
 
 string look_sign(object me)
 {
-        return "�޽ᣨ�����������������������������Լ��\n";
+        return "缔结（ｍａｒｒｙ）或解除（ｕｎｍａｒｒｙ）婚约。\n";
 }
 

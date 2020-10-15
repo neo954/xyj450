@@ -1,4 +1,4 @@
-// mu-ren.c Ä¾ÈË
+// mu-ren.c æœ¨äºº
 
 inherit NPC;
 inherit F_CLEAN_UP;
@@ -8,10 +8,10 @@ void consider();
 void create()
 {
 	seteuid(getuid());
-	set_name("Ä¾ÈË", ({ "mu ren", "mu", "wood man", "wood" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("æœ¨äºº", ({ "mu ren", "mu", "wood man", "wood" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 30);
-	set("long", "Ò»¸öÁ·¹¦ÓÃµÄ±ÈÎäÄ¾ÈË£¬ÖÆ×÷¾«ÇÉ£¬ÈçÍ¬ÕæÈËÒ»°ã¡£\n");
+	set("long", "ä¸€ä¸ªç»ƒåŠŸç”¨çš„æ¯”æ­¦æœ¨äººï¼Œåˆ¶ä½œç²¾å·§ï¼Œå¦‚åŒçœŸäººä¸€èˆ¬ã€‚\n");
 	set("attitude", "heroism");
 
 	set("str", 25);

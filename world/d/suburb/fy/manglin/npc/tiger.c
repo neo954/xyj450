@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("°×¶îÃÍ»¢", ({ "tiger", "big tiger" }) );
-	set("race", "Ò°ÊŞ");
-	set("gender", "ĞÛĞÔ");
+	set_name("ç™½é¢çŒ›è™", ({ "tiger", "big tiger" }) );
+	set("race", "é‡å…½");
+	set("gender", "é›„æ€§");
 	set("age", 20);
-	set("long", "ÕâÊÇÒ»Ö»Ğ×ÃÍÎŞ±ÈµÄ°×¶îÃÍ»¢\n");
+	set("long", "è¿™æ˜¯ä¸€åªå‡¶çŒ›æ— æ¯”çš„ç™½é¢çŒ›è™\n");
 	
 	set("str", 48);
 	set("cor", 52);
@@ -18,13 +18,13 @@ void create()
 	set("max_gin", 600);
 	set("max_sen", 900);
 	set("attitude", "aggressive");
-	set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "áá½Å", "Î²°Í" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰è„š", "å¾Œè„š", "å°¾å·´" }) );
 	set("verbs", ({ "bite", "claw" }) );
 
         set("chat_chance_combat", 1);
         set("chat_msg_combat", ({
-                "°×¶îÃÍ»¢ÃÍµØÏòÄãÒ»ÆË£¡\n",
-                "°×¶îÃÍ»¢ºİºİµØÓÃÎ²°ÍÏòÄãÉ¨À´£¡\n"
+                "ç™½é¢çŒ›è™çŒ›åœ°å‘ä½ ä¸€æ‰‘ï¼\n",
+                "ç™½é¢çŒ›è™ç‹ ç‹ åœ°ç”¨å°¾å·´å‘ä½ æ‰«æ¥ï¼\n"
         }) );
 
 		set("combat_exp", 20000);

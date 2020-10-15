@@ -2,17 +2,17 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "ÔÆÌ¨");
+        set("short", "äº‘å°");
         set("long", @LONG
-¹ÃÉäÖ®áÛ£¬ÏéÔÆ¶ä¶ä£¬Èğ²ÊÇ§Ìõ¡£Ãê¹ÃÉäÖ®É½£¬ÓĞÉñÈË¾ÓÑÉ£¬¼¡·ôÈô±ùÑ©£¬´ÂÔ¼Èç´¦×Ó..
-ÏÉ×ÙÄÑÃÙ£¬Ö»¾õ·çÉùìªÈ»£¬ÔÆ¿ªÖ®³ö£¬Í¹ÏÖÒ»×ùÔÆÌ¨(platform)
+å§‘å°„ä¹‹å·…ï¼Œç¥¥äº‘æœµæœµï¼Œç‘å½©åƒæ¡ã€‚è—å§‘å°„ä¹‹å±±ï¼Œæœ‰ç¥äººå±…ç„‰ï¼Œè‚Œè‚¤è‹¥å†°é›ªï¼Œç»°çº¦å¦‚å¤„å­..
+ä»™è¸ªéš¾è§…ï¼Œåªè§‰é£å£°é£’ç„¶ï¼Œäº‘å¼€ä¹‹å‡ºï¼Œå‡¸ç°ä¸€åº§äº‘å°(platform)
 LONG
         );
         set("item_desc", ([
                 "platform":
-                    "Ò»×ù¾«µñÏ¸×ÁµÄÓñÌ¨,·ÅÓĞÒ»°«¼¸;¼¸ÉÏÁ¢ÓĞÓñÆ¿,¼¸Öêº®¹ÈÓÄÀ¼
-ÕÀ·ÅÆäÖĞ.Ì¨ÅÔÖÃÒ»ÔÆá¦(flag),¿ÉÊÇÏÉ¼Ò±¦Îï.\n",
-                "flag":"´Ëá¦¿É·­ÔÆ¸²Óê,×îºÃ²»ÒªÅö(touch)Ëü.\n",
+                    "ä¸€åº§ç²¾é›•ç»†ç¢çš„ç‰å°,æ”¾æœ‰ä¸€çŸ®å‡ ;å‡ ä¸Šç«‹æœ‰ç‰ç“¶,å‡ æ ªå¯’è°·å¹½å…°
+ç»½æ”¾å…¶ä¸­.å°æ—ç½®ä¸€äº‘å¹¡(flag),å¯æ˜¯ä»™å®¶å®ç‰©.\n",
+                "flag":"æ­¤å¹¡å¯ç¿»äº‘è¦†é›¨,æœ€å¥½ä¸è¦ç¢°(touch)å®ƒ.\n",
           ]) );      
         set("objects", ([
                 __DIR__"npc/lboy" :2,
@@ -36,9 +36,9 @@ int thounder(object ob)
         int damage;
         if( environment(ob) == this_object())
         {
-        message_vision("É²ÄÇ¼äÍ®ÔÆÃÜ²¼,É½´¨¸ÄÉ«.ÎŞÊıÀ×öªÅùÏò$N...\n", ob);
-        message_vision("$N¶ÙÊ±ÖÜÉíÆğ»ğ,ÆßÇÏÃ°ÑÌ...\n", ob);
-        tell_room("/d/suburb/es/choyin/platform","ÄãÎÅµ½Ò»¹ÉÉÕ½¹µÄÎ¶µÀ.\n");                                                                         
+        message_vision("åˆ¹é‚£é—´å½¤äº‘å¯†å¸ƒ,å±±å·æ”¹è‰².æ— æ•°é›·éœ†éœ¹å‘$N...\n", ob);
+        message_vision("$Né¡¿æ—¶å‘¨èº«èµ·ç«,ä¸ƒçªå†’çƒŸ...\n", ob);
+        tell_room("/d/suburb/es/choyin/platform","ä½ é—»åˆ°ä¸€è‚¡çƒ§ç„¦çš„å‘³é“.\n");                                                                         
         i = (int)ob->query("eff_kee");
         damage = random(10)+35  ;
         ob->set("eff_kee",(int) i - damage );
@@ -56,7 +56,7 @@ int thounder(object ob)
 void close_passage()
 {
         if( !query("exits/down") ) return;
- message("vision", "Ò»µÀÀ¶¹â¹ıºó,ÔÆÌ¨ºÏÂ£ÁË.\n",
+ message("vision", "ä¸€é“è“å…‰è¿‡å,äº‘å°åˆæ‹¢äº†.\n",
                         this_object() );                      
         delete("exits/down");
 }
@@ -69,11 +69,11 @@ int do_touch(string arg)
        if( !arg || arg=="" ) return 0;
 
        if( arg=="flag" ) {
-                write("ÄãÅöÁËÔÆá¦,ÔÆá¦¶¯ÁËÒ»ÏÂ.....\n");
+                write("ä½ ç¢°äº†äº‘å¹¡,äº‘å¹¡åŠ¨äº†ä¸€ä¸‹.....\n");
         if( interactive(( ob = this_player())) )
         remove_call_out("thounder");
         call_out("thounder", 15, ob);            
-        message("vision", "°×¹âÒ»ÉÁ,ÔÆÌ¨ºöµØÁÑ¿ª\n",
+        message("vision", "ç™½å…‰ä¸€é—ª,äº‘å°å¿½åœ°è£‚å¼€\n",
                         this_object() );                       
         set("exits/down", __DIR__"stove");
         call_out("close_passage", 1);  

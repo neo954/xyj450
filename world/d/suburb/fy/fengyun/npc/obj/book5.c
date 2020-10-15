@@ -4,15 +4,15 @@ inherit ITEM;
 
 void create()
 {
-        set_name("Ä§·¨¼ò½é", ({ "magicbook" }));
+        set_name("é­”æ³•ç®€ä»‹", ({ "magicbook" }));
         set_weight(300);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "±¾");
+                set("unit", "æœ¬");
                 set("long",
                         
-"ÕâËÆºõÊÇÒ»±¾Ä§·¨µÄÈëÃÅÊé£¬ÀïÃæËµÁËÒ»Ğ©Ï¡Ææ¹Å¹ÖµÄºÍÒ»°ãµÄÎäÑ§²»Í¬µÄ¶«Î÷\n"
+"è¿™ä¼¼ä¹æ˜¯ä¸€æœ¬é­”æ³•çš„å…¥é—¨ä¹¦ï¼Œé‡Œé¢è¯´äº†ä¸€äº›ç¨€å¥‡å¤æ€ªçš„å’Œä¸€èˆ¬çš„æ­¦å­¦ä¸åŒçš„ä¸œè¥¿\n"
                 );
                 set("value", 260);
                 set("material", "paper");

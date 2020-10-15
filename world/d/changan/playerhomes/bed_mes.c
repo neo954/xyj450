@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // /d/changan/playerhomes/stdbed.c
@@ -11,7 +11,7 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "´²ÉÏ");
+        set("short", "åºŠä¸Š");
         set("long", @LONG
 
 LONG

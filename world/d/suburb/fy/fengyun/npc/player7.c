@@ -5,12 +5,12 @@ inherit NPC;
 int custom();
 void create()
 {
-        set_name("òğÍõ", ({ "bat" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("è ç‹", ({ "bat" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 33);
 	set("combat_exp", 4665677);
-	set("title","·çÔÆÒ»µ¶µÚÈı´úµÜ×Ó");
-	set("nickname","É±¹ÙÔì·´");
+	set("title","é£äº‘ä¸€åˆ€ç¬¬ä¸‰ä»£å¼Ÿå­");
+	set("nickname","æ€å®˜é€ å");
         set("chat_chance", 2);
         set("chat_msg", ({
 		(: custom :)	

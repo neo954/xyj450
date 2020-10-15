@@ -1,11 +1,11 @@
 inherit ROOM;
 void create()
 {
-        set("short", "»¯Ê¬ÌÃ");
+        set("short", "åŒ–å°¸å ‚");
         set("long", @LONG
-½ğÇ®°ïÒÑ¾­ÂòÍ¨¹Ù¸®£¬¹Ù¸®¶Ô½ğÇ®°ïµÄËù×÷ËùÎª´ó¶¼ÊÓ¶ø²»¼û¡£µ«½ğÇ®°ï³ğ¼ÒÖÚ¶à£¬
-Îª²ù³ıÒì¼º¶øË«ÊÖÑªĞÈ¡£´Ë´¦ÕıÊÇ·ÙÉÕ×ï×´ºÍÊ¬ÌåµÄ´óÌÃ¡£Á½ÈË¸ßµÄÇàÍ­Â¯»ğÑæÕıÊ¢¡£
-Ò»¹É½¹Ê¬µÄ¶ñ³ôÃÖÂşÁËÕû¸ö´óÌü£¨£â£õ£ò£î£©¡£
+é‡‘é’±å¸®å·²ç»ä¹°é€šå®˜åºœï¼Œå®˜åºœå¯¹é‡‘é’±å¸®çš„æ‰€ä½œæ‰€ä¸ºå¤§éƒ½è§†è€Œä¸è§ã€‚ä½†é‡‘é’±å¸®ä»‡å®¶ä¼—å¤šï¼Œ
+ä¸ºé“²é™¤å¼‚å·±è€ŒåŒæ‰‹è¡€è…¥ã€‚æ­¤å¤„æ­£æ˜¯ç„šçƒ§ç½ªçŠ¶å’Œå°¸ä½“çš„å¤§å ‚ã€‚ä¸¤äººé«˜çš„é’é“œç‚‰ç«ç„°æ­£ç››ã€‚
+ä¸€è‚¡ç„¦å°¸çš„æ¶è‡­å¼¥æ¼«äº†æ•´ä¸ªå¤§å…ï¼ˆï½‚ï½•ï½’ï½ï¼‰ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -30,20 +30,20 @@ int do_burn(string arg)
 	score = (int) me->query("combat_exp");
 	pot = (int) me->query("potential");
 	if( !arg || arg == "") 
-                return notify_fail("ÄãÉÕÉ¶¶«Î÷£®\n");
+                return notify_fail("ä½ çƒ§å•¥ä¸œè¥¿ï¼\n");
 	tar = present(arg, me);
 	if( !tar) 
-		return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâ¶«Î÷£®\n");
+		return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™ä¸œè¥¿ï¼\n");
 	if( userp(tar))
-		return notify_fail("Äã²»¿ÉÉÕ»îµÄ¶«Î÷£®\n");
+		return notify_fail("ä½ ä¸å¯çƒ§æ´»çš„ä¸œè¥¿ï¼\n");
 	if( tar->query("owner"))
-		return notify_fail("Äã²»¿ÉÉÕ¶©µÄ¶«Î÷£®\n");
+		return notify_fail("ä½ ä¸å¯çƒ§è®¢çš„ä¸œè¥¿ï¼\n");
 	if( tar->is_corpse())		
 	{
 		me->set("combat_exp", (int) score + 1);
 		me->set("potential", (int) pot + 1);
 	}
-	message_vision("$N½«$nÍ¶ÈëÁËÇàÍ­Â¯£¬$n×ªÑÛ»¯Îª»Ò½ı£®\n", me, tar);
+	message_vision("$Nå°†$næŠ•å…¥äº†é’é“œç‚‰ï¼Œ$nè½¬çœ¼åŒ–ä¸ºç°çƒ¬ï¼\n", me, tar);
 	tar->move(environment(me));
 	destruct(tar);
 	return 1;

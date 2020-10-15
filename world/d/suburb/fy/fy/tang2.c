@@ -1,11 +1,11 @@
 inherit ROOM;
 void create()
 {
-        set("short", "ÉÍ·£ÌÃ");
+        set("short", "èµç½šå ‚");
         set("long", @LONG
-½ğÇ®°ï°ï¹æÑÏÃ÷£¬·²ÓĞÌ°ÎÛÊÜ»ß£¬ÎŞÊÂÉú·Ç£¬µ÷Ï·ÃñÅ®Ö®°ïÍ½£¬¶¼»áÔÚÕâÀïÊÜµ½Ó¦
-ÓĞµÄÖÆ²Ã¡£·²ÓĞ¾Ş¹¦ÓÚ½ğÇ®°ïµÄ£¬¶¼»áÔÚÕâÀïÊÜµ½°ïÖ÷µÄÉÍ´ÍºÍÌá°Î¡£ÌüÖĞĞüÌõ·ùÊé
-µÀ£º            ÉÍ·£·ÖÃ÷
+é‡‘é’±å¸®å¸®è§„ä¸¥æ˜ï¼Œå‡¡æœ‰è´ªæ±¡å—è´¿ï¼Œæ— äº‹ç”Ÿéï¼Œè°ƒæˆæ°‘å¥³ä¹‹å¸®å¾’ï¼Œéƒ½ä¼šåœ¨è¿™é‡Œå—åˆ°åº”
+æœ‰çš„åˆ¶è£ã€‚å‡¡æœ‰å·¨åŠŸäºé‡‘é’±å¸®çš„ï¼Œéƒ½ä¼šåœ¨è¿™é‡Œå—åˆ°å¸®ä¸»çš„èµèµå’Œææ‹”ã€‚å…ä¸­æ‚¬æ¡å¹…ä¹¦
+é“ï¼š            èµç½šåˆ†æ˜
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -27,13 +27,13 @@ int do_open(string arg)
         object me;
         if(!arg || arg=="")
         {
-                write("ÄãÒª´ò¿ªÊ²Ã´£¿\n");
+                write("ä½ è¦æ‰“å¼€ä»€ä¹ˆï¼Ÿ\n");
                 return 1;
         }
-        if( arg == "picture" || arg == "Ìõ·ù" || arg == "tiao")
+        if( arg == "picture" || arg == "æ¡å¹…" || arg == "tiao")
         {
         me = this_player();
-        message_vision("$NÀ­ÆğÇ½ÉÏµÄÌõ·ù£¬·¢ÏÖÁËÒ»¸ö°µÃÅ¡£\n", me);
+        message_vision("$Næ‹‰èµ·å¢™ä¸Šçš„æ¡å¹…ï¼Œå‘ç°äº†ä¸€ä¸ªæš—é—¨ã€‚\n", me);
         if( !query("exits/westdown") ) {
         set("exits/westdown", __DIR__"jsecret");
         call_out("close_path", 1);
@@ -42,7 +42,7 @@ int do_open(string arg)
         }
         else
         {
-                write("Äã²»¿ÉÒÔ´ò¿ª"+arg+"\n");
+                write("ä½ ä¸å¯ä»¥æ‰“å¼€"+arg+"\n");
                 return 1;
         }
 }
@@ -50,7 +50,7 @@ void close_path()
 {
         if( !query("exits/westdown") ) return;
         message("vision",
-"Ìõ·ùµ´ÁË»ØÀ´£¬ÓÖÕÚ×¡ÁË°µÃÅ¡£\n",
+"æ¡å¹…è¡äº†å›æ¥ï¼Œåˆé®ä½äº†æš—é—¨ã€‚\n",
                 this_object() );
                 delete("exits/westdown");
 }

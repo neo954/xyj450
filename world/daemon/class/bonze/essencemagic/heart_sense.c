@@ -7,16 +7,16 @@ inherit SSERVER;
 int conjure(object me, object target)
 {
 	if( !target || !target->is_character() )
-		return notify_fail("ÄãÒª¶ÔË­Ê¹ÓÃÐÄÊ¶ÉñÍ¨£¿\n");
+		return notify_fail("ä½ è¦å¯¹è°ä½¿ç”¨å¿ƒè¯†ç¥žé€šï¼Ÿ\n");
 	if( target->is_corpse() )
-		return notify_fail("À´²»¼°ÁË£¬Ö»ÓÐ»îÈË²ÅÄÜ¾ÈÐÑ¡£\n");
+		return notify_fail("æ¥ä¸åŠäº†ï¼Œåªæœ‰æ´»äººæ‰èƒ½æ•‘é†’ã€‚\n");
 
-	if( (int)me->query("atman") < 50 ) return notify_fail("ÄãµÄÁéÁ¦²»¹»£¡\n");
+	if( (int)me->query("atman") < 50 ) return notify_fail("ä½ çš„çµåŠ›ä¸å¤Ÿï¼\n");
         if( me->query("sen") <= 30 )
-                return notify_fail("ÄãµÄÉñ²»¹»£¡\n");
+                return notify_fail("ä½ çš„ç¥žä¸å¤Ÿï¼\n");
 	me->add("atman", -50);
 	me->receive_damage("sen", 30);
-	message_vision( HIY "$NÒ»ÊÖ·ÅÔÚ$nµÄÌìÁé¸ÇÉÏ, Ò»ÊÖÌùÔÚ$nµÄºóÐÄ, ±ÕÉÏÑÛ¾¦»º»ºµÍÒ÷...\n" NOR, me, target);
+	message_vision( HIY "$Nä¸€æ‰‹æ”¾åœ¨$nçš„å¤©çµç›–ä¸Š, ä¸€æ‰‹è´´åœ¨$nçš„åŽå¿ƒ, é—­ä¸Šçœ¼ç›ç¼“ç¼“ä½ŽåŸ...\n" NOR, me, target);
 	if( random(me->query("max_atman")) > 100 )
 		target->revive();
 	else

@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("¹«Æ½×Ó", ({ "gongping zi", "zi", "referee" }) );
-	set("gender", "ÄÐÐÔ");
+	set_name("å…¬å¹³å­", ({ "gongping zi", "zi", "referee" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 35);
 	set("long",
-		"ÕâÊÇÒ»Î»ÏÉ·çµÀ¹ÇµÄÖÐÄêµÀÈË£¬ÔçÄêÔÆÓÎËÄ·½£¬ÐÔºÃÈÎÏÀ£¬¹«ÕýÎÞË½¡£\n");
+		"è¿™æ˜¯ä¸€ä½ä»™é£Žé“éª¨çš„ä¸­å¹´é“äººï¼Œæ—©å¹´äº‘æ¸¸å››æ–¹ï¼Œæ€§å¥½ä»»ä¾ ï¼Œå…¬æ­£æ— ç§ã€‚\n");
 	set("combat_exp",60000);
         set("shen_type", 1);
 	set("attitude", "friendly");
@@ -43,10 +43,10 @@ int do_bihua(string arg)
 	if( !arg || arg=="" ) return 0;
 
 	if ( this_object()->query_temp("busy") ) 
-		return notify_fail("Ã¿´ÎÖ»ÄÜÓÐÁ½ÈË²Î¼Ó±ÈÎä¡£\n");
+		return notify_fail("æ¯æ¬¡åªèƒ½æœ‰ä¸¤äººå‚åŠ æ¯”æ­¦ã€‚\n");
 
         if (!ob2 = present(arg,environment(ob1)) ) 
-		return notify_fail("ÄãÏë¸úË­±È»®£¿\n");
+		return notify_fail("ä½ æƒ³è·Ÿè°æ¯”åˆ’ï¼Ÿ\n");
 
 	remove_call_out("check");
 	call_out("check",0, ob1, ob2);
@@ -64,8 +64,8 @@ void fighting(object ob1, object ob2)
 void check(object ob1, object ob2)
 {
 	this_object()->set_temp("busy",1);
-	command("chat ÏÖÔÚÓÉ" + ob1->query("name") 
-		+ "Óë" + ob2->query("name") + "¿ªÊ¼±ÈÎä½ÏÒÕ£¡\n");
+	command("chat çŽ°åœ¨ç”±" + ob1->query("name") 
+		+ "ä¸Ž" + ob2->query("name") + "å¼€å§‹æ¯”æ­¦è¾ƒè‰ºï¼\n");
 	call_out("observe",1,ob1,ob2);
 }
 
@@ -82,14 +82,14 @@ int observe(object ob1,object ob2)
 	if (ob1->query("kee")*100/ob1->query("max_kee") > 50 ) 
 	{
 		command("chat " + ob1->query("name") 
-			+ "±ÈÎäÕ½Ê¤" + ob2->query("name") + "£¡\n");
+			+ "æ¯”æ­¦æˆ˜èƒœ" + ob2->query("name") + "ï¼\n");
 		ob = new("/d/obj/clone/money/silver");
 		ob->move(ob1);
 	}
 	else
 	{
 		command("chat " + ob2->query("name") 
-			+ "±ÈÎäÕ½Ê¤" + ob1->query("name") + "£¡\n");
+			+ "æ¯”æ­¦æˆ˜èƒœ" + ob1->query("name") + "ï¼\n");
 		ob = new("/d/obj/clone/money/silver");
 		ob->move(ob2);
 	}

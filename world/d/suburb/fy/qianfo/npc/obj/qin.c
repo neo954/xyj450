@@ -5,15 +5,15 @@
 inherit STAFF;
 void create()
 {
-	set_name("¹ÅËÉÇÙ", ({ "qin" }) );
+	set_name("å¤æ¾ç´", ({ "qin" }) );
 	set_weight(40000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
+		set("unit", "ä¸ª");
 		set("value", 500);
 		set("material", "wood");
-		set("long", "Ò»¸ö¹ÅÉ«¹ÅÏãµÄ¹ÅËÉÇÙ\n");
+		set("long", "ä¸€ä¸ªå¤è‰²å¤é¦™çš„å¤æ¾ç´\n");
 		set("weapon_prop/karma",3);
 	}
 	init_staff(5);
@@ -27,7 +27,7 @@ int do_play()
 {
 	object me;
 	me = this_player();
-message_vision("$NÒ»»®¹ÅËÉÇÙ£¬µ¯³öÒ»Ê×ÈçÁ÷Ë®°ãµÄÇú×Ó£®\n",me);
+message_vision("$Nä¸€åˆ’å¤æ¾ç´ï¼Œå¼¹å‡ºä¸€é¦–å¦‚æµæ°´èˆ¬çš„æ›²å­ï¼\n",me);
 me->set_temp("played_qin",1);
 	return 1;
 }

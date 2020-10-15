@@ -6,12 +6,12 @@ string look_sign(object me);
 
 void create()
 {
-        set("short", "¾©Ê¦ÎäÆ÷µê");
+        set("short", "äº¬å¸ˆæ­¦å™¨åº—");
         set("long", @LONG
-ÕâÀïÊÇ½­ºþÖÐÈËÈËËùÏòÍùµÄ¾©Ê¦ÎäÆ÷µê¡£µêÆÌ¿í³¨£¬ºì×©ÆÌµØ¡£
-ËÄÖÜµÄÇ½±ÚÉÏ¹ÒÂúÁË¸÷Ê½µÄµ¶½£¡£¶«±ßµÄÎäÆ÷¼ÜÉÏµÄÇ¹êªµÄ·´¹âÁî
-ÄãÕö²»¿ªÑÛ¡£¿¿±±Ç½µÄ´ó¹ñÌ¨Ò»³¾²»È¾£¬¼¸¸ö»ï¼ÆÕýÔÚÃ¦Âµ¡£
-    ¿¿½üµêÃÅµÄµØ·½ÓÐÒ»¿é½ð×ÖÕÐÅÆ(sign)¡£
+è¿™é‡Œæ˜¯æ±Ÿæ¹–ä¸­äººäººæ‰€å‘å¾€çš„äº¬å¸ˆæ­¦å™¨åº—ã€‚åº—é“ºå®½æ•žï¼Œçº¢ç –é“ºåœ°ã€‚
+å››å‘¨çš„å¢™å£ä¸ŠæŒ‚æ»¡äº†å„å¼çš„åˆ€å‰‘ã€‚ä¸œè¾¹çš„æ­¦å™¨æž¶ä¸Šçš„æžªæˆŸçš„åå…‰ä»¤
+ä½ çä¸å¼€çœ¼ã€‚é åŒ—å¢™çš„å¤§æŸœå°ä¸€å°˜ä¸æŸ“ï¼Œå‡ ä¸ªä¼™è®¡æ­£åœ¨å¿™ç¢Œã€‚
+    é è¿‘åº—é—¨çš„åœ°æ–¹æœ‰ä¸€å—é‡‘å­—æ‹›ç‰Œ(sign)ã€‚
 LONG
         );
         set("exits", ([
@@ -29,6 +29,6 @@ LONG
 
 string look_sign(object me)
 {
-        return "ÕÐÅÆÐ´Öø£º¾©Ê¦ÎäÆ÷µê×¨Óª¸÷Ê½ÎäÆ÷¡£\n";
+        return "æ‹›ç‰Œå†™è‘—ï¼šäº¬å¸ˆæ­¦å™¨åº—ä¸“è¥å„å¼æ­¦å™¨ã€‚\n";
 }
 

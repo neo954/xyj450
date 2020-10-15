@@ -5,14 +5,14 @@ inherit ITEM;
 void create()
 {
 	object obj;
-	set_name("ÊéÏ»", ({ "slipcase" }) );
+	set_name("ä¹¦åŒ£", ({ "slipcase" }) );
 	set_weight(4000);
     set_max_encumbrance(5000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-        set("unit", "¸ö");
-        set("long", "ÕâÊÇÒ»¸öÍ­ÖÆµÄÊéÏ»£¬¿ÉÒÔÓÃÀ´×°Ò»Ğ©Êé¡£\n");
+        set("unit", "ä¸ª");
+        set("long", "è¿™æ˜¯ä¸€ä¸ªé“œåˆ¶çš„ä¹¦åŒ£ï¼Œå¯ä»¥ç”¨æ¥è£…ä¸€äº›ä¹¦ã€‚\n");
 		set("value", 1);
 	}
 	obj=new(__DIR__"parry_book");

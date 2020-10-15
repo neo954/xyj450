@@ -5,17 +5,17 @@ int exert(object me, object target, int amount)
 {
         int skill;
         if( target != me ) return 
-	notify_fail("ÄãÖ»ÄÜÓÃÎÞ¿²ÕæÒõÌáÉý×Ô¼ºµÄ·ÀÓùÁ¦¡£\n");
-       if( (string)me->query("gender") != "Å®ÐÔ" )
-                return notify_fail("ÎÞ¿²ÕæÒõÊÇÖ»ÓÐÅ®×Ó²ÅÄÜÁ·µÄÄÚ¹¦¡£\n");
+	notify_fail("ä½ åªèƒ½ç”¨æ— åŽçœŸé˜´æå‡è‡ªå·±çš„é˜²å¾¡åŠ›ã€‚\n");
+       if( (string)me->query("gender") != "å¥³æ€§" )
+                return notify_fail("æ— åŽçœŸé˜´æ˜¯åªæœ‰å¥³å­æ‰èƒ½ç»ƒçš„å†…åŠŸã€‚\n");
         if( (int)me->query("force") < 100 )     return 
-	notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
+	notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
         if( (int)me->query_temp("powerup") ) return 
-	notify_fail("ÄãÒÑ¾­ÔÚÔË¹¦ÖÐÁË¡£\n");
+	notify_fail("ä½ å·²ç»åœ¨è¿åŠŸä¸­äº†ã€‚\n");
         skill = me->query_skill("force");
         me->add("force", -100);
         message_vision( HIR
-"$NÄ¬ÔËÎÞ¿²ÕæÒõÉñ¹¦£¬È«ÉíÏóÒ»ÍÅÃÞÐõ°ãÇáÆ®ÆðÀ´£¡\n" NOR, me);
+"$Né»˜è¿æ— åŽçœŸé˜´ç¥žåŠŸï¼Œå…¨èº«è±¡ä¸€å›¢æ£‰çµ®èˆ¬è½»é£˜èµ·æ¥ï¼\n" NOR, me);
         me->add_temp("apply/dodge", skill/2);
         me->set_temp("powerup", 1);
         me->start_call_out( (: call_other, __FILE__, "remove_effect", me, 
@@ -28,6 +28,6 @@ void remove_effect(object me, int amount)
 {
         me->add_temp("apply/dodge", - amount);
         me->delete_temp("powerup");
-        tell_object(me, "ÄãµÄÎÞ¿²ÕæÒõÔËÐÐÍê±Ï£¬È«ÉíÃ»ÁËÄÇÖÖÇáÆ®Æ®µÄ¸Ð¾õ¡£\n");
+        tell_object(me, "ä½ çš„æ— åŽçœŸé˜´è¿è¡Œå®Œæ¯•ï¼Œå…¨èº«æ²¡äº†é‚£ç§è½»é£˜é£˜çš„æ„Ÿè§‰ã€‚\n");
 }
  

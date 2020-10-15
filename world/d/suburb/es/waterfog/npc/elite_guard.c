@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("Ë®ÑÌ¸óºìÒÂÎäÊ¿", ({ "waterfog elite guard", "guard" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("æ°´çƒŸé˜çº¢è¡£æ­¦å£«", ({ "waterfog elite guard", "guard" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 38);
-	set("long", "Õâ¸öÈËÉíÖøºìÉ«Ë®ÑÌ¸óÎäÊ¿·şÉ«£¬ÑÛÉñÊ®·ÖÈñÀû¡£\n");
+	set("long", "è¿™ä¸ªäººèº«è‘—çº¢è‰²æ°´çƒŸé˜æ­¦å£«æœè‰²ï¼Œçœ¼ç¥ååˆ†é”åˆ©ã€‚\n");
 
 	set("attitude", "peaceful");
 	set("combat_exp", 100000);
@@ -26,8 +26,8 @@ void create()
 	set("chat_msg_combat", ({
 		(: exert_function, "recover" :),
 		(: exert_function, "powerup" :),
-		"ºìÒÂÎäÊ¿ºÈµÀ£ºÕâµãÍæÒâ¶ùÒ²¸ÒÉÏË®ÑÌ¸óÈöÒ°£¬ÕæÊÇ²»×ÔÁ¿Á¦£¡\n",
-		"ºìÒÂÎäÊ¿ËµµÀ£º¿ì¿ì¹öÏÂÉ½È¥£¬±ğÔÚÕâÀïÂŞËô£¡\n",
+		"çº¢è¡£æ­¦å£«å–é“ï¼šè¿™ç‚¹ç©æ„å„¿ä¹Ÿæ•¢ä¸Šæ°´çƒŸé˜æ’’é‡ï¼ŒçœŸæ˜¯ä¸è‡ªé‡åŠ›ï¼\n",
+		"çº¢è¡£æ­¦å£«è¯´é“ï¼šå¿«å¿«æ»šä¸‹å±±å»ï¼Œåˆ«åœ¨è¿™é‡Œç½—å”†ï¼\n",
 	}) );
 
 	set_skill("force", 80);
@@ -53,13 +53,13 @@ void create()
 
 int accept_fight(object me)
 {
-	command("say ÕâÎ»" + RANK_D->query_respect(me) + "£¬ÔÚÏÂÕıÔÚÖ´ĞĞÇÚÎñ£¬Ë¡²»·îÅã¡£");
+	command("say è¿™ä½" + RANK_D->query_respect(me) + "ï¼Œåœ¨ä¸‹æ­£åœ¨æ‰§è¡Œå‹¤åŠ¡ï¼Œæ•ä¸å¥‰é™ªã€‚");
 	return 0;
 }
 
 void accept_kill(object me)
 {
-	command("say ºß ... Ô­À´¸óÏÂÊÇÕÒÂé·³À´Öø£¿");
+	command("say å“¼ ... åŸæ¥é˜ä¸‹æ˜¯æ‰¾éº»çƒ¦æ¥è‘—ï¼Ÿ");
 	exert_function("powerup");
 }
 

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // guild.c
@@ -21,10 +21,10 @@ int do_join(string arg)
 
    me = this_player();
    if( stringp(me->query("class")) )
-     return notify_fail("ÄãÒÑ¾­²Î¼ÓÁËÆäËû¹«»á¡£\n");
+     return notify_fail("ä½ å·²ç»å‚åŠ äº†å…¶ä»–å…¬ä¼šã€‚\n");
    me->set("class", "fighter");
    me->set("startroom", CLASS_D("fighter") + "/guildhall");
-   write("\n¹§Ï²£¬´Ó½ñÌìÆğÄúÒÑ¾­³ÉÎªÒ»ÃûÎäÕß£¡\n\n");
+   write("\næ­å–œï¼Œä»ä»Šå¤©èµ·æ‚¨å·²ç»æˆä¸ºä¸€åæ­¦è€…ï¼\n\n");
    return 1;
 }
 

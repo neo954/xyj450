@@ -4,14 +4,14 @@ inherit ITEM;
 
 void create()
 {
-	set_name("¾«¸ÖÔ°Í°", ({ "steel tube" }) );
+	set_name("ç²¾é’¢å›­æ¡¶", ({ "steel tube" }) );
 	set_weight(50);
 	set_max_encumbrance(100);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
-		set("long", "Ò»¸ö¾«¸ÖÔ°Í°\n");
+		set("unit", "ä¸ª");
+		set("long", "ä¸€ä¸ªç²¾é’¢å›­æ¡¶\n");
 		set("value", 100);
 	}
 }

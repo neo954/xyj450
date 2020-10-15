@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "·ãÒ¶Èª");
+        set("short", "æž«å¶æ³‰");
         set("long", @LONG
-·çÔÆ³ÇÖÐµÄ·ãÒ¶ÈªÊÇ·½Ô²Îå°ÙÀï×îÖøÃûµÄÒ»¿ÚÎÂÈª¡£Ë®ÎÂÊÊÖÐ£¬ÈªË®³Êµ­ºì,
-¹Ê¶øµÃÃû·ãÒ¶¡£Ëü²»µ«ÓÐÈ¥¸¯Éú¼¡µÄÆæÐ§£¬¾ÝËµ»¹ÓÐÑÓÄêÒæÊÙµÄÃîÓÃ¡£ÎäÁÖµÚÒ»
-ÃÀÈËÁÖÏÉ¶ùÃ¿Ìì¶¼ÒÔ´ËÈªË®ä½Ãæ£¨£÷£á£ó£è£©£¬À´±£³ÖËýÈç»¨ËÆÓñµÄÈÝÃ²¡£
+é£Žäº‘åŸŽä¸­çš„æž«å¶æ³‰æ˜¯æ–¹åœ†äº”ç™¾é‡Œæœ€è‘—åçš„ä¸€å£æ¸©æ³‰ã€‚æ°´æ¸©é€‚ä¸­ï¼Œæ³‰æ°´å‘ˆæ·¡çº¢,
+æ•…è€Œå¾—åæž«å¶ã€‚å®ƒä¸ä½†æœ‰åŽ»è…ç”Ÿè‚Œçš„å¥‡æ•ˆï¼Œæ®è¯´è¿˜æœ‰å»¶å¹´ç›Šå¯¿çš„å¦™ç”¨ã€‚æ­¦æž—ç¬¬ä¸€
+ç¾Žäººæž—ä»™å„¿æ¯å¤©éƒ½ä»¥æ­¤æ³‰æ°´æµ£é¢ï¼ˆï½—ï½ï½“ï½ˆï¼‰ï¼Œæ¥ä¿æŒå¥¹å¦‚èŠ±ä¼¼çŽ‰çš„å®¹è²Œã€‚
 LONG
         );
         set("exits", ([
@@ -19,7 +19,7 @@ LONG
         ]) );
         set("outdoors", "fengyun");
         setup();
-        create_door("west", "Ì´Ä¾ÃÅ", "east", DOOR_CLOSED);
+        create_door("west", "æª€æœ¨é—¨", "east", DOOR_CLOSED);
 
 }
 
@@ -36,8 +36,8 @@ int do_jump()
 	me = this_player();
 	wait = random( 40 - (int)me->query("con")) * 2;
 	if ( wait <= 20) wait = 21;
-	message_vision("$N»º²½×ßÈëÈªË®ÖÐ£®\n",me);
-	tell_object(me,"Äã¸Ðµ½È«ÉíÎÞ±ÈµÄÊæÌ©£®£®\n");
+	message_vision("$Nç¼“æ­¥èµ°å…¥æ³‰æ°´ä¸­ï¼Ž\n",me);
+	tell_object(me,"ä½ æ„Ÿåˆ°å…¨èº«æ— æ¯”çš„èˆ’æ³°ï¼Žï¼Ž\n");
 	remove_call_out("curehimup");
 	call_out("curehimup", wait, me);
 return 1;
@@ -51,7 +51,7 @@ void curehimup(object me)
         sen=(int)me->query("max_sen");
 if( me && environment(me) == this_object())
 	{
-	message_vision("$NµÄ¾«ÆøÉñÈ«»Ö¸´ÁË£¡£¡\n", me);
+	message_vision("$Nçš„ç²¾æ°”ç¥žå…¨æ¢å¤äº†ï¼ï¼\n", me);
 	me->set("eff_gin",gin);
         me->set("eff_kee",kee);
         me->set("eff_sen",sen);

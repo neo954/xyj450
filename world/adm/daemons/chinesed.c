@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // chinese_d.c
@@ -12,10 +12,10 @@
 
 inherit F_SAVE;
 
-static string *c_digit = ({ "Áã","Ê®","°Ù","Ç§","Íò","ÒÚ","Õ×" });
-static string *c_num = ({"Áã","Ò»","¶ş","Èı","ËÄ","Îå","Áù","Æß","°Ë","¾Å","Ê®"});
-static string *sym_tien = ({ "¼×","ÒÒ","±û","¶¡","Îì","¼º","¸ı","ĞÁ","ÈÉ","¹ï" });
-static string *sym_dee = ({ "×Ó","³ó","Òú","Ã®","³½","ËÈ","Îç","Î´","Éê","ÓÏ","Ğç","º¥" });
+static string *c_digit = ({ "é›¶","å","ç™¾","åƒ","ä¸‡","äº¿","å…†" });
+static string *c_num = ({"é›¶","ä¸€","äºŒ","ä¸‰","å››","äº”","å…­","ä¸ƒ","å…«","ä¹","å"});
+static string *sym_tien = ({ "ç”²","ä¹™","ä¸™","ä¸","æˆŠ","å·±","åºš","è¾›","å£¬","ç™¸" });
+static string *sym_dee = ({ "å­","ä¸‘","å¯…","å¯","è¾°","å·³","åˆ","æœª","ç”³","é…‰","æˆŒ","äº¥" });
 
 
 mapping dict = ([]);
@@ -33,7 +33,7 @@ void remove() { save(); }
 
 string chinese_number(int i)
 {
-   if( i<0 ) return "¸º" + chinese_number(-i);
+   if( i<0 ) return "è´Ÿ" + chinese_number(-i);
    if( i<11 ) return c_num[i];
    if( i<20 ) return c_num[10] + c_num[i-10];
    if( i<100 ) {
@@ -120,7 +120,7 @@ string chinese_date(int date)
 
    local = localtime(date);
 
-   return sprintf("%s%sÄê%sÔÂ%sÈÕ%sÊ±%s¿Ì",
+   return sprintf("%s%så¹´%sæœˆ%sæ—¥%sæ—¶%såˆ»",
      sym_tien[(local[LT_YEAR]+6)%10], sym_dee[(local[LT_YEAR]+10)%12],
      chinese_number(local[LT_MON]+1),
      chinese_number(local[LT_MDAY] + (local[LT_HOUR]>23? 1 : 0)),

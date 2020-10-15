@@ -4,12 +4,12 @@ inherit ROOM;
 
 void create()
 {
-   set("short", "ÄÚÌü");
+   set("short", "å†…åŽ…");
 	set("long", @LONG
-Äã½øÁËÄÚÌü£¬Ó­Ãæ¹ÒÖø´ÐÂÌÈ÷»¨ÈíÁ±£¬ÏÆÁ±½øÈ¥£¬Ì§Í·Ò»¿´£¬
-Ö»¼ûËÄÃæÇ½±Ú£¬ÁáççÌÞÍ¸£¬ÇÙ½£Êé»­£¬¹ÒÔÚÇ½ÉÏ¡£½õÁýÉ´ÕÖ£¬½ð²Ê
-Öé¹â£¬Á¬µØÉÏÌ¤µÄ×©£¬½ÔÊÇ±ÌÂÌÔä»¨£¬×óÒ»¼ÜÊé£¬ÓÒÒ»¼ÜÆÁ¡£ËÄÃæ
-ÊÇµñ¿ÕµÄ×ÏÌ´°å±Ú¡£
+ä½ è¿›äº†å†…åŽ…ï¼Œè¿Žé¢æŒ‚è‘—è‘±ç»¿æ´’èŠ±è½¯å¸˜ï¼ŒæŽ€å¸˜è¿›åŽ»ï¼ŒæŠ¬å¤´ä¸€çœ‹ï¼Œ
+åªè§å››é¢å¢™å£ï¼ŒçŽ²ç‘å‰”é€ï¼Œç´å‰‘ä¹¦ç”»ï¼ŒæŒ‚åœ¨å¢™ä¸Šã€‚é”¦ç¬¼çº±ç½©ï¼Œé‡‘å½©
+ç å…‰ï¼Œè¿žåœ°ä¸Šè¸çš„ç –ï¼Œçš†æ˜¯ç¢§ç»¿å‡¿èŠ±ï¼Œå·¦ä¸€æž¶ä¹¦ï¼Œå³ä¸€æž¶å±ã€‚å››é¢
+æ˜¯é›•ç©ºçš„ç´«æª€æ¿å£ã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -19,7 +19,7 @@ LONG
     set("objects", ([
         __DIR__"npc/shaowei" : 1,
     ]) );
-    create_door("south","´¹»¨ÃÅ","north", DOOR_CLOSED);
+    create_door("south","åž‚èŠ±é—¨","north", DOOR_CLOSED);
 
 	setup();
 	replace_program(ROOM);

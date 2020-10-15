@@ -13,16 +13,16 @@ int update_condition(object me, int duration)
 		me->unconcious();
 		return 0;
 	} else if( !living(me) ) {
-		message("vision", me->name() + "的花柳毒又发作了．．。\n",
+		message("vision", me->name() + "鐨勮姳鏌虫瘨鍙堝彂浣滀簡锛庯紟銆俓n",
 			environment(me), me);
 	} else if( duration > limit/2 ) {
-		tell_object(me, "你觉得全身又痛又痒。\n");
-		message("vision", me->name() + "的花柳毒又发作了，满面痛苦后悔的表情。\n",
+		tell_object(me, "浣犺寰楀叏韬張鐥涘張鐥掋�俓n");
+		message("vision", me->name() + "鐨勮姳鏌虫瘨鍙堝彂浣滀簡锛屾弧闈㈢棝鑻﹀悗鎮旂殑琛ㄦ儏銆俓n",
 			environment(me), me);
 		me->receive_damage("sen", 10);
 	} else if( duration > limit/4 ) {
-		tell_object(me, "你觉得全身又痛又痒。\n");
-		message("vision", me->name() + "的花柳毒又发作了，满面痛苦后悔的表情。\n",
+		tell_object(me, "浣犺寰楀叏韬張鐥涘張鐥掋�俓n");
+		message("vision", me->name() + "鐨勮姳鏌虫瘨鍙堝彂浣滀簡锛屾弧闈㈢棝鑻﹀悗鎮旂殑琛ㄦ儏銆俓n",
 			environment(me), me);
 		me->receive_damage("sen", 3);
 		me->receive_healing("gin", 10);

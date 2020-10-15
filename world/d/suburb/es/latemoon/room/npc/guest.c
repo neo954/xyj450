@@ -3,8 +3,8 @@ inherit NPC;
  
 void create()
 {
-        set_name("Ü½ÔÆ", ({ "fuyun" }) );
-        set("gender", "Å®ÐÔ" );
+        set_name("èŠ™äº‘", ({ "fuyun" }) );
+        set("gender", "å¥³æ€§" );
         set("age",17);
         set("long", @TEXT
 TEXT
@@ -20,7 +20,7 @@ TEXT
         set("max_force",800);
         set("force_factor", 10);
         set("attitude","peaceful");
-        create_family("åÐÒ£ÅÉ",7,"µÜ×Ó");
+        create_family("é€é¥æ´¾",7,"å¼Ÿå­");
         setup();
         add_money("silver", 5);
         carry_object("/obj/example/sword")->wield();

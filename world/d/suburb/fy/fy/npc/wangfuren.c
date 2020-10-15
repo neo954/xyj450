@@ -7,13 +7,13 @@ inherit NPC;
 
 void create()
 {
-	set_name("·®·òÈË", ({ "furen" }) );
-	set("gender", "ÄĞĞÔ" );
-	set("title", HIR "¼À½£Ê¦" NOR);
+	set_name("æ¨Šå¤«äºº", ({ "furen" }) );
+	set("gender", "ç”·æ€§" );
+	set("title", HIR "ç¥­å‰‘å¸ˆ" NOR);
 	set("age", 52);
 	set("long",
-		"·®·òÈË±¾ÊÇÈıÇå¹¬µÄÒ»¸öÀÏµÀÊ¿£¬ÈËµ½ÀÏÄêÎŞËùÊÂÊÂ£¬
-ÔÚÕâÀï¸øÈË¼À½£¡£\n");
+		"æ¨Šå¤«äººæœ¬æ˜¯ä¸‰æ¸…å®«çš„ä¸€ä¸ªè€é“å£«ï¼Œäººåˆ°è€å¹´æ— æ‰€äº‹äº‹ï¼Œ
+åœ¨è¿™é‡Œç»™äººç¥­å‰‘ã€‚\n");
 	set("combat_exp", 50000);
 	set("str",200);
 	set("attitude", "friendly");
@@ -39,12 +39,12 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(5) ) {
 		case 0:
-			say( "·®·òÈËĞ¦µÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-				+ "£¬ÄãµÄ±¦ÈĞ¿´ÆğÀ´ºÃÏóÒªÑª¼ÀÒ»ÏÂÁË¡£\n");
+			say( "æ¨Šå¤«äººç¬‘é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+				+ "ï¼Œä½ çš„å®åˆƒçœ‹èµ·æ¥å¥½è±¡è¦è¡€ç¥­ä¸€ä¸‹äº†ã€‚\n");
 			break;
 		case 1:
-			say( "·®·òÈËËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-				+ "£¬ÄãµÄ±¦ÈĞÉ±Æø²»×ã£¬À´Ñª¼ÀÒ»ÏÂ±¦ÈĞ°É¡£\n");
+			say( "æ¨Šå¤«äººè¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+				+ "ï¼Œä½ çš„å®åˆƒæ€æ°”ä¸è¶³ï¼Œæ¥è¡€ç¥­ä¸€ä¸‹å®åˆƒå§ã€‚\n");
 			break;
 	}
 }
@@ -59,19 +59,19 @@ int  do_ji(string arg)
 	string file,newfile,filestring;
 	me = this_player();
 	id = me->query("id");
-        if( !arg ) return notify_fail("ÄãÒª¼ÀÊ²÷áÎäÆ÷£¿\n");
+        if( !arg ) return notify_fail("ä½ è¦ç¥­ä»€éº½æ­¦å™¨ï¼Ÿ\n");
         gold = present("gold_money", this_player());
-        if( !gold) return notify_fail("ÄãÉíÉÏÃ»ÓĞ½ğ×Ó¡£\n");
+        if( !gold) return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰é‡‘å­ã€‚\n");
         if( !objectp(ob = present(arg, me)) )
-        return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+        return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿ã€‚\n");
         if(me->is_busy())
-        return notify_fail("ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É¡£\n");
+        return notify_fail("ä½ ä¸Šä¸€ä¸ªåŠ¨ä½œè¿˜æ²¡æœ‰å®Œæˆã€‚\n");
         if( !ob->query("weapon_prop") )
-        return notify_fail("ÄãÖ»ÄÜ¼À¿Éµ±×÷ÎäÆ÷µÄ¶«Î÷¡£\n");
+        return notify_fail("ä½ åªèƒ½ç¥­å¯å½“ä½œæ­¦å™¨çš„ä¸œè¥¿ã€‚\n");
         if( ob->query("equipped") )
-        return notify_fail("Äã²»¿É¼À×°±¸ÖøÁËµÄÎäÆ÷¡£\n");
+        return notify_fail("ä½ ä¸å¯ç¥­è£…å¤‡è‘—äº†çš„æ­¦å™¨ã€‚\n");
         if( !ob->query("owner") )
-        return notify_fail("ÄãÖ»¿É¼À×Ô¼º´òÔìµÄÎäÆ÷¡£\n");
+        return notify_fail("ä½ åªå¯ç¥­è‡ªå·±æ‰“é€ çš„æ­¦å™¨ã€‚\n");
 	if( ob->query("skill_type") =="dagger") base= 5;
 	else base= 30;
 	current = (int) ob->query("weapon_prop/damage");
@@ -83,7 +83,7 @@ int  do_ji(string arg)
 	for(i=1; i<=j;i++)
 			cost = cost * 2;
         if((int) gold->query_amount() < cost)
-        return notify_fail("ÄãÉíÉÏÃ»´ø¹»" + sprintf("%d",cost)+ "Á½½ğ×Ó¡£\n");
+        return notify_fail("ä½ èº«ä¸Šæ²¡å¸¦å¤Ÿ" + sprintf("%d",cost)+ "ä¸¤é‡‘å­ã€‚\n");
         gold->add_amount(-cost);
         me->start_busy(1);
 	me->add("bellicosity",cost);
@@ -101,6 +101,6 @@ int  do_ji(string arg)
 	ob = new(newfile);
 	name = ob->query("name");
 	if(ob->move(me))	
-	message_vision(sprintf("$NÏò%sÉÏßıÁËÒ»¿Ú´øÑªµÄÍÙÄ­£¬ËµµÀ£ººÃÁË£¡\n",name),this_object());
+	message_vision(sprintf("$Nå‘%sä¸Šå•äº†ä¸€å£å¸¦è¡€çš„å”¾æ²«ï¼Œè¯´é“ï¼šå¥½äº†ï¼\n",name),this_object());
 	return 1;
 }

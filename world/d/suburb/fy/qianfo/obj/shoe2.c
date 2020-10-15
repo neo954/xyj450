@@ -6,14 +6,14 @@ inherit BOOTS;
 
 void create()
 {
-        string *order=({"´Ö²¼", "ÃŞ²¼", "À¶²¼", "Ï´µÃ·¢°×µÄ",
-"Çà²¼","×Ï²¼","ºÚ²¼","°×²¼"});
-        set_name((order[random(8)]) +"É®Ğ¬", ({ "monk shoes", "shoes"}) );
+        string *order=({"ç²—å¸ƒ", "æ£‰å¸ƒ", "è“å¸ƒ", "æ´—å¾—å‘ç™½çš„",
+"é’å¸ƒ","ç´«å¸ƒ","é»‘å¸ƒ","ç™½å¸ƒ"});
+        set_name((order[random(8)]) +"åƒ§é‹", ({ "monk shoes", "shoes"}) );
         set_weight(800);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ë«");
+                set("unit", "åŒ");
                 set("material", "cloth");
                 set("armor_prop/move", 1);
         }

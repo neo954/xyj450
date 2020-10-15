@@ -3,10 +3,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "����ɽ��");
+        set("short", "黑松山脚");
         set("long", @LONG
-һ���߶��յ�ɽ������������ǰ��������һ����ɽ����С·���������ۡ�
-�����ε����ָ��㲻��ĸо���
+一座高而险的山峰耸立在你面前。北面是一条上山的羊肠小路，盘旋曲折。
+黑湮湮的松林给你不祥的感觉。
 LONG
         );
         set("exits", ([ /* sizeof() == 2 */

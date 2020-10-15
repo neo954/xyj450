@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //puti.c
@@ -7,9 +7,9 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("¶¼ÊÐÍõ", ({"dushi wang", "wang", "dushi"}));
-       set("title", "Òõ¼äÊ®ÍõÖ®");
-       set("gender", "ÄÐÐÔ");
+       set_name("éƒ½å¸‚çŽ‹", ({"dushi wang", "wang", "dushi"}));
+       set("title", "é˜´é—´åçŽ‹ä¹‹");
+       set("gender", "ç”·æ€§");
    set("class", "youling");
        set("age", 100);
        set("attitude", "friendly");
@@ -36,7 +36,7 @@ void create()
         map_skill("force", "tonsillit");
         map_skill("spells", "gouhunshu");
 
-create_family("ÑÖÂÞµØ¸®", 1, "ÄãºÃ");
+create_family("é˜Žç½—åœ°åºœ", 1, "ä½ å¥½");
 setup();
 
         carry_object("/d/obj/cloth/mangpao")->wear();

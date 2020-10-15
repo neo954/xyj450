@@ -1,4 +1,4 @@
-// arnzh.c ÎÂ»ğ
+// arnzh.c æ¸©ç«
 
 #include <ansi.h>
 
@@ -6,12 +6,12 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÎÂÔ¼ºì", ({"fcxy"}));
-	set("nickname",HIR"Îäµ±±Ç×æ"NOR);
-	set("gender", "ÄĞĞÔ");
+	set_name("æ¸©çº¦çº¢", ({"fcxy"}));
+	set("nickname",HIR"æ­¦å½“é¼»ç¥–"NOR);
+	set("gender", "ç”·æ€§");
 	set("age", 20);
 	set("long", 
-		"Ëû¾ÍÊÇ¸ºµ£ÆğĞË¸´Îäµ±´óÒµµÄ´óÎ×Ê¦ÎÂÔ¼ºì£¡\n");
+		"ä»–å°±æ˜¯è´Ÿæ‹…èµ·å…´å¤æ­¦å½“å¤§ä¸šçš„å¤§å·«å¸ˆæ¸©çº¦çº¢ï¼\n");
 
 	setup();
 	

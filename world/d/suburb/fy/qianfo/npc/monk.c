@@ -4,12 +4,12 @@
 inherit NPC;
 void create()
 {
-	string *order=({"³¯°İ", "É¨µØ", "ÉÕ·¹", "ÌôË®", 
-"¿³²ñ","ÌÔÃ×","´òÔÓ","Äî¾­"});
-        set_name((order[random(8)]) +"µÄºÍÉĞ", ({ "monk", "heshang"}) );
-        set("gender", "ÄĞĞÔ" );
+	string *order=({"æœæ‹œ", "æ‰«åœ°", "çƒ§é¥­", "æŒ‘æ°´", 
+"ç æŸ´","æ·˜ç±³","æ‰“æ‚","å¿µç»"});
+        set_name((order[random(8)]) +"çš„å’Œå°š", ({ "monk", "heshang"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 22);
-        set("long", "ÕâÊÇĞË¹úìøËÂµÄºÍÉĞ£¬ÕıÔÚÃ¦×Å\n");
+        set("long", "è¿™æ˜¯å…´å›½ç¦…å¯ºçš„å’Œå°šï¼Œæ­£åœ¨å¿™ç€\n");
         set("combat_exp", 10);
         set("attitude", "friendly");
         set_skill("unarmed", 5+random(100));

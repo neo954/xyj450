@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create()
 {
-     set("short", "×º·¼¸ó");
+     set("short", "ç¼€èŠ³é˜");
 	set("long", @LONG
-ÕâÊÇÍíÔÂ×¯ÈÃµÜ×ÓÃÇ¾²ĞŞµÄµØ·½, ÃûÔ»¡¸×º·¼¡¹¡£¼òµ¥µÄ²¼ÖÃ¼ÓÉÏ
-Ò»×ùÌ´ÏãÂ¯, Äã¾õµÃÕâ¾ø¶ÔÊÇÒ»¸ö¾²ĞŞ(ponder)µÄºÃ³¡Ëù¡£¿ÕÆøÖĞÃÖÂş
-ÖøÒ»¹ÉËàÄÂµÄÆøÏ¢, Ê¹ÈËºÜÈİÒ×½øÈëÍüÎÒµÄ¾³½ç¡£
+è¿™æ˜¯æ™šæœˆåº„è®©å¼Ÿå­ä»¬é™ä¿®çš„åœ°æ–¹, åæ›°ã€Œç¼€èŠ³ã€ã€‚ç®€å•çš„å¸ƒç½®åŠ ä¸Š
+ä¸€åº§æª€é¦™ç‚‰, ä½ è§‰å¾—è¿™ç»å¯¹æ˜¯ä¸€ä¸ªé™ä¿®(ponder)çš„å¥½åœºæ‰€ã€‚ç©ºæ°”ä¸­å¼¥æ¼«
+è‘—ä¸€è‚¡è‚ƒç©†çš„æ°”æ¯, ä½¿äººå¾ˆå®¹æ˜“è¿›å…¥å¿˜æˆ‘çš„å¢ƒç•Œã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -20,7 +20,7 @@ LONG
         __DIR__"npc/huei" : 1,
      "/d/suburb/es/latemoon/obj/cake" : 1,
     ]) );
-    create_door("north","Ä¾ÃÅ","south", DOOR_CLOSED);
+    create_door("north","æœ¨é—¨","south", DOOR_CLOSED);
 	setup();
 }
 void init()
@@ -32,10 +32,10 @@ int do_ponder(string arg)
        object who;
 
        who = this_player();
-       message_vision("$NË«ÊÖºÏÕÆ£¬°²¾²µÄ×øÔÚµØÉÏ¡£\n" ,who);
+       message_vision("$NåŒæ‰‹åˆæŒï¼Œå®‰é™çš„ååœ¨åœ°ä¸Šã€‚\n" ,who);
        who->receive_damage("sen",50);
        if( (int)who->query("bellicosity") > 0)
            who->add("bellicosity", - (random((int)who->query("kar")) + 7 ) );
-       message_vision("$Náİ·ğ±äµÄ½ÏÎªÏéºÏ´ÈÉÆÁË! \n" , who);
+       message_vision("$Nå½·ä½›å˜çš„è¾ƒä¸ºç¥¥åˆæ…ˆå–„äº†! \n" , who);
     return 1;
 }

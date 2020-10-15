@@ -2,9 +2,9 @@ inherit NPC;
 #include <ansi.h>
 void create()
 {
-        set_name("»ğ¾ŞÁé", ({ "monster" }) );
+        set_name("ç«å·¨çµ", ({ "monster" }) );
         set("long",
-                "Ò»¸ö¸ß´óµÄ£¬È«ÉíÍ¨ºìµÄ¾ŞÈË\n");
+                "ä¸€ä¸ªé«˜å¤§çš„ï¼Œå…¨èº«é€šçº¢çš„å·¨äºº\n");
         set("age", 51);
         
         set("cor", 37);
@@ -26,7 +26,7 @@ void unconcious()
 {
 if( environment(find_living("dragon lord")))
 {
-message_vision("\n\nÒ»¹É³àºìµÄÁÒÑæ´ÓÕÓÔóÉî´¦ÉäÀ´£¬Î§ÈÆ×Å$N°ãĞı²»Ğİ£¡\n\n",this_object());
+message_vision("\n\nä¸€è‚¡èµ¤çº¢çš„çƒˆç„°ä»æ²¼æ³½æ·±å¤„å°„æ¥ï¼Œå›´ç»•ç€$Nèˆ¬æ—‹ä¸ä¼‘ï¼\n\n",this_object());
 receive_curing("gin",1000);
 receive_curing("kee",1000);
 receive_curing("sen",1000);
@@ -44,7 +44,7 @@ void die()
 {
 if(environment(find_living("dragon lord")))
 {
-message_vision(HIR "\n\nÒ»¹É³àºìµÄÁÒÑæ´ÓÕÓÔóÉî´¦ÉäÀ´£¬Î§ÈÆ×Å$N°ãĞı²»Ğİ£¡\n\n" NOR,this_object());
+message_vision(HIR "\n\nä¸€è‚¡èµ¤çº¢çš„çƒˆç„°ä»æ²¼æ³½æ·±å¤„å°„æ¥ï¼Œå›´ç»•ç€$Nèˆ¬æ—‹ä¸ä¼‘ï¼\n\n" NOR,this_object());
 receive_curing("gin",1000);
 receive_curing("kee",1000);
 receive_curing("sen",1000);

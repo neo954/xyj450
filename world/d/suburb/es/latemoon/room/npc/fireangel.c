@@ -3,14 +3,14 @@ inherit NPC;
  
 void create()
 {
-         set_name("·ï»Ë", ({ "phoenix","fire" }) );
-        set("title", "»¤×¯ÉñÏñ");
-        set("nick","»ðÉñ");
-        set("gender", "Å®ÐÔ" );
+         set_name("å‡¤å‡°", ({ "phoenix","fire" }) );
+        set("title", "æŠ¤åº„ç¥žåƒ");
+        set("nick","ç«ç¥ž");
+        set("gender", "å¥³æ€§" );
         set("age", 27);
         set("long", @TEXT
-»ðÉñ¡¸·ï»Ë¡¹ÄËÓÂÊ¿º®ÓÚµÄ»êÆÇËù»¯³ÉµÄÊ®Èý¸ö¾«ÁéÖ®Ò»¡£
-ÓÉÓÚÆäÆæÒìÉñ¼££¬±»ÍíÔÂ×¯¹©·îÎª»¤×¯ÉñÊÞ¡£
+ç«ç¥žã€Œå‡¤å‡°ã€ä¹ƒå‹‡å£«å¯’äºŽçš„é­‚é­„æ‰€åŒ–æˆçš„åä¸‰ä¸ªç²¾çµä¹‹ä¸€ã€‚
+ç”±äºŽå…¶å¥‡å¼‚ç¥žè¿¹ï¼Œè¢«æ™šæœˆåº„ä¾›å¥‰ä¸ºæŠ¤åº„ç¥žå…½ã€‚
 TEXT
 );
         set("combat_exp", 50000000);
@@ -44,8 +44,8 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-     if ((string)ob->query("gender") == "ÄÐÐÔ" ) {
-          say( HIY "ÉñÏñÑÛÉñÖè±ä£¬»Ã»¯³ÉÆß²Ê·ï»Ë£¬³öÏÖ½ðÉ«¹âÃ¢¡£\n" NOR);
+     if ((string)ob->query("gender") == "ç”·æ€§" ) {
+          say( HIY "ç¥žåƒçœ¼ç¥žéª¤å˜ï¼Œå¹»åŒ–æˆä¸ƒå½©å‡¤å‡°ï¼Œå‡ºçŽ°é‡‘è‰²å…‰èŠ’ã€‚\n" NOR);
           kill_ob(ob);
           ob->fight_ob(this_object());
           return;

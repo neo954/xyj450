@@ -12,7 +12,7 @@ int update_condition(object me, int duration)
 	me->receive_damage("sen", 30);
 	me->apply_condition("ninemoonpoison", duration - 1);
 
-	tell_object(me, HIB "你全身渗出血红色的汗珠，你中的九阴化骨毒发作了！\n" NOR );
+	tell_object(me, HIB "浣犲叏韬笚鍑鸿绾㈣壊鐨勬睏鐝狅紝浣犱腑鐨勪節闃村寲楠ㄦ瘨鍙戜綔浜嗭紒\n" NOR );
 	if( duration < 1 ) return 0;
 
 	return CND_CONTINUE;

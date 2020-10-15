@@ -9,10 +9,10 @@ int main(object me, string arg)
 	int pot;
 	int amount;
         if( me->is_fighting() )
-                return notify_fail("ÔÚÕ½¶·ÖĞ¸ãÑĞ¾¿£¿\n");
-	if(!arg) return notify_fail("Ö¸Áî¸ñÊ½: research <¼¼ÄÜ>\n");
+                return notify_fail("åœ¨æˆ˜æ–—ä¸­æç ”ç©¶ï¼Ÿ\n");
+	if(!arg) return notify_fail("æŒ‡ä»¤æ ¼å¼: research <æŠ€èƒ½>\n");
 	if( !(int)my_skill=me->query_skill(arg,1) )
-                return notify_fail("Äã¶Ô´ËÏî¼¼ÄÜÒ»ÎŞËùÖª£¬ÈçºÎ¸ãÑĞ¾¿£¿\n");
+                return notify_fail("ä½ å¯¹æ­¤é¡¹æŠ€èƒ½ä¸€æ— æ‰€çŸ¥ï¼Œå¦‚ä½•æç ”ç©¶ï¼Ÿ\n");
                                                                                 
         if( !SKILL_D(arg)->valid_learn(me) ) return 0;
 //	if( !SKILL_D(arg)->valid_research(me) ) return 0;
@@ -22,7 +22,7 @@ int main(object me, string arg)
 	if((int)me->query("gin") < gin_cost)
 	{
 	me->set("gin",0);
-	return notify_fail("ÄãÏÖÔÚÌ«ÀÛÁË£¬½á¹ûÊ²Ã´Ò²Ã»ÓĞÑĞ¾¿³öÀ´¡£\n");
+	return notify_fail("ä½ ç°åœ¨å¤ªç´¯äº†ï¼Œç»“æœä»€ä¹ˆä¹Ÿæ²¡æœ‰ç ”ç©¶å‡ºæ¥ã€‚\n");
 	}
 	amount = (my_skill - 75) * SKILL_D(arg)->black_white_ness()/100;
 	amount += SKILL_D(arg)->learn_bonus() +
@@ -32,15 +32,15 @@ int main(object me, string arg)
 	me->add("learned_points",pot);
         me->receive_damage("gin", gin_cost );
 	me->research_skill(arg,amount);
-	write("Äã¶Ô"+to_chinese(arg)+"×÷ÁËÒ»·¬³¹µ×µÄÑĞ¾¿£¡\n");
+	write("ä½ å¯¹"+to_chinese(arg)+"ä½œäº†ä¸€ç•ªå½»åº•çš„ç ”ç©¶ï¼\n");
         return 1;
 }
 int help(object me)
 {
    write( @HELP
-Ö¸Áî¸ñÊ½: research <¼¼ÄÜ>
+æŒ‡ä»¤æ ¼å¼: research <æŠ€èƒ½>
 
-ÕâÒ»Ö¸ÁîÈÃÄãÓÃËùÓĞµÄÇ±ÄÜ¶ÔÄ³Ïî¼¼ÄÜ×÷ÉîÈëµÄÑĞ¾¿¡£
+è¿™ä¸€æŒ‡ä»¤è®©ä½ ç”¨æ‰€æœ‰çš„æ½œèƒ½å¯¹æŸé¡¹æŠ€èƒ½ä½œæ·±å…¥çš„ç ”ç©¶ã€‚
 HELP
    );
    return 1;

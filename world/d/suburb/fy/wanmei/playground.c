@@ -4,11 +4,11 @@
 inherit ROOM;
 void create()
 {
-        set("short", "ºóÉ½ÆÂ");
+        set("short", "åŽå±±å¡");
         set("long", @LONG
-ÕâÀïÊÇÍòÃ·É½×¯µÄºóÉ½ÆÂ¡£³ýÁËÂþÉ½±éÒ°µÄÃ·Ê÷Ö®Íâ¾ÍÊÇÒ»ÍûÎÞÛóµÄ
-ÂÌ²ÝÆº£¬±»¸÷É«¸÷ÑùµÄÒ°»¨¶ùµã×º×Å£¬³äÂúÎÞÏÞÉú»ú¡£Ò»ÌõÐ¡ºÓºá´©¶ø¹ý£¬
-ºÓÀïµÄÐ¡Óã²»Ê±»¶¿ìµØÔ¾³öË®Ãæ¡£
+è¿™é‡Œæ˜¯ä¸‡æ¢…å±±åº„çš„åŽå±±å¡ã€‚é™¤äº†æ¼«å±±éé‡Žçš„æ¢…æ ‘ä¹‹å¤–å°±æ˜¯ä¸€æœ›æ— åž çš„
+ç»¿è‰åªï¼Œè¢«å„è‰²å„æ ·çš„é‡ŽèŠ±å„¿ç‚¹ç¼€ç€ï¼Œå……æ»¡æ— é™ç”Ÿæœºã€‚ä¸€æ¡å°æ²³æ¨ªç©¿è€Œè¿‡ï¼Œ
+æ²³é‡Œçš„å°é±¼ä¸æ—¶æ¬¢å¿«åœ°è·ƒå‡ºæ°´é¢ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -39,7 +39,7 @@ int do_check()
 	{
 	if(inv[i]->query("floating"))
 		{
-			tell_object(this_object(),"Ð¡´¬Æ¯ÁË¹ýÀ´£®£®£®\n");
+			tell_object(this_object(),"å°èˆ¹æ¼‚äº†è¿‡æ¥ï¼Žï¼Žï¼Ž\n");
 			set("exits/north", __DIR__"upriver");
 			call_out("close_path",10);
 			break;
@@ -51,7 +51,7 @@ void close_path()
 {
         if( !query("exits/north") ) return;
         message("vision",
-"Ð¡´¬Æ¯×ßÁË£®£®£®\n",
+"å°èˆ¹æ¼‚èµ°äº†ï¼Žï¼Žï¼Ž\n",
                 this_object() );
                 delete("exits/north");
 }
@@ -60,7 +60,7 @@ int do_swim()
 	object me;
 	object room;
 	me = this_player();
-	message_vision("$NÒ»¸öÃÍ×ÓÔúÈëºÓÖÐ£®£®£®\n",me);
+	message_vision("$Nä¸€ä¸ªçŒ›å­æ‰Žå…¥æ²³ä¸­ï¼Žï¼Žï¼Ž\n",me);
 	room = load_object(__DIR__"river");
 	me->move(room);
 	return 1;	

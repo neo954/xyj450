@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("黑冠巨蟒", ({ "serpent" }) );
-	set("long", "一只乌黑油亮的巨蟒，头上生著一个大肉瘤。\n");
+	set_name("榛戝啝宸ㄨ煉", ({ "serpent" }) );
+	set("long", "涓�鍙箤榛戞补浜殑宸ㄨ煉锛屽ご涓婄敓钁椾竴涓ぇ鑲夌槫銆俓n");
 
-	set("race", "野兽");
+	set("race", "閲庡吔");
 	set("age", 400);
 	set("attitude", "aggressive");
 
@@ -20,7 +20,7 @@ void create()
 	set("spi", 20);
 	set("int", 10);
 
-	set("limbs", ({ "头部", "躯干", "尾巴" }) );
+	set("limbs", ({ "澶撮儴", "韬共", "灏惧反" }) );
 	set("verbs", ({ "bite" }) );
 
 	set_temp("apply/attack", 60);

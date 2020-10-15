@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit FORCE;
@@ -10,7 +10,7 @@ int valid_learn(object me) { return 1; }
 int practice_skill(object me)
 {
         return
-notify_fail("ÀäÈªÉñ¹¦Ö»ÄÜÏòÊ¦¸¸Ñ§£¬»òÊÇ´ÓÔËÓÃ(exert)ÖĞÔö¼ÓÊìÁ·¶È¡£\n");
+notify_fail("å†·æ³‰ç¥åŠŸåªèƒ½å‘å¸ˆçˆ¶å­¦ï¼Œæˆ–æ˜¯ä»è¿ç”¨(exert)ä¸­å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");
 }
 string exert_function_file(string func)
 {

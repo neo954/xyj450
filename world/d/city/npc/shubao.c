@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //shubao.c, updated 5-7-97, pickle
@@ -8,14 +8,14 @@ inherit F_MASTER;
 string expell_me(object me);
 void create()
 {
-  set_name("ÇØÇí", ({ "qin qiong", "qin", "shubao", "qiong", "qin shubao", "master", "shifu" }));
-  set("title", "¿ª¹úÔªÑ«");
-  set("gender", "ÄÐÐÔ");
+  set_name("ç§¦ç¼", ({ "qin qiong", "qin", "shubao", "qiong", "qin shubao", "master", "shifu" }));
+  set("title", "å¼€å›½å…ƒå‹‹");
+  set("gender", "ç”·æ€§");
   set("age", 43);
   set("str", 30);
   set("per", 26);
   set("int", 30);
-  set("long", "ÇØÊå±¦ÊÇ´óÌÆ¹ú¿ª¹úÃû³¼£¬¸üÊÇÒ»Î»³öÃûµÄÎä½«¡£\n");
+  set("long", "ç§¦å”å®æ˜¯å¤§å”å›½å¼€å›½åè‡£ï¼Œæ›´æ˜¯ä¸€ä½å‡ºåçš„æ­¦å°†ã€‚\n");
   set("combat_exp", 1200000);
   set_skill("literate", 60);
   set_skill("spear", 120);
@@ -38,11 +38,11 @@ void create()
   set("max_force", 800);
   set("force_factor", 80);
   set("inquiry", ([
-        "×ªÒµ": (: expell_me :),
+        "è½¬ä¸š": (: expell_me :),
         "leave": (: expell_me :),
         ]) );
 
-  create_family("½«¾ü¸®", 2, "À¶");
+  create_family("å°†å†›åºœ", 2, "è“");
   setup();
   carry_object("/d/obj/weapon/spear/yinqiang")->wield();
   carry_object("/d/obj/armor/tiejia")->wear();
@@ -50,13 +50,13 @@ void create()
 
 int accept_fight(object me)
 {
-        command("say ÀÏ·ò¾ÃÎ´ºÍ½­ºþÈË¶¯ÊÖ¹ýÕÐÁË£¬½ñÈÕÒ²²»ÏëÆÆÀý¡£\n");
+        command("say è€å¤«ä¹…æœªå’Œæ±Ÿæ¹–äººåŠ¨æ‰‹è¿‡æ‹›äº†ï¼Œä»Šæ—¥ä¹Ÿä¸æƒ³ç ´ä¾‹ã€‚\n");
         return 0;
 }
 void attempt_apprentice(object ob)
 {
         command("haha");
-   command("say ºÜºÃ£¬Ê±ÏÂÕýÊÇÓÃÈËÖ®¼Ê"+RANK_D->query_respect(ob)+"¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓÐ³É¡£\n");
+   command("say å¾ˆå¥½ï¼Œæ—¶ä¸‹æ­£æ˜¯ç”¨äººä¹‹é™…"+RANK_D->query_respect(ob)+"å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
         command("recruit " + ob->query("id") );
         return;
         }
@@ -67,12 +67,12 @@ int recruit_apprentice(object ob)
 }
 string expell_me(object me)
 {       me=this_player();
-        if((string)me->query("family/family_name")=="½«¾ü¸®") {
+        if((string)me->query("family/family_name")=="å°†å†›åºœ") {
                 me->set_temp("betray", 1);
      command("sigh");
-                return ("°´ÎÒ´óÌÆÂÉ·¨£¬È´ÐëÊÜ·££¬Äã¿ÉÔ¸Òâ(agree)?\n");
+                return ("æŒ‰æˆ‘å¤§å”å¾‹æ³•ï¼Œå´é¡»å—ç½šï¼Œä½ å¯æ„¿æ„(agree)?\n");
         }
-        return ("È¥ÎÊÎÊÔ¬ÏÈÉú°É£¬»òÐíËûÖªµÀ£¡\n");
+        return ("åŽ»é—®é—®è¢å…ˆç”Ÿå§ï¼Œæˆ–è®¸ä»–çŸ¥é“ï¼\n");
 }
 void init()
 {
@@ -81,12 +81,12 @@ void init()
 int do_agree(string arg)
 {
         if(this_player()->query_temp("betray")) {
-                message_vision("$N´ðµÀ£ºµÜ×ÓÔ¸Òâ¡£\n\n", this_player());
-                command("say ÄÇÄã±ãÈ¥°É£¬½­ºþÏÕ¶ñ£¬ºÃ×ÔÎªÖ®¡£¡£¡£\n");
+                message_vision("$Nç­”é“ï¼šå¼Ÿå­æ„¿æ„ã€‚\n\n", this_player());
+                command("say é‚£ä½ ä¾¿åŽ»å§ï¼Œæ±Ÿæ¹–é™©æ¶ï¼Œå¥½è‡ªä¸ºä¹‹ã€‚ã€‚ã€‚\n");
                 this_player()->set("combat_exp", this_player()->query("combat_exp")*95/100);
                 this_player()->delete("family");
                 this_player()->delete("class");
-                this_player()->set("title", "ÆÕÍ¨°ÙÐÕ");
+                this_player()->set("title", "æ™®é€šç™¾å§“");
                 this_player()->set_temp("betray", 0);
                 this_player()->save();
                 return 1;

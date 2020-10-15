@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // jindouyun.c
@@ -6,10 +6,10 @@
 inherit SKILL;
 
 string *dodge_msg = ({
-   "$n²»ÍË·´½ø£¬ÏòÇ°Ì¤³öÒ»²½£¬±ÆµÃ$NÖÐÍ¾³·ÕÐ¡£\n",
-   "$n×ó¿çÒ»²½£¬ÓÒ¿çÒ»²½£¬Ò»Ê±¼äÉíÓ°ËÆºõ±ä³ÉÁËÈý¸ö£¬°Ñ$N»ÎµÃÑÛ»¨çÔÂÒ¡£\n",
-   "$nÉíÌåºóÑö£¬Ò»¸ö¡¸Ìú°åÇÅ¡¹£¬ÉÁ¿ªÁË$NÕâÒ»ÕÐ¡£\n",
-   "$n½Å²½Ò»´í£¬Ò»ÐýÉíÉÁµ½ÁË$NµÄ±³ºó¡£\n",
+   "$nä¸é€€åè¿›ï¼Œå‘å‰è¸å‡ºä¸€æ­¥ï¼Œé€¼å¾—$Nä¸­é€”æ’¤æ‹›ã€‚\n",
+   "$nå·¦è·¨ä¸€æ­¥ï¼Œå³è·¨ä¸€æ­¥ï¼Œä¸€æ—¶é—´èº«å½±ä¼¼ä¹Žå˜æˆäº†ä¸‰ä¸ªï¼ŒæŠŠ$Næ™ƒå¾—çœ¼èŠ±ç¼­ä¹±ã€‚\n",
+   "$nèº«ä½“åŽä»°ï¼Œä¸€ä¸ªã€Œé“æ¿æ¡¥ã€ï¼Œé—ªå¼€äº†$Nè¿™ä¸€æ‹›ã€‚\n",
+   "$nè„šæ­¥ä¸€é”™ï¼Œä¸€æ—‹èº«é—ªåˆ°äº†$Nçš„èƒŒåŽã€‚\n",
 });
 
 int valid_enable(string usage)
@@ -20,7 +20,7 @@ int valid_enable(string usage)
 int valid_learn(object me)
 {
    if( (int)me->query("max_force") < 0 )
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬Ã»ÓÐ°ì·¨Á·Ä§Éñ²½·¨¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒé­”ç¥žæ­¥æ³•ã€‚\n");
 
    return 1;
 }
@@ -34,7 +34,7 @@ int practice_skill(object me)
 {
    if( (int)me->query("kee") < 30
    ||   (int)me->query("force") < 3 )
-     return notify_fail("ÄãµÄÆø»òÄÚÁ¦²»¹»£¬²»ÄÜÁ·Ä§Éñ²½·¨¡£\n");
+     return notify_fail("ä½ çš„æ°”æˆ–å†…åŠ›ä¸å¤Ÿï¼Œä¸èƒ½ç»ƒé­”ç¥žæ­¥æ³•ã€‚\n");
    me->receive_damage("kee", 30);
    me->add("force", -2);
    return 1;

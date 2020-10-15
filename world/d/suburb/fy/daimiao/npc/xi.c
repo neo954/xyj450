@@ -4,10 +4,10 @@
 inherit NPC;
 void create()
 {
-        set_name("Îı»¤ÎÀ", ({ "xi wei", "xi"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("é”¡æŠ¤å«", ({ "xi wei", "xi"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 32);
-        set("long", "ÕâÊÇÎ÷·½Éñ½ÌÎå´ó»¤ÎÀÖ®Ò»¡£\n");
+        set("long", "è¿™æ˜¯è¥¿æ–¹ç¥æ•™äº”å¤§æŠ¤å«ä¹‹ä¸€ã€‚\n");
         set("combat_exp", 80000);
         set("attitude", "friendly");
         set_skill("unarmed", 100);
@@ -20,11 +20,11 @@ void create()
 	set("force",100);
 	set("force_factor",20);
 	set("max_force",100);
-	create_family("Î÷·½Éñ½Ì", 7, "½ÌÖÚ");
+	create_family("è¥¿æ–¹ç¥æ•™", 7, "æ•™ä¼—");
         set("chat_chance", 1);
         set("chat_msg", ({
-                "Îı»¤ÎÀÏòÄãºÈµÀ£º±ğÂÒ×ß¶¯£¡\n",
-                "Îı»¤ÎÀÏòÄãºÈµÀ£ºÄãÂÒ×ßÊ²Ã´£¡\n",
+                "é”¡æŠ¤å«å‘ä½ å–é“ï¼šåˆ«ä¹±èµ°åŠ¨ï¼\n",
+                "é”¡æŠ¤å«å‘ä½ å–é“ï¼šä½ ä¹±èµ°ä»€ä¹ˆï¼\n",
         }) );
 	
 	setup();
@@ -43,9 +43,9 @@ int do_gogo(string arg)
         me = this_player();
         if( arg == "north" )
         {
-                if( me->query("family/master_name") != "ÓğÌì°×") {
-        command("say ·Ç½ÌÖ÷Ç×ÊÚµÜ×Ó²»¿ÉÈëÄÚ¡£");
-        write("Õâ¸ö·½ÏòµÄÂ·±»µ²×¡ÁË ¡£\n");
+                if( me->query("family/master_name") != "ç¾½å¤©ç™½") {
+        command("say éæ•™ä¸»äº²æˆå¼Ÿå­ä¸å¯å…¥å†…ã€‚");
+        write("è¿™ä¸ªæ–¹å‘çš„è·¯è¢«æŒ¡ä½äº† ã€‚\n");
         return 1;
                 }
                 else

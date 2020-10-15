@@ -10,26 +10,26 @@ int scribe(object me, object sheet)
   	string err;
 
         if((int)me->query_skill("scratching") < 90 )
-                return notify_fail("ÄãµÄ·ûÖ®Êõ²»¹»¸ß£¡\n");
+                return notify_fail("ä½ çš„ç¬¦ä¹‹æœ¯ä¸å¤Ÿé«˜ï¼\n");
 
-        if( sheet->name() != "ÌÒ·ûÖ½" ) 
-                return notify_fail("ÌìÊ¦·ûÒª»­ÔÚÌÒ·ûÖ½ÉÏ£¡\n");
+        if( sheet->name() != "æ¡ƒç¬¦çº¸" ) 
+                return notify_fail("å¤©å¸ˆç¬¦è¦ç”»åœ¨æ¡ƒç¬¦çº¸ä¸Šï¼\n");
 
         if( (int)me->query("mana") < 75 ) 
-                return notify_fail("ÄãµÄ·¨Á¦²»¹»ÁË£¡\n");
+                return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿäº†ï¼\n");
 
         sheet->set_amount((int)sheet->query_amount() - 1);
         me->save();
         seteuid( geteuid(me));
         newsheet = new("/obj/magic_seal");
-        newsheet->set_name(YEL "ÌìÊ¦·û" NOR, 
+        newsheet->set_name(YEL "å¤©å¸ˆç¬¦" NOR, 
                 ({ "save-me sheet", "sheet"}));      
         newsheet->set("burn_func", (: call_other, __FILE__, "do_burn" :));
         newsheet->move(me);
         me->add("mana", -75);
         me->receive_damage("sen", 10);
         me->save();
-        message_vision("$NĞ´ÁËÒ»µÀÌìÊ¦·û¡£\n" NOR, me);
+        message_vision("$Nå†™äº†ä¸€é“å¤©å¸ˆç¬¦ã€‚\n" NOR, me);
         return 1;
 }
 
@@ -40,14 +40,14 @@ int do_burn(object sheet)
 
 	me = this_player();
         if( !me->is_fighting() )
-                return notify_fail("Ã»ÓĞÈËÒªÉ±Äã£¡\n");
+                return notify_fail("æ²¡æœ‰äººè¦æ€ä½ ï¼\n");
         if( me->query_temp("max_guard") > MAX_GUARD )
-                return notify_fail("ÄãÒÑ¾­ÕÙ»½Ì«¶àÌì±ø¹í×äÁË£¡\n");
-        message_vision("$N¼¯ÖĞ¾«Éñ£¬¼ÀÆğÈıÎ¶Õæ»ğ£¬ßüµÄÒ»Éù" + sheet->name() +
-     		"×ÅÁËÆğÀ´£¡\n", this_player());
+                return notify_fail("ä½ å·²ç»å¬å”¤å¤ªå¤šå¤©å…µé¬¼å’äº†ï¼\n");
+        message_vision("$Né›†ä¸­ç²¾ç¥ï¼Œç¥­èµ·ä¸‰å‘³çœŸç«ï¼Œå”¿çš„ä¸€å£°" + sheet->name() +
+     		"ç€äº†èµ·æ¥ï¼\n", this_player());
         me->receive_damage("sen", 20);
         if( random(me->query("mana")) < 200 ) {
-                message("vision", "µ«ÊÇÊ²÷áÒ²Ã»ÓĞ·¢Éú¡£\n", environment(me));
+                message("vision", "ä½†æ˜¯ä»€éº½ä¹Ÿæ²¡æœ‰å‘ç”Ÿã€‚\n", environment(me));
                 return 1;
         }
 	spells = me->query_skill("scratching");
@@ -61,7 +61,7 @@ int do_burn(object sheet)
 	soldier->set("possessed", me);
 	me->add_temp("max_guard",1);
 	me->remove_all_killer();
-        message_vision(HIB "\n$N¶ãÔÚ$nµÄ±³ºóº°µÀ£º¸øÎÒÉ±£¡\n" NOR, me, soldier );
-        message_vision(HIB "\n$nÌæ$Nµ²×¡ÁËËùÓĞµĞÈËµÄ¹¥»÷£¡\n" NOR, me, soldier );
+        message_vision(HIB "\n$Nèº²åœ¨$nçš„èƒŒåå–Šé“ï¼šç»™æˆ‘æ€ï¼\n" NOR, me, soldier );
+        message_vision(HIB "\n$næ›¿$NæŒ¡ä½äº†æ‰€æœ‰æ•Œäººçš„æ”»å‡»ï¼\n" NOR, me, soldier );
         return 1;
 }

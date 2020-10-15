@@ -4,9 +4,9 @@ inherit ITEM;
 
 void create()
 {
-    set_name( "Ó¡¼ø" ,({ "seal" }) );
-	set("long", "ÉÏÃæ¿ÌÖøÕò¹ú´ó½«¾ü¡£\n");
-	set("unit", "¿Å");
+    set_name( "å°é‰´" ,({ "seal" }) );
+	set("long", "ä¸Šé¢åˆ»è‘—é•‡å›½å¤§å°†å†›ã€‚\n");
+	set("unit", "é¢—");
 	set("base_weight", 300);
 	set("value", 3000);
 	

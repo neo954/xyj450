@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 #include <ansi.h>
@@ -15,35 +15,35 @@ int perform(object me, object target)
         ||      !target->is_character()
         ||      target->is_corpse()
         ||      target==me)
-                return notify_fail("ÄãÒª¶ÔË­Ê©Õ¹ÕâÒ»ÕĞ¡¸Éñ¡¤ÈË¡¤¹í¡¹£¿\n");
+                return notify_fail("ä½ è¦å¯¹è°æ–½å±•è¿™ä¸€æ‹›ã€Œç¥Â·äººÂ·é¬¼ã€ï¼Ÿ\n");
 
         if(!me->is_fighting())
-                return notify_fail("¡¸Éñ¡¤ÈË¡¤¹í¡¹Ö»ÄÜÔÚÕ½¶·ÖĞÊ¹ÓÃ£¡\n");
+                return notify_fail("ã€Œç¥Â·äººÂ·é¬¼ã€åªèƒ½åœ¨æˆ˜æ–—ä¸­ä½¿ç”¨ï¼\n");
 
         if((int)me->query("force") < 1000 )
-                return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¡\n");
+                return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼\n");
 
         if((int)me->query("kee") < 300 )
-                return notify_fail("ÄãµÄÆøÑª²»×ã£¬Ã»·¨×ÓÊ©ÓÃÍâ¹¦£¡\n");
+                return notify_fail("ä½ çš„æ°”è¡€ä¸è¶³ï¼Œæ²¡æ³•å­æ–½ç”¨å¤–åŠŸï¼\n");
 
         if((int)me->query_skill("jinghun-zhang", 1) < 50)
-                return notify_fail("ÄãµÄ¾ª»êÕÆ¼¶±ğ»¹²»¹»£¬Ê¹ÓÃÕâÒ»ÕĞ»áÓĞÀ§ÄÑ£¡\n");
+                return notify_fail("ä½ çš„æƒŠé­‚æŒçº§åˆ«è¿˜ä¸å¤Ÿï¼Œä½¿ç”¨è¿™ä¸€æ‹›ä¼šæœ‰å›°éš¾ï¼\n");
 
         if((int)me->query_skill("kusang-bang", 1) < 50)
-                return notify_fail("ÄãµÄ¿àÉ¥°ô¼¶±ğ»¹²»¹»£¬Ê¹ÓÃÕâÒ»ÕĞ»áÓĞÀ§ÄÑ£¡\n");
+                return notify_fail("ä½ çš„è‹¦ä¸§æ£’çº§åˆ«è¿˜ä¸å¤Ÿï¼Œä½¿ç”¨è¿™ä¸€æ‹›ä¼šæœ‰å›°éš¾ï¼\n");
 
         if((int)me->query_skill("hellfire-whip", 1) < 50)
-                return notify_fail("ÄãµÄÁÒ»ğ±Ş¼¶±ğ»¹²»¹»£¬Ê¹ÓÃÕâÒ»ÕĞ»áÓĞÀ§ÄÑ£¡\n");
+                return notify_fail("ä½ çš„çƒˆç«é­çº§åˆ«è¿˜ä¸å¤Ÿï¼Œä½¿ç”¨è¿™ä¸€æ‹›ä¼šæœ‰å›°éš¾ï¼\n");
 
         weapon=me->query_temp("weapon");
    me->delete("env/brief_message");
-   message_vision("\n$NË«ÊÖ»®Ò»´óÔ²£¬ÃÍÈ»ÍĞÌì¶ø¾Ù£¬°é×ÅÌìÉÏÀ×ÃùµçÉÁ£¬¼À³öÁË¡¸Éñ¡¤ÈË¡¤¹í¡¹ÈıÕĞ¡£\n", me);
+   message_vision("\n$NåŒæ‰‹åˆ’ä¸€å¤§åœ†ï¼ŒçŒ›ç„¶æ‰˜å¤©è€Œä¸¾ï¼Œä¼´ç€å¤©ä¸Šé›·é¸£ç”µé—ªï¼Œç¥­å‡ºäº†ã€Œç¥Â·äººÂ·é¬¼ã€ä¸‰æ‹›ã€‚\n", me);
 
    me->set("HellZhen", 7);
    COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
 
    me->set("HellZhen", 6);
-//   message_vision("\n$NË«ÊÖÒ»¶¶£¬ÊÖÖĞ$n¶ÙÊ±±äµÄ±ÊÖ±£¬ÈçÍ¬Ò»¸ùÌú¹÷¡£\n", me, weapon);
+//   message_vision("\n$NåŒæ‰‹ä¸€æŠ–ï¼Œæ‰‹ä¸­$né¡¿æ—¶å˜çš„ç¬”ç›´ï¼Œå¦‚åŒä¸€æ ¹é“æ£ã€‚\n", me, weapon);
    COMBAT_D->do_attack(me, target, me->query_temp("weapon")); 
 
    me->set("HellZhen", 1);

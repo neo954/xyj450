@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // houndbane.c
@@ -10,17 +10,17 @@ inherit BLADE;
 
 void create()
 {
-   set_name( GRN "Ñıµ¶¹·ÍÀ" NOR, ({ "houndbane blade", "houndbane", "blade" }) );
+   set_name( GRN "å¦–åˆ€ç‹—å± " NOR, ({ "houndbane blade", "houndbane", "blade" }) );
    set_weight(17000);
    if( clonep() )
      set_default_object(__FILE__);
    else {
-     set("unit", "°Ñ");
-     set("long", "ÕâÊÇÒ»°Ñ°µÂÌÉ«µÄ¹íÍ·µ¶£¬ÄÃÔÚÊÖÖĞÉòµéµéµØ¡£\n");
+     set("unit", "æŠŠ");
+     set("long", "è¿™æ˜¯ä¸€æŠŠæš—ç»¿è‰²çš„é¬¼å¤´åˆ€ï¼Œæ‹¿åœ¨æ‰‹ä¸­æ²ˆç”¸ç”¸åœ°ã€‚\n");
      set("value", 42000);
      set("material", "crimsonsteel");
-     set("wield_msg", "$N¡¸ì¬¡¹µØÒ»Éù³é³öÒ»°Ñ±³ºñÈĞ±¡µÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-     set("unequip_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄµ¶ÇÊ¡£\n");
+     set("wield_msg", "$Nã€Œé£•ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æŠŠèƒŒåšåˆƒè–„çš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+     set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„åˆ€é˜ã€‚\n");
    }
 
    init_blade(96);

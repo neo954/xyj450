@@ -5,20 +5,20 @@ inherit F_VENDOR;
 
 void create()
 {
-	set_name("ÂôÌÇºùÂ«µÄ", ({ "cucurbit chapman", "chapman" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("å–ç³–è‘«èŠ¦çš„", ({ "cucurbit chapman", "chapman" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 42);
 	set("combat_exp", 30);
 	set("attitude", "friendly");
 	set("vendor_goods", ([
-	      "ÌÇºùÂ«":__DIR__"obj/cucurbit",
+	      "ç³–è‘«èŠ¦":__DIR__"obj/cucurbit",
 	]) );
 	set("chat_chance", 15);
 	set("chat_msg", ({
-		"ÂôÌÇºùÂ«µÄßººÈµÀ£ºÌÇºùÂ«£¡ºÃÌğºÃÏãµÄÌÇºùÂ«£¡\n",
+		"å–ç³–è‘«èŠ¦çš„å†å–é“ï¼šç³–è‘«èŠ¦ï¼å¥½ç”œå¥½é¦™çš„ç³–è‘«èŠ¦ï¼\n",
 	}) );
 	set("inquiry", ([
-		"ÌÇºùÂ«" : (: do_vendor_list :),
+		"ç³–è‘«èŠ¦" : (: do_vendor_list :),
 	]) );
 	setup();
 }

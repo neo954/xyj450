@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 
@@ -8,9 +8,9 @@ inherit NPC;
 
 void create()
 {
-   set_name("Ğ¡Ğ¡", ({"acer"}));
-   set("long", "°¢ĞåµÄÑ¾»·¡£\n");
-   set("gender", "Å®ĞÔ");
+   set_name("å°å°", ({"acer"}));
+   set("long", "é˜¿ç»£çš„ä¸«ç¯ã€‚\n");
+   set("gender", "å¥³æ€§");
    set("age", 19);
    set("attitude", "friendly");
    set("per", 20);

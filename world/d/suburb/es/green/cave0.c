@@ -5,18 +5,18 @@ inherit ROOM;
  
 void create()
 {
-        set("short", "¶´¿Ú");
+        set("short", "æ´žå£");
         set("long", @LONG
-ÕâÀïÊÇÉ½¶´µÄÈë¿Ú, ÍùÄÏ¿´È¥ÊÇÒ»ÌõÐ¡Ð¡µÄËéÊ¯Â·, Á½ÅÔ³¤Âú
-ÔÓ²Ý, ¿´À´ºÜ²»Ã÷ÏÔ. Íù±±ÊÇÒ»µÀºñºñµÄÄ¾ÃÅ, ÉÏÃæÓÃÒ»ÌõÊÖ±Û´Ö
-µÄÌúÁ´Ë©Öø. ËäÈ»Èç´Ë, ÄãÈÔ¿ÉÒÔ¸Ðµ½Ò»¹Éº®Æø´ÓÀïÃæÍ¸³öÀ´.
+è¿™é‡Œæ˜¯å±±æ´žçš„å…¥å£, å¾€å—çœ‹åŽ»æ˜¯ä¸€æ¡å°å°çš„ç¢ŽçŸ³è·¯, ä¸¤æ—é•¿æ»¡
+æ‚è‰, çœ‹æ¥å¾ˆä¸æ˜Žæ˜¾. å¾€åŒ—æ˜¯ä¸€é“åŽšåŽšçš„æœ¨é—¨, ä¸Šé¢ç”¨ä¸€æ¡æ‰‹è‡‚ç²—
+çš„é“é“¾æ‹´è‘—. è™½ç„¶å¦‚æ­¤, ä½ ä»å¯ä»¥æ„Ÿåˆ°ä¸€è‚¡å¯’æ°”ä»Žé‡Œé¢é€å‡ºæ¥.
 LONG
         );
         set("exits", ([ /* sizeof() == 2 */
   "south" : "/d/suburb/es/green/path0",
   "north" : "/d/suburb/es/green/cave1",
 ]));
-	create_door("north","Ä¾ÃÅ","south",DOOR_CLOSED); 
+	create_door("north","æœ¨é—¨","south",DOOR_CLOSED); 
 	set("objects", ([
 		"/d/suburb/es/green/npc/kid4" : 2,
 		]) );

@@ -2,20 +2,20 @@
 inherit STAFF;
 void create()
 {
-	set_name("¶©×÷µÄ" , ({ "order" }) );
+	set_name("è®¢ä½œçš„" , ({ "order" }) );
 	set_weight(3000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "Ìõ");
-		set("long", "Ò»ÌõÓÖ´ÖÓÖ³¤µÄ¾«ÌúìøÕÈ£¬ÉÏÃæÏâÖøÒ»¸ö»·¡£\n");
+		set("unit", "æ¡");
+		set("long", "ä¸€æ¡åˆç²—åˆé•¿çš„ç²¾é“ç¦…æ–ï¼Œä¸Šé¢é•¶è‘—ä¸€ä¸ªç¯ã€‚\n");
                 set("no_drop",1);
                 set("no_get",1);
                 set("owner","fengyun");
                 set("rigidity",300);
 		set("material", "iron");
-		set("wield_msg", "$NÄÃ³öÒ»¸ùÎÚºÚµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unwield_msg", "$N·ÅÏÂÊÖÖĞµÄ$n¡£\n");
+		set("wield_msg", "$Næ‹¿å‡ºä¸€æ ¹ä¹Œé»‘çš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unwield_msg", "$Næ”¾ä¸‹æ‰‹ä¸­çš„$nã€‚\n");
 	}
 	init_staff(30);
 	setup();

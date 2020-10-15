@@ -4,14 +4,14 @@ inherit ITEM;
 
 void create()
 {
-	set_name("×ÏÂŞÔ§ÑìºÉ°ü", ({ "silk bag", "bag", "###silk bag###" }));
+	set_name("ç´«ç½—é¸³é¸¯è·åŒ…", ({ "silk bag", "bag", "###silk bag###" }));
 	set_weight(200);
 	set_max_encumbrance(3000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
-		set("long", "Ò»¸öĞå¹¤Ê®·Ö¾«Ï¸µÄ×ÏÉ«Ë¿³ñºÉ°ü£¬ÉÏÃæĞåÖøÒ»¶ÔÔ§Ñì¡£\n");
+		set("unit", "ä¸ª");
+		set("long", "ä¸€ä¸ªç»£å·¥ååˆ†ç²¾ç»†çš„ç´«è‰²ä¸ç»¸è·åŒ…ï¼Œä¸Šé¢ç»£è‘—ä¸€å¯¹é¸³é¸¯ã€‚\n");
 		set("value", 0);
 		set("material", "silk");
 	}

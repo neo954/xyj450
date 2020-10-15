@@ -3,11 +3,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "�ȳ�");
+        set("short", "杖场");
         set("long",
-		"�����������Ŷ������ȵĵط������ܵ�Ҳ����ʮ�ֻ������෴����˵��\n"
-		"���־��¡�¶�����һ���޴��¯�ӣ�ð����������ף��ƺ�ʲô���ܱ���\n"
-		"�ڻ��Ƶġ�\n"	
+		"这里是玄兵古洞的造杖的地方。四周道也不是十分荒凉，相反还可说有\n"
+		"几分景致。露天放着一个巨大的炉子，冒着蓬蓬的蓝炎，似乎什么都能被它\n"
+		"融化似的。\n"	
         );
         set("exits", ([
                 "east" : "/d/suburb/fy/baituo/xiaolu2",

@@ -1,20 +1,20 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
-// ��ֵ����
+// 冬值功曹
 //created 4-8-97 pickle
 inherit NPC;
  
 void create()
 {
-        set_name("ʱֵ����", ({ "shizhi gongcao", "shi", "hour",
+        set_name("时值功曹", ({ "shizhi gongcao", "shi", "hour",
 "gongcao" }) );
-        set("gender", "����" );
+        set("gender", "男性" );
         set("long","
-��ֵ��������������������ǰ�ͽ������鲻���
-��սʧ��������ΪѲ�߹١�������־ͬ���϶���Ϊ
-�����ֵܡ�ʱֵ����������ô�������������ء���
-���������ֵ�����ߣ�����ȱ�����顣\n"
+四值功曹乃是托塔李天王帐前猛将。因经验不足而
+出战失利，被罚为巡逻官。四人因志同道合而结为
+金兰兄弟。时值功曹排行老么，身份最是神秘。他
+功夫在众兄弟中最高，但最缺乏经验。\n"
         );
         set("age",35);
         set("str",25);
@@ -48,8 +48,8 @@ void create()
    map_skill("spear", "bawang-qiang");
         map_skill("parry","bawang-qiang");
         set("inquiry", ([
-                "name" : "���¾���ʱֵ���ܣ�������������ǰ�󽫡�",
-                "here" : "��������칬���¹ٷ���������ڴ�Ѳ�顣",
+                "name" : "在下就是时值功曹，乃托塔天王帐前大将。",
+                "here" : "这里就是天宫。下官奉天王将令，在此巡查。",
         ]) );
         setup();
         carry_object("/d/obj/weapon/spear/biyuqiang")->wield();

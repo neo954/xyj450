@@ -1,16 +1,16 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 inherit NPC;
 
 void create()
 {
-        set_name("½��Ԩ", ({"lu jiuyuan", "lu"}));
-        set("gender", "����");
-   set("title", "������");
+        set_name("陆九渊", ({"lu jiuyuan", "lu"}));
+        set("gender", "男性");
+   set("title", "礼部侍郎");
         set("age", 55);
         set("str", 25);
-        set("long", "½��Ԩ�ǳ�͢�����ɣ�ר������Ӵ���\n");
+        set("long", "陆九渊是朝廷礼部侍郎，专管外宾接待。\n");
         set("combat_exp", 30000);
         set("attitude", "friendly");
    set("force_factor", 10);
@@ -41,9 +41,9 @@ void greeting(object ob)
         if( !ob || !visible(ob) || environment(ob) != environment() ) return;
         switch( random(1) ) {
                 case 0:
-                        say( "½��ԨЦ�����˵������λ" +
+                        say( "陆九渊笑咪咪地说道：这位" +
 RANK_D->query_respect(ob)
-                                + "����ӭ���Ҵ��ƣ�\n");
+                                + "，欢迎到我大唐！\n");
 break;
         }
 }

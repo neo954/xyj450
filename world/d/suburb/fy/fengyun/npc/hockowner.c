@@ -5,13 +5,13 @@ inherit F_PAWNOWNER;
 inherit F_VENDOR;
 void create()
 {
-	set_name("ÏãÁâ", ({ "xiangling" }) );
-	set("gender", "Å®ĞÔ" );
+	set_name("é¦™è±", ({ "xiangling" }) );
+	set("gender", "å¥³æ€§" );
 	set("age", 29);
-	set("title", "µ±ÆÌÀÏ°åÄï");
+	set("title", "å½“é“ºè€æ¿å¨˜");
 	set("long",
-		"ÏãÁâ´ÓĞ¡±»Âôµ½Ç§½ğÂ¥£¬Éú»îÆà¿à£¬µ«ÒòÉÆ³¤µÃÄĞÈË»¶ĞÄ£¬
-ÖÕ±»Ò»¸»ºÀ¿´ÖĞ£¬È¢ÎªµÚÊ®°Ë·¿Ğ¡ÀÏÆÅ¡£\n");
+		"é¦™è±ä»å°è¢«å–åˆ°åƒé‡‘æ¥¼ï¼Œç”Ÿæ´»å‡„è‹¦ï¼Œä½†å› å–„é•¿å¾—ç”·äººæ¬¢å¿ƒï¼Œ
+ç»ˆè¢«ä¸€å¯Œè±ªçœ‹ä¸­ï¼Œå¨¶ä¸ºç¬¬åå…«æˆ¿å°è€å©†ã€‚\n");
 	set("combat_exp", 5000);
 	set("attitude", "friendly");
 	set("per",30);
@@ -41,17 +41,17 @@ void init()
 void greeting(object ob)
 {
 	if( !ob || environment(ob) != environment() ) return;
-	if ( ob->query("gender") == "ÄĞĞÔ")
+	if ( ob->query("gender") == "ç”·æ€§")
 {
 	switch( random(5) ) {
 		case 0:
-message_vision("$NàÇÉùàÇÆøµØËµµÀ£º°¥ßÏßÏßÏßÏ£®£®£®ÕâÎ»"+RANK_D->query_respect(ob)+
-"£¬ÊÇÉ¶·ç¶ù°ÑÄú´µµ½Õâ¶ùÀ´ÁË£¿\n",this_object(),ob);
+message_vision("$Nå—²å£°å—²æ°”åœ°è¯´é“ï¼šå“å‘¦å‘¦å‘¦å‘¦ï¼ï¼ï¼è¿™ä½"+RANK_D->query_respect(ob)+
+"ï¼Œæ˜¯å•¥é£å„¿æŠŠæ‚¨å¹åˆ°è¿™å„¿æ¥äº†ï¼Ÿ\n",this_object(),ob);
 
 			break;
 		case 1:
-message_vision("$NÉÏÇ°À­×¡$nµÄÊÖ£¬Ğ¦ßäßäµØËµµÀ£ºÕâÎ»"+RANK_D->query_respect(ob)+
-"£¬ÄúºÃÏó±ÈÉÏ´ÎÀ´Õâ¶ùÊ±¸ü¸ß´óÍşÃÍ£¬Ó¢¿¡äìÈ÷ÁË£¡£¡\n",this_object(),ob);
+message_vision("$Nä¸Šå‰æ‹‰ä½$nçš„æ‰‹ï¼Œç¬‘å’ªå’ªåœ°è¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(ob)+
+"ï¼Œæ‚¨å¥½è±¡æ¯”ä¸Šæ¬¡æ¥è¿™å„¿æ—¶æ›´é«˜å¤§å¨çŒ›ï¼Œè‹±ä¿Šæ½‡æ´’äº†ï¼ï¼\n",this_object(),ob);
 			break;
 				}
 }
@@ -59,8 +59,8 @@ message_vision("$NÉÏÇ°À­×¡$nµÄÊÖ£¬Ğ¦ßäßäµØËµµÀ£ºÕâÎ»"+RANK_D->query_respect(ob)+
 {
         switch( random(5) ) {
                 case 0:
-message_vision("$NÉÏÇ°Çá¸§$nµÄ·ÛÁ³£¬ËµµÀ£ºÕâÎ»"+RANK_D->query_respect(ob)+
-"£¬Äú¿ÉÕæ±êÖÂ£¡¼µ¶ÊËÀÎÒÁË£¡\n",this_object(),ob);
+message_vision("$Nä¸Šå‰è½»æŠš$nçš„ç²‰è„¸ï¼Œè¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(ob)+
+"ï¼Œæ‚¨å¯çœŸæ ‡è‡´ï¼å«‰å¦’æ­»æˆ‘äº†ï¼\n",this_object(),ob);
 
                         break;
                                 }
@@ -71,7 +71,7 @@ message_vision("$NÉÏÇ°Çá¸§$nµÄ·ÛÁ³£¬ËµµÀ£ºÕâÎ»"+RANK_D->query_respect(ob)+
 
 int accept_object(object who, object ob)
 {
-	message_vision("$N¶Ô$nËµµ½£ºĞ»ÉÍ£¡£¡\n",this_object(),who);
+	message_vision("$Nå¯¹$nè¯´åˆ°ï¼šè°¢èµï¼ï¼\n",this_object(),who);
 		return 1;
 }
 	

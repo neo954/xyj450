@@ -1,20 +1,20 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
-// ��ֵ����
+// 春值功曹
 //created 4-8-97 pickle
 inherit NPC;
  
 void create()
 {
-        set_name("��ֵ����", ({ "nianzhi gongcao", "nian", "year",
+        set_name("年值功曹", ({ "nianzhi gongcao", "nian", "year",
 "gongcao" }) );
-        set("gender", "����" );
+        set("gender", "男性" );
         set("long","
-��ֵ��������������������ǰ�ͽ������鲻���
-��սʧ��������ΪѲ�߹١�������־ͬ���϶���Ϊ
-�����ֵܡ���ֵ�������Ǵ�磬һ�����ҹ����ͬ
-С�ɡ�\n"
+四值功曹乃是托塔李天王帐前猛将。因经验不足而
+出战失利，被罚为巡逻官。四人因志同道合而结为
+金兰兄弟。年值功曹乃是大哥，一身道家功夫非同
+小可。\n"
         );
         set("age",41);
         set("str",28);
@@ -48,8 +48,8 @@ void create()
    map_skill("stick", "qianjun-bang");
         map_skill("parry","qianjun-bang");
         set("inquiry", ([
-                "name" : "���¾�����ֵ���ܣ�������������ǰ�󽫡�",
-                "here" : "��������칬���¹ٷ���������ڴ�Ѳ�顣",
+                "name" : "在下就是年值功曹，乃托塔天王帐前大将。",
+                "here" : "这里就是天宫。下官奉天王将令，在此巡查。",
         ]) );
         setup();
         carry_object("/d/obj/weapon/stick/wuchangbang")->wield();

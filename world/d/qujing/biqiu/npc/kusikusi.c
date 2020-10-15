@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // by snowcat oct 15 1997
@@ -8,10 +8,10 @@ inherit F_VENDOR_SALE;
 void create()
 {
   reload("biqiu_kusi_kusi");
-  set_name("¿âË¾¿âË¾", ({"kusi kusi", "kusi", "boss"}));
+  set_name("åº“å¸åº“å¸", ({"kusi kusi", "kusi", "boss"}));
   set("shop_id", ({"kusi"}));
-  set("shop_title", "¿âË¾");
-  set("gender", "ÄĞĞÔ");
+  set("shop_title", "åº“å¸");
+  set("gender", "ç”·æ€§");
   set("combat_exp", 5000);
   set("age", 30);
   set("per", 21);

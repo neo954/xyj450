@@ -2,9 +2,9 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "山洞");
+        set("short", "灞辨礊");
         set("long", @LONG
-这里就是半山腰处的山洞。四壁空无一物，极为荒凉......
+杩欓噷灏辨槸鍗婂北鑵板鐨勫北娲炪�傚洓澹佺┖鏃犱竴鐗╋紝鏋佷负鑽掑噳......
 LONG
         );
         set("exits", ([ /* sizeof() == 1 */

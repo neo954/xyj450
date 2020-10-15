@@ -4,13 +4,13 @@ inherit ITEM;
 
 void create()
 {
-	set_name("ÌÒÄ¾Ïä", ({ "peach chest", "chest" }) );
+	set_name("æ¡ƒæœ¨ç®±", ({ "peach chest", "chest" }) );
 	set_weight(1400);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
-		set("long", "Ò»¸ö¿Ì¹¤Ïà¸Õ¾«Ï¸µÄÌÒÄ¾Ïä£¬Ò²Ğí\ÊÇÓÃÀ´×°Ê×ÊÎÓÃµÄ¡£\n");
+		set("unit", "ä¸ª");
+		set("long", "ä¸€ä¸ªåˆ»å·¥ç›¸åˆšç²¾ç»†çš„æ¡ƒæœ¨ç®±ï¼Œä¹Ÿè®¸\æ˜¯ç”¨æ¥è£…é¦–é¥°ç”¨çš„ã€‚\n");
 		set("value", 300);
 		set("material", "wood");
 	}

@@ -4,10 +4,10 @@ inherit ITEM;
 
 void create()
 {
-        set_name("¹ıÕĞÒªÖ¼" , ({ "parrybook" }) );
+        set_name("è¿‡æ‹›è¦æ—¨" , ({ "parrybook" }) );
         set_weight(600);
-        set("unit", "±¾");
-        set("long", "ÕâÊÇÒ»±¾½éÉÜ²ğÕĞĞ¶Á¦Ö®·¨µÄÈëÃÅÊé\n");
+        set("unit", "æœ¬");
+        set("long", "è¿™æ˜¯ä¸€æœ¬ä»‹ç»æ‹†æ‹›å¸åŠ›ä¹‹æ³•çš„å…¥é—¨ä¹¦\n");
         set("value", 100);
         set("skill", ([
                 "name":                 "parry",      

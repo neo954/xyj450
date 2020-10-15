@@ -5,10 +5,10 @@ inherit ROOM;
 void create()
 {
 // this place can check on player's dodge, if toolow, drop them!
-        set("short", "ÌúË÷ÇÅ");
+        set("short", "é“ç´¢æ¡¥");
         set("long", @LONG
-É½¶¥Ç¿¾¢µÄ·ç´µµÃÌúË÷ÇÅ×óÓÒ»Î¶¯£¬½ÅÏÂµÄÍòÕÉÉîÔ¨Ê¹ÄãÍ·ÔÎÄ¿Ðý¡£
-Äã½ß¾¡È«Á¦µÄÎ¬³ÖÉíÌåÆ½ºâ¡£
+å±±é¡¶å¼ºåŠ²çš„é£Žå¹å¾—é“ç´¢æ¡¥å·¦å³æ™ƒåŠ¨ï¼Œè„šä¸‹çš„ä¸‡ä¸ˆæ·±æ¸Šä½¿ä½ å¤´æ™•ç›®æ—‹ã€‚
+ä½ ç«­å°½å…¨åŠ›çš„ç»´æŒèº«ä½“å¹³è¡¡ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 2 */
@@ -34,11 +34,11 @@ int do_climb(string arg)
 {
         if( !arg || arg!="chain" ) 
 	{
-	     write("ÕâÀïÖ»ÓÐÒ»ÌõÌúÁ´£¨chain£©¡£\n");
+	     write("è¿™é‡Œåªæœ‰ä¸€æ¡é“é“¾ï¼ˆchainï¼‰ã€‚\n");
              return 1;
 	}
 
-        message_vision("$N×¥½ôÌúÁ´£¬Ë³×ÅÌúË÷ÇÅ×ßÁËÏÂÈ¥¡£\n",
+        message_vision("$NæŠ“ç´§é“é“¾ï¼Œé¡ºç€é“ç´¢æ¡¥èµ°äº†ä¸‹åŽ»ã€‚\n",
                 this_player() );
         this_player()->move(__DIR__"base_b_m");
 

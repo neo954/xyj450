@@ -5,12 +5,12 @@ inherit F_VENDOR;
 #include <ansi.h>
 void create()
 {
-	set_name("¶ÁÇ§Àï", ({ "duqianli" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("è¯»åƒé‡Œ", ({ "duqianli" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 81);
-	set("title", CYN "²Å¸ß°Ë¶·" NOR);
+	set("title", CYN "æ‰é«˜å…«æ–—" NOR);
 	set("long",
-		"ÕâÎ»ÀÏ°å²»µ«²Å¸ß°Ë¶·£¬¶øÇÒ»¹ÊÇµ±½ñ»ÊÌ«×ÓµÄÀÏÊ¦¡£\n");
+		"è¿™ä½è€æ¿ä¸ä½†æ‰é«˜å…«æ–—ï¼Œè€Œä¸”è¿˜æ˜¯å½“ä»Šçš‡å¤ªå­çš„è€å¸ˆã€‚\n");
 	set("combat_exp", 500000);
 	set("attitude", "friendly");
 	set("per",30);
@@ -48,10 +48,10 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(10) ) {
 		case 0:
-message_vision("$NÒ¡Í·»ÎÄÔµØµÍÒ÷µÀ£ºÁ¼Ê±²»ÔÙÖÁ£¬Àë±ğÔÚĞëô§¡£ÆÁÓªáéÂ·²à£®£®¡£\n",this_object(),ob);
+message_vision("$Næ‘‡å¤´æ™ƒè„‘åœ°ä½åŸé“ï¼šè‰¯æ—¶ä¸å†è‡³ï¼Œç¦»åˆ«åœ¨é¡»è‡¾ã€‚å±è¥è¡¢è·¯ä¾§ï¼ï¼ã€‚\n",this_object(),ob);
 			break;
 		case 1:
-message_vision("$NÍûÁË$nÒ»ÑÛ£¬µÍºßµÀ£º½á·¢Îª·òÆŞ£¬¶÷°®Á½²»ÒÉ¡£»¶ÓéÔÚ½ñÏ¦£®£®¡£\n",this_object(),ob);
+message_vision("$Næœ›äº†$nä¸€çœ¼ï¼Œä½å“¼é“ï¼šç»“å‘ä¸ºå¤«å¦»ï¼Œæ©çˆ±ä¸¤ä¸ç–‘ã€‚æ¬¢å¨±åœ¨ä»Šå¤•ï¼ï¼ã€‚\n",this_object(),ob);
 			break;
 	}
 }

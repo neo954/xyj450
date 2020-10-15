@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // Genaric self-made skills.
@@ -6,7 +6,7 @@
 // mon 1/16/98
 
 /*
-·ç»ØÑ©Îè½£·¨    dodge  -20    parry  -10    damage  15
+é£Žå›žé›ªèˆžå‰‘æ³•    dodge  -20    parry  -10    damage  15
 */
 
 inherit SKILL;
@@ -14,21 +14,21 @@ inherit SKILL;
 
 mapping *action1 = ({
    ([   "action":
-"$NÊ¹Ò»ÕÐ¡¸º®·¼ÁôÕÕ»êÓ¦×¤¡¹£¬ÊÖÖÐ$w»¯ÎªÒ»µÀ¼²¹â´ÌÏò$nµÄ$l",
+"$Nä½¿ä¸€æ‹›ã€Œå¯’èŠ³ç•™ç…§é­‚åº”é©»ã€ï¼Œæ‰‹ä¸­$wåŒ–ä¸ºä¸€é“ç–¾å…‰åˆºå‘$nçš„$l",
      "dodge":     -5,
                 "parry":                -10,
      "damage":     10,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
 });
 
 mapping *action = ({
    ([   "action":
-"$NÊÖÖÐ$w±¿×¾µØ´ÌÏò$nµÄ$l",
+"$Næ‰‹ä¸­$wç¬¨æ‹™åœ°åˆºå‘$nçš„$l",
      "dodge":     -5,
                 "parry":                -10,
      "damage":     10,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
 });
 
@@ -37,14 +37,14 @@ int valid_learn(object me)
    object ob;
 
    if( (int)me->query("max_force") < 50 )
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬Ã»ÓÐ°ì·¨Á··ç»ØÑ©Îè½£·¨¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒé£Žå›žé›ªèˆžå‰‘æ³•ã€‚\n");
 
    if( (string)me->query_skill_mapped("force")!= "moonforce")
-     return notify_fail("·ç»ØÑ©Îè½£·¨±ØÐëÅäºÏÀ¥ÂØÉ½ÓñÅ®·åµÄÔ²ÔÂÐÄ·¨²ÅÄÜÁ·¡£\n");
+     return notify_fail("é£Žå›žé›ªèˆžå‰‘æ³•å¿…é¡»é…åˆæ˜†ä»‘å±±çŽ‰å¥³å³°çš„åœ†æœˆå¿ƒæ³•æ‰èƒ½ç»ƒã€‚\n");
 
    if( !(ob = me->query_temp("weapon"))
    ||   (string)ob->query("skill_type") != "sword" )
-     return notify_fail("Äã±ØÐëÏÈÕÒÒ»°Ñ½£²ÅÄÜÁ·½£·¨¡£\n");
+     return notify_fail("ä½ å¿…é¡»å…ˆæ‰¾ä¸€æŠŠå‰‘æ‰èƒ½ç»ƒå‰‘æ³•ã€‚\n");
 
    return 1;
 }
@@ -65,9 +65,9 @@ int practice_skill(object me)
 {
    if( (int)me->query("kee") < 30
    ||   (int)me->query("force") < 3 )
-     return notify_fail("ÄãµÄÄÚÁ¦»òÆø²»¹»£¬Ã»ÓÐ°ì·¨Á·Ï°·ç»ØÑ©Îè½£·¨¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›æˆ–æ°”ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒä¹ é£Žå›žé›ªèˆžå‰‘æ³•ã€‚\n");
    me->receive_damage("kee", 30);
    me->add("force", -3);
-   write("Äã°´ÖøËùÑ§Á·ÁËÒ»±é·ç»ØÑ©Îè½£·¨¡£\n");
+   write("ä½ æŒ‰è‘—æ‰€å­¦ç»ƒäº†ä¸€éé£Žå›žé›ªèˆžå‰‘æ³•ã€‚\n");
    return 1;
 }

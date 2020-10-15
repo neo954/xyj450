@@ -24,17 +24,17 @@ int perform(object me, object target)
 			ob = new (LOGIN_OB);
 			ob->set("id", target_id);
 			if ( !ob->restore())
-				return notify_fail("没有这个人啊？你要化装成谁的模样？\n");
+				return notify_fail("娌℃湁杩欎釜浜哄晩锛熶綘瑕佸寲瑁呮垚璋佺殑妯℃牱锛焅n");
 			target = ob;
 			}
 		    else 
-			return notify_fail("你要化装成谁的模样？\n");
+			return notify_fail("浣犺鍖栬鎴愯皝鐨勬ā鏍凤紵\n");
 		}
 	
 	ob = me;
 
 	if ( !target || me->is_busy() ) 
-		return notify_fail ("你正忙着呢，哪有空易容？\n");
+		return notify_fail ("浣犳蹇欑潃鍛紝鍝湁绌烘槗瀹癸紵\n");
 
 	if ( random (skill = me->query_skill("yirong") ) > 35 ) {
 		me->set("id", target->query("id"));

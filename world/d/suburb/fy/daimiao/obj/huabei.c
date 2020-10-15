@@ -4,7 +4,7 @@
 inherit ITEM;
 void create()
 {
-	set_name("ĞåÁú»¨¶Ğ±»", ({ "huabei" , "ĞåÁú»¨¶Ğ±»"}) );
+	set_name("ç»£é¾™èŠ±ç¼è¢«", ({ "huabei" , "ç»£é¾™èŠ±ç¼è¢«"}) );
 	set_weight(500);
 	set_max_encumbrance(8000);
 	set("no_get", 1);
@@ -12,7 +12,7 @@ void create()
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "´²");
+		set("unit", "åºŠ");
 		set("prep", "under");
 		set("value", 1);
 	}

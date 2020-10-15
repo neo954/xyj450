@@ -4,11 +4,11 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("���ƹ�", ({ "seller" }) );
-        set("title", "Ь��");
-        set("gender", "Ů��" );
+        set_name("李掌柜", ({ "seller" }) );
+        set("title", "鞋店");
+        set("gender", "女性" );
         set("age", 30);
-        set("long", "���ƹ��ǲ��ѿ���Ů�ˣ�һֱ��Ӫ���洫Ь�����⡣\n");
+        set("long", "李掌柜是不难看的女人，一直经营着祖传鞋店生意。\n");
         set("combat_exp", 220000);
         set("attitude", "friendly");
         set_skill("unarmed", 150);
@@ -16,12 +16,12 @@ void create()
         set_skill("sword", 120);
 
         set("inquiry", ([
-                "Ь" : "����Ҫʲô���ģ�",
+                "鞋" : "您需要什么样的？",
         ]) );
        set("vendor_goods", ([
-                "¹ƤСѥ": __DIR__"obj/deer_boot",
-                "��Ƥսѥ": __DIR__"obj/xiang_boot",
-                "�廨Ь"  : __DIR__"obj/flower_boot",
+                "鹿皮小靴": __DIR__"obj/deer_boot",
+                "象皮战靴": __DIR__"obj/xiang_boot",
+                "绣花鞋"  : __DIR__"obj/flower_boot",
         ]) );
 
         setup();
@@ -51,15 +51,15 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) return;
         switch( random(4) ) {
                 case 0:
-                        say( "���ƹ������λ"
+                        say( "李掌柜道：这位"
                                 + RANK_D->query_respect(ob)
-                                + "������Ҫʲô����Ь����\n");
+                                + "，您需要什么样的鞋？。\n");
                         break;
                 case 1:
-                        say( "���ƹ������һ�ۣ������˵������������\n");
+                        say( "李掌柜白了你一眼，冷冷地说：你有美钞吗？\n");
                         break;
                 case 2:
-           say( "���ƹ��Ȼ��˵�����þ�ûȥ�����ˣ���֪�����Ƿ񻹺���\n");
+           say( "李掌柜忽然间说道：好久没去华工了，不知朋友是否还好吗。\n");
                         break;
         }
 }

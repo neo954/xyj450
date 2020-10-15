@@ -1,4 +1,4 @@
-// sword:__DIR__"obj/sword.c" ³¤½£Ò»°Ñ
+// sword:__DIR__"obj/sword.c" é•¿å‰‘ä¸€æŠŠ
 
 #include <weapon.h>
 
@@ -6,17 +6,17 @@ inherit SWORD;
 
 void create()
 {
-    set_name("³¤½£",({"sword"}));
+    set_name("é•¿å‰‘",({"sword"}));
 	set_weight(5500);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else{
-		set("unit", "°Ñ");
-		set("long", "ÕâÊÇÒ»°ÑÆÕÍ¨µÄÌú½££¬¿´ÆğÀ´Ã»Ê²Ã´ÆæÌØ¡£\n");
+		set("unit", "æŠŠ");
+		set("long", "è¿™æ˜¯ä¸€æŠŠæ™®é€šçš„é“å‰‘ï¼Œçœ‹èµ·æ¥æ²¡ä»€ä¹ˆå¥‡ç‰¹ã€‚\n");
 	    	set("value", 420);
 		set("material", "iron");
-                set("wield_msg", "$N¡¸à§¡¹µØÒ»Éù³é³öÒ»°Ñ$nÎÕÔÚÊÖÖĞ¡£\n");
-                set("unwield_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄ½£ÇÊ¡£\n");
+                set("wield_msg", "$Nã€Œå”°ã€åœ°ä¸€å£°æŠ½å‡ºä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+                set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„å‰‘é˜ã€‚\n");
         }
 	init_sword(13);
 	setup();

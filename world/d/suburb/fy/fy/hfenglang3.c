@@ -3,11 +3,11 @@ inherit ROOM;
 #include <room.h>
 void create()
 {
-        set("short", "³¤ÀÈ");
+        set("short", "é•¿å»Š");
         set("long", @LONG
-ÕâÀïÊÇ¸øµ½Õâ¶ùµÄĞ¡½ãÃÇ¸üÒÂÈëÔ¡µÄ£¬µØÉÏÊÇÎå¹âÊ®É«µÄ²Ê´øºÍÏãÎ¶ÆË±ÇµÄ»¨°ê,
-°º¹óµÄÒÂÉÑÂúµØ¶¼ÊÇ£¬Í¸¹ıÃÉÃÉË®Îí£¬Äã¿ÉÒÔ¿´µ½°×ÄåµÄÉíÇû£¬ĞŞ³¤µÄ´óÍÈ£¬¼áÍ¦µÄ
-ĞØÌÅ£¬ºÍÎÚºÚµÄ³¤·¢¡£¡£¡£¡£¡£¡£
+è¿™é‡Œæ˜¯ç»™åˆ°è¿™å„¿çš„å°å§ä»¬æ›´è¡£å…¥æµ´çš„ï¼Œåœ°ä¸Šæ˜¯äº”å…‰åè‰²çš„å½©å¸¦å’Œé¦™å‘³æ‰‘é¼»çš„èŠ±ç“£,
+æ˜‚è´µçš„è¡£è£³æ»¡åœ°éƒ½æ˜¯ï¼Œé€è¿‡è’™è’™æ°´é›¾ï¼Œä½ å¯ä»¥çœ‹åˆ°ç™½è…»çš„èº«èº¯ï¼Œä¿®é•¿çš„å¤§è…¿ï¼ŒåšæŒºçš„
+èƒ¸è†›ï¼Œå’Œä¹Œé»‘çš„é•¿å‘ã€‚ã€‚ã€‚ã€‚ã€‚ã€‚
 LONG
         );
         set("exits", ([
@@ -20,7 +20,7 @@ LONG
 	set("no_fight",1);
 	set("no_magic",1);
         setup();
-        create_door("east", "Ì´Ä¾ÃÅ", "west", DOOR_CLOSED);
+        create_door("east", "æª€æœ¨é—¨", "west", DOOR_CLOSED);
 
 }
 int valid_leave(object me, string dir)
@@ -35,15 +35,15 @@ int valid_leave(object me, string dir)
                 for(i=0; i<sizeof(inv); i++)
                 {
 			if((string)(inv[i]->query("id")) != "white towel")
-                        return notify_fail(ob->name()+"ÏòÄãĞ¦µÀ£ºÉíÉÏ´©´÷ÄÇÃ´¶à£¬ÔõÃ´ÄÜÏ´Ôè£¿\n");
+                        return notify_fail(ob->name()+"å‘ä½ ç¬‘é“ï¼šèº«ä¸Šç©¿æˆ´é‚£ä¹ˆå¤šï¼Œæ€ä¹ˆèƒ½æ´—æ¾¡ï¼Ÿ\n");
 			if( (string)(inv[i]->query("id")) == "white towel" &&
 			    !(int) inv[i]->query("equipped"))
-			return notify_fail(ob->name()+"ÏòÄãĞ¦µÀ£º»¹ÊÇÎ§ÉÏÃ«½íÔÙ½øÈ¥°É£¬²»ÒªÏÅµ½±ğÈË£®\n");
+			return notify_fail(ob->name()+"å‘ä½ ç¬‘é“ï¼šè¿˜æ˜¯å›´ä¸Šæ¯›å·¾å†è¿›å»å§ï¼Œä¸è¦å“åˆ°åˆ«äººï¼\n");
 			if( (string)(inv[i]->query("id")) == "white towel" )
 				withtowel = 1;
                 }
 	if( !withtowel)
-	return notify_fail(ob->name()+"ÏòÄãĞ¦µÀ£ºÃ»ÓĞ°×Ã«½íÔõÃ´Ï´£¿\n");
+	return notify_fail(ob->name()+"å‘ä½ ç¬‘é“ï¼šæ²¡æœ‰ç™½æ¯›å·¾æ€ä¹ˆæ´—ï¼Ÿ\n");
         }
 	if( dir == "west" && ob=present("jintong", this_object()))
 	{
@@ -52,8 +52,8 @@ int valid_leave(object me, string dir)
                 {
 		if( (string)(inv[i]->query("id")) == "white towel")
 			{
-		tell_object(me,ob->name()+"Ğ¦ßäßäµÄ½«ÄãÉíÉÏÊªµÄ"+
-		inv[i]->name()+"ÄÃÁË»ØÈ¥£®\n\n\n");	
+		tell_object(me,ob->name()+"ç¬‘å’ªå’ªçš„å°†ä½ èº«ä¸Šæ¹¿çš„"+
+		inv[i]->name()+"æ‹¿äº†å›å»ï¼\n\n\n");	
 		destruct(inv[i]);
 			}
                 }

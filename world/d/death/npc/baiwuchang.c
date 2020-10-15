@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // gargoyle.c
@@ -11,14 +11,14 @@ inherit F_MASTER;
 
 void create()
 {
-        set_name("���޳�", ({ "bai wuchang","wuchang", "gargoyle" }));
-        set("long","һ�����°׾���Ƥ��ʹ�ߣ����׵����Ͽ������κ�ϲŭ���֡�\n");
+        set_name("白无常", ({ "bai wuchang","wuchang", "gargoyle" }));
+        set("long","一个白衣白净面皮的使者，死白的脸上看不出任何喜怒哀乐。\n");
         set("attitude", "peaceful");
    set("per", 10);
    set("str", 25);
    set("int", 25);
         set("age", 30);
-   set("title", "�л�˾��");
+   set("title", "招魂司主");
         set("combat_exp", 120000);
         set("max_gin", 1000);
         set("max_kee", 1000);
@@ -49,7 +49,7 @@ void create()
    map_skill("dodge", "ghost-steps");
    map_skill("force", "tonsillit");
    map_skill("unarmed", "jinghun-zhang");
-create_family("���޵ظ�", 3, "���");
+create_family("阎罗地府", 3, "你好");
 
         setup();
    carry_object("/d/obj/cloth/bai")->wear();
@@ -62,8 +62,8 @@ void attempt_apprentice()
    me = this_player();
         command("grin");
 
-        command("say �ܺã�" + RANK_D->query_respect(me) +
-"���Ŭ�������ձض��гɡ�\n");
+        command("say 很好，" + RANK_D->query_respect(me) +
+"多加努力，他日必定有成。\n");
        command("recruit " + me->query("id") );
         return;
 }
@@ -71,6 +71,6 @@ int recruit_apprentice(object ob)
 {
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "youling");
-//     ob->set("title", "�ظ��л�˾����");
+//     ob->set("title", "地府招魂司阴兵");
 }
 

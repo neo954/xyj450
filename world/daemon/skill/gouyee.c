@@ -8,7 +8,7 @@ int valid_learn(object me)
 {
         if( (int)me->query("max_mana") < (int)me->query_skill("gouyee") * 5 )
                 return 
-notify_fail("ÄãµÄÄ§Á¦²»¹»£¬ÎŞ·¨ÌáÉı¹ÈÒÂĞÄ·¨µÄÔìÒè¡£\n");
+notify_fail("ä½ çš„é­”åŠ›ä¸å¤Ÿï¼Œæ— æ³•æå‡è°·è¡£å¿ƒæ³•çš„é€ è¯£ã€‚\n");
 
         return 1;
 }
@@ -16,7 +16,7 @@ notify_fail("ÄãµÄÄ§Á¦²»¹»£¬ÎŞ·¨ÌáÉı¹ÈÒÂĞÄ·¨µÄÔìÒè¡£\n");
 int practice_skill(object me)
 {
         return 
-notify_fail("¹ÈÒÂĞÄ·¨Ö»ÄÜÓÃÑ§µÄ£¬»òÊÇ´ÓÔËÓÃ(exert)ÖĞÔö¼ÓÊìÁ·¶È¡£\n");
+notify_fail("è°·è¡£å¿ƒæ³•åªèƒ½ç”¨å­¦çš„ï¼Œæˆ–æ˜¯ä»è¿ç”¨(exert)ä¸­å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");
 }
 
 string exert_function_file(string func)

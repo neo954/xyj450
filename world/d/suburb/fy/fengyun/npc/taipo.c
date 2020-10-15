@@ -6,11 +6,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÉÏÁËÄê¼ÍµÄÀÏÌ«ÆÅ", ({ "taipo", "po" }) );
+        set_name("ä¸Šäº†å¹´çºªçš„è€å¤ªå©†", ({ "taipo", "po" }) );
         set("long",
-                "·çÔÆ³ÇÖĞ×îÀÏµÄÀÏÌ«ÆÅ£¬·çÔÆÀÏĞ¡¶¼ºÜ×ğÖØËı\n");
+                "é£äº‘åŸä¸­æœ€è€çš„è€å¤ªå©†ï¼Œé£äº‘è€å°éƒ½å¾ˆå°Šé‡å¥¹\n");
 
-	set("gender","Å®ĞÔ");
+	set("gender","å¥³æ€§");
         set("str", 27);
         set("cor", 26);
         set("cps", 25);
@@ -31,13 +31,13 @@ int do_work(string arg)
         object ob;
         object me;
         me = this_player();
-if(me->is_busy()) return notify_fail("ÄãµÄ¶¯×÷»¹Ã»ÓĞÍê³É£¬²»ÄÜ¹¤×÷¡£\n");
-message_vision("$NĞÁ¿àµÄ¹¤×÷ÖÕÓÚ½áÊøÁË£¬¿ÉÈËÒ²ÀÛµÄÒªËÀ\n",me);
+if(me->is_busy()) return notify_fail("ä½ çš„åŠ¨ä½œè¿˜æ²¡æœ‰å®Œæˆï¼Œä¸èƒ½å·¥ä½œã€‚\n");
+message_vision("$Nè¾›è‹¦çš„å·¥ä½œç»ˆäºç»“æŸäº†ï¼Œå¯äººä¹Ÿç´¯çš„è¦æ­»\n",me);
 me->add("gin",-30);
 me->add("sen",-30);
 ob = new("/obj/money/silver");
 ob->move(me);
-message_vision("ÉÏÁËÄê¼ÍµÄÀÏÌ«ÆÅ¶Ô$NËµ£ºÕâÊÇÄãµÄ¹¤Ç®¡£\n", me);
+message_vision("ä¸Šäº†å¹´çºªçš„è€å¤ªå©†å¯¹$Nè¯´ï¼šè¿™æ˜¯ä½ çš„å·¥é’±ã€‚\n", me);
 me->start_busy(1);
 return 1;
 }

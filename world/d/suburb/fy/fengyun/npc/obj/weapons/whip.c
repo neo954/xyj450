@@ -2,19 +2,19 @@
 inherit WHIP;
 void create()
 {
-        set_name( "¶©×÷µÄ", ({ "order" }) );
+        set_name( "è®¢ä½œçš„", ({ "order" }) );
         set_weight(3000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ìõ");
+                set("unit", "æ¡");
                 set("no_drop",1);
                 set("no_get",1);
                 set("owner","fengyun");
                 set("rigidity",300);
                 set("material", "skin");
-	        set("wield_msg", "$N´ÓÑü¼äÃş³öÒ»Ìõ$nÎÕÔÚÊÖÖĞ¡£\n");
-        	set("unwield_msg", "$N½«ÊÖÖĞµÄ$nÊøÔÚÑü¼ä¡£\n");
+	        set("wield_msg", "$Nä»è…°é—´æ‘¸å‡ºä¸€æ¡$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+        	set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næŸåœ¨è…°é—´ã€‚\n");
         }
         init_whip(30);
         setup();

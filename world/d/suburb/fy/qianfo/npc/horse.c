@@ -4,23 +4,23 @@ inherit NPC;
 
 void create()
 {
-	set_name("Ñ©ÌãëÙÖ¬Âí", ({ "red horse", "horse" }) );
-	set("race", "Ò°ÊŞ");
-	set("gender", "ĞÛĞÔ");
+	set_name("é›ªè¹„èƒ­è„‚é©¬", ({ "red horse", "horse" }) );
+	set("race", "é‡å…½");
+	set("gender", "é›„æ€§");
 	set("age", 3);
-	set("long", "ÕâÊÇÒ»Ö»Ìã¿íÍÈ×³£¬Ò»ÈË¶à¸ßµÄÇ§ÀïÂí\n");
+	set("long", "è¿™æ˜¯ä¸€åªè¹„å®½è…¿å£®ï¼Œä¸€äººå¤šé«˜çš„åƒé‡Œé©¬\n");
 	
 
 	set("max_kee", 600);
 	set("max_gin", 600);
 	set("max_sen", 900);
 	set("attitude", "peaceful");
-	set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "áá½Å", "Î²°Í" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰è„š", "å¾Œè„š", "å°¾å·´" }) );
 	set("verbs", ({ "bite", "hoof"}) );
 
         set("chat_chance", 1);
         set("chat_msg", ({
-"Ñ©ÌãëÙÖ¬Âí£¢ßÔ¡«¡«ßÔßÔ£¢µØË»½ĞÁË¼¸Éù\n",
+"é›ªè¹„èƒ­è„‚é©¬ï¼‚å’´ï½ï½å’´å’´ï¼‚åœ°å˜¶å«äº†å‡ å£°\n",
         }) );
 		set("combat_exp", 20000);
 	set_temp("apply/attack", 60);

@@ -7,12 +7,12 @@ int has_alcohol;
 void create()
 {
         seteuid(getuid());
-        set_name("×íºº", ({"drunk", "man", "drunk man"}));
+        set_name("é†‰æ±‰", ({"drunk", "man", "drunk man"}));
         set("long", @TEXT
-Ò»¸öºÈµÃ×íõ¸õ¸µÄÄêÇáÈË.....
+ä¸€ä¸ªå–å¾—é†‰é†ºé†ºçš„å¹´è½»äºº.....
 TEXT
         );
-        set("gender","ÄĞĞÔ");
+        set("gender","ç”·æ€§");
         set("age",17);
         set("con",30);
         set("str",30);
@@ -52,7 +52,7 @@ void do_drink()
     else {
         has_alcohol = 0;
         command("sigh");
-        command("say ¾Æ..... ¸øÎÒ¾Æ....");
+        command("say é…’..... ç»™æˆ‘é…’....");
     }
     return;
 }
@@ -62,16 +62,16 @@ int accept_object(object who, object ob)
     if ((string)ob->query("liquid/type")=="alcohol") {
         if ((int)ob->query("liquid/remaining") == 0) {
             command("shake");
-            command("say È¥È¥È¥È¥È¥.. ÎÒÓÖ²»ÊÇÊÕÆÆÀÃµÄ...");
+            command("say å»å»å»å»å».. æˆ‘åˆä¸æ˜¯æ”¶ç ´çƒ‚çš„...");
             return 0;
         }
         else {
             if ((int)ob->query("liquid/remaining") <= 5) {
-                command("say ÕæÃ»³ÏÒâ, Ê£Ã´Ò»µã... ");
+                command("say çœŸæ²¡è¯šæ„, å‰©ä¹ˆä¸€ç‚¹... ");
                 return 0;
             }
             if (has_alcohol) {
-                command("say ¶àĞ», ²»¹ıÎÒ»¹ÓĞ¾Æ... ");
+                command("say å¤šè°¢, ä¸è¿‡æˆ‘è¿˜æœ‰é…’... ");
             }
             else {
                 has_alcohol = 1;
@@ -79,15 +79,15 @@ int accept_object(object who, object ob)
                 if (who->query_temp("give_alcohol")) {
                     who->set_temp("know_drug",1);
                     command("whisper "+(string)who->query("id")+
-                    " ÌıËµÉò¼ÇÉÌĞĞÓĞÔÚÂôÃÉº¹Ò©...\n");
+                    " å¬è¯´æ²ˆè®°å•†è¡Œæœ‰åœ¨å–è’™æ±—è¯...\n");
                 return 1;
                 }
                 if (who->query_temp("elder_info")) {
                     who->set_temp("give_alcohol",1);
                     command("whisper "+(string)who->query("id")+
-                    " àÅ.. ÄãÊÇÏëÎÊÎÒÓñÅåµÄÊÂ°É? ÎÒÂô¸øÉòÀÏ°åÁË, ÄÇ¶«Î÷²»¼ªÏé...\n");
+                    " å—¯.. ä½ æ˜¯æƒ³é—®æˆ‘ç‰ä½©çš„äº‹å§? æˆ‘å–ç»™æ²ˆè€æ¿äº†, é‚£ä¸œè¥¿ä¸å‰ç¥¥...\n");
                 } else {
-                    command("say ¶àĞ»À².....");
+                    command("say å¤šè°¢å•¦.....");
                     command("sing");
                 }
                 return 1;

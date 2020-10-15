@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // fonxansword.c
@@ -7,43 +7,43 @@
 inherit SKILL;
 
 mapping *action = ({
-   ([   "action":     "$NÊ¹Ò»ÕÐ¡¸·å»ØÂ·×ª¡¹£¬ÊÖÖÐ$wÈçÒ»ÌõÒøÉß°ã´ÌÏò$nµÄ$l",
+   ([   "action":     "$Nä½¿ä¸€æ‹›ã€Œå³°å›žè·¯è½¬ã€ï¼Œæ‰‹ä¸­$wå¦‚ä¸€æ¡é“¶è›‡èˆ¬åˆºå‘$nçš„$l",
      "dodge":     0,
      "damage":     30,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
-   ([   "action":     "$NÊ¹³ö·âÉ½½£·¨ÖÐµÄ¡¸¿ÕÉ½ÄñÓï¡¹£¬½£¹â»ô»ôÕ¶Ïò$nµÄ$l",
+   ([   "action":     "$Nä½¿å‡ºå°å±±å‰‘æ³•ä¸­çš„ã€Œç©ºå±±é¸Ÿè¯­ã€ï¼Œå‰‘å…‰éœéœæ–©å‘$nçš„$l",
      "dodge":     0,
      "damage":     30,
-     "damage_type":   "¸îÉË"
+     "damage_type":   "å‰²ä¼¤"
    ]),
-   ([   "action":     "$NÒ»ÕÐ¡¸Óù·ç¶øÐÐ¡¹£¬ÉíÐÎ¶¸È»»¬³öÊý³ß£¬ÊÖÖÐ$wÕ¶Ïò$nµÄ$l",
+   ([   "action":     "$Nä¸€æ‹›ã€Œå¾¡é£Žè€Œè¡Œã€ï¼Œèº«å½¢é™¡ç„¶æ»‘å‡ºæ•°å°ºï¼Œæ‰‹ä¸­$wæ–©å‘$nçš„$l",
      "dodge":     0,
      "damage":     20,
-     "damage_type":   "¸îÉË"
+     "damage_type":   "å‰²ä¼¤"
    ]),
-   ([   "action":     "$NÊÖÖÐ$wÖÐ¹¬Ö±½ø£¬Ò»Ê½¡¸ÐñÈÕ¶«Éý¡¹¶Ô×¼$nµÄ$l´Ì³öÒ»½£",
+   ([   "action":     "$Næ‰‹ä¸­$wä¸­å®«ç›´è¿›ï¼Œä¸€å¼ã€Œæ—­æ—¥ä¸œå‡ã€å¯¹å‡†$nçš„$låˆºå‡ºä¸€å‰‘",
      "dodge":     0,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
-   ([   "action":     "$N×ÝÉíÒ»Ô¾£¬ÊÖÖÐ$wÒ»ÕÐ¡¸½ð¹âÐºµØ¡¹¶Ô×¼$nµÄ$lÐ±Ð±´Ì³öÒ»½£",
+   ([   "action":     "$Nçºµèº«ä¸€è·ƒï¼Œæ‰‹ä¸­$wä¸€æ‹›ã€Œé‡‘å…‰æ³»åœ°ã€å¯¹å‡†$nçš„$læ–œæ–œåˆºå‡ºä¸€å‰‘",
      "dodge":     0,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
-   ([   "action":     "$NµÄ$wÆ¾¿ÕÒ»Ö¸£¬Ò»ÕÐ¡¸Í¯×ÓÒýÂ·¡¹´ÌÏò$nµÄ$l",
+   ([   "action":     "$Nçš„$wå‡­ç©ºä¸€æŒ‡ï¼Œä¸€æ‹›ã€Œç«¥å­å¼•è·¯ã€åˆºå‘$nçš„$l",
      "dodge":     0,
      "damage":     40,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
-   ([   "action":     "$NÊÖÖÐ$wÏòÍâÒ»·Ö£¬Ê¹Ò»ÕÐ¡¸Áø°µ»¨Ã÷¡¹·´ÊÖ¶Ô×¼$n$lÒ»½£´ÌÈ¥",
+   ([   "action":     "$Næ‰‹ä¸­$wå‘å¤–ä¸€åˆ†ï¼Œä½¿ä¸€æ‹›ã€ŒæŸ³æš—èŠ±æ˜Žã€åæ‰‹å¯¹å‡†$n$lä¸€å‰‘åˆºåŽ»",
      "dodge":     0,
      "damage":     20,
-     "damage_type":   "´ÌÉË"
+     "damage_type":   "åˆºä¼¤"
    ]),
-   ([   "action":     "$Nºá½£ÉÏÇ°£¬ÉíÐÎÒ»×ªÊÖÖÐ$wÊ¹Ò»ÕÐ¡¸¿Õ¹ÈÇïºç¡¹»­³öÒ»µÀ¹â»¡Õ¶Ïò$nµÄ$l",
+   ([   "action":     "$Næ¨ªå‰‘ä¸Šå‰ï¼Œèº«å½¢ä¸€è½¬æ‰‹ä¸­$wä½¿ä¸€æ‹›ã€Œç©ºè°·ç§‹è™¹ã€ç”»å‡ºä¸€é“å…‰å¼§æ–©å‘$nçš„$l",
      "dodge":     0,
      "damage":     10,
-     "damage_type":   "¸îÉË"
+     "damage_type":   "å‰²ä¼¤"
    ]),
 });
 
@@ -52,14 +52,14 @@ int valid_learn(object me)
    object ob;
 
    if( (int)me->query("max_force") < 50 )
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬Ã»ÓÐ°ì·¨Á··âÉ½½£·¨¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒå°å±±å‰‘æ³•ã€‚\n");
 
    if( (string)me->query_skill_mapped("force")!= "fonxanforce")
-     return notify_fail("·âÉ½½£·¨±ØÐëÅäºÏ·âÉ½ÅÉÄÚ¹¦²ÅÄÜÁ·¡£\n");
+     return notify_fail("å°å±±å‰‘æ³•å¿…é¡»é…åˆå°å±±æ´¾å†…åŠŸæ‰èƒ½ç»ƒã€‚\n");
 
    if( !(ob = me->query_temp("weapon"))
    ||   (string)ob->query("skill_type") != "sword" )
-     return notify_fail("Äã±ØÐëÏÈÕÒÒ»°Ñ½£²ÅÄÜÁ·½£·¨¡£\n");
+     return notify_fail("ä½ å¿…é¡»å…ˆæ‰¾ä¸€æŠŠå‰‘æ‰èƒ½ç»ƒå‰‘æ³•ã€‚\n");
 
    return 1;
 }
@@ -78,10 +78,10 @@ int practice_skill(object me)
 {
    if( (int)me->query("kee") < 30
    ||   (int)me->query("force") < 3 )
-     return notify_fail("ÄãµÄÄÚÁ¦»òÆø²»¹»£¬Ã»ÓÐ°ì·¨Á·Ï°·âÉ½½£·¨¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›æˆ–æ°”ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒä¹ å°å±±å‰‘æ³•ã€‚\n");
    me->receive_damage("kee", 30);
    me->add("force", -3);
-   write("Äã°´×ÅËùÑ§Á·ÁËÒ»±é·âÉ½½£·¨¡£\n");
+   write("ä½ æŒ‰ç€æ‰€å­¦ç»ƒäº†ä¸€éå°å±±å‰‘æ³•ã€‚\n");
    return 1;
 }
 

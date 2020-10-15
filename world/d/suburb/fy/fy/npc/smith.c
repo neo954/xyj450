@@ -5,10 +5,10 @@ int check_legal_id(string arg);
 
 void create()
 {
-        set_name("ÕÅÌú½³", ({ "zhang" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å¼ é“åŒ ", ({ "zhang" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 52);
-        set("long","ÕÅÌú½³Ò»Éí´òÌú¹¦·òÃû²»Ğé´«£¬Ëû´ò³öµÄÌúÆ÷¾­¾ÃÄÍÓÃ£®\n");
+        set("long","å¼ é“åŒ ä¸€èº«æ‰“é“åŠŸå¤«åä¸è™šä¼ ï¼Œä»–æ‰“å‡ºçš„é“å™¨ç»ä¹…è€ç”¨ï¼\n");
         set("combat_exp", 5);
         set("attitude", "friendly");
         setup();
@@ -33,12 +33,12 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) return;
         switch( random(5) ) {
                 case 0:
-                        say( "ÕÅÌú½³´ÖÉù´ÖÆøµØËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-                                + "£¬ÒªÊ²Ã´£¿\n");
+                        say( "å¼ é“åŒ ç²—å£°ç²—æ°”åœ°è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+                                + "ï¼Œè¦ä»€ä¹ˆï¼Ÿ\n");
                         break;
                 case 1:
-                        say( "ÕÅÌú½³ÂúÁ³º¹Ë®ËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-                                + "£¬ÎÒÌ«Ã¦ÁË£¬°ï²»ÁËÄã¡£\n");
+                        say( "å¼ é“åŒ æ»¡è„¸æ±—æ°´è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+                                + "ï¼Œæˆ‘å¤ªå¿™äº†ï¼Œå¸®ä¸äº†ä½ ã€‚\n");
                         break;
         }
 }
@@ -51,15 +51,15 @@ int do_ding(string arg)
         me = this_player();
 	id = me->query("id");
         if(!arg || sscanf(arg,"%s %s %s %s",ctype,ccolor,cname,cid ) != 4)
-        return notify_fail("Ö¸Áî¸ñÊ½£ºding <type> <color> <name> <English name>\n");
+        return notify_fail("æŒ‡ä»¤æ ¼å¼ï¼šding <type> <color> <name> <English name>\n");
 	if(me->is_busy())
-	return notify_fail("ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É¡£\n");
+	return notify_fail("ä½ ä¸Šä¸€ä¸ªåŠ¨ä½œè¿˜æ²¡æœ‰å®Œæˆã€‚\n");
 	if((int)me->query("created_item") >= 3)
-	return notify_fail("ÄãÒÑ¾­ÓµÓĞÌ«¶à×ÔÔìÎïÆ·ÁË¡£\n");
+	return notify_fail("ä½ å·²ç»æ‹¥æœ‰å¤ªå¤šè‡ªé€ ç‰©å“äº†ã€‚\n");
 	gold = present("gold_money", this_player());
-        if(!gold) return notify_fail("ÄãÉíÉÏÃ»ÓĞ½ğ×Ó¡£\n");
+        if(!gold) return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰é‡‘å­ã€‚\n");
         if((int) gold->query_amount() < 1)
-        return notify_fail("ÄãÉíÉÏÃ»ÓĞÄÇ÷á¶à½ğ×Ó¡£\n");
+        return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰é‚£éº½å¤šé‡‘å­ã€‚\n");
 	if( !check_legal_name(cname))
 	return notify_fail("");
         if( !check_legal_id(cid))
@@ -83,7 +83,7 @@ int do_ding(string arg)
             ccolor != "$HIC$" &&
             ccolor != "$HIW$" 
 	)
-	return notify_fail("²»ÖªÄãÒªÊ²Ã´ÑÕÉ«£®\n");
+	return notify_fail("ä¸çŸ¥ä½ è¦ä»€ä¹ˆé¢œè‰²ï¼\n");
 	cname = ccolor + cname;
         cname = replace_string(cname, "$BLK$", BLK);
         cname = replace_string(cname, "$RED$", RED);
@@ -130,9 +130,9 @@ int do_ding(string arg)
 
 
 		default:
-			return notify_fail("ÕâÀï²»»á×öÄãÒªµÄ¶«Î÷£®\n");
+			return notify_fail("è¿™é‡Œä¸ä¼šåšä½ è¦çš„ä¸œè¥¿ï¼\n");
 	}
-	newfile = replace_string( newfile, "¶©×÷µÄ", cname);
+	newfile = replace_string( newfile, "è®¢ä½œçš„", cname);
         newfile = replace_string( newfile, "order", cid);
         newfile = replace_string( newfile, "fengyun", id);
 	filename = DATA_DIR+"login/" + id[0..0] + "/" + id + "/" + id +sprintf("%d",time()) + ".c";
@@ -143,7 +143,7 @@ int do_ding(string arg)
 	gold->add_amount(-1);
 	me->add("created_item",1);
         me->start_busy(1);
-	write("£Ï£Ë\n");
+	write("ï¼¯ï¼«\n");
 	return 1;
 	}
 	return 0;
@@ -153,16 +153,16 @@ int check_legal_name(string name)
         int i;
         i = strlen(name);
         if( (strlen(name) < 2) || (strlen(name) > 40 ) ) {
-                write("¶Ô²»Æğ£¬ÖĞÎÄÃû×Ö±ØĞëÊÇÒ»µ½¶şÊ®¸öÖĞÎÄ×Ö¡£\n");
+                write("å¯¹ä¸èµ·ï¼Œä¸­æ–‡åå­—å¿…é¡»æ˜¯ä¸€åˆ°äºŒåä¸ªä¸­æ–‡å­—ã€‚\n");
                 return 0;
         }
         while(i--) {
                 if( name[i]<=' ' ) {
-                        write("¶Ô²»Æğ£¬ÖĞÎÄÃû×Ö²»ÄÜÓÃ¿ØÖÆ×ÖÔª¡£\n");
+                        write("å¯¹ä¸èµ·ï¼Œä¸­æ–‡åå­—ä¸èƒ½ç”¨æ§åˆ¶å­—å…ƒã€‚\n");
                         return 0;
                 }
                 if( i%2==0 && !is_chinese(name[i..<0]) ) {
-                        write("¶Ô²»Æğ£¬Ãû×Ö±ØĞèÊÇÖĞÎÄ¡£\n");
+                        write("å¯¹ä¸èµ·ï¼Œåå­—å¿…éœ€æ˜¯ä¸­æ–‡ã€‚\n");
                         return 0;
                 }
         }
@@ -174,7 +174,7 @@ int check_legal_id(string name)
         int i;
         i = strlen(name);
         if( (strlen(name) < 3) || (strlen(name) > 20 ) ) {
-                write("¶Ô²»Æğ£¬Ó¢ÎÄÃû×Ö±ØĞëÊÇÈıµ½¶şÊ®¸ö×Ö×Ö¡£\n");
+                write("å¯¹ä¸èµ·ï¼Œè‹±æ–‡åå­—å¿…é¡»æ˜¯ä¸‰åˆ°äºŒåä¸ªå­—å­—ã€‚\n");
                 return 0;
         }
 

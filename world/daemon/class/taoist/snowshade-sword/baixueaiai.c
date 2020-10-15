@@ -9,18 +9,18 @@ int perform(object me, object target)
 	int extra;
 	object weapon;
 	if(me->is_busy())
-		return notify_fail("ÄãÏÖÔÚÃ»¿Õ£¡£¡\n");
+		return notify_fail("ä½ çŽ°åœ¨æ²¡ç©ºï¼ï¼\n");
 	if( !target ) target = offensive_target(me);
 
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("£Û°×Ñ©°¨°¨£ÝÖ»ÄÜ¶ÔÕ½¶·ÖÐµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("ï¼»ç™½é›ªçš‘çš‘ï¼½åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 	weapon = me->query_temp("weapon");
 	extra = me->query_skill("snowshade-sword",1) / 10;
 	me->add_temp("apply/attack", extra);	
 	me->add_temp("apply/damage", extra);
-	msg = HIR  "$NÊÖÖÐµÄ"+ weapon->name() +"Èö³öÂþÌì·ÉÑ©£¬Ò»µÀ°×¹âÏóÉÁµç°ã»ÓÏò$n£¡" NOR;
+	msg = HIR  "$Næ‰‹ä¸­çš„"+ weapon->name() +"æ’’å‡ºæ¼«å¤©é£žé›ªï¼Œä¸€é“ç™½å…‰è±¡é—ªç”µèˆ¬æŒ¥å‘$nï¼" NOR;
 	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
 	me->add_temp("apply/attack", -extra);
 	me->add_temp("apply/damage", -extra);

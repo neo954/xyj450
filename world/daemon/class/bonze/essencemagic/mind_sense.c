@@ -10,16 +10,16 @@ int conjure(object me, object target)
 	if( !target ) target = me;
 	lvl = (int) me->query_skill("essencemagic",1);
 	lvl = lvl + (int) me->query("spi");
-	if( (int)me->query("atman") < 50 ) return notify_fail("ÄãµÄÁéÁ¦²»¹»£¡\n");
+	if( (int)me->query("atman") < 50 ) return notify_fail("ä½ çš„çµåŠ›ä¸å¤Ÿï¼\n");
 	me->add("atman", -50);
 	if( random(lvl) <= 45) {
-        write("ÄãÒòÎª¶Ô°ËÊ¶ÉñÍ¨µÄĞŞĞĞ²»¹»¸ßÉî¶øÊ§°ÜÁË¡£\n");
+        write("ä½ å› ä¸ºå¯¹å…«è¯†ç¥é€šçš„ä¿®è¡Œä¸å¤Ÿé«˜æ·±è€Œå¤±è´¥äº†ã€‚\n");
                 return 1;
 	}
 	target->receive_curing("sen", 50);
 	if(me != target)
-	message_vision( HIY "$N±ÕÄ¿ÄıÉñ£¬Ó¡ÌÃ·¢³öÒ»µÀ½ğÃ¢ÕÖ×¡$nµÄÈ«Éí...\n" NOR, me, target);
+	message_vision( HIY "$Né—­ç›®å‡ç¥ï¼Œå°å ‚å‘å‡ºä¸€é“é‡‘èŠ’ç½©ä½$nçš„å…¨èº«...\n" NOR, me, target);
 	else
-	message_vision( HIY "$N±ÕÄ¿ÄıÉñ£¬Ó¡ÌÃ·¢³öÒ»µÀ½ğÃ¢ÕÖ×¡$NµÄÈ«Éí...\n" NOR, me);
+	message_vision( HIY "$Né—­ç›®å‡ç¥ï¼Œå°å ‚å‘å‡ºä¸€é“é‡‘èŠ’ç½©ä½$Nçš„å…¨èº«...\n" NOR, me);
 	return 1;
 }

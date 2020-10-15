@@ -5,12 +5,12 @@ void do_drink();
 void create()
 {
         seteuid(getuid());
-        set_name("×íºº", ({"drunk", "man", "drunk man"}));
+        set_name("é†‰æ±‰", ({"drunk", "man", "drunk man"}));
         set("long", @TEXT
  
 TEXT
         );
-        set("gender","ÄĞĞÔ");
+        set("gender","ç”·æ€§");
         set("age",37);
         set("con",30);
         set("str",30);
@@ -45,7 +45,7 @@ void do_drink()
     }
     else {
         command("sigh");
-        command("say ¾Æ..... ¸øÎÒ¾Æ....");
+        command("say é…’..... ç»™æˆ‘é…’....");
     }
     return;
 }
@@ -55,12 +55,12 @@ int accept_object(object who, object ob)
     if ((string)ob->query("liquid/type")=="alcohol") {
         if ((int)ob->query("liquid/remaining") == 0) {
             command("shake");
-            command("say ¿ÕµÄÎÒ²»Òª...");
+            command("say ç©ºçš„æˆ‘ä¸è¦...");
             return 0;
         }
         else {
             command("smile");
-            command("say ¶àĞ»!");
+            command("say å¤šè°¢!");
             return 1;
         }
     }

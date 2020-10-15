@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create()
 {
-   set("short", "Î÷Ïá·¿");
+   set("short", "è¥¿åŽ¢æˆ¿");
 	set("long", @LONG
-Äã½øÈëÎ÷Ïá·¿À´£¬µØÏÂÃæÎ÷·ÅÖøËÄÕÅÒÎ×Ó£¬¶¼´îÖøÒøºìÈö»¨ÒÎ±»
-ÒÎ×ÓÁ½±ßÓÐÒ»¶Ô¸ß¼¸£¬ÓÒ±ß¼¸ÉÏÎÄÍõ¶¦£¬³×½îÏãºÐ£»×ó±ß¼¸ÉÏÈêÒ¤ÃÀ
-ÈËÆ¿ÄÚ²åÖø»¨»ÜÜøçþé¢ºøµÈÎï¡£¸ô´°ÍûÈ¥£¬ÒþÔ¼¿É¿´¼û»¨Ô°¾°É«¡£.
+ä½ è¿›å…¥è¥¿åŽ¢æˆ¿æ¥ï¼Œåœ°ä¸‹é¢è¥¿æ”¾è‘—å››å¼ æ¤…å­ï¼Œéƒ½æ­è‘—é“¶çº¢æ’’èŠ±æ¤…è¢«
+æ¤…å­ä¸¤è¾¹æœ‰ä¸€å¯¹é«˜å‡ ï¼Œå³è¾¹å‡ ä¸Šæ–‡çŽ‹é¼Žï¼ŒåŒ™ç­‹é¦™ç›’ï¼›å·¦è¾¹å‡ ä¸Šæ±çª‘ç¾Ž
+äººç“¶å†…æ’è‘—èŠ±å‰èŒ—ç¬æ£°å£¶ç­‰ç‰©ã€‚éš”çª—æœ›åŽ»ï¼Œéšçº¦å¯çœ‹è§èŠ±å›­æ™¯è‰²ã€‚.
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -19,7 +19,7 @@ LONG
        set("objects", ([
         __DIR__"npc/servant" : 1,
         __DIR__"npc/annihi" : 1 ]) );
-    create_door("east","µñÊÎ·¿ÃÅ","west", DOOR_CLOSED);
+    create_door("east","é›•é¥°æˆ¿é—¨","west", DOOR_CLOSED);
 	setup();
 	replace_program(ROOM);
 }

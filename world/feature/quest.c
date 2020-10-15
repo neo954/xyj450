@@ -43,12 +43,12 @@ int give_quest(string arg)
         t = local[2] * 60 + local[1];       
 	if( t < 240 || t > 1380)
 	{
-		write("Ò¹ÉîÁË£®£®»¹ÒªÊ²Ã´ÈÎÎñ£¡£¡\n");
+		write("å¤œæ·±äº†ï¼ï¼è¿˜è¦ä»€ä¹ˆä»»åŠ¡ï¼ï¼\n");
 		return 1;
 	}
 	if((int) me->is_ghost())
 	{
-		write("¹í»ê²»¿ÉÒªÈÎÎñ£®\n");
+		write("é¬¼é­‚ä¸å¯è¦ä»»åŠ¡ï¼\n");
 		return 1;
 	}
 
@@ -80,21 +80,21 @@ int give_quest(string arg)
 // A factor here to make time random
 	timep = random(timep/2)+timep/2;
 	time_period(timep, me);
-	if (quest["quest_type"] == "Ñ°")
+	if (quest["quest_type"] == "å¯»")
 	{
-        tell_object(me,"ÕÒ»Ø¡º"+quest["quest"]+"¡»¸øÌì»úÀÏÈË¡£\n" NOR);
-	sysmsg +="ÕÒ»Ø¡º"+quest["quest"]+"¡»¡£";
+        tell_object(me,"æ‰¾å›ã€"+quest["quest"]+"ã€ç»™å¤©æœºè€äººã€‚\n" NOR);
+	sysmsg +="æ‰¾å›ã€"+quest["quest"]+"ã€ã€‚";
 	}
-	        if (quest["quest_type"] == "É±")
+	        if (quest["quest_type"] == "æ€")
         {
-        tell_object(me,"ÌæÌì»úÀÏÈËÉ±ÁË¡º"+quest["quest"]+"¡»¡£\n" NOR);
-	sysmsg +="É±ÁË¡º"+quest["quest"]+"¡»¡£";
+        tell_object(me,"æ›¿å¤©æœºè€äººæ€äº†ã€"+quest["quest"]+"ã€ã€‚\n" NOR);
+	sysmsg +="æ€äº†ã€"+quest["quest"]+"ã€ã€‚";
         }
  	me->set("fy_quest", quest);
 	me->set("task_time", (int) time()+(int) timep);
 	if((int)me->query_temp("quest_number") < 5)
 	me->add_temp("quest_number",1);
-	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)£º%s", 
+	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)ï¼š%s", 
 	me->query("name"),me->query("id"),sysmsg));
 
 return 1;
@@ -110,14 +110,14 @@ int time_period(int timep, object me)
         h = t % 24;             t /= 24;
         d = t;
 
-        if(d) time = chinese_number(d) + "Ìì";
+        if(d) time = chinese_number(d) + "å¤©";
         else time = "";
 
-        if(h) time += chinese_number(h) + "Ğ¡Ê±";
-        if(m) time += chinese_number(m) + "·Ö";
-        time += chinese_number(s) + "Ãë";
+        if(h) time += chinese_number(h) + "å°æ—¶";
+        if(m) time += chinese_number(m) + "åˆ†";
+        time += chinese_number(s) + "ç§’";
 
-        tell_object(me,HIW + sprintf("%s",this_object()->name()) +"ËµµÀ£º\nÇëÔÚ" + time + "ÄÚ");
-	sysmsg = "ÔÚ" + time + "ÄÚ";
+        tell_object(me,HIW + sprintf("%s",this_object()->name()) +"è¯´é“ï¼š\nè¯·åœ¨" + time + "å†…");
+	sysmsg = "åœ¨" + time + "å†…";
         return 1;
 }

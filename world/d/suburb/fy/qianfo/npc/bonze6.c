@@ -5,15 +5,15 @@ inherit NPC;
 int give_qin();
 void create()
 {
-        set_name("ÔÆ¿Õ", ({ "yunkong" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("äº‘ç©º", ({ "yunkong" }) );
+        set("gender", "ç”·æ€§" );
         set("class", "bonze");
-	set("title","ĞË¹úìøËÂÔÆ×Ö±²´óÊ¦");
+	set("title","å…´å›½ç¦…å¯ºäº‘å­—è¾ˆå¤§å¸ˆ");
         set("age", random(40)+20);
         set("cor", 24);
         set("cps", 29);
         set("int", 25);
-        set("long", "ËûÊÇĞË¹úìøËÂÖĞÆÄÓĞÍşÍûµÄÔÆ×Ö±²´óÊ¦\n");
+        set("long", "ä»–æ˜¯å…´å›½ç¦…å¯ºä¸­é¢‡æœ‰å¨æœ›çš„äº‘å­—è¾ˆå¤§å¸ˆ\n");
         set("combat_exp", 6000000);
         set("attitude", "friendly");
         set("max_force", 500);
@@ -21,10 +21,10 @@ void create()
         set("force_factor", 5);
         set("chat_chance", 1);
         set("chat_msg", ({
-                "ÔÆ¿ÕËµµÀ£ºÄãÏëÑ§»÷¹ÄÂğ£¿\n",
+                "äº‘ç©ºè¯´é“ï¼šä½ æƒ³å­¦å‡»é¼“å—ï¼Ÿ\n",
         }) );
         set("inquiry", ([
-		"»÷¹Ä" : (: give_qin :),
+		"å‡»é¼“" : (: give_qin :),
 		"jigu" : (: give_qin :),
 	]));
         setup();
@@ -33,7 +33,7 @@ void create()
 }
 int accept_fight(object me)
 {
-        command("say °¢ÃÖÍÓ·ğ£¡Æ¶É®Îä¹¦µÍÎ¢£¬Ê©Ö÷²»Òª¿ªÕâÖÖÍæĞ¦¡£\n");
+        command("say é˜¿å¼¥é™€ä½›ï¼è´«åƒ§æ­¦åŠŸä½å¾®ï¼Œæ–½ä¸»ä¸è¦å¼€è¿™ç§ç©ç¬‘ã€‚\n");
         return 0;
 }
 
@@ -42,13 +42,13 @@ int give_qin()
         object obj;
 if( !query("given"))
         {
-command("say Õâ°Ñ·ğ¹ÄÄãÄÃÈ¥Á·°É£¡£¡\n");
+command("say è¿™æŠŠä½›é¼“ä½ æ‹¿å»ç»ƒå§ï¼ï¼\n");
 obj = new(__DIR__"obj/fegu");
 obj->move(this_player());
 set("given",1);
         }
 else
-command("say ÎÒµÄ·ğ¹ÄÒÑËÍÈËÁË£¡\n");
+command("say æˆ‘çš„ä½›é¼“å·²é€äººäº†ï¼\n");
         return 1;
 }
 

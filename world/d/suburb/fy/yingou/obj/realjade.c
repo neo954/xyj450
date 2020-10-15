@@ -4,15 +4,15 @@ inherit ITEM;
 
 void create()
 {
-	set_name("ÂŞÉ²ÅÆ", ({ "luosha" }));
+	set_name("ç½—åˆ¹ç‰Œ", ({ "luosha" }));
 	set_weight(600);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¿é");
+		set("unit", "å—");
                 set("for_bandit",1);
 		set("long",
-			"Õâ¿éÕæÂŞÉ²ÅÆÉÏÕı¿ÌµÃÊÇÌìÊ¦ÕıµÀ\n");
+			"è¿™å—çœŸç½—åˆ¹ç‰Œä¸Šæ­£åˆ»å¾—æ˜¯å¤©å¸ˆæ­£é“\n");
 		set("value", 0);
 		set("material", "stone");
 		set("skill", ([

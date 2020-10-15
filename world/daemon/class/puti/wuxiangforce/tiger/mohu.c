@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //bula, 1/22
@@ -13,15 +13,15 @@ int exert(object me, object target)
    target = offensive_target(me);
 
         if( !me->is_fighting() )
-                return notify_fail("õø»¢Ö®³İÖ»ÄÜÔÚÕ½¶·ÖĞÊ¹ÓÃ£¡\n");
+                return notify_fail("è²˜è™ä¹‹é½¿åªèƒ½åœ¨æˆ˜æ–—ä¸­ä½¿ç”¨ï¼\n");
 
         if( (int)me->query("force") < 400 )
-                return notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
+                return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
 
         skill = me->query_skill("force");
    
     msg = HIR
-"$NÍ»È»Á³É«Ò»±ä£¬ÏÖ³öÒ»¸ö»¢ĞÎ£¬ÓÖ¼âÓÖ³¤µÄÀû³İÏò$nµÄ¾±²¿´ÌÈ¥£¡\n";
+"$Nçªç„¶è„¸è‰²ä¸€å˜ï¼Œç°å‡ºä¸€ä¸ªè™å½¢ï¼Œåˆå°–åˆé•¿çš„åˆ©é½¿å‘$nçš„é¢ˆéƒ¨åˆºå»ï¼\n";
    me->start_busy(2);
    me->receive_damage("kee", 50);
    me->add("force", -100);
@@ -29,13 +29,13 @@ int exert(object me, object target)
    if((int)me->query_int()  > (int)target->query_int()/2 +random(30) ) {
            damage = skill - ((int)target->query("max_force")/10);
            if( damage > 0 ) {
-            msg += "(Ö»¼ûÒ»Æ¬ÈâÑª·ÉÑï£¬$nµÄ¾±²¿±»Ò§³öÒ»¸öÑª¶´£¡)\n\n" NOR;
+            msg += "(åªè§ä¸€ç‰‡è‚‰è¡€é£æ‰¬ï¼Œ$nçš„é¢ˆéƒ¨è¢«å’¬å‡ºä¸€ä¸ªè¡€æ´ï¼)\n\n" NOR;
                 target->receive_wound("kee", damage);
            me->add("bellicosity", damage/2);
      }
-        else msg += "½á¹ûÁ¬Æ¤¶¼Ã»»®ÆÆ£¡\n" NOR;
+        else msg += "ç»“æœè¿çš®éƒ½æ²¡åˆ’ç ´ï¼\n" NOR;
         }
-   else msg += "½á¹û±»$n¶ã¿ªÁË£¡\n" NOR;
+   else msg += "ç»“æœè¢«$nèº²å¼€äº†ï¼\n" NOR;
 
         message_vision(msg, me, target);
         return 1;

@@ -4,7 +4,7 @@ inherit NPC;
 
 void create()
 {
-	set_name("¹Â»êÒ°¹í", ({ "wandering ghost", "ghost" }) );
+	set_name("å­¤é­‚é‡Žé¬¼", ({ "wandering ghost", "ghost" }) );
 	set("age", 45);
 	
 	set("str", 24);

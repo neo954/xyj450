@@ -3,8 +3,8 @@ inherit ITEM;
 
 void create()
 {
-    set_name("ÃÜº¯", ({ "secret letter","letter"  }) );
-    set("unit", "·â");
-    set("long","ÕâÊÇÒ»·âÓÃÀ¯ÃÜ·âÆğÀ´µÄĞÅ¼ş£¬ÉÏÃæÓĞÒ»Ææ¹ÖµÄÍ¼°¸¡£\n");
+    set_name("å¯†å‡½", ({ "secret letter","letter"  }) );
+    set("unit", "å°");
+    set("long","è¿™æ˜¯ä¸€å°ç”¨èœ¡å¯†å°èµ·æ¥çš„ä¿¡ä»¶ï¼Œä¸Šé¢æœ‰ä¸€å¥‡æ€ªçš„å›¾æ¡ˆã€‚\n");
     set_weight(50);
 }

@@ -3,14 +3,14 @@
 inherit CLOTH;
 void create()
 {
-	set_name( HIR "»ğÁú³àÆ¤" NOR, ({ "dragonskin" }));
+	set_name( HIR "ç«é¾™èµ¤çš®" NOR, ({ "dragonskin" }));
 	set_weight(600);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¼ş");
+		set("unit", "ä»¶");
 		set("long",
-			"Ò»¿é²¼Âú°µºìÉ«µÄÁÛÆ¤\n");
+			"ä¸€å—å¸ƒæ»¡æš—çº¢è‰²çš„é³çš®\n");
 		set("value", 7000);
 		set("material", "cloth");
 		set("skill", ([

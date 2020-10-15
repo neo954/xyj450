@@ -4,17 +4,17 @@ inherit HEAD;
 
 void create()
 {
-        set_name( "¶ú»·", ({ "earring" }) );
-        set("long","ÕâÊÇÒ»´®ÓÃ±¦Ê¯Ïâ´®³ÉµÄÉÁÁÁ¶ú»·¡£\n");
+        set_name( "è€³ç¯", ({ "earring" }) );
+        set("long","è¿™æ˜¯ä¸€ä¸²ç”¨å®çŸ³é•¶ä¸²æˆçš„é—ªäº®è€³ç¯ã€‚\n");
         set_weight(100);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "´®");
+                set("unit", "ä¸²");
                 set("value", 1500);
                 set("material", "gold");
                 set("armor_prop/armor", 1);
-        set("wear_msg", "$N½«$nÄÃ³ö´©´÷ÔÚ¶ú¶äÉÏ¡£\n");
+        set("wear_msg", "$Nå°†$næ‹¿å‡ºç©¿æˆ´åœ¨è€³æœµä¸Šã€‚\n");
         }
         setup();
 }

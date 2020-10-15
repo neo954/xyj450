@@ -2,10 +2,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("´óó¯òë", ({ "cockroach" }) );
-        set("race", "Ò°ÊŞ");
+        set_name("å¤§èŸ‘è‚", ({ "cockroach" }) );
+        set("race", "é‡å…½");
         set("age", 1);
-        set("long", "Ò»Ö»·Ç³£¶ñĞÄµÄó¯òë¡£ \n");
+        set("long", "ä¸€åªéå¸¸æ¶å¿ƒçš„èŸ‘è‚ã€‚ \n");
 
         set("combat_exp",7000);
         set("score", 200);
@@ -14,7 +14,7 @@ void create()
         set_skill("dodge", 100);
 
 
-        set("limbs", ({ "Í·²¿", "ÉíÌå"}) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“"}) );
          set("verbs", ({ "bite" }) );
         set_temp("armor", 50);
 
@@ -30,7 +30,7 @@ void create()
 void hide()
 {
 	if( !environment() ) return;
-	message("vision", "´óó¯òëÅÀÖøÅÀÖø×ê½øÇ½±ßµÄÁÑ·ìÁË¡£\n", environment());
+	message("vision", "å¤§èŸ‘è‚çˆ¬è‘—çˆ¬è‘—é’»è¿›å¢™è¾¹çš„è£‚ç¼äº†ã€‚\n", environment());
 	call_out("disappear", 1);
 }
 

@@ -5,10 +5,10 @@ void do_drink();
 void create()
 {
         seteuid(getuid());
-        set_name("ÕË·¿ÏÈÉú", ({"xiansheng", "xian", "xian sheng"}));
+        set_name("è´¦æˆ¿å…ˆç”Ÿ", ({"xiansheng", "xian", "xian sheng"}));
         set("long",
-                "Ò»¸ö¾«Ã÷ÄÜ¸É£¬Îä¹¦¸ßÇ¿µÄÕË·¿ÏÈÉú\n");
-        set("gender","ÄĞĞÔ");
+                "ä¸€ä¸ªç²¾æ˜èƒ½å¹²ï¼Œæ­¦åŠŸé«˜å¼ºçš„è´¦æˆ¿å…ˆç”Ÿ\n");
+        set("gender","ç”·æ€§");
         set("max_atman", 300);
         set("atman", 300);
         set("max_force", 300);
@@ -58,7 +58,7 @@ void do_drink()
             command("drop wineskin");
     }
     else 
-message_vision("$NÓÃÁ¦ÎüÁËÎüÄÇÒòÎªĞï¾Æ¶ø·¢ºìµÄ±Ç×Ó£®\n", this_object());
+message_vision("$Nç”¨åŠ›å¸äº†å¸é‚£å› ä¸ºé…—é…’è€Œå‘çº¢çš„é¼»å­ï¼\n", this_object());
     return;
 }
  
@@ -67,12 +67,12 @@ int accept_object(object who, object ob)
     if ((string)ob->query("liquid/type")=="alcohol") {
         if ((int)ob->query("liquid/remaining") == 0) {
             command("shake");
-            command("say ¿ÕµÄÎÒ²»Òª...");
+            command("say ç©ºçš„æˆ‘ä¸è¦...");
             return 0;
         }
         else {
             command("smile");
-            command("say ¶àĞ»!");
+            command("say å¤šè°¢!");
             return 1;
         }
     }

@@ -3,11 +3,11 @@ inherit COMBINED_ITEM;
 
 void create()
 {
-     set_name(HIW "°×·ïÍè" NOR ,({"white pill","pill" }));
+     set_name(HIW "ç™½å‡¤ä¸¸" NOR ,({"white pill","pill" }));
 	set("long",
-   "ÕâÊÇÒ»¿Å´¿°×ÁÁÀöµÄÍè×Ó£¬ÎÅÁËÎÅÓÐÒ»ÖÖÉÏµÈÒ©²ÄµÄÎ¶µÀ¡£\n");
-	set("unit", "¿Å");
-	set("base_unit", "¿Å");
+   "è¿™æ˜¯ä¸€é¢—çº¯ç™½äº®ä¸½çš„ä¸¸å­ï¼Œé—»äº†é—»æœ‰ä¸€ç§ä¸Šç­‰è¯æçš„å‘³é“ã€‚\n");
+	set("unit", "é¢—");
+	set("base_unit", "é¢—");
 	set("base_weight", 200);
 	set_amount(1);
 }
@@ -20,12 +20,12 @@ void init()
 
 int do_eat(string arg)
 {
-    if( !arg || arg != "pill")  return notify_fail("ÄãÒª³ÔÉõÃ´ÄØ? \n");
+    if( !arg || arg != "pill")  return notify_fail("ä½ è¦åƒç”šä¹ˆå‘¢? \n");
 
 	message_vision(
-	   "$NÄÃ³öÒ»¿Å´óÍè×Ó£¬Ò»¿Ú¸øÍÌÁËÏÂÈ¥¡£\n"
+	   "$Næ‹¿å‡ºä¸€é¢—å¤§ä¸¸å­ï¼Œä¸€å£ç»™åžäº†ä¸‹åŽ»ã€‚\n"
 
-	"Ö»¼û$NÈ«ÉíÃ°³öÒ»Õó°×ÑÌ£¬Õû¸öÈË¿´ÆðÀ´·Ç³£ÓÐ¾«Éñ! \n",this_player());
+	"åªè§$Nå…¨èº«å†’å‡ºä¸€é˜µç™½çƒŸï¼Œæ•´ä¸ªäººçœ‹èµ·æ¥éžå¸¸æœ‰ç²¾ç¥ž! \n",this_player());
     this_player()->receive_heal("gin", 100);
 	this_player()->receive_heal("kee", 300);
 	this_player()->receive_heal("sen",100);

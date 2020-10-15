@@ -13,9 +13,9 @@ static int in_test=0;
 
 void create()
 {
-        set_name("³Ì²»Æ½", ({ "county magistrate","magistrate" }) );
-        set("title", "ÇÇÒõÏØÏØ¹Ù");
-        set("gender", "ÄĞĞÔ" );
+        set_name("ç¨‹ä¸å¹³", ({ "county magistrate","magistrate" }) );
+        set("title", "ä¹”é˜´å¿å¿å®˜");
+        set("gender", "ç”·æ€§" );
         set("age", 22);
 
         set("str", 22);
@@ -29,8 +29,8 @@ void create()
 
         set("long",
 
-"ËûËäÈ»³öÉíÍû×å£¬È»¹¥¶Á¿Ì¿à£¬°ñÖĞÌ½»¨£¬Èç½ñÒÑÊÇ²Å¸ß°Ë¶·£¬Âú¸¹\n"
-"¾­ÂÚ£¬»¹ÂÔÍ¨·ğÀí¡£Îª¹ÙÊıÄêÇåÆ¶Á®Õı£¬ÈËÈË¾´Ñö¡£\n"
+"ä»–è™½ç„¶å‡ºèº«æœ›æ—ï¼Œç„¶æ”»è¯»åˆ»è‹¦ï¼Œæ¦œä¸­æ¢èŠ±ï¼Œå¦‚ä»Šå·²æ˜¯æ‰é«˜å…«æ–—ï¼Œæ»¡è…¹\n"
+"ç»çº¶ï¼Œè¿˜ç•¥é€šä½›ç†ã€‚ä¸ºå®˜æ•°å¹´æ¸…è´«å»‰æ­£ï¼Œäººäººæ•¬ä»°ã€‚\n"
 );
         set("combat_exp", 5000000);
         set("attitude", "friendly");
@@ -72,7 +72,7 @@ add_action("do_charge","charge");
 int accept_fight(object me)
 {
         command("scowl");
-        command("say ÕâÊÇÑÃÃÅ£¬¿ì»ØÈ¥°É¡£");
+        command("say è¿™æ˜¯è¡™é—¨ï¼Œå¿«å›å»å§ã€‚");
         return 0;
 }
 
@@ -82,8 +82,8 @@ int level,i;
 int gin,kee,sen,condition;
 if (level=crime->query("crime_lv"))
         {
-message_vision(HIR"À´ÈËÄÄ£¡°Ñ$NÍÏÏÂÈ¥´ò"+chinese_number(level*10)
-                                +"´ó°å£¡\n",crime);
+message_vision(HIR"æ¥äººå“ªï¼æŠŠ$Næ‹–ä¸‹å»æ‰“"+chinese_number(level*10)
+                                +"å¤§æ¿ï¼\n",crime);
         gin=10-crime->query("max_atman")/100;
         kee=10-crime->query("max_force")/100;
         sen=10-crime->query("max_mana")/100;
@@ -119,13 +119,13 @@ message_vision(HIR"À´ÈËÄÄ£¡°Ñ$NÍÏÏÂÈ¥´ò"+chinese_number(level*10)
                 crime->receive_wound("sen",sen);
                 if (condition==3)
                         {
-                        message_vision(HIR "°¥, ÔçÖª½ñÈÕ,ºÎ±Øµ±³õ?\n" NOR+
-                        "À´ÈËÑ½, °Ñ$N¸øÎÒÌ§³öÈ¥!\n"+
-                        "...ÍË...ÌÃ...!\n",crime);
+                        message_vision(HIR "å“, æ—©çŸ¥ä»Šæ—¥,ä½•å¿…å½“åˆ?\n" NOR+
+                        "æ¥äººå‘€, æŠŠ$Nç»™æˆ‘æŠ¬å‡ºå»!\n"+
+                        "...é€€...å ‚...!\n",crime);
                         crime->unconcious();
                         crime->add("crime_lv",-1);
                         }
-                message_vision(HIR "$N¶Ô$nËµµÀ: ÔÙ¸Ò·¸°¸, ¶¨Õ¶²»ÈÄ!\n" NOR,this_object(),crime); 
+                message_vision(HIR "$Nå¯¹$nè¯´é“: å†æ•¢çŠ¯æ¡ˆ, å®šæ–©ä¸é¥¶!\n" NOR,this_object(),crime); 
                 }
         crime->move(find_object("/d/suburb/es/choyin/court1.c"));
         if (!crime->query("crime_lv"))
@@ -133,7 +133,7 @@ message_vision(HIR"À´ÈËÄÄ£¡°Ñ$NÍÏÏÂÈ¥´ò"+chinese_number(level*10)
         }
 else
         {
-        tell_object(crime,"ÕæÊÇ¶Ô²»Æğ, ÏÂÈË°ìÊÂ²»ÖÜ, ÈÃÄúÊÜÎ¯ÇüÁË.\n");
+        tell_object(crime,"çœŸæ˜¯å¯¹ä¸èµ·, ä¸‹äººåŠäº‹ä¸å‘¨, è®©æ‚¨å—å§”å±ˆäº†.\n");
         call_out((:call_other,crime,"move",find_object("/d/suburb/es/choyin/court1.c"):),1);
         }
  return 1;
@@ -150,7 +150,7 @@ i=sizeof(players);
 while(i--)
         {
         if((players[i]->query("crime_lv")
-        ||players[i]->query("marks/Ç¿µÁ")
+        ||players[i]->query("marks/å¼ºç›—")
         ||players[i]->query("thief"))
         &&!players[i]->query("being_caught"))
                 {
@@ -176,10 +176,10 @@ int permit;
 object police,crimer;
 if (!arg) return 0;
 if (sscanf(arg,"%s with %s",who,why)!=2)
-        return notify_fail("ÕıÈ·ÓÃ·¨ÊÇ: charge sb. with <reason>\n");
+        return notify_fail("æ­£ç¡®ç”¨æ³•æ˜¯: charge sb. with <reason>\n");
 crimer=find_player(who);
 if (!crimer)
-                return notify_fail("¶Ô²»Æğ£¬ÄãÒª¸æµÄÈË²»ÔÚÏßÉÏ£¡\n");
+                return notify_fail("å¯¹ä¸èµ·ï¼Œä½ è¦å‘Šçš„äººä¸åœ¨çº¿ä¸Šï¼\n");
 switch (why)
         {
         case "steal":
@@ -194,11 +194,11 @@ switch (why)
                 else permit=0;
                 break;
         case "kill":
-                if (crimer->query("marks/Ç¿µÁ"))
+                if (crimer->query("marks/å¼ºç›—"))
                         {
-                        if (crimer->query("marks/Ç¿µÁ")==1)
-                                                crimer->delete("marks/Ç¿µÁ");
-                        else            crimer->add("marks/Ç¿µÁ",-1);
+                        if (crimer->query("marks/å¼ºç›—")==1)
+                                                crimer->delete("marks/å¼ºç›—");
+                        else            crimer->add("marks/å¼ºç›—",-1);
                         crimer->add("crimer_lv",5);
                         permit=1;
                         }
@@ -223,7 +223,7 @@ switch (why)
                         }
                 else permit=0;
                 break;
-        case "É±Æø":
+        case "æ€æ°”":
                 if
 (random(crimer->query("bellicosity"))>random(800)+800)
                         {
@@ -244,7 +244,7 @@ switch (why)
                 else permit=0;
                 break;
         default:
-                return notify_fail("¶Ô²»Æğ£¬´ËÀà°¸¼ş±¾ÏØ²»ÊÜÀí¡£\n");
+                return notify_fail("å¯¹ä¸èµ·ï¼Œæ­¤ç±»æ¡ˆä»¶æœ¬å¿ä¸å—ç†ã€‚\n");
         }
 if (permit) {say("hdjdjhjfdhsjfhjdshjfhdsjhfjsdhfj");}
          else {say("haha");}
@@ -258,9 +258,9 @@ if (permit)
                 ||environment(crimer)==find_object("/d/suburb/es/choyin/n_gate.c"))
                         crimer->move(find_object("/d/suburb/es/choyin/court1.c"));
         police->move(environment(crimer));
-        say("àÅ......µÄÈ·Èç´Ë!\nºÃ°É, ÎÒÅÉÈËÈ¥×¥"+
-                        (crimer->query("gender")=="Å®ĞÔ"?"Ëı":"Ëû")+
-                        "À´.\n");
+        say("å—¯......çš„ç¡®å¦‚æ­¤!\nå¥½å§, æˆ‘æ´¾äººå»æŠ“"+
+                        (crimer->query("gender")=="å¥³æ€§"?"å¥¹":"ä»–")+
+                        "æ¥.\n");
         if (objectp(police=present("magistrate waiter",environment())))
         police->delete_temp("pending/beat");
 crimer->move("/d/suburb/es/choyin/yamen");
@@ -273,7 +273,7 @@ else
         if (query("bad_man/"+who)>3)
                 {
                 this_player()->add("crime_lv",2);
-                tell_object(this_player(),"Äã¾¹¸ÒÎÜ¸æ£¿£¡\n");
+                tell_object(this_player(),"ä½ ç«Ÿæ•¢è¯¬å‘Šï¼Ÿï¼\n");
                 call_out("settle_lawsuit",1,this_player());
                 }
         return 1;

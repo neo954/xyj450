@@ -3,13 +3,13 @@ inherit ITEM;
 
 void create()
 {
-	set_name("ţͷ", ({ "niutou", "tou" }) );
+	set_name("牛头", ({ "niutou", "tou" }) );
 	set_weight(350);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "һ��븯�õ�ţͷ\n");
-		set("unit", "��");
+		set("long", "一块半腐烂的牛头\n");
+		set("unit", "块");
 		set("value", 2000);
 		set("food_remaining", 5);
 		set("food_supply", 60);
@@ -20,9 +20,9 @@ void create()
 int finish_eat()
 {
 	object qu;
-        set_name("ţͷ��", ({"bone"}));
+        set_name("牛头骨", ({"bone"}));
 	set("value",0);
-        set("long", "һ���еøɸɾ�����ţͷ��\n");
+        set("long", "一个啃得干干净净的牛头骨\n");
         set_max_encumbrance(10);
 	qu = new(__DIR__"qu");
 	qu->move(this_object());
@@ -31,7 +31,7 @@ int finish_eat()
 
 int is_container()
 {
-	if(this_object()->query("name") == "ţͷ��" )
+	if(this_object()->query("name") == "牛头骨" )
 			return 1;
 	else  return 0;
 }

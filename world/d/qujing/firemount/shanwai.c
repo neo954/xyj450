@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // created by snowcat on 4/11/1997
@@ -10,12 +10,12 @@ int check_move(object me, string arg);
 
 void create ()
 {
-  set ("short", "ɽ��С·");
+  set ("short", "山外小路");
   set ("long", @LONG
 
-��ͻȻ���˻���ɽ�������棬�������Ǻ�ͨͨ�Ļ���ɽ����������
-��һ��ǿ�ҵĺ�ζ���ȵ������������ܡ�������һ��С����ͨ��ɽ
-����������
+你突然到了火焰山的西北面，东南面是红通通的火焰山顶。空气中
+有一种强烈的糊味，热得让人难以忍受。北方有一条小径，通向山
+下阴凉处。
 
 LONG);
 
@@ -68,23 +68,23 @@ int check_move(object me, string arg)
    object env, obj;
    mapping exit;
 
-   if( !arg ) return notify_fail("��Ҫ���ĸ������ߣ�\n");
+   if( !arg ) return notify_fail("你要往哪个方向走？\n");
 
    if( me->over_encumbranced() )
-     return notify_fail("��ĸ��ɹ��أ��������á�\n");
+     return notify_fail("你的负荷过重，动弹不得。\n");
 
    if( me->is_busy() )
-     return notify_fail("��Ķ�����û����ɣ������ƶ���\n");
+     return notify_fail("你的动作还没有完成，不能移动。\n");
 
    if( me->query_temp("no_move") )
-     return notify_fail("�㱻��ס�ˣ����ﶯ���ˣ�\n");
+     return notify_fail("你被定住了，哪里动得了！\n");
 
    env = environment(me);
-   if(!env) return notify_fail("������Ҳȥ���ˡ�\n");
+   if(!env) return notify_fail("你哪里也去不了。\n");
 
    if( !mapp(exit = env->query("exits")) || undefinedp(exit[arg]) ) {
      if( query_verb()=="go")
-        return notify_fail("�������û�г�·��\n");
+        return notify_fail("这个方向没有出路。\n");
      else
         return 0;
    }
@@ -93,16 +93,16 @@ int check_move(object me, string arg)
    if( !(obj = find_object(dest)) )
      call_other(dest, "???");
    if( !(obj = find_object(dest)) )
-     return notify_fail("�޷��ƶ���\n");
+     return notify_fail("无法移动。\n");
 
    dir = cdir(arg);
 
    if( me->is_fighting() ) {
-     mout = "��" + dir + "��Ķ����ˡ�\n";
-     min = "����ײײ�����˹�����ģ����Щ�Ǳ���\n";
+     mout = "往" + dir + "落荒而逃了。\n";
+     min = "跌跌撞撞地跑了过来，模样有些狼狈。\n";
    } else {
-     mout = "��" + dir + "�뿪��\n";
-     min = "���˹�����\n";
+     mout = "往" + dir + "离开。\n";
+     min = "走了过来。\n";
    }
 
    if( !wizardp(me) || !me->query("env/invisibility") )

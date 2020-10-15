@@ -4,9 +4,9 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "ɽ��ƽ��");
+        set("short", "山间平地");
         set("long", @LONG
-ɽ��ƽ�أ����������̵�С�ݣ���Χ���˼���������ɽ����һ����Ȫ��
+山间平地，地上是嫩绿的小草，周围布了几棵桦树，山边有一眼清泉。
 LONG
         );
 

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // powerfade.c
@@ -13,12 +13,12 @@ int exert(object me, object target)
 {
    int skill;
 
-   if( target != me ) return notify_fail("ÄãÖ»ÄÜÓÃÌìÐ°Éñ¹¦\Ñ¹ÖÆ×Ô¼ºµÄÉ±Æø¡£\n");
+   if( target != me ) return notify_fail("ä½ åªèƒ½ç”¨å¤©é‚ªç¥žåŠŸ\åŽ‹åˆ¶è‡ªå·±çš„æ€æ°”ã€‚\n");
 
-   if( (int)me->query("force") < 100 )   return notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
-   if( me->query_temp("powerup") )   return notify_fail("ÄãÒÑ¾­ÔÚÔË¹¦\ÖÐÁË¡£\n");
+   if( (int)me->query("force") < 100 )   return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
+   if( me->query_temp("powerup") )   return notify_fail("ä½ å·²ç»åœ¨è¿åŠŸ\ä¸­äº†ã€‚\n");
    if( (int)me->query("bellicosity") <= 0 )
-     return notify_fail("ÄãÏÖÔÚºÁÎÞÉ±Æø¡£\n");
+     return notify_fail("ä½ çŽ°åœ¨æ¯«æ— æ€æ°”ã€‚\n");
 
    skill = me->query_skill("force");
 
@@ -27,7 +27,7 @@ int exert(object me, object target)
    me->receive_damage("sen", 100);
 
    message_vision(
-     HIC "$NÎ¢Ò»ÄýÉñ£¬ÔËÆðÌìÐ°Éñ¹¦\£¬·ÅÂýºôÎü£¬¿ªÊ¼ÊÕÁ²×Ô¼ºµÄÉ±Æø ....\n" NOR, me);
+     HIC "$Nå¾®ä¸€å‡ç¥žï¼Œè¿èµ·å¤©é‚ªç¥žåŠŸ\ï¼Œæ”¾æ…¢å‘¼å¸ï¼Œå¼€å§‹æ”¶æ•›è‡ªå·±çš„æ€æ°” ....\n" NOR, me);
 
    if( me->is_fighting()
    &&   (random(skill) < (int)me->query("cps") * 3 ) )
@@ -42,5 +42,5 @@ void remove_effect(object me, int amount)
    me->add_temp("apply/dodge", - amount);
    me->add_temp("apply/damage", - amount);
    me->delete_temp("powerup");
-   tell_object(me, "ÄãµÄÌìÐ°Éñ¹¦\ÔËÐÐÍê±Ï£¬½«ÄÚÁ¦ÊÕ»Øµ¤Ìï¡£\n");
+   tell_object(me, "ä½ çš„å¤©é‚ªç¥žåŠŸ\è¿è¡Œå®Œæ¯•ï¼Œå°†å†…åŠ›æ”¶å›žä¸¹ç”°ã€‚\n");
 }

@@ -6,12 +6,12 @@ inherit BOOTS;
 
 void create()
 {
-	set_name("�ڲ�Ь", ({"black boots", "boots"}) );
+	set_name("黑布鞋", ({"black boots", "boots"}) );
 	set_weight(400);
 	if( clonep() )
 		set_default_object(__FILE__);
     else {
-		set("unit", "˫");
+		set("unit", "双");
 		set("material", "cloth");
 		set("value", 100);
 		set("armor_prop/armor", 1);

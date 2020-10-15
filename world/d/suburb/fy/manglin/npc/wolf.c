@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("»ÒÃ«¶ñÀÇ", ({ "wolf", "big wolf" }) );
-	set("race", "Ò°ÊŞ");
-	set("gender", "ĞÛĞÔ");
+	set_name("ç°æ¯›æ¶ç‹¼", ({ "wolf", "big wolf" }) );
+	set("race", "é‡å…½");
+	set("gender", "é›„æ€§");
 	set("age", 20);
-	set("long", "ÕâÊÇÒ»Ö»Ğ×ÃÍÎŞ±ÈµÄ»ÒÉ«¶ñÀÇ\n");
+	set("long", "è¿™æ˜¯ä¸€åªå‡¶çŒ›æ— æ¯”çš„ç°è‰²æ¶ç‹¼\n");
 	
 	set("str", 48);
 	set("cor", 52);
@@ -17,13 +17,13 @@ void create()
 	set("max_gin", 600);
 	set("max_sen", 900);
 	set("attitude", "aggressive");
-	set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "áá½Å", "Î²°Í" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰è„š", "å¾Œè„š", "å°¾å·´" }) );
 	set("verbs", ({ "bite", "claw" }) );
 
 	set("chat_chance_combat", 1);
         set("chat_msg_combat", ({
-                "¶ñÀÇÏòÌì¿ñº¿¼¸Éù£®\n",
-                "¶ñÀÇÑÛÀïµÄÂÌ¹âÊ¹Äã²»º®¶ø²ü£®\n"
+                "æ¶ç‹¼å‘å¤©ç‹‚åšå‡ å£°ï¼\n",
+                "æ¶ç‹¼çœ¼é‡Œçš„ç»¿å…‰ä½¿ä½ ä¸å¯’è€Œé¢¤ï¼\n"
         }) );
 		set("combat_exp", 20000);
 		set("bellicosity", 3000 );

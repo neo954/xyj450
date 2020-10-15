@@ -4,20 +4,20 @@ inherit EQUIP;
 
 void create()
 {
-	set_name("ÃÉÃæÍ·ÕÖ", ({ "mask" }) );
+	set_name("è’™é¢å¤´ç½©", ({ "mask" }) );
 	set_weight(600);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
+		set("unit", "ä¸ª");
 		set("value", 600);
 		set("material", "cloth");
 		set("armor_type", "mask");
 		set("armor_prop/id", ({"maskman"}) );
-		set("armor_prop/name", ({"ÃÉÃæÈË"}) );
-		set("armor_prop/short", ({"ÃÉÃæÈË(maskman)"}) );
+		set("armor_prop/name", ({"è’™é¢äºº"}) );
+		set("armor_prop/short", ({"è’™é¢äºº(maskman)"}) );
 		set("armor_prop/long", ({
-			"Õâ¸öÈËÍ·ÉÏ´÷ÖøÃÉÃæÍ·ÕÖ£¬°Ë³É×¼±¸¸ÉÊ²Ã´»µÊÂ¡£\n"
+			"è¿™ä¸ªäººå¤´ä¸Šæˆ´è‘—è’™é¢å¤´ç½©ï¼Œå…«æˆå‡†å¤‡å¹²ä»€ä¹ˆåäº‹ã€‚\n"
 		}) );
 	}
 }

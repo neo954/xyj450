@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //puti.c
@@ -6,10 +6,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("ÇàÃæ¹í", ({"qingmian gui", "gui"}));
-       set("gender", "ÄĞĞÔ");
+       set_name("é’é¢é¬¼", ({"qingmian gui", "gui"}));
+       set("gender", "ç”·æ€§");
        set("age", 30);
-   set("long", "Ò»¸öÇàÃæ¹í£¬ÃæÄ¿ÕøÄü¿ÉÅÂ£®\n");
+   set("long", "ä¸€ä¸ªé’é¢é¬¼ï¼Œé¢ç›®ç‹°ç‹å¯æ€•ï¼\n");
        set("attitude", "heroism");
        set("shen_type", 1);
        set("per", 100);

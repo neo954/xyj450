@@ -3,17 +3,17 @@ string do_reply();
  
 void create()
 {
-        set_name("ÄªÐÀ·¼" , ({ "shinfun","fun","girl" }) );
-        set("gender", "Å®ÐÔ" );
+        set_name("èŽ«æ¬£èŠ³" , ({ "shinfun","fun","girl" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 27);
         set("long", @TEXT
-Ëý¹úÉ«ÌìÏã£¬½¿ÀöÎÞÂ×£»ÎÂÈáæµ¾²£¬Ðã¾øÈËå¾¡£
-Ëý×ËÈÝ¾øÃÀ£¬ÊÀËùº±¼û¡£´ÓËýÉíÅÔÄãÎÅµÀÒ»º®¹È
-ÓÄÏã¡£
+å¥¹å›½è‰²å¤©é¦™ï¼Œå¨‡ä¸½æ— ä¼¦ï¼›æ¸©æŸ”å¨´é™ï¼Œç§€ç»äººå¯°ã€‚
+å¥¹å§¿å®¹ç»ç¾Žï¼Œä¸–æ‰€ç½•è§ã€‚ä»Žå¥¹èº«æ—ä½ é—»é“ä¸€å¯’è°·
+å¹½é¦™ã€‚
 TEXT
 );
 	set("inquiry", ([
-		"ÎèÇúÆ×":
+		"èˆžæ›²è°±":
 		(: this_object(), "do_reply" :),
 	]) );
        set("class", "dancer");
@@ -30,7 +30,7 @@ TEXT
        set_temp("apply/armor", 70);
        set_temp("apply/attack", 50);
 
-        create_family("ÍíÔÂ×¯",2,"µÜ×Ó");
+        create_family("æ™šæœˆåº„",2,"å¼Ÿå­");
         setup();
         carry_object("/d/suburb/es/latemoon/obj/deer_boot")->wear();
         carry_object("/d/suburb/es/latemoon/obj/belt")->wear();
@@ -40,7 +40,7 @@ TEXT
 string do_reply()
 {
 	this_player()->set("mark/dance-book",1);
-	return("ÎèÇúÆ×°¡£¬Ê¦½ãËýÃÇÁ·Ï°Îè²½µÄÊ±ºò²ÅÓÃµÄ×Å£¬\n"+
-"ÄãÒ²ÏëÑ§Âð£¿ ÎûÎû...\n");
+	return("èˆžæ›²è°±å•Šï¼Œå¸ˆå§å¥¹ä»¬ç»ƒä¹ èˆžæ­¥çš„æ—¶å€™æ‰ç”¨çš„ç€ï¼Œ\n"+
+"ä½ ä¹Ÿæƒ³å­¦å—ï¼Ÿ å˜»å˜»...\n");
 }
 

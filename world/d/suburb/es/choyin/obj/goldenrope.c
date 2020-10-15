@@ -3,14 +3,14 @@ inherit ITEM;
 
 void create()
 {
-         set_name(HIW "¸¿ÏÉÉþ" NOR, ({ "golden rope","rope" }));
+         set_name(HIW "ç¼šä»™ç»³" NOR, ({ "golden rope","rope" }));
         set_weight(600);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ìõ");
+                set("unit", "æ¡");
                 set("long",@LONG
-ÕâÊÇÒ»ÌõÓÉÉÏµÈ½ðË¿±à³ÉµÄÉþË÷, ¿É¸¿(tie)ÇÝÊÞ¹í¹Ö¡£ÉÏ¿ÌÓÐÎÞÊýÖäÎÄ£¬·¢³öÒ«Ä¿½ð¹â.
+è¿™æ˜¯ä¸€æ¡ç”±ä¸Šç­‰é‡‘ä¸ç¼–æˆçš„ç»³ç´¢, å¯ç¼š(tie)ç¦½å…½é¬¼æ€ªã€‚ä¸Šåˆ»æœ‰æ— æ•°å’’æ–‡ï¼Œå‘å‡ºè€€ç›®é‡‘å…‰.
 LONG );
                 set("value", 1000);
                 set("no_drop", 1);
@@ -28,17 +28,17 @@ int do_tie(string arg)
     string name;
     name = (string)this_player()->query("name");
 
-    if( !arg ) return notify_fail("ÄãÒª¸¿ºÎÎï? \n");
+    if( !arg ) return notify_fail("ä½ è¦ç¼šä½•ç‰©? \n");
     {
         if ( arg == "crane" )
         
-            message_vision("$NË«ÊÖºÏÕÆ£¬Ëæ·ç¶øÆð£¬ÂäÓÚÏÉº×±³ÉÏ......\n",
+            message_vision("$NåŒæ‰‹åˆæŽŒï¼Œéšé£Žè€Œèµ·ï¼Œè½äºŽä»™é¹¤èƒŒä¸Š......\n",
             this_player() );
             this_player()->receive_damage("sen",50);
             tell_room(environment(this_player()),
-                "ÏÉº×µÄÉíÓ°·öÒ¡Ö±ÉÏ£¬ÏûÊ§ÓÚÔÆ¶Ë¡£\n",this_player() );
+                "ä»™é¹¤çš„èº«å½±æ‰¶æ‘‡ç›´ä¸Šï¼Œæ¶ˆå¤±äºŽäº‘ç«¯ã€‚\n",this_player() );
             tell_room("/d/suburb/es/choyin/platform",
-                 name+"µÄÉíÓ°³öÏÖÔÚÔÆÎíÖÐ¡£\n",this_player() );
+                 name+"çš„èº«å½±å‡ºçŽ°åœ¨äº‘é›¾ä¸­ã€‚\n",this_player() );
             this_player()->move("/d/suburb/es/choyin/platform");
          }
      return 1;

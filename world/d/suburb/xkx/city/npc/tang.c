@@ -1,4 +1,4 @@
-// tang.c ÌÆÀÏ°å 
+// tang.c å”è€æ¿ 
 
 inherit NPC;
 //inherit F_VENDOR;
@@ -6,15 +6,15 @@ inherit F_DEALER;
 
 void create()
 {
-	set_name("ÌÆéª", ({ "tang nan", "tang" }));
-	set("title", "µ±ÆÌÀÏ°å");
+	set_name("å”æ¥ ", ({ "tang nan", "tang" }));
+	set("title", "å½“é“ºè€æ¿");
 	set("shen_type", 0);
 
-	set("gender", "ÄĞĞÔ");
+	set("gender", "ç”·æ€§");
 	set_max_encumbrance(100000000);
 	set("age", 35);
 	set("long",
-		"¾İËµÌÆéªÊÇËÄ´¨ÌÆ¼ÒµÄºó´ú¡£\n");
+		"æ®è¯´å”æ¥ æ˜¯å››å·å”å®¶çš„åä»£ã€‚\n");
 	set("no_get_from", 1);
 
 	set_skill("unarmed", 60);
@@ -39,6 +39,6 @@ void init()
 
 void die()
 {
-	message_vision("\n$NËÀÁË¡£\n", this_object());
+	message_vision("\n$Næ­»äº†ã€‚\n", this_object());
 	destruct(this_object());
 }

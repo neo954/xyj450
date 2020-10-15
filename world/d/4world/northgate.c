@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // Room: /d/4world/northgate.c
@@ -6,12 +6,12 @@ inherit ROOM;
 
 void create ()
 {
-  set ("short", "������������");
+  set ("short", "傲来国北城门");
   set ("long", @LONG
 
-һ���ߴ�ĳ�ǽ������ǰ�ߣ����ϲ������سǵĹٱ��߹�������
-�����������˺ܶ࣬�������˷紾�ӣ��񸻶�֪�㣬����Ҳ����
-һ��ϲ������ľ�ɫ��
+一座高大的城墙耸立于前者，城上不断有守城的官兵走过。城中
+往往来来的人很多，傲来国人风淳朴，民富而知足，到处也都是
+一幅喜气洋洋的景色。
 LONG);
 
   set("light_up", 1);
@@ -37,7 +37,7 @@ int valid_leave(object me, string dir)
         if ((int)me->query("combat_exp") < 15000
    && (int)me->query("PKS") < 2 ) 
      return ::valid_leave(me, dir);
-   return notify_fail("��ʿ�����г���һ�ᣬ�ȵ���������ü���۵����ӣ���������\n");
+   return notify_fail("武士将手中长剑一横，喝道：看你贼眉鼠眼的样子，不许进！\n");
    }
 
 return 1;

@@ -2,13 +2,13 @@
 inherit HAMMER;
 void create()
 {
-        set_name("´óºÚÊ¯", ({ "blackstone" }) );
+        set_name("å¤§é»‘çŸ³", ({ "blackstone" }) );
         set_weight(800000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¿é");
-                set("long", "ÕâÊÇÒ»¿éÏàµ±³ÁµÄ´óºÚÊ¯\n");
+                set("unit", "å—");
+                set("long", "è¿™æ˜¯ä¸€å—ç›¸å½“æ²‰çš„å¤§é»‘çŸ³\n");
                 set("value", 3);
                 set("material", "iron");
         }

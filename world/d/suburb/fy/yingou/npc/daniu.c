@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-        set_name("大牛", ({ "daniu", "da" }) );
+        set_name("澶х墰", ({ "daniu", "da" }) );
         set("long",
-"这是个正在寻视银钩赌坊的保镖\n");
+"杩欐槸涓鍦ㄥ瑙嗛摱閽╄祵鍧婄殑淇濋晼\n");
         set("attitude", "heroism");
 
         set("str", 27);

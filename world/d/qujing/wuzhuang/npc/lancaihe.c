@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // lancaihe.c...weiqi, 98.02.24.
@@ -6,16 +6,16 @@
 inherit NPC;
 void create()
 {
-   set_name("À¶²ÉºÍ", ({"lan caihe", "lan", "caihe"}));
+   set_name("è“é‡‡å’Œ", ({"lan caihe", "lan", "caihe"}));
    //set("title", "");
-   set("gender", "ÄĞĞÔ" );
+   set("gender", "ç”·æ€§" );
    set("age", 18);
    set("per", 20);
-   set("long", "Ò»Î»ÃæÌóºÍÉÆµÄÉÙÄê¡£\n");
+   set("long", "ä¸€ä½é¢è…†å’Œå–„çš„å°‘å¹´ã€‚\n");
    set("class", "xian");
    set("combat_exp", 120000);
    set("attitude", "peaceful");
-   create_family("Îå×¯¹Û", 3, "µÜ×Ó");
+   create_family("äº”åº„è§‚", 3, "å¼Ÿå­");
    set_skill("unarmed", 60);
    set_skill("wuxing-quan", 60);
    set_skill("dodge", 80);
@@ -50,29 +50,29 @@ void create()
 
 void attempt_apprentice(object ob)
 {
-   if( (string)ob->query("family/family_name")=="Îå×¯¹Û" )
+   if( (string)ob->query("family/family_name")=="äº”åº„è§‚" )
    {
      if( (int)ob->query("family/generation") < 3  )
      {
-        if ( (string)ob->query("gender") == "ÄĞĞÔ" ) command("say Ê¦Êå¼ûĞ¦ÁË¡£\n");
-        else command("say Ê¦¹Ã¼ûĞ¦ÁË¡£\n");
+        if ( (string)ob->query("gender") == "ç”·æ€§" ) command("say å¸ˆå”è§ç¬‘äº†ã€‚\n");
+        else command("say å¸ˆå§‘è§ç¬‘äº†ã€‚\n");
      }
      else if( (int)ob->query("family/generation") ==3  )
      {
-        if ( (string)ob->query("gender") == "ÄĞĞÔ" ) command("say Ê¦ĞÖÌ«¿ÍÆøÁË¡£\n");
-        else command("say Ê¦ÃÃÌ«¿ÍÆøÁË¡£\n");
+        if ( (string)ob->query("gender") == "ç”·æ€§" ) command("say å¸ˆå…„å¤ªå®¢æ°”äº†ã€‚\n");
+        else command("say å¸ˆå¦¹å¤ªå®¢æ°”äº†ã€‚\n");
      }
      else 
      {
         command("consider");
-        command("say ÊÇÄã×Ô¼ºÒª°İµÄ£¬ÄãÊ¦¸¸´òÉÏÃÅÀ´ÎÒ¿ÉµÃÄÃÄãµ²¡£\n");
+        command("say æ˜¯ä½ è‡ªå·±è¦æ‹œçš„ï¼Œä½ å¸ˆçˆ¶æ‰“ä¸Šé—¨æ¥æˆ‘å¯å¾—æ‹¿ä½ æŒ¡ã€‚\n");
         command("recruit " + ob->query("id") );
      }
    }
 
    else
    {
-     command("say ºÃ£¬ÄÇÎÒ¾ÍÃãÎªÆäÄÑ°É¡£\n");
+     command("say å¥½ï¼Œé‚£æˆ‘å°±å‹‰ä¸ºå…¶éš¾å§ã€‚\n");
      command("recruit " + ob->query("id") );
    }
 

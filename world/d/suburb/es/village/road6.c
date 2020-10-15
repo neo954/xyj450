@@ -6,18 +6,18 @@ void roadgone();
 
 void create()
 {
-	set("short", "ÇàÊ¯Ğ¡Â·");
+	set("short", "é’çŸ³å°è·¯");
 	set("long", @LONG
-ÇàÊ¯Ğ¡Â·ÔÚÕâÀïµ½ÁË¾¡Í·£¬±»Ã¯ÃÜµÄÃ©²İ(grass)µ²×¡ÁËÈ¥Â·¡£Ò»Õó
-¶«·ç´µ¹ı£¬Æ®À´ÕóÕó»¨Ïã£¬ÄÏÃæÊÇÃæ»ıºÜ´óµÄºş²´£¬ºşÉÏµÄË®ÆûÓ³µÄÎ÷±ß
-µÄÈºÉ½¸ü¼ÓÓ°Ó°´Â´Â¡£
+é’çŸ³å°è·¯åœ¨è¿™é‡Œåˆ°äº†å°½å¤´ï¼Œè¢«èŒ‚å¯†çš„èŒ…è‰(grass)æŒ¡ä½äº†å»è·¯ã€‚ä¸€é˜µ
+ä¸œé£å¹è¿‡ï¼Œé£˜æ¥é˜µé˜µèŠ±é¦™ï¼Œå—é¢æ˜¯é¢ç§¯å¾ˆå¤§çš„æ¹–æ³Šï¼Œæ¹–ä¸Šçš„æ°´æ±½æ˜ çš„è¥¿è¾¹
+çš„ç¾¤å±±æ›´åŠ å½±å½±ç»°ç»°ã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 1 */
   "east" : __DIR__"road5",
 ]));
 	set("item_desc",([
-		"grass":"¸ß¸ßµÄÃ©²İ£¬¿ÉÒÔ²¦¿ª(pushaside)¡£\n",
+		"grass":"é«˜é«˜çš„èŒ…è‰ï¼Œå¯ä»¥æ‹¨å¼€(pushaside)ã€‚\n",
 	]) );
 	
 	set("no_clean_up", 0);
@@ -34,11 +34,11 @@ void init()
 int do_pushaside(string arg)
 {
 	if( !arg || arg=="" )
-		return notify_fail("ÄãÏë²¦¿ªÊ²Ã´£¿\n");
+		return notify_fail("ä½ æƒ³æ‹¨å¼€ä»€ä¹ˆï¼Ÿ\n");
 	if( arg!="grass" )
-		return notify_fail("Ã÷Ã÷Ö»ÓĞ²İ¿ÉÒÔ²¦¿ª¡£\n");
+		return notify_fail("æ˜æ˜åªæœ‰è‰å¯ä»¥æ‹¨å¼€ã€‚\n");
 	set("exits/west",__DIR__"valley2");
-	message_vision("$N²¦¿ªÃ©²İ£¬·¢ÏÖÁËÒ»ÌõÏòÎ÷µÄÂ·¡£\n",this_player() );
+	message_vision("$Næ‹¨å¼€èŒ…è‰ï¼Œå‘ç°äº†ä¸€æ¡å‘è¥¿çš„è·¯ã€‚\n",this_player() );
 	call_out("roadgone",5);
 	return 1;
 }
@@ -46,7 +46,7 @@ int do_pushaside(string arg)
 void roadgone()
 {
 	if( !query("exits/west") ) return;
-	message("vision","Ã©²İ»ÎÁË»Î£¬ÓÖÕÚ×¡ÁËÏòÎ÷µÄÂ·¡£\n",this_object() );
+	message("vision","èŒ…è‰æ™ƒäº†æ™ƒï¼Œåˆé®ä½äº†å‘è¥¿çš„è·¯ã€‚\n",this_object() );
 	delete("exits/west");
 }
 

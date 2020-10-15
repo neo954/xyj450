@@ -1,17 +1,17 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit NPC;
 
 void create()
 {
-        set_name("ºØÖªÕÂ", ({"he zhizhang", "he"}));
+        set_name("è´ºçŸ¥ç« ", ({"he zhizhang", "he"}));
         set("age", 52);
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
    set("int", 35);
         set("long",
-"ºØÖªÕÂÊÇ¹ú×Ó¼à´óÑ§Ê¿£¬Í³¹ÜÈ«¹úÎÄÈË¿¼ÊÔ¼°Éı¼¶¡£\n");
-   set("title", "¹ú×Ó¼à´óÑ§Ê¿");
+"è´ºçŸ¥ç« æ˜¯å›½å­ç›‘å¤§å­¦å£«ï¼Œç»Ÿç®¡å…¨å›½æ–‡äººè€ƒè¯•åŠå‡çº§ã€‚\n");
+   set("title", "å›½å­ç›‘å¤§å­¦å£«");
         set("attitude", "friendly");
    set("class", "scholar");
         set("combat_exp", 40000);

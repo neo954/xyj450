@@ -1,8 +1,8 @@
 inherit NPC;
 void create()
 {
-        set_name("Ôö³¤ÌìÍõ", ({ "tianwang","ÌìÍõ","Ôö³¤ÌìÍõ" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å¢é•¿å¤©ç‹", ({ "tianwang","å¤©ç‹","å¢é•¿å¤©ç‹" }) );
+        set("gender", "ç”·æ€§" );
         set("str", 26);
         set("combat_exp", 700000);
         set("attitude", "friendly");
@@ -34,7 +34,7 @@ int do_kill(string arg)
         me = this_player();
         if(arg == "master can" || arg == "master" || arg == "can")
         {
-        message_vision("²Î»ú´óÊ¦ËµµÀ£º°¢ÃÖÍÓ·ğ£¡Èç´ËÍ¿Ì¼ÉúÁé£¬ÈÃ·ğ×æÀ´³Í·£$N°É£¡£¡\n",me);
+        message_vision("å‚æœºå¤§å¸ˆè¯´é“ï¼šé˜¿å¼¥é™€ä½›ï¼å¦‚æ­¤æ¶‚ç¢³ç”Ÿçµï¼Œè®©ä½›ç¥–æ¥æƒ©ç½š$Nå§ï¼ï¼\n",me);
         call_out("getme",1,me);
         return 1;
         }

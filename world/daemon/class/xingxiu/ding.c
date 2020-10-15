@@ -1,16 +1,16 @@
-// ding.c ¶¡´ºÇï
+// ding.c ä¸æ˜¥ç§‹
 
 inherit NPC;
 inherit F_MASTER;
 
 void create()
 {
-	set_name("¶¡´ºÇï", ({ "ding chunqiu", "ding" }));
-	set("nickname", "ĞÇËŞÀÏ¹Ö");
+	set_name("ä¸æ˜¥ç§‹", ({ "ding chunqiu", "ding" }));
+	set("nickname", "æ˜Ÿå®¿è€æ€ª");
 	set("long", 
-		"Ëû¾ÍÊÇĞÇËŞÅÉ¿ªÉ½×æÊ¦¡¢ÁîÕıÅÉÈËÊ¿Éî¶ñÍ´¾øµÄĞÇËŞÀÏ¹Ö¶¡´ºÇï¡£\n"
-		"¿ÉÊÇËû¿´ÆğÀ´ĞÎÃ²ÇåÆæ£¬ÏÉ·çµÀ¹Ç¡£\n");
-	set("gender", "ÄĞĞÔ");
+		"ä»–å°±æ˜¯æ˜Ÿå®¿æ´¾å¼€å±±ç¥–å¸ˆã€ä»¤æ­£æ´¾äººå£«æ·±æ¶ç—›ç»çš„æ˜Ÿå®¿è€æ€ªä¸æ˜¥ç§‹ã€‚\n"
+		"å¯æ˜¯ä»–çœ‹èµ·æ¥å½¢è²Œæ¸…å¥‡ï¼Œä»™é£é“éª¨ã€‚\n");
+	set("gender", "ç”·æ€§");
 	set("age", 60);
 	set("attitude", "friendly");
 	set("shen_type", -1);
@@ -44,7 +44,7 @@ void create()
 	map_skill("parry", "tianshan-zhang");
 	map_skill("sword", "tianshan-zhang");
 
-	create_family("ĞÇËŞÅÉ", 1, "¿ªÉ½×æÊ¦");
+	create_family("æ˜Ÿå®¿æ´¾", 1, "å¼€å±±ç¥–å¸ˆ");
 	set("class", "taoist");
 
 	setup();
@@ -60,16 +60,16 @@ void attempt_apprentice(object me)
 {
 /*
         if ((int)me->query("sen") > -100) {
-                command("say ÀÏÏÉÔ½¿´ÄãÔ½Ïó°×µÀÅÉÀ´ÎÔµ×µÄ¡£");
+                command("say è€ä»™è¶Šçœ‹ä½ è¶Šè±¡ç™½é“æ´¾æ¥å§åº•çš„ã€‚");
                 return;
         }
 */
         if( me->query_temp("pending/flatter") ) {
-                command("say ÄãÈç´Ë²»°ÑÀÏÏÉ·ÅÔÚÑÛÀï£¬ÀÏÏÉÔõ»áÊÕÄã£¿");
+                command("say ä½ å¦‚æ­¤ä¸æŠŠè€ä»™æ”¾åœ¨çœ¼é‡Œï¼Œè€ä»™æ€ä¼šæ”¶ä½ ï¼Ÿ");
                 return;
         } else {
-                command("say ÎÒĞÇËŞÀÏÏÉ±ÈÆğ¹ÅÍù½ñÀ´µÄÊ¥ÈËÔõÃ´Ñù°¡£¿");
-                message_vision("ĞÇËŞÀÏ¹ÖÎ¢±ÕË«ÑÛ£¬ÊÖÄí³¤Ğë£¬Ò»¸¶µÈÈËÅÄÂí(flatter)µÄÑù×Ó¡£\n",
+                command("say æˆ‘æ˜Ÿå®¿è€ä»™æ¯”èµ·å¤å¾€ä»Šæ¥çš„åœ£äººæ€ä¹ˆæ ·å•Šï¼Ÿ");
+                message_vision("æ˜Ÿå®¿è€æ€ªå¾®é—­åŒçœ¼ï¼Œæ‰‹æ»é•¿é¡»ï¼Œä¸€ä»˜ç­‰äººæ‹é©¬(flatter)çš„æ ·å­ã€‚\n",
                 this_player());
                 me->set_temp("pending/flatter", 1);
         }
@@ -79,16 +79,16 @@ int do_flatter(string arg)
 {
         if( !this_player()->query_temp("pending/flatter") )
                 return 0;
-        if( !arg ) return notify_fail("ÄãËµÀÏÏÉÊ²Ã´£¿\n");
+        if( !arg ) return notify_fail("ä½ è¯´è€ä»™ä»€ä¹ˆï¼Ÿ\n");
         this_player()->set_temp("pending/flatter", 0);
-        message_vision("$N´óÉùËµµÀ£º" + arg + "\n", this_player());
-        if( strsrch(arg, "ĞÇËŞÀÏÏÉ") >=0 && (strsrch(arg, "µÂÅäÌìµØ") >=0
-         || strsrch(arg, "ÍşÕğå¾Óî") >=0 || strsrch(arg, "¹Å½ñÎŞ±È") >=0 )) {
+        message_vision("$Nå¤§å£°è¯´é“ï¼š" + arg + "\n", this_player());
+        if( strsrch(arg, "æ˜Ÿå®¿è€ä»™") >=0 && (strsrch(arg, "å¾·é…å¤©åœ°") >=0
+         || strsrch(arg, "å¨éœ‡å¯°å®‡") >=0 || strsrch(arg, "å¤ä»Šæ— æ¯”") >=0 )) {
                 command("smile");
-                command("say Õâ»¹²î²»¶à¡£\n");
+                command("say è¿™è¿˜å·®ä¸å¤šã€‚\n");
                 command("recruit " + this_player()->query("id"));
         } else {
-                command("say ÄãÈç´Ë²»°ÑÀÏÏÉ·ÅÔÚÑÛÀï£¬ÀÏÏÉÔõ»áÊÕÄã£¿");
+                command("say ä½ å¦‚æ­¤ä¸æŠŠè€ä»™æ”¾åœ¨çœ¼é‡Œï¼Œè€ä»™æ€ä¼šæ”¶ä½ ï¼Ÿ");
         }
         return 1;
 }
@@ -99,4 +99,4 @@ int recruit_apprentice(object ob)
                 add("apprentice_available", -1);
 }
 
-// ĞÇËŞÀÏÏÉ£¬µÂÅäÌìµØ£¬ÍşÕğå¾Óî£¬¹Å½ñÎŞ±È
+// æ˜Ÿå®¿è€ä»™ï¼Œå¾·é…å¤©åœ°ï¼Œå¨éœ‡å¯°å®‡ï¼Œå¤ä»Šæ— æ¯”

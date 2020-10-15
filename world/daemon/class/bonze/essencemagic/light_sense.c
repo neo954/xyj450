@@ -11,15 +11,15 @@ int conjure(object me, object target)
 	lvl = (int) me->query_skill("magic");
 	lvl += (int) me->query("spi");
 	if( me->query("atman") < 100 )
-		return notify_fail("ÄãµÄÁéÁ¦²»¹»£¡\n");
+		return notify_fail("ä½ çš„çµåŠ›ä¸å¤Ÿï¼\n");
         if( me->query("gin") <= 50 )
-                return notify_fail("ÄãµÄ¾«²»¹»£¡\n");
+                return notify_fail("ä½ çš„ç²¾ä¸å¤Ÿï¼\n");
 	me->add("atman", -100);
 	me->receive_damage("gin", 50);
-	message_vision(HIW "$NÌÚ¿Õ·ÉÆğ£¬±©ºÈÒ»Éù£®£®£®\n" NOR, me);
+	message_vision(HIW "$Nè…¾ç©ºé£èµ·ï¼Œæš´å–ä¸€å£°ï¼ï¼ï¼\n" NOR, me);
         if ( lvl <= random(400) )
-                return notify_fail("ÄãÒò·¨Êõ²»¹»¸ß¶øÊ§°ÜÁË£¡\n");
-        message_vision(HIR "£®£®£®$NÈ«Éí·¢³ö³ãÈÈµÄÑªºì¹âÃ¢£¡£¡£¡\n" NOR, me);
+                return notify_fail("ä½ å› æ³•æœ¯ä¸å¤Ÿé«˜è€Œå¤±è´¥äº†ï¼\n");
+        message_vision(HIR "ï¼ï¼ï¼$Nå…¨èº«å‘å‡ºç‚½çƒ­çš„è¡€çº¢å…‰èŠ’ï¼ï¼ï¼\n" NOR, me);
         env = environment(me);
         inv = all_inventory(env);
         for(i=0; i<sizeof(inv); i++) {
@@ -37,15 +37,15 @@ int bbqthem(object me, object obj)
 {
 	int magic;
 	magic = (int) me->query_skill("magic")/2;	
-        message_vision(HIR "\n³ãÈÈµÄºì¹âÏóÀû½£°ãÉäÏò$N£¬\n" NOR, obj);
+        message_vision(HIR "\nç‚½çƒ­çš„çº¢å…‰è±¡åˆ©å‰‘èˆ¬å°„å‘$Nï¼Œ\n" NOR, obj);
         obj->receive_damage("sen", 0, me);
         if(obj->is_ghost()==1) {
-                message_vision(YEL "$N²Ò½ĞÁËÒ»Éù£¬»¯ÎªÁË»Ò½ı£¡\n" NOR, obj);
+                message_vision(YEL "$Næƒ¨å«äº†ä¸€å£°ï¼ŒåŒ–ä¸ºäº†ç°çƒ¬ï¼\n" NOR, obj);
                 obj->die();
                 return 1;
         }
         if(obj->is_zombie()==1) {
-                message_vision(YEL "$N²Ò½ĞÁËÒ»Éù£¬»¯ÎªÁËÒ»Ì²ÑªË®£¡\n" NOR, obj);
+                message_vision(YEL "$Næƒ¨å«äº†ä¸€å£°ï¼ŒåŒ–ä¸ºäº†ä¸€æ»©è¡€æ°´ï¼\n" NOR, obj);
                 obj->die();
                 return 1;
         }

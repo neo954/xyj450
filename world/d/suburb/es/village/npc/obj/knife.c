@@ -6,13 +6,13 @@ inherit BLADE;
 
 void create()
 {
-    set_name("²Ëµ¶", ({ "kitchen knife", "knife" }) );
+    set_name("èœåˆ€", ({ "kitchen knife", "knife" }) );
     set_weight(2000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-        set("long","Ò»°Ñ¾É¾ÉµÄ²Ëµ¶, µ¶¿Ú¼¸ºõ±»Ä¥Æ½ÁË, ²»¹ı»¹ÆÄ¾ßÓĞÉ±ÉËÁ¦.\n");
-        set("unit", "°Ñ");
+        set("long","ä¸€æŠŠæ—§æ—§çš„èœåˆ€, åˆ€å£å‡ ä¹è¢«ç£¨å¹³äº†, ä¸è¿‡è¿˜é¢‡å…·æœ‰æ€ä¼¤åŠ›.\n");
+        set("unit", "æŠŠ");
 		set("material", "iron");
 	}
     init_blade(7);

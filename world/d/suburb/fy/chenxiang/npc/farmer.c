@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("Å©·ò", ({ "farmer" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("å†œå¤«", ({ "farmer" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 33);
-	set("long", "Ò»Î»ÒÔ¸ûÖÖË®µ¾ÎªÉúµÄÅ©·ò£¬ÍÏ×Å³ÁÖØµÄ²½·¥£¬´ø×ÅÂúÉíµÄº¹Ë®´ÓÌïÖĞ»ØÀ´¡£\n");
+	set("long", "ä¸€ä½ä»¥è€•ç§æ°´ç¨»ä¸ºç”Ÿçš„å†œå¤«ï¼Œæ‹–ç€æ²‰é‡çš„æ­¥ä¼ï¼Œå¸¦ç€æ»¡èº«çš„æ±—æ°´ä»ç”°ä¸­å›æ¥ã€‚\n");
 	set("combat_exp", 20);
 	set("attitude", "friendly");
         set("chat_chance", 10);

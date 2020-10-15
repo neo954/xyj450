@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //puti.c
@@ -7,9 +7,9 @@ inherit F_MASTER;
 
 void create()
 {
-  set_name("ÇØ¹ãÍõ", ({"qinguang wang", "wang", "qinguang"}));
-  set("title", "Òõ¼äÊ®ÍõÖ®");
-  set("gender", "ÄĞĞÔ");
+  set_name("ç§¦å¹¿ç‹", ({"qinguang wang", "wang", "qinguang"}));
+  set("title", "é˜´é—´åç‹ä¹‹");
+  set("gender", "ç”·æ€§");
   set("age", 60);
   set("class", "youling");
   set("attitude", "friendly");
@@ -38,7 +38,7 @@ void create()
   map_skill("unarmed", "jinghun-zhang");
   map_skill("force", "tonsillit");
   map_skill("spells", "gouhunshu");
-  create_family("ÑÖÂŞµØ¸®", 2, "ÄãºÃ");
+  create_family("é˜ç½—åœ°åºœ", 2, "ä½ å¥½");
   setup();
   
   carry_object("/d/obj/cloth/mangpao")->wear();
@@ -48,12 +48,12 @@ void create()
 void attempt_apprentice(object ob, object me)
 {
   if (((int)ob->query("combat_exp") < 50000 )) {
-    command("say " + RANK_D->query_rude(ob) + "¹¦µ×Èç´ËÖ®²î£¬²»Åä×öÎÒÍ½µÜ£¡");
+    command("say " + RANK_D->query_rude(ob) + "åŠŸåº•å¦‚æ­¤ä¹‹å·®ï¼Œä¸é…åšæˆ‘å¾’å¼Ÿï¼");
     return;
   }
   command("haha");
-  command("say ºÜºÃ£¬" + RANK_D->query_respect(ob) +
-     "¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓĞ³É¡£\n");
+  command("say å¾ˆå¥½ï¼Œ" + RANK_D->query_respect(ob) +
+     "å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
   command("recruit " + ob->query("id") );
   return;
 }

@@ -4,11 +4,11 @@ inherit F_VENDOR;
 #include <ansi.h>
 void create()
 {
-	set_name("Ñ¦ÍÓ×Ó", ({ "xue" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("è–›é™€å­", ({ "xue" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 69);
 	set("long",
-		"ÕâÎ»ÍÓ×ÓÕıÓÃ°×¶àºÚÉÙµÄË«ÑÛ¶¢×ÅÄã\n");
+		"è¿™ä½é™€å­æ­£ç”¨ç™½å¤šé»‘å°‘çš„åŒçœ¼ç›¯ç€ä½ \n");
 	set("combat_exp", 500000);
 	set("attitude", "friendly");
 	set("per",30);
@@ -43,14 +43,14 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(10) ) {
 		case 0:
-message_vision("$NÓÃ°×¶àºÚÉÙµÄÑÛ¾¦¶¢ÁË$nÒ»ÑÛ£®\n",this_object(),ob);
+message_vision("$Nç”¨ç™½å¤šé»‘å°‘çš„çœ¼ç›ç›¯äº†$nä¸€çœ¼ï¼\n",this_object(),ob);
 			break;
 		case 1:
-message_vision("$N´·ÁË´·×Ô¼ºµÄÍÓ±³ËµµÀ£ºÕâÎ»"+RANK_D->query_respect(ob)+
-"ÒªÂòÊ²Ã´£¿\n",this_object(),ob);
+message_vision("$Næ¶äº†æ¶è‡ªå·±çš„é™€èƒŒè¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(ob)+
+"è¦ä¹°ä»€ä¹ˆï¼Ÿ\n",this_object(),ob);
 			break;
 		case 2:
-message_vision("$NºßµÀ£ºÂò°ü×Ó»¹ÊÇÂò£®£®£®£¿\n",this_object());
+message_vision("$Nå“¼é“ï¼šä¹°åŒ…å­è¿˜æ˜¯ä¹°ï¼ï¼ï¼ï¼Ÿ\n",this_object());
 	}
 }
 int accept_object(object who, object ob)
@@ -68,8 +68,8 @@ int accept_object(object who, object ob)
 	paper->move(who);
 		    }
         }
-        say( "Ñ¦ÍÓ×ÓËµµÀ£º¶àĞ»ÕâÎ»" + RANK_D->query_respect(who)
-                + "¿ÉÁ¯ÎÒÕâÃ»ÓÃµÄÇîÀÏÈË£®\n");
+        say( "è–›é™€å­è¯´é“ï¼šå¤šè°¢è¿™ä½" + RANK_D->query_respect(who)
+                + "å¯æ€œæˆ‘è¿™æ²¡ç”¨çš„ç©·è€äººï¼\n");
 
         return 1;
 }

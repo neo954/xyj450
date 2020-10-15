@@ -6,11 +6,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("�سǹٱ�", ({ "town guard", "guard" }) );
+	set_name("守城官兵", ({ "town guard", "guard" }) );
 	set("long",
-		"���Ǹ���������վ�ڵ��سǹٱ�����Ȼ����\������������������ٱ�\n"
-		"�ǵ��书\ʵ��ϡ��ƽ������������������֯���м��ɵ�սʿ��˭Ҳ��\n"
-		"���׵��������ǡ�\n");
+		"这是个正在这里站岗的守城官兵，虽然和许\多武林人物比起来，官兵\n"
+		"们的武功\实在稀松平常，但是他们是有组织、有纪律的战士，谁也不\n"
+		"轻易地招惹他们。\n");
 
 	set("attitude", "peaceful");
 	set("vendetta_mark", "authority");
@@ -23,8 +23,8 @@ void create()
 
 	set("chat_chance_combat", 15);
 	set("chat_msg_combat", ({
-		"�سǹٱ��ȵ�������������������־͸���\n",
-		"�سǹٱ��ȵ����󵨵��񣡾���ɱ���췴��\n"
+		"守城官兵喝道：还不快放下武器束手就缚？\n",
+		"守城官兵喝道：大胆刁民！竟敢杀官造反？\n"
 	}) );
 
 	set_skill("unarmed", 70);

@@ -10,16 +10,16 @@ void create() { seteuid(getuid()); }
 
 int scribe(object me, object sheet, string arg)
 { object env;
-        if( me->is_fighting() ) return notify_fail("ÄãÕýÔÚÕ½¶·ÖÐ£¡\n");
+        if( me->is_fighting() ) return notify_fail("ä½ æ­£åœ¨æˆ˜æ–—ä¸­ï¼\n");
         
         if( (int)me->query("mana") < 50 ) return 
-notify_fail("ÄãµÄ·¨Á¦²»¹»ÁË£¡\n");
+notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿäº†ï¼\n");
         if( (int)me->query("sen") < 10 ) return 
-notify_fail("ÄãµÄ¾«Éñ²»¹»¼¯ÖÐ£¡\n");
+notify_fail("ä½ çš„ç²¾ç¥žä¸å¤Ÿé›†ä¸­ï¼\n");
         destruct(sheet);
 sheet=new("/obj/sbaa/seal2.c");
             sheet->move(me);
-                    sheet->set_name(YEL "½©Ê¬×·»ê·û" NOR, ({ "earth-warp sheet", 
+                    sheet->set_name(YEL "åƒµå°¸è¿½é­‚ç¬¦" NOR, ({ "earth-warp sheet", 
 "sheet"}) );   
    
         me->add("mana", -50);

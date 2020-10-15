@@ -4,9 +4,9 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "荒野小径");
+	set("short", "鑽掗噹灏忓緞");
 	set("long", @LONG
-荒野中的小路,依稀可变,蜿蜒曲折,不知通向何方.
+鑽掗噹涓殑灏忚矾,渚濈█鍙彉,铚胯湌鏇叉姌,涓嶇煡閫氬悜浣曟柟.
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */

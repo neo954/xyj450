@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // invocation.c
@@ -10,21 +10,21 @@ int cast(object me, object target)
    object soldier;
 
    if( !me->is_fighting() )
-     return notify_fail("ֻ��ս���в����ٻ��콫��\n");
+     return notify_fail("只有战斗中才能召唤天将！\n");
    
    if( (int)me->query("mana") < 100 )
-     return notify_fail("��ķ��������ˣ�\n");
+     return notify_fail("你的法力不够了！\n");
 
    if( (int)me->query("sen") < 60 )
-     return notify_fail("��ľ����޷����У�\n");
+     return notify_fail("你的精神无法集中！\n");
 
-   message_vision("$N�૵����˼������\n", me);
+   message_vision("$N喃喃地念了几句咒语。\n", me);
 
    me->add("mana", -100);
    me->receive_damage("sen", 60);
 
    if( random(me->query("max_mana")) < 200 ) {
-     message("vision", "����ʲ��Ҳû�з�����\n", environment(me));
+     message("vision", "但是什麽也没有发生。\n", environment(me));
      return 1;
    }
 

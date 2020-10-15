@@ -3,12 +3,12 @@ inherit NPC;
 
 void create()
 {
-        set_name("蛐蛐", ({ "insect" }) );
-        set("race", "野兽");
+        set_name("铔愯洂", ({ "insect" }) );
+        set("race", "閲庡吔");
         set("age", 1);
-        set("long", "一只方头方脑的大蛐蛐\n");
+        set("long", "涓�鍙柟澶存柟鑴戠殑澶ц洂铔怽n");
 
-        set("limbs", ({ "头部", "身体", "尾巴" }) );
+        set("limbs", ({ "澶撮儴", "韬綋", "灏惧反" }) );
         set("verbs", ({ "bite" }) );
 
         set_skill("dodge", 150);

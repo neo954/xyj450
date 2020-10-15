@@ -6,17 +6,17 @@ inherit SWORD;
 
 void create()
 {
-	set_name("½¹éä½£", ({ "sword of sorrowfire", "sword", "sorrowfire" }) );
+	set_name("ç„¦æ®‡å‰‘", ({ "sword of sorrowfire", "sword", "sorrowfire" }) );
 	set_weight(15000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
-		set("long", "Ò»°ÑÍ¨Ìå÷îºÚ£¬ÓÖ´øÖøÒ»Ë¿½¹Î¶µÄÌú½£¡£\n");
+		set("unit", "æŠŠ");
+		set("long", "ä¸€æŠŠé€šä½“é»é»‘ï¼Œåˆå¸¦è‘—ä¸€ä¸ç„¦å‘³çš„é“å‰‘ã€‚\n");
 		set("value", 7800);
 		set("material", "iron");
-		set("wield_msg", "$NÄÃ³öÒ»°Ñ÷îºÚµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unwield_msg", "$N·ÅÏÂÊÖÖĞµÄ$n¡£\n");
+		set("wield_msg", "$Næ‹¿å‡ºä¸€æŠŠé»é»‘çš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unwield_msg", "$Næ”¾ä¸‹æ‰‹ä¸­çš„$nã€‚\n");
 	}
 
 	init_sword(74);

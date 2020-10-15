@@ -1,15 +1,15 @@
-// sanqingdian.c �����
+// sanqingdian.c 三清殿
 // by Xiang
 
 inherit ROOM;
 
 void create()
 {
-	set("short", "�����");
+	set("short", "三清殿");
 	set("long", @LONG
-	���������������������䵱�ɻ�͵ĵص㡣����Ԫʼ����̫�ϵ�
-���������Ͼ��������㰸���������ơ���ǽ���ż���̫ʦ�Σ����Ϸ��ż�����
-�š��������������ȣ��ϱ�������Ĺ㳡�������Ǻ�Ժ��
+	这里是凌霄宫的三清殿，是武当派会客的地点。供着元始天尊、太上道
+君和天上老君的神像，香案上香烟缭绕。靠墙放着几张太师椅，地上放着几个蒲
+团。东西两侧是走廊，南边是练武的广场，北边是后院。
 LONG
 	);
 	set("valid_startroom", 1);

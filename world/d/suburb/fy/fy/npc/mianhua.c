@@ -7,11 +7,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÀÏ°åÄï", ({ "boss" }) );
-	set("gender", "Å®ĞÔ" );
+	set_name("è€æ¿å¨˜", ({ "boss" }) );
+	set("gender", "å¥³æ€§" );
 	set("age", 52);
 	set("long",
-		"ÀÏ°åÄïÉÆ³¤²¹ÒÂ·ş£¬²¹³öÀ´µÄÒÂ·şÓÖÀÎ¹Ì¶øÇÒ²»ÄÑ¿´¡£\n");
+		"è€æ¿å¨˜å–„é•¿è¡¥è¡£æœï¼Œè¡¥å‡ºæ¥çš„è¡£æœåˆç‰¢å›ºè€Œä¸”ä¸éš¾çœ‹ã€‚\n");
 	set("combat_exp", 50);
 	set("str",200);
 	set("attitude", "friendly");
@@ -37,12 +37,12 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(5) ) {
 		case 0:
-			say( "ÀÏ°åÄïĞ¦µÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-				+ "£¬ÄãµÄÒÂÉÀ¿´ÆğÀ´ºÃÏóÒª²¹Ò»ÏÂÁË¡£\n");
+			say( "è€æ¿å¨˜ç¬‘é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+				+ "ï¼Œä½ çš„è¡£è¡«çœ‹èµ·æ¥å¥½è±¡è¦è¡¥ä¸€ä¸‹äº†ã€‚\n");
 			break;
 		case 1:
-			say( "ÀÏ°åÄïËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-				+ "£¬ÄãµÄÒÂÉÀ¶¼±»ÈË¿³ÆÆÁË£¬À´²¹Ò»ÏÂ°É¡£\n");
+			say( "è€æ¿å¨˜è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+				+ "ï¼Œä½ çš„è¡£è¡«éƒ½è¢«äººç ç ´äº†ï¼Œæ¥è¡¥ä¸€ä¸‹å§ã€‚\n");
 			break;
 	}
 }
@@ -57,19 +57,19 @@ int  do_bu(string arg)
 	string file,newfile,filestring;
 	me = this_player();
 	id = me->query("id");
-        if( !arg ) return notify_fail("ÄãÒª²¹Ê²÷áÒÂÎï£¿\n");
+        if( !arg ) return notify_fail("ä½ è¦è¡¥ä»€éº½è¡£ç‰©ï¼Ÿ\n");
         gold = present("gold_money", this_player());
-        if( !gold) return notify_fail("ÄãÉíÉÏÃ»ÓĞ½ğ×Ó¡£\n");
+        if( !gold) return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰é‡‘å­ã€‚\n");
         if( !objectp(ob = present(arg, me)) )
-        return notify_fail("ÄãÉíÉÏÃ»ÓĞÕâÑù¶«Î÷¡£\n");
+        return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰è¿™æ ·ä¸œè¥¿ã€‚\n");
         if(me->is_busy())
-        return notify_fail("ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É¡£\n");
+        return notify_fail("ä½ ä¸Šä¸€ä¸ªåŠ¨ä½œè¿˜æ²¡æœ‰å®Œæˆã€‚\n");
         if( !ob->query("armor_prop") )
-        return notify_fail("ÄãÖ»ÄÜ²¹´©ÔÚÉíÉÏµÄ¶«Î÷¡£\n");
+        return notify_fail("ä½ åªèƒ½è¡¥ç©¿åœ¨èº«ä¸Šçš„ä¸œè¥¿ã€‚\n");
         if( ob->query("equipped") )
-        return notify_fail("Äã²»¿É²¹Õı´©×ÅµÄÒÂÎï¡£\n");
+        return notify_fail("ä½ ä¸å¯è¡¥æ­£ç©¿ç€çš„è¡£ç‰©ã€‚\n");
         if( !ob->query("owner") )
-        return notify_fail("ÄãÖ»¿É²¹×Ô¼º¶©µÄÒÂÎï¡£\n");
+        return notify_fail("ä½ åªå¯è¡¥è‡ªå·±è®¢çš„è¡£ç‰©ã€‚\n");
 	base= 10;
 	current = (int) ob->query("armor_prop/armor");
         for(j=1;j<=100;j++)
@@ -80,7 +80,7 @@ int  do_bu(string arg)
 	for(i=1; i<= j;i++)
 			cost = cost * 2;
         if((int) gold->query_amount() < cost)
-        return notify_fail("ÄãÉíÉÏÃ»´ø¹»" + sprintf("%d",cost)+ "Á½½ğ×Ó¡£\n");
+        return notify_fail("ä½ èº«ä¸Šæ²¡å¸¦å¤Ÿ" + sprintf("%d",cost)+ "ä¸¤é‡‘å­ã€‚\n");
         gold->add_amount(-cost);
         me->start_busy(1);
 	file = base_name(ob) + ".c";
@@ -97,6 +97,6 @@ int  do_bu(string arg)
 	ob = new(newfile);
 	name = ob->query("name");
 	if(ob->move(me))	
-	message_vision(sprintf("$NÅÄÁËÅÄ%s£¬ËµµÀ£ººÃÁË£¡\n",name),this_object());
+	message_vision(sprintf("$Næ‹äº†æ‹%sï¼Œè¯´é“ï¼šå¥½äº†ï¼\n",name),this_object());
 	return 1;
 }

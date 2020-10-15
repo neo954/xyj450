@@ -1,15 +1,15 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit NPC;
 
 void create()
 {
-        set_name("Ğ¡±ø", ({ "bing" }));
+        set_name("å°å…µ", ({ "bing" }));
         set("age", 22);
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("long",
-"ÕâĞ©±øÊ¿¶¼ÊÇÇØÊå±¦£¬³ÌÒ§½ğµÈ´Ó²¿ÏÂÖĞÌô³öÀ´µÄ¾«Èñ¡£\n");
+"è¿™äº›å…µå£«éƒ½æ˜¯ç§¦å”å®ï¼Œç¨‹å’¬é‡‘ç­‰ä»éƒ¨ä¸‹ä¸­æŒ‘å‡ºæ¥çš„ç²¾é”ã€‚\n");
         set("attitude", "peaceful");
 
         set("combat_exp", 10000);
@@ -38,7 +38,7 @@ void init()
 
 int accept_fight(object me)
 {
-        command("say Äã»îµÃ²»ÄÍ·³ÁË£¿\n");
+        command("say ä½ æ´»å¾—ä¸è€çƒ¦äº†ï¼Ÿ\n");
         me->apply_condition("killer", 100);
         kill_ob(me);
         return 1;

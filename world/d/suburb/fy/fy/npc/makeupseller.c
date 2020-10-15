@@ -4,12 +4,12 @@ inherit F_VENDOR;
 #include <ansi.h>
 void create()
 {
-	set_name("·¼¶ù", ({ "fang" }) );
-	set("gender", "Å®ÐÔ" );
+	set_name("èŠ³å„¿", ({ "fang" }) );
+	set("gender", "å¥³æ€§" );
 	set("age", 29);
-	set("title", HIY "Ç§"+ HIR "Ãæ" + HIM "Äï" + HIC"×Ó" NOR);
+	set("title", HIY "åƒ"+ HIR "é¢" + HIM "å¨˜" + HIC"å­" NOR);
 	set("long",
-		"ÕâÎ»ÄêÇá·çÉ§µÄÀÏ°åÕý¶ÔÄã¿ñÅ×ÃÄÑÛ¶ù¡£\n");
+		"è¿™ä½å¹´è½»é£Žéªšçš„è€æ¿æ­£å¯¹ä½ ç‹‚æŠ›åªšçœ¼å„¿ã€‚\n");
 	set("combat_exp", 50000);
 	set("attitude", "friendly");
 	set("per",30);
@@ -42,14 +42,14 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(5) ) {
 		case 0:
-message_vision("$NÐ¦×ÅËµµÀ£ºÕâ¶ùÊ²Ã´¶¼ÓÐ£¬ÂòÐ©»ØÈ¥¸øÄãµÄÐÄÉÏÈË°É¡£\n",this_object(),ob);
+message_vision("$Nç¬‘ç€è¯´é“ï¼šè¿™å„¿ä»€ä¹ˆéƒ½æœ‰ï¼Œä¹°äº›å›žåŽ»ç»™ä½ çš„å¿ƒä¸Šäººå§ã€‚\n",this_object(),ob);
 			break;
 		case 1:
-message_vision("$NÐ¦ßäßäµØËµµÀ£ºÕâÎ»"+RANK_D->query_respect(ob)+
-"ÒªÂòÊ²Ã´£¿\n",this_object(),ob);
+message_vision("$Nç¬‘å’ªå’ªåœ°è¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(ob)+
+"è¦ä¹°ä»€ä¹ˆï¼Ÿ\n",this_object(),ob);
 			break;
 		case 2:
-message_vision("$NÓÃÒ»ÖÖÆæÒìµÄÑÛÉñÍû×Å$n¡£\n",this_object(),ob);
+message_vision("$Nç”¨ä¸€ç§å¥‡å¼‚çš„çœ¼ç¥žæœ›ç€$nã€‚\n",this_object(),ob);
 	}
 }
 
@@ -61,21 +61,21 @@ int accept_object(object who, object ob)
 	string gender, name, id;
 	string newfile;
 	tmpname = "/open/tempmask"+sprintf("%d",time());
-	message_vision("$N¶Ô×Å$n±íÇé½©Ó²µÄÐ¦ÁËÐ¦£®£®£®\n",this_object(),who);
+	message_vision("$Nå¯¹ç€$nè¡¨æƒ…åƒµç¡¬çš„ç¬‘äº†ç¬‘ï¼Žï¼Žï¼Ž\n",this_object(),who);
 	gender = (string)ob->query("targetgender");
 	name = (string)ob->query("targetname");
 	id = (string)ob->query("targetid");
 	if( !stringp(id) ) return 0;
 	if( !stringp(gender)) return 0;
 	if( !stringp(name) ) return 0;
-	if ((string)gender != "ÄÐÐÔ" && (string)gender != "Å®ÐÔ")
+	if ((string)gender != "ç”·æ€§" && (string)gender != "å¥³æ€§")
 		return 0;
 	id = capitalize(id);
 	newfile = read_file(__DIR__"obj/orig_mask.c");
 	if( !newfile) return 0;
-	newfile = replace_string( newfile, "ÄÐÐÔ", gender);
+	newfile = replace_string( newfile, "ç”·æ€§", gender);
 	newfile = replace_string( newfile, "maskman", id);
-	newfile = replace_string( newfile, "ÃÉÃæÈË", name);
+	newfile = replace_string( newfile, "è’™é¢äºº", name);
 	if( !newfile) return 0;
 	tmpname = tmpname + who->query("id") + ".c";
 	if( !write_file(tmpname, newfile, 1))
@@ -88,7 +88,7 @@ int accept_object(object who, object ob)
 		}
 	if( !newmask) return 0;
 	newmask->move(who);
-	message_vision("$NÇÄÇÄµÄÈû¸ø$nÒ»Ñù¶«Î÷¡£\n",this_object(), who);
+	message_vision("$Næ‚„æ‚„çš„å¡žç»™$nä¸€æ ·ä¸œè¥¿ã€‚\n",this_object(), who);
 		return 1;
 }
 	

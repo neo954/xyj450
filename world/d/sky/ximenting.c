@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 //ximenting.c
@@ -8,9 +8,9 @@ inherit ROOM;
  
 void create()
 {
-        set("short", "Î÷ÃÅÌü");
+        set("short", "è¥¿é—¨å…");
         set("long", @LONG
-ÏÖÔÚÕûĞŞÖĞ¡£
+ç°åœ¨æ•´ä¿®ä¸­ã€‚
 LONG
         );
  
@@ -18,7 +18,7 @@ LONG
                 "west" : __DIR__"xitian",
         ]));
  
-        create_door("west", "Î÷ÌìÃÅ", "east", DOOR_CLOSED);
+        create_door("west", "è¥¿å¤©é—¨", "east", DOOR_CLOSED);
  
         set("objects", ([
                 __DIR__"npc/tong-nan" : 2,

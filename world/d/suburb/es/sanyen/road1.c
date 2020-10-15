@@ -4,12 +4,12 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "Ê¯°å´óµÀ");
+	set("short", "çŸ³æ¿å¤§é“");
 	set("long", @LONG
-Ò»ÌõÆÌÖøÇàÊ¯°åµÄ´óµÀ, Á½ÅÔÖÖÖ²Ò»ÅÅÉÖÒ©¡£±±·½¾ÍÊÇ´óÐÛ±¦µî
-, Ò»×ùÉÏ¸²½ðÍßµÄÐÛÎ°½¨Öþ, ÎÝéÜµÄËÄ¸ö½ÇÂäµñ¾ÍÖøËÄÖ»èòèòÈçµÄ½ð
-Áú, ÎÝéÜÏÂ»¹¸÷¹ÒÖøÒ»´®½ð·çÁå, Çå·ç´µÀ´, ·¢³öÕóÕóÇå´àµÄÁåÉù¡£
-¶«±ßÓÐÌõÐ¡Ò»µãµÄÊ¯°åÂ·, ÕóÕóµÄÒ©Ïã¾Í´Ó¶«±ß´«À´¡£
+ä¸€æ¡é“ºè‘—é’çŸ³æ¿çš„å¤§é“, ä¸¤æ—ç§æ¤ä¸€æŽ’èŠè¯ã€‚åŒ—æ–¹å°±æ˜¯å¤§é›„å®æ®¿
+, ä¸€åº§ä¸Šè¦†é‡‘ç“¦çš„é›„ä¼Ÿå»ºç­‘, å±‹æªçš„å››ä¸ªè§’è½é›•å°±è‘—å››åªæ ©æ ©å¦‚çš„é‡‘
+é¾™, å±‹æªä¸‹è¿˜å„æŒ‚è‘—ä¸€ä¸²é‡‘é£Žé“ƒ, æ¸…é£Žå¹æ¥, å‘å‡ºé˜µé˜µæ¸…è„†çš„é“ƒå£°ã€‚
+ä¸œè¾¹æœ‰æ¡å°ä¸€ç‚¹çš„çŸ³æ¿è·¯, é˜µé˜µçš„è¯é¦™å°±ä»Žä¸œè¾¹ä¼ æ¥ã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 3 */
@@ -18,7 +18,7 @@ LONG
             "east" : "/d/suburb/es/sanyen/road2",
 	]));
 
-	create_door("north", "½ðÃÅ", "south");
+	create_door("north", "é‡‘é—¨", "south");
 
 	set("outdoors", "sanyen");
 	set("objects", ([

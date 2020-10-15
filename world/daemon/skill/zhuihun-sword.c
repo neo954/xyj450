@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // six-chaos-sword.c
@@ -9,52 +9,52 @@
 inherit SKILL;
 
 mapping *action = ({
-        ([      "name":                 "ÈºÄ§ÂÒÎè",
+        ([      "name":                 "ç¾¤é­”ä¹±èˆž",
                 "action":
-"$NÊÖÖÐ$wÒ»¶¶£¬»Î³ö¼¸¸öÐéÓ°£¬¿ñ·çÖèÓê°ãµØÏò$nµÄ$lÁ¬¹¥Êý½£",
+"$Næ‰‹ä¸­$wä¸€æŠ–ï¼Œæ™ƒå‡ºå‡ ä¸ªè™šå½±ï¼Œç‹‚é£Žéª¤é›¨èˆ¬åœ°å‘$nçš„$lè¿žæ”»æ•°å‰‘",
      "parry":     0,
                 "dodge":                0,
                 "damage":               20,
-                "damage_type":  "´ÌÉË"
+                "damage_type":  "åˆºä¼¤"
         ]),
-        ([      "name":                 "À÷¹í²øÉí",
-                "action":               "$NÉíÐÎÒ»×ª£¬±©ºÈÒ»Éù£¬ÊÖÖÐ$wÈçÒ»ÌõÒøÉß°ã´ÌÏò$nµÄ$l",
+        ([      "name":                 "åŽ‰é¬¼ç¼ èº«",
+                "action":               "$Nèº«å½¢ä¸€è½¬ï¼Œæš´å–ä¸€å£°ï¼Œæ‰‹ä¸­$wå¦‚ä¸€æ¡é“¶è›‡èˆ¬åˆºå‘$nçš„$l",
      "parry":     -10,
                 "dodge":                0,
                 "damage":               25,
-                "damage_type":  "´ÌÉË"
+                "damage_type":  "åˆºä¼¤"
         ]),
-        ([      "name":                 "°Ù¹íÒ¹ÐÐ",
+        ([      "name":                 "ç™¾é¬¼å¤œè¡Œ",
                 "action":
-"$NÎè¶¯$w£¬Í»È»Ò»¸ö¼²³å£¬$wÐ®×ÅÉÁÉÁ½£¹â´ÌÏò$nµÄ$l",
+"$NèˆžåŠ¨$wï¼Œçªç„¶ä¸€ä¸ªç–¾å†²ï¼Œ$wæŒŸç€é—ªé—ªå‰‘å…‰åˆºå‘$nçš„$l",
      "parry":     5,
                 "dodge":                0,
                 "damage":               20,
-                "damage_type":  "´ÌÉË"
+                "damage_type":  "åˆºä¼¤"
         ]),
-        ([      "name":                 "¶ö¹íÀ¹Â·",
+        ([      "name":                 "é¥¿é¬¼æ‹¦è·¯",
                 "action":
-"$NÊÖÖÐ$wÒ»¶¶£¬»Ã³ö¼¸ÐíÒø¹â£¬¾ÍÔÚÒ»»Ðã±¼ä£¬$wÒÑÐ±Ð±µØµãÉÏÁË$nµÄ$l",
+"$Næ‰‹ä¸­$wä¸€æŠ–ï¼Œå¹»å‡ºå‡ è®¸é“¶å…‰ï¼Œå°±åœ¨ä¸€ææƒšé—´ï¼Œ$wå·²æ–œæ–œåœ°ç‚¹ä¸Šäº†$nçš„$l",
      "parry":     -10,
                 "dodge":                0,
                 "damage":               30,
-                "damage_type":  "´ÌÉË"
+                "damage_type":  "åˆºä¼¤"
         ]),
-        ([      "name":                 "¹íÓ°´±´±",
+        ([      "name":                 "é¬¼å½±å¹¢å¹¢",
                 "action":
-"$NÊÖÖÐ$w½£¹â±©³¤£¬ÓÖ¼±ÓÖ¿ìµØÍù$n$l´ÌÈ¥",
+"$Næ‰‹ä¸­$wå‰‘å…‰æš´é•¿ï¼Œåˆæ€¥åˆå¿«åœ°å¾€$n$låˆºåŽ»",
      "parry":     10,
                 "dodge":                0,
                 "damage":               25,
-                "damage_type":  "´ÌÉË"
+                "damage_type":  "åˆºä¼¤"
         ]),
-        ([      "name":                 "Çï·Ø¹í³ª",
+        ([      "name":                 "ç§‹åŸé¬¼å”±",
                 "action":
-"$NÃÍÈ»¼äÉíÐÎÒ»Õ¹£¬ÊÖÖÐ$wÍ»·¢¼¸³ß½£Ã¢£¬à§µØ´ÌÏòÁË$nµÄ$l",
+"$NçŒ›ç„¶é—´èº«å½¢ä¸€å±•ï¼Œæ‰‹ä¸­$wçªå‘å‡ å°ºå‰‘èŠ’ï¼Œå”°åœ°åˆºå‘äº†$nçš„$l",
      "parry":     0,
                 "dodge":                -10,
                 "damage":               30,
-                "damage_type":  "´ÌÉË"
+                "damage_type":  "åˆºä¼¤"
         ]),
 });
 
@@ -63,11 +63,11 @@ int valid_learn(object me)
         object ob;
 
         if( (int)me->query("max_force") < 100 )
-                return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬Ã»ÓÐ°ì·¨Á·×·»ê½£¡£\n");
+                return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒè¿½é­‚å‰‘ã€‚\n");
 
         if( !(ob = me->query_temp("weapon"))
         ||      (string)ob->query("skill_type") != "sword" )
-                return notify_fail("Äã±ØÐëÏÈÕÒÒ»°Ñ½£²ÅÄÜÁ·½£·¨¡£\n");
+                return notify_fail("ä½ å¿…é¡»å…ˆæ‰¾ä¸€æŠŠå‰‘æ‰èƒ½ç»ƒå‰‘æ³•ã€‚\n");
 
         return 1;
 }
@@ -86,10 +86,10 @@ int practice_skill(object me)
 {
         if( (int)me->query("kee") < 30
         ||      (int)me->query("force") < 5 )
-                return notify_fail("ÄãµÄÄÚÁ¦»òÆø²»¹»£¬Ã»ÓÐ°ì·¨Á·Ï°×·»ê½£¡£\n");
+                return notify_fail("ä½ çš„å†…åŠ›æˆ–æ°”ä¸å¤Ÿï¼Œæ²¡æœ‰åŠžæ³•ç»ƒä¹ è¿½é­‚å‰‘ã€‚\n");
         me->receive_damage("kee", 30);
         me->add("force", -5);
-        write("Äã°´×ÅËùÑ§Á·ÁËÒ»±é×·»ê½£·¨¡£\n");
+        write("ä½ æŒ‰ç€æ‰€å­¦ç»ƒäº†ä¸€éè¿½é­‚å‰‘æ³•ã€‚\n");
         return 1;
 }
 
@@ -101,7 +101,7 @@ void skill_improved(object me)
 {
         if( (int)me->query_skill("six-chaos-sword", 1)  % 10 == 0 ) {
                 tell_object(me,
-                        RED "\nÄãÍ»È»¾õµÃÒ»¹É¶ñÆø³åÉÏÐÄÍ·£¬Ö»¾õµÃÏëÉ±ÈË....\n\n" NOR);
+                        RED "\nä½ çªç„¶è§‰å¾—ä¸€è‚¡æ¶æ°”å†²ä¸Šå¿ƒå¤´ï¼Œåªè§‰å¾—æƒ³æ€äºº....\n\n" NOR);
                 me->add("bellicosity", 100);
         } else
                 me->add("bellicosity", 10);

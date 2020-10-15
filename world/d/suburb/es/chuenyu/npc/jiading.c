@@ -2,8 +2,8 @@ inherit NPC;
 string kill_passenger(object who);
 void create()
 {
-        set_name("ÇàÒÂ¼Ò¶¡", ({ "guard" }) );
-        set("gender", "ÄÐÐÔ" );
+        set_name("é’è¡£å®¶ä¸", ({ "guard" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 38);
         set("str", 28);
         set("cor", 27);
@@ -16,7 +16,7 @@ void create()
 
         set("attitude", "heroism");
 
-        set("long","ÕâÊÇÒ»Î»ºÚËÉ±¤µÄ¼Ò¶¡£¬×¨¸ºÔðÅÌ²ìÈ¥ºÚËÉ±¤µÄÐÐÈË¡£\n");
+        set("long","è¿™æ˜¯ä¸€ä½é»‘æ¾å ¡çš„å®¶ä¸ï¼Œä¸“è´Ÿè´£ç›˜å¯ŸåŽ»é»‘æ¾å ¡çš„è¡Œäººã€‚\n");
 
         set("combat_exp", 2000);
         set("score", 50);
@@ -45,8 +45,8 @@ void checklooking(object ob)
 
          if ( random((int)ob->query("per")) < 5  )
          {
-        command("say ¼Ò¶¡ºÈµÀ£ºÕ¾×¡£¡Äã¸ÉÊ²Ã´µÄ¡£");
-        command("say ¿´ÄãÄÇÔôÃ¼ÊóÑÛ£¬¼â×ìºïÈùµÄÑù¶ù£¬¾ö²»ÊÇÊ²Ã´ºÃ¶«Î÷£¡");
+        command("say å®¶ä¸å–é“ï¼šç«™ä½ï¼ä½ å¹²ä»€ä¹ˆçš„ã€‚");
+        command("say çœ‹ä½ é‚£è´¼çœ‰é¼ çœ¼ï¼Œå°–å˜´çŒ´è…®çš„æ ·å„¿ï¼Œå†³ä¸æ˜¯ä»€ä¹ˆå¥½ä¸œè¥¿ï¼");
                 kill_passenger(ob);
          }
 }

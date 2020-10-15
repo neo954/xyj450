@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÍÁ·ËÊ×Áì", ({ "bandit leader", "chief", "leader" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("åœŸåŒªé¦–é¢†", ({ "bandit leader", "chief", "leader" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 47);
-	set("long",	"Õâ¼Ò»ïÑÛÉñĞ×¶ñ£¬Ò»Ë«¾«¹âËÄÉäµÄÑÛÖéÕı¶¢ÖøÄãµÄ²±×Ó¡£\n");
+	set("long",	"è¿™å®¶ä¼™çœ¼ç¥å‡¶æ¶ï¼Œä¸€åŒç²¾å…‰å››å°„çš„çœ¼ç æ­£ç›¯è‘—ä½ çš„è„–å­ã€‚\n");
 	set("combat_exp", 50000);
 	set("score", 7700);
 	set("bellicosity", 3000);
@@ -19,15 +19,15 @@ void create()
 
 	set("chat_chance_combat", 20);
 	set("chat_msg_combat", ({
-		"\nÍÁ·ËÊ×ÁìÒõâüâüµØËµµÀ£ºÕâÖÖÈı½ÅÃ¨µÄ¹¦\·òÒ²¸ÒÉÏÀÏËÉÕ¯À´ÈöÒ°£¿£¡\n",
-		"\nÍÁ·ËÊ×ÁìËµµÀ£ºÈ¥ÄãµÄ£¬ÀÏ×Ó½ñÌìÒª¶çÏÂÄãµÄÍ·À´Á·Á·¶¾×¦£¡\n",
-		"\nÍÁ·ËÊ×Áì»¢ºğÒ»Éù£¬ÆÛÉíÉÏÇ°¡£\n"
+		"\nåœŸåŒªé¦–é¢†é˜´æ»æ»åœ°è¯´é“ï¼šè¿™ç§ä¸‰è„šçŒ«çš„åŠŸ\å¤«ä¹Ÿæ•¢ä¸Šè€æ¾å¯¨æ¥æ’’é‡ï¼Ÿï¼\n",
+		"\nåœŸåŒªé¦–é¢†è¯´é“ï¼šå»ä½ çš„ï¼Œè€å­ä»Šå¤©è¦å‰ä¸‹ä½ çš„å¤´æ¥ç»ƒç»ƒæ¯’çˆªï¼\n",
+		"\nåœŸåŒªé¦–é¢†è™å¼ä¸€å£°ï¼Œæ¬ºèº«ä¸Šå‰ã€‚\n"
 	}) );
 	set_skill("blade", 60);
 	set_skill("parry", 70);
 	set_skill("dodge", 70);
 
-	// Because the chief's Îä¹¦ is not done yet, set apply to replace it.
+	// Because the chief's æ­¦åŠŸ is not done yet, set apply to replace it.
 	set_temp("apply/attack", 70);
 	set_temp("apply/dodge", 50);
 

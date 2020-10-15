@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // shoe.c
@@ -7,12 +7,12 @@ inherit EQUIP;
 
 void create()
 {
-   set_name("ÆßĞÇ·­ÔÆÑ¥", ({ "cloudy shoes", "shoes" }) );
+   set_name("ä¸ƒæ˜Ÿç¿»äº‘é´", ({ "cloudy shoes", "shoes" }) );
    set_weight(700);
    if( clonep() )
      set_default_object(__FILE__);
    else {
-     set("unit", "Ë«");
+     set("unit", "åŒ");
      set("value", 6000);
      set("material", "cloth");
      set("armor_type", "feet");

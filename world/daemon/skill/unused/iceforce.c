@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // iceforce.c2
@@ -11,7 +11,7 @@ int valid_learn(object me) { return 1; }
 
 int practice_skill(object me)
 {
-   return notify_fail("�⺮��\ֻ����ѧ�ģ����Ǵ�����(exert)�����������ȡ�\n");
+   return notify_fail("意寒功\只能用学的，或是从运用(exert)中增加熟练度。\n");
 }
 
 string exert_function_file(string func)
@@ -28,7 +28,7 @@ mixed hit_ob(object me, object victim, int damage_bonus, int factor)
      if( random(me->query_skill("iceforce")) > (damage_bonus + foo) ) {
         victim->receive_wound("kee", (damage_bonus + foo));
         victim->apply_condition("iceshock", factor/3);
-        return "$N����ʽЮ��һ�������ޱȵľ���ʹ��$n�������˸����䡣\n";
+        return "$N的招式挟著一股阴寒无比的劲风使得$n不禁打了个寒噤。\n";
      }
    }
    return foo;

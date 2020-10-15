@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit NPC_SAVE;
@@ -6,10 +6,10 @@ inherit NPC_SAVE;
  
 void create()
 {
-        set_name("£Ô£å£ó£ô", ({"test"}));
-        set("long", "´óÊ«ÈËÀî°×£¬Çå¸ßÆ®Òİ£¬½£ÊõÍ¨Éñ¡£\n");
-        set("gender","ÄĞĞÔ");
-   set("title", "(ÒşÉí)");
+        set_name("ï¼´ï½…ï½“ï½”", ({"test"}));
+        set("long", "å¤§è¯—äººæç™½ï¼Œæ¸…é«˜é£˜é€¸ï¼Œå‰‘æœ¯é€šç¥ã€‚\n");
+        set("gender","ç”·æ€§");
+   set("title", "(éšèº«)");
    set("class", "scholar");
    set("hide", 1);
    set("env/invisibility", 1);

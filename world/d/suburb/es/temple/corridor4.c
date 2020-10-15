@@ -4,10 +4,10 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "����");
+	set("short", "回廊");
 	set("long", @LONG
-����վ�ڻ���ת�ǵĵط�, ���ȴ��������߼��ϱ߶�ȥ���ڱ���
-��һ�����, ���洫������߳�ȵ�������
+你正站在回廊转角的地方, 回廊从这往东边及南边而去。在北边
+是一间大房子, 里面传来阵阵叱喝的声音。
 LONG
 	);
 	set("exits", ([ /* sizeof() == 3 */
@@ -16,6 +16,6 @@ LONG
      "east" : __DIR__"corridor5",
 ]));
 
-    create_door("north", "ľ��", "south");
+    create_door("north", "木门", "south");
 	setup();
 }

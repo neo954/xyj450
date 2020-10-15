@@ -7,25 +7,25 @@ inherit SSERVER;
 int conjure(object me, object target)
 {
 	int lvl;
-	if( target ) return notify_fail("¼ÅÊ¶ÉñÍ¨Ö»ÄÜ¶Ô×Ô¼ºÊ¹ÓÃ¡£\n");
+	if( target ) return notify_fail("å¯‚è¯†ç¥é€šåªèƒ½å¯¹è‡ªå·±ä½¿ç”¨ã€‚\n");
 	if( me->query("atman") < 1000 )
-		return notify_fail("ÄãµÄÁéÁ¦²»¹»£¡\n");
+		return notify_fail("ä½ çš„çµåŠ›ä¸å¤Ÿï¼\n");
 	lvl = (int) me->query_skill("essencemagic",1);
         if( me->query("gin") <= 50 )
-                return notify_fail("ÄãµÄ¾«²»¹»£¡\n");
+                return notify_fail("ä½ çš„ç²¾ä¸å¤Ÿï¼\n");
 	me->add("atman", -50);
 	me->receive_damage("gin", 50);
-	message_vision(HIY "$NÅÌÏ¥¶ø×ù£¬¿ªÊ¼ÔËÓÃ¼ÅÊ¶ÉñÍ¨¾²Ë¼Èë¶¨ ...\n" NOR, me);
+	message_vision(HIY "$Nç›˜è†è€Œåº§ï¼Œå¼€å§‹è¿ç”¨å¯‚è¯†ç¥é€šé™æ€å…¥å®š ...\n" NOR, me);
 	if( random(me->query_skill("magic")) > (int)me->query_int() * 10 ) {
 		if( random(me->query("max_atman")) < (int)me->query("atman")/2 ) {
 			me->set_skill("essencemagic", lvl -1 );
-			write( HIR "Äã¾õµÃÄÔÖĞÒ»Æ¬»ìÂÒ£¬ÄãµÄ°ËÊ¶ÉñÍ¨½µµÍÁË£¡\n" NOR );
+			write( HIR "ä½ è§‰å¾—è„‘ä¸­ä¸€ç‰‡æ··ä¹±ï¼Œä½ çš„å…«è¯†ç¥é€šé™ä½äº†ï¼\n" NOR );
 			return 1;
 		}
 			me->set_skill("essencemagic", lvl + 1);
-			write( HIG "ÄãµÄ°ËÊ¶ÉñÍ¨Ìá¸ßÁË£¡\n" NOR );
+			write( HIG "ä½ çš„å…«è¯†ç¥é€šæé«˜äº†ï¼\n" NOR );
 			return 1;
 	}
-	write("¿ÉÊÇÄãÖ»¾õµÃÒ»ÎŞËù»ñ¡£\n");
+	write("å¯æ˜¯ä½ åªè§‰å¾—ä¸€æ— æ‰€è·ã€‚\n");
 	return 1;
 }

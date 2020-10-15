@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // taolord.c
@@ -8,13 +8,13 @@ inherit F_MASTER;
 
 void create()
 {
-   set_name("�ּ�", ({ "master taolord", "master", "taolord" }) );
-   set("nickname", "��ָ����");
-   set("gender", "����");
+   set_name("林忌", ({ "master taolord", "master", "taolord" }) );
+   set("nickname", "六指真人");
+   set("gender", "男性");
    set("age", 47);
    set("long",
-     "�ּ���һλ����ʮ�ָ�����޵��ߣ��㷢����������һ���Ǻ�ɫ�ģ�һ\n"
-     "���ǽ�ɫ�ģ������ǡ���\���ķ������������߾�������ס�\n");
+     "林忌是一位道行十分高深的修道者，你发现他的眼珠一个是黑色的，一\n"
+     "个是金色的，这正是「谷\衣心法」修炼到极高境界的徵兆。\n");
 
    set("combat_exp", 1000000);
    set("score", 200000);
@@ -39,8 +39,8 @@ void create()
    set("mana_factor", 5);
 
    set("inquiry", ([
-     "��\���ķ�": "��\���ķ�����éɽ��Ϊ�Կ�аħ����������ڹ�\�ķ���\n",
-     "éɽ��": "��éɽ��������ʦ��ɽ�������������������Խ�����ħΪ���Ρ�\n"
+     "谷\衣心法": "谷\衣心法是我茅山派为对抗邪魔外道所创的内功\心法。\n",
+     "茅山派": "我茅山派自张天师开山立派至今，世世代代皆以降妖伏魔为己任。\n"
    ]) );
 
    set("apprentice_available", 3);
@@ -52,7 +52,7 @@ void create()
      (: cast_spell, "invocation" :),
    }) );
 
-   create_family("éɽ��", 5, "��ʦ");
+   create_family("茅山派", 5, "天师");
 
    set_skill("literate", 70);
    set_skill("magic", 40);
@@ -85,20 +85,20 @@ void attempt_apprentice(object ob)
 {
    if( query("apprentice_available") ) {
      if( find_call_out("do_recruit") != -1 )
-        command("say ���ţ�һ��һ������");
+        command("say 慢着，一个一个来。");
      else
         call_out("do_recruit", 2, ob);
    } else {
-     command("say ƶ�������Ѿ������������ӣ���������ͽ�ˡ�");
+     command("say 贫道今天已经收了三个弟子，不想再收徒了。");
    }
 }
 
 void do_recruit(object ob)
 {
-   if( (string)ob->query("gender") != "����" )
-     command("say ƶ���ǳ����ˣ�������Ůͽ�������ˡ�");
+   if( (string)ob->query("gender") != "男性" )
+     command("say 贫道是出家人，不便收女徒，得罪了。");
    else {
-     command("say ��... ������éɽ�ɣ�Ҳ��....");
+     command("say 嗯... 想入我茅山派？也好....");
      command("recruit " + ob->query("id") );
    }
 }

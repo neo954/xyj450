@@ -6,11 +6,11 @@ int do_smell(string arg);
 
 void create()
 {
-	set("short", "ÉñÃØ¶´Ñ¨");
+	set("short", "ç¥ç§˜æ´ç©´");
 	set("long", @LONG
-¶´ÄÚºÚÆáÆáµÄ£¬¼¸ºõÊ²Ã´¶¼¿´²»¼û£¬Ö»ÊÇÔÚÒ»¸ö½ÇÂäÀï
-ÓĞÁ½µãºì¹âÉÁË¸£¬Æ¾Äã¶àÄêµÄ¾­Ñé£¬ÄÇÒ»¶¨ÊÇÒ»Ë«Ò°ÊŞµÄÑÛ
-¾¦¡£Õâ¸öµØ·½×îºÃ²»Òª¾ÃÁô¡£
+æ´å†…é»‘æ¼†æ¼†çš„ï¼Œå‡ ä¹ä»€ä¹ˆéƒ½çœ‹ä¸è§ï¼Œåªæ˜¯åœ¨ä¸€ä¸ªè§’è½é‡Œ
+æœ‰ä¸¤ç‚¹çº¢å…‰é—ªçƒï¼Œå‡­ä½ å¤šå¹´çš„ç»éªŒï¼Œé‚£ä¸€å®šæ˜¯ä¸€åŒé‡å…½çš„çœ¼
+ç›ã€‚è¿™ä¸ªåœ°æ–¹æœ€å¥½ä¸è¦ä¹…ç•™ã€‚
 LONG
 );
 	set("objects", ([
@@ -32,16 +32,16 @@ int do_smell (string arg)
 	int i;
 
 	if (arg != "grass")
-		return notify_fail ("ÄãÒªÓÃÊ²Ã´£¿\n");
+		return notify_fail ("ä½ è¦ç”¨ä»€ä¹ˆï¼Ÿ\n");
 
 	list = all_inventory(this_player());  
 	i = sizeof(list);
 	while (i--) {
 		if (((string)list[i]->query("id")) == "grass")
-			message_vision("Ò»Õó¹Ö·çÖèÈ»¹ÎÆğ£¬$N·Â·ğÌÚÔÆ¼İÎí°ã¡£\n", this_player());
+			message_vision("ä¸€é˜µæ€ªé£éª¤ç„¶åˆ®èµ·ï¼Œ$Nä»¿ä½›è…¾äº‘é©¾é›¾èˆ¬ã€‚\n", this_player());
 			this_player()->move ("/u/cloud/biaoju");
 			return 1;
 		}
 
-	return notify_fail ("ÄãÉíÉÏÃ»ÓĞÍüÓÇ²İ°¡¡£\n");
+	return notify_fail ("ä½ èº«ä¸Šæ²¡æœ‰å¿˜å¿§è‰å•Šã€‚\n");
 }

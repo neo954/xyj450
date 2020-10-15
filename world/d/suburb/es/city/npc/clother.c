@@ -4,11 +4,11 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("�ϰ���", ({ "woman" }) );
-        set("title", "���ׯ");
-        set("gender", "Ů��" );
+        set_name("老板娘", ({ "woman" }) );
+        set("title", "绸缎庄");
+        set("gender", "女性" );
         set("age", 29);
-//        set("long", "���ƹ��ǲ��ѿ���Ů�ˣ�һֱ��Ӫ���洫Ь�����⡣\n");
+//        set("long", "李掌柜是不难看的女人，一直经营着祖传鞋店生意。\n");
         set("combat_exp", 300000);
         set("attitude", "friendly");
         set("max_atman", 1000); 
@@ -32,15 +32,15 @@ void create()
         map_skill("sword", "fonxansword");
 
         set("inquiry", ([
-                "here": "�����Ǿ�ʦ���ׯ��ûǮ�������\n",
-                "name": "����г�գ��������ܸ����㡣\n",
-                "�·�": "����Ҫʲô���ģ�",
+                "here": "这里是京师绸缎庄，没钱别进来！\n",
+                "name": "在下谐陶，闺名不能告诉你。\n",
+                "衣服": "您需要什么样的？",
         ]) );
         
         set("vendor_goods", ([
-                "���޳���": __DIR__"obj/lady_dress",
-                "���೤��": __DIR__"obj/green_cloth",
-                "�޺����": __DIR__"obj/color_cloth",
+                "轻罗绸衫": __DIR__"obj/lady_dress",
+                "淡青长袍": __DIR__"obj/green_cloth",
+                "艳红绸衫": __DIR__"obj/color_cloth",
         ]) );
 
         setup();
@@ -68,15 +68,15 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) return;
         switch( random(4) ) {
                 case 0:
-                        say( "�ϰ��������λ"
+                        say( "老板娘道：这位"
                                 + RANK_D->query_respect(ob)
-                                + "������Ҫʲô��\n");
+                                + "，您需要什么？\n");
                         break;
                 case 1:
-                        say( "�ϰ������صض���˵��Ҫ�ϴ�ʳ�ôſ���\n");
+                        say( "老板娘神秘地对你说：要南大食堂磁卡吗？\n");
                         break;
                 case 2:
-                        say( "�ϰ�������˵����ū�ҿ��Ǻ�����Ŷ��\n");
+                        say( "老板娘悄声说道：奴家可是湖南人哦。\n");
                         break;
         }
 }

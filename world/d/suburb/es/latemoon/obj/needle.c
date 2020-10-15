@@ -5,13 +5,13 @@ inherit THROWING;
 
 void create()
 {
-    set_name(HIC "Ğå»¨Õë" NOR, ({"needle" }) );
+    set_name(HIC "ç»£èŠ±é’ˆ" NOR, ({"needle" }) );
      if ( clonep() )
               set_default_object(__FILE__);
      else {
-             set("long", "Ò»ÖÖÉÏµÈÌú×ö³ÉµÄĞå»¨Õë\n");
-          set("unit", "Ğ©");
-          set("base_unit", "¸ù");
+             set("long", "ä¸€ç§ä¸Šç­‰é“åšæˆçš„ç»£èŠ±é’ˆ\n");
+          set("unit", "äº›");
+          set("base_unit", "æ ¹");
           set("base_weight", 30);
           set("base_value", 100);
           set("material", "iron");

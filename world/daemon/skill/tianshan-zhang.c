@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
 
 // tianshan-zhang.c, based on dagou-bang.c
@@ -6,25 +6,25 @@
 inherit SKILL;
 
 mapping *action = ({
-([	"action": "$NÊ¹³öÒ»ÕĞ¡¸±ùºÓ¿ª¶³¡¹£¬ÊÖÖĞ$w´ó¿ª´óãØÉ¨Ïò$nµÄ$l",
+([	"action": "$Nä½¿å‡ºä¸€æ‹›ã€Œå†°æ²³å¼€å†»ã€ï¼Œæ‰‹ä¸­$wå¤§å¼€å¤§é˜–æ‰«å‘$nçš„$l",
 	"dodge": -3,
 	"damage": 40,
-	"damage_type": "´ìÉË"
+	"damage_type": "æŒ«ä¼¤"
 ]),
-([	"action": "$NÊÖÖĞ$wÕóÕó·çÏì£¬Ò»ÕĞ¡¸É½·çÁİÙı¡¹Ïò$nµÄ$l¹¥È¥",
+([	"action": "$Næ‰‹ä¸­$wé˜µé˜µé£å“ï¼Œä¸€æ‹›ã€Œå±±é£å‡›å†½ã€å‘$nçš„$læ”»å»",
 	"dodge": -5,
 	"damage": 45,
-	"damage_type": "´ìÉË"
+	"damage_type": "æŒ«ä¼¤"
 ]),
-([	"action": "$N¾ÙÆğ$w£¬¾Ó¸ßÁÙÏÂÊ¹Ò»ÕĞ¡¸ÌìÉ½Ñ©±À¡¹ÔÒÏò$nµÄ$l",
+([	"action": "$Nä¸¾èµ·$wï¼Œå±…é«˜ä¸´ä¸‹ä½¿ä¸€æ‹›ã€Œå¤©å±±é›ªå´©ã€ç ¸å‘$nçš„$l",
 	"dodge": -10,
 	"damage": 60,
-	"damage_type": "´ìÉË"
+	"damage_type": "æŒ«ä¼¤"
 ]),
-([	"action": "$NÒ»ÕĞ¡¸·å»ØÂ·×ª¡¹£¬$w×óÓÒÓØ»ØÏò$nµÄ$lµãÈ¥",
+([	"action": "$Nä¸€æ‹›ã€Œå³°å›è·¯è½¬ã€ï¼Œ$wå·¦å³è¿‚å›å‘$nçš„$lç‚¹å»",
 	"dodge": -5,
 	"damage": 50,
-	"damage_type": "´ìÉË"
+	"damage_type": "æŒ«ä¼¤"
 ]),
 });
 
@@ -38,7 +38,7 @@ int valid_enable(string usage) { return (usage == "staff") || (usage == "parry")
 int valid_learn(object me)
 {
 	if ((int)me->query("max_force") < 80)
-		return notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
+		return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
 	return 1;
 }
 
@@ -48,9 +48,9 @@ int practice_skill(object me)
 
 	if (!objectp(weapon = me->query_temp("weapon"))
 	|| (string)weapon->query("skill_type") != "staff")
-		return notify_fail("ÄãÊ¹ÓÃµÄÎäÆ÷²»¶Ô¡£\n");
+		return notify_fail("ä½ ä½¿ç”¨çš„æ­¦å™¨ä¸å¯¹ã€‚\n");
 	if ((int)me->query("kee") < 50)
-		return notify_fail("ÄãµÄÌåÁ¦²»¹»Á·ÌìÉ½ÕÈ·¨¡£\n");
+		return notify_fail("ä½ çš„ä½“åŠ›ä¸å¤Ÿç»ƒå¤©å±±æ–æ³•ã€‚\n");
 	me->receive_damage("kee", 25);
 	return 1;
 }

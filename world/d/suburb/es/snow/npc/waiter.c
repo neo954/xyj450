@@ -5,20 +5,20 @@ inherit F_VENDOR;
 
 void create()
 {
-	set_name("µêĞ¡¶ş", ({ "waiter" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("åº—å°äºŒ", ({ "waiter" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 22);
 	set("long",
-		"ÕâÎ»µêĞ¡¶şÕıĞ¦ßäßäµØÃ¦Öø£¬»¹²»Ê±ÄÃÆğ¹ÒÔÚ²±×ÓÉÏµÄÄ¨²¼²ÁÁ³¡£\n");
+		"è¿™ä½åº—å°äºŒæ­£ç¬‘å’ªå’ªåœ°å¿™è‘—ï¼Œè¿˜ä¸æ—¶æ‹¿èµ·æŒ‚åœ¨è„–å­ä¸Šçš„æŠ¹å¸ƒæ“¦è„¸ã€‚\n");
 	set("combat_exp", 10000);
 	set_skill("dodge", 300);
 	set("attitude", "friendly");
-	set("rank_info/respect", "Ğ¡¶ş¸ç");
+	set("rank_info/respect", "å°äºŒå“¥");
 	set("vendor_goods", ([
-		"Ø°Ê×": "/obj/example/dagger",
-		"¾Æ": "/obj/example/wineskin",
-		"°ü×Ó": "/obj/example/dumpling",
-		"¼¦ÍÈ": "/obj/example/chicken_leg",
+		"åŒ•é¦–": "/obj/example/dagger",
+		"é…’": "/obj/example/wineskin",
+		"åŒ…å­": "/obj/example/dumpling",
+		"é¸¡è…¿": "/obj/example/chicken_leg",
  	]) );
 	setup();
 }
@@ -40,16 +40,16 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(3) ) {
 		case 0:
-			say( "µêĞ¡¶şĞ¦ßäßäµØËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-				+ "£¬½øÀ´ºÈ±­²è£¬ĞªĞªÍÈ°É¡£\n");
+			say( "åº—å°äºŒç¬‘å’ªå’ªåœ°è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+				+ "ï¼Œè¿›æ¥å–æ¯èŒ¶ï¼Œæ­‡æ­‡è…¿å§ã€‚\n");
 			break;
 		case 1:
-			say( "µêĞ¡¶şÓÃ²±×ÓÉÏµÄÃ«½íÄ¨ÁËÄ¨ÊÖ£¬ËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-				+ "£¬Çë½øÇë½ø¡£\n");
+			say( "åº—å°äºŒç”¨è„–å­ä¸Šçš„æ¯›å·¾æŠ¹äº†æŠ¹æ‰‹ï¼Œè¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+				+ "ï¼Œè¯·è¿›è¯·è¿›ã€‚\n");
 			break;
 		case 2:
-			say( "µêĞ¡¶şËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-				+ "£¬½øÀ´ºÈ¼¸ÖÑĞ¡µêµÄºì¾Æ°É£¬Õâ¼¸Ìì²Å´Ó½Ñ×ÓÀï¿ª·âµÄÓ´¡£\n");
+			say( "åº—å°äºŒè¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+				+ "ï¼Œè¿›æ¥å–å‡ ç›…å°åº—çš„çº¢é…’å§ï¼Œè¿™å‡ å¤©æ‰ä»çª–å­é‡Œå¼€å°çš„å“Ÿã€‚\n");
 			break;
 	}
 }
@@ -58,14 +58,14 @@ void relay_say(object ob, string msg)
 {
 	object cake;
 
-	if( (strsrch(msg,"ES2")>=0 || strsrch(msg, "es2")>=0) && strsrch(msg,"ÉúÈÕ¿ìÀÖ")>=0 ) {
+	if( (strsrch(msg,"ES2")>=0 || strsrch(msg, "es2")>=0) && strsrch(msg,"ç”Ÿæ—¥å¿«ä¹")>=0 ) {
 		command("jump");
-		command("say ÉúÈÕ¿ìÀÖ!");
+		command("say ç”Ÿæ—¥å¿«ä¹!");
 		seteuid(getuid());
 		if( !present("cake", ob) ) {
 			cake = new("/obj/example/cake");
 			cake->move(ob);
-			message_vision("$N¸ø$nÒ»¿é¿´ÆğÀ´¾ÍÁîÈËÁ÷¿ÚË®µÄµ°¸â¡£\n", this_object(), ob);
+			message_vision("$Nç»™$nä¸€å—çœ‹èµ·æ¥å°±ä»¤äººæµå£æ°´çš„è›‹ç³•ã€‚\n", this_object(), ob);
 		}
 	}
 }

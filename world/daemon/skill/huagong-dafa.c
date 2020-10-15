@@ -1,7 +1,7 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
 
-// huagong-dafa.c »¯¹¦´ó·¨
+// huagong-dafa.c åŒ–åŠŸå¤§æ³•
 // by yucao
 // modified by cleansword
 
@@ -15,21 +15,21 @@ int valid_learn(object me)
 	int t = 1, j;
 	for (j = 1; j < i / 10; j++) t*= 2;
 	if ((int)me->query_skill("force", 1) < 10)
-		return notify_fail("ÄãµÄ»ù±¾ÄÚ¹¦»ğºò²»×ã£¬²»ÄÜÑ§»¯¹¦´ó·¨¡£\n");
+		return notify_fail("ä½ çš„åŸºæœ¬å†…åŠŸç«å€™ä¸è¶³ï¼Œä¸èƒ½å­¦åŒ–åŠŸå¤§æ³•ã€‚\n");
 	if (i > 10 && (int)me->query("sen") > t * 100)
-		return notify_fail("Ñ§»¯¹¦´ó·¨£¬ÒªĞÄºİÊÖÀ±£¬¼é¶ñ´õ¶¾£¬Äã¿É×öµÃ²»¹»Ñ½£¡\n");
+		return notify_fail("å­¦åŒ–åŠŸå¤§æ³•ï¼Œè¦å¿ƒç‹ æ‰‹è¾£ï¼Œå¥¸æ¶æ­¹æ¯’ï¼Œä½ å¯åšå¾—ä¸å¤Ÿå‘€ï¼\n");
 	if ( me->query_skill("buddhism",1) || me->query_skill("taoism",1) )
-		return notify_fail("ÄãÁ·ÁËÍºÂ¿Å£±Ç×ÓÃÇµÄĞÄ·¨£¬»¹Ñ§»¯¹¦´ó·¨×öÊ²÷á£¡\n");
+		return notify_fail("ä½ ç»ƒäº†ç§ƒé©´ç‰›é¼»å­ä»¬çš„å¿ƒæ³•ï¼Œè¿˜å­¦åŒ–åŠŸå¤§æ³•åšä»€éº½ï¼\n");
 	if ( me->query_skill("hunyuan-yiqi",1) 
 	|| me->query_skill("huntian-qigong",1) 
 	|| me->query_skill("taiji-shengong",1) )
-		return notify_fail("Äã²»ÏÈÉ¢ÁË±ğÅÉÄÚ¹¦£¬ÔõÄÜÑ§»¯¹¦´ó·¨£¿£¡\n");
+		return notify_fail("ä½ ä¸å…ˆæ•£äº†åˆ«æ´¾å†…åŠŸï¼Œæ€èƒ½å­¦åŒ–åŠŸå¤§æ³•ï¼Ÿï¼\n");
 	return 1;
 }
 
 int practice_skill(object me)
 {
-	return notify_fail("»¯¹¦´ó·¨Ö»ÄÜÓÃÑ§(learn)µÄÀ´Ôö¼ÓÊìÁ·¶È¡£\n");
+	return notify_fail("åŒ–åŠŸå¤§æ³•åªèƒ½ç”¨å­¦(learn)çš„æ¥å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");
 }
 
 string exert_function_file(string func)

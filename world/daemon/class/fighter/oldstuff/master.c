@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 // shiao.c
@@ -10,13 +10,13 @@ void consider();
 
 void create()
 {
-   set_name("���ٳ�", ({ "master fighter", "master", "fighter" }) );
+   set_name("萧辟尘", ({ "master fighter", "master", "fighter" }) );
 
-   set("nickname", "С��а");
-   set("gender", "����");
+   set("nickname", "小天邪");
+   set("gender", "男性");
    set("age", 24);
    set("long",
-     "���ٳ����������ᰳ�֮�У��������ɷ���ǣ���ʳ�˼��̻�\n");
+     "萧辟尘自幼生长於岚城之中，看起来仙风道骨，不食人间烟火。\n");
    set("attitude", "peaceful");
 
    set("str", 26);
@@ -61,7 +61,7 @@ void create()
    map_skill("dodge", "pyrobat-steps");
    map_skill("move", "pyrobat-steps");
 
-   create_family("��а��", 16, "����");
+   create_family("天邪派", 16, "弟子");
 
    setup();
 
@@ -80,11 +80,11 @@ void init()
 void attempt_apprentice(object me)
 {
    if( me->query_temp("pending/celestial_swear") ) {
-     command("say ��˵���棬������������Ź棬���ǹ�������Ҳû�á�");
+     command("say 多说无益，若不发誓恪守门规，便是跪著求我也没用。");
      return;
    } else {
-     command("say ����а���Ź����ϣ�" + RANK_D->query_respect(me)
-        + "���������ģ��ҷ�����(swear)����");
+     command("say 我天邪派门规甚严，" + RANK_D->query_respect(me)
+        + "如果真的有心，且发个誓(swear)来。");
      me->set_temp("pending/celestial_swear", 1);
    }
 }
@@ -93,15 +93,15 @@ int do_swear(string arg)
 {
    if( !this_player()->query_temp("pending/celestial_swear") )
      return 0;
-   if( !arg ) return notify_fail("��Ҫ��ʲ���ģ�\n");
+   if( !arg ) return notify_fail("你要发什麽誓？\n");
    this_player()->set_temp("pending/celestial_swear", 0);
-   message_vision("$N���ĵ���" + arg + "\n", this_player());
-   if( strsrch(arg, "��") >=0 && strsrch(arg, "�Ź�") >=0 ) {
+   message_vision("$N发誓道：" + arg + "\n", this_player());
+   if( strsrch(arg, "守") >=0 && strsrch(arg, "门规") >=0 ) {
      command("smile");
-     command("say ������ˡ�\n");
+     command("say 这就是了。\n");
      command("recruit " + this_player()->query("id"));
    } else {
-     command("say �㷢����ʲ����ģ�����Ϊ��û������");
+     command("say 你发的是什麽鬼誓，别以为我没听到！");
    }
    return 1;
 }
@@ -123,18 +123,18 @@ void consider()
      if( enemy[i]->query_temp("weapon") ) {
         flag++;
         if(   !query_temp("weapon") ) {
-          command("say " + RANK_D->query_respect(enemy[i]) + "��Ȼʹ���У����¿��ֽ���δ�ⲻ����");
+          command("say " + RANK_D->query_respect(enemy[i]) + "既然使兵刃，在下空手接招未免不敬。");
           command("wield sword");
-          command("say ���аɣ�");
+          command("say 进招吧！");
           break;
         }
      }
    }
    if( !flag && query_temp("weapon") ) {
      if( sizeof(enemy) > 1 )
-        command("say ��... ��Ȼ" + chinese_number(sizeof(enemy)) + "λ���ǿ��֣������������㣡");
+        command("say 嗯... 既然" + chinese_number(sizeof(enemy)) + "位都是空手，在下理当奉陪！");
      else
-        command("say ��Ȼ" + RANK_D->query_respect(enemy[0]) + "��ʹ���У�������Ȼ���㣡\n");
+        command("say 既然" + RANK_D->query_respect(enemy[0]) + "不使兵刃，在下自然奉陪！\n");
      command("unwield sword");
    }
 }

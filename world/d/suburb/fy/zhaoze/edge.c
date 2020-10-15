@@ -5,11 +5,11 @@
 inherit ROOM;
 void create()
 {
-        set("short", "ÕÓÔó±ßÔµ");
+        set("short", "æ²¼æ³½è¾¹ç¼˜");
         set("long", @LONG
-ÕâÀïÎÚÔÆÃÜ²¼£¬ÌìÉ«¼«°µ¡£ÔÙÍùÇ°×ß¾ÍÊÇÎäÁÖÖĞÓĞÃûµÄËÀÓò
-£­£­»ğÕÓÔó¡£ÄÇÀï²»µ«¾£¼¬ÃÜ²¼£¬ÃÍÊŞ³öÃ»£¬»¹ÓĞÄÜÖÁÈËÓÚËÀµØ
-ÔÚÒ»Ë²¼äËæÊ±ÅçÉäµÄ¶¾»ğÈª¡£
+è¿™é‡Œä¹Œäº‘å¯†å¸ƒï¼Œå¤©è‰²ææš—ã€‚å†å¾€å‰èµ°å°±æ˜¯æ­¦æ—ä¸­æœ‰åçš„æ­»åŸŸ
+ï¼ï¼ç«æ²¼æ³½ã€‚é‚£é‡Œä¸ä½†è†æ£˜å¯†å¸ƒï¼ŒçŒ›å…½å‡ºæ²¡ï¼Œè¿˜æœ‰èƒ½è‡³äººäºæ­»åœ°
+åœ¨ä¸€ç¬é—´éšæ—¶å–·å°„çš„æ¯’ç«æ³‰ã€‚
 LONG
         );
         set("exits", ([ 
@@ -18,8 +18,8 @@ LONG
 ]));
 
         set("item_desc", ([
-                "bush": "ÕâÀï¾£¼¬(bush)ÃÜ²¼£¬µ«ÄãËÆºõ¿ÉÒÔ¿³¿ª(chop)ËüÃÇ¡£\n",
-                "¾£¼¬": "ÕâÀï¾£¼¬(bush)ÃÜ²¼£¬µ«ÄãËÆºõ¿ÉÒÔ¿³¿ª(chop)ËüÃÇ¡£\n"
+                "bush": "è¿™é‡Œè†æ£˜(bush)å¯†å¸ƒï¼Œä½†ä½ ä¼¼ä¹å¯ä»¥ç å¼€(chop)å®ƒä»¬ã€‚\n",
+                "è†æ£˜": "è¿™é‡Œè†æ£˜(bush)å¯†å¸ƒï¼Œä½†ä½ ä¼¼ä¹å¯ä»¥ç å¼€(chop)å®ƒä»¬ã€‚\n"
 
         ]) );
 
@@ -37,35 +37,35 @@ int do_cut(string arg)
         object me;
         if(!arg || arg=="")
         {
-                write("ÄãÒª¿³¿ªÊ²Ã´£¿\n");
+                write("ä½ è¦ç å¼€ä»€ä¹ˆï¼Ÿ\n");
                 return 1;
         }
-        if( arg == "bush" || arg == "¾£¼¬" )
+        if( arg == "bush" || arg == "è†æ£˜" )
 	{
 	me = this_player();
 	obj = me->query_temp("weapon");
 	if( !obj ) 
 	{
-	write("Äã¿Õ×ÅÊÖ£¬ÔõÃ´¿³£¿\n");
+	write("ä½ ç©ºç€æ‰‹ï¼Œæ€ä¹ˆç ï¼Ÿ\n");
 	return 1;
 	}
 	if( obj->query("jungle"))
 	{
 	if( !query("exits/south") ) {
         set("exits/south", __DIR__"zhaoze1");
-	message_vision(sprintf("$NÓÃÊÖÖĞµÄ%s¿³³öÒ»ÌõÏòÄÏµÄÂ·£®\n",obj->name()),
+	message_vision(sprintf("$Nç”¨æ‰‹ä¸­çš„%sç å‡ºä¸€æ¡å‘å—çš„è·¯ï¼\n",obj->name()),
 		me);
 	}
 	else
-	message_vision(sprintf("$NÓÃÊÖÖĞµÄ%s¿³ÏòÂ·±ßµÄ¾£¼¬£®\n",obj->name()),
+	message_vision(sprintf("$Nç”¨æ‰‹ä¸­çš„%sç å‘è·¯è¾¹çš„è†æ£˜ï¼\n",obj->name()),
                 me);
 	}
 	else
- 	message_vision(sprintf("$NÓÃÊÖÖĞµÄ%sÏò´ÔÉúµÄ¾£¼¬Ò»¶ÙÂÒ¿³£®\n",obj->name()),
+ 	message_vision(sprintf("$Nç”¨æ‰‹ä¸­çš„%så‘ä¸›ç”Ÿçš„è†æ£˜ä¸€é¡¿ä¹±ç ï¼\n",obj->name()),
 		me);
 	}
 	else
-	 write("ÄãÒª¿³¿ªÊ²Ã´£¿\n");
+	 write("ä½ è¦ç å¼€ä»€ä¹ˆï¼Ÿ\n");
                 return 1;
 }
 

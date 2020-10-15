@@ -4,11 +4,11 @@ inherit BULLETIN_BOARD;
 #include <ansi.h>
 void create()
 {
-	set_name( GRN "ÅÌÁúÄ¦ÌìÖù" NOR, ({ "stone" }) );
+	set_name( GRN "ç›˜é¾™æ‘©å¤©æŸ±" NOR, ({ "stone" }) );
 	set("location", "/d/suburb/fy/fy/fysquare");
 	set("board_id", "fysquare_b");
-	set("long",	"ÕâÊÇÒ»ÌõÊ¯Öù£¬Ê¯ÖùÉÏ¿Ì×ÅÒ»Ìõ¾ÅÍ·Áú¡£ÁúÊ×
-ÏòËÄÃæÉìÕ¹£¬ºêÎ°×³¹Û¡£\n" );
+	set("long",	"è¿™æ˜¯ä¸€æ¡çŸ³æŸ±ï¼ŒçŸ³æŸ±ä¸Šåˆ»ç€ä¸€æ¡ä¹å¤´é¾™ã€‚é¾™é¦–
+å‘å››é¢ä¼¸å±•ï¼Œå®ä¼Ÿå£®è§‚ã€‚\n" );
 	setup();
 	set("capacity", 49);
 	replace_program(BULLETIN_BOARD);

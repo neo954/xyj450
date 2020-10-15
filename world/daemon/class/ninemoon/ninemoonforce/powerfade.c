@@ -11,14 +11,14 @@ int exert(object me, object target, int amount)
         int skill;
 
         if( target != me ) return 
-notify_fail("你只能用九阴心经压制自己的杀气。\n");
+notify_fail("浣犲彧鑳界敤涔濋槾蹇冪粡鍘嬪埗鑷繁鐨勬潃姘斻�俓n");
 
         if( (int)me->query("force") < 100 )     return 
-notify_fail("你的内力不够。\n");
+notify_fail("浣犵殑鍐呭姏涓嶅銆俓n");
         if( me->query_temp("powerup") ) return 
-notify_fail("你已经在运功中了。\n");
+notify_fail("浣犲凡缁忓湪杩愬姛涓簡銆俓n");
         if( (int)me->query("bellicosity") <= 0 )
-                return notify_fail("你现在毫无杀气。\n");
+                return notify_fail("浣犵幇鍦ㄦ鏃犳潃姘斻�俓n");
 
         skill = me->query_skill("force");
 
@@ -27,7 +27,7 @@ notify_fail("你已经在运功中了。\n");
         me->receive_damage("sen", 100);
 
         message_vision(
-                HIC "$N双眼微合，施展九阴心经，放慢呼吸，开始收敛自己的阴气 
+                HIC "$N鍙岀溂寰悎锛屾柦灞曚節闃村績缁忥紝鏀炬參鍛煎惛锛屽紑濮嬫敹鏁涜嚜宸辩殑闃存皵 
 ....\n" NOR, me);
 
         if( me->is_fighting()
@@ -43,6 +43,6 @@ void remove_effect(object me, int amount)
         me->add_temp("apply/dodge", - amount);
         me->add_temp("apply/damage", - amount);
         me->delete_temp("powerup");
-        tell_object(me, "你的九阴心法运行完毕，将内力收回丹田。\n");
+        tell_object(me, "浣犵殑涔濋槾蹇冩硶杩愯瀹屾瘯锛屽皢鍐呭姏鏀跺洖涓圭敯銆俓n");
 }
  

@@ -4,10 +4,10 @@
 inherit ROOM;
 void create()
 {
-        set("short", "ʯ������");
+        set("short", "石峰狭道");
         set("long", @LONG
-�磬�����ɳ�����������ȼ䣬��ƽ����һ�����ع���֮�⣬��ɽ
-���������һ�ߡ����������ȼ䣬������ɳ��ȴ����Ҳ�Ʋ����ˡ�
+风，卷起黄沙，迷漫在狭谷间，更平添了一种凄秘诡谲之意，两山
+夹立，天仅一线。人行在狭谷间，但见黄沙，却连天也瞧不见了。
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */

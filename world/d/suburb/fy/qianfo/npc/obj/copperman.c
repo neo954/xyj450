@@ -4,15 +4,15 @@
 inherit ITEM;
 void create()
 {
-    set_name( "»ëÉí²¼Âú¾­ÂçÍ¼µÄÍ­ÈË", ({ "copperman","man"  }) );
-    set("unit", "¸ö");
+    set_name( "æµ‘èº«å¸ƒæ»¡ç»ç»œå›¾çš„é“œäºº", ({ "copperman","man"  }) );
+    set("unit", "ä¸ª");
     set("no_get",1);
     set("value",20);
     set("long","
-ÕâÊÇÒ»¸ö»ëÉí²¼Âú¾­ÂçÍ¼µÄÍ­ÈË£¬ÔÚÍ­ÈËµÄĞÄ£¨£è£å£á£ò£ô£©£¬
-¸Î£¨£ì£é£ö£å£ò£©£¬Î¸£¨£ó£ô£ï£í£á£ã£è£©£¬·Î£¨£ì£õ£î£ç£©£¬
-Éö£¨£ë£é£ä£î£å£ù£©µÄ²¿Î»¸÷ÓĞÒ»Ğ¡¿×£¬ÔÚÍ­ÈËµÄµ¤ÌïÖ®´¦»¹ÓĞ
-¸öºÜÉîµÄÕÆÓ¡£¨£í£á£ò£ë£©£®
+è¿™æ˜¯ä¸€ä¸ªæµ‘èº«å¸ƒæ»¡ç»ç»œå›¾çš„é“œäººï¼Œåœ¨é“œäººçš„å¿ƒï¼ˆï½ˆï½…ï½ï½’ï½”ï¼‰ï¼Œ
+è‚ï¼ˆï½Œï½‰ï½–ï½…ï½’ï¼‰ï¼Œèƒƒï¼ˆï½“ï½”ï½ï½ï½ï½ƒï½ˆï¼‰ï¼Œè‚ºï¼ˆï½Œï½•ï½ï½‡ï¼‰ï¼Œ
+è‚¾ï¼ˆï½‹ï½‰ï½„ï½ï½…ï½™ï¼‰çš„éƒ¨ä½å„æœ‰ä¸€å°å­”ï¼Œåœ¨é“œäººçš„ä¸¹ç”°ä¹‹å¤„è¿˜æœ‰
+ä¸ªå¾ˆæ·±çš„æŒå°ï¼ˆï½ï½ï½’ï½‹ï¼‰ï¼
 \n");
     set_weight(5000);
 }
@@ -27,7 +27,7 @@ int closepath()
         env = environment(this_object());
         if( !env->query("exits/north") ) return 1;
         message("vision",
-"Í­ÈËÓÖ¶¯ÁËÆğÀ´£¬×ª»Øµ½Ô­À´µÄÎ»×Ó£®£®£®\n",
+"é“œäººåˆåŠ¨äº†èµ·æ¥ï¼Œè½¬å›åˆ°åŸæ¥çš„ä½å­ï¼ï¼ï¼\n",
                 env );
              env->delete("exits/north");
 }
@@ -38,7 +38,7 @@ int open_path()
         if( !env->query("exits/north"))
         {
         env->set("exits/north","/d/suburb/fy/qianfo/tianwang");
-	message("vision","Í­ÈËÑÛ¾¦ºöÈ»Õö¿ª£¬¶¯ÁËÆğÀ´£¬Â¶³öÁËÉíºóµÄ°µµÀ£¡£¡\n",env);
+	message("vision","é“œäººçœ¼ç›å¿½ç„¶çå¼€ï¼ŒåŠ¨äº†èµ·æ¥ï¼Œéœ²å‡ºäº†èº«åçš„æš—é“ï¼ï¼\n",env);
         call_out("closepath",5);
 
         }
@@ -58,23 +58,23 @@ int check_needles()
 	inv = all_inventory(liver);
 	if( sizeof(inv) != 1) return 0;
 	green = inv[0];
-	if((string)green->query("name") != "ÂÌÉ«µÄÏ¸Õë") return 0;
+	if((string)green->query("name") != "ç»¿è‰²çš„ç»†é’ˆ") return 0;
         inv = all_inventory(kidney);
         if( sizeof(inv) != 1) return 0;
         black = inv[0];
-        if((string)black->query("name") != "ºÚÉ«µÄÏ¸Õë") return 0;
+        if((string)black->query("name") != "é»‘è‰²çš„ç»†é’ˆ") return 0;
         inv = all_inventory(stomach);
         if( sizeof(inv) != 1) return 0;
         yellow= inv[0];
-        if((string)yellow->query("name") != "»ÆÉ«µÄÏ¸Õë") return 0;
+        if((string)yellow->query("name") != "é»„è‰²çš„ç»†é’ˆ") return 0;
         inv = all_inventory(heart);
         if( sizeof(inv) != 1) return 0;
         red= inv[0];
-        if((string)red->query("name") != "ºìÉ«µÄÏ¸Õë") return 0;
+        if((string)red->query("name") != "çº¢è‰²çš„ç»†é’ˆ") return 0;
         inv = all_inventory(lung);
         if( sizeof(inv) != 1) return 0;
         white= inv[0];
-        if((string)white->query("name") != "°×É«µÄÏ¸Õë") return 0;
+        if((string)white->query("name") != "ç™½è‰²çš„ç»†é’ˆ") return 0;
 // now we have everything, let's open path! and reset this room;
 	red->move(env); destruct(red);
         green->move(env); destruct(green);
@@ -88,14 +88,14 @@ int do_touch(string arg)
 {
         object me;
         if( !arg ) return 0;
-        if( arg != "ÕÆÓ¡" && arg != "mark") return 0;
+        if( arg != "æŒå°" && arg != "mark") return 0;
         me = this_player();
         if((int) me->query("force") < 50) {
-                write("ÄãµÄÄÚÁ¦²»¹»£¡\n"); return 1;}
+                write("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼\n"); return 1;}
         me->add("force",-50);
-        message_vision("$N½«Ò»¹ÉÄÚÁ¦ËÍÈëÍ­ÈËÌåÄÚ£®£®£®\n",me);
+        message_vision("$Nå°†ä¸€è‚¡å†…åŠ›é€å…¥é“œäººä½“å†…ï¼ï¼ï¼\n",me);
         if( check_needles() ) open_path();
         else
-        message_vision("ÔÚ$NÆøÁ¦ÒÑ½ßµÄË²¼ä£¬Í­ÈËÑÛ¾¦ËÆºõ½«ÒªÕö¿ª£¡£¡\n",me);
+        message_vision("åœ¨$Næ°”åŠ›å·²ç«­çš„ç¬é—´ï¼Œé“œäººçœ¼ç›ä¼¼ä¹å°†è¦çå¼€ï¼ï¼\n",me);
         return 1;
 }

@@ -10,16 +10,16 @@ int main(object me, string arg)
 	seteuid(getuid());
 
 	if( me->is_busy() )
-		return notify_fail("( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬²»ÄÜÊ©Õ¹ÉñÍ¨¡£)\n");
+		return notify_fail("( ä½ ä¸Šä¸€ä¸ªåŠ¨ä½œè¿˜æ²¡æœ‰å®Œæˆï¼Œä¸èƒ½æ–½å±•ç¥é€šã€‚)\n");
 
 	if( environment(me)->query("no_magic") )
-		return notify_fail("ÕâÀïÎŞ·¨Ê¹ÓÃÉñÍ¨¡£\n");
+		return notify_fail("è¿™é‡Œæ— æ³•ä½¿ç”¨ç¥é€šã€‚\n");
 
-	if( !arg ) return notify_fail("Ö¸Áî¸ñÊ½£ºconjure <ÉñÍ¨> [on <Ä¿±ê>]\n");
+	if( !arg ) return notify_fail("æŒ‡ä»¤æ ¼å¼ï¼šconjure <ç¥é€š> [on <ç›®æ ‡>]\n");
 	if( sscanf(arg, "%s on %s", spl, trg)==2 ) {
 		target = present(trg, environment(me));
 		if( !target ) target = present(trg, me);
-		if( !target ) return notify_fail("ÕâÀïÃ»ÓĞ " + trg + "¡£\n");
+		if( !target ) return notify_fail("è¿™é‡Œæ²¡æœ‰ " + trg + "ã€‚\n");
 	} else {
 		spl = arg;
 		target = 0;
@@ -30,16 +30,16 @@ int main(object me, string arg)
 	if( stringp(spells = me->query_skill_mapped("magic")) )
 		return (int)SKILL_D(spells)->conjure_magic(me, spl, target);
 		
-	return notify_fail("ÄãÇëÏÈÓÃ enable Ö¸ÁîÑ¡ÔñÄãÒªÊ¹ÓÃµÄÉñÍ¨Ïµ¡£\n");
+	return notify_fail("ä½ è¯·å…ˆç”¨ enable æŒ‡ä»¤é€‰æ‹©ä½ è¦ä½¿ç”¨çš„ç¥é€šç³»ã€‚\n");
 }
 
 int help (object me)
 {
         write(@HELP
-Ö¸Áî¸ñÊ½£ºconjure <·¨ÊõÃû³Æ> [on <¶ÔÏó>]
+æŒ‡ä»¤æ ¼å¼ï¼šconjure <æ³•æœ¯åç§°> [on <å¯¹è±¡>]
  
-Ê©·¨£¬Äã±ØĞèÒªÖ¸¶¨<·¨ÊõÃû³Æ>£¬<¶ÔÏó>Ôò¿ÉÓĞ¿ÉÎŞ¡£
-ÔÚÄãÊ¹ÓÃÄ³Ò»¸ö·¨ÊõÖ®Ç°£¬Äã±ØĞëÏÈÓÃ enable Ö¸ÁîÀ´Ö¸¶¨ÄãÒªÊ¹ÓÃµÄ·¨ÊõÏµ¡£
+æ–½æ³•ï¼Œä½ å¿…éœ€è¦æŒ‡å®š<æ³•æœ¯åç§°>ï¼Œ<å¯¹è±¡>åˆ™å¯æœ‰å¯æ— ã€‚
+åœ¨ä½ ä½¿ç”¨æŸä¸€ä¸ªæ³•æœ¯ä¹‹å‰ï¼Œä½ å¿…é¡»å…ˆç”¨ enable æŒ‡ä»¤æ¥æŒ‡å®šä½ è¦ä½¿ç”¨çš„æ³•æœ¯ç³»ã€‚
  
 HELP
         );

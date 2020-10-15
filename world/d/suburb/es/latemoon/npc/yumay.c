@@ -4,12 +4,12 @@ void create()
 {
 	object ob;
 
-    set_name("À¶ÓêÃ·", ({ "yu-may","yumay","may" }) );
-	set("gender", "Å®ÐÔ" );
+    set_name("è“é›¨æ¢…", ({ "yu-may","yumay","may" }) );
+	set("gender", "å¥³æ€§" );
 	set("age",18);
 	set("long", @TEXT
-À¶ÓêÃ·ÊÇÍíÔÂ×¯Ö÷À¶Ö¹Æ¼µÄÑøÅ®£¬ÓÉÓÚ×¯Ö÷²»ÐÅÈÎÄÐ×Ó£¬Òò´Ë
-ÍíÔÂ×¯½Ó´ýÍâ±öµÄ¹¤×÷ÏòÀ´ÓÉËý¸ºÔð¡£
+è“é›¨æ¢…æ˜¯æ™šæœˆåº„ä¸»è“æ­¢èçš„å…»å¥³ï¼Œç”±äºŽåº„ä¸»ä¸ä¿¡ä»»ç”·å­ï¼Œå› æ­¤
+æ™šæœˆåº„æŽ¥å¾…å¤–å®¾çš„å·¥ä½œå‘æ¥ç”±å¥¹è´Ÿè´£ã€‚
 TEXT
 );
 	set("per", 30);
@@ -29,22 +29,22 @@ TEXT
 
 	set("chat_chance", 7);
 	set("chat_msg", ({
-        "À¶ÓêÃ·Î¢Ð¦ÖøËµµÀ£ºÎÒÃÇÍíÔÂ×¯ÊÇ¡º ÒÔÎè»áÓÑ£¬ÒÔÉñ»»¼¼ ¡»\n",
-        "À¶ÓêÃ·¿´ÄãÒ»Á³ÒÉ»ó£¡Ð¦ÖøËµ£ºÎÒ½ÌÄãÌøÒ»Çú¡ºÎ÷³öÑô¹Ø¡»ºÃÂð?\n",
-		"À¶ÓêÃ·Î¢Ð¦ÖøËµµÀ£ºÎÒÌøÖ§Îè¸øÄú¿´ºÃ²»ºÃ£¿\n",
-        "À¶ÓêÃ·Î¢Ð¦ÖøËµµÀ£ºÎÒµÄÎèÌøµÃ²»ºÃ£¬´ý»á¶ùÎÒÇë·¼ç±ÌøÎè¸øÄú¿´£¬±ð×ßÔ¶à¸¡£\n"
+        "è“é›¨æ¢…å¾®ç¬‘è‘—è¯´é“ï¼šæˆ‘ä»¬æ™šæœˆåº„æ˜¯ã€Ž ä»¥èˆžä¼šå‹ï¼Œä»¥ç¥žæ¢æŠ€ ã€\n",
+        "è“é›¨æ¢…çœ‹ä½ ä¸€è„¸ç–‘æƒ‘ï¼ç¬‘è‘—è¯´ï¼šæˆ‘æ•™ä½ è·³ä¸€æ›²ã€Žè¥¿å‡ºé˜³å…³ã€å¥½å—?\n",
+		"è“é›¨æ¢…å¾®ç¬‘è‘—è¯´é“ï¼šæˆ‘è·³æ”¯èˆžç»™æ‚¨çœ‹å¥½ä¸å¥½ï¼Ÿ\n",
+        "è“é›¨æ¢…å¾®ç¬‘è‘—è¯´é“ï¼šæˆ‘çš„èˆžè·³å¾—ä¸å¥½ï¼Œå¾…ä¼šå„¿æˆ‘è¯·èŠ³ç»«è·³èˆžç»™æ‚¨çœ‹ï¼Œåˆ«èµ°è¿œå–”ã€‚\n"
 	}) );
 	set("inquiry", ([
-		"Î÷³öÑô¹Ø" : "¡ºÎ÷³öÑô¹Ø¡»ÊÇÒ»ÖÖ»ÃÓ°Ê½Îè²½¡£¿ÉÒÔÒÆÐÎ»»Ó°¡£\n",
-        "Ñ§Îè" : "À´!ÎÒ½ÌÄã...¡ºÎ÷³öÑô¹Ø¡»(dancing out)ÊÇ ..... \n" +
-               "¾­¹ýÓêÃ·Ö¸µ¼ºóÄã½¥½¥¶®ÁË! \n",
-		"Îè" : "ÎÒ»áµÄÎèÊÇÊôÓÚ¡¸»ÃÓ°Ê½Îè²½¡¹¡£\n",
-		"·¼ç±" : "ËýÊÇ¸ö¿É°®µÄÅ®º¢¡£²»¹ýÓÐµãÈÎÐÔ£¬ÌýËµËýÌ°Íæ±»¹ØÔÚ \n"+
-                  "½û±ÕÊÒ¡£ÌýËµËý°®ÍæÖñòßòÑÅ¶¡£\n",
-		"ÖñòßòÑ" : "×¯ÄÚÓÐÈË»áÓÃÖñ×Ó×÷³É²»Í¬ÎïÆ·¡£\n",
-        "²×º£ÁúÒ÷" : "ÊÇÒ»ÖÖÊ§´«ÒÔ¾ÃµÄ¡¸º®¹ÈÁúÎè¡¹\n",
+		"è¥¿å‡ºé˜³å…³" : "ã€Žè¥¿å‡ºé˜³å…³ã€æ˜¯ä¸€ç§å¹»å½±å¼èˆžæ­¥ã€‚å¯ä»¥ç§»å½¢æ¢å½±ã€‚\n",
+        "å­¦èˆž" : "æ¥!æˆ‘æ•™ä½ ...ã€Žè¥¿å‡ºé˜³å…³ã€(dancing out)æ˜¯ ..... \n" +
+               "ç»è¿‡é›¨æ¢…æŒ‡å¯¼åŽä½ æ¸æ¸æ‡‚äº†! \n",
+		"èˆž" : "æˆ‘ä¼šçš„èˆžæ˜¯å±žäºŽã€Œå¹»å½±å¼èˆžæ­¥ã€ã€‚\n",
+		"èŠ³ç»«" : "å¥¹æ˜¯ä¸ªå¯çˆ±çš„å¥³å­©ã€‚ä¸è¿‡æœ‰ç‚¹ä»»æ€§ï¼Œå¬è¯´å¥¹è´ªçŽ©è¢«å…³åœ¨ \n"+
+                  "ç¦é—­å®¤ã€‚å¬è¯´å¥¹çˆ±çŽ©ç«¹èœ»èœ“å“¦ã€‚\n",
+		"ç«¹èœ»èœ“" : "åº„å†…æœ‰äººä¼šç”¨ç«¹å­ä½œæˆä¸åŒç‰©å“ã€‚\n",
+        "æ²§æµ·é¾™åŸ" : "æ˜¯ä¸€ç§å¤±ä¼ ä»¥ä¹…çš„ã€Œå¯’è°·é¾™èˆžã€\n",
 	]));
-	create_family("ÍíÔÂ×¯", 3, "´óµÜ×Ó");
+	create_family("æ™šæœˆåº„", 3, "å¤§å¼Ÿå­");
 
 	setup();
 	ob = carry_object(__DIR__"obj/needle");
@@ -71,22 +71,22 @@ void greeting(object ob)
 	if( !ob || environment(ob)!=environment() ) return;
 	switch( random(2) ) {
 		case 0:
-			say( "ÓêÃ·¶ÔÄãÎ¢Ð¦£¬ºÍÉÆµÄ¶ÔÄãËµ£º\n  ÕâÎ»" + 
+			say( "é›¨æ¢…å¯¹ä½ å¾®ç¬‘ï¼Œå’Œå–„çš„å¯¹ä½ è¯´ï¼š\n  è¿™ä½" + 
 				RANK_D->query_respect(ob)
-				+ "£¬ÄãºÃ£¡»¶Ó­À´µ½ÍíÔÂ×¯¡£Çë×ø£¡\n");
+				+ "ï¼Œä½ å¥½ï¼æ¬¢è¿Žæ¥åˆ°æ™šæœˆåº„ã€‚è¯·åï¼\n");
 			break;
 		case 1:
             {
-			say( "ÓêÃ·¶ÔÄãÎ¢Ð¦£¬ÏËÏ¸µÄË«ÊÖÅõÖø²è£¬\n ËµµÀ£ºÕâÎ»" +
+			say( "é›¨æ¢…å¯¹ä½ å¾®ç¬‘ï¼Œçº¤ç»†çš„åŒæ‰‹æ§è‘—èŒ¶ï¼Œ\n è¯´é“ï¼šè¿™ä½" +
 				RANK_D->query_respect(ob)
-				+ "£¬ÄãºÃ£¡»¶Ó­À´µ½ÍíÔÂ×¯¡£ÇëÓÃ²è£¡\n");
-             if ( ob->query_temp("latemoon/²è") ) 
+				+ "ï¼Œä½ å¥½ï¼æ¬¢è¿Žæ¥åˆ°æ™šæœˆåº„ã€‚è¯·ç”¨èŒ¶ï¼\n");
+             if ( ob->query_temp("latemoon/èŒ¶") ) 
                  command("smile");
                  else  {
                 teacup = new("/d/suburb/es/latemoon/obj/teacup");
                 teacup->move(ob);
-                ob->set_temp("latemoon/²è", 1);
-                say ("ÕâÊÇÉÏµÈ½ðÐù²è!ÄúÆ·³¢Ò»ÏÂ¡£\n");
+                ob->set_temp("latemoon/èŒ¶", 1);
+                say ("è¿™æ˜¯ä¸Šç­‰é‡‘è½©èŒ¶!æ‚¨å“å°ä¸€ä¸‹ã€‚\n");
                    }
             }
 		}

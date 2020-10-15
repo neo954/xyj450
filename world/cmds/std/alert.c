@@ -5,19 +5,19 @@ int main(object me, string arg)
 	object soldier;
 	int strategy,leadership, exp, MAX_GUARD;
 	if ((string)me->query("class") != "official")
-	return notify_fail("你不是朝廷命官，还是自己照顾自己吧！\n");
+	return notify_fail("浣犱笉鏄湞寤峰懡瀹橈紝杩樻槸鑷繁鐓ч【鑷繁鍚э紒\n");
         if( !me->is_fighting() )
-        return notify_fail("好象没有人要杀你！\n");
+        return notify_fail("濂借薄娌℃湁浜鸿鏉�浣狅紒\n");
 	if((int)me->query("sen")< 100)
-	return notify_fail("你的神太差了！\n");
+	return notify_fail("浣犵殑绁炲お宸簡锛乗n");
 	strategy = (int)me->query_skill("strategy");
 	leadership = (int)me->query_skill("leadership");
 	exp = (int)me->query("combat_exp");
 	if(strategy < 10 || leadership < 10)
-	return notify_fail("你兵法和用人之技太差了，没人愿意理你！\n");	
+	return notify_fail("浣犲叺娉曞拰鐢ㄤ汉涔嬫妧澶樊浜嗭紝娌′汉鎰挎剰鐞嗕綘锛乗n");	
 	MAX_GUARD = strategy * leadership / 10000 + 1;
 	if( me->query_temp("max_guard") > MAX_GUARD )
-                return notify_fail("以你现在的官位，你已经受道足够的保护！\n");
+                return notify_fail("浠ヤ綘鐜板湪鐨勫畼浣嶏紝浣犲凡缁忓彈閬撹冻澶熺殑淇濇姢锛乗n");
 	seteuid(getuid());
 	me->receive_damage("sen",100);
 	soldier= new("/obj/npc/danei");
@@ -26,17 +26,17 @@ int main(object me, string arg)
         soldier->set("possessed", me);
         me->add_temp("max_guard",1);
         me->remove_all_killer();
-	message_vision(HIB "\n$N发出一声长求援！\n" NOR, me);	
-	message_vision(HIB "\n$N应声而来！\n" NOR, soldier);
+	message_vision(HIB "\n$N鍙戝嚭涓�澹伴暱姹傛彺锛乗n" NOR, me);	
+	message_vision(HIB "\n$N搴斿０鑰屾潵锛乗n" NOR, soldier);
 	return 1;
 }
 
 int help(object me)
 {
 	write(@HELP
-指令格式：alert
+鎸囦护鏍煎紡锛歛lert
  
-这个指令让官员呼唤高手来保护自己.
+杩欎釜鎸囦护璁╁畼鍛樺懠鍞ら珮鎵嬫潵淇濇姢鑷繁.
  
 HELP
     );

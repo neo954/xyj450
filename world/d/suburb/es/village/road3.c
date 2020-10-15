@@ -4,12 +4,12 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "ÇàÊ¯Ð¡Â·");
+	set("short", "é’çŸ³å°è·¯");
 	set("long", @LONG
-ÕâÊÇÒ»ÌõÍ¨ÏòÒ»¸ö´å×¯µÄÇàÊ¯Ð¡Â·¡£Â·¿ÚÁ¢×ÅÒ»¸öÐ¡ÅÆ×Ó(tablet)£¬
-ÅÆ×Ó¿´ÆðÀ´¾­¹ý³¤Ê±¼äµÄÈÕÉ¹ÓêÁÜ£¬ÒÑÆÆÀÃ²»¿°¡£¶«ÄÏÏòÍûÈ¥ºÃÏñÊÇÆ¬
-¹ÏµØ£¬ÂÌÓÍÓÍµÄÎ÷¹ÏÈÃÄã¸Ð¾õ¸ü¿ÊÁË¡£´ÓÕâÀïÍùÎ÷¾Í½øÁË´å×Ó£¬Ïò¶«µ½
-Èý²æÂ·¿Ú¡£
+è¿™æ˜¯ä¸€æ¡é€šå‘ä¸€ä¸ªæ‘åº„çš„é’çŸ³å°è·¯ã€‚è·¯å£ç«‹ç€ä¸€ä¸ªå°ç‰Œå­(tablet)ï¼Œ
+ç‰Œå­çœ‹èµ·æ¥ç»è¿‡é•¿æ—¶é—´çš„æ—¥æ™’é›¨æ·‹ï¼Œå·²ç ´çƒ‚ä¸å ªã€‚ä¸œå—å‘æœ›åŽ»å¥½åƒæ˜¯ç‰‡
+ç“œåœ°ï¼Œç»¿æ²¹æ²¹çš„è¥¿ç“œè®©ä½ æ„Ÿè§‰æ›´æ¸´äº†ã€‚ä»Žè¿™é‡Œå¾€è¥¿å°±è¿›äº†æ‘å­ï¼Œå‘ä¸œåˆ°
+ä¸‰å‰è·¯å£ã€‚
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -18,7 +18,7 @@ LONG
 ]));
 	set("no_clean_up", 0);
 	set("item_desc", ([
-		"tablet":"ÄãÃãÇ¿·Ö±æ³öÄÇÉÏÃæÄ£ºýµÄ×Ö¼££º¸µ¼ÒÆÂ\n"
+		"tablet":"ä½ å‹‰å¼ºåˆ†è¾¨å‡ºé‚£ä¸Šé¢æ¨¡ç³Šçš„å­—è¿¹ï¼šå‚…å®¶å¡\n"
 	]) );
 	setup();
 	replace_program(ROOM);

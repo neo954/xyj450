@@ -15,11 +15,11 @@ string type() { return "knowledge"; }
 int valid_learn(object me) 
 {
         if( (int)me->query("int") > 25 ) 
-           return  notify_fail("你的天性不适合学习双手互博之术!\n" ) ;
+           return  notify_fail("浣犵殑澶╂�т笉閫傚悎瀛︿範鍙屾墜浜掑崥涔嬫湳!\n" ) ;
 	return 1;
 }
 void do_hubo ( string arg )
 {
-    write( "你全身放松，坐下来开始运功疗伤。\n" );
+    write( "浣犲叏韬斁鏉撅紝鍧愪笅鏉ュ紑濮嬭繍鍔熺枟浼ゃ�俓n" );
     return ;
 }

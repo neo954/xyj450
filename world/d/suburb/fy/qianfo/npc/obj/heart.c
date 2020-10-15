@@ -4,7 +4,7 @@
 inherit ITEM;
 void create()
 {
-	set_name("Í­ÈËµÄĞÄ", ({ "heart" , "ĞÄ", "Í­ÈËµÄĞÄ"}) );
+	set_name("é“œäººçš„å¿ƒ", ({ "heart" , "å¿ƒ", "é“œäººçš„å¿ƒ"}) );
 	set_weight(500);
 	set_max_encumbrance(1);
 	set("no_get", 1);
@@ -12,8 +12,8 @@ void create()
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
-		set("long", "ÕâÊÇÒ»¸öÔÚÍ­ÈËĞÄ¿Ú£¬ÕëÑÛ´óĞ¡°ãµÄÒ»¸ö¿×¡£\n");
+		set("unit", "ä¸ª");
+		set("long", "è¿™æ˜¯ä¸€ä¸ªåœ¨é“œäººå¿ƒå£ï¼Œé’ˆçœ¼å¤§å°èˆ¬çš„ä¸€ä¸ªå­”ã€‚\n");
 		set("value", 1);
 	}
 }

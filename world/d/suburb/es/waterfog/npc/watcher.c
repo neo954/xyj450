@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("Ë®ÑÌ¸óË¾ÊÂ", ({ "waterfog watcher", "watcher" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("æ°´çƒŸé˜å¸äº‹", ({ "waterfog watcher", "watcher" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 34);
-	set("long", "Õâ¸öÈË¿´ÆğÀ´Ê®·ÖºÍ°ª¿ÉÇ×£¬Ò»Ë«ÑÛ¾¦¾¼¾¼ÓĞÉñ¡£\n");
+	set("long", "è¿™ä¸ªäººçœ‹èµ·æ¥ååˆ†å’Œè”¼å¯äº²ï¼Œä¸€åŒçœ¼ç›ç‚¯ç‚¯æœ‰ç¥ã€‚\n");
 
 	set("attitude", "peaceful");
 	set("combat_exp", 60000);

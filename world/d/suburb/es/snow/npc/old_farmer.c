@@ -4,17 +4,17 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÀÏÅ©·ò", ({ "old farmer", "farmer" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("è€å†œå¤«", ({ "old farmer", "farmer" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 63);
-	set("long", "Äã¿´µ½Ò»Î»ÃæÉ«÷îºÚµÄÅ©·ò¡£\n");
+	set("long", "ä½ çœ‹åˆ°ä¸€ä½é¢è‰²é»é»‘çš„å†œå¤«ã€‚\n");
 	set("combat_exp", 20);
 	set("attitude", "friendly");
 	set("env/wimpy", 60);
 	set("chat_chance_combat", 50 );
 	set("chat_msg_combat", ({
-		"Å©·ò½ĞµÀ£ºÉ±ÈËÄÄ£¡É±ÈËÄÄ£¡\n",
-		"Å©·ò½ĞµÀ£ºÓĞÍÁ·ËÄÄ£¡¹âÌì»¯ÈÕÏÂ´ò½ÙÄÄ£¡\n",
+		"å†œå¤«å«é“ï¼šæ€äººå“ªï¼æ€äººå“ªï¼\n",
+		"å†œå¤«å«é“ï¼šæœ‰åœŸåŒªå“ªï¼å…‰å¤©åŒ–æ—¥ä¸‹æ‰“åŠ«å“ªï¼\n",
 		(: command, "surrender" :),
 	}) );
 	setup();

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // celestial.c
@@ -12,16 +12,16 @@ int valid_learn(object me)
 //remove shaqi require.2/15
 /*
         if( (int)me->query("bellicosity") < (int)me->query_skill("tonsillit") * 40 )
-                return notify_fail("ÄãµÄÉ±Æø²»¹»£¬ÎŞ·¨ÁìÎò¸ü¸ßÉîµÄÉãÆø¾÷¡£\n");
+                return notify_fail("ä½ çš„æ€æ°”ä¸å¤Ÿï¼Œæ— æ³•é¢†æ‚Ÿæ›´é«˜æ·±çš„æ‘„æ°”è¯€ã€‚\n");
 */
    if( (int)me->query_skill("tonsillit", 1) >= 250 )
-     return notify_fail("ÄãµÄÆøÁ¿ÓĞÏŞ£¬¶ÔÉãÆø¾÷ÒÑÁìÎòµ½ÁË¼«ÏŞ¡£\n");
+     return notify_fail("ä½ çš„æ°”é‡æœ‰é™ï¼Œå¯¹æ‘„æ°”è¯€å·²é¢†æ‚Ÿåˆ°äº†æé™ã€‚\n");
         return 1;
 }
 
 int practice_skill(object me)
 {
-        return notify_fail("ÉãÆø¾÷Ö»ÄÜÓÃÑ§Ï°»òÓ¦ÓÃÖĞÌá¸ß£¡\n");
+        return notify_fail("æ‘„æ°”è¯€åªèƒ½ç”¨å­¦ä¹ æˆ–åº”ç”¨ä¸­æé«˜ï¼\n");
 }
 
 string exert_function_file(string func)

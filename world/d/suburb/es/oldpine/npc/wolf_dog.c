@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("狼狗", ({ "wolf dog", "dog" }) );
-        set("race", "野兽");
+        set_name("鐙肩嫍", ({ "wolf dog", "dog" }) );
+        set("race", "閲庡吔");
         set("age", 4);
-        set("long", "一只凶猛的狼狗，一只独眼正恶狠狠地瞪著你。\n");
+        set("long", "涓�鍙嚩鐚涚殑鐙肩嫍锛屼竴鍙嫭鐪兼鎭剁嫚鐙犲湴鐬憲浣犮�俓n");
 	set("attitude", "aggressive");
 
 	set("kee",200);
@@ -15,19 +15,19 @@ void create()
         set("str", 26);
         set("cor", 30);
 
-        set("limbs", ({ "头部", "身体", "前脚", "后脚", "尾巴" }) );
+        set("limbs", ({ "澶撮儴", "韬綋", "鍓嶈剼", "鍚庤剼", "灏惧反" }) );
         set("verbs", ({ "bite", "claw" }) );
 
         set("combat_exp", 10000);
 
         set("chat_chance", 15);
         set("chat_msg", ({
-        	"狼狗用一只独眼恶狠狠地瞪著你。\n"
+        	"鐙肩嫍鐢ㄤ竴鍙嫭鐪兼伓鐙犵嫚鍦扮灙钁椾綘銆俓n"
         }) );
 
         set("chat_msg_combat", ({
-                "狼狗大声吠叫：汪！汪！汪！\n",
-                "狼狗突然跳了起来，口中乱咬，向你扑来。\n"
+                "鐙肩嫍澶у０鍚犲彨锛氭豹锛佹豹锛佹豹锛乗n",
+                "鐙肩嫍绐佺劧璺充簡璧锋潵锛屽彛涓贡鍜紝鍚戜綘鎵戞潵銆俓n"
         }) );
 
         set_temp("apply/attack", 45);

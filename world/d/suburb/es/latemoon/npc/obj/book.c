@@ -3,19 +3,19 @@ inherit ITEM;
 
 void create()
 {
-         set_name(HIW "ÎèÇúÆ×" NOR, ({ "dance book","book" }));
+         set_name(HIW "èˆžæ›²è°±" NOR, ({ "dance book","book" }));
         set_weight(600);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¾í");
+                set("unit", "å·");
                 set("long",
                         
-"ÕâÊÇÒ»¾íÓÉÉÏµÈË¿³ñ±à³É£¬ÒÔÏæÐå×÷³ÉµÄÎèÇúÍ¼¡£ÉÏÓÐ¼ÇÔØÒ»Ð©ÎèÇú \n"
-"Ã¿Ò»Çú¶¼ÓÐËü¶ÀÌØµÄ·ç¸ñÓëÄÚº­¡£Ò»·ù·ùÐþÌìÓñÅ®ôæÈ»ÆðÎè£¬Ê®·Ö×³¹Û¡£\n"
- "\n  ÇúÄ¿£º \n \n"
-MAG "  ¹ãÁêÉ¢ \n" "  ´º¹¬Ô¹ \n \n" NOR
-"¶ÔÄã¶øÑÔ»ù±¾Îè²½Äã¿ÉÒÔ²ÎÎò£¬ÖÁÓÚ½Ï¸ßÉî²½·¨ËÆºõÐèÈËÖ¸µ¼ÁË¡£ \n");
+"è¿™æ˜¯ä¸€å·ç”±ä¸Šç­‰ä¸ç»¸ç¼–æˆï¼Œä»¥æ¹˜ç»£ä½œæˆçš„èˆžæ›²å›¾ã€‚ä¸Šæœ‰è®°è½½ä¸€äº›èˆžæ›² \n"
+"æ¯ä¸€æ›²éƒ½æœ‰å®ƒç‹¬ç‰¹çš„é£Žæ ¼ä¸Žå†…æ¶µã€‚ä¸€å¹…å¹…çŽ„å¤©çŽ‰å¥³ç¿©ç„¶èµ·èˆžï¼Œååˆ†å£®è§‚ã€‚\n"
+ "\n  æ›²ç›®ï¼š \n \n"
+MAG "  å¹¿é™µæ•£ \n" "  æ˜¥å®«æ€¨ \n \n" NOR
+"å¯¹ä½ è€Œè¨€åŸºæœ¬èˆžæ­¥ä½ å¯ä»¥å‚æ‚Ÿï¼Œè‡³äºŽè¾ƒé«˜æ·±æ­¥æ³•ä¼¼ä¹Žéœ€äººæŒ‡å¯¼äº†ã€‚ \n");
                 set("value", 1000);
                 set("material", "silk");
                 set("no_drop", 1);
@@ -41,17 +41,17 @@ int do_dance(string arg)
     string name;
     name = (string)this_player()->query("name");
 
-    if( !arg ) return notify_fail("ÄãÒªÌøÊ²Ã´Îè? \n");
+    if( !arg ) return notify_fail("ä½ è¦è·³ä»€ä¹ˆèˆž? \n");
     {
         if ( arg == "home" )
         {
-            message_vision("$NË«ÊÖºÏÕÆ£¬½Å²½ÇáÓ¯¡£Ò»Çú" +
-              HIM "¡º ´º¹¬Ô¹ ¡»" NOR "......\n",this_player() );
+            message_vision("$NåŒæ‰‹åˆæŽŒï¼Œè„šæ­¥è½»ç›ˆã€‚ä¸€æ›²" +
+              HIM "ã€Ž æ˜¥å®«æ€¨ ã€" NOR "......\n",this_player() );
             this_player()->receive_damage("sen",50);
             tell_room(environment(this_player()),
-                 name+"µÄÉíÓ°ÏûÊ§ÔÚ¿ÕÆøÖÐ¡£\n",this_player() );
+                 name+"çš„èº«å½±æ¶ˆå¤±åœ¨ç©ºæ°”ä¸­ã€‚\n",this_player() );
             tell_room("/d/suburb/es/latemoon/latemoon8",
-                 name+"µÄÉíÓ°³öÏÖÔÚÒ»ÇúÆàÃÀµÄÇúµ÷ÖÐ¡£\n",this_player() );
+                 name+"çš„èº«å½±å‡ºçŽ°åœ¨ä¸€æ›²å‡„ç¾Žçš„æ›²è°ƒä¸­ã€‚\n",this_player() );
             this_player()->move("/d/suburb/es/latemoon/latemoon8");
          }
      }

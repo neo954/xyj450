@@ -7,18 +7,18 @@ int exert(object me, object target, int amount)
         int skill;
 
         if( target != me ) return 
-	notify_fail("ÄãÖ»ÄÜÌáÉý×Ô¼ºµÄËÙ¶È¡£\n");
+	notify_fail("ä½ åªèƒ½æå‡è‡ªå·±çš„é€Ÿåº¦ã€‚\n");
 
         if( (int)me->query("force") < 100 )     return 
-	notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
+	notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
         if( (int)me->query_temp("speedup") ) return 
-	notify_fail("ÄãÒÑ¾­ÔÚÔË¹¦ÖÐÁË¡£\n");
+	notify_fail("ä½ å·²ç»åœ¨è¿åŠŸä¸­äº†ã€‚\n");
         skill = me->query_skill("jingyiforce");
-	if(skill < 20) return notify_fail("ÄãµÄ¾»ÒÂÐÄ·¨Ì«²îÁË£¡\n");
+	if(skill < 20) return notify_fail("ä½ çš„å‡€è¡£å¿ƒæ³•å¤ªå·®äº†ï¼\n");
         me->add("force", -100);
         message_vision(
                 HIR 
-"$N°µ°µµØ¾ÛÆøÄýÉñ£¬Õû¸öÈË´¦ÓÚÒ»´¥¼´·¢µÄ×´Ì¬£¡\n" NOR, me);
+"$Næš—æš—åœ°èšæ°”å‡ç¥žï¼Œæ•´ä¸ªäººå¤„äºŽä¸€è§¦å³å‘çš„çŠ¶æ€ï¼\n" NOR, me);
         me->add_temp("apply/agility", skill/20);
         me->set_temp("speedup", 1);
 
@@ -34,6 +34,6 @@ void remove_effect(object me, int amount)
 {
         me->add_temp("apply/agility", - amount);
         me->delete_temp("speedup");
-        tell_object(me, "ÄãµÄ¾»ÒÂÐÄ·¨ÔËÐÐÍê±Ï£¬Õû¸öÈËÓÖËÉÐ¸ÁËÏÂÀ´¡£\n");
+        tell_object(me, "ä½ çš„å‡€è¡£å¿ƒæ³•è¿è¡Œå®Œæ¯•ï¼Œæ•´ä¸ªäººåˆæ¾æ‡ˆäº†ä¸‹æ¥ã€‚\n");
 }
  

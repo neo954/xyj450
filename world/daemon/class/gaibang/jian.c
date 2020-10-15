@@ -8,14 +8,14 @@ void consider();
 
 void create()
 {
-	set_name("¼ò³¤ÀÏ", ({"jian zhanglao", "jian", "zhanglao"}));
-	set("title", "Ø¤°ï¾Å´ü³¤ÀÏ");
-	set("nickname", "Ö´·¨³¤ÀÏ");
-	set("gender", "ÄĞĞÔ");
+	set_name("ç®€é•¿è€", ({"jian zhanglao", "jian", "zhanglao"}));
+	set("title", "ä¸å¸®ä¹è¢‹é•¿è€");
+	set("nickname", "æ‰§æ³•é•¿è€");
+	set("gender", "ç”·æ€§");
 	set("age", 50);
 	set("long", 
-		"¼ò³¤ÀÏÊÇØ¤°îµÄÖ´·¨³¤ÀÏ£¬´ú°ïÖ÷Ö´ÕÆ·¨µ¶ÒÔ¼°ÇàÖñÁîµÈ¡£\n"
-		"ËûÏòÀ´¼µ¶ñÈç³ğ£¬µÜ×ÓÖĞÓĞË­·¸¹ı£¬³öÊÖ¾ö²»ÈİÇé¡£\n");
+		"ç®€é•¿è€æ˜¯ä¸é‚¦çš„æ‰§æ³•é•¿è€ï¼Œä»£å¸®ä¸»æ‰§æŒæ³•åˆ€ä»¥åŠé’ç«¹ä»¤ç­‰ã€‚\n"
+		"ä»–å‘æ¥å«‰æ¶å¦‚ä»‡ï¼Œå¼Ÿå­ä¸­æœ‰è°çŠ¯è¿‡ï¼Œå‡ºæ‰‹å†³ä¸å®¹æƒ…ã€‚\n");
 
 	set("attitude", "peaceful");
 	
@@ -35,20 +35,20 @@ void create()
 	set("combat_exp", 100000);
 	set("score", 20000);
 	
-	set_skill("force", 95); // »ù±¾ÄÚ¹¦
-	set_skill("huntian-qigong", 90); // »ìÌìÆø¹¦
-	set_skill("unarmed", 90); // »ù±¾È­½Å
-	set_skill("xianglong-zhang", 85); // ½µÁúÊ®°ËÕÆ
-	set_skill("dodge", 90); // »ù±¾¶ãÉÁ
-	set_skill("xiaoyaoyou", 95); // åĞÒ£ÓÎ
-	set_skill("parry", 85); // »ù±¾ÕĞ¼Ü
-	set_skill("staff", 90); // »ù±¾¹÷ÕÈ
+	set_skill("force", 95); // åŸºæœ¬å†…åŠŸ
+	set_skill("huntian-qigong", 90); // æ··å¤©æ°”åŠŸ
+	set_skill("unarmed", 90); // åŸºæœ¬æ‹³è„š
+	set_skill("xianglong-zhang", 85); // é™é¾™åå…«æŒ
+	set_skill("dodge", 90); // åŸºæœ¬èº²é—ª
+	set_skill("xiaoyaoyou", 95); // é€é¥æ¸¸
+	set_skill("parry", 85); // åŸºæœ¬æ‹›æ¶
+	set_skill("staff", 90); // åŸºæœ¬æ£æ–
 	
 	map_skill("force", "huntian-qigong");
 	map_skill("unarmed", "xianglong-zhang");
 	map_skill("dodge", "xiaoyaoyou");
 	
-	create_family("Ø¤°ï", 18, "¾Å´ü³¤ÀÏ");
+	create_family("ä¸å¸®", 18, "ä¹è¢‹é•¿è€");
 	setup();
 }
 
@@ -60,7 +60,7 @@ void init()
         ::init();
         if (interactive(ob = this_player()) && !is_fighting()) {
 		myfam = (mapping)ob->query("family");
-		if ((!myfam || myfam["family_name"] != "Ø¤°ï") &&
+		if ((!myfam || myfam["family_name"] != "ä¸å¸®") &&
 			(!wizardp(ob))) {
 			remove_call_out("saying");
 			call_out("saying",2,ob);
@@ -73,10 +73,10 @@ void saying(object ob)
         if (!ob || environment(ob) != environment())
                 return;
 
-	message_vision("\n¼ò³¤ÀÏ¿´ÁË$NÒ»ÑÛ£¬ÀäÀäµØËµµ½£º¡°ºé°ïÖ÷ËûÀÏÈË¼ÒËµÎÒ²»¸Ã"
-	    "ËæÒâÔğ´òØ¤°ïµÜ×Ó£¬\nÄãÓÖ²»ÊôÎÒØ¤°ï£¬ÎÒ´òÄã×Ü¿ÉÒÔ°É£¿¡±\n"
-	    "ËµÍêÓÒÍÈÒ»Ì§£¬$NË³ÊÆÓ¦ÁËÒ»ÕĞÇà³ÇÅÉµÄ¡¸Æ¨¹ÉÏòºó£¬Æ½É³ÂäÑãÊ½¡¹"
-	    "£­£­°Èß´\n\n", ob);
+	message_vision("\nç®€é•¿è€çœ‹äº†$Nä¸€çœ¼ï¼Œå†·å†·åœ°è¯´åˆ°ï¼šâ€œæ´ªå¸®ä¸»ä»–è€äººå®¶è¯´æˆ‘ä¸è¯¥"
+	    "éšæ„è´£æ‰“ä¸å¸®å¼Ÿå­ï¼Œ\nä½ åˆä¸å±æˆ‘ä¸å¸®ï¼Œæˆ‘æ‰“ä½ æ€»å¯ä»¥å§ï¼Ÿâ€\n"
+	    "è¯´å®Œå³è…¿ä¸€æŠ¬ï¼Œ$Né¡ºåŠ¿åº”äº†ä¸€æ‹›é’åŸæ´¾çš„ã€Œå±è‚¡å‘åï¼Œå¹³æ²™è½é›å¼ã€"
+	    "ï¼ï¼å­å½\n\n", ob);
 	remove_call_out("kicking");
 	call_out("kicking",1,ob);
 	
@@ -88,11 +88,11 @@ void kicking(object ob)
                 return;
 
 	ob->move("/d/suburb/xkx/city/pomiao");
-	 message("vision","Ö»Ìı¡°àØ¡±µØÒ»Éù£¬½ô½Ó×Å" +  ob->query("name") +
-		"´ÓĞ¡ÃÅÀï·ÉÁË³öÀ´£¬Æ¨¹ÉÉÏÓĞÒ»¸öÇå³şµÄĞ¬Ó¡¡£\n", environment(ob), ob);
+	 message("vision","åªå¬â€œå˜­â€åœ°ä¸€å£°ï¼Œç´§æ¥ç€" +  ob->query("name") +
+		"ä»å°é—¨é‡Œé£äº†å‡ºæ¥ï¼Œå±è‚¡ä¸Šæœ‰ä¸€ä¸ªæ¸…æ¥šçš„é‹å°ã€‚\n", environment(ob), ob);
 }
 
 void attempt_apprentice(object ob)
 {
-	command("say ÀÏ·ò²»ÊÕÍ½µÜ£¬" + RANK_D->query_respect(ob) + "»¹ÊÇÇë»Ø°É¡£");
+	command("say è€å¤«ä¸æ”¶å¾’å¼Ÿï¼Œ" + RANK_D->query_respect(ob) + "è¿˜æ˜¯è¯·å›å§ã€‚");
 }

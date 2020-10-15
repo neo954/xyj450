@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // hell_guard.c
@@ -9,11 +9,11 @@ inherit NPC;
 
 void create()
 {
-   set_name("°×ÎŞ³£", ({"white gargoyle", "gargoyle"}));
-   set("long", "ÕâÊÇÒ»Î»À´×ÔÒõ½çµÄÊØ»¤Éñ£¬×¨ÃÅµ£ÈÎ»¤·¨Ö®Ôğ¡£\n");
+   set_name("ç™½æ— å¸¸", ({"white gargoyle", "gargoyle"}));
+   set("long", "è¿™æ˜¯ä¸€ä½æ¥è‡ªé˜´ç•Œçš„å®ˆæŠ¤ç¥ï¼Œä¸“é—¨æ‹…ä»»æŠ¤æ³•ä¹‹è´£ã€‚\n");
    set("attitude", "friendly");
    set("class", "youling");
-   set("title", "¾Ğ»êÊ¹Õß");
+   set("title", "æ‹˜é­‚ä½¿è€…");
    set("max_gin", 1000);
    set("max_kee", 1000);
    set("max_sen", 1000);
@@ -35,7 +35,7 @@ void create()
 
    set("chat_chance", 15);
    set("chat_msg_combat", ({
-     name() + "ºÈµÀ£ºÄõÕÏ£¡ËæÎÒ¸°ÒõË¾ÊÜÉó°É¡£\n"
+     name() + "å–é“ï¼šå­½éšœï¼éšæˆ‘èµ´é˜´å¸å—å®¡å§ã€‚\n"
    }) );
 
    set_skill("stick", 80);
@@ -72,8 +72,8 @@ int heal_up()
 void leave()
 {
    message("vision", "\n" +
-     HIB + name() + "ËµµÀ£ºË­ÓëÎÒÃÇÒõ¸®×÷¶Ô£¬ÄÇ²»ÊÇ×ÔÌÖ¿à³ÔÂğ£¡\n\n"
-     + name() + "µÄÉíĞÎ·¢³öÓÄ°µµÄÀ¶¹â£¬³ÁÈëµØÏÂ²»¼ûÁË¡£\n\n" NOR, environment(),
+     HIB + name() + "è¯´é“ï¼šè°ä¸æˆ‘ä»¬é˜´åºœä½œå¯¹ï¼Œé‚£ä¸æ˜¯è‡ªè®¨è‹¦åƒå—ï¼\n\n"
+     + name() + "çš„èº«å½¢å‘å‡ºå¹½æš—çš„è“å…‰ï¼Œæ²‰å…¥åœ°ä¸‹ä¸è§äº†ã€‚\n\n" NOR, environment(),
      this_object() );
    destruct(this_object());
 }
@@ -82,7 +82,7 @@ void die()
 
         if( environment() ) {
         command("heng");
-        message("sound", "\n°×ÎŞ³£¿ÚÖĞÍÂ³öÒ»¹ÉºÚÑÌ£¬ºÚÑÌÉ¢ºó£¬ÈË¾¹²»¼ûÁË¡£¡£¡£\n\n", environment());
+        message("sound", "\nç™½æ— å¸¸å£ä¸­åå‡ºä¸€è‚¡é»‘çƒŸï¼Œé»‘çƒŸæ•£åï¼Œäººç«Ÿä¸è§äº†ã€‚ã€‚ã€‚\n\n", environment());
         }
 
         destruct(this_object());

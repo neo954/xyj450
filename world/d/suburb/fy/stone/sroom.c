@@ -3,11 +3,11 @@
 inherit ROOM;
 void create()
 {
-        set("short", "����");
+        set("short", "堂屋");
         set("long", @LONG
-�����ﳱʪ�����������Ӳ���ʮ��խС����ֻ��һ����һ����
-һ�ʣ����Ե��ı���Ȼ���ն���į��Ҳ�ĵ���һյ�µƸ���ư�����
-���ϵĻ���δ���������ϻ�����������
+屋子里潮湿而阴暗，屋子并不十分窄小，但只有一桌，一床，
+一凳．更显得四壁箫然，空洞寂寞．也衬得那一盏孤灯更昏黄暗淡．
+壁上的积尘未除，屋面上还结着蛛网．
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -19,6 +19,6 @@ LONG
         set("valid_startroom", 1);
 
         setup();
-       create_door("south", "խ��", "north", DOOR_CLOSED);
+       create_door("south", "窄门", "north", DOOR_CLOSED);
 
 }

@@ -1,15 +1,15 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 inherit NPC;
 
 void create()
 {
-        set_name("������", ({"bai shiqin", "bai", "shiqin"}));
-        set("gender", "����");
+        set_name("白世卿", ({"bai shiqin", "bai", "shiqin"}));
+        set("gender", "男性");
         set("age", 65);
         set("long",
-"һ�����ľ��������ˣ��������ѧ�ʵ����ӡ�\n");
+"一个文文净净的老人，好象很有学问的样子。\n");
    set("attitude", "friendly");
         set("combat_exp", 1000);
    set("per", 25);
@@ -23,7 +23,7 @@ void create()
 }
 int accept_fight(object me)
 {
-        command("say �Բ�ס��С�϶��Ϲ�ͷ������ѽ��");
+        command("say 对不住，小老二老骨头不禁打呀！");
         return 0;
 }
 void init()
@@ -41,9 +41,9 @@ void greeting(object ob)
         if( !ob || !visible(ob) || environment(ob) != environment() ) return;
         switch( random(1) ) {
                 case 0:
-                        say( "�ϰ�ͷЦ�����˵������λ" +
+                        say( "老白头笑咪咪地说道：这位" +
 RANK_D->query_respect(ob)
-                                + "����д�Ż���д״��ѽ��\n");
+                                + "，是写信还是写状子呀？\n");
                         break;
         }
 }

@@ -3,9 +3,9 @@
 inherit ITEM;
 void create()
 {
-        set_name("¹Ù¸®Í¨Áî",({ "passport" }) );
-        set("long", "ÕâÊÇÒ»Ã¶÷îºÚµÄÁîÅÆ£¬ÉÏÃæ¿ÌÓĞ¹Ù¸®Ó¡ÕÂ¡£\n");
-        set("unit", "Ã¶");
+        set_name("å®˜åºœé€šä»¤",({ "passport" }) );
+        set("long", "è¿™æ˜¯ä¸€æšé»é»‘çš„ä»¤ç‰Œï¼Œä¸Šé¢åˆ»æœ‰å®˜åºœå°ç« ã€‚\n");
+        set("unit", "æš");
         set("base_weight", 200);
         set("no_sell", 1);
 }

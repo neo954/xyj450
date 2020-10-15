@@ -2,13 +2,13 @@
 inherit THROWING;
 void create()
 {
-	set_name("Ã·Ê÷Ó×Ãç", ({ "tree", "plum tree" }) );
+	set_name("æ¢…æ ‘å¹¼è‹—", ({ "tree", "plum tree" }) );
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long","ÓÖÈíÓÖÇáµÄÊ÷Ãç£¬Ò²ĞíÄã¿ÉÒÔÓÃÀ´Ôì£¨£í£á£ë£å£©Ğ©¶«Î÷£®\n");
-		set("unit", "À¦");
-		set("base_unit", "¸ù");
+		set("long","åˆè½¯åˆè½»çš„æ ‘è‹—ï¼Œä¹Ÿè®¸ä½ å¯ä»¥ç”¨æ¥é€ ï¼ˆï½ï½ï½‹ï½…ï¼‰äº›ä¸œè¥¿ï¼\n");
+		set("unit", "æ†");
+		set("base_unit", "æ ¹");
 		set("base_weight", 10000);
 		set("base_value", 1);
 	}
@@ -27,11 +27,11 @@ int do_make()
 {
 	object boat;
 	if(query_amount() < 15)
-	return notify_fail("²Å"+chinese_number(query_amount())+
-	"¸ùÃ·Ê÷Ó×Ãç£¬Ê²Ã´Ò²Ôì²»³öÑ½£®£®£®\n");
+	return notify_fail("æ‰"+chinese_number(query_amount())+
+	"æ ¹æ¢…æ ‘å¹¼è‹—ï¼Œä»€ä¹ˆä¹Ÿé€ ä¸å‡ºå‘€ï¼ï¼ï¼\n");
 	boat = new(__DIR__"boat");
 	if(boat->move(this_player()))
-	write("ÄãÓÃÁéÇÉµÄË«ÊÖÔì³öÁËÒ»Ö»Ğ¡Ä¾ÖÛ¡£\n");
+	write("ä½ ç”¨çµå·§çš„åŒæ‰‹é€ å‡ºäº†ä¸€åªå°æœ¨èˆŸã€‚\n");
 	destruct(this_object());
 	return 1;
 			

@@ -5,15 +5,15 @@ inherit F_FOOD;
 
 void create()
 {
-        string *order=({"Ğ¡°×²Ë", "Ğ¡Çà²Ë", "´óÇà²Ë", "´ó°×²Ë",
-"¾Â²Ë","Çà¶¹","Íã¶¹","ÂÌ¶¹Ãç"});
+        string *order=({"å°ç™½èœ", "å°é’èœ", "å¤§é’èœ", "å¤§ç™½èœ",
+"éŸ­èœ","é’è±†","è±Œè±†","ç»¿è±†è‹—"});
 	set_name(order[random(8)], ({ "vegetable" }) );
 	set_weight(80);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¿Ã¿ÉÈËµÄÇà²Ë\n");
-		set("unit", "¿Ã");
+		set("long", "ä¸€æ£µå¯äººçš„é’èœ\n");
+		set("unit", "æ£µ");
 		set("value", 10);
 		set("food_remaining", 3);
 		set("food_supply", 6);

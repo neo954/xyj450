@@ -5,20 +5,20 @@ inherit BLADE;
 
 void create()
 {
-        set_name( RED "¶àÇéµ¶" NOR, ({ "duoqing blade", "blade" }) );
+        set_name( RED "å¤šæƒ…åˆ€" NOR, ({ "duoqing blade", "blade" }) );
         set_weight(12000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "°Ñ");
+                set("unit", "æŠŠ");
                 set("long",
-                    "ÕâÊÇÒ»°ÑÒ«ÑÛµÄÀûÈĞ¡£\n");
+                    "è¿™æ˜¯ä¸€æŠŠè€€çœ¼çš„åˆ©åˆƒã€‚\n");
 
                 set("value", 20000);
                 set("material", "steel");
                 set("wield_msg",
-                    "Ö»¼û°×¹âÒ»ÏÖ£¬$NµÄÊÖÖĞÒÑ¾­¶àÁËÒ»°Ñ$n¡£\n");
-                set("unequip_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÉíºóµÄµ¶ÇÊ¡£\n");
+                    "åªè§ç™½å…‰ä¸€ç°ï¼Œ$Nçš„æ‰‹ä¸­å·²ç»å¤šäº†ä¸€æŠŠ$nã€‚\n");
+                set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥èº«åçš„åˆ€é˜ã€‚\n");
         }
         init_blade(35);
         setup();

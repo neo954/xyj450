@@ -6,17 +6,17 @@ inherit STAFF;
 
 void create()
 {
-        set_name("×ÏÍ­ìøÕÈ", ({ "brass staff", "staff" }) );
+        set_name("ç´«é“œç¦…æ–", ({ "brass staff", "staff" }) );
         set_weight(20000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ìõ");
-                set("long", "Ò»ÌõÓÖ´ÖÓÖ³¤£¬·Ç³£ÉòÖØµÄ»ÆÍ­ìøÕÈ£¬ÉÏÃæÏâÖøÁù¸öÍ­»·¡£\n");
+                set("unit", "æ¡");
+                set("long", "ä¸€æ¡åˆç²—åˆé•¿ï¼Œéå¸¸æ²ˆé‡çš„é»„é“œç¦…æ–ï¼Œä¸Šé¢é•¶è‘—å…­ä¸ªé“œç¯ã€‚\n");
                 set("value", 1200);
                 set("material", "brass");
-                set("wield_msg", "$NÄÃ³öÒ»¸ù½ğ¹â²ÓÈ»µÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-                set("unwield_msg", "$N·ÅÏÂÊÖÖĞµÄ$n¡£\n");
+                set("wield_msg", "$Næ‹¿å‡ºä¸€æ ¹é‡‘å…‰ç¿ç„¶çš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+                set("unwield_msg", "$Næ”¾ä¸‹æ‰‹ä¸­çš„$nã€‚\n");
         }
 
         init_staff(34);

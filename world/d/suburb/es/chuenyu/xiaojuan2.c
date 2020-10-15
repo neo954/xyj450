@@ -4,15 +4,15 @@ inherit NPC;
 
 void create()
 {
-        set_name("Ğ¡¾ê", ({ "xiao juan","juan" }) );
-        set("title", "ÃñÅ®");
-        set("gender", "Å®ĞÔ" );
+        set_name("å°å¨Ÿ", ({ "xiao juan","juan" }) );
+        set("title", "æ°‘å¥³");
+        set("gender", "å¥³æ€§" );
         set("age", 16);
         set("str", 1);
         set("per", 30);
         set("long", @LONG
-Ğ¡¾êĞÕÁõ£¬ÊÇÕâÀïÁõÀÏÅ©µÄ¶ÀÉúÅ®¡£½ñÄêÊ®ÁùËê£¬ÈË³¤µÄÆ¯ö¦ÓÖ´ó·½¡£
-Ğ¡¾êÒÑ¾­±»ÕÛÄ¥µÄ±éÌåÁÛÉË¡£
+å°å¨Ÿå§“åˆ˜ï¼Œæ˜¯è¿™é‡Œåˆ˜è€å†œçš„ç‹¬ç”Ÿå¥³ã€‚ä»Šå¹´åå…­å²ï¼Œäººé•¿çš„æ¼‚é“åˆå¤§æ–¹ã€‚
+å°å¨Ÿå·²ç»è¢«æŠ˜ç£¨çš„éä½“é³ä¼¤ã€‚
 LONG
 );
         set("max_gin", 500);
@@ -30,7 +30,7 @@ LONG
         
         set("chat_chance_combat", 50);
         set("chat_msg_combat", ({
-"Ğ¡¾êËµµÀ£º°¦£¡ Ã»ÁÏµÀÄãºÍÄÇĞ©»µÈËÊÇÒ»»ïµÄ£¡\n",
+"å°å¨Ÿè¯´é“ï¼šå”‰ï¼ æ²¡æ–™é“ä½ å’Œé‚£äº›åäººæ˜¯ä¸€ä¼™çš„ï¼\n",
         }) );
         
         setup();
@@ -41,7 +41,7 @@ LONG
 
 int accept_fight(object me)
 {
-        command("say Ğ¡Å®×ÓÄÄÀïÊÇÄúµÄ¶ÔÊÖ£¿");
+        command("say å°å¥³å­å“ªé‡Œæ˜¯æ‚¨çš„å¯¹æ‰‹ï¼Ÿ");
         return 0;
 }
 
@@ -51,7 +51,7 @@ void init()
         object ob;
         if( interactive( ob = this_player()))
         remove_call_out("followhim");
-        if((int) ob->query("marks/ÀÏÁõ±¾ÈË") == 1)
+        if((int) ob->query("marks/è€åˆ˜æœ¬äºº") == 1)
         {
         set_leader(0);
         call_out("goaway", 5);
@@ -66,8 +66,8 @@ void messageing()
         object room;
         room = find_object(__DIR__"dungeon");
         if(environment() == room) {
-        command("say ¾ÈÎÒ£¡¾È¾ÈÎÒÑ½£¡");
-        command("emote ½ßÁ¦ÕõÔú£¬½¥½¥´ÓÉşË÷Àï°ÚÍÑ³öÀ´¡­¡­¡£");
+        command("say æ•‘æˆ‘ï¼æ•‘æ•‘æˆ‘å‘€ï¼");
+        command("emote ç«­åŠ›æŒ£æ‰ï¼Œæ¸æ¸ä»ç»³ç´¢é‡Œæ‘†è„±å‡ºæ¥â€¦â€¦ã€‚");
 }
 }
 void followhim(object ob)
@@ -77,7 +77,7 @@ room = find_object(__DIR__"dungeon");
 if(environment() == room)
 if( present(ob, environment()))
 {       set_leader(ob);
-        ob->set("marks/ÀÏÁõ", 1);
+        ob->set("marks/è€åˆ˜", 1);
 }
 }
 

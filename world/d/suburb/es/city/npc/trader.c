@@ -2,10 +2,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÉÌÈË", ({ "trader"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å•†äºº", ({ "trader"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 42);
-        set("long", "ÕâÊÇÒ»Î»´Ó¹ØÍâÀ´µÄÉÌÈË¡£\n");
+        set("long", "è¿™æ˜¯ä¸€ä½ä»å…³å¤–æ¥çš„å•†äººã€‚\n");
         set("combat_exp", 5000);
         set("attitude", "friendly");
         set("env/wimpy", 50);
@@ -15,13 +15,13 @@ void create()
         map_skill("unarmed", "bloodystrike");
         set("chat_chance", 30);
         set("chat_msg", ({
-                "Ê²Ã´ÊÀµÀ£¬¼¸¸ö³ôÇ®¾Í¿ÉÒÔÂò¹Ù×÷¡£\n",
-		"ÕâÄêÍ·£¬ÉúÒâ²»ºÃ×ö°¡£¡\n",
+                "ä»€ä¹ˆä¸–é“ï¼Œå‡ ä¸ªè‡­é’±å°±å¯ä»¥ä¹°å®˜ä½œã€‚\n",
+		"è¿™å¹´å¤´ï¼Œç”Ÿæ„ä¸å¥½åšå•Šï¼\n",
 		(: random_move :),
         }) );
         set("chat_chance_combat", 15);
         set("chat_msg_combat", ({
-		"¹âÌì»¯ÈÕ£¬ÀÊÀÊÇ¬À¤£¬ÄãÒ²Ïë´ò½Ù£¿\n",
+		"å…‰å¤©åŒ–æ—¥ï¼Œæœ—æœ—ä¹¾å¤ï¼Œä½ ä¹Ÿæƒ³æ‰“åŠ«ï¼Ÿ\n",
 		(: random_move :),
         }) );
 

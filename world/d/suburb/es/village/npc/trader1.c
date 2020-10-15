@@ -2,10 +2,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÉÌÈË", ({ "trader"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("å•†äºº", ({ "trader"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 42);
-        set("long", "ÕâÊÇÒ»Î»´Ó¹ØÍâÀ´µÄÉÌÈË¡£\n");
+        set("long", "è¿™æ˜¯ä¸€ä½ä»å…³å¤–æ¥çš„å•†äººã€‚\n");
         set("combat_exp", 80000);
         set("attitude", "friendly");
 //        set("env/wimpy", 50);
@@ -19,12 +19,12 @@ void create()
 
         set("chat_chance", 30);
         set("chat_msg", ({
-                "ÉÌÈËĞÄÓĞÓà¼ÂµØËµµÀ£ºÎÒ¼¸ºõËÀÔÚç²ÔÆÕò°¢Ì©µÄÊÖÖĞ£¡\n",
+                "å•†äººå¿ƒæœ‰ä½™æ‚¸åœ°è¯´é“ï¼šæˆ‘å‡ ä¹æ­»åœ¨ç»®äº‘é•‡é˜¿æ³°çš„æ‰‹ä¸­ï¼\n",
                 (: random_move :),
         }) );
         set("chat_chance_combat", 15);
         set("chat_msg_combat", ({
-                "ÉÌÈËËµµÀ£ºÉ±ÈËÀ²£¡ÄãÄÑµÀ²»ÅÂ¹Ù¸®¼©ÄÃÂğ£¿\n",
+                "å•†äººè¯´é“ï¼šæ€äººå•¦ï¼ä½ éš¾é“ä¸æ€•å®˜åºœç¼‰æ‹¿å—ï¼Ÿ\n",
                 (: random_move :),
         }) );
 

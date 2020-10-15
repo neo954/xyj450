@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÔèÌÃÀÏ°å", ({ "zhtman" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("æ¾¡å ‚è€æ¿", ({ "zhtman" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 42);
-        set("long", "ÕâÊÇÒ»¸öÔèÌÃÀÏ°å\n");
+        set("long", "è¿™æ˜¯ä¸€ä¸ªæ¾¡å ‚è€æ¿\n");
 
         set("combat_exp", 10000);
         set("attitude", "heroism");

@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("Ãí×£", ({ "keeper" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("åº™ç¥", ({ "keeper" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 74);
 	set("long",
-		"Õâ¸öÀÏÈË¿´ÆğÀ´ÆßÊ®¶àËêÁË£¬¿´ÖøËû¡õÙÍµÄÉíÓ°£¬ÄãºöÈ»¾õµÃĞÄÇéÉòÖØÁËÏÂÀ´¡£\n");
+		"è¿™ä¸ªè€äººçœ‹èµ·æ¥ä¸ƒåå¤šå²äº†ï¼Œçœ‹è‘—ä»–â–¡å»çš„èº«å½±ï¼Œä½ å¿½ç„¶è§‰å¾—å¿ƒæƒ…æ²ˆé‡äº†ä¸‹æ¥ã€‚\n");
 	set("combat_exp", 1);
 	set("attitude", "friendly");
 	setup();
@@ -28,14 +28,14 @@ void init()
 void greeting(object ob)
 {
 	if( !ob || !present(ob, environment(this_object())) ) return;
-	say( "Ãí×£ËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-		+ "£¬¾èµãÏã»ğÇ®»ıµãÒõµÂ°É¡£\n");
+	say( "åº™ç¥è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+		+ "ï¼Œæç‚¹é¦™ç«é’±ç§¯ç‚¹é˜´å¾·å§ã€‚\n");
 }
 
 /*int accept_object(object who, object ob)
 {
-	say( "Ãí×£ËµµÀ£ºÕâÎ»" + RANK_D->query_respect(who)
-		+ "£¬Çë°ÑÏãÓÍÇ®Í¶Èë¹¦\µÂÏä¡£\n");
+	say( "åº™ç¥è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(who)
+		+ "ï¼Œè¯·æŠŠé¦™æ²¹é’±æŠ•å…¥åŠŸ\å¾·ç®±ã€‚\n");
 	return 0;
 }*/
 int accept_object(object who, object ob)
@@ -44,15 +44,15 @@ int accept_object(object who, object ob)
 
         val = ob->value();
         if( !val )
-                return notify_fail("Ãí×£²»ÊÕÎïÆ·µÄ¾èÏ×¡£\n");
+                return notify_fail("åº™ç¥ä¸æ”¶ç‰©å“çš„æçŒ®ã€‚\n");
         else if( val > 100 ) {
                 if( (who->query("bellicosity") > 0)
                 &&      (random(val/10) > (int)who->query("kar")) )
                         who->add("bellicosity", -
 (random((int)who->query("kar")) + val/1000) );
         }
-        say( "Ãí×£ËµµÀ£º¶àĞ»ÕâÎ»" + RANK_D->query_respect(who)
-                + "£¬ÉñÃ÷Ò»¶¨»á±£ÓÓÄãµÄ¡£\n");
+        say( "åº™ç¥è¯´é“ï¼šå¤šè°¢è¿™ä½" + RANK_D->query_respect(who)
+                + "ï¼Œç¥æ˜ä¸€å®šä¼šä¿ä½‘ä½ çš„ã€‚\n");
 
         return 1;
 }

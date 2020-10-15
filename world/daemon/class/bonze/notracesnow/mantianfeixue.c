@@ -7,16 +7,16 @@ int perform(object me, object target)
 {
         int skill;
         if( target != me ) return 
-	notify_fail("你只能将［漫天飞雪］用在自己的身上。\n");
+	notify_fail("浣犲彧鑳藉皢锛绘极澶╅闆冀鐢ㄥ湪鑷繁鐨勮韩涓娿�俓n");
         if( (int)me->query("force") < 100 )     return
-        notify_fail("你的内力不够。\n");
+        notify_fail("浣犵殑鍐呭姏涓嶅銆俓n");
         if( (int)me->query_temp("feixue") ) return 
-	notify_fail("你已经在施展［漫天飞雪］了。\n");
+	notify_fail("浣犲凡缁忓湪鏂藉睍锛绘极澶╅闆冀浜嗐�俓n");
 	skill = me->query_skill_eff_lvl("notracesnow");
-	if(skill < 150) return notify_fail("你的踏雪无痕太差了！\n");
+	if(skill < 150) return notify_fail("浣犵殑韪忛洩鏃犵棔澶樊浜嗭紒\n");
 	 me->add("force", -100);
         message_vision( HIR
-"$N行功运气，身行居然缓缓上升，如风中的雪花！\n" NOR, me);
+"$N琛屽姛杩愭皵锛岃韩琛屽眳鐒剁紦缂撲笂鍗囷紝濡傞涓殑闆姳锛乗n" NOR, me);
         me->add_temp("apply/dodge", skill/5);
         me->set_temp("feixue", 1);
         me->start_call_out( (: call_other, __FILE__, "remove_effect", me, 
@@ -29,6 +29,6 @@ void remove_effect(object me, int amount)
 {
         me->add_temp("apply/dodge", - amount);
         me->delete_temp("feixue");
-        tell_object(me, "你的［漫天飞雪］施展完毕，身行稳定了下来。\n");
+        tell_object(me, "浣犵殑锛绘极澶╅闆冀鏂藉睍瀹屾瘯锛岃韩琛岀ǔ瀹氫簡涓嬫潵銆俓n");
 }
  

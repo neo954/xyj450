@@ -1,15 +1,15 @@
 inherit NPC;
 void create()
 {
-        set_name("ÔÆÓÎÉ®ÈË", ({ "bonze" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("äº‘æ¸¸åƒ§äºº", ({ "bonze" }) );
+        set("gender", "ç”·æ€§" );
         set("class", "bonze");
         set("age", 52);
         set("str", 26);
         set("cor", 14);
         set("cps", 29);
         set("int", 25);
-        set("long", "Ò»¸öĞ¦ßäßäµÄÉ®ÈË¶ÔÖøÄãÎ¢Î¢ò¥Ê×¡£\n");
+        set("long", "ä¸€ä¸ªç¬‘å’ªå’ªçš„åƒ§äººå¯¹è‘—ä½ å¾®å¾®é¢”é¦–ã€‚\n");
         set("combat_exp", 6000);
         set("attitude", "friendly");
         set("max_force", 500);
@@ -24,6 +24,6 @@ void create()
 }
 int accept_fight(object me)
 {
-        command("say °¢ÃÖÍÓ·ğ£¡Æ¶É®Îä¹¦µÍÎ¢£¬Ê©Ö÷²»Òª¿ªÕâÖÖÍæĞ¦¡£\n");
+        command("say é˜¿å¼¥é™€ä½›ï¼è´«åƒ§æ­¦åŠŸä½å¾®ï¼Œæ–½ä¸»ä¸è¦å¼€è¿™ç§ç©ç¬‘ã€‚\n");
         return 0;
 }

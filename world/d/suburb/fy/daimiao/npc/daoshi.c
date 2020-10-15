@@ -4,11 +4,11 @@
 inherit NPC;
 void create()
 {
-	string *order=({"ÉÏ²è", "É¨µØ", "ÉÕ·¹", "ÌôË®", "¿³²ñ","ÌÔÃ×"});
-        set_name((order[random(5)]) +"µÄµÀÊ¿", ({ "daoshi", "dao"}) );
-        set("gender", "ÄĞĞÔ" );
+	string *order=({"ä¸ŠèŒ¶", "æ‰«åœ°", "çƒ§é¥­", "æŒ‘æ°´", "ç æŸ´","æ·˜ç±³"});
+        set_name((order[random(5)]) +"çš„é“å£«", ({ "daoshi", "dao"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 22);
-        set("long", "ÕâÊÇá·ÃíµÄĞ¡µÀÊ¿£¬ÕıÔÚÃ¦×Å\n");
+        set("long", "è¿™æ˜¯å²±åº™çš„å°é“å£«ï¼Œæ­£åœ¨å¿™ç€\n");
         set("combat_exp", 10);
         set("attitude", "friendly");
         set_skill("unarmed", 5);
@@ -21,7 +21,7 @@ void create()
         set("max_force",100);
         set("chat_chance", 10);
         set("chat_msg", ({
-                "Ğ¡µÀÊ¿ÇáÇáµÄµ§ÁËµ§ÉíÉÏµÄ³¾ÍÁ£®£®£®\n",
+                "å°é“å£«è½»è½»çš„æ¸äº†æ¸èº«ä¸Šçš„å°˜åœŸï¼ï¼ï¼\n",
 		(: random_move :),
         }) );
 	

@@ -3,8 +3,8 @@ inherit NPC;
  
 void create()
 {
-        set_name("ÃÎÓñÂ¥", ({ "yu lou", "yulou","lou" }) );
-        set("gender", "Å®ÐÔ" );
+        set_name("æ¢¦çŽ‰æ¥¼", ({ "yu lou", "yulou","lou" }) );
+        set("gender", "å¥³æ€§" );
         set("age",17);
         set("long", @TEXT
 TEXT
@@ -21,7 +21,7 @@ TEXT
         set("max_force", 1000);
         set("force_factor", 15);
         set("attitude","peaceful");
-        create_family("ÌìÉ½ÅÉ",11,"µÜ×Ó");
+        create_family("å¤©å±±æ´¾",11,"å¼Ÿå­");
         setup();
          carry_object(__DIR__"obj/token")->wear();
         carry_object(__DIR__"obj/longsword")->wield();

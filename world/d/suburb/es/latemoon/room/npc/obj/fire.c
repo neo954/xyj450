@@ -4,9 +4,9 @@ inherit ITEM;
 
 void create()
 {
-    set_name("»ğß¡", ({ "fire" }) );
-    set("unit", "¸ö");
-    set("long","ÕâÊÇÒ»¸ö¿ÉÒÔÉú»ğµÄ»ğß¡");
+    set_name("ç«æ‘º", ({ "fire" }) );
+    set("unit", "ä¸ª");
+    set("long","è¿™æ˜¯ä¸€ä¸ªå¯ä»¥ç”Ÿç«çš„ç«æ‘º");
     set_weight(50);
     setup();
 }

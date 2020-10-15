@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // /d/changan/playerhomes/stdbed.c
@@ -11,7 +11,7 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "´²ÉÏ");
+        set("short", "åºŠä¸Š");
         set("long", @LONG
 
 LONG
@@ -33,7 +33,7 @@ string id;
 if (getuid(this_player()) != "dream"
 && getuid(this_player()) != "tingting") {
 me->move("/d/changan/phomes");
-message_vision("$NËÆºõ±»ÈËÒ»½ÅÌßÁË³öÀ´£¬ÉñÉ«ÓÐµãÀÇ±·¡£\n", me);
+message_vision("$Nä¼¼ä¹Žè¢«äººä¸€è„šè¸¢äº†å‡ºæ¥ï¼Œç¥žè‰²æœ‰ç‚¹ç‹¼ç‹ˆã€‚\n", me);
 }
 }
 

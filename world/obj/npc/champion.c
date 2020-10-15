@@ -8,7 +8,7 @@ int brag();
 void create()
 {
 	string info,name,id,file;
-        set_name( "ÃËÖ÷" , ({ "numberone" }) );
+        set_name( "ç›Ÿä¸»" , ({ "numberone" }) );
         set("chat_chance", 100);
         set("chat_msg", ({
                 (: brag :),
@@ -24,7 +24,7 @@ void create()
         reset_action();
         delete_temp("already_loaded");
         loadall(this_object());
-        set("title", HIR "ÎäÁÖÃËÖ÷" NOR);
+        set("title", HIR "æ­¦æ—ç›Ÿä¸»" NOR);
 	}
 	
 		
@@ -40,7 +40,7 @@ void changeshape( object winner)
 	string name,id;
 	winner_file = winner->query_save_file();
         CHANNEL_D->do_channel(this_object(), "chat",
-        sprintf( "%s´ÓÏÖÔÚ¿ªÊ¼ÊÇÎÒÃÇĞÂµÄÃËÖ÷ÁË£¡£¡ \n",
+        sprintf( "%sä»ç°åœ¨å¼€å§‹æ˜¯æˆ‘ä»¬æ–°çš„ç›Ÿä¸»äº†ï¼ï¼ \n",
         winner->name(1)));
 	write_file(CHAMPION_FILE,sprintf("%s %s %s",
 	winner_file,winner->query("id"),winner->query("name")),1);
@@ -53,7 +53,7 @@ void changeshape( object winner)
 	reset_action();
 	delete_temp("already_loaded");
 	loadall(this_object());	
-	set("title", HIR "ÎäÁÖÃËÖ÷" NOR);	
+	set("title", HIR "æ­¦æ—ç›Ÿä¸»" NOR);	
 	return ;
 }
 
@@ -98,7 +98,7 @@ int accept_fight(object me)
 int brag()
 {
         CHANNEL_D->do_channel(this_object(), "chat",
-        "ÎÒ¾ÍÊÇÄãÃÇµÄÎäÁÖ×ÜÃËÖ÷£¡²»·şµÄÀ´ÊÔÊÔ£¡\n");
+        "æˆ‘å°±æ˜¯ä½ ä»¬çš„æ­¦æ—æ€»ç›Ÿä¸»ï¼ä¸æœçš„æ¥è¯•è¯•ï¼\n");
         return 1;
 }
 void die()

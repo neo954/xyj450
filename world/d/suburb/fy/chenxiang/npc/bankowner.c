@@ -6,14 +6,14 @@ inherit NPC;
 inherit F_BANKOWNER;
 void create()
 {
-        set_name("ÄÏ¹¬Ê®Èı", ({ "nangong" }) );
-        set("title", RED "Ç®×¯ÕÆ¹ñ" NOR);
-        set("gender", "ÄĞĞÔ" );
+        set_name("å—å®«åä¸‰", ({ "nangong" }) );
+        set("title", RED "é’±åº„æŒæŸœ" NOR);
+        set("gender", "ç”·æ€§" );
         set("age", 52);
         set("long",
                 
-                "ÖĞÔ­ÄÏ¹¬ÊÀ¼Ò£¬¼Ò²ÆÍò¹á£¬²úÒµ²»¿ÉÊ¤Êı£¬ÄÏ¹¬Ê®ÈıÒ²ÊÇÄÏ¹¬ÊÀ¼Ò
-µÄ×åÈË\n");
+                "ä¸­åŸå—å®«ä¸–å®¶ï¼Œå®¶è´¢ä¸‡è´¯ï¼Œäº§ä¸šä¸å¯èƒœæ•°ï¼Œå—å®«åä¸‰ä¹Ÿæ˜¯å—å®«ä¸–å®¶
+çš„æ—äºº\n");
 
         set("attitude", "friendly");
 

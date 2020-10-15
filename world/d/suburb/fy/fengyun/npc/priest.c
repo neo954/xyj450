@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("½Ì¸¸", ({ "priest" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("æ•™çˆ¶", ({ "priest" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 74);
         set("long",
-"Õâ¸öÀÏÈË½ğ·¢±ÌÑÛ£¬×ã×ãÓĞÆß³ß¶à¸ß¡£\n");
+"è¿™ä¸ªè€äººé‡‘å‘ç¢§çœ¼ï¼Œè¶³è¶³æœ‰ä¸ƒå°ºå¤šé«˜ã€‚\n");
         set("combat_exp", 1);
         set("attitude", "friendly");
         setup();
@@ -28,8 +28,8 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-        say( "½Ì¸¸ËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-                + "£¬Ö÷»á±£ÓÓÄãµÄ£®\n");
+        say( "æ•™çˆ¶è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+                + "ï¼Œä¸»ä¼šä¿ä½‘ä½ çš„ï¼\n");
 }
 
 int accept_object(object who, object ob)
@@ -43,8 +43,8 @@ int accept_object(object who, object ob)
                         who->add("bellicosity", - 
 (random((int)who->query("kar")) + val/1000) );
         }
-        say( "½Ì¸¸ËµµÀ£º¶àĞ»ÕâÎ»" + RANK_D->query_respect(who)
-                + "£¬Ö÷Ò»¶¨»á±£ÓÓÄãµÄ¡£\n");
+        say( "æ•™çˆ¶è¯´é“ï¼šå¤šè°¢è¿™ä½" + RANK_D->query_respect(who)
+                + "ï¼Œä¸»ä¸€å®šä¼šä¿ä½‘ä½ çš„ã€‚\n");
 
         return 1;
 }

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // snowcat 12 14 1997
@@ -11,9 +11,9 @@ int do_tell ();
 
 void create()
 {
-  set_name("åÈÒ¶×ğÕß", ({ "jiaye zunzhe", "jiaye", "zunzhe" }));
-  set("title", "ÁéÉ½");
-  set("gender", "ÄĞĞÔ");
+  set_name("è¿¦å¶å°Šè€…", ({ "jiaye zunzhe", "jiaye", "zunzhe" }));
+  set("title", "çµå±±");
+  set("gender", "ç”·æ€§");
   set("age", 1000);
   set("attitude", "peaceful");
   set("str",40);
@@ -47,16 +47,16 @@ void create()
   map_skill("parry", "lunhui-zhang");
   map_skill("staff", "lunhui-zhang");
   set("inquiry", ([
-    "name" : "åÈÒ¶Ò²¡£",
-    "here" : "ÁéÉ½Ò²¡£",
-    "ÁéÉ½" : "ÎÒ·ğÈçÀ´Ö®ÁéÉ½Ò²¡£",
-    "À×ÒôËÂ" : "ÎÒ·ğÈçÀ´Ö®À×ÒôËÂÒ²¡£",
-    "Î÷ĞĞ" : (: do_tell :),
-    "Î÷Ìì" : (: do_tell :),
-    "ÇóÈ¡Õæ¾­" : (: do_tell :),
-    "È¡¾­" : (: do_tell :),
-    "Õæ¾­" : (: do_tell :),
-    "¾­" : (: do_tell :),
+    "name" : "è¿¦å¶ä¹Ÿã€‚",
+    "here" : "çµå±±ä¹Ÿã€‚",
+    "çµå±±" : "æˆ‘ä½›å¦‚æ¥ä¹‹çµå±±ä¹Ÿã€‚",
+    "é›·éŸ³å¯º" : "æˆ‘ä½›å¦‚æ¥ä¹‹é›·éŸ³å¯ºä¹Ÿã€‚",
+    "è¥¿è¡Œ" : (: do_tell :),
+    "è¥¿å¤©" : (: do_tell :),
+    "æ±‚å–çœŸç»" : (: do_tell :),
+    "å–ç»" : (: do_tell :),
+    "çœŸç»" : (: do_tell :),
+    "ç»" : (: do_tell :),
   ]));
   set("chat_chance_combat", 80);
   set("chat_msg_combat", ({
@@ -107,16 +107,16 @@ int telling (object who)
   if (nb == 0)
   {
     tell_object (who,me->query("name")+
-                     "¸æËßÄã£ºÄãÎ÷ĞĞÇóÈ¡Õæ¾­ÒÑÀú¾¡ÁËËùÓĞµÄÄÑ¹Ø¡£\n\n");
+                     "å‘Šè¯‰ä½ ï¼šä½ è¥¿è¡Œæ±‚å–çœŸç»å·²å†å°½äº†æ‰€æœ‰çš„éš¾å…³ã€‚\n\n");
     who->set_temp("obstacle/lingshan_enter",1);
     if (environment(me)==environment(who) &&
         who->query("obstacle/reward") == 0)
-      message_vision ("$N¶Ô$nÒ»¾Ï¹ª£ºÎÒ·ğÓĞÇë£¡\n",me,who);
+      message_vision ("$Nå¯¹$nä¸€é èº¬ï¼šæˆ‘ä½›æœ‰è¯·ï¼\n",me,who);
   }
   else
   {
-    tell_object (who,me->query("name")+"¸æËßÄã£ºÄãÎ÷ĞĞÇóÈ¡Õæ¾­»¹Ğë¹ı"+
-                     chinese_number(nb)+"¹Ø£º\n");
+    tell_object (who,me->query("name")+"å‘Šè¯‰ä½ ï¼šä½ è¥¿è¡Œæ±‚å–çœŸç»è¿˜é¡»è¿‡"+
+                     chinese_number(nb)+"å…³ï¼š\n");
     strs = (string *)sort_array (strs, 1);
     for (i = 0; i < nb; i++)
     {

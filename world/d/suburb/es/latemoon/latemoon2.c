@@ -4,17 +4,17 @@ inherit ROOM;
 
 void create()
 {
-	set("short","ÄÚÌü");
+	set("short","å†…åŽ…");
 	set("long", @LONG
-×ßÈëÄÚÌü£¬Äã¿´µ½Ï®µØÆÌÂúºìÌº¡£ËÄÃæÏà¶ÔÊ®¶þÕÅµñÆáÒÎÉÏ£¬¶¼
-ÊÇÒ»É«»ÒÊóÒÎ¡õÐ¡Èì£¬ÌüÖÐ°ÚÁËÐ¡ÆÁ·ç£¬ËÄÖÜ¹ÒÂúÉ½Ë®Ä«»­¡£Ò»¸öÄ¾
-¸ô¼Ü£¬ÅÔ±ß»¹ÓÐÒ»±ÌÉ´³÷(closet)¡£
+èµ°å…¥å†…åŽ…ï¼Œä½ çœ‹åˆ°è¢­åœ°é“ºæ»¡çº¢æ¯¯ã€‚å››é¢ç›¸å¯¹åäºŒå¼ é›•æ¼†æ¤…ä¸Šï¼Œéƒ½
+æ˜¯ä¸€è‰²ç°é¼ æ¤…â–¡å°è¤¥ï¼ŒåŽ…ä¸­æ‘†äº†å°å±é£Žï¼Œå››å‘¨æŒ‚æ»¡å±±æ°´å¢¨ç”»ã€‚ä¸€ä¸ªæœ¨
+éš”æž¶ï¼Œæ—è¾¹è¿˜æœ‰ä¸€ç¢§çº±æ©±(closet)ã€‚
 LONG
 	);
 	set("item_desc", ([
 		"closet" : @TEXT
-ÕâÊÇÒ»¸öÉÏµÈÄ¾²Ä×÷³ÉµÄÐ¡³÷×Ó£¬ÀïÃæ·ÅÁËÒ»Ð©ÎïÆ·¡£
-Äã¿´µ½Ò»¼þ¼þµÄÃÀÀöÒÂÊÎ£¬ÕæÏëÈ¡³ö(take cloth)¿´¿´¡£
+è¿™æ˜¯ä¸€ä¸ªä¸Šç­‰æœ¨æä½œæˆçš„å°æ©±å­ï¼Œé‡Œé¢æ”¾äº†ä¸€äº›ç‰©å“ã€‚
+ä½ çœ‹åˆ°ä¸€ä»¶ä»¶çš„ç¾Žä¸½è¡£é¥°ï¼ŒçœŸæƒ³å–å‡º(take cloth)çœ‹çœ‹ã€‚
 TEXT
 	]) );
 
@@ -24,7 +24,7 @@ TEXT
 
     set("objects",([
         __DIR__"npc/zauron" :  1 ]) );
-	create_door("west","ÒÇÃÅ","east", DOOR_CLOSED);
+	create_door("west","ä»ªé—¨","east", DOOR_CLOSED);
 	setup();
 }
 
@@ -45,10 +45,10 @@ int do_take(string arg)
 {
 	object obj;
 
-	if( !arg ) return notify_fail("ÄãÒªÄÃÊ²Ã´ ? \n");
+	if( !arg ) return notify_fail("ä½ è¦æ‹¿ä»€ä¹ˆ ? \n");
 	if( arg !="cloth" ) { 
 		if ( query("make_cockroach") ) {
-			message_vision("$NÒ»Éù¼â½Ð ! Í»È»³öÏÖÒ»Ö»´óó¯òë¡£\n",this_player());
+			message_vision("$Nä¸€å£°å°–å« ! çªç„¶å‡ºçŽ°ä¸€åªå¤§èŸ‘èž‚ã€‚\n",this_player());
 			obj = new(__DIR__"npc/cockroach");
 			obj->move(environment(this_player()));
 			add("make_cockroach", -1);
@@ -58,11 +58,11 @@ int do_take(string arg)
 	if( query("take_available") ) {
 		obj = new(__DIR__"obj/skirt");
 		obj->move(this_player());
-		message_vision("$N´Ó³÷×ÓÄÚÈ¡³ö$n¡£\n",this_player(),obj);
+		message_vision("$Nä»Žæ©±å­å†…å–å‡º$nã€‚\n",this_player(),obj);
 		add("take_available", -1);
 		return 1;
 	}
-	write("³÷×ÓÄÚµÄÒÂ·þºÃÏñ±»ÄÃ¹âÁË¡£\n");
+	write("æ©±å­å†…çš„è¡£æœå¥½åƒè¢«æ‹¿å…‰äº†ã€‚\n");
 	return 1;
 }
 
@@ -71,24 +71,24 @@ int do_search(string arg)
 	object obj,who;
 
 	who = this_player();
-	if ( !arg )	return notify_fail("ÄãÒªÕÒÊ²Ã´?\n");
+	if ( !arg )	return notify_fail("ä½ è¦æ‰¾ä»€ä¹ˆ?\n");
 	if ( arg !="bracelet" )	{
-		 write("ÄãÃ¤Ä¿µÄÕÒÖø£¬µ«ÎÞ·¢ÏÖÊ²Ã´!\n");
+		 write("ä½ ç›²ç›®çš„æ‰¾è‘—ï¼Œä½†æ— å‘çŽ°ä»€ä¹ˆ!\n");
 	  return 1;
 	}
 	else  {
-	if( !who->query_temp("moon/ÎÊÌâ¶þ") ) {
-	 write("ÄãÃ¤Ä¿µÄÕÒÖø£¬µ«ÎÞ·¢ÏÖÊ²Ã´!\n");
+	if( !who->query_temp("moon/é—®é¢˜äºŒ") ) {
+	 write("ä½ ç›²ç›®çš„æ‰¾è‘—ï¼Œä½†æ— å‘çŽ°ä»€ä¹ˆ!\n");
 		return 1;
 	}
-	 if ( who->query_temp("latemoon/ÊÖïí") ) {
-		 write("Äã·­Ïäµ¹¹ñÏëÕÒ³öÊÖïí£¬µ«ËÆºõºÁÎÞËù»ñ¡£\n");
+	 if ( who->query_temp("latemoon/æ‰‹é•¯") ) {
+		 write("ä½ ç¿»ç®±å€’æŸœæƒ³æ‰¾å‡ºæ‰‹é•¯ï¼Œä½†ä¼¼ä¹Žæ¯«æ— æ‰€èŽ·ã€‚\n");
 		 return 1;
 	 }
      obj = new("/d/suburb/es/latemoon/obj/bracelet");
 	 obj->move(who);
-	 message_vision("$N´Ó³÷×ÓÄÚÈ¡³ö$n¡£\n",this_player(),obj);
-	 who->set_temp("latemoon/ÊÖïí", 1);
+	 message_vision("$Nä»Žæ©±å­å†…å–å‡º$nã€‚\n",this_player(),obj);
+	 who->set_temp("latemoon/æ‰‹é•¯", 1);
 	return 1;
 	}
 }

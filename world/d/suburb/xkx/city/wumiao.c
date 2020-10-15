@@ -6,11 +6,11 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "ÎäÃí");
+	set("short", "æ­¦åº™");
 	set("long", @LONG
-	ÕâÀïÊÇÔÀÍõÃíµÄÕýµî£¬ÄÚÓÐÔÀ·ÉÏñ£¬ÏñÉÏ·½Ðü¹ÒÔÀ·ÉÊÖÊé¡°»¹ÎÒºÓÉ½¡±µÄ
-ºáØÒ¡£µîÁ½²à±ÚÉÏÇ¶×Å¡°¾¡ÖÒ±¨¹ú¡±ËÄ¸ö´ó×Ö¡£ÎäÈËµ½´Ë£¬¶¼·ÅÏÂÎäÆ÷£¬±Ï¹§±Ï¾´
-µØÉÏÏãÀñ°Ý¡£ÅÔ±ßËÆºõÓÐÒ»µÀ²àÃÅ¡£
+	è¿™é‡Œæ˜¯å²³çŽ‹åº™çš„æ­£æ®¿ï¼Œå†…æœ‰å²³é£žåƒï¼Œåƒä¸Šæ–¹æ‚¬æŒ‚å²³é£žæ‰‹ä¹¦â€œè¿˜æˆ‘æ²³å±±â€çš„
+æ¨ªåŒ¾ã€‚æ®¿ä¸¤ä¾§å£ä¸ŠåµŒç€â€œå°½å¿ æŠ¥å›½â€å››ä¸ªå¤§å­—ã€‚æ­¦äººåˆ°æ­¤ï¼Œéƒ½æ”¾ä¸‹æ­¦å™¨ï¼Œæ¯•æ­æ¯•æ•¬
+åœ°ä¸Šé¦™ç¤¼æ‹œã€‚æ—è¾¹ä¼¼ä¹Žæœ‰ä¸€é“ä¾§é—¨ã€‚
 LONG
 	);
 
@@ -27,7 +27,7 @@ LONG
 //		"up" : __DIR__"wumiao2",
 		"northwest": "/d/suburb/xkx/wizard/guest_room",
 	]));
-        create_door("northwest", "ÖñÃÅ", "southeast", DOOR_CLOSED);
+        create_door("northwest", "ç«¹é—¨", "southeast", DOOR_CLOSED);
 	setup();
 	replace_program(ROOM);
 }

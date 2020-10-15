@@ -5,12 +5,12 @@ void create()
 {
       object ob;
 
-        set_name("ÑÕ»ÛÈç", ({ "Huei Ru","huei","huei ru" }) );
-        set("gender", "Å®ĞÔ" );
+        set_name("é¢œæ…§å¦‚", ({ "Huei Ru","huei","huei ru" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 27);
         set("long",
-"ËıÊÇÒ»Î»ÃÀÅ®£¬ÕæÊÇºìÑÕËÆÓñ£¬ÂÌ÷ŞÈçÔÆ£¬Ã÷ÀöµÄÑÛ¾¦£¬\n"
-"½à°×µÄÑÀ³İ¡£ÈİÉ«¿¡ÇÎ£¬·ç¶ÈÆ®Òİ£¬ÁîÈËĞÄ¶¯¡£\n");
+"å¥¹æ˜¯ä¸€ä½ç¾å¥³ï¼ŒçœŸæ˜¯çº¢é¢œä¼¼ç‰ï¼Œç»¿é¬“å¦‚äº‘ï¼Œæ˜ä¸½çš„çœ¼ç›ï¼Œ\n"
+"æ´ç™½çš„ç‰™é½¿ã€‚å®¹è‰²ä¿Šä¿ï¼Œé£åº¦é£˜é€¸ï¼Œä»¤äººå¿ƒåŠ¨ã€‚\n");
         set("combat_exp", 70000);
         set("force",1000);
         set("max_force", 1000);
@@ -24,11 +24,11 @@ void create()
         ]) );
         set("chat_chance", 7);
         set("chat_msg", ({
-"ÑÕ»ÛÈçËµµÀ£ºĞ¡±¾ÉúÒâ£¡  ÎïÃÀ¼ÛÁ®£¬»¶Ó­¶©¹º(order)¡£\n",
-"ÑÕ»ÛÈçÊáÁËÊáÍ··¢¡£\n",
-"ÑÕ»ÛÈçÑÛ¾¦Õ£Ñ½Õ£¿´ÖøÄã¡£\n"
+"é¢œæ…§å¦‚è¯´é“ï¼šå°æœ¬ç”Ÿæ„ï¼  ç‰©ç¾ä»·å»‰ï¼Œæ¬¢è¿è®¢è´­(order)ã€‚\n",
+"é¢œæ…§å¦‚æ¢³äº†æ¢³å¤´å‘ã€‚\n",
+"é¢œæ…§å¦‚çœ¼ç›çœ¨å‘€çœ¨çœ‹è‘—ä½ ã€‚\n"
         }) );
-        create_family("ÍíÔÂ×¯",2,"µÜ×Ó");
+        create_family("æ™šæœˆåº„",2,"å¼Ÿå­");
         setup();
         ob = carry_object("/obj/example/dagger");
 }
@@ -48,8 +48,8 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-         say( "ÑÕ»ÛÈçËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-             + "£¬Òª²»ÒªÂòĞ©¶«Î÷Ñ½¡£\n");
+         say( "é¢œæ…§å¦‚è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+             + "ï¼Œè¦ä¸è¦ä¹°äº›ä¸œè¥¿å‘€ã€‚\n");
 }
 
 int accept_object(object who, object ob)
@@ -58,38 +58,38 @@ int accept_object(object who, object ob)
 
         val = ob->value();
         if( !val )
-                return notify_fail("¹ÃÄïÎÒ²»ÒªÒÔÎïÒ×Îï¡£\n");
+                return notify_fail("å§‘å¨˜æˆ‘ä¸è¦ä»¥ç‰©æ˜“ç‰©ã€‚\n");
         else if( val > 100 ) {
                 if( (who->query("bellicosity") > 0)
                 &&      (random(val/10) > (int)who->query("kar")) )
                         who->add("bellicosity", - 
 (random((int)who->query("kar")) + val/1000) );
         }
-        say( "ÑÕ»ÛÈçËµµÀ£º¶àĞ»ÕâÎ»" + RANK_D->query_respect(who)
-                + "£¬ÉñÃ÷Ò»¶¨»á±£ÓÓÄãµÄ¡£\n");
+        say( "é¢œæ…§å¦‚è¯´é“ï¼šå¤šè°¢è¿™ä½" + RANK_D->query_respect(who)
+                + "ï¼Œç¥æ˜ä¸€å®šä¼šä¿ä½‘ä½ çš„ã€‚\n");
 
         return 1;
 }
 
 int ask_buy(object who)
 {
-        write("Ğ¡±¾ÉúÒâ£¬¼ÛÇ®¾ö¶Ô¹«µÀ¡£\n"
-              "ÏêÁĞÏ¸Ä¿ :  list \n"
-              "¶©¹ºÎïÆ· :  order [<ÎïÆ·Ãû³Æ>]  \n");
+        write("å°æœ¬ç”Ÿæ„ï¼Œä»·é’±å†³å¯¹å…¬é“ã€‚\n"
+              "è¯¦åˆ—ç»†ç›® :  list \n"
+              "è®¢è´­ç‰©å“ :  order [<ç‰©å“åç§°>]  \n");
      return 1;
 }
 
 int do_list(string arg)
 {
-      write( "ÎÒÂôÓĞÒÔÏÂÎïÆ· : \n"
-          "\n µ¥Î»£ºÒø×Ó (silver) \n \n"
-             "No.    ¼Û¸ñ.      Ãû³Æ \n"
-             "1. [   ÎåÁ½   ]  »¨È¹ (skirt) \n"
-             "2. [   Ê®Á½   ]  Å®¶ùºì (wine) \n"
-             "3. [ ¶şÊ®Á½   ]  Â¹Æ¤Ğ¡Ñ¥ (boots) \n"
-             "4. [ ÎåÊ®Á½   ]  ÏÉ¶¹  (sen-bean) \n"
-             "5. [ Ò»°ÙÁ½   ]  ´ó»¹µ¤ (heal pill) \n \n"
-    "Èç¹ûÄã²»Ëµ¶©¹ºÊ²Ã´!ÄÇÎÒ¾ÍÂôÄãÅ®¶ùºìà¸! \n \n"
+      write( "æˆ‘å–æœ‰ä»¥ä¸‹ç‰©å“ : \n"
+          "\n å•ä½ï¼šé“¶å­ (silver) \n \n"
+             "No.    ä»·æ ¼.      åç§° \n"
+             "1. [   äº”ä¸¤   ]  èŠ±è£™ (skirt) \n"
+             "2. [   åä¸¤   ]  å¥³å„¿çº¢ (wine) \n"
+             "3. [ äºŒåä¸¤   ]  é¹¿çš®å°é´ (boots) \n"
+             "4. [ äº”åä¸¤   ]  ä»™è±†  (sen-bean) \n"
+             "5. [ ä¸€ç™¾ä¸¤   ]  å¤§è¿˜ä¸¹ (heal pill) \n \n"
+    "å¦‚æœä½ ä¸è¯´è®¢è´­ä»€ä¹ˆ!é‚£æˆ‘å°±å–ä½ å¥³å„¿çº¢å–”! \n \n"
             );
       return 1;
 }
@@ -104,7 +104,7 @@ int do_buy(string arg)
 
        player = this_player();
     if(!arg )
-          return notify_fail("ÄãÒªÂòÊ²Ã´¶«¶«Ñ½?ËµÇå³şÂï! \n");
+          return notify_fail("ä½ è¦ä¹°ä»€ä¹ˆä¸œä¸œå‘€?è¯´æ¸…æ¥šå˜›! \n");
        else {
       switch ( arg )  {
               case "wine" : obj= new("/d/suburb/es/latemoon/sell/wine");
@@ -122,13 +122,13 @@ int do_buy(string arg)
               case "heal pill" : obj= new("/d/suburb/es/latemoon/sell/pill");
                                  amount = 100;
                                  break;
-              default : return notify_fail("ÄãÒªÂòÊ²Ã´?\n");
+              default : return notify_fail("ä½ è¦ä¹°ä»€ä¹ˆ?\n");
                         break;
       }
        from_ob = present("silver_money",this_player());
-       if( !from_ob )    return notify_fail("ÄãÉíÉÏÃ»ÓĞÒøÁ½Ò®¡£\n");
+       if( !from_ob )    return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰é“¶ä¸¤è€¶ã€‚\n");
        if( (int)from_ob->query_amount() < amount )
-       return notify_fail("ÄãÉíÉÏÃ»ÓĞÄÇÃ´¶àÒøÁ½Ò®£¡\n");
+       return notify_fail("ä½ èº«ä¸Šæ²¡æœ‰é‚£ä¹ˆå¤šé“¶ä¸¤è€¶ï¼\n");
           from_ob->add_amount(-amount);
           obj->move(player);
        }
@@ -136,9 +136,9 @@ int do_buy(string arg)
        unit = (string)obj->query("unit");
        objname = (string)obj->query("name");
 
-       tell_room(environment(this_object()),"ÑÕ»ÛÈç¸ø"+name
-              +"Ò»"+unit+objname+"\n");
-             say ("ÑÕ»ÛÈçËµµÀ£ºĞ»Ğ»Äã!ÏÂ´ÎÔÙÀ´! \n");
+       tell_room(environment(this_object()),"é¢œæ…§å¦‚ç»™"+name
+              +"ä¸€"+unit+objname+"\n");
+             say ("é¢œæ…§å¦‚è¯´é“ï¼šè°¢è°¢ä½ !ä¸‹æ¬¡å†æ¥! \n");
 
        return 1;
 }
@@ -149,8 +149,8 @@ void die()
         revive();
         command("grin");
         command("shake");
-        command("say ÄãÕâÑùÊÇÉ±²»ËÀÎÒµÄ!! ");
-        command("say Îû..");
+        command("say ä½ è¿™æ ·æ˜¯æ€ä¸æ­»æˆ‘çš„!! ");
+        command("say å˜»..");
         inv = all_inventory(environment(this_object()));
         i = sizeof(inv);
         while (i--)

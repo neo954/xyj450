@@ -5,18 +5,18 @@ inherit FINGER;
 
 void create()
 {
-	set_name("Óñïí", ({ "jade piece"}) );
+	set_name("ç‰é•¯", ({ "jade piece"}) );
 	set_weight(1);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»¸ö´äÂÌÓûµÎµÄÓñÊÖïí\n");
-		set("unit", "¸ö");
+		set("long", "ä¸€ä¸ªç¿ ç»¿æ¬²æ»´çš„ç‰æ‰‹é•¯\n");
+		set("unit", "ä¸ª");
 		set("value", 30000);
 		set("armor_prop/armor", 0);
 		set("armor_prop/personality", 10);
-		set("wear_msg", "$NÇáÇáµØ°ÑÒ»¸ö$n´÷ÔÚÊÖÍóÉÏ¡£\n");
-		set("unwield_msg", "$NÇáÇáµØ°Ñ$n´ÓÊÖÍóÉÏ³ıÁËÏÂÀ´¡£\n");
+		set("wear_msg", "$Nè½»è½»åœ°æŠŠä¸€ä¸ª$næˆ´åœ¨æ‰‹è…•ä¸Šã€‚\n");
+		set("unwield_msg", "$Nè½»è½»åœ°æŠŠ$nä»æ‰‹è…•ä¸Šé™¤äº†ä¸‹æ¥ã€‚\n");
 
 
 	}

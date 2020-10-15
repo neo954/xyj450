@@ -11,7 +11,7 @@ int valid_enable(string usage)
 int valid_learn(object me)
 {
 	if( (int)me->query_skill("taoism",1) < (int)me->query_skill("necromancy",1))
-		return notify_fail("ÄãµÄÌìÊ¦ÕıµÀĞŞÎª²»¹»£¬ÎŞ·¨ÁìÎò¸ü¸ßÉîµÄÈıÇåµÀÊõ¡£\n");
+		return notify_fail("ä½ çš„å¤©å¸ˆæ­£é“ä¿®ä¸ºä¸å¤Ÿï¼Œæ— æ³•é¢†æ‚Ÿæ›´é«˜æ·±çš„ä¸‰æ¸…é“æœ¯ã€‚\n");
 	return 1;
 }
 
@@ -24,19 +24,19 @@ int practice_skill(object me)
 	object bug;
 
 	if( bug = me->query_temp("mind_bug") )
-		return notify_fail("ÄãµÄ»êÆÇ»¹Ã»ÓĞÈ«²¿ÊÕ»Ø£¬¸Ï¿ìÉ±ËÀÄãµÄ"
-			+ bug->name() + "°É£¡\n");
+		return notify_fail("ä½ çš„é­‚é­„è¿˜æ²¡æœ‰å…¨éƒ¨æ”¶å›ï¼Œèµ¶å¿«æ€æ­»ä½ çš„"
+			+ bug->name() + "å§ï¼\n");
 
 	if( (int)me->query("mana") < 10 )
-		return notify_fail("ÄãµÄ·¨Á¦²»¹»¡£\n");
+		return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿã€‚\n");
 
 	if( (int)me->query("sen") < 30 )
-		return notify_fail("ÄãµÄ¾«ÉñÎŞ·¨¼¯ÖĞ¡£\n");
+		return notify_fail("ä½ çš„ç²¾ç¥æ— æ³•é›†ä¸­ã€‚\n");
 
 	me->add("mana", -10);
 	me->receive_damage("sen", 30);
 
-	write("Äã±ÕÄ¿ÄıÉñ£¬ÉñÓÎÎïÍâ£¬¿ªÊ¼ĞŞÏ°ÈıÇåµÀÊõÖĞµÄ·¨Êõ....\n");
+	write("ä½ é—­ç›®å‡ç¥ï¼Œç¥æ¸¸ç‰©å¤–ï¼Œå¼€å§‹ä¿®ä¹ ä¸‰æ¸…é“æœ¯ä¸­çš„æ³•æœ¯....\n");
 	if( random((int)me->query("sen")) < 5 ) {
 		int rnd;
 
@@ -44,13 +44,13 @@ int practice_skill(object me)
 		if( rnd < 10 )	bug = new("/obj/npc/mind_bug");
 		else			bug = new("/obj/npc/mind_beast");
 
-		write("¿ÉÊÇÄãĞÄË¼Ò»ÂÒ£¬±ä³öÁËÒ»Ö»ÃæÄ¿ÕøÄüµÄ" + bug->name() + "£¡\n");
+		write("å¯æ˜¯ä½ å¿ƒæ€ä¸€ä¹±ï¼Œå˜å‡ºäº†ä¸€åªé¢ç›®ç‹°ç‹çš„" + bug->name() + "ï¼\n");
 		bug->move(environment(me));
 		bug->kill_ob(me);
 		me->fight(bug);
 		me->set_temp("mind_bug", bug);
 		bug->set("owner", me->query("id"));
-		return notify_fail("ÄãµÄ»êÆÇÕı±»" + bug->name() + "²ø×¡£¬¿ì°ÑËü³ıµô°É£¡\n");
+		return notify_fail("ä½ çš„é­‚é­„æ­£è¢«" + bug->name() + "ç¼ ä½ï¼Œå¿«æŠŠå®ƒé™¤æ‰å§ï¼\n");
 	}	
 	else return 1;
 }

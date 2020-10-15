@@ -3,12 +3,12 @@ inherit NPC;
 #include <ansi.h>
 void create()
 {
-	set_name("ÁúĞ¡ÔÆ", ({ "xiaoyun" }) );
-	set("gender", "ÄĞĞÔ" );
-	set("title", HIR "ºìº¢¶ù" NOR);
+	set_name("é¾™å°äº‘", ({ "xiaoyun" }) );
+	set("gender", "ç”·æ€§" );
+	set("title", HIR "çº¢å­©å„¿" NOR);
 	set("age", 14);
 	set("long",
-		"Ò»¸öÌìÕæÎŞĞ°£¬Î´¶®ÊÀÊÂµÄĞ¡»¹×Ó£®£®ÖÁÉÙ±íÃæÈç´Ë£®£®£®\n");
+		"ä¸€ä¸ªå¤©çœŸæ— é‚ªï¼Œæœªæ‡‚ä¸–äº‹çš„å°è¿˜å­ï¼ï¼è‡³å°‘è¡¨é¢å¦‚æ­¤ï¼ï¼ï¼\n");
 	set("combat_exp", 5);
 	set("attitude", "aggrensive");
 	set("per",30);
@@ -34,7 +34,7 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(10) ) {
 		case 0:
-message_vision("$NµÍÉùµÀ£ºÕÒµ½Ğ¡Àî·Éµ¶£¬ÉÏ¹Ù½ğºçÒ»¶¨»á´ğÓ¦ÊÕÎÒÎªÍ½µÄ£®\n",this_object(),ob);
+message_vision("$Nä½å£°é“ï¼šæ‰¾åˆ°å°æé£åˆ€ï¼Œä¸Šå®˜é‡‘è™¹ä¸€å®šä¼šç­”åº”æ”¶æˆ‘ä¸ºå¾’çš„ï¼\n",this_object(),ob);
 			break;
 		case 1:
 			command("grin");

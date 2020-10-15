@@ -4,12 +4,12 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "±±æäµÀ");
+        set("short", "åŒ—é©¿é“");
         set("long", @LONG
-ÄãÕý×ßÔÚÒ»ÌõÇàÊ¯ÆÌµØµÄ´óæäµÀÉÏ£¬ËÄÖÜÈËÀ´ÈËÍù¡£Ìôµ£×ÓµÄ
-¿àÁ¦£¬¸Ï×Å´ó³µµÄÂí·ò£¬¸°¾©´«ÊéµÄ¾üÈË£¬ÎõÎõÈÁÈÁ£¬·Ç³£ÈÈÄÖ¡£
-²»Ê±»¹ÓÐÁ½ÈýÆï¿ìÂí´ÓÉí±ß·É³Û¶ø¹ý£¬ÒýÆðÒ»ÕóÉ§¶¯¡£µÀÂ·Á½ÅÔ¸÷
-ÓÐÒ»Æ¬Ð¡Ê÷ÁÖ£¬ÄÏ±ß¾ÍÊÇ¾©Ê¦¡£
+ä½ æ­£èµ°åœ¨ä¸€æ¡é’çŸ³é“ºåœ°çš„å¤§é©¿é“ä¸Šï¼Œå››å‘¨äººæ¥äººå¾€ã€‚æŒ‘æ‹…å­çš„
+è‹¦åŠ›ï¼Œèµ¶ç€å¤§è½¦çš„é©¬å¤«ï¼Œèµ´äº¬ä¼ ä¹¦çš„å†›äººï¼Œç†™ç†™æ”˜æ”˜ï¼Œéžå¸¸çƒ­é—¹ã€‚
+ä¸æ—¶è¿˜æœ‰ä¸¤ä¸‰éª‘å¿«é©¬ä»Žèº«è¾¹é£žé©°è€Œè¿‡ï¼Œå¼•èµ·ä¸€é˜µéªšåŠ¨ã€‚é“è·¯ä¸¤æ—å„
+æœ‰ä¸€ç‰‡å°æ ‘æž—ï¼Œå—è¾¹å°±æ˜¯äº¬å¸ˆã€‚
 LONG
         );
 
@@ -18,7 +18,7 @@ LONG
                 "enter"          : "/d/suburb/es/city/northdoor" ]) );
 
         set("outdoors", "city"); 
-        create_door("enter", "³ÇÃÅ", "out" );
+        create_door("enter", "åŸŽé—¨", "out" );
         setup();
         replace_program(ROOM); 
 }

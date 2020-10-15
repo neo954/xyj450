@@ -6,12 +6,12 @@ int curse(object me, object target)
 	int damage, ap, dp;
 	int extradam;
         if((int)me->query_skill("cursism") < 100 )
-                return notify_fail("ÄãµÄ½µÍ·Êõ²»¹»¸ß£¡\n");
+                return notify_fail("ä½ çš„é™å¤´æœ¯ä¸å¤Ÿé«˜ï¼\n");
 
 	if((int)me->query("kee") < 100 )
-		return notify_fail("ÄãµÄÆøÑª²»¹»£¡\n");
+		return notify_fail("ä½ çš„æ°”è¡€ä¸å¤Ÿï¼\n");
 
-        write("ÄãÏë¾ĞË­µÄ»ê£¿");
+        write("ä½ æƒ³æ‹˜è°çš„é­‚ï¼Ÿ");
         input_to( (: call_other, __FILE__, "select_target", me :));
 	return 1;
 }
@@ -25,7 +25,7 @@ void select_target(object me, string name)
 	string *list;
 	int i,HERE = 0;
         if( !name || name=="" ) {
-                write("ÖĞÖ¹Ê©·¨¡£\n");
+                write("ä¸­æ­¢æ–½æ³•ã€‚\n");
                 return;
         }
 
@@ -33,9 +33,9 @@ void select_target(object me, string name)
 		room = environment(me);
 	me->receive_wound("kee",100);
         if( !ob || !me->visible(ob) || userp(ob) || present(ob, room)){
-		write("ÄãÎŞ·¨¸ĞÊÜµ½Õâ¸öÈËµÄ¹í»ê¡£\n");
+		write("ä½ æ— æ³•æ„Ÿå—åˆ°è¿™ä¸ªäººçš„é¬¼é­‚ã€‚\n");
 		return; }
-        msg = HIW "$NË«ÊÖÏòÉÏÒ»»Ó£¬Ò»ÕóÅ¨Îí´ÓµØÏÂ¾í³ö£®£®£®\n" ;
+        msg = HIW "$NåŒæ‰‹å‘ä¸Šä¸€æŒ¥ï¼Œä¸€é˜µæµ“é›¾ä»åœ°ä¸‹å·å‡ºï¼ï¼ï¼\n" ;
         ob_list = room->query("objects");
 	list = keys(ob_list);
 	for(i=0;i<sizeof(list);i++)
@@ -47,18 +47,18 @@ void select_target(object me, string name)
 			new->be_ghost(1);
 			new->set("combat_exp", ((int) new->query("combat_exp"))*10);
 			new->move(room);	
-			new->set("title",HIB "¾Ğ»ê"NOR);
-	msg +=  "Å¨ÎíËÆºõÔÚ$NÉí±ß½¥½¥µÃÅ¨Ëõ³ÉÒ»¸öºÚÓ°£®£®£®\n" NOR;
+			new->set("title",HIB "æ‹˜é­‚"NOR);
+	msg +=  "æµ“é›¾ä¼¼ä¹åœ¨$Nèº«è¾¹æ¸æ¸å¾—æµ“ç¼©æˆä¸€ä¸ªé»‘å½±ï¼ï¼ï¼\n" NOR;
 		new->start_call_out((: call_other, __FILE__, "melt", new :), 
 (int)me->query_skill("cursism")/10 + 5);
 		}
 	else
-	msg += "Å¨ÎíÁ¢¿ÌÏûÊ§ÁË£®£®£®\n"NOR;
+	msg += "æµ“é›¾ç«‹åˆ»æ¶ˆå¤±äº†ï¼ï¼ï¼\n"NOR;
 	message_vision(msg, me);
 }
 
 void melt(object ob)
 {
-	message_vision("$N½¥½¥µÄĞé»¯£¬ÏûÊ§ÁË£®£®£®\n",ob);
+	message_vision("$Næ¸æ¸çš„è™šåŒ–ï¼Œæ¶ˆå¤±äº†ï¼ï¼ï¼\n",ob);
 	destruct(ob);
 }

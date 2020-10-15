@@ -4,14 +4,14 @@ void create()
 {
         object ob;
 
-        set_name("À¶Ð¡µû", ({ "shao-de" }) );
-        set("gender", "Å®ÐÔ" );
+        set_name("è“å°è¶", ({ "shao-de" }) );
+        set("gender", "å¥³æ€§" );
         set("age",18);
         set("long", @TEXT
-Ëý³¤µÃÊ®·ÖÆ¯ÁÁ£¡ÈÃÄãÈÌ²»×¡¶àÇÆËý¼¸ÑÛ£¬´ÓËýÉíÉÏ
-ÄãÎÅµ½µ­µ­µÄÏãÆø¡£ËýºÜÓÐÀñÃ²µÄÏòÄãµãÍ·£¬ÓÅÑÅµÄ
-¶¯×÷£¬ÇáÓ¯µÄ²½·¥£¬ºÃÃÀÅ¶!
-ËýÊÇÍíÔÂ×¯Ö÷À¶Ö¹Æ¼µÄÑøÅ®£¬Æ½³£×¯ÄÚµÄ½Ó´ýÊÇ¿´Ëý¡£
+å¥¹é•¿å¾—ååˆ†æ¼‚äº®ï¼è®©ä½ å¿ä¸ä½å¤šçž§å¥¹å‡ çœ¼ï¼Œä»Žå¥¹èº«ä¸Š
+ä½ é—»åˆ°æ·¡æ·¡çš„é¦™æ°”ã€‚å¥¹å¾ˆæœ‰ç¤¼è²Œçš„å‘ä½ ç‚¹å¤´ï¼Œä¼˜é›…çš„
+åŠ¨ä½œï¼Œè½»ç›ˆçš„æ­¥ä¼ï¼Œå¥½ç¾Žå“¦!
+å¥¹æ˜¯æ™šæœˆåº„ä¸»è“æ­¢èçš„å…»å¥³ï¼Œå¹³å¸¸åº„å†…çš„æŽ¥å¾…æ˜¯çœ‹å¥¹ã€‚
 TEXT
 );
        set("class", "dancer");
@@ -26,7 +26,7 @@ TEXT
        set("max_force", 2000);
        set("force_factor",2);
        set_temp("apply/armor", 50);
-       create_family("ÍíÔÂ×¯",3,"´óµÜ×Ó");
+       create_family("æ™šæœˆåº„",3,"å¤§å¼Ÿå­");
 
         setup();
         ob = carry_object(__DIR__"obj/needle");
@@ -51,13 +51,13 @@ void greeting(object ob)
         if( !ob || !present(ob, environment(this_object())) ) return;
         switch( random(2) ) {
                 case 0:
-                  say( "Ð¡µû¶ÔÄãÎ¢Ð¦£¬ºÍÉÆµÄ¶ÔÄãËµ£º\n  ÕâÎ»" + 
+                  say( "å°è¶å¯¹ä½ å¾®ç¬‘ï¼Œå’Œå–„çš„å¯¹ä½ è¯´ï¼š\n  è¿™ä½" + 
 RANK_D->query_respect(ob)
-                   + "£¬ÄãºÃ£¡»¶Ó­À´µ½ÍíÔÂ×¯¡£Çë×ø£¡\n");
+                   + "ï¼Œä½ å¥½ï¼æ¬¢è¿Žæ¥åˆ°æ™šæœˆåº„ã€‚è¯·åï¼\n");
                         break;
                 case 1:
-                  say( "Ð¡µû¶ÔÄãÎ¢Ð¦£¬ÏËÏ¸µÄË«ÊÖÅõÖø²è£¬\n ËµµÀ£ºÕâÎ»" +
+                  say( "å°è¶å¯¹ä½ å¾®ç¬‘ï¼Œçº¤ç»†çš„åŒæ‰‹æ§è‘—èŒ¶ï¼Œ\n è¯´é“ï¼šè¿™ä½" +
 RANK_D->query_respect(ob)
-                   + "£¬ÄãºÃ£¡»¶Ó­À´µ½ÍíÔÂ×¯¡£ÇëÓÃ²è£¡\n");
+                   + "ï¼Œä½ å¥½ï¼æ¬¢è¿Žæ¥åˆ°æ™šæœˆåº„ã€‚è¯·ç”¨èŒ¶ï¼\n");
         }
 }

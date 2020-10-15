@@ -3,15 +3,15 @@
 
 #include <ansi.h>
 inherit ROOM;
-string *directions= ({"Î÷·½","±±·½","¶«·½","ÄÏ·½"});
+string *directions= ({"è¥¿æ–¹","åŒ—æ–¹","ä¸œæ–¹","å—æ–¹"});
 void echoforest(object me);
 void create()
 {
-        set("short", "¹ÅÊ÷¶¥");
+        set("short", "å¤æ ‘é¡¶");
         set("long", @LONG
-·ÅÑÛÍûÈ¥£¬Ê÷º£Ã£Ã££¬ÁËÎŞ±ß¼Ê¡£Å¨ÃÜµÄÊ÷Ö¦ÏóÒ»¿éºñÊµµÄµØÌºÆÌ¸Ç×Å
-Õû¸ö´óµØ¡£Õâ¿ÃÊ÷ÉÏ´Ö×³µÄÊ÷Ö¦¼«Á¦ÏòËÄÖÜÉìÕ¹£¬ÆäÖĞÓĞÒ»¸ùÂÔÎª¹â»¬£¬ËÆ
-ºõÊÇ±»ÈËÅÊ°Ñ¹ıµÄºÛ¼£¡£
+æ”¾çœ¼æœ›å»ï¼Œæ ‘æµ·èŒ«èŒ«ï¼Œäº†æ— è¾¹é™…ã€‚æµ“å¯†çš„æ ‘æè±¡ä¸€å—åšå®çš„åœ°æ¯¯é“ºç›–ç€
+æ•´ä¸ªå¤§åœ°ã€‚è¿™æ£µæ ‘ä¸Šç²—å£®çš„æ ‘ææåŠ›å‘å››å‘¨ä¼¸å±•ï¼Œå…¶ä¸­æœ‰ä¸€æ ¹ç•¥ä¸ºå…‰æ»‘ï¼Œä¼¼
+ä¹æ˜¯è¢«äººæ”€æŠŠè¿‡çš„ç—•è¿¹ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -32,9 +32,9 @@ add_action("do_look","look");
 int do_look(string arg)
 {
 	if( arg == "vine" 
-		|| arg == "Ê÷Ö¦" )
+		|| arg == "æ ‘æ" )
 	{
-	write("ÕâÊÇÒ»¸ù´Ö×³¹â»¬µÄÊ÷Ö¦£¬ÏÖÔÚ¶Ô×ÅÕı"+directions[query("current_dir")]+"¡£\n");
+	write("è¿™æ˜¯ä¸€æ ¹ç²—å£®å…‰æ»‘çš„æ ‘æï¼Œç°åœ¨å¯¹ç€æ­£"+directions[query("current_dir")]+"ã€‚\n");
 	return 1;
 	}
 	return 0;
@@ -45,15 +45,15 @@ int do_swing(string arg)
 	int c_dir;
 	me = this_player();
         if( arg == "vine"
-                || arg == "Ê÷Ö¦" )
+                || arg == "æ ‘æ" )
         {
 	echoforest(me);
 	c_dir = query("current_dir");
-	message_vision("\n\n$N×¥½ôÊ÷Ö¦£¬ÓÃÁ¦Ïò"+
+	message_vision("\n\n$NæŠ“ç´§æ ‘æï¼Œç”¨åŠ›å‘"+
 	directions[c_dir] +
-	"µ´È¥£¡	
-Ìı×Å¶ú±ßµÄºôºô·çÉù£¬$N²»½û¾ª½ĞµÀ£º
-°¡°¡°¡£®£®£®Å¶Å¶Å¶Å¶Å¶Å¶£®£®£®°¡°¡£¡£¡£¡\n\n",me);
+	"è¡å»ï¼	
+å¬ç€è€³è¾¹çš„å‘¼å‘¼é£å£°ï¼Œ$Nä¸ç¦æƒŠå«é“ï¼š
+å•Šå•Šå•Šï¼ï¼ï¼å“¦å“¦å“¦å“¦å“¦å“¦ï¼ï¼ï¼å•Šå•Šï¼ï¼ï¼\n\n",me);
 	if(c_dir == 1 )
 		me->move(__DIR__"edge2");
 	else
@@ -69,12 +69,12 @@ int do_turn(string arg)
 	int c_dir;
 	me = this_player();
         if( arg == "vine"
-                || arg == "Ê÷Ö¦" )
+                || arg == "æ ‘æ" )
         {
 	c_dir = (int) query("current_dir");
 	c_dir = (c_dir + 1 ) %4 ;
 	set("current_dir",c_dir);
-	message_vision("$NÓÃÁ¦°â¶¯Ê÷Ö¦£¬Ê¹Ëü¶Ô×ÅÕı"+directions[c_dir]+"¡£\n",me);
+	message_vision("$Nç”¨åŠ›æ‰³åŠ¨æ ‘æï¼Œä½¿å®ƒå¯¹ç€æ­£"+directions[c_dir]+"ã€‚\n",me);
         return 1;
         }
         return 0;
@@ -94,7 +94,7 @@ string *names = ({"center1","center2","center3", "center4",
 for(i=0;i<sizeof(names);i++)
 {
 if( room = find_object(__DIR__+names[i]))
-tell_object(room,HIW "\n\nÔ¶·½´«À´Ò»Éù³¤½Ğ£º£¢°¡°¡°¡£®£®£®Å¶Å¶Å¶Å¶Å¶Å¶£®£®£®°¡°¡°¡£¡£¡£¢\n\n" NOR);
+tell_object(room,HIW "\n\nè¿œæ–¹ä¼ æ¥ä¸€å£°é•¿å«ï¼šï¼‚å•Šå•Šå•Šï¼ï¼ï¼å“¦å“¦å“¦å“¦å“¦å“¦ï¼ï¼ï¼å•Šå•Šå•Šï¼ï¼ï¼‚\n\n" NOR);
 }
 }
 void reset()

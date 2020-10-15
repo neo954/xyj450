@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÍÁ·Ë", ({ "bandit" }) );
-	set("gender", "ÄĞĞÔ");
+	set_name("åœŸåŒª", ({ "bandit" }) );
+	set("gender", "ç”·æ€§");
 	set("age", 27);
-	set("long",	"Õâ¼Ò»ï³¤µÃ¸ß¸ßÊİÊİ£¬Á³É«²Ô°×£¬Ò»¸¶ÎŞ¾«´ò²ÉµÄÑù×Ó¡£\n");
+	set("long",	"è¿™å®¶ä¼™é•¿å¾—é«˜é«˜ç˜¦ç˜¦ï¼Œè„¸è‰²è‹ç™½ï¼Œä¸€ä»˜æ— ç²¾æ‰“é‡‡çš„æ ·å­ã€‚\n");
 	set("combat_exp", 900);
 	set("score", 100);
 	set("attitude", "aggressive");

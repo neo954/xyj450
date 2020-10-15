@@ -5,11 +5,11 @@
 inherit ITEM;
 void create()
 {
-    set_name( "±±ÜÎ", ({ "astragalt","radix astragalt"  }) );
-    set("unit", "¿é");
+    set_name( "åŒ—èŠª", ({ "astragalt","radix astragalt"  }) );
+    set("unit", "å—");
     set("value",20);
     set("long","
-Ò»¿éÉÏºÃµÄ±±ÜÎ
+ä¸€å—ä¸Šå¥½çš„åŒ—èŠª
 \n");
     set_weight(5);
 }

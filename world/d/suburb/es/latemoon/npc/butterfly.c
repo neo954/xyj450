@@ -2,11 +2,11 @@ inherit NPC;
 
 void create()
 {
-	set_name("ºûµû", ({ "butterfly" }) );
-	set("race", "Ò°ÊŞ");
+	set_name("è´è¶", ({ "butterfly" }) );
+	set("race", "é‡å…½");
 	set("age", 1);
-	set("gender", "´ÆĞÔ");
-	set("long", "Ò»Ö»ôæôæÆğÎèµÄĞ¡ºûµûÅ¶! \n");
+	set("gender", "é›Œæ€§");
+	set("long", "ä¸€åªç¿©ç¿©èµ·èˆçš„å°è´è¶å“¦! \n");
 
 	set("str", 6);
 	set("cor", 8);
@@ -16,15 +16,15 @@ void create()
 	set("score", 10);
 	set("attitude","peaceful");
 
-	set("limbs", ({ "Í·²¿", "ÉíÌå","³á°ò" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“","ç¿…è†€" }) );
 	set("verbs", ({ "bite" }) );
     set_temp("apply/dodge", 50);
 
    set("chat_chance", 15);
 	set("chat_msg", ({
 		(: random_move :),
-		"ºûµûÅÄ¶¯Öø³á°ò! \n",
-		"ºûµûÍ£ÔÚ»¨ÉÏÎü»¨ÃÛ¡£ \n"
+		"è´è¶æ‹åŠ¨è‘—ç¿…è†€! \n",
+		"è´è¶åœåœ¨èŠ±ä¸Šå¸èŠ±èœœã€‚ \n"
 	}) );
 
 	setup();

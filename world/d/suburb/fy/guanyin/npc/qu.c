@@ -2,20 +2,20 @@ inherit NPC;
 int direct();
 void create()
 {
-        set_name("ÇúÎÞÈÝ", ({ "wurong" }) );
-        set("gender", "Å®ÐÔ" );
+        set_name("æ›²æ— å®¹", ({ "wurong" }) );
+        set("gender", "å¥³æ€§" );
         set("age", 22);
 	set("str",40);
         set("long",
-                "Ò»¸öÈ«ÉíºÚÅÛµÄÅ®º¢×Ó£®£®\n");
+                "ä¸€ä¸ªå…¨èº«é»‘è¢çš„å¥³å­©å­ï¼Žï¼Ž\n");
 	set("combat_exp", 5000000);
         set("chat_chance", 2);
         set("chat_msg", ({
-                "ÇúÎÞÈÝÖ¸×Å¼§±ùÑãµÀ£ºÄã£®£®ÄãÕæµÄ²»¿Ï×ß£¿£¡£¡\n",
-		"ÇúÎÞÈÝºßµÀ£ºÖÐÔ­Ò»µãºì£¬ËûÕæµÄ°®ÎÒ£¿£¿\n",
+                "æ›²æ— å®¹æŒ‡ç€å§¬å†°é›é“ï¼šä½ ï¼Žï¼Žä½ çœŸçš„ä¸è‚¯èµ°ï¼Ÿï¼ï¼\n",
+		"æ›²æ— å®¹å“¼é“ï¼šä¸­åŽŸä¸€ç‚¹çº¢ï¼Œä»–çœŸçš„çˆ±æˆ‘ï¼Ÿï¼Ÿ\n",
         }) );
         set("inquiry", ([
-                "Ê¯¹ÛÒô" : (: direct :),
+                "çŸ³è§‚éŸ³" : (: direct :),
                 "master guanyin" : (: direct :)
 
         ]));
@@ -32,10 +32,10 @@ int direct()
 	object me;
 	object room;
 	me = this_player();
-	message_vision("$N¶Ô$nÀäÐ¦Ò»Éù£ºÄãÏë¼ûÎÒÊ¦¸¸£¿
-ÄÇÎÒ¾Í³ÉÈ«Äã£¡£¡\n",this_object(),me);
+	message_vision("$Nå¯¹$nå†·ç¬‘ä¸€å£°ï¼šä½ æƒ³è§æˆ‘å¸ˆçˆ¶ï¼Ÿ
+é‚£æˆ‘å°±æˆå…¨ä½ ï¼ï¼\n",this_object(),me);
 	room = load_object("/d/suburb/fy/guanyin/mirror");
-	message_vision("$N½ÅÏÂÒ»ËÉ£¬Õû¸öÈË²»¼ûÁË£¡\n",me);
+	message_vision("$Nè„šä¸‹ä¸€æ¾ï¼Œæ•´ä¸ªäººä¸è§äº†ï¼\n",me);
 	me->move(room);	
 	return 1;
 }

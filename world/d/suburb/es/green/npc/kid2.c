@@ -2,8 +2,8 @@ inherit NPC;
 void create()
 {
         seteuid(getuid());
-        set_name("Ğ¡º¢",({"kid","child"}));
-        set("gender","ÄĞĞÔ");
+        set_name("å°å­©",({"kid","child"}));
+        set("gender","ç”·æ€§");
         set("age",(random(8)+7));
         set("combat_exp",(random(10)+5));
         set("score",(random(50)+10));

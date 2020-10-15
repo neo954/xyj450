@@ -4,10 +4,10 @@ inherit BULLETIN_BOARD;
 
 void create()
 {
-	set_name("·çÔÆÑÅĞË¼¯", ({ "board" }) );
+	set_name("é£äº‘é›…å…´é›†", ({ "board" }) );
 	set("location", "/d/suburb/fy/fy/poemp");
 	set("board_id", "poem_b");
-	set("long",	"ÕâÊÇÒ»¸ö¹©·çÔÆÈËÎïÑÅĞË´ó·¢Ê±ËùÓÃ¡£\n" );
+	set("long",	"è¿™æ˜¯ä¸€ä¸ªä¾›é£äº‘äººç‰©é›…å…´å¤§å‘æ—¶æ‰€ç”¨ã€‚\n" );
 	setup();
 	set("capacity", 60);
 	replace_program(BULLETIN_BOARD);

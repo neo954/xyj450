@@ -5,7 +5,7 @@ inherit SSERVER;
 void remove_effect(object me, object target, int amount)
 {
 	if ( living(target) && (environment(me) == environment(target)) ){
-        	message_vision(CYN"$NÍ»È»¶Ô$n·¢³ö·ÜÁ¦Ò»»÷£¡\n"NOR, me, target);
+        	message_vision(CYN"$Nçªç„¶å¯¹$nå‘å‡ºå¥‹åŠ›ä¸€å‡»ï¼\n"NOR, me, target);
         	me->add_temp("apply/attack", amount * 3 + (12-amount) * 10 );
                 me->add_temp("apply/damage",(12-amount)*3) ;
         	COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
@@ -28,15 +28,15 @@ int perform (object me, object target)
         if( !target ) target = offensive_target(me);
 
         if( !target || !target->is_character() || !me->is_fighting(target) )
-                return notify_fail("'È±'×Ö¾÷Ö»ÄÜÔÚÕ½¶·ÖĞÊ¹ÓÃ¡£\n");
+                return notify_fail("'ç¼º'å­—è¯€åªèƒ½åœ¨æˆ˜æ–—ä¸­ä½¿ç”¨ã€‚\n");
 	if ( !living(target) || environment(me) != environment(target) )
-		return notify_fail("ÄãÒª¶ÔË­Ê¹ÓÃ'È±'×Ö¾÷£¿\n");
+		return notify_fail("ä½ è¦å¯¹è°ä½¿ç”¨'ç¼º'å­—è¯€ï¼Ÿ\n");
 	if ( me->query_temp("fonxansword") )
-		return notify_fail("ÄãÒÑ¾­ÔÚÔËÓÃÖĞÁË¡£\n");
-        msg  = CYN "$N½£ÕĞ¶¸±ä£¬¿ÕÃÅ´ó¿ª£¬ÓÕÊ¹$n½øÕĞ£¬\n";
+		return notify_fail("ä½ å·²ç»åœ¨è¿ç”¨ä¸­äº†ã€‚\n");
+        msg  = CYN "$Nå‰‘æ‹›é™¡å˜ï¼Œç©ºé—¨å¤§å¼€ï¼Œè¯±ä½¿$nè¿›æ‹›ï¼Œ\n";
 
         if (random(me->query("combat_exp")) > target->query("combat_exp")/2 ) {
-//                msg += "\n$N¿´¼û»ú»á£¬Á¢¿Ì·ÅÊÖ½ø¹¥.\n" NOR;
+//                msg += "\n$Nçœ‹è§æœºä¼šï¼Œç«‹åˆ»æ”¾æ‰‹è¿›æ”».\n" NOR;
 
                 skill = (300 -(int) me->query_skill("sword")) /20;
 		if ( skill > 10 ) skill = 10 ;
@@ -51,7 +51,7 @@ skill :), skill);
                 return 1;
                 }
 
-        msg += "\n¿ÉÊÇ$n¿´ÆÆÁË$NµÄÆóÍ¼£¬²¢Ã»ÓĞÉÏµ±¡£\n" NOR;
+        msg += "\nå¯æ˜¯$nçœ‹ç ´äº†$Nçš„ä¼å›¾ï¼Œå¹¶æ²¡æœ‰ä¸Šå½“ã€‚\n" NOR;
         message_vision(msg, me, target);
 	me->start_busy(1);
         return 1;

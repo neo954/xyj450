@@ -2,10 +2,10 @@
 inherit ROOM;
 void create()
 {
-        set("short", "��ʦ�ֵ�");
+        set("short", "京师街道");
         set("long", @LONG
-�����Ǿ�ʦ�Ĵ���ϡ������Ǿ�ʦ����һ�ţ������µ�ɮ����
-ȥȡ���ؾ��˵ء���Ե�õĻ������Կ��������е���ɮ·����
+这里是京师的大街上。西边是京师的西一门，护国寺的僧人西
+去取经必经此地。福缘好的话还可以看到几个有道高僧路过。
 LONG
         );
         set("exits", ([ /* sizeof() == 3 */

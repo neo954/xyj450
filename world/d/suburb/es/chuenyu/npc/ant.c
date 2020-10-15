@@ -2,12 +2,12 @@ inherit NPC;
 
 void create()
 {
-        set_name("蚂蚁", ({ "ant" }) );
-        set("race", "野兽");
+        set_name("铓傝殎", ({ "ant" }) );
+        set("race", "閲庡吔");
         set("age", 1);
-        set("long", "一只小小的小蚂蚁\n");
+        set("long", "涓�鍙皬灏忕殑灏忚殏铓乗n");
 
-        set("limbs", ({ "头部", "身体", "尾巴" }) );
+        set("limbs", ({ "澶撮儴", "韬綋", "灏惧反" }) );
         set("verbs", ({ "bite" }) );
 
         set_skill("dodge", 200);

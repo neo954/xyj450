@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // master.c
@@ -8,16 +8,16 @@ inherit F_MASTER;
 
 void create()
 {
-   set_name("½ğ¡õ", ({ "mastress assassin", "mastress", "assassin" }) );
+   set_name("é‡‘â–¡", ({ "mastress assassin", "mastress", "assassin" }) );
 
-   set("gender", "Å®ĞÔ");
+   set("gender", "å¥³æ€§");
    set("age", 29);
    set("attitude", "peaceful");
 
    set("str", 26);
    set("int", 24);
 
-   create_family("ÔÂÑÀÉñ½Ì", 25, "Ê¥Å®");
+   create_family("æœˆç‰™ç¥æ•™", 25, "åœ£å¥³");
 
    set("force", 1800);
    set("max_force", 1800);
@@ -59,8 +59,8 @@ void attempt_apprentice(object me)
 {
    command("look " + me->query("id"));
    if( me->can_afford(100) ) {
-     command("say ÎÒÃÇ»¨×Ï»áÖ»ÊÕ»¯×Ó£¬" + RANK_D->query_respect(me)
-        + "Äú»¹ÊÇ»ØÈ¥Ïí¸£°É¡£\n");
+     command("say æˆ‘ä»¬èŠ±ç´«ä¼šåªæ”¶åŒ–å­ï¼Œ" + RANK_D->query_respect(me)
+        + "æ‚¨è¿˜æ˜¯å›å»äº«ç¦å§ã€‚\n");
      return;
    } else {
      command("nod");

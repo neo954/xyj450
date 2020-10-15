@@ -7,15 +7,15 @@ inherit ITEM;
 
 void create()
 {
-    set_name( "¹ıÕĞÒªÖ¼", ({ "parrybook","pbook" }) );
+    set_name( "è¿‡æ‹›è¦æ—¨", ({ "parrybook","pbook" }) );
 	set_weight(800);
 	if ( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
+		set("unit", "æŠŠ");
 		set("long",@LONG
-ÕâÊÇÒ»±¾½éÉÜ¹ıÕĞÊ±ÈçºÎ²ğÕĞĞ¶Á¦µÄÊé¼®¡£
-¶ÔÁ·ÎäÈËÀ´ËµÊÇ±¾²»¿É¶àµÃµÄÕä±¦¡£
+è¿™æ˜¯ä¸€æœ¬ä»‹ç»è¿‡æ‹›æ—¶å¦‚ä½•æ‹†æ‹›å¸åŠ›çš„ä¹¦ç±ã€‚
+å¯¹ç»ƒæ­¦äººæ¥è¯´æ˜¯æœ¬ä¸å¯å¤šå¾—çš„çå®ã€‚
 LONG
 		);
 		set("value", 100);

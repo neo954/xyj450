@@ -5,10 +5,10 @@ inherit NPC;
 int give_poem();
 void create()
 {
-        set_name("ÀËÓÎÊ«ÈË", ({ "shiren", "ren"}) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("æµªæ¸¸è¯—äºº", ({ "shiren", "ren"}) );
+        set("gender", "ç”·æ€§" );
         set("age", 22);
-        set("long", "ÕâÊÇÒ»Î»Ğ¡ÓĞ²Å»ªµÄÊ«ÈË£¬ÕıÔÚ¹ÛÍû·çÔÆ³Ç¡£\n");
+        set("long", "è¿™æ˜¯ä¸€ä½å°æœ‰æ‰åçš„è¯—äººï¼Œæ­£åœ¨è§‚æœ›é£äº‘åŸã€‚\n");
         set("combat_exp", 50000);
         set("attitude", "friendly");
         set_skill("hammer", 90);
@@ -16,11 +16,11 @@ void create()
         set("iron-cloth", 200);
         set("chat_chance", 1);
         set("chat_msg", ({
-                "Ê«ÈË¿´ÁË¿´·çÔÆ³ÇÌ¾µÀ£ººÃ³Ç£¡ºÃ³Ç£¡\n",
-                "Ê«ÈËõâÀ´õâÈ¥£¬ËÆºõÕıÔÚ´ò¸¹¸å¡£\n",
+                "è¯—äººçœ‹äº†çœ‹é£äº‘åŸå¹é“ï¼šå¥½åŸï¼å¥½åŸï¼\n",
+                "è¯—äººè¸±æ¥è¸±å»ï¼Œä¼¼ä¹æ­£åœ¨æ‰“è…¹ç¨¿ã€‚\n",
         }) );
         set("inquiry", ([
-                "·çÔÆÔŞ¸è" : (: give_poem :),
+                "é£äº‘èµæ­Œ" : (: give_poem :),
                 "poem" : (: give_poem :)
 
         ]));
@@ -34,13 +34,13 @@ int give_poem()
 	object obj;
 if( !query("given"))
 	{
-command("say ¼ÈÈ»Äã¶ÔÎÒµÄÊ«´ÊÈç´Ë³ç°İ£¬ÕâÊ×¾ÍËÍÓÚÄã°É£®\n");
+command("say æ—¢ç„¶ä½ å¯¹æˆ‘çš„è¯—è¯å¦‚æ­¤å´‡æ‹œï¼Œè¿™é¦–å°±é€äºä½ å§ï¼\n");
 obj = new(__DIR__"obj/poem");
 obj->move(this_player());
 set("given",1);
 	}
 else
-command("say ÎÒÖªµÀÄãºÜ³ç°İÎÒ£¬µ«ÎÒ»¹ÒªÒ»»á¶ù²ÅÄÜĞ´ºÃÕâÊ«£®\n");
+command("say æˆ‘çŸ¥é“ä½ å¾ˆå´‡æ‹œæˆ‘ï¼Œä½†æˆ‘è¿˜è¦ä¸€ä¼šå„¿æ‰èƒ½å†™å¥½è¿™è¯—ï¼\n");
 	return 1;
 }
 

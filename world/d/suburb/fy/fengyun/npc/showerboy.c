@@ -5,11 +5,11 @@ inherit F_VENDOR;
 
 void create()
 {
-	set_name("Ğ¡Í¯", ({ "xiaotong" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("å°ç«¥", ({ "xiaotong" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 14);
 	set("long",
-		"Ò»¸öÌìÕæÎŞĞ°µÄĞ¡Í¯\n");
+		"ä¸€ä¸ªå¤©çœŸæ— é‚ªçš„å°ç«¥\n");
 	set("combat_exp", 500000);
 	set("attitude", "friendly");
 	set("per",30);
@@ -40,7 +40,7 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(3) ) {
 		case 0:
-message_vision("$NÔÚ°ÙÃ¦ÖĞÌ§ÆğÍ·ÍûÁË$nÒ»ÑÛ¡£\n",this_object(),ob);
+message_vision("$Nåœ¨ç™¾å¿™ä¸­æŠ¬èµ·å¤´æœ›äº†$nä¸€çœ¼ã€‚\n",this_object(),ob);
 			break;
 	}
 }

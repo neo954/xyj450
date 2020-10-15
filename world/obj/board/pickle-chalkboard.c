@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // pickle's board.c
@@ -7,10 +7,10 @@ inherit BULLETIN_BOARD;
 
 void create()
 {
-   set_name("ºÚ°å", ({ "chalkboard" }) );
+   set_name("é»‘æ¿", ({ "chalkboard" }) );
    set("location", "/u/pickle/workroom");
    set("board_id", "chalkboard");
-   set("long",   "ÕâÊÇÒ»ÃæÔàÔàµÄºÚ°å£¬ÉÏÃæĞ´ÂúÁËÔÓÂÒÎŞÕÂµÄÁôÑÔ¡£\n" );
+   set("long",   "è¿™æ˜¯ä¸€é¢è„è„çš„é»‘æ¿ï¼Œä¸Šé¢å†™æ»¡äº†æ‚ä¹±æ— ç« çš„ç•™è¨€ã€‚\n" );
    setup();
    set("capacity", 100);
    replace_program(BULLETIN_BOARD);

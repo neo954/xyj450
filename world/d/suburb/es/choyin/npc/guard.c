@@ -4,9 +4,9 @@ inherit NPC;
 
 void create()
 {
-	set_name("æ∆¬• ÿŒ¿", ({ "hotel guard", "guard" }) );
+	set_name("ÈÖíÊ•ºÂÆàÂç´", ({ "hotel guard", "guard" }) );
 	set("long",
-		"“ª∏ˆ…Ì¥©¿∂≤º“¬µƒ»À£¨¥”À˚»Ò¿˚µƒ—€…Ò∏˙…Ò«È£¨œ‘»ª «∏ˆ¡∑º“◊”°£\n");
+		"‰∏Ä‰∏™Ë∫´Á©øËìùÂ∏ÉË°£ÁöÑ‰∫∫Ôºå‰ªé‰ªñÈîêÂà©ÁöÑÁúºÁ•ûË∑üÁ•ûÊÉÖÔºåÊòæÁÑ∂ÊòØ‰∏™ÁªÉÂÆ∂Â≠ê„ÄÇ\n");
 	set("age", 29);
 	set("attitude", "peaceful");
 	set("combat_exp", 100000);
@@ -33,7 +33,7 @@ void create()
 
 int accept_fight(object me)
 {
-	command("say ’∆πÒµƒ”–Ωª¥˙£¨≤ª◊º»Œ∫Œ»À‘⁄’‚¿Ô¥Úº‹£°");
+	command("say ÊéåÊüúÁöÑÊúâ‰∫§‰ª£Ôºå‰∏çÂáÜ‰ªª‰Ωï‰∫∫Âú®ËøôÈáåÊâìÊû∂ÔºÅ");
 	return 0;
 }
 
@@ -44,7 +44,7 @@ void accept_kill(object me)
 	fellow = all_inventory(environment())->help_hotel_guard(this_object(), me);
 	fellow -= ({ 0 });
 	if( sizeof(fellow) ) {
-		command("say ”–«ø»À¥ÚΩŸƒƒ... øÏ»•±®πŸ£°");
+		command("say ÊúâÂº∫‰∫∫ÊâìÂä´Âì™... Âø´ÂéªÊä•ÂÆòÔºÅ");
 		me->set("vendetta/authority", 1);
 	}
 }
@@ -52,7 +52,7 @@ void accept_kill(object me)
 int help_hotel_guard(object me, object foe)
 {
 	if( me==this_object() ) return 0;
-	command("say ∏… ≤√¥£ø£°");
+	command("say Âπ≤‰ªÄ‰πàÔºüÔºÅ");
 	kill_ob(foe);
 	return 1;
 }

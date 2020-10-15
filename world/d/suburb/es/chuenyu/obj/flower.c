@@ -6,13 +6,13 @@ inherit THROWING;
 
 void create()
 {
-        set_name("×Ï»¨°ê¶ù", ({ "purple flower", "flower" }) );
+        set_name("ç´«èŠ±ç“£å„¿", ({ "purple flower", "flower" }) );
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("long",     "ÃÔÈËµÄ×ÏÉ«°ê¶ù£¬·¢³öÒ»¹Éµ­µ­µÄÏãÆø¡£\n");
-                set("unit", "°Ñ");
-                set("base_unit", "Æ¬");
+                set("long",     "è¿·äººçš„ç´«è‰²ç“£å„¿ï¼Œå‘å‡ºä¸€è‚¡æ·¡æ·¡çš„é¦™æ°”ã€‚\n");
+                set("unit", "æŠŠ");
+                set("base_unit", "ç‰‡");
                 set("base_weight", 1);
                 set("base_value", 1);
         }

@@ -5,15 +5,15 @@ inherit F_FOOD;
 
 void create()
 {
-	set_name("ÎÚÑ©Á«", ({ "ebony lotus", "lotus" }) );
+	set_name("ä¹Œé›ªè²", ({ "ebony lotus", "lotus" }) );
 	set_weight(90);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
 		set("long",
-			"ÕâÊÇÒ»ÖÖÉú³¤ÔÚ¸ßÉ½±ùÑ©Ö®ÖĞµÄÕä¹óÒ©²Ä£¬¾İËµ¶ÔĞŞÁ¶ÄÚ¹¦\µÄ\n"
-			"ÎäÁÖÈËÊ¿ÆÄÓĞ°ïÖú¡£\n");
-		set("unit", "¿é");
+			"è¿™æ˜¯ä¸€ç§ç”Ÿé•¿åœ¨é«˜å±±å†°é›ªä¹‹ä¸­çš„çè´µè¯æï¼Œæ®è¯´å¯¹ä¿®ç‚¼å†…åŠŸ\çš„\n"
+			"æ­¦æ—äººå£«é¢‡æœ‰å¸®åŠ©ã€‚\n");
+		set("unit", "å—");
 		set("value", 30000);
 		set("food_remaining", 1);
 		set("eat_func", (: eat_tonic :) );

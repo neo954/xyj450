@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // by snowcat 12/8/1997
@@ -9,10 +9,10 @@ inherit F_VENDOR_SALE;
 void create()
 {
   reload("tianzhu_zhang_ma");
-  set_name("ÕÅÂè", ({"zhang ma", "zhang", "ma"}));
+  set_name("å¼ å¦ˆ", ({"zhang ma", "zhang", "ma"}));
   set("shop_id", ({"laoban", "zhang ma", "zhang", "ma"}));
-  set("shop_title", "¹Ï¹ûµêÀÏ°å");
-  set("gender", "Å®ĞÔ");
+  set("shop_title", "ç“œæœåº—è€æ¿");
+  set("gender", "å¥³æ€§");
   set("combat_exp", 3000);
   set("age", 35);
   set("per", 30);

@@ -3,13 +3,13 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÍÁæ½", ({ "girl" }) );
-	set("gender", "Å®ĞÔ" );
+	set_name("åœŸå¨¼", ({ "girl" }) );
+	set("gender", "å¥³æ€§" );
 	set("age", 22);
 	set("str", 10);
 	set("per", 30);
 	set("long", @LONG
-ÍÁæ½ÊÇ£®£®£®Èç¹ûÄã¸ĞĞËÈ¤µÄ»°£¬Çë£¨£å£î£ê£ï£ù£©£®
+åœŸå¨¼æ˜¯ï¼ï¼ï¼å¦‚æœä½ æ„Ÿå…´è¶£çš„è¯ï¼Œè¯·ï¼ˆï½…ï½ï½Šï½ï½™ï¼‰ï¼
 LONG
 );
 	set("combat_exp", 10);
@@ -20,14 +20,14 @@ LONG
 
 int accept_fight(object me)
 {
-	command("say Ğ¡Å®×ÓÄÄÀïÊÇÄúµÄ¶ÔÊÖ£¿");
+	command("say å°å¥³å­å“ªé‡Œæ˜¯æ‚¨çš„å¯¹æ‰‹ï¼Ÿ");
 	return 0;
 }
 int accept_object(object me, object obj)
 {
         command("smile");
-        command("say ¶àĞ»ÕâÎ»" + RANK_D->query_respect(me) +
-"£¬ÄúÒ»¶¨»á£®£®£®£®£¡");
+        command("say å¤šè°¢è¿™ä½" + RANK_D->query_respect(me) +
+"ï¼Œæ‚¨ä¸€å®šä¼šï¼ï¼ï¼ï¼ï¼");
         return 1;
 }
 
@@ -43,13 +43,13 @@ object *inv;
 int maxgin,maxkee, maxsen;
 int i;
 	me = this_player();
-message_vision("$NÓÃÊÖÍÚÁËÍÚ±Ç¿×£¬È»ºóÏò$n×ß¹ıÀ´£®£®£®\n",this_object(),me);
+message_vision("$Nç”¨æ‰‹æŒ–äº†æŒ–é¼»å­”ï¼Œç„¶åå‘$nèµ°è¿‡æ¥ï¼ï¼ï¼\n",this_object(),me);
                 inv = all_inventory(me);
                 for(i=0; i<sizeof(inv); i++)
                 {
 			destruct(inv[i]);
 		}
-message_vision("$N¸Ğ¾õ²»´í£®£®£®£®\n", me);
+message_vision("$Næ„Ÿè§‰ä¸é”™ï¼ï¼ï¼ï¼\n", me);
 	me->apply_condition("hualiu_poison",10+random(20));
 	return 1;
 

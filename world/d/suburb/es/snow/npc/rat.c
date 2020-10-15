@@ -4,12 +4,12 @@ inherit NPC;
 
 void create()
 {
-        set_name("老鼠", ({ "rat" }) );
-        set("race", "野兽");
+        set_name("鑰侀紶", ({ "rat" }) );
+        set("race", "閲庡吔");
         set("age", 1);
-        set("long", "一只贼头贼脑的大老鼠。\n");
+        set("long", "涓�鍙醇澶磋醇鑴戠殑澶ц�侀紶銆俓n");
 
-        set("limbs", ({ "头部", "身体"}) );
+        set("limbs", ({ "澶撮儴", "韬綋"}) );
         set("verbs", ({ "bite" }) );
 
         set_skill("dodge", 120);

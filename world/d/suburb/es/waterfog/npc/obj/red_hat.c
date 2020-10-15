@@ -6,13 +6,13 @@ inherit HEAD;
 
 void create()
 {
-	set_name("ÏÊºì½ğÎÚ¹Ú", ({ "crimson hat", "hat" }) );
+	set_name("é²œçº¢é‡‘ä¹Œå† ", ({ "crimson hat", "hat" }) );
 	set_weight(1000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¶¥");
-		set("long", "ÕâÊÇË®ÑÌ¸óÎäÊ¿³£´÷µÄºìÉ«Ô²¶¥Ã±£¬Ã±ÔµÏâÖøÒ»È¦½ğÏß¡£\n");
+		set("unit", "é¡¶");
+		set("long", "è¿™æ˜¯æ°´çƒŸé˜æ­¦å£«å¸¸æˆ´çš„çº¢è‰²åœ†é¡¶å¸½ï¼Œå¸½ç¼˜é•¶è‘—ä¸€åœˆé‡‘çº¿ã€‚\n");
 		set("value", 800);
 		set("armor_prop/attack", 2);
 		set("armor_prop/defense", -2);

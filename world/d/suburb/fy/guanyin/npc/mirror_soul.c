@@ -2,10 +2,10 @@
 inherit NPC;
 void create()
 {
-        set_name( HIW "¾µ»ê" NOR, ({ "mirror soul", "soul" }) );
-        set("long", "Ò»¸öÄ§ÆøçÔÈÆµÄºÚÓ°£®£®£®\n");
+        set_name( HIW "é•œé­‚" NOR, ({ "mirror soul", "soul" }) );
+        set("long", "ä¸€ä¸ªé­”æ°”ç¼­ç»•çš„é»‘å½±ï¼Žï¼Žï¼Ž\n");
         set("age", 19);
-        set("gender", "Å®ÐÔ");
+        set("gender", "å¥³æ€§");
         set("attitude", "heroism");
 
         set("max_gin", 2000);

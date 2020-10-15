@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 //change.c
@@ -7,15 +7,15 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("����", ({"yu tu", "rabbit", "jade rabbit" }));
+       set_name("玉兔", ({"yu tu", "rabbit", "jade rabbit" }));
        set("long",
-"������ԭ��ֻ���϶�ĳ��������϶���ڵ��ϵ���ҩ�������Ρ�����
-����ҩ֮�±���ĸ��ȥ��ҩ���ö���֮����ͨҩ����\n");
-       set("gender", "Ů��");
+"玉兔仙原本只是嫦娥的宠物，因吃了嫦娥掉在地上的灵药而成人形。玉兔
+因灵药之事被王母罚去捣药，久而久之竟颇通药道。\n");
+       set("gender", "女性");
        set("age", 20);
        set("class", "xian");
        set("attitude", "friendly");
-       set("rank_info/respect", "�ɹ�");
+       set("rank_info/respect", "仙姑");
        set("per", 30);
    set("int", 30);
        set("max_kee", 500);
@@ -48,7 +48,7 @@ void create()
         map_skill("force", "moonforce");
         map_skill("dodge", "moondance");
 
-create_family("�¹�", 2, "����");
+create_family("月宫", 2, "弟子");
 setup();
 
         carry_object("/d/moon/obj/luoyi")->wear();
@@ -57,16 +57,16 @@ setup();
 
 void attempt_apprentice(object ob)
 {
-        if ( !((string)ob->query("gender")=="Ů��")){
+        if ( !((string)ob->query("gender")=="女性")){
            command("shake");
-           command("say �����¹�ֻ��Ůͽ����λ" +
-RANK_D->query_respect(ob) + "��������߾Ͱɡ�\n");
+           command("say 我们月宫只收女徒，这位" +
+RANK_D->query_respect(ob) + "还是另请高就吧。\n");
            return;
         }
 
         command("pat "+ob->query("id"));
-        command("say �ã�ϣ��" + RANK_D->query_respect(ob) +
-"���Ŭ�����������¹�������\n");
+        command("say 好，希望" + RANK_D->query_respect(ob) +
+"多加努力，把我们月宫发扬光大。\n");
         command("recruit " + ob->query("id") );
         return;
 }

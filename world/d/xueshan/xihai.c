@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 //standroom.c used by weiqi...others may hate this format:D
@@ -8,12 +8,12 @@ inherit ROOM;
 
 void create ()
 {
-   set ("short", "����֮��");
+   set ("short", "西海之畔");
    set ("long", @LONG
 
-������һ���޼ʵ�ѩԭ��Ρ����ΰ�ı�ɽ��ͻȻ��̲����꣬��
-�׳����ˮ��չ������ǰ�����ʱ����һ����������ӿ����ͷ��
-ɽ�������ݣ��񣬷·��ǵ�����һ�����硣
+见惯了一望无际的雪原，巍峨雄伟的冰山，突然间碧波万顷，浩
+瀚壮阔的水面展现在面前，你顿时觉得一股柔情蜜意涌上心头。
+山，湖，草，鸟，仿佛是到了另一个世界。
 LONG);
 
    //set("item_desc", ([" *** " : " *** \n", ]));

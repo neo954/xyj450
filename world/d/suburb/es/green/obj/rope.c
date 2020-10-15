@@ -4,13 +4,13 @@ inherit ITEM;
 
 void create()
 {
-	set_name("Éş×Ó", ({"rope"}) );
+	set_name("ç»³å­", ({"rope"}) );
 	if (clonep())
 		set_default_object(__FILE__);
 	else {
-	set("unit","À¦");
+	set("unit","æ†");
 	set("long", @LONG
-ÕâÊÇÒ»À¦´ÖÂéÉş. Äã¿ÉÒÔÓÃËüÀ´ÉÏµõ(hang).
+è¿™æ˜¯ä¸€æ†ç²—éº»ç»³. ä½ å¯ä»¥ç”¨å®ƒæ¥ä¸ŠåŠ(hang).
 
 LONG
 	);
@@ -29,18 +29,18 @@ int hang_self(string str)
 {
     // do we pass any argument?
     if (!str)
-        return notify_fail("àÅ... ÏëÉÏµõ°¡? hang <name> ÂŞ... \n");
+        return notify_fail("å—¯... æƒ³ä¸ŠåŠå•Š? hang <name> ç½—... \n");
     // check if we are doing this indoor
     if (environment(this_player())->query("outdoors"))
-        return notify_fail("ÄãËÄ´¦¿´¿´, ÊµÔÚÕÒ²»µ½µØ·½¹ÒÉş×ÓËµ...\n");
+        return notify_fail("ä½ å››å¤„çœ‹çœ‹, å®åœ¨æ‰¾ä¸åˆ°åœ°æ–¹æŒ‚ç»³å­è¯´...\n");
     // are we hanging ourselves? :-)
     if (((string)this_player()->query("id") != str) && (str != "self"))
-        return notify_fail("¨ß... ÉÏµõÊÇ×Ô¼ºµÄÊÂ, Çë²»Òª¼¦ÆÅ...\n");
+        return notify_fail("ã„Ÿ... ä¸ŠåŠæ˜¯è‡ªå·±çš„äº‹, è¯·ä¸è¦é¸¡å©†...\n");
     // if we get to here, we are ready..
     tell_room(environment(this_player()), (string)this_player()->name()+
-    "Ì¾ÁËÒ»¿ÚÆø, ºÜ¿Ï¶¨µØ°ÑÉş×ÓÌ×ÔÚ²±×ÓÉÏ.....\n",
+    "å¹äº†ä¸€å£æ°”, å¾ˆè‚¯å®šåœ°æŠŠç»³å­å¥—åœ¨è„–å­ä¸Š.....\n",
     ({this_object(), this_player()}) );
-    tell_object(this_player(), "Äã°ÑÉş×ÓÒ»¶Ë¹ÒºÃ, ÁíÒ»¶ËÍù²±×ÓÉÏÒ»Ì×.....\n");
+    tell_object(this_player(), "ä½ æŠŠç»³å­ä¸€ç«¯æŒ‚å¥½, å¦ä¸€ç«¯å¾€è„–å­ä¸Šä¸€å¥—.....\n");
     this_player()->die();
     return 1;
 }

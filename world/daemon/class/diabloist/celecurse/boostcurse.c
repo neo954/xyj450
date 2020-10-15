@@ -9,17 +9,17 @@ int curse(object me, object target)
 	if( !target ) target = offensive_target(me);
 
         if((int)me->query_skill("cursism") < 120 )
-                return notify_fail("你的降头术不够高！\n");
+                return notify_fail("浣犵殑闄嶅ご鏈笉澶熼珮锛乗n");
 
 	if( !target || target != me)
-		return notify_fail("你只能对自己下这个降头．\n");
+		return notify_fail("浣犲彧鑳藉鑷繁涓嬭繖涓檷澶达紟\n");
         if( (int)target->query_temp("boostcurse") ) return
-	notify_fail("已经被下了降头。\n");
+	notify_fail("宸茬粡琚笅浜嗛檷澶淬�俓n");
 
 	if((int)me->query("kee") < 100 )
-		return notify_fail("你的气血不够！\n");
+		return notify_fail("浣犵殑姘旇涓嶅锛乗n");
 	me->receive_wound("kee", 100);
-	msg = HIC "$N仰天长啸，将天地间的能量聚为一体．．．\n\n" NOR;
+	msg = HIC "$N浠板ぉ闀垮暩锛屽皢澶╁湴闂寸殑鑳介噺鑱氫负涓�浣擄紟锛庯紟\n\n" NOR;
 	message_vision(msg,me);
 	target->add_temp("apply/agility", (int)target->query_agi()/5);
 	target->set_temp("boostcurse",1);
@@ -33,7 +33,7 @@ int curse(object me, object target)
 void remove_effect(object me, int amount)
 {
         me->delete_temp("boostcurse");
-        tell_object(me, "你身上的的降头失效了．\n");
+        tell_object(me, "浣犺韩涓婄殑鐨勯檷澶村け鏁堜簡锛嶾n");
 	me->add_temp("apply/agility",-amount);
 }
 

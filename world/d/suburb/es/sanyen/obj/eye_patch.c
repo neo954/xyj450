@@ -6,12 +6,12 @@ inherit HEAD;
 
 void create()
 {
-	set_name("ºÚÑÛÕÖ", ({ "eye patch", "patch" }) );
+	set_name("é»‘çœ¼ç½©", ({ "eye patch", "patch" }) );
 	set_weight(300);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸±");
+		set("unit", "å‰¯");
 		set("material", "cloth");
 		set("value", 30);
 		set("armor_prop/attack", 3);

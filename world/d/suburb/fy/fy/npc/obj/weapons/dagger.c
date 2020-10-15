@@ -2,20 +2,20 @@
 inherit DAGGER;
 void create()
 {
-	set_name("¶©×÷µÄ", ({ "order" }) );
+	set_name("è®¢ä½œçš„", ({ "order" }) );
 	set_weight(500);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
-		set("long", "ÕâÊÇÒ»°Ñ¿´ÆğÏàµ±ÆÕÍ¨µÄØ°Ê×¡£\n");
+		set("unit", "æŠŠ");
+		set("long", "è¿™æ˜¯ä¸€æŠŠçœ‹èµ·ç›¸å½“æ™®é€šçš„åŒ•é¦–ã€‚\n");
                 set("no_drop",1);
                 set("no_get",1);
                 set("owner","fengyun");
                 set("rigidity",50);
 		set("material", "steel");
-	        set("wield_msg", "$N´Ó»³ÖĞÃş³öÒ»°Ñ$nÎÕÔÚÊÖÖĞ¡£\n");
-        	set("unwield_msg", "$N½«ÊÖÖĞµÄ$n²ØÈë»³ÖĞ¡£\n");
+	        set("wield_msg", "$Nä»æ€€ä¸­æ‘¸å‡ºä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+        	set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$nè—å…¥æ€€ä¸­ã€‚\n");
 	}
 	init_dagger(5);
 	setup();

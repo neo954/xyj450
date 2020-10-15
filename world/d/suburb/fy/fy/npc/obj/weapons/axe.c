@@ -2,20 +2,20 @@
 inherit AXE;
 void create()
 {
-	set_name("¶©×÷µÄ", ({ "order" }) );
+	set_name("è®¢ä½œçš„", ({ "order" }) );
 	set_weight(3000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "±ú");
+		set("unit", "æŸ„");
 		set("no_drop",1);
 		set("no_get",1);
 		set("owner","fengyun");
 		set("rigidity",300);
 		set("material", "iron");
-		set("long", "ÕâÊÇÒ»°ÑºÚÓÍÓÍµÄÌú¸«£¬·İÁ¿ºÜÖØ¡£\n");
-		set("wield_msg", "$N³é³öÒ»°ÑÃ÷»Î»ÎµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-		set("unequip_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼ä¡£\n");
+		set("long", "è¿™æ˜¯ä¸€æŠŠé»‘æ²¹æ²¹çš„é“æ–§ï¼Œä»½é‡å¾ˆé‡ã€‚\n");
+		set("wield_msg", "$NæŠ½å‡ºä¸€æŠŠæ˜æ™ƒæ™ƒçš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+		set("unequip_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´ã€‚\n");
 	}
 	init_axe(30);
 	setup();

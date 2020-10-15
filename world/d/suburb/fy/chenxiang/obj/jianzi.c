@@ -5,11 +5,11 @@
 inherit ITEM;
 void create()
 {
-    set_name( "¼¦Ã«ë¦×Ó", ({ "jian zi","jian"  }) );
-    set("unit", "¸ö");
+    set_name( "é¸¡æ¯›æ¯½å­", ({ "jian zi","jian"  }) );
+    set("unit", "ä¸ª");
     set("value",20);
     set("long","
-Ò»¸öÓÃ»¨»¨ÂÌÂÌµÄ¼¦Ã«²å³ÉµÄë¦×Ó¡£
+ä¸€ä¸ªç”¨èŠ±èŠ±ç»¿ç»¿çš„é¸¡æ¯›æ’æˆçš„æ¯½å­ã€‚
 \n");
     set_weight(5);
 }

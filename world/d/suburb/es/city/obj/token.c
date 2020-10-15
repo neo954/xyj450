@@ -2,13 +2,13 @@ inherit ITEM;
 
 void create()
 {
-        set_name("³ö³ÇÁîÅÆ", ({ "token" }));
+        set_name("å‡ºåŸä»¤ç‰Œ", ({ "token" }));
         set_weight(100);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "Ö§");
-                set("long", "Ò»Ö§ÒÅÊ§¶àÄêµÄÁîÅÆ£¬»òĞíÔÚ³ö³ÇÊ±»¹ÓĞÓÃ¡£\n");
+                set("unit", "æ”¯");
+                set("long", "ä¸€æ”¯é—å¤±å¤šå¹´çš„ä»¤ç‰Œï¼Œæˆ–è®¸åœ¨å‡ºåŸæ—¶è¿˜æœ‰ç”¨ã€‚\n");
                 set("value", 0);
                 set("material", "copper");
         }

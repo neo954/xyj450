@@ -4,9 +4,9 @@ inherit NPC;
 inherit F_MASTER;
 void create()
  {
-	set_name("åÐÒ£×Ó", ({ "master happyman", "happyman", "master" }) );
-	set("nickname", "Ð¦ºì³¾");
-	set("gender", "ÄÐÐÔ" );
+	set_name("é€é¥å­", ({ "master happyman", "happyman", "master" }) );
+	set("nickname", "ç¬‘çº¢å°˜");
+	set("gender", "ç”·æ€§" );
 	set("age", 41);
 	set("str", 27);
 	set("cor", 30);
@@ -18,21 +18,21 @@ void create()
 	set("max_force", 2000);
 	set("force", 2000);
 	set("force_factor", 20);
-	set("rank_info/respect", "ÎÞÑÂ×Ó");
+	set("rank_info/respect", "æ— å´–å­");
 	set("long",
-		"åÐÒ£×ÓÊÇ¸öÈÝÃ²¿¡ÃÀ£¬·çÁ÷ÙÃÙÎµÄÇàÄêÈË£¬Ö»¿´Íâ±í£¬ÄãÔõÃ´\n"
-		"Ò²²Â²»µ½ËûÓÐ£´£°ËêÁË£¬Ö»¼ûËûÃæÈç¹ÚÓñ£¬Ò»Ï®ÇàÉÀ¸üÏÔµÃäì\n"
-		"È÷ÎÞ±È£¬Ò»Ë«ËÆÐ¦·ÇÐ¦µÄÑÛ¾¦£¬Í»È»ÏòÄã¿´ÁËÒ»ÑÛ£¬Äã²»½ûÐÄ\n"
-		"ÖÐÒ»¶¯¡£\n");
-	create_family("åÐÒ£ÅÉ", 4, "ÕÆÃÅÈË");
+		"é€é¥å­æ˜¯ä¸ªå®¹è²Œä¿Šç¾Žï¼Œé£Žæµå€œå‚¥çš„é’å¹´äººï¼Œåªçœ‹å¤–è¡¨ï¼Œä½ æ€Žä¹ˆ\n"
+		"ä¹ŸçŒœä¸åˆ°ä»–æœ‰ï¼”ï¼å²äº†ï¼Œåªè§ä»–é¢å¦‚å† çŽ‰ï¼Œä¸€è¢­é’è¡«æ›´æ˜¾å¾—æ½‡\n"
+		"æ´’æ— æ¯”ï¼Œä¸€åŒä¼¼ç¬‘éžç¬‘çš„çœ¼ç›ï¼Œçªç„¶å‘ä½ çœ‹äº†ä¸€çœ¼ï¼Œä½ ä¸ç¦å¿ƒ\n"
+		"ä¸­ä¸€åŠ¨ã€‚\n");
+	create_family("é€é¥æ´¾", 4, "æŽŒé—¨äºº");
 	set("combat_exp", 2000000);
 	set("score", 300000);
 	set("chat_chance_combat", 60);
 	set("chat_msg_combat", ({
 		(: exert_function, "recover" :),
-		"ºì³¾¶à¿ÉÐ¦£¬³ÕÇé×îÎÞÁÄ\n",
-		"Æ¾Ë­Öª£¬¶àÇé×Ü±»ÎÞÇéÄÕ\n",
-		"¶Ô¾Æµ±¸è£¬ÈËÉú¼¸ºÎ\n",	}) );
+		"çº¢å°˜å¤šå¯ç¬‘ï¼Œç—´æƒ…æœ€æ— èŠ\n",
+		"å‡­è°çŸ¥ï¼Œå¤šæƒ…æ€»è¢«æ— æƒ…æ¼\n",
+		"å¯¹é…’å½“æ­Œï¼Œäººç”Ÿå‡ ä½•\n",	}) );
         set_skill("unarmed", 150);
      	set_skill("parry", 120);
 	set_skill("dodge", 150);
@@ -46,10 +46,10 @@ void create()
 	map_skill("force", "wu-shun");
         map_skill("dodge", "linbo-steps");
 	set("inquiry", ([
-		"åÐÒ£ÅÉ" : "åÐÒ£ÅÉÃÅ»§ÓÉÎÒÖ´ÕÆ£¬ÄãÓÐºÎÖ¸½Ì£¿",
-		"°ÝÊ¦"   : "ÈëÎÒÅÉÕß£¬ÐèÈËÆ·ÎÄ²É£¬ÎÞÒ»²»ÊÇÉÏÉÏÖ®Ñ¡¡£",
-         	"name": "ÎÒ±ãÊÇåÐÒ£×Ó£¬¿ìÀÖåÐÒ££¬ÈËÉú¼¸ºÎ¡£",
-		"here": "ÕâÀï±ãÊÇÄï»·¸£µØ¡£",	]) );
+		"é€é¥æ´¾" : "é€é¥æ´¾é—¨æˆ·ç”±æˆ‘æ‰§æŽŒï¼Œä½ æœ‰ä½•æŒ‡æ•™ï¼Ÿ",
+		"æ‹œå¸ˆ"   : "å…¥æˆ‘æ´¾è€…ï¼Œéœ€äººå“æ–‡é‡‡ï¼Œæ— ä¸€ä¸æ˜¯ä¸Šä¸Šä¹‹é€‰ã€‚",
+         	"name": "æˆ‘ä¾¿æ˜¯é€é¥å­ï¼Œå¿«ä¹é€é¥ï¼Œäººç”Ÿå‡ ä½•ã€‚",
+		"here": "è¿™é‡Œä¾¿æ˜¯å¨˜çŽ¯ç¦åœ°ã€‚",	]) );
 	        setup();
         	carry_object(__DIR__"seven_belt")->wear();
         	carry_object(__DIR__"green_dress")->wear();
@@ -58,27 +58,27 @@ void create()
 void attempt_apprentice(object ob)
  {
 	if( ((int)ob->query("per") < 25)) 
-          {     command("say ÈëÎÒÅÉÕß£¬ÐèÈËÆ·ÎÄ²É£¬ÎÞÒ»²»ÊÇÉÏÉÏÖ®Ñ¡¡£" +
-              RANK_D->query_respect(ob) + "µÄ×ÊÖÊ²»ÒË£¡");
+          {     command("say å…¥æˆ‘æ´¾è€…ï¼Œéœ€äººå“æ–‡é‡‡ï¼Œæ— ä¸€ä¸æ˜¯ä¸Šä¸Šä¹‹é€‰ã€‚" +
+              RANK_D->query_respect(ob) + "çš„èµ„è´¨ä¸å®œï¼");
                return; }
                          
         if (  ((int)ob->query_skill("literate",1) < 50) ) 
-	  {	command("say ÈëÎÒÅÉÕß£¬ÐèÈËÆ·ÎÄ²É£¬ÎÞÒ»²»ÊÇÉÏÉÏÖ®Ñ¡¡£" + 
-              RANK_D->query_respect(ob) + "µÄÎÄ²É²»ÒË£¡");
+	  {	command("say å…¥æˆ‘æ´¾è€…ï¼Œéœ€äººå“æ–‡é‡‡ï¼Œæ— ä¸€ä¸æ˜¯ä¸Šä¸Šä¹‹é€‰ã€‚" + 
+              RANK_D->query_respect(ob) + "çš„æ–‡é‡‡ä¸å®œï¼");
 		return;	}
 
-	if((string)ob->query("title")!="ÆÕÍ¨°ÙÐÕ")
+	if((string)ob->query("title")!="æ™®é€šç™¾å§“")
        	 {
 	    command("chat "+ob->query("title")+ob->query("nickname")+
-            ob->query("name")+"ÒªÅÑÊ¦£¡£¡£¡");	 
+            ob->query("name")+"è¦å›å¸ˆï¼ï¼ï¼");	 
             command("grin");
 	    kill_ob(ob);
 	    return;
 	 }
 
 	command("smile");
-	command("say ºÜºÃª¬" + RANK_D->query_respect(ob) + 
-        "¶à¼ÓÅ¬Á¦ª¬ËûÈÕ±Ø¶¨ÓÐ³É¡£\n");
+	command("say å¾ˆå¥½ï¿½" + RANK_D->query_respect(ob) + 
+        "å¤šåŠ åŠªåŠ›ï¿½ä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
 	command("recruit " + ob->query("id") );}
  
 void recruit_apprentice(object ob)

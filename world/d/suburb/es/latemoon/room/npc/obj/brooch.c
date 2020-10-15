@@ -4,17 +4,17 @@ inherit NECK;
 
 void create()
 {
-        set_name( "×êÊ¯ĞØÕë", ({ "brooch diamond","brooch" }) );
-        set("long","ÕâÊÇÒ»¸öÓÃ×êÊ¯Ïâ³ÉµÄÃÀÀöĞØÊÎ¡£\n");
+        set_name( "é’»çŸ³èƒ¸é’ˆ", ({ "brooch diamond","brooch" }) );
+        set("long","è¿™æ˜¯ä¸€ä¸ªç”¨é’»çŸ³é•¶æˆçš„ç¾ä¸½èƒ¸é¥°ã€‚\n");
         set_weight(200);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¸ö");
+                set("unit", "ä¸ª");
                 set("value", 1500);
                 set("material", "gold");
                 set("armor_prop/armor", 2);
-        set("wear_msg", "$N½«$n´ÓĞä´üÖĞÄÃ³ö±ğÔÚĞØÇ°ÒÂÊÎÉÏ¡£\n");
+        set("wear_msg", "$Nå°†$nä»è¢–è¢‹ä¸­æ‹¿å‡ºåˆ«åœ¨èƒ¸å‰è¡£é¥°ä¸Šã€‚\n");
         }
         setup();
 }

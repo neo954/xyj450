@@ -1,4 +1,4 @@
-// …Òª∞ ¿ΩÁ°§Œ˜”Œº«°§∞Ê±æ£¥£Æ£µ£∞
+// Á•ûËØù‰∏ñÁïå¬∑Ë•øÊ∏∏ËÆ∞¬∑ÁâàÊú¨ÔºîÔºéÔºïÔºê
 /* <SecCrypt CPL V3R05> */
  
 // rankd.c
@@ -7,270 +7,270 @@
 
 string query_rank(object ob)
 {
-   if(strlen(ob->query("added_title"))<1) ob->set("added_title", "Œ¥…Ë");
+   if(strlen(ob->query("added_title"))<1) ob->set("added_title", "Êú™ËÆæ");
    //need this default, otherwise looks too ugly sometimes.
 
-   if( ob->is_ghost() ) return HIB "°æ πÌ  ªÍ °ø" NOR;
+   if( ob->is_ghost() ) return HIB "„Äê È¨º  È≠Ç „Äë" NOR;
    switch(ob->query("gender")) 
    {
-   case "≈Æ–‘":
+   case "Â•≥ÊÄß":
      switch(wizhood(ob)) {
-        case "(admin)":   return GRN "°æ Œ◊  ≈Æ °ø" NOR;
-        case "(arch)":     return GRN "°æ Œ◊  ≈Æ °ø" NOR;
-        case "(wizard)":   return GRN "°æ Œ◊  ≈Æ °ø" NOR;
-        case "(apprentice)":   return GRN "°æøÕ◊˘Œ◊≈Æ°ø" NOR;
-                           case "(immortal)":      return GRN "°æ –°Œ◊≈Æ °ø" NOR;
-                           case "(elder)":         return GRN "°æ»Ÿ”˛ÕÊº“°ø" NOR;
+        case "(admin)":   return GRN "„Äê Â∑´  Â•≥ „Äë" NOR;
+        case "(arch)":     return GRN "„Äê Â∑´  Â•≥ „Äë" NOR;
+        case "(wizard)":   return GRN "„Äê Â∑´  Â•≥ „Äë" NOR;
+        case "(apprentice)":   return GRN "„ÄêÂÆ¢Â∫ßÂ∑´Â•≥„Äë" NOR;
+                           case "(immortal)":      return GRN "„Äê Â∞èÂ∑´Â•≥ „Äë" NOR;
+                           case "(elder)":         return GRN "„ÄêËç£Ë™âÁé©ÂÆ∂„Äë" NOR;
         default:
           switch(ob->query("class")) 
           {
 //------------------rank for girls--------------------
 case "xian":
    if((int)ob->query("combat_exp")<1000) 
-     return GRN "°æ ”Ò  ≈Æ °ø" NOR;
+     return GRN "„Äê Áéâ  Â•≥ „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return GRN "°æ –°œ…π√ °ø" NOR;   
+     return GRN "„Äê Â∞è‰ªôÂßë „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return GRN "°æ œ…  ≈Æ °ø" NOR;
+     return GRN "„Äê ‰ªô  Â•≥ „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return GRN "°æ"+ob->query("added_title")+"œ…◊”°ø" NOR;   
+     return GRN "„Äê"+ob->query("added_title")+"‰ªôÂ≠ê„Äë" NOR;   
    else 
-     return GRN "°æ"+ob->query("added_title")+" •ƒ∏°ø" NOR;
+     return GRN "„Äê"+ob->query("added_title")+"Âú£ÊØç„Äë" NOR;
    break;
 case "yaomo":
    if((int)ob->query("combat_exp")<1000) 
-     return GRN "°æ –°—˝≈Æ °ø" NOR;
+     return GRN "„Äê Â∞èÂ¶ñÂ•≥ „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return GRN "°æ —˝  ≈Æ °ø" NOR;   
+     return GRN "„Äê Â¶ñ  Â•≥ „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return GRN "°æ —˝  æ´ °ø" NOR;
+     return GRN "„Äê Â¶ñ  Á≤æ „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return GRN "°æ"+ob->query("added_title")+"ƒß≈Æ°ø" NOR;   
+     return GRN "„Äê"+ob->query("added_title")+"È≠îÂ•≥„Äë" NOR;   
    else 
-     return GRN "°æ"+ob->query("added_title")+"π´÷˜°ø" NOR;
+     return GRN "„Äê"+ob->query("added_title")+"ÂÖ¨‰∏ª„Äë" NOR;
    break;
 case "bonze":     
    if((int)ob->query("combat_exp")<1000) 
-     return GRN "°æ –°ƒ·π√ °ø" NOR;
+     return GRN "„Äê Â∞èÂ∞ºÂßë „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return GRN "°æ –° ¶Ã´ °ø" NOR;   
+     return GRN "„Äê Â∞èÂ∏àÂ§™ „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return GRN "°æ  ¶  Ã´ °ø" NOR;
+     return GRN "„Äê Â∏à  Â§™ „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return GRN "°æ"+ob->query("added_title")+"…Òƒ·°ø" NOR;   
+     return GRN "„Äê"+ob->query("added_title")+"Á•ûÂ∞º„Äë" NOR;   
    else 
-     return GRN "°æ"+ob->query("added_title")+"∆–»¯°ø" NOR;
+     return GRN "„Äê"+ob->query("added_title")+"Ëè©Ëê®„Äë" NOR;
    break;
 case "taoist":                
    if((int)ob->query("combat_exp")<1000) 
-     return GRN "°æ ≈Æµ¿ÕØ °ø" NOR;
+     return GRN "„Äê Â•≥ÈÅìÁ´• „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return GRN "°æ –°µ¿π√ °ø" NOR;   
+     return GRN "„Äê Â∞èÈÅìÂßë „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return GRN "°æ –˛  ≈Æ °ø" NOR;
+     return GRN "„Äê ÁéÑ  Â•≥ „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return GRN "°æ"+ob->query("added_title")+"–˛≈Æ°ø" NOR;   
+     return GRN "„Äê"+ob->query("added_title")+"ÁéÑÂ•≥„Äë" NOR;   
    else 
-     return GRN "°æ"+ob->query("added_title")+" •ƒ∏°ø" NOR;
+     return GRN "„Äê"+ob->query("added_title")+"Âú£ÊØç„Äë" NOR;
    break;
 case "dragon":     
    if((int)ob->query("combat_exp")<1000) 
-     return GRN "°æ –°π¨∂ °ø" NOR;
+     return GRN "„Äê Â∞èÂÆ´Â®• „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return GRN "°æ π¨  ≈Æ °ø" NOR;   
+     return GRN "„Äê ÂÆ´  Â•≥ „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return GRN "°æ –°¡˙≈Æ °ø" NOR;
+     return GRN "„Äê Â∞èÈæôÂ•≥ „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return GRN "°æ"+ob->query("added_title")+"¡˙≈Æ°ø" NOR;   
+     return GRN "„Äê"+ob->query("added_title")+"ÈæôÂ•≥„Äë" NOR;   
    else 
-     return GRN "°æ"+ob->query("added_title")+"π´÷˜°ø" NOR;
+     return GRN "„Äê"+ob->query("added_title")+"ÂÖ¨‰∏ª„Äë" NOR;
    break;
 case "scholar":
-   if( (string)ob->query("added_title")=="Œ¥…Ë" )
+   if( (string)ob->query("added_title")=="Êú™ËÆæ" )
    {
      if((int)ob->query_skill("literate", 1)<20) 
-        return GRN "°æ ≈Æ—ßÕØ °ø" NOR;
+        return GRN "„Äê Â•≥Â≠¶Á´• „Äë" NOR;
      else if((int)ob->query_skill("literate", 1)<100) 
-        return GRN "°æ ≤≈  ≈Æ °ø" NOR;
+        return GRN "„Äê Êâç  Â•≥ „Äë" NOR;
      else 
-        return GRN "°æ ≈Æ—ß ø °ø" NOR;
+        return GRN "„Äê Â•≥Â≠¶Â£´ „Äë" NOR;
    }
    else
    {
      if((int)ob->query_skill("literate", 1)<20) 
-        return GRN "°æ ≈Æ—ßÕØ °ø" NOR;
+        return GRN "„Äê Â•≥Â≠¶Á´• „Äë" NOR;
      else if((int)ob->query_skill("literate", 1)<100) 
-        return GRN "°æ"+ob->query("added_title")+"–„≤≈°ø" NOR;
+        return GRN "„Äê"+ob->query("added_title")+"ÁßÄÊâç„Äë" NOR;
      else 
-        return GRN "°æ"+ob->query("added_title")+"—ß ø°ø" NOR;
+        return GRN "„Äê"+ob->query("added_title")+"Â≠¶Â£´„Äë" NOR;
    }
    break;
 case "fighter":     
    if((int)ob->query("combat_exp")<1000) 
-     return GRN "°æ ≈Æ  ±¯ °ø" NOR;
+     return GRN "„Äê Â•≥  ÂÖµ „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return GRN "°æ ≈Æ≤ŒΩ´ °ø" NOR;   
+     return GRN "„Äê Â•≥ÂèÇÂ∞Ü „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return GRN "°æ ≈ÆΩ´æ¸ °ø" NOR;
+     return GRN "„Äê Â•≥Â∞ÜÂÜõ „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return GRN "°æ"+ob->query("added_title")+"¥ÛΩ´æ¸°ø" NOR;   
+     return GRN "„Äê"+ob->query("added_title")+"Â§ßÂ∞ÜÂÜõ„Äë" NOR;   
    else 
-     return GRN "°æ"+ob->query("added_title")+"¥Û‘™Àß°ø" NOR;
+     return GRN "„Äê"+ob->query("added_title")+"Â§ßÂÖÉÂ∏Ö„Äë" NOR;
    break;
 case "youling":   
    if((int)ob->query("combat_exp")<1000) 
-     return GRN "°æ“ı≤‹–°πÌ°ø" NOR;
+     return GRN "„ÄêÈò¥ÊõπÂ∞èÈ¨º„Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return GRN "°æ√‘ªÍ≈ÆπÌ°ø" NOR;   
+     return GRN "„ÄêËø∑È≠ÇÂ•≥È¨º„Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return GRN "°æ”ƒ⁄§≈Æ π°ø" NOR;
+     return GRN "„ÄêÂπΩÂÜ•Â•≥‰Ωø„Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return GRN "°æ"+ob->query("added_title")+"Œﬁ≥£°ø" NOR;   
+     return GRN "„Äê"+ob->query("added_title")+"Êó†Â∏∏„Äë" NOR;   
    else 
-     return GRN "°æ"+ob->query("added_title")+"≈ÆÕı°ø" NOR;
+     return GRN "„Äê"+ob->query("added_title")+"Â•≥Áéã„Äë" NOR;
    break;   
 case "dancer":
-   return GRN "°æ ŒË  ºÀ °ø" NOR;   
+   return GRN "„Äê Ëàû  Â¶ì „Äë" NOR;   
    break;
 default:        
-   return  MAG "°æ ∆Ω  √Ò °ø" NOR;
+   return  MAG "„Äê Âπ≥  Ê∞ë „Äë" NOR;
 //------------------end rank for girls--------------------
           }
         }
-//begin ƒ––‘£∫
+//begin Áî∑ÊÄßÔºö
    default:
      switch(wizhood(ob)) 
      {
-        case "(admin)":     return HIW "°æ Œ◊   ¶ °ø" NOR;
-        case "(arch)":        return HIW "°æ Œ◊   ¶ °ø" NOR;
-        case "(wizard)":     return HIW "°æ Œ◊   ¶ °ø" NOR;
-        case "(apprentice)":                return HIW "°æøÕ◊˘Œ◊ ¶°ø" NOR;
-                           case "(immortal)":               return HIW "°æ –°Œ◊ ¶ °ø" NOR;
-        case "(elder)":                return HIW "°æ»Ÿ”˛ÕÊº“°ø" NOR;
+        case "(admin)":     return HIW "„Äê Â∑´  Â∏à „Äë" NOR;
+        case "(arch)":        return HIW "„Äê Â∑´  Â∏à „Äë" NOR;
+        case "(wizard)":     return HIW "„Äê Â∑´  Â∏à „Äë" NOR;
+        case "(apprentice)":                return HIW "„ÄêÂÆ¢Â∫ßÂ∑´Â∏à„Äë" NOR;
+                           case "(immortal)":               return HIW "„Äê Â∞èÂ∑´Â∏à „Äë" NOR;
+        case "(elder)":                return HIW "„ÄêËç£Ë™âÁé©ÂÆ∂„Äë" NOR;
         default:
           switch(ob->query("class")) 
           {
 //------------------rank for men--------------------
 case "xian":                 
    if((int)ob->query("combat_exp")<1000) 
-     return RED "°æ œ…  ÕØ °ø" NOR;
+     return RED "„Äê ‰ªô  Á´• „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return RED "°æ …¢  œ… °ø" NOR;   
+     return RED "„Äê Êï£  ‰ªô „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return RED "°æ ¥Û  œ… °ø" NOR;
+     return RED "„Äê Â§ß  ‰ªô „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return RED "°æ"+ob->query("added_title")+"¥Ûœ…°ø" NOR;   
+     return RED "„Äê"+ob->query("added_title")+"Â§ß‰ªô„Äë" NOR;   
    else if((int)ob->query("combat_exp")<1000000) 
-     return RED "°æ"+ob->query("added_title")+"¥Ûœ…°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"Â§ß‰ªô„Äë" NOR;
    else 
-     return RED "°æ"+ob->query("added_title")+"ÃÏ◊°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"Â§©Â∞ä„Äë" NOR;
    break;
 case "yaomo":
    if((int)ob->query("combat_exp")<1000) 
-     return RED "°æ –°  —˝ °ø" NOR;
+     return RED "„Äê Â∞è  Â¶ñ „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return RED "°æ —˝  π÷ °ø" NOR;   
+     return RED "„Äê Â¶ñ  ÊÄ™ „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return RED "°æ —˝  œ… °ø" NOR;
+     return RED "„Äê Â¶ñ  ‰ªô „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return RED "°æ "+ob->query("added_title")+"π÷ °ø" NOR;   
+     return RED "„Äê "+ob->query("added_title")+"ÊÄ™ „Äë" NOR;   
    else if((int)ob->query("combat_exp")<1000000) 
-     return RED "°æ"+ob->query("added_title")+"¿œƒß°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"ËÄÅÈ≠î„Äë" NOR;
    else 
-     return RED "°æ"+ob->query("added_title")+"ƒßÕı°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"È≠îÁéã„Äë" NOR;
    break;
 case "bonze":     
    if((int)ob->query("combat_exp")<1000) 
-     return RED "°æ –°∫Õ…– °ø" NOR;
+     return RED "„Äê Â∞èÂíåÂ∞ö „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return RED "°æ ∫Õ  …– °ø" NOR;   
+     return RED "„Äê Âíå  Â∞ö „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return RED "°æ  •  …Æ °ø" NOR;
+     return RED "„Äê Âú£  ÂÉß „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return RED "°æ"+ob->query("added_title")+"◊’ﬂ°ø" NOR;   
+     return RED "„Äê"+ob->query("added_title")+"Â∞äËÄÖ„Äë" NOR;   
    else if((int)ob->query("combat_exp")<1000000) 
-     return RED "°æ"+ob->query("added_title")+"¬ﬁ∫∫°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"ÁΩóÊ±â„Äë" NOR;
    else 
-     return RED "°æ"+ob->query("added_title")+"∆–»¯°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"Ëè©Ëê®„Äë" NOR;
    break;
 case "taoist":                 
    if((int)ob->query("combat_exp")<1000) 
-     return RED "°æ –°µ¿ ø °ø" NOR;
+     return RED "„Äê Â∞èÈÅìÂ£´ „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return RED "°æ µ¿   ø °ø" NOR;   
+     return RED "„Äê ÈÅì  Â£´ „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return RED "°æ µ¿  ≥§ °ø" NOR;
+     return RED "„Äê ÈÅì  Èïø „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return RED "°æ"+ob->query("added_title")+"ÃÏ ¶°ø" NOR;   
+     return RED "„Äê"+ob->query("added_title")+"Â§©Â∏à„Äë" NOR;   
    else if((int)ob->query("combat_exp")<1000000) 
-     return RED "°æ"+ob->query("added_title")+"’Ê»À°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"Áúü‰∫∫„Äë" NOR;
    else 
-     return RED "°æ"+ob->query("added_title")+"ÃÏ◊°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"Â§©Â∞ä„Äë" NOR;
    break;
 case "dragon":     
    if((int)ob->query("combat_exp")<1000) 
-     return RED "°æ œ∫  ±¯ °ø" NOR;
+     return RED "„Äê Ëôæ  ÂÖµ „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return RED "°æ –∑  Ω´ °ø" NOR;   
+     return RED "„Äê Ëüπ  Â∞Ü „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return RED "°æ—≤∫£“π≤Ê°ø" NOR;
+     return RED "„ÄêÂ∑°Êµ∑Â§úÂèâ„Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return RED "°æ"+ob->query("added_title")+"“π≤Ê°ø" NOR;   
+     return RED "„Äê"+ob->query("added_title")+"Â§úÂèâ„Äë" NOR;   
    else if((int)ob->query("combat_exp")<1000000) 
-     return RED "°æ"+ob->query("added_title")+"¡˙°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"Èæô„Äë" NOR;
    else 
-     return RED "°æ"+ob->query("added_title")+"¡˙Õı°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"ÈæôÁéã„Äë" NOR;
    break;
 case "scholar":
-   if( (string)ob->query("added_title")=="Œ¥…Ë" )
+   if( (string)ob->query("added_title")=="Êú™ËÆæ" )
    {
      if((int)ob->query_skill("literate", 1)<20) 
-        return RED "°æ ÕØ  …˙ °ø" NOR;
+        return RED "„Äê Á´•  Áîü „Äë" NOR;
      else if((int)ob->query_skill("literate", 1)<100) 
-        return RED "°æ –„  ≤≈ °ø" NOR;
+        return RED "„Äê ÁßÄ  Êâç „Äë" NOR;
      else 
-        return RED "°æ ¥Û—ß ø °ø" NOR;
+        return RED "„Äê Â§ßÂ≠¶Â£´ „Äë" NOR;
    }
    else
    {
      if((int)ob->query_skill("literate", 1)<20) 
-        return RED "°æ ÕØ  …˙ °ø" NOR;
+        return RED "„Äê Á´•  Áîü „Äë" NOR;
      else if((int)ob->query_skill("literate", 1)<100) 
-        return RED "°æ"+ob->query("added_title")+"–„≤≈°ø" NOR;
+        return RED "„Äê"+ob->query("added_title")+"ÁßÄÊâç„Äë" NOR;
      else 
-        return RED "°æ"+ob->query("added_title")+"—ß ø°ø" NOR;
+        return RED "„Äê"+ob->query("added_title")+"Â≠¶Â£´„Äë" NOR;
    }
    break;
 case "fighter":     
    if((int)ob->query("combat_exp")<1000) 
-     return RED "°æ –°  ±¯ °ø" NOR;
+     return RED "„Äê Â∞è  ÂÖµ „Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return RED "°æ –°  –£ °ø" NOR;   
+     return RED "„Äê Â∞è  Ê†° „Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return RED "°æ ≤Œ  Ω´ °ø" NOR;
+     return RED "„Äê ÂèÇ  Â∞Ü „Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return RED "°æ"+ob->query("added_title")+"Ω´æ¸°ø" NOR;   
+     return RED "„Äê"+ob->query("added_title")+"Â∞ÜÂÜõ„Äë" NOR;   
    else if((int)ob->query("combat_exp")<1000000) 
-     return RED "°æ"+ob->query("added_title")+"¥ÛΩ´æ¸°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"Â§ßÂ∞ÜÂÜõ„Äë" NOR;
    else 
-     return RED "°æ"+ob->query("added_title")+"¥Û‘™Àß°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"Â§ßÂÖÉÂ∏Ö„Äë" NOR;
    break;
 case "youling":   
    if((int)ob->query("combat_exp")<1000) 
-     return RED "°æ“ı≤‹–°πÌ°ø" NOR;
+     return RED "„ÄêÈò¥ÊõπÂ∞èÈ¨º„Äë" NOR;
    else if((int)ob->query("combat_exp")<10000) 
-     return RED "°æπ¥ªÍ π’ﬂ°ø" NOR;   
+     return RED "„ÄêÂãæÈ≠Ç‰ΩøËÄÖ„Äë" NOR;   
    else if((int)ob->query("combat_exp")<100000) 
-     return RED "°æµÿ∏Æ≈–πŸ°ø" NOR;
+     return RED "„ÄêÂú∞Â∫úÂà§ÂÆò„Äë" NOR;
    else if((int)ob->query("combat_exp")<500000) 
-     return RED "°æ"+ob->query("added_title")+"Œﬁ≥£°ø" NOR;   
+     return RED "„Äê"+ob->query("added_title")+"Êó†Â∏∏„Äë" NOR;   
    else if((int)ob->query("combat_exp")<1000000) 
-     return RED "°æ"+ob->query("added_title")+"πÌÕı°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"È¨ºÁéã„Äë" NOR;
    else 
-     return RED "°æ"+ob->query("added_title")+"Õı°ø" NOR;
+     return RED "„Äê"+ob->query("added_title")+"Áéã„Äë" NOR;
    break;
 default:
-   return "°æ ∆Ω  √Ò °ø";
+   return "„Äê Âπ≥  Ê∞ë „Äë";
 //------------------end rank for men--------------------
           }
         }
@@ -290,65 +290,65 @@ string query_respect(object ob)
    if (age == 0) age = ob->query("age");
    switch(ob->query("gender")) 
    {
-     case "≈Æ–‘":
+     case "Â•≥ÊÄß":
         switch(ob->query("class")) 
         {
 case "bonze":
-   if( age < 18 ) return "–° ¶Ã´";
-   else return " ¶Ã´";
+   if( age < 18 ) return "Â∞èÂ∏àÂ§™";
+   else return "Â∏àÂ§™";
    break;
 case "taoist":
-   if( age < 18 ) return "–°œ…π√";
-   else return "œ…π√";
+   if( age < 18 ) return "Â∞è‰ªôÂßë";
+   else return "‰ªôÂßë";
    break;
 case "xian":
-   if( age < 18 ) return "–°œ…π√";
-   else return "œ…π√";
+   if( age < 18 ) return "Â∞è‰ªôÂßë";
+   else return "‰ªôÂßë";
    break;
 default:
-   if( age < 18 ) return "–°π√ƒÔ";
-   else if( age < 50 ) return "π√ƒÔ";
-   else return "∆≈∆≈";
+   if( age < 18 ) return "Â∞èÂßëÂ®ò";
+   else if( age < 50 ) return "ÂßëÂ®ò";
+   else return "Â©ÜÂ©Ü";
    break;
         }
-     case "ƒ––‘":
+     case "Áî∑ÊÄß":
      default:
         switch(ob->query("class")) 
         {
 case "xian":
-   if( age < 18 ) return "–°…Òœ…";
-   else if( age < 50 ) return "œ…–÷";
-   else return "¿œ…Òœ…";
+   if( age < 18 ) return "Â∞èÁ•û‰ªô";
+   else if( age < 50 ) return "‰ªôÂÖÑ";
+   else return "ËÄÅÁ•û‰ªô";
    break;
 case "bonze":
-   if( age < 18 ) return "–° ¶∏∏";
-   else if( age < 50 ) return "¥Û ¶";
-   else return "≥§¿œ";
+   if( age < 18 ) return "Â∞èÂ∏àÁà∂";
+   else if( age < 50 ) return "Â§ßÂ∏à";
+   else return "ÈïøËÄÅ";
    break;
 case "taoist":
-   if( age < 18 ) return "–°µ¿“Ø";
-   else if( age < 50 ) return "µ¿–÷";
-   else return "µ¿≥§";
+   if( age < 18 ) return "Â∞èÈÅìÁà∑";
+   else if( age < 50 ) return "ÈÅìÂÖÑ";
+   else return "ÈÅìÈïø";
    break;
 case "fighter":
-   if( age < 18 ) return "–°Ω´æ¸";
-   else if( age < 50 ) return "¥ÛΩ´æ¸";
-   else return "¿œΩ´æ¸";
+   if( age < 18 ) return "Â∞èÂ∞ÜÂÜõ";
+   else if( age < 50 ) return "Â§ßÂ∞ÜÂÜõ";
+   else return "ËÄÅÂ∞ÜÂÜõ";
    break;
 case "scholar":
-   if( age < 18 ) return "–°œ‡π´";
-   else if( age < 50 ) return "œ‡π´";
-   else return "¿œœ»…˙";
+   if( age < 18 ) return "Â∞èÁõ∏ÂÖ¨";
+   else if( age < 50 ) return "Áõ∏ÂÖ¨";
+   else return "ËÄÅÂÖàÁîü";
    break;
 case "swordsman":
-   if( age < 18 ) return "–°¿œµ‹";
-   else if( age < 50 ) return "◊≥ ø";
-   else return "¿œ«∞±≤";
+   if( age < 18 ) return "Â∞èËÄÅÂºü";
+   else if( age < 50 ) return "Â£ÆÂ£´";
+   else return "ËÄÅÂâçËæà";
    break;
 default:
-   if( age < 18 ) return "–°–÷µ‹";
-   else if( age < 50 ) return "◊≥ ø";
-   else return "¿œ“Ø◊”";
+   if( age < 18 ) return "Â∞èÂÖÑÂºü";
+   else if( age < 50 ) return "Â£ÆÂ£´";
+   else return "ËÄÅÁà∑Â≠ê";
    break;
         }
    }
@@ -367,63 +367,63 @@ string query_rude(object ob)
    if (age == 0) age = ob->query("age");
    switch(ob->query("gender")) 
    {
-     case "≈Æ–‘":
+     case "Â•≥ÊÄß":
         switch(ob->query("class")) 
         {
 case "xian":
-   if(age < 30) return "–°—˝æ´";
-   else if(age < 50) return "—˝≈Æ";
-   else return "¿œ—˝∆≈";
+   if(age < 30) return "Â∞èÂ¶ñÁ≤æ";
+   else if(age < 50) return "Â¶ñÂ•≥";
+   else return "ËÄÅÂ¶ñÂ©Ü";
    break;
 case "yaomo":
-   if(age < 30) return "–°—˝≈Æ";
-   else if(age < 50) return "—˝≈Æ";
-   else return "¿œ—˝∆≈";
+   if(age < 30) return "Â∞èÂ¶ñÂ•≥";
+   else if(age < 50) return "Â¶ñÂ•≥";
+   else return "ËÄÅÂ¶ñÂ©Ü";
    break;
 case "bonze":
-   if(age < 30) return "–°‘Ùƒ·";
-   else if(age < 50) return "‘Ùƒ·";
-   else return "¿œ‘Ùƒ·";
+   if(age < 30) return "Â∞èË¥ºÂ∞º";
+   else if(age < 50) return "Ë¥ºÂ∞º";
+   else return "ËÄÅË¥ºÂ∞º";
    break;
 case "taoist":
-   if(age < 30) return "–°—˝≈Æ";
-   else if(age < 50) return "—˝≈Æ";
-   else return "¿œ—˝∆≈";
+   if(age < 30) return "Â∞èÂ¶ñÂ•≥";
+   else if(age < 50) return "Â¶ñÂ•≥";
+   else return "ËÄÅÂ¶ñÂ©Ü";
    break;
 default:
-   if( age < 30 ) return "–°º˙»À";
-   else if(age < 50) return "º˙»À";
-   else return "À¿¿œÃ´∆≈";
+   if( age < 30 ) return "Â∞èË¥±‰∫∫";
+   else if(age < 50) return "Ë¥±‰∫∫";
+   else return "Ê≠ªËÄÅÂ§™Â©Ü";
    break;
         }
-     case "ƒ––‘":
+     case "Áî∑ÊÄß":
      default:
         switch(ob->query("class")) 
         {
 case "xian":
-   if( age < 50 ) return "À¿—˝π÷";
-   else return "¿œ—˝π÷";
+   if( age < 50 ) return "Ê≠ªÂ¶ñÊÄ™";
+   else return "ËÄÅÂ¶ñÊÄ™";
    break;
 case "yaomo":
-   if( age < 50 ) return "À¿—˝π÷";
-   else return "¿œ—˝π÷";
+   if( age < 50 ) return "Ê≠ªÂ¶ñÊÄ™";
+   else return "ËÄÅÂ¶ñÊÄ™";
    break;
 case "bonze":
-   if( age < 50 ) return "À¿Õ∫¬ø";
-   else return "¿œÕ∫¬ø";
+   if( age < 50 ) return "Ê≠ªÁßÉÈ©¥";
+   else return "ËÄÅÁßÉÈ©¥";
    break;
 case "taoist":
-   return "À¿≈£±«◊”";
+   return "Ê≠ªÁâõÈºªÂ≠ê";
    break;
 case "scholar":
-   if( age < 18 ) return "–° È¥Ù◊”";
-   else if( age < 50 ) return "≥Ù È¥Ù◊”";
-   else return "¿œÕØ…˙";
+   if( age < 18 ) return "Â∞è‰π¶ÂëÜÂ≠ê";
+   else if( age < 50 ) return "Ëá≠‰π¶ÂëÜÂ≠ê";
+   else return "ËÄÅÁ´•Áîü";
    break;
 default:
-   if( age < 18 ) return "–°Õı∞Àµ∞";
-   else if( age < 50 ) return "≥Ù‘Ù";
-   else return "¿œ∆•∑Ú";
+   if( age < 18 ) return "Â∞èÁéãÂÖ´Ëõã";
+   else if( age < 50 ) return "Ëá≠Ë¥º";
+   else return "ËÄÅÂåπÂ§´";
    break;
         }
    }
@@ -442,36 +442,36 @@ string query_self(object ob)
    if (age == 0) age = ob->query("age");
    switch(ob->query("gender")) 
    {
-     case "≈Æ–‘":
+     case "Â•≥ÊÄß":
         switch(ob->query("class")) 
         {
 case "bonze":
-   if( age < 50 ) return "∆∂ƒ·";
-   else return "¿œƒ·";
+   if( age < 50 ) return "Ë¥´Â∞º";
+   else return "ËÄÅÂ∞º";
    break;
 default:
-   if( age < 30 ) return "–°≈Æ◊”";
-   else return "Ê™…Ì";
+   if( age < 30 ) return "Â∞èÂ•≥Â≠ê";
+   else return "Â¶æË∫´";
    break;
         }
-     case "ƒ––‘":
+     case "Áî∑ÊÄß":
      default:
         switch(ob->query("class")) 
         {
 case "bonze":
-   if( age < 50 ) return "∆∂…Æ";
-   else return "¿œƒ…";
+   if( age < 50 ) return "Ë¥´ÂÉß";
+   else return "ËÄÅÁ∫≥";
    break;
 case "taoist":
-   return "∆∂µ¿";
+   return "Ë¥´ÈÅì";
    break;
 case "scholar":
-   if( age < 30 ) return "ÕÌ…˙";
-   else return "≤ª≤≈";
+   if( age < 30 ) return "ÊôöÁîü";
+   else return "‰∏çÊâç";
    break;
 default:
-   if( age < 50 ) return "‘⁄œ¬";
-   else return "¿œÕ∑◊”";
+   if( age < 50 ) return "Âú®‰∏ã";
+   else return "ËÄÅÂ§¥Â≠ê";
    break;
         }
    }
@@ -490,37 +490,37 @@ string query_self_rude(object ob)
    if (age == 0) age = ob->query("age");
    switch(ob->query("gender")) 
    {
-     case "≈Æ–‘":
+     case "Â•≥ÊÄß":
         switch(ob->query("class")) 
         {
 case "bonze":
-   if( age < 50 ) return "∆∂ƒ·";
-   else return "¿œƒ·";
+   if( age < 50 ) return "Ë¥´Â∞º";
+   else return "ËÄÅÂ∞º";
    break;
 default:
-   if( age < 50 ) return "±æπ√ƒÔ";
-   else return "¿œƒÔ";
+   if( age < 50 ) return "Êú¨ÂßëÂ®ò";
+   else return "ËÄÅÂ®ò";
    break;
         }
-     case "ƒ––‘":
+     case "Áî∑ÊÄß":
      default:
         switch(ob->query("class")) 
         {
 case "bonze":
-   if( age < 50 ) return "¥Û∫Õ…–Œ“";
-   else return "¿œ∫Õ…–Œ“";
+   if( age < 50 ) return "Â§ßÂíåÂ∞öÊàë";
+   else return "ËÄÅÂíåÂ∞öÊàë";
    break;
 case "taoist":
-   return "±æ…Ω»À";
+   return "Êú¨Â±±‰∫∫";
    break;
 case "scholar":
-   if( age < 50 ) return "±æœ‡π´";
-   else return "¿œ∑Ú◊”Œ“";
+   if( age < 50 ) return "Êú¨Áõ∏ÂÖ¨";
+   else return "ËÄÅÂ§´Â≠êÊàë";
    break;
 default:
-   if( age < 18 ) return "ƒ„º“–°“ØŒ“";
-   else if( age < 50 ) return "¥Û“ØŒ“";
-   else return "ƒ„“Ø“ØŒ“";
+   if( age < 18 ) return "‰Ω†ÂÆ∂Â∞èÁà∑Êàë";
+   else if( age < 50 ) return "Â§ßÁà∑Êàë";
+   else return "‰Ω†Áà∑Áà∑Êàë";
    break;
         }
    }

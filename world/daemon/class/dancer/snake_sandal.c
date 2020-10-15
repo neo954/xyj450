@@ -6,12 +6,12 @@ inherit EQUIP;
 
 void create()
 {
-	set_name( GRN "´©»¨ÉßÓ°Ð¬" NOR, ({ "snake sandals", "sandals" }) );
+	set_name( GRN "ç©¿èŠ±è›‡å½±éž‹" NOR, ({ "snake sandals", "sandals" }) );
 	set_weight(1000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¼þ");
+		set("unit", "ä»¶");
 		set("value", 8000);
 		set("material", "cloth");
 		set("armor_type", "feet");

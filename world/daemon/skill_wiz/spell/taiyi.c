@@ -1,7 +1,7 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
-// taiyi.c ¡¾Ì«ÒÒÏÉ·¨¡¿
+// taiyi.c ã€å¤ªä¹™ä»™æ³•ã€‘
 inherit SKILL;
 
 int valid_enable(string usage) { return usage=="spells"; }
@@ -10,7 +10,7 @@ int valid_learn(object me)
 {
    if( (int)me->query_skill("spells", 1) < 10 
      || (int)me->query_skill("spells", 1) <= (int)me->query_skill("taiyi", 1) )
-     return notify_fail("ÄãµÄ·¨ÊõĞŞÎª»¹²»¹»¸ßÉî£¬ÎŞ·¨Ñ§Ï°Ì«ÒÒÏÉ·¨¡£\n");
+     return notify_fail("ä½ çš„æ³•æœ¯ä¿®ä¸ºè¿˜ä¸å¤Ÿé«˜æ·±ï¼Œæ— æ³•å­¦ä¹ å¤ªä¹™ä»™æ³•ã€‚\n");
    return 1;
 }
 

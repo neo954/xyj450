@@ -4,16 +4,16 @@ inherit WAIST;
 
 void create()
 {
-        set_name( HIG "ÂÌÂÞÈ¹" NOR, ({ "skirt" }) );
+        set_name( HIG "ç»¿ç½—è£™" NOR, ({ "skirt" }) );
         set_weight(1000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¼þ");
+                set("unit", "ä»¶");
                  set("value", 2100);
                 set("material", "cloth");
                 set("armor_prop/armor", 4);
-        set("wear_msg", "$N½«$nÄÃ³öÏµÔÚÑüÉÏ¡£\n");
+        set("wear_msg", "$Nå°†$næ‹¿å‡ºç³»åœ¨è…°ä¸Šã€‚\n");
         }
         setup();
 }

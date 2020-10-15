@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // powerup.c
@@ -21,18 +21,18 @@ int exert(object me, object target)
    }
 
         if( target != me ) 
-     return notify_fail("ÄãÖ»ÄÜÓÃ·´ÎåÐÐÉãÆø¾÷ÌáÉý×Ô¼ºµÄÕ½¶·Á¦¡£\n");
+     return notify_fail("ä½ åªèƒ½ç”¨åäº”è¡Œæ‘„æ°”è¯€æå‡è‡ªå·±çš„æˆ˜æ–—åŠ›ã€‚\n");
 
         if( (int)me->query("force") < skill*2 )     
-     return notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
+     return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
         if( (int)me->query_temp("powerup") ) 
-     return notify_fail("ÄãÒÑ¾­ÔÚÔË¹¦ÖÐÁË¡£\n");
+     return notify_fail("ä½ å·²ç»åœ¨è¿åŠŸä¸­äº†ã€‚\n");
 
         me->add("force", -skill);
         me->receive_damage("kee", 50);
 
         message_vision(
-                HIR "$NÎ¢Ò»ÄýÉñ£¬ÔËÆð·´ÎåÐÐÉãÆø¾÷£¬Í·ÉÏÃ°³öÒ»¹ÉÇàÆø£¬Á³²¿ÏÖ³öÒ»¸ö¹íÐÎ¡£¡£¡£\n" NOR, me);
+                HIR "$Nå¾®ä¸€å‡ç¥žï¼Œè¿èµ·åäº”è¡Œæ‘„æ°”è¯€ï¼Œå¤´ä¸Šå†’å‡ºä¸€è‚¡é’æ°”ï¼Œè„¸éƒ¨çŽ°å‡ºä¸€ä¸ªé¬¼å½¢ã€‚ã€‚ã€‚\n" NOR, me);
 
         me->add_temp("apply/attack", skill/5);
    me->add_temp("apply/strength", skill/5);
@@ -53,6 +53,6 @@ void remove_effect(object me, int amount)
         me->delete_temp("powerup");
         me->add("bellicosity", amount*2 );
    // mon 3/1/98. move this to after powerup is done.
-        tell_object(me, "ÄãµÄ·´ÎåÐÐÉãÆø¾÷ÔËÐÐÒ»ÖÜÌìÍê±Ï£¬½«ÄÚÁ¦ÊÕ»Øµ¤Ìï¡£\n");
+        tell_object(me, "ä½ çš„åäº”è¡Œæ‘„æ°”è¯€è¿è¡Œä¸€å‘¨å¤©å®Œæ¯•ï¼Œå°†å†…åŠ›æ”¶å›žä¸¹ç”°ã€‚\n");
 }
 

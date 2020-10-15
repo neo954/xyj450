@@ -5,19 +5,19 @@ inherit F_LIQUID;
 
 void create()
 {
-    set_name("ÌÕºø", ({ "pottery" }) );
+    set_name("é™¶å£¶", ({ "pottery" }) );
     set_weight(1000);
     if (clonep())
         set_default_object(__FILE__);
     else {
-            set("long","Ò»¸öÊÖ¹¤ÖÆÔìµÄÌÕºø, ¿´ÆğÀ´Äê´ú¾ÃÔ¶.\n");
-            set("unit","¸ö");
+            set("long","ä¸€ä¸ªæ‰‹å·¥åˆ¶é€ çš„é™¶å£¶, çœ‹èµ·æ¥å¹´ä»£ä¹…è¿œ.\n");
+            set("unit","ä¸ª");
             set("value",0);
             set("max_liquid",10);
     }
     set("liquid", ([
         "type" : "alcohol",
-        "name" : "Ã×¾Æ",
+        "name" : "ç±³é…’",
         "remaining" : 7,
         "drunk_apply" : 7,
     ]) );

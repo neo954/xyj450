@@ -1,4 +1,4 @@
-// blade:__DIR__"obj/blade.c" µ¶Ò»°Ñ
+// blade:__DIR__"obj/blade.c" åˆ€ä¸€æŠŠ
 
 #include <weapon.h>
 
@@ -6,17 +6,17 @@ inherit BLADE;
 
 void create()
 {
-    set_name("¾üµ¶",({"blade"}));
+    set_name("å†›åˆ€",({"blade"}));
 	set_weight(5500);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else{
-		set("unit", "±ú");
-		set("long", "ÕâÊÇÒ»°ÑÆÕÍ¨µÄ¾üµ¶£¬¿´ÆğÀ´Ã»Ê²Ã´ÆæÌØ¡£\n");
+		set("unit", "æŸ„");
+		set("long", "è¿™æ˜¯ä¸€æŠŠæ™®é€šçš„å†›åˆ€ï¼Œçœ‹èµ·æ¥æ²¡ä»€ä¹ˆå¥‡ç‰¹ã€‚\n");
 		set("value", 450);
 		set("material", "iron");
-                set("wield_msg", "$N³é³öÒ»°ÑÃ÷»Î»ÎµÄ$nÎÕÔÚÊÖÖĞ¡£\n");
-                set("unwield_msg", "$N½«ÊÖÖĞµÄ$n²åÈëÑü¼äµÄµ¶ÇÊ¡£\n");
+                set("wield_msg", "$NæŠ½å‡ºä¸€æŠŠæ˜æ™ƒæ™ƒçš„$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+                set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næ’å…¥è…°é—´çš„åˆ€é˜ã€‚\n");
         }
 	init_blade(14);
 	setup();

@@ -2,12 +2,12 @@ inherit COMBINED_ITEM;
 
 void create()
 {
-        set_name("ÏÉµ¤", ({"tablet"}));
-        set("long",     "ÕâÊÇÒ»Á£ÏÉµ¤£¬·þÊ³¿ÉÎ»ÁÐÏÉ°à¡£\n"
+        set_name("ä»™ä¸¹", ({"tablet"}));
+        set("long",     "è¿™æ˜¯ä¸€ç²’ä»™ä¸¹ï¼Œæœé£Ÿå¯ä½åˆ—ä»™ç­ã€‚\n"
 );
-        set("unit", "Á£");
+        set("unit", "ç²’");
         set("value",100); 
-        set("base_unit", "Á£");
+        set("base_unit", "ç²’");
         set("base_weight", 10000);
         set_amount(1);
 }
@@ -20,9 +20,9 @@ void init()
 
 int do_eat(string arg)
 {
-        if( !arg || arg != "tablet")  return notify_fail("ÄãÒª³ÔÉõÃ´ÄØ? \n");
+        if( !arg || arg != "tablet")  return notify_fail("ä½ è¦åƒç”šä¹ˆå‘¢? \n");
         message_vision(
-           "$NÄÃ³öÒ»Á£ÏÉµ¤£¬ÄÉÈë¿ÚÖÐ. ³ÔµÄÌ«¼±, ±ÇÌéÑÛÀáÁ÷ÁËÂúÁ³..\n"
+           "$Næ‹¿å‡ºä¸€ç²’ä»™ä¸¹ï¼Œçº³å…¥å£ä¸­. åƒçš„å¤ªæ€¥, é¼»æ¶•çœ¼æ³ªæµäº†æ»¡è„¸..\n"
            ,this_player()  );
         this_player()->receive_heal("gin", 5);
         this_player()->receive_heal("kee", 30);

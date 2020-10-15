@@ -1,5 +1,5 @@
 // wu-shun.c
-//ºÓº£ÌìÄ§Éã»ê¹¦
+//æ²³æµ·å¤©é­”æ‘„é­‚åŠŸ
 inherit FORCE;
 
 int valid_enable(string usage) { return usage=="force"; }
@@ -7,14 +7,14 @@ int valid_enable(string usage) { return usage=="force"; }
 int valid_learn(object me)
 {
 	if( (int)me->query("bellicosity") < ((int)me->query_skill("wu-shun")*50) )
-		return notify_fail("ÄãµÄÉ±Æø²»¹»£¬ÎŞ·¨ÌáÉıºÓº£ÌìÄ§Éã»ê¹¦µÄÔìÒè¡£\n");
+		return notify_fail("ä½ çš„æ€æ°”ä¸å¤Ÿï¼Œæ— æ³•æå‡æ²³æµ·å¤©é­”æ‘„é­‚åŠŸçš„é€ è¯£ã€‚\n");
 
 	return 1;
 }
 
 int practice_skill(object me)
 {
-	return notify_fail("ºÓº£ÌìÄ§Éã»ê¹¦Ö»ÄÜÓÃÑ§µÄª¬»òÊÇ´ÓÔËÓÃ(exert)ÖĞÔö¼ÓÊìÁ·¶È¡£\n");
+	return notify_fail("æ²³æµ·å¤©é­”æ‘„é­‚åŠŸåªèƒ½ç”¨å­¦çš„ï¿½æˆ–æ˜¯ä»è¿ç”¨(exert)ä¸­å¢åŠ ç†Ÿç»ƒåº¦ã€‚\n");
 }
 
 string exert_function_file(string func)

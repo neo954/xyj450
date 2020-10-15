@@ -3,13 +3,13 @@ inherit ITEM;
 #include <ansi.h>
 void create()
 {
-	set_name("ÃæÄ¿¿Õ°×µÄÄ¾Ïñ", ({ "muxiang" , "Ä¾Ïñ"}) );
+	set_name("é¢ç›®ç©ºç™½çš„æœ¨åƒ", ({ "muxiang" , "æœ¨åƒ"}) );
 	set_weight(50);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "¸ö");
-		set("long", "ÃæÄ¿¿Õ°×µÄÄ¾Ïñ\n");
+		set("unit", "ä¸ª");
+		set("long", "é¢ç›®ç©ºç™½çš„æœ¨åƒ\n");
 		set("value", 10);
 	}
 }

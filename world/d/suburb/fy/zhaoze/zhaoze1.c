@@ -9,12 +9,12 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "»ğÕÓËÀÓò");
+	set("short", "ç«æ²¼æ­»åŸŸ");
 	set("long", @LONG
-ÕâÀïÃÜ²¼µÄ¾£¼¬¹ÒÂúµ¹´Ì£¬µ²ÔÚÍ¨ÍùÕÓÔóÉî´¦µÄ·½Ïò¡£µÍ°«µÄ
-Ğ¡Ê÷´Ôµ²×¡ÊÓÏß£¬Ê¹ÈË±æ²»Çå·½Ïò¡£µØÏÂ²¼Âú¸¯ÀÃµÄ¿İÒ¶£¬ËÉËÉÈí
-ÈíµÄ¡£Å¼¶ûÓĞÒ»Á½¸öÆøÅİ´ÓµØÉÏµÄ»ıË®ÏÂÓ¿³ö£¬´ø³öÁîÈË×÷Å»µÄ´Ì
-±ÇÆøÎ¶¡£
+è¿™é‡Œå¯†å¸ƒçš„è†æ£˜æŒ‚æ»¡å€’åˆºï¼ŒæŒ¡åœ¨é€šå¾€æ²¼æ³½æ·±å¤„çš„æ–¹å‘ã€‚ä½çŸ®çš„
+å°æ ‘ä¸›æŒ¡ä½è§†çº¿ï¼Œä½¿äººè¾¨ä¸æ¸…æ–¹å‘ã€‚åœ°ä¸‹å¸ƒæ»¡è…çƒ‚çš„æ¯å¶ï¼Œæ¾æ¾è½¯
+è½¯çš„ã€‚å¶å°”æœ‰ä¸€ä¸¤ä¸ªæ°”æ³¡ä»åœ°ä¸Šçš„ç§¯æ°´ä¸‹æ¶Œå‡ºï¼Œå¸¦å‡ºä»¤äººä½œå‘•çš„åˆº
+é¼»æ°”å‘³ã€‚
 LONG
 	);
 	set("exits", ([ 
@@ -22,8 +22,8 @@ LONG
 ]));
 
         set("item_desc", ([
-                "bush": "ÕâÀï¾£¼¬(bush)ÃÜ²¼£¬µ«ÄãËÆºõ¿ÉÒÔ¿³¿ª(chop)ËüÃÇ¡£\n",
-                "¾£¼¬": "ÕâÀï¾£¼¬(bush)ÃÜ²¼£¬µ«ÄãËÆºõ¿ÉÒÔ¿³¿ª(chop)ËüÃÇ¡£\n"
+                "bush": "è¿™é‡Œè†æ£˜(bush)å¯†å¸ƒï¼Œä½†ä½ ä¼¼ä¹å¯ä»¥ç å¼€(chop)å®ƒä»¬ã€‚\n",
+                "è†æ£˜": "è¿™é‡Œè†æ£˜(bush)å¯†å¸ƒï¼Œä½†ä½ ä¼¼ä¹å¯ä»¥ç å¼€(chop)å®ƒä»¬ã€‚\n"
 
         ]) );
         set("objects", ([
@@ -46,7 +46,7 @@ int blowing(object ob)
 	int damage;
         if(  ob && environment(ob) == this_object())
 	{
-	tell_object(this_object(), HIR "\n\nµØÏÂµÄÄàÍÁÍ»È»ÁÑ¿ª£¬Ò»ÍÅ³ãÈÈµÄµØ»ğÏóÅçÈª°ãÉä³ö£¡£¡\n\n" NOR);
+	tell_object(this_object(), HIR "\n\nåœ°ä¸‹çš„æ³¥åœŸçªç„¶è£‚å¼€ï¼Œä¸€å›¢ç‚½çƒ­çš„åœ°ç«è±¡å–·æ³‰èˆ¬å°„å‡ºï¼ï¼\n\n" NOR);
 	COMBAT_D->report_status(ob,1);
 	ob->receive_wound("kee", random(20)+10);
 	if( environment(ob) == this_object())
@@ -76,36 +76,36 @@ int do_chop(string arg)
         object me;
         if(!arg || arg=="")
         {
-                write("ÄãÒª¿³¿ªÊ²Ã´£¿\n");
+                write("ä½ è¦ç å¼€ä»€ä¹ˆï¼Ÿ\n");
                 return 1;
         }
-        if( arg == "bush" || arg == "¾£¼¬" )
+        if( arg == "bush" || arg == "è†æ£˜" )
         {
         me = this_player();
         obj = me->query_temp("weapon");
         if( !obj )
         {
-        write("Äã¿Õ×ÅÊÖ£¬ÔõÃ´¿³£¿\n");
+        write("ä½ ç©ºç€æ‰‹ï¼Œæ€ä¹ˆç ï¼Ÿ\n");
         return 1;
         }
         if( obj->query("jungle"))
         {
         if( !query("exits/east") ) {
         set("exits/east", __DIR__"zhaoze2");
-        message_vision(sprintf("$NÓÃÊÖÖĞµÄ%s¿³³öÒ»ÌõÏò¶«µÄÂ·£®\n",obj->name()),
+        message_vision(sprintf("$Nç”¨æ‰‹ä¸­çš„%sç å‡ºä¸€æ¡å‘ä¸œçš„è·¯ï¼\n",obj->name()),
                 me);
 	me->start_busy(1);
         }
         else
-        message_vision(sprintf("$NÓÃÊÖÖĞµÄ%s¿³ÏòÂ·±ßµÄ¾£¼¬£®\n",obj->name()),
+        message_vision(sprintf("$Nç”¨æ‰‹ä¸­çš„%sç å‘è·¯è¾¹çš„è†æ£˜ï¼\n",obj->name()),
                 me);
         }
         else
-        message_vision(sprintf("$NÓÃÊÖÖĞµÄ%sÏò´ÔÉúµÄ¾£¼¬Ò»¶ÙÂÒ¿³£®\n",obj->name()),
+        message_vision(sprintf("$Nç”¨æ‰‹ä¸­çš„%så‘ä¸›ç”Ÿçš„è†æ£˜ä¸€é¡¿ä¹±ç ï¼\n",obj->name()),
                 me);
         }
         else
-         write("ÄãÒª¿³¿ªÊ²Ã´£¿\n");
+         write("ä½ è¦ç å¼€ä»€ä¹ˆï¼Ÿ\n");
                 return 1;
 }
 

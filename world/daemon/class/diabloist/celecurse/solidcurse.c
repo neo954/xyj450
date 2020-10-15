@@ -9,23 +9,23 @@ int curse(object me, object target)
 	if( !target ) target = offensive_target(me);
 
         if((int)me->query_skill("cursism") < 120 )
-                return notify_fail("ÄãµÄ½µÍ·Êõ²»¹»¸ß£¡\n");
+                return notify_fail("ä½ çš„é™å¤´æœ¯ä¸å¤Ÿé«˜ï¼\n");
 
 	if( !target
 	|| !target->is_ghost()
 	||	target==me)
-		return notify_fail("ÄãÖ»ÄÜ¶Ô¹í»êÏÂÕâ¸ö½µÍ·¡£\n");
+		return notify_fail("ä½ åªèƒ½å¯¹é¬¼é­‚ä¸‹è¿™ä¸ªé™å¤´ã€‚\n");
 
 	if((int)me->query("kee") < 100 )
-		return notify_fail("ÄãµÄÆøÑª²»¹»£¡\n");
+		return notify_fail("ä½ çš„æ°”è¡€ä¸å¤Ÿï¼\n");
 	if(!corp = present("corpse",environment(me)))
-		return notify_fail("ÄãµÄÖÜÎ§Ã»ÓÐÊ¬Ìå£¡\n");
+		return notify_fail("ä½ çš„å‘¨å›´æ²¡æœ‰å°¸ä½“ï¼\n");
 	me->receive_wound("kee", 100);
-	msg = HIC "$NÁè¿Õ¶Ô×Å$nÐéµã¼¸ÏÂ£¬$n»º»ºµÄÕ¾ÁËÆðÀ´£¡\n\n" NOR;
+	msg = HIC "$Nå‡Œç©ºå¯¹ç€$nè™šç‚¹å‡ ä¸‹ï¼Œ$nç¼“ç¼“çš„ç«™äº†èµ·æ¥ï¼\n\n" NOR;
 	message_vision(msg,me,corp);
 	destruct(corp);
 	target->be_ghost(0);
-	target->set("title",HIB"½èÊ¬»¹»ê"NOR);
+	target->set("title",HIB"å€Ÿå°¸è¿˜é­‚"NOR);
 	me->start_busy(2);
 	return 1;
 }

@@ -2,15 +2,15 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "º®¹È¾¡Í·");
+        set("short", "å¯’è°·å°½å¤´");
         set("long", @LONG
-Á½Ãæ½ÔÎªÇÍ±Ú£¬¹â»¬ÎÞÎï¡£Ò»Öêº®¹ÈÓÄÀ¼,°µÏã¸¡¶¯£¬ÇßÈËÐÄÆ¢¡£É½±ÚÌìÈ»ÐÐ³É
-Ò»¿ÕÑ¨(vase),»ýÂúº®Â¶.
+ä¸¤é¢çš†ä¸ºå³­å£ï¼Œå…‰æ»‘æ— ç‰©ã€‚ä¸€æ ªå¯’è°·å¹½å…°,æš—é¦™æµ®åŠ¨ï¼Œæ²äººå¿ƒè„¾ã€‚å±±å£å¤©ç„¶è¡Œæˆ
+ä¸€ç©ºç©´(vase),ç§¯æ»¡å¯’éœ².
 LONG
         );
         set("item_desc", ([
                 "vase":
-                    "Ê¯Ñ¨³ÊÆ¿×´,ÏëÊÇÓÃÀ´²å(interject)Ê²Ã´¶«¶«µÄ.\n",
+                    "çŸ³ç©´å‘ˆç“¶çŠ¶,æƒ³æ˜¯ç”¨æ¥æ’(interject)ä»€ä¹ˆä¸œä¸œçš„.\n",
                           ]) );
         set("exits", ([ /* sizeof() == 1 */
                 "east" : __DIR__"hollow1",
@@ -30,10 +30,10 @@ void init()
 }
 int do_interject(string arg)
 {
-        if( !arg || arg!="orchid" ) return notify_fail ("ÄãÒªÓÃÊ²Ã´£¿\n");
-        message_vision("º®¹ÈÓÄÀ¼ºöµØÕÀ·Å,»Ã³öÆßÉ«¹â»ª.$NÇáÇáµØÆ®Æð...\n",
+        if( !arg || arg!="orchid" ) return notify_fail ("ä½ è¦ç”¨ä»€ä¹ˆï¼Ÿ\n");
+        message_vision("å¯’è°·å¹½å…°å¿½åœ°ç»½æ”¾,å¹»å‡ºä¸ƒè‰²å…‰åŽ.$Nè½»è½»åœ°é£˜èµ·...\n",
                 this_player());
-        tell_room("/d/suburb/es/latemoon/bamboo",this_player()->query("name") + "ÇáÇáÆ®Âä.\n");
+        tell_room("/d/suburb/es/latemoon/bamboo",this_player()->query("name") + "è½»è½»é£˜è½.\n");
         this_player()->move("/d/suburb/es/latemoon/bamboo");
         return 1;
 }

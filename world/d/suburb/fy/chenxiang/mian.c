@@ -4,10 +4,10 @@
 inherit ROOM;
 void create()
 {
-        set("short", "С���");
+        set("short", "小面馆");
         set("long", @LONG
-��ݵ����赱Ȼ�ܼ�ª�������������������֮��Ҳ��һЩ�ܼ򵥵�
-���㡣��һ�ֺ�����ľ²˺��ӣ����ǳ�θ�ر�õ��ˣ������������ˡ�
+面馆的阵设当然很简陋，除了中午和晚上卖面之外也卖一些很简单的
+旱点。有一种很油腻的韭菜合子，不是肠胃特别好的人，很难消化得了。
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */

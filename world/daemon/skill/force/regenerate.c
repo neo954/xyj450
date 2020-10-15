@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // regenerate.c
@@ -8,15 +8,15 @@
 int exert(object me, object target)
 {
 	if (target != me) 
-		return notify_fail("ÄãÖ»ÄÜÓÃÄÚ¹¦»Ö¸´×Ô¼ºµÄ¾«Á¦¡£\n");
+		return notify_fail("ä½ åªèƒ½ç”¨å†…åŠŸæ¢å¤è‡ªå·±çš„ç²¾åŠ›ã€‚\n");
 	
 	if ((int)me->query("force") < 20)
-		return notify_fail("ÄãµÄÄÚÁ¦²»¹»¡£\n");
+		return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿã€‚\n");
 
 	me->add("force", -20);
 	me->receive_heal("gin", (int)me->query_skill("force") / 3);
 	
-        message_vision("$NÉîÉîÎüÁË¼¸¿ÚÆø£¬¾«Éñ¿´ÆðÀ´ºÃ¶àÁË¡£\n", me);
+        message_vision("$Næ·±æ·±å¸äº†å‡ å£æ°”ï¼Œç²¾ç¥žçœ‹èµ·æ¥å¥½å¤šäº†ã€‚\n", me);
 
         if( me->is_fighting() ) me->start_busy(1);
 	

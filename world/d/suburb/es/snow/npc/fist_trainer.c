@@ -4,15 +4,15 @@ inherit NPC;
 
 void create()
 {
-	set_name("Àî»ğÊ¨", ({ "trainer", "lee" }) );
-	set("title", "È­·¨½ÌÁ·");
-	set("gender", "ÄĞĞÔ" );
+	set_name("æç«ç‹®", ({ "trainer", "lee" }) );
+	set("title", "æ‹³æ³•æ•™ç»ƒ");
+	set("gender", "ç”·æ€§" );
 	set("age", 28);
 	set("str", 26);
 	set("int", 14);
 	set("long",
-		"Àî»ğÊ¨ÊÇ¸ö¿×ÎäÓĞÁ¦µÄ´ó¿éÍ·£¬ËûÕıÔÚÑµÁ·ËûµÄµÜ×ÓÃÇÏ°Á·¡¸Áø¼ÒÈ­\n"
-		"·¨¡¹(liuh-ken)¡£\n" );
+		"æç«ç‹®æ˜¯ä¸ªå­”æ­¦æœ‰åŠ›çš„å¤§å—å¤´ï¼Œä»–æ­£åœ¨è®­ç»ƒä»–çš„å¼Ÿå­ä»¬ä¹ ç»ƒã€ŒæŸ³å®¶æ‹³\n"
+		"æ³•ã€(liuh-ken)ã€‚\n" );
 	set("combat_exp", 3000);
 	set("attitude", "heroism");
 
@@ -21,9 +21,9 @@ void create()
 	set("force_factor", 1);
 
 	set("inquiry", ([
-		"here": "ÕâÀïµ±È»ÊÇ´¾·çÎä¹İ£¬²»È»»¹ÊÇÄÄÀï£¿\n",
-		"name": "ÔÚÏÂĞÕÀî£¬Ãû×Ö¾Í½Ğ»ğÊ¨£¬ÈË³ÆÀî½ÌÍ·µÄ±ãÊÇÎÒ¡£\n",
-		"Áø¼ÒÈ­·¨": "Å¶....ËµÀ´²ÑÀ¢\£¬Ğ¡µÜÕâÌ×È­·¨»¹Ã»Ñ§µÃµ½¼Ò, Áø¹İÖ÷¾Í½ÌÎÒÔÚÕâÀï´«ÒÕ¡£\n"
+		"here": "è¿™é‡Œå½“ç„¶æ˜¯æ·³é£æ­¦é¦†ï¼Œä¸ç„¶è¿˜æ˜¯å“ªé‡Œï¼Ÿ\n",
+		"name": "åœ¨ä¸‹å§“æï¼Œåå­—å°±å«ç«ç‹®ï¼Œäººç§°ææ•™å¤´çš„ä¾¿æ˜¯æˆ‘ã€‚\n",
+		"æŸ³å®¶æ‹³æ³•": "å“¦....è¯´æ¥æƒ­æ„§\ï¼Œå°å¼Ÿè¿™å¥—æ‹³æ³•è¿˜æ²¡å­¦å¾—åˆ°å®¶, æŸ³é¦†ä¸»å°±æ•™æˆ‘åœ¨è¿™é‡Œä¼ è‰ºã€‚\n"
 	]) );
 
 	set_skill("unarmed", 30);
@@ -36,18 +36,18 @@ void create()
 
 int recognize_apprentice(object ob)
 {
-	if( (string)ob->query("family/family_name")=="·âÉ½½£ÅÉ" ) return 1;
-	command("say ¶Ô²»Æğ£¬ÕâÎ»" + RANK_D->query_respect(ob) + "£¬Äú²»ÊÇÎÒÃÇÎä¹İµÄµÜ×Ó¡£");
-	return notify_fail( "Àî»ğÊ¨²»Ô¸Òâ½ÌÄãÈ­·¨¡£\n");
+	if( (string)ob->query("family/family_name")=="å°å±±å‰‘æ´¾" ) return 1;
+	command("say å¯¹ä¸èµ·ï¼Œè¿™ä½" + RANK_D->query_respect(ob) + "ï¼Œæ‚¨ä¸æ˜¯æˆ‘ä»¬æ­¦é¦†çš„å¼Ÿå­ã€‚");
+	return notify_fail( "æç«ç‹®ä¸æ„¿æ„æ•™ä½ æ‹³æ³•ã€‚\n");
 }
 
 int accept_fight(object me)
 {
-	if( (string)me->query("family/family_name")=="·âÉ½½£ÅÉ" ) {
+	if( (string)me->query("family/family_name")=="å°å±±å‰‘æ´¾" ) {
 		command("nod");
-		command("say ½øÕĞ°É¡£");
+		command("say è¿›æ‹›å§ã€‚");
 		return 1;
 	}
-	command("say ¹İÖ÷·Ô¸À¹ı£¬²»Ğí\ºÍÀ´ÕâÀïµÄ¿ÍÈË¹ıÕĞ¡£");
+	command("say é¦†ä¸»å©å’è¿‡ï¼Œä¸è®¸\å’Œæ¥è¿™é‡Œçš„å®¢äººè¿‡æ‹›ã€‚");
 	return 0;
 }

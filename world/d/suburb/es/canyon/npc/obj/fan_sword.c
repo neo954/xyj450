@@ -1,4 +1,4 @@
-// sword:__DIR__"obj/fan_sword.c" ÌúÉÈ½£Ò»°Ñ
+// sword:__DIR__"obj/fan_sword.c" é“æ‰‡å‰‘ä¸€æŠŠ
 
 #include <weapon.h>
 
@@ -6,17 +6,17 @@ inherit SWORD;
 
 void create()
 {
-    set_name("ÌúÉÈ½£",({ "fan sword","fan","sword" }));
+    set_name("é“æ‰‡å‰‘",({ "fan sword","fan","sword" }));
 	set_weight(3000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else{
-		set("unit", "±ú");
-		set("long", "ÕâÊÇÒ»±úÓğ×´µÄÌú½££¬¿´ÆğÀ´Âù¼âÈñµÄ¡£\n");
+		set("unit", "æŸ„");
+		set("long", "è¿™æ˜¯ä¸€æŸ„ç¾½çŠ¶çš„é“å‰‘ï¼Œçœ‹èµ·æ¥è›®å°–é”çš„ã€‚\n");
 		set("value", 600);
 		set("material", "iron");
-                set("wield_msg", "$N¡¸à§¡¹µØÒ»Éù´ÓĞä¿Ú³é³öÒ»°Ñ$nÎÕÔÚÊÖÖĞ¡£\n");
-                set("unwield_msg", "$N½«ÊÖÖĞµÄ$nÊÕÈëĞäÄÚ¡£\n");
+                set("wield_msg", "$Nã€Œå”°ã€åœ°ä¸€å£°ä»è¢–å£æŠ½å‡ºä¸€æŠŠ$næ¡åœ¨æ‰‹ä¸­ã€‚\n");
+                set("unwield_msg", "$Nå°†æ‰‹ä¸­çš„$næ”¶å…¥è¢–å†…ã€‚\n");
         }
 	init_sword(20);
 	setup();

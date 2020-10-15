@@ -5,14 +5,14 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("²è²©Ê¿", ({ "waiter" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("èŒ¶åšå£«", ({ "waiter" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 40);
         set("long",
-                "²è²©Ê¿ÕıÃ¦×ÅÕĞºô¿ÍÈË, Ò»ÊÖÌá×Å²èºø, Ò»ÊÖÄÃ×ÅÄ¨²¼\n");
+                "èŒ¶åšå£«æ­£å¿™ç€æ‹›å‘¼å®¢äºº, ä¸€æ‰‹æç€èŒ¶å£¶, ä¸€æ‰‹æ‹¿ç€æŠ¹å¸ƒ\n");
 	set("combat_exp", 5);
         set("attitude", "friendly");
-        set("rank_info/respect", "²è²©Ê¿");
+        set("rank_info/respect", "èŒ¶åšå£«");
         set("vendor_goods", ([
                 "/obj/example/teapot": 10,
                 "/obj/example/dumpling": 10,
@@ -38,16 +38,16 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) return;
         switch( random(3) ) {
                 case 0:
-                        say( "²è²©Ê¿Ğ¦ßäßäµØËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-                                + "£¬½øÀ´ºÈ±­²è£¬ĞªĞªÍÈ°É¡£\n");
+                        say( "èŒ¶åšå£«ç¬‘å’ªå’ªåœ°è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+                                + "ï¼Œè¿›æ¥å–æ¯èŒ¶ï¼Œæ­‡æ­‡è…¿å§ã€‚\n");
                         break;
                 case 1:
-                        say( "²è²©Ê¿ÓÃÃ«½íÄ¨ÁËÄ¨¿¿ÃÅµÄÒ»ÕÅ×À×Ó£¬ËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-                                + "£¬Çë½øÇë½ø¡£\n");
+                        say( "èŒ¶åšå£«ç”¨æ¯›å·¾æŠ¹äº†æŠ¹é é—¨çš„ä¸€å¼ æ¡Œå­ï¼Œè¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+                                + "ï¼Œè¯·è¿›è¯·è¿›ã€‚\n");
                         break;
                 case 2:
-                        say( "²è²©Ê¿ËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-                                + "£¬½øÀ´³¢³¢²Å²ÉµÄĞÂ²èÒ¶¡£ÍÛ! ºÃÏã°¡!...\n");
+                        say( "èŒ¶åšå£«è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+                                + "ï¼Œè¿›æ¥å°å°æ‰é‡‡çš„æ–°èŒ¶å¶ã€‚å“‡! å¥½é¦™å•Š!...\n");
                         break;
         }
 }

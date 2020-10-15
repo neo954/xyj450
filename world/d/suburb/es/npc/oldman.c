@@ -5,24 +5,24 @@ inherit F_SAVE;
 
 void create()
 {
-        set_name( "����", ({ "old man", "man", "old" }) );
+        set_name( "老者", ({ "old man", "man", "old" }) );
         if( !restore() ) {
-                set("short", "��ͩ��ɽ�в�ҩ��" HIC "����" NOR "(old man)");
+                set("short", "在桐柏山中采药的" HIC "老者" NOR "(old man)");
                 set("long",
-                        "���׷��Բ�,����ߣ������ߣ��������.\n"
-                        "�������ҩ����ɽ������Щ��ͬ����֮����\n"
-                        "��ʵ���޷���������ô��ô���֡�\n" );
-                set("gender", "����" );
-                set("race", "������");
+                        "他白发苍苍,宽五尺，高三尺，神光内敛.\n"
+                        "他终年采药于深山，当有些不同凡响之处。\n"
+                        "你实在无法理解他怎么这么的胖。\n" );
+                set("gender", "男性" );
+                set("race", "赛亚人");
                 set("chat_chance", 70);
                 set("chat_msg", ({
                         (: this_object(), "random_move" :),
-                        CYN "����˵���������ĺ��ӣ��ƣ�\n" NOR,
-                        CYN "���߹�µµ���˸�����\n" NOR,
+                        CYN "老者说道：可怜的孩子，瞧？\n" NOR,
+                        CYN "老者骨碌碌打了个滚。\n" NOR,
                }) );
                 set("chat_msg_coombat", ({
-                        CYN "\n���:-)��˵�������ǰ���ɽҩ��.\n" NOR,
-                        CYN "\n˵������һ����үү���ҵģ������ɣ�\n" NOR,
+                        CYN "\n扮个:-)，说道：我们爱吃山药蛋.\n" NOR,
+                        CYN "\n说道：这一招是爷爷教我的，厉害吧！\n" NOR,
                 }) );
 
                 // We have 7 pills per reset.
@@ -78,12 +78,12 @@ int accept_fight(object who)
 {
         if( is_fighting() ) {
                 if( random(query("eff_kee")) > (int)query("kee") ) {
-                        say( CYN "���ߴ�У���ô�����Ҵ�һ�������в��У����Ҵ�
-����Щ���ٸ����\n" NOR);
+                        say( CYN "老者大叫：这么多人我打一个？不行不行，等我打
+败这些人再跟你打！\n" NOR);
                         return 0;
                 } else {
-                        say( CYN "���ߴ�У���ô�����Ҵ�һ����û��ϵ����һ����
-���Ǻÿ���\n" NOR);
+                        say( CYN "老者大叫：这么多人我打一个？没关系，我一定让
+你们好看！\n" NOR);
                         return 1;
                 }
         }
@@ -96,7 +96,7 @@ int receive_damage(string type, int pts)
 
         damage = ::receive_damage(type, pts);
         if( (type=="kee") && (damage > (int)query("max_kee") / 5) ) {
-                say( CYN "�����������˵ĵط���˵������ʹ��...�������....\n" NOR);
+                say( CYN "老者捂著受伤的地方，说道：好痛啊...真有你的....\n" NOR);
                 if( random(query("kee")) < damage)
                         random_move();
         }
@@ -105,7 +105,7 @@ int receive_damage(string type, int pts)
         &&      (((int)query("kee")) < 20
                 || ((int)query("gin") < 20)
                 || ((int)query("sen") < 20) )) {
-                say( HIY "���ߴӿڴ�����һ��������è���˸������ɶ�������ȥ��\n
+                say( HIY "老者从口袋摸出一粒花梨塔猫仙人给他的仙豆吞了下去。\n
 " NOR);
                 set("gin", query("eff_gin"));
                 set("kee", query("eff_kee"));
@@ -136,11 +136,11 @@ void kill_ob(object ob)
         set_temp("apply/dodge", 50);
         set_temp("apply/parry", 60);
         set_temp("apply/damage", 20);
-        set("title", "ͩ��ɽ��  ɽҩ��");
-        set("nickname", HIR "�ô��ɽҩ��" NOR);
-                HIY "��ҩ�����۷���⣬˵��������Ĳ�ϲ��ɽҩ����
+        set("title", "桐柏山妖  山药蛋");
+        set("nickname", HIR "好大的山药蛋" NOR);
+                HIY "采药老者眼放异光，说道：你真的不喜欢山药蛋吗？
 \n\n"
-                "�������������Ȼ��ˣ���ͷ�ӽ������ȥ�ˣ���������\n" NOR
+                "沉吟半响道：既然如此，老头子今天豁出去了，纳命来！\n" NOR
                 "\n",
                 environment(), this_object() );
         set("pursuer", 1);
@@ -169,7 +169,7 @@ void kill_ob(object ob)
 }
 void defeated_enemy(object ob)
 {
-        say(CYN "��������һ�� V ���͵����ƣ�˵������Ӯ�ˣ�" NOR);
+        say(CYN "老者作出一个 V 字型的手势，说道：我赢了！" NOR);
         remove_killer(ob);
 }      
 

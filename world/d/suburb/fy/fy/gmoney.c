@@ -2,11 +2,11 @@ inherit ROOM;
 #include <room.h>
 void create()
 {
-        set("short", "ïÚ¾ÖÕË·¿");
+        set("short", "é•–å±€è´¦æˆ¿");
         set("long", @LONG
-ÕâÀïÊÇ½ğÊ¨ïÚ¾Ö³öÈëïÚÒøµÄÕË·¿£¬Õû¼äÎİ×ÓÊÇÓÉ¼áÓ²µÄ»¨¸ÚÊ¯Æö³ÉµÄ¡£Á¬Î¨Ò»µÄÒ»
-¸öĞ¡´°ÉÏ¶¼ÏâÂúÄ´Ö¸´ÖÏ¸µÄ¸ÖÌõ¡£Îİ½ÇÓĞĞ¡´²¡£ÕâÀïÓÉ×ÜïÚÍ·×îÇ×ĞÅµÄÈËÈÕÒ¹°ÑÊØ¡£²»
-µ«Èç´Ë£¬·¿ÖĞ»¹ÓĞ»ÆÍ­¾¯Áå£¬ÁåÉùÒ»Ïì£¬ïÚ¾Ö»ï¼ÆÃÇ¾Í»á·äÓµ¶øÖÁ¡£
+è¿™é‡Œæ˜¯é‡‘ç‹®é•–å±€å‡ºå…¥é•–é“¶çš„è´¦æˆ¿ï¼Œæ•´é—´å±‹å­æ˜¯ç”±åšç¡¬çš„èŠ±å²—çŸ³ç Œæˆçš„ã€‚è¿å”¯ä¸€çš„ä¸€
+ä¸ªå°çª—ä¸Šéƒ½é•¶æ»¡æ‹‡æŒ‡ç²—ç»†çš„é’¢æ¡ã€‚å±‹è§’æœ‰å°åºŠã€‚è¿™é‡Œç”±æ€»é•–å¤´æœ€äº²ä¿¡çš„äººæ—¥å¤œæŠŠå®ˆã€‚ä¸
+ä½†å¦‚æ­¤ï¼Œæˆ¿ä¸­è¿˜æœ‰é»„é“œè­¦é“ƒï¼Œé“ƒå£°ä¸€å“ï¼Œé•–å±€ä¼™è®¡ä»¬å°±ä¼šèœ‚æ‹¥è€Œè‡³ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
@@ -16,16 +16,16 @@ LONG
         __DIR__"npc/xiansheng" : 1,
                         ]) );
         set("item_desc", ([
-                "bed": "Õâ¸öĞ¡´²ËÆºõ¿ÉÒÔÍÆ¿ª(push)¡£\n",
-                "´²": "Õâ¸öĞ¡´²ËÆºõ¿ÉÒÔÍÆ¿ª(push)¡£\n",
-                "Ğ¡´²": "Õâ¸öĞ¡´²ËÆºõ¿ÉÒÔÍÆ¿ª(push)¡£\n",
-                "bell" : "Äã¿ÉÒÔÊÔ×ÅÒ¡Ò¡(ring)¡£\n",
-                "Áå" : "Äã¿ÉÒÔÊÔ×ÅÒ¡Ò¡(ring)¡£\n",
-                "¾¯Áå" : "Äã¿ÉÒÔÊÔ×ÅÒ¡Ò¡(ring)¡£\n",
-		"»ÆÍ­¾¯Áå" : "Äã¿ÉÒÔÊÔ×ÅÒ¡Ò¡(ring)¡£\n",
+                "bed": "è¿™ä¸ªå°åºŠä¼¼ä¹å¯ä»¥æ¨å¼€(push)ã€‚\n",
+                "åºŠ": "è¿™ä¸ªå°åºŠä¼¼ä¹å¯ä»¥æ¨å¼€(push)ã€‚\n",
+                "å°åºŠ": "è¿™ä¸ªå°åºŠä¼¼ä¹å¯ä»¥æ¨å¼€(push)ã€‚\n",
+                "bell" : "ä½ å¯ä»¥è¯•ç€æ‘‡æ‘‡(ring)ã€‚\n",
+                "é“ƒ" : "ä½ å¯ä»¥è¯•ç€æ‘‡æ‘‡(ring)ã€‚\n",
+                "è­¦é“ƒ" : "ä½ å¯ä»¥è¯•ç€æ‘‡æ‘‡(ring)ã€‚\n",
+		"é»„é“œè­¦é“ƒ" : "ä½ å¯ä»¥è¯•ç€æ‘‡æ‘‡(ring)ã€‚\n",
         ]) );
         setup();
-        create_door("south", "ÌúÃÅ", "north", DOOR_CLOSED);
+        create_door("south", "é“é—¨", "north", DOOR_CLOSED);
 
 }
 void init()
@@ -38,15 +38,15 @@ int do_ring(string arg)
 {
 int i;
 object ob;
-if ( !arg && arg != "bell" && arg != "»ÆÍ­¾¯Áå" && arg != "¾¯Áå" && arg != "Áå")
+if ( !arg && arg != "bell" && arg != "é»„é“œè­¦é“ƒ" && arg != "è­¦é“ƒ" && arg != "é“ƒ")
                 return 0;
-message_vision("$NÊÔ×ÅÒ¡ÁËÒ¡»ÆÍ­¾¯Áå£®£®£®\n", this_player());
+message_vision("$Nè¯•ç€æ‘‡äº†æ‘‡é»„é“œè­¦é“ƒï¼ï¼ï¼\n", this_player());
 if( !(int) query("notyet"))
 for(i;i<=random(3)+1;i++)
 {
 ob = new(__DIR__"npc/resting_biao");
 if(ob) ob->move(this_object());
-message_vision("$N³åÁË½øÀ´£®£®£®\n", ob);
+message_vision("$Nå†²äº†è¿›æ¥ï¼ï¼ï¼\n", ob);
 ob->kill_ob(this_player());
 set("notyet",1);
 }
@@ -57,15 +57,15 @@ int do_push(string arg)
 {
 object ob;
 object sect;
-if ( !arg && arg != "bed" && arg != "Ğ¡´²" && arg != "´²")
+if ( !arg && arg != "bed" && arg != "å°åºŠ" && arg != "åºŠ")
                 return 0;
 	if( ob = present("xiansheng", this_object()))
 	{
-	message_vision("$NÓÃºÜÒ»ÖÖÆæ¹ÖµÄÑÛÉñÃé$n\n", ob, this_player());
+	message_vision("$Nç”¨å¾ˆä¸€ç§å¥‡æ€ªçš„çœ¼ç¥ç„$n\n", ob, this_player());
 	return 1;
 	}
         if( !query("exits/down") ) {
-        message_vision("$N°ÑĞ¡´²ÍÆ¿ª·¢ÏÖÁËÒ»ÌõÃÜµÀ£®\n", this_player());	
+        message_vision("$NæŠŠå°åºŠæ¨å¼€å‘ç°äº†ä¸€æ¡å¯†é“ï¼\n", this_player());	
         set("exits/down", __DIR__"secret_room");
 	sect = find_object(__DIR__"secret_room");
 	if( !sect)
@@ -74,7 +74,7 @@ if ( !arg && arg != "bed" && arg != "Ğ¡´²" && arg != "´²")
 	}
 	else
 	{
-        message_vision("$N°ÑĞ¡´²ÍÆ¹ıÀ´ÑÚ¸Ç×¡ÃÜµÀ£®\n", this_player());
+        message_vision("$NæŠŠå°åºŠæ¨è¿‡æ¥æ©ç›–ä½å¯†é“ï¼\n", this_player());
 	delete("exits/down");
         sect = find_object(__DIR__"secret_room");
         if( !sect)

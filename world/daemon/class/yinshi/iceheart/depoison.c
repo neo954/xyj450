@@ -6,19 +6,19 @@ int exert(object me, object target, int amount)
 {
 	int force, lvl;
         if( target != me ) return 
-	notify_fail("你只能用真气将自己体内毒素逼出。\n");
+	notify_fail("浣犲彧鑳界敤鐪熸皵灏嗚嚜宸变綋鍐呮瘨绱犻�煎嚭銆俓n");
         force =(int) me->query("force") - (int) me->query("max_force");
-	if( force <=100) return notify_fail("你的真气不足。\n");
+	if( force <=100) return notify_fail("浣犵殑鐪熸皵涓嶈冻銆俓n");
 	lvl = me->query_skill("iceheart",1);
 	if (random(lvl) < 20)
 	{	        me->add("force", -100  );
-		        message_vision("$N运功抗毒，头上冒出豆大的汗．．．\n", me);
-			return notify_fail("你失败了。\n");
+		        message_vision("$N杩愬姛鎶楁瘨锛屽ご涓婂啋鍑鸿眴澶х殑姹楋紟锛庯紟\n", me);
+			return notify_fail("浣犲け璐ヤ簡銆俓n");
 	}
 	else
 	{
 	me->clear_condition();	
-		write("你成功了！\n");
+		write("浣犳垚鍔熶簡锛乗n");
         return 1;
 	}
 }

@@ -5,15 +5,15 @@
 inherit BLADE;
 void create()
 {
-	set_name("Àµß¸µ¶", ({ "blade" }) );
+	set_name("èµ–å’åˆ€", ({ "blade" }) );
 	set_weight(40000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "±ú");
+		set("unit", "æŸ„");
 		set("value", 500);
 		set("material", "stone");
-		set("long", "Ò»°Ñ¼«³ÁµÄÊ¯µ¶¡£\n");
+		set("long", "ä¸€æŠŠææ²‰çš„çŸ³åˆ€ã€‚\n");
 		set("weapon_prop/courage",3);
 	}
 	init_blade(5);

@@ -3,19 +3,19 @@ inherit ROOM;
 void cloth_path();
 void create()
 {
-        set("short", "Ğ¡Îİ");
+        set("short", "å°å±‹");
         set("long", @LONG
-Îİ×ÓÀïÎÂÅ¯Èç´º£¬×ÀÉÏµÄÆ¿×ÓÀï»¹²å×Å¼¸Ö§À°Ã·£¬º®·çÔÚ´°ÍâºôĞ¥£¬´°×ÓÈ´½ô½ô
-µÄ¹Ø×Å¡£µØÉÏÆÌ×Å²ãÄ¾°å£¬Ä¾°åÏÂ¾ÍÊÇ±ù¶³Èı³ßµÄËÉ»¨½­¡£
+å±‹å­é‡Œæ¸©æš–å¦‚æ˜¥ï¼Œæ¡Œä¸Šçš„ç“¶å­é‡Œè¿˜æ’ç€å‡ æ”¯è…Šæ¢…ï¼Œå¯’é£åœ¨çª—å¤–å‘¼å•¸ï¼Œçª—å­å´ç´§ç´§
+çš„å…³ç€ã€‚åœ°ä¸Šé“ºç€å±‚æœ¨æ¿ï¼Œæœ¨æ¿ä¸‹å°±æ˜¯å†°å†»ä¸‰å°ºçš„æ¾èŠ±æ±Ÿã€‚
 LONG
         );
         set("exits", ([ 
   "west" : __DIR__"yingou",
 ]));
         set("item_desc", ([
-                "floor": "Õâ²ãÄ¾°åËÆºõ¿ÉÒÔÀ­¿ª(pull)¡£\n",
-                "Ä¾°å": "Õâ²ãÄ¾°åËÆºõ¿ÉÒÔÀ­¿ª(pull)¡£\n",
-                "muban": "Õâ²ãÄ¾°åËÆºõ¿ÉÒÔÀ­¿ª(pull)¡£\n",
+                "floor": "è¿™å±‚æœ¨æ¿ä¼¼ä¹å¯ä»¥æ‹‰å¼€(pull)ã€‚\n",
+                "æœ¨æ¿": "è¿™å±‚æœ¨æ¿ä¼¼ä¹å¯ä»¥æ‹‰å¼€(pull)ã€‚\n",
+                "muban": "è¿™å±‚æœ¨æ¿ä¼¼ä¹å¯ä»¥æ‹‰å¼€(pull)ã€‚\n",
 
         ]) );
 
@@ -31,13 +31,13 @@ int do_open(string arg)
         object me;
         if(!arg || arg=="")
         {
-                write("ÄãÒª´ò¿ªÊ²Ã´£¿\n");
+                write("ä½ è¦æ‰“å¼€ä»€ä¹ˆï¼Ÿ\n");
                 return 1;
         }
-        if( arg == "floor" || arg == "muban" || arg == "Ä¾°å")
+        if( arg == "floor" || arg == "muban" || arg == "æœ¨æ¿")
         {
         me = this_player();
-        message_vision("$NÀ­ÆğµØÉÏµÄÄ¾°å£¬·¢ÏÖÏÂÃæÊÇ¿ÕµÄ¡£\n", me);
+        message_vision("$Næ‹‰èµ·åœ°ä¸Šçš„æœ¨æ¿ï¼Œå‘ç°ä¸‹é¢æ˜¯ç©ºçš„ã€‚\n", me);
         if( !query("exits/down") ) {
         set("exits/down", __DIR__"secret");
         call_out("close_path", 1);
@@ -46,7 +46,7 @@ int do_open(string arg)
         }
         else
         {
-                write("Äã²»¿ÉÒÔ´ò¿ª"+arg+"\n");
+                write("ä½ ä¸å¯ä»¥æ‰“å¼€"+arg+"\n");
                 return 1;
         }
 }
@@ -54,7 +54,7 @@ void close_path()
 {
         if( !query("exits/down") ) return;
         message("vision",
-"Ä¾°åÓÖµ¯ÁË»ØÀ´£¬ÕÚ×¡ÁË¼Ğ¼ä¡£\n",
+"æœ¨æ¿åˆå¼¹äº†å›æ¥ï¼Œé®ä½äº†å¤¹é—´ã€‚\n",
                 this_object() );
                 delete("exits/down");
 }

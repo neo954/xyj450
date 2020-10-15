@@ -5,10 +5,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "��ɽ����");
+        set("short", "天山顶峰");
         set("long", @LONG
-��������ɽ���塣����������Χ��ȥ�����׶���ԭ�ķ�⾡���۵ס�����
-һ��С·������ɽ��
+这里是天山顶峰。从这里向周围望去，帕米尔高原的风光尽收眼底。东面
+一条小路可以下山。
 LONG
         );
         set("exits", ([

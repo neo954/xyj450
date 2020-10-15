@@ -1,19 +1,19 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 inherit NPC;
 void create()
 {
-        set_name("Ô¬Ììî¸", ({"yuan tiangang", "yuan"}));
-        set("gender", "ÄĞĞÔ" );
+        set_name("è¢å¤©ç½¡", ({"yuan tiangang", "yuan"}));
+        set("gender", "ç”·æ€§" );
         set("age", 33);
-        set("long","Ô¬Ììî¸ÊÇÌì¼àÌ¨×Ü¹Ü£¬ÌıËµËû·¨Êõ¸ßÉî¡£
-ËûÎªÈËÕıÖ±ÕÌÒå£¬Á³ÉÏ×ÜÊÇÒ»¹ÉÓÇ¹úÓÇÃñµÄÉñÇé¡£\n");
+        set("long","è¢å¤©ç½¡æ˜¯å¤©ç›‘å°æ€»ç®¡ï¼Œå¬è¯´ä»–æ³•æœ¯é«˜æ·±ã€‚
+ä»–ä¸ºäººæ­£ç›´ä»—ä¹‰ï¼Œè„¸ä¸Šæ€»æ˜¯ä¸€è‚¡å¿§å›½å¿§æ°‘çš„ç¥æƒ…ã€‚\n");
         set("int", 30);
    set("per", 25);
         set("combat_exp", 50000);
         set("attitude", "friendly");
-   set("title", "Ìì¼àÌ¨ÕıÏÈÉú");
+   set("title", "å¤©ç›‘å°æ­£å…ˆç”Ÿ");
         set_skill("unarmed", 60);
         set_skill("dodge", 50);
         set_skill("parry", 50);
@@ -44,28 +44,28 @@ void create()
 }
 int accept_fight(object me)
 {
-        write("Ô¬Ììî¸ÁİÈ»µÀ£ºÑ§ÎäÄËÊÇÎªÁËÇ¿Éí£¬²»ÊÇ´ò´òÉ±É±£¡\n");
+        write("è¢å¤©ç½¡å‡›ç„¶é“ï¼šå­¦æ­¦ä¹ƒæ˜¯ä¸ºäº†å¼ºèº«ï¼Œä¸æ˜¯æ‰“æ‰“æ€æ€ï¼\n");
         return 0;
 }
 int recognize_apprentice(object me)
 {
         if((int)me->query("yuan-learn"))
         return 1;
-        return notify_fail("Ô¬Ììî¸ËµµÀ£ºÄúÌ«¿ÍÆøÁË£¬ÕâÔõÃ´¸Òµ±£¿\n");
+        return notify_fail("è¢å¤©ç½¡è¯´é“ï¼šæ‚¨å¤ªå®¢æ°”äº†ï¼Œè¿™æ€ä¹ˆæ•¢å½“ï¼Ÿ\n");
 }
 
 int accept_object(object who,object ob)
 {
         if (ob->query("id")=="fan he"){
-     if (((string)who->query("family/family_name")=="½«¾ü¸®")){
+     if (((string)who->query("family/family_name")=="å°†å†›åºœ")){
         who->set("yuan-learn", 1);
-        write("Ô¬Ììî¸Ğ¦µÀ£º½«¾ü¿´ÆğÀ´Ò»±íÈË²Å£¬ÒÔºó¶¨ÊÇÈËÇ°³öÍ·Ö®±²£¡
-Ô¬Ììî¸ÂÔÎª³ÁË¼£¬ÓÖµÀ£ºÈô½«¾üÓĞºÎÎÊÌâ£¬¿ÉËæÊ±ºÍÎÒÉÌÌÖ£¬Ììî¸ÈôÊÇÖªÏş£¬¶¨»á´ğ¸´£®\n");
+        write("è¢å¤©ç½¡ç¬‘é“ï¼šå°†å†›çœ‹èµ·æ¥ä¸€è¡¨äººæ‰ï¼Œä»¥åå®šæ˜¯äººå‰å‡ºå¤´ä¹‹è¾ˆï¼
+è¢å¤©ç½¡ç•¥ä¸ºæ²‰æ€ï¼Œåˆé“ï¼šè‹¥å°†å†›æœ‰ä½•é—®é¢˜ï¼Œå¯éšæ—¶å’Œæˆ‘å•†è®¨ï¼Œå¤©ç½¡è‹¥æ˜¯çŸ¥æ™“ï¼Œå®šä¼šç­”å¤ï¼\n");
         call_out("destroy", 1, ob);
         return 1;
      }
-     if (((string)who->query("family/family_name")!="½«¾ü¸®")){
-        command("say ¶àĞ»¶àĞ»£¬ÎÒÕı¶ö×ÅÄÄ£¡");
+     if (((string)who->query("family/family_name")!="å°†å†›åºœ")){
+        command("say å¤šè°¢å¤šè°¢ï¼Œæˆ‘æ­£é¥¿ç€å“ªï¼");
         command("give 1 silver to " + who->query("id"));        
         call_out("destroy", 1, ob);
                         return 1;

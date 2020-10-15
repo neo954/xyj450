@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // battle_armor.c
@@ -9,12 +9,12 @@ inherit ARMOR;
 
 void create()
 {
-   set_name("¿É³ÌÊ½Õ½¶·×°¼×", ({ "battle armor <P>", "armor" }) );
+   set_name("å¯ç¨‹å¼æˆ˜æ–—è£…ç”²", ({ "battle armor <P>", "armor" }) );
    set_weight(50000);
    if( clonep() )
      set_default_object(__FILE__);
    else {
-     set("unit", "¼ş");
+     set("unit", "ä»¶");
      set("material", "gold");
      set("value", 9000);
      set("armor_prop/armor", 50);

@@ -1,4 +1,4 @@
-// �����硤���μǡ��汾��������
+// 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
  
 //standroom.c used by weiqi...others may hate this format:D
@@ -8,12 +8,12 @@ inherit ROOM;
 
 void create ()
 {
-   set ("short", "���䳡");
+   set ("short", "南武场");
    set ("long", @LONG
 
-���Ǳ���ǰ��һ��ƽ�أ�����ѩɽ��������֮�á����漫ƽ����
-�����ˡ��������������С�ĵ㣬ѩɽ����Ҳ���ǽ�˶�������
-���ȹ̹���
+这是冰宫前的一块平地，供大雪山弟子练功之用。冰面极平，光
+鉴照人。不过走在上面得小心点，雪山弟子也正是借此锻炼下盘
+的稳固功夫。
 LONG);
 
    //set("item_desc", ([" *** " : " *** \n", ]));

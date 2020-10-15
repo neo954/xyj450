@@ -5,11 +5,11 @@
 inherit ITEM;
 void create()
 {
-    set_name( "��ɽ", ({ "dioscoreae","radix dioscoreae"  }) );
-    set("unit", "��");
+    set_name( "淮山", ({ "dioscoreae","radix dioscoreae"  }) );
+    set("unit", "块");
     set("value",20);
     set("long","
-һ���ϺõĻ�ɽ
+一块上好的淮山
 \n");
     set_weight(5);
 }

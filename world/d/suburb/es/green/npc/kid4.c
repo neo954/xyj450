@@ -2,17 +2,17 @@ inherit NPC;
 void create()
 {
         seteuid(getuid());
-        set_name("Ğ¡º¢",({"kid","child"}));
-        set("gender", (:(random(50)>20)? "ÄĞĞÔ" : "Å®ĞÔ" :) );
+        set_name("å°å­©",({"kid","child"}));
+        set("gender", (:(random(50)>20)? "ç”·æ€§" : "å¥³æ€§" :) );
         set("age",(random(3)+6));
         set("combat_exp",(random(10)+10));
         set("attitude", "friendly" );
         set_temp("apply/dodge",(random(2)+4));
         set("chat_chance",10);
         set("chat_msg",({
-                "Ğ¡º¢ºÜºÃÆæµØÍùÃÅ·ìÀï¿´È¥¡£\n",
-                "Ğ¡º¢ËµµÀ£º´å³¤ËµÕâµÀÃÅ¾ø¶Ô²»¿ÉÒÔ´ò¿ªà¸!\n",
-                "Ğ¡º¢ËµµÀ£º²»ÖªµÀÀïÃæÊÇÊ²Ã´...\n",
+                "å°å­©å¾ˆå¥½å¥‡åœ°å¾€é—¨ç¼é‡Œçœ‹å»ã€‚\n",
+                "å°å­©è¯´é“ï¼šæ‘é•¿è¯´è¿™é“é—¨ç»å¯¹ä¸å¯ä»¥æ‰“å¼€å–”!\n",
+                "å°å­©è¯´é“ï¼šä¸çŸ¥é“é‡Œé¢æ˜¯ä»€ä¹ˆ...\n",
                 }) );
         setup();
         carry_object("/obj/cloth")->wear();

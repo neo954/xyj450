@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create()
 {
-    set("short", "¶þÂ¥×ßÀÈ");
+    set("short", "äºŒæ¥¼èµ°å»Š");
 	set("long", @LONG
-Äã×ßÔÚºóÌü¶þÂ¥µÄ×ßÀÈÉÏ£¬×¯ÄÚÏñÕâÑùµÄ×ßÀÈºÜ¶à£¬ÄãÈôÃ»ÓÐµØ
-Àí¸ÅÄîºÜÈÝÒ×ÃÔÂ·¡£³¤³¤µÄ×ßµÀÖÐ, ´¿½ðÖý³ÉµÄ³¤µÆ¼ÜÉÏ¹ÒÁËÒ»ÅÅÊÎ
-ÀöµÄ¹¬µÆ! ÈëÒ¹Ö®ºóµÆ»ð»Ô»Í! Ê®·ÖÃÀÀö!
+ä½ èµ°åœ¨åŽåŽ…äºŒæ¥¼çš„èµ°å»Šä¸Šï¼Œåº„å†…åƒè¿™æ ·çš„èµ°å»Šå¾ˆå¤šï¼Œä½ è‹¥æ²¡æœ‰åœ°
+ç†æ¦‚å¿µå¾ˆå®¹æ˜“è¿·è·¯ã€‚é•¿é•¿çš„èµ°é“ä¸­, çº¯é‡‘é“¸æˆçš„é•¿ç¯æž¶ä¸ŠæŒ‚äº†ä¸€æŽ’é¥°
+ä¸½çš„å®«ç¯! å…¥å¤œä¹‹åŽç¯ç«è¾‰ç…Œ! ååˆ†ç¾Žä¸½!
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -18,7 +18,7 @@ LONG
 
 ]));
 
-    create_door("south","Ä¾ÃÅ","north", DOOR_CLOSED);
+    create_door("south","æœ¨é—¨","north", DOOR_CLOSED);
 	setup();
 	replace_program(ROOM);
 }

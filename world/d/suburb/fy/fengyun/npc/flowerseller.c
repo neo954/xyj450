@@ -5,12 +5,12 @@ inherit F_VENDOR;
 #include <ansi.h>
 void create()
 {
-	set_name("»¨Âú³Ç", ({ "huaman" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("èŠ±æ»¡åŸ", ({ "huaman" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 41);
-	set("title", BLU "ÔÂÀÏ" NOR);
+	set("title", BLU "æœˆè€" NOR);
 	set("long",
-		"ÕâÎ»ÀÏ°åÕı¶ÔÄãÂ¶³ö´ÈÏéµÄĞ¦Èİ¡£\n");
+		"è¿™ä½è€æ¿æ­£å¯¹ä½ éœ²å‡ºæ…ˆç¥¥çš„ç¬‘å®¹ã€‚\n");
 	set("combat_exp", 500000);
 	set("attitude", "friendly");
 	set("per",30);
@@ -45,11 +45,11 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 	switch( random(5) ) {
 		case 0:
-message_vision("$NĞ¦×ÅËµµÀ£º¸÷ÖÖĞÂÏÊ»¨¶ä£¬ÂòĞ©»ØÈ¥¸øÄãµÄĞÄÉÏÈË°É¡£\n",this_object(),ob);
+message_vision("$Nç¬‘ç€è¯´é“ï¼šå„ç§æ–°é²œèŠ±æœµï¼Œä¹°äº›å›å»ç»™ä½ çš„å¿ƒä¸Šäººå§ã€‚\n",this_object(),ob);
 			break;
 		case 1:
-message_vision("$NĞ¦ßäßäµØËµµÀ£ºÕâÎ»"+RANK_D->query_respect(ob)+
-"ÒªÂòÊ²Ã´»¨¶ù£¿\n",this_object(),ob);
+message_vision("$Nç¬‘å’ªå’ªåœ°è¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(ob)+
+"è¦ä¹°ä»€ä¹ˆèŠ±å„¿ï¼Ÿ\n",this_object(),ob);
 			break;
 	}
 }

@@ -5,13 +5,13 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "²ÝÌÃ");
+	set("short", "è‰å ‚");
 	set("long", @LONG
-Ò»¼äÓÉ°×Ã©²Ý´î³ÉµÄ²ÝÌÃ£¬ÊÒÄÚ½öÓÐÒ»Öñé½£¬Ò»°«¼¸£¬ËÄ°ÑÖñÒÎ£®ÌÃÇ°Ò»·ùÍØÆ¬×°ñÑ¾«
-ÖÂ£¬ÉÏÊé:
-                              ÊéÓÐÎ´Ôø¾­ÎÒ¶Á
-                              ÊÂÎÞ²»¿É¶ÔÈËÑÔ
-°«¼¸ÉÏÌ¯ÓÐÊé¾í(books)·Å×ÅÒ»Ö§ÖìÉ°±Ê£¬Ò»·¿ì¨Ñâ¾¹ÌâÓÐÔÀÎäÄÂ²Ø£¬Áí¼¸ÕÅÉÏºÃÉúÐû£® 
+ä¸€é—´ç”±ç™½èŒ…è‰æ­æˆçš„è‰å ‚ï¼Œå®¤å†…ä»…æœ‰ä¸€ç«¹æ¦»ï¼Œä¸€çŸ®å‡ ï¼Œå››æŠŠç«¹æ¤…ï¼Žå ‚å‰ä¸€å¹…æ‹“ç‰‡è£…è£±ç²¾
+è‡´ï¼Œä¸Šä¹¦:
+                              ä¹¦æœ‰æœªæ›¾ç»æˆ‘è¯»
+                              äº‹æ— ä¸å¯å¯¹äººè¨€
+çŸ®å‡ ä¸Šæ‘Šæœ‰ä¹¦å·(books)æ”¾ç€ä¸€æ”¯æœ±ç ‚ç¬”ï¼Œä¸€æˆ¿æ­™ç šç«Ÿé¢˜æœ‰å²³æ­¦ç©†è—ï¼Œå¦å‡ å¼ ä¸Šå¥½ç”Ÿå®£ï¼Ž 
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
@@ -22,12 +22,12 @@ LONG
         set("no_magic", "1");
         set("item_desc", ([
                 "books" : @TEXT
-¼¸ÉÏµÄÊéÐÅÊÖ¶ø·Å£¬×°Ö¡¹ÅÆÓ£¬¾¹ÊÇËÎ°æÊé£¬»¹ÓÐ¼¸¾íºº±®Ô­ÍØ¡£Äã°´Þà²»×¡ºÃÆæÐÄÏëÄÃ
-ÆðÀ´(scratch)×ÐÏ¸ÑÐ¾¿Ò»·¬¡£
+å‡ ä¸Šçš„ä¹¦ä¿¡æ‰‹è€Œæ”¾ï¼Œè£…å¸§å¤æœ´ï¼Œç«Ÿæ˜¯å®‹ç‰ˆä¹¦ï¼Œè¿˜æœ‰å‡ å·æ±‰ç¢‘åŽŸæ‹“ã€‚ä½ æŒ‰æºä¸ä½å¥½å¥‡å¿ƒæƒ³æ‹¿
+èµ·æ¥(scratch)ä»”ç»†ç ”ç©¶ä¸€ç•ªã€‚
 TEXT
 ]));     
 
-        create_door("west", "²ñÃÅ", "west" , DOOR_CLOSED);    
+        create_door("west", "æŸ´é—¨", "west" , DOOR_CLOSED);    
 	set("no_clean_up", 0);
 
 	setup();
@@ -42,14 +42,14 @@ void init()
 
 int do_dance(string arg)
 {
-     message_vision("Ò²²»ÖªµÀÒþÊ¿ÔõÃ´ÅªµÄ£¬$NÎÞ·¨Ìø³ö×¨×¢µÄÎè²½¡£\n",
+     message_vision("ä¹Ÿä¸çŸ¥é“éšå£«æ€Žä¹ˆå¼„çš„ï¼Œ$Næ— æ³•è·³å‡ºä¸“æ³¨çš„èˆžæ­¥ã€‚\n",
                 this_player());   
       return 1;
 }               
 
 int do_pray(string arg)
 {
-     message_vision("Ò²²»ÖªµÀÒþÊ¿ÔõÃ´ÅªµÄ£¬$NµÄÂêè§ÊÖïí²»ÁéÑéÁË¡£\n",
+     message_vision("ä¹Ÿä¸çŸ¥é“éšå£«æ€Žä¹ˆå¼„çš„ï¼Œ$Nçš„çŽ›ç‘™æ‰‹é•¯ä¸çµéªŒäº†ã€‚\n",
                 this_player());       
     return 1;
 }               
@@ -65,21 +65,21 @@ int do_scratch(string arg)
   if( !arg || arg!="books" ) 
   return 0;
   else { ddt = ddt + 1; 
-  message_vision("$N³ËÈË²»±¸£¬×¥ÆðÒ»±¾Êé²ØÈë»³ÖÐ¡£\n\n",
+  message_vision("$Nä¹˜äººä¸å¤‡ï¼ŒæŠ“èµ·ä¸€æœ¬ä¹¦è—å…¥æ€€ä¸­ã€‚\n\n",
                 this_player()); 
 
   switch( random(3) ) {
                 case 0: book = new("/d/suburb/es/choyin/npc/obj/book1");
                         book ->move(ob);
-                        ob->set_temp("choyin/Êé", ddt); 
+                        ob->set_temp("choyin/ä¹¦", ddt); 
                         break;
                 case 1: book = new("/d/suburb/es/choyin/npc/obj/book1");
                         book ->move(ob);
-                        ob->set_temp("choyin/Êé", ddt); 
+                        ob->set_temp("choyin/ä¹¦", ddt); 
                         break;
                 case 2: book =new("/d/suburb/es/choyin/npc/obj/book2");
                         book ->move(ob);
-                        ob->set_temp("choyin/Êé", ddt); 
+                        ob->set_temp("choyin/ä¹¦", ddt); 
                         break; 
                       }
 }
@@ -93,11 +93,11 @@ int valid_leave(object me, string dir)
 
         item = "book";
         if( !objectp(obj = present(item, me)) )  {
-                tell_object(me, "ÄãÀë¿ª²ÝÌÃ!\n" NOR );
+                tell_object(me, "ä½ ç¦»å¼€è‰å ‚!\n" NOR );
         }  else  {
             while(objectp(obj = present(item, me)) ) 
-              { if ( me->query_temp("choyin/Êé") ) {
-                tell_object(me, HIC "Äã½«Êé·Å»Øµ½°«¼¸¡£\n" NOR);
+              { if ( me->query_temp("choyin/ä¹¦") ) {
+                tell_object(me, HIC "ä½ å°†ä¹¦æ”¾å›žåˆ°çŸ®å‡ ã€‚\n" NOR);
                 obj = present(item, me); 
                 destruct(obj);
                                                          }

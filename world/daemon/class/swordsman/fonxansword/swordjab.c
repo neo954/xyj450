@@ -14,17 +14,17 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("¡¸Öğ¡¹×Ö¾÷Ö»ÄÜ¶ÔÕ½¶·ÖĞµÄ¶ÔÊÖÊ¹ÓÃ¡£\n");
+		return notify_fail("ã€Œé€ã€å­—è¯€åªèƒ½å¯¹æˆ˜æ–—ä¸­çš„å¯¹æ‰‹ä½¿ç”¨ã€‚\n");
 
-	msg = CYN "$NÊ¹³ö·âÉ½½£·¨¡¸Öğ¡¹×Ö¾÷£¬½£·¨Ò»½ô£¬½£¹âÕÖÏò$n£¬";
+	msg = CYN "$Nä½¿å‡ºå°å±±å‰‘æ³•ã€Œé€ã€å­—è¯€ï¼Œå‰‘æ³•ä¸€ç´§ï¼Œå‰‘å…‰ç½©å‘$nï¼Œ";
 
 	if( random(me->query("combat_exp")) > (int)target->query("combat_exp")*2/3 ) {
-		msg += "$pÒÑÏÔ³ÔÁ¦¡£\n" NOR;
+		msg += "$på·²æ˜¾åƒåŠ›ã€‚\n" NOR;
 		for (i=0; i<random (3)+1; i++)
 			COMBAT_D->do_attack(me, target, me->query("weapon"));
 		} 
 	    else {
-		msg += "$p´ÓÈİ»¯½â\n" NOR;
+		msg += "$pä»å®¹åŒ–è§£\n" NOR;
 		}
 	message_vision(msg, me, target);
 

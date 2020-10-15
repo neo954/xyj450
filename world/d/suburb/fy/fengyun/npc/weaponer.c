@@ -4,12 +4,12 @@ inherit F_VENDOR;
 #include <ansi.h>
 void create()
 {
-	set_name("Öî¸ğÀ×", ({ "zhuge" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("è¯¸è‘›é›·", ({ "zhuge" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 31);
-	set("title", HIG "¼±·ç½£" NOR);
+	set("title", HIG "æ€¥é£å‰‘" NOR);
 	set("long",
-		"½ğÊ¨ïÚ¾ÖµÄ´óïÚÍ·£¬ÊÖµ×ÏÂ»¹¿ÉÒÔ£®\n");
+		"é‡‘ç‹®é•–å±€çš„å¤§é•–å¤´ï¼Œæ‰‹åº•ä¸‹è¿˜å¯ä»¥ï¼\n");
 	set("combat_exp", 500000);
 	set("attitude", "friendly");
 	set("per",30);

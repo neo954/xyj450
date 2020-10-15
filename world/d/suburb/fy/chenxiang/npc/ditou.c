@@ -4,20 +4,20 @@
 inherit NPC;
 void create()
 {
-	set_name("³ÁÏãÕòµÄµØÍ·Éß", ({ "gangster" }) );
-	set("gender", "ÄĞĞÔ" );
+	set_name("æ²‰é¦™é•‡çš„åœ°å¤´è›‡", ({ "gangster" }) );
+	set("gender", "ç”·æ€§" );
 	set("age", 27);
-	set("long", "Õâ¸öÈËÊÇ×¨ÃÅÔÚ³ÁÏãÕò²»ÎñÕıÒµ£¬×øµØ·ÖÔßµÄ¡£\n");
+	set("long", "è¿™ä¸ªäººæ˜¯ä¸“é—¨åœ¨æ²‰é¦™é•‡ä¸åŠ¡æ­£ä¸šï¼Œååœ°åˆ†èµƒçš„ã€‚\n");
 	set("combat_exp", 1000);
 	set("str", 27);
 	set("force", 30);
-	set("leave_msg", "ÁïßÕ¿ªÁË");
+	set("leave_msg", "æºœå“’å¼€äº†");
 	set("max_force", 30);
 	set("force_factor", 1);
 	setup();
 	set("chat_chance", 10);
 	set("chat_msg", ({
-		"³ÁÏãÕòµÄµØÍ·ÉßºÈµÀ£ºÀÏ×Ó¾ÍÊÇ¿´Äã²»Ë³ÑÛ£¬ÄãÔõÃ´×Å£¿\n",
+		"æ²‰é¦™é•‡çš„åœ°å¤´è›‡å–é“ï¼šè€å­å°±æ˜¯çœ‹ä½ ä¸é¡ºçœ¼ï¼Œä½ æ€ä¹ˆç€ï¼Ÿ\n",
 		(: random_move :)
 	}) );
 	carry_object("/obj/cloth")->wear();

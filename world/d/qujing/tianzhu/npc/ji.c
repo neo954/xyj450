@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // by snowcat 12/8/1997
@@ -9,9 +9,9 @@ inherit F_VENDOR_SALE;
 void create()
 {
   reload("tianzhu_ji_meier");
-  set_name("¼¾Ã·¶ù", ({"ji meier", "ji", "meier"}));
+  set_name("å­£æ¢…å„¿", ({"ji meier", "ji", "meier"}));
   set("shop_id", ({"jimeier", "ji", "meier"}));
-  set("gender", "Å®ĞÔ");
+  set("gender", "å¥³æ€§");
   set("combat_exp", 2000);
   set("age", 20);
   set("per", 30);

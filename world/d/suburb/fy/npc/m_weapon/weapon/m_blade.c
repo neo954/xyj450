@@ -25,34 +25,34 @@ void create()
 	string w_name,w_id,w_or;
 	int w_lv;
 	me = this_player();
-//¶ÁÈëÊý¾Ý
+//è¯»å…¥æ•°æ®
 	w_name=me->query("weapon/name");
 	w_id = me->query("weapon/id");
 	w_or = me->query("weapon/or");
 	w_lv = me->query("weapon/lv");
 	set_name(w_name, ({w_id}));
-	set("unit", "±ú");   
+	set("unit", "æŸ„");   
 	set("no_get",1);
 	set("no_drop",1);
 	set_desc(w_lv,w_or,w_name);
 	switch(w_or)
 		{
-		case "Ç§ÄêÉñÄ¾" :
+		case "åƒå¹´ç¥žæœ¨" :
 			set_weight(500);
 			set("material", "iron");
 			break;
-		case "º£µ×½ðÄ¸" :
+		case "æµ·åº•é‡‘æ¯" :
 			set_weight(1000);
 			set("material", "steel");
 			break;
-		case "º®Ë¿ÓðÖñ" :
+		case "å¯’ä¸ç¾½ç«¹" :
 			set_weight(30);
 			set("material", "bamboo");
 			break;
 		default :
 		} 
-	set("wield_msg", "$NÍù»³ÖÐÒ»Ãþ£¬ÌÍ³öÁËÒ»°Ñ"+w_name+"\n");
-	set("unwield_msg", "$NÊÖÖÐ"+w_name+"Ò»¶¶£¬Õ£ÑÛ¼äÒÑÈ»²»¼ûÓ°×Ù¡£\n");
+	set("wield_msg", "$Nå¾€æ€€ä¸­ä¸€æ‘¸ï¼ŒæŽå‡ºäº†ä¸€æŠŠ"+w_name+"\n");
+	set("unwield_msg", "$Næ‰‹ä¸­"+w_name+"ä¸€æŠ–ï¼Œçœ¨çœ¼é—´å·²ç„¶ä¸è§å½±è¸ªã€‚\n");
 	init_blade(w_lv * 10);
 	setup();
 }	
@@ -67,24 +67,24 @@ int do_duanlian(object weapon)
 
 	me=this_player();
 	if( !weapon )
-		return notify_fail("ÄãÒª¶ÍÁ¶Ê²Ã´?\n");
+		return notify_fail("ä½ è¦é”»ç‚¼ä»€ä¹ˆ?\n");
 
 	if( (int)me->query("max_neili") < 10 )
-		return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬ÎÞ·¨¶ÍÁ¶µ¶Æø£¡\n");
+		return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼Œæ— æ³•é”»ç‚¼åˆ€æ°”ï¼\n");
 
 	if( (int)me->query("qi") < 150 )
-		return notify_fail("ÄãµÄÆø²»¹»£¬ÎÞ·¨¶ÍÁ¶µ¶Æø£¡\n");
+		return notify_fail("ä½ çš„æ°”ä¸å¤Ÿï¼Œæ— æ³•é”»ç‚¼åˆ€æ°”ï¼\n");
 
 	if( (int)me->query("eff_qi") < 30 )
-		return notify_fail("ÄãÏÖÔÚµÄÌåÁ¦Ì«Èõ£¬ÎÞ·¨¶ÍÁ¶µ¶Æø£¡\n");
+		return notify_fail("ä½ çŽ°åœ¨çš„ä½“åŠ›å¤ªå¼±ï¼Œæ— æ³•é”»ç‚¼åˆ€æ°”ï¼\n");
 
 	if( (int)me->query("eff_jing") < 10 )
-		return notify_fail("ÄãÏÖÔÚµÄ¾«Á¦ÎÞ·¨¼¯ÖÐ£¬²»ÄÜ¶ÍÁ¶µ¶Æø£¡\n");
+		return notify_fail("ä½ çŽ°åœ¨çš„ç²¾åŠ›æ— æ³•é›†ä¸­ï¼Œä¸èƒ½é”»ç‚¼åˆ€æ°”ï¼\n");
 
 	if( ((int)me->query("potential") - (int)me->query("learned_points"))< 2 )
-		return notify_fail("ÄãµÄÇ±ÄÜ²»¹»£¬ÎÞ·¨¶ÍÁ¶µ¶Æø£¡\n");
+		return notify_fail("ä½ çš„æ½œèƒ½ä¸å¤Ÿï¼Œæ— æ³•é”»ç‚¼åˆ€æ°”ï¼\n");
 
-	message_vision(HIR "$NÊÖÖ¸µ¶¼¹£¬Ò»¹ÉÄÚÁ¦Ë¿Ë¿µÄ´«ÁË½øÈ¥¡£\n" NOR, me);
+	message_vision(HIR "$Næ‰‹æŒ‡åˆ€è„Šï¼Œä¸€è‚¡å†…åŠ›ä¸ä¸çš„ä¼ äº†è¿›åŽ»ã€‚\n" NOR, me);
 
 	me->add("max_neili",-10);
 	me->set("neili", (int)me->query("max_neili"));
@@ -102,8 +102,8 @@ int do_duanlian(object weapon)
 	{
 		w_level++;
 		me->set("weapon/lv", w_level);
-		message_vision(CYN "µ¶ÉíºöµÄÒ»ÉÁ£¬Ò»µÀÒø¹âÒþÈë$NµÄµ¶ÖÐ£¬²»¼ûÁË£¡\n" NOR,me);
-		message_vision(HIG "$NµÄµ¶µÄµÈ¼¶Ìá¸ßÁË£¡\n" NOR, me);
+		message_vision(CYN "åˆ€èº«å¿½çš„ä¸€é—ªï¼Œä¸€é“é“¶å…‰éšå…¥$Nçš„åˆ€ä¸­ï¼Œä¸è§äº†ï¼\n" NOR,me);
+		message_vision(HIG "$Nçš„åˆ€çš„ç­‰çº§æé«˜äº†ï¼\n" NOR, me);
 		weapon=this_object();
 		if(weapon->query("equipped") ) 
 			weapon->unequip();
@@ -111,7 +111,7 @@ int do_duanlian(object weapon)
 		me->set("weapon/value",0);
 		return 1;
 	}
-	message_vision(RED "$NµÄµ¶ÆøÌáÉýÁË!\n" NOR, me);
+	message_vision(RED "$Nçš„åˆ€æ°”æå‡äº†!\n" NOR, me);
 	return 1;
 }
 
@@ -123,9 +123,9 @@ int do_hui(object weapon)
 	me=this_player();
 	w_name=me->query("weapon/name");
 	if( !weapon )
-		return notify_fail("ÄãÒª´Ý»ÙÊ²Ã´?\n");
-	message_vision(HIR "Äã´óºÈÒ»Éù£¬Ò»ÕÆÇæµ¶£¬Ò»ÕÆÃÍÁ¦»÷ÏÂ¡£½á¹ûºäÂ¡Ò»Éù¾ÞÏì"
-			+w_name+"¶ÏÎªÁ½½Ø!\n" NOR,me);
+		return notify_fail("ä½ è¦æ‘§æ¯ä»€ä¹ˆ?\n");
+	message_vision(HIR "ä½ å¤§å–ä¸€å£°ï¼Œä¸€æŽŒæ“Žåˆ€ï¼Œä¸€æŽŒçŒ›åŠ›å‡»ä¸‹ã€‚ç»“æžœè½°éš†ä¸€å£°å·¨å“"
+			+w_name+"æ–­ä¸ºä¸¤æˆª!\n" NOR,me);
 	me->set("weapon/make",0);
 	destruct( this_object() );
 	me->delete("weapon");

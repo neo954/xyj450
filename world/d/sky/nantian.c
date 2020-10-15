@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥žè¯ä¸–ç•ŒÂ·è¥¿æ¸¸è®°Â·ç‰ˆæœ¬ï¼”ï¼Žï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // Room: /d/sky/nantianmen
@@ -15,14 +15,14 @@ string look_gate();
 
 void create ()
 {
-  set ("short", "ÄÏÌìÃÅ");
+  set ("short", "å—å¤©é—¨");
   set ("long", @LONG
 
-ÕâÀï¾ÍÊÇÌì¹¬µÄÄÏÃÅ£¬Ö»¼û½ð¹âÍòµÀ£¬ÈðÆøÇ§Ìõ¡£ÄãÒ»Ê±¼ä¾õ
-µÃÓÐÐ©²»ÖªËù´ë£¬¶¨ÁË¶¨Éñ£¬²Å·¢ÏÖÃÅÊÇÁðÁ§Ôì¾Í£¬±¦Óñ×±³É¡£
-ÆøÅÉ·Ç·²¡£½øÁËÕâÒ»µÀÃÅ£¬¾ÍÊÇÌì¹¬ÁË¡£ÍùÃÅÄÚÍûÈ¥£¬Ö»¼ûÔÆ
-ÕÚÎíÈÆ£¬Ò»×ù×ù¹¬µîÒþÒþÔ¼Ô¼µØ¿´²»´óÇåÎú¡£Ôö³¤ÌìÍõÊÖ³Ö³¤
-Ç¹£¬Õý´ø×Å¼¸¸öÌì±øÌì½«ÔÚÕâÀïÑ²Âß¡£
+è¿™é‡Œå°±æ˜¯å¤©å®«çš„å—é—¨ï¼Œåªè§é‡‘å…‰ä¸‡é“ï¼Œç‘žæ°”åƒæ¡ã€‚ä½ ä¸€æ—¶é—´è§‰
+å¾—æœ‰äº›ä¸çŸ¥æ‰€æŽªï¼Œå®šäº†å®šç¥žï¼Œæ‰å‘çŽ°é—¨æ˜¯ç‰ç’ƒé€ å°±ï¼Œå®çŽ‰å¦†æˆã€‚
+æ°”æ´¾éžå‡¡ã€‚è¿›äº†è¿™ä¸€é“é—¨ï¼Œå°±æ˜¯å¤©å®«äº†ã€‚å¾€é—¨å†…æœ›åŽ»ï¼Œåªè§äº‘
+é®é›¾ç»•ï¼Œä¸€åº§åº§å®«æ®¿éšéšçº¦çº¦åœ°çœ‹ä¸å¤§æ¸…æ™°ã€‚å¢žé•¿å¤©çŽ‹æ‰‹æŒé•¿
+æžªï¼Œæ­£å¸¦ç€å‡ ä¸ªå¤©å…µå¤©å°†åœ¨è¿™é‡Œå·¡é€»ã€‚
 
 LONG);
 
@@ -42,7 +42,7 @@ LONG);
   "north" : __DIR__"nanmenting",
   "east" : __DIR__"se1",
 ]));
-create_door("north", "ÄÏÌìÃÅ", "south", DOOR_CLOSED);
+create_door("north", "å—å¤©é—¨", "south", DOOR_CLOSED);
 
   setup();
 }
@@ -58,11 +58,11 @@ int valid_leave(object me, string dir)
         if (objectp(present("zengzhang tianwang", environment(me)))) {
  
                 if (me->query("combat_exp")<100000) {
-return notify_fail(HIY"Ôö³¤ÌìÍõ¶ÔÄãËµµÀ£º" + RANK_D->query_respect(me) +"ËÆºõ»¹Î´ÈëÏÉµÀ£¬»ØÈ¥¶àÏÂµã¿à¹¦°É¡£\nÄãÂú»³Ê§ÍûµÄÀë¿ªÁË¡£\n"NOR);
+return notify_fail(HIY"å¢žé•¿å¤©çŽ‹å¯¹ä½ è¯´é“ï¼š" + RANK_D->query_respect(me) +"ä¼¼ä¹Žè¿˜æœªå…¥ä»™é“ï¼Œå›žåŽ»å¤šä¸‹ç‚¹è‹¦åŠŸå§ã€‚\nä½ æ»¡æ€€å¤±æœ›çš„ç¦»å¼€äº†ã€‚\n"NOR);
 
                 }
                 else {
-return notify_fail(HIY"Ôö³¤ÌìÍõ¶ÔÄã¹°ÊÖ×÷ÁË¸öÒ¾£ºÕâÎ»" + RANK_D->query_respect(me) +"£¬ÊµÔÚ¶Ô²»Æð¡£ÌìÍ¥ÕýÔÚ×¼±¸ó´ÌÒ´ó»á£¬ÔÝ²»½Ó´ýÍâ¿Í¡£\n¿´À´µÃÏÂ´ÎÁË¡£\n"NOR);
+return notify_fail(HIY"å¢žé•¿å¤©çŽ‹å¯¹ä½ æ‹±æ‰‹ä½œäº†ä¸ªæ–ï¼šè¿™ä½" + RANK_D->query_respect(me) +"ï¼Œå®žåœ¨å¯¹ä¸èµ·ã€‚å¤©åº­æ­£åœ¨å‡†å¤‡èŸ æ¡ƒå¤§ä¼šï¼Œæš‚ä¸æŽ¥å¾…å¤–å®¢ã€‚\nçœ‹æ¥å¾—ä¸‹æ¬¡äº†ã€‚\n"NOR);
                 }
         }
 return ::valid_leave(me,dir);

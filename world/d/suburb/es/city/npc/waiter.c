@@ -5,20 +5,20 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("µêĞ¡¶ş", ({ "waiter" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("åº—å°äºŒ", ({ "waiter" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 22);
         set("long",
-"ÕâÎ»µêĞ¡¶şÕıĞ¦ßäßäµØÃ¦Öø£¬»¹²»Ê±ÄÃÆğ¹ÒÔÚ²±×ÓÉÏµÄÄ¨²¼²ÁÁ³¡£\n"
+"è¿™ä½åº—å°äºŒæ­£ç¬‘å’ªå’ªåœ°å¿™è‘—ï¼Œè¿˜ä¸æ—¶æ‹¿èµ·æŒ‚åœ¨è„–å­ä¸Šçš„æŠ¹å¸ƒæ“¦è„¸ã€‚\n"
 	);
 
         set("combat_exp", 5);
         set("attitude", "friendly");
-        set("rank_info/respect", "Ğ¡¶ş¸ç");
+        set("rank_info/respect", "å°äºŒå“¥");
         set("vendor_goods", ([
-                "Ñ©»¨¸â":	__DIR__"obj/cake",
-                "Î÷ºş´×Óã":	__DIR__"obj/fish",
-                "×´Ôªºì":	__DIR__"obj/wine",
+                "é›ªèŠ±ç³•":	__DIR__"obj/cake",
+                "è¥¿æ¹–é†‹é±¼":	__DIR__"obj/fish",
+                "çŠ¶å…ƒçº¢":	__DIR__"obj/wine",
         ]) );
         setup();
 }
@@ -38,13 +38,13 @@ int go_up (string arg)
         if ( !me || environment(me) != environment() ) return 0;
 
         if( arg == "up" ) {
-		if (!(me->query("rank")) && !(me->query("marks/¾ÆÂ¥"))) { 
-			message_vision("µêĞ¡¶ş¶Ô$NÒ»°×ÑÛ:ÄãÊÇË­Ñ½£¬´³Ê²Ã´´³£¡\n",me);
-			write("ÉÏÂ¥µÄÂ·±»µêĞ¡¶şµ²×¡ÁË ¡£\n");
+		if (!(me->query("rank")) && !(me->query("marks/é…’æ¥¼"))) { 
+			message_vision("åº—å°äºŒå¯¹$Nä¸€ç™½çœ¼:ä½ æ˜¯è°å‘€ï¼Œé—¯ä»€ä¹ˆé—¯ï¼\n",me);
+			write("ä¸Šæ¥¼çš„è·¯è¢«åº—å°äºŒæŒ¡ä½äº† ã€‚\n");
 			return 1;
 			}
 		    else {
-			message_vision ("µêĞ¡¶ş¸ßÉùº°µÀ:$NÂ¥ÉÏÇë\n", me);
+			message_vision ("åº—å°äºŒé«˜å£°å–Šé“:$Næ¥¼ä¸Šè¯·\n", me);
 			me->move("/d/suburb/es/city/jiulou_2");
 			return 1;
 			}
@@ -56,20 +56,20 @@ int go_up (string arg)
 int accept_object(object who, object ob)
 {
         if ( ob->value() < 1000 ) {
-                command("say ÕâµãÇ®£¬»¹²»¹»Âò¾ÆºÈ¡£");
+                command("say è¿™ç‚¹é’±ï¼Œè¿˜ä¸å¤Ÿä¹°é…’å–ã€‚");
                 command("drop all");
                 return 1;
 	        }
 
-        if ( !who->query("marks/¾ÆÂ¥") )  {
+        if ( !who->query("marks/é…’æ¥¼") )  {
                 if( ob->value() >= 1000 ) {
-                        command("say Ğ»Ğ»ÕâÎ»¿Í¹ÙÁË¡£");   
-                        who->set("marks/¾ÆÂ¥",1);
+                        command("say è°¢è°¢è¿™ä½å®¢å®˜äº†ã€‚");   
+                        who->set("marks/é…’æ¥¼",1);
                         return 1;
                 	}
                 }
             else
-                command("say ÕæÊÇĞ»Ğ»ÄãÁË¡£\n");
+                command("say çœŸæ˜¯è°¢è°¢ä½ äº†ã€‚\n");
 
         return 1;
 }

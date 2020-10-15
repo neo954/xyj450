@@ -4,15 +4,15 @@ inherit ITEM;
 
 void create()
 {
-        set_name("Ã©É½µÀÊõÈëÃÅ", ({ "necrobook" }));
+        set_name("èŒ…å±±é“æœ¯å…¥é—¨", ({ "necrobook" }));
         set_weight(300);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "±¾");
+                set("unit", "æœ¬");
                 set("long",
                         
-"ÕâÊÇÒ»±¾Ã©É½µÀÊõµÄÈëÃÅ£¬Í¨¹ıÕâ±¾Êé£¬Äã¿ÉÒÔ³õ²½ÁìÂÔµ½Ã©É½ÊõµÄ°ÂÃî\n"
+"è¿™æ˜¯ä¸€æœ¬èŒ…å±±é“æœ¯çš„å…¥é—¨ï¼Œé€šè¿‡è¿™æœ¬ä¹¦ï¼Œä½ å¯ä»¥åˆæ­¥é¢†ç•¥åˆ°èŒ…å±±æœ¯çš„å¥¥å¦™\n"
                 );
                 set("value", 12260);
                 set("material", "paper");

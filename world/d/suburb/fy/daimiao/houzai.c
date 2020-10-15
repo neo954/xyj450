@@ -7,10 +7,10 @@
 inherit ROOM;
 void create()
 {
-  set("short","������");
+  set("short","厚载门");
   set("long",@LONG
-��������ĺ��ţ������Ǹ����ɵ���שΧǽ�������򱱱���̩ɽ
-�ˣ�������ۻ��ǱشӴ��ţ���˳�Ϊ�����ţ�Ϊ���ض������˼��
+这是岱庙的后门，两边是高两丈的青砖围墙，此门向北便是泰山
+了，东岳大帝回銮必从此门，因此称为厚载门，为满载而归的意思。
 LONG
   );
   set("exits",([

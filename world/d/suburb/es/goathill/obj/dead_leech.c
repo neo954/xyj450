@@ -5,13 +5,13 @@ inherit F_FOOD;
 
 void create()
 {
-	set_name("ËÀÑÒòÎ", ({ "dead leech", "leech" }) );
+	set_name("æ­»å²©è›­", ({ "dead leech", "leech" }) );
 	set_weight(700);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("long", "Ò»ÌõËÀµÃÓ²°ğ°ğµÄÑÒòÎ£¬Òª²»ÊÇ»ÒÆËÆËµÄÑÕÉ«£¬¿´ÆğÀ´µ¹ÊÇÓĞĞ©ÏñÊÇÀ°³¦¡£\n");
-		set("unit", "Ö»");
+		set("long", "ä¸€æ¡æ­»å¾—ç¡¬æ¢†æ¢†çš„å²©è›­ï¼Œè¦ä¸æ˜¯ç°æ‰‘æ‰‘çš„é¢œè‰²ï¼Œçœ‹èµ·æ¥å€’æ˜¯æœ‰äº›åƒæ˜¯è…Šè‚ ã€‚\n");
+		set("unit", "åª");
 		set("value", 0);
 		set("food_remaining", 3);
 		set("eat_func", (: eat_tonic :) );
@@ -23,6 +23,6 @@ void create()
 
 static void decay()
 {
-	say("ËÀÑÒòÎ·¢³öÒ»¹ÉÄÑÎÅµÄ¶ñ³ô£¬ÀÃµôÁË ... \n");
+	say("æ­»å²©è›­å‘å‡ºä¸€è‚¡éš¾é—»çš„æ¶è‡­ï¼Œçƒ‚æ‰äº† ... \n");
 	destruct(this_object());
 }

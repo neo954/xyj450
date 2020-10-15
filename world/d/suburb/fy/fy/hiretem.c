@@ -1,19 +1,19 @@
 inherit ROOM;
 void create()
 {
-        set("short", "³ÇÚòÃí");
+        set("short", "åŸéšåº™");
         set("long", @LONG
-Òõ°µ³±Êª£¬ÆÆ¾É²»¿°£¬Ã¿µ±¿ñ·ç´µ¹ı£¬Õû×ùÃí¶¼ÔÚÒ¡»Î£¬ËÆºõÂíÉÏ¾Í»áµ¹ËúÏÂÀ´¡£
-Ò»Ö§²ĞÖòÔÚ·çÖĞÒ¡Ò·£¬ºöÃ÷ºö°µ£¬¹íÆøÉ­É­¡£Õû¸öÃíÀï²¼Âú»Ò³¾£¬Ö»ÓĞ½ÇÂäÀïµÄÒ»¸ö
-°µºìÉ«µÄÉñíè£¨£ë£á£î£©Ò»³¾²»È¾¡£
+é˜´æš—æ½®æ¹¿ï¼Œç ´æ—§ä¸å ªï¼Œæ¯å½“ç‹‚é£å¹è¿‡ï¼Œæ•´åº§åº™éƒ½åœ¨æ‘‡æ™ƒï¼Œä¼¼ä¹é©¬ä¸Šå°±ä¼šå€’å¡Œä¸‹æ¥ã€‚
+ä¸€æ”¯æ®‹çƒ›åœ¨é£ä¸­æ‘‡æ›³ï¼Œå¿½æ˜å¿½æš—ï¼Œé¬¼æ°”æ£®æ£®ã€‚æ•´ä¸ªåº™é‡Œå¸ƒæ»¡ç°å°˜ï¼Œåªæœ‰è§’è½é‡Œçš„ä¸€ä¸ª
+æš—çº¢è‰²çš„ç¥é¾›ï¼ˆï½‹ï½ï½ï¼‰ä¸€å°˜ä¸æŸ“ã€‚
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
   "west"  : __DIR__"nwind5", 
 ]));
         set("item_desc", ([
-                "kan": "Õâ¸öÉñíè¿ª¿ÚºÜÕ­£¬ÕıºÃ¿ÉÈÓÏÂÒ»ÕÅÖ½(throw)¡£\n",
-                "Éñíè" : "Õâ¸öÉñíè¿ª¿ÚºÜÕ­£¬ÕıºÃ¿ÉÈÓÏÂÒ»ÕÅÖ½(throw)¡£\n"
+                "kan": "è¿™ä¸ªç¥é¾›å¼€å£å¾ˆçª„ï¼Œæ­£å¥½å¯æ‰”ä¸‹ä¸€å¼ çº¸(throw)ã€‚\n",
+                "ç¥é¾›" : "è¿™ä¸ªç¥é¾›å¼€å£å¾ˆçª„ï¼Œæ­£å¥½å¯æ‰”ä¸‹ä¸€å¼ çº¸(throw)ã€‚\n"
         ]) );
 
         setup();
@@ -32,23 +32,23 @@ int do_throw(string arg)
 	string target;
 	int targetprice;
 	int i;
-	if (!arg) return notify_fail("ÄãÒª·ÅÊ²Ã´ÈëÉñíè£¿\n");
-	if( arg !="youzhi" && arg != "ÓÍÓÍµÄÖ½")
-		return notify_fail("Äã²»¿É°Ñ"+arg+"·ÅÈëÉñíè£®\n");
+	if (!arg) return notify_fail("ä½ è¦æ”¾ä»€ä¹ˆå…¥ç¥é¾›ï¼Ÿ\n");
+	if( arg !="youzhi" && arg != "æ²¹æ²¹çš„çº¸")
+		return notify_fail("ä½ ä¸å¯æŠŠ"+arg+"æ”¾å…¥ç¥é¾›ï¼\n");
 	me = this_player();
 	who = this_player();
 	inv = all_inventory(me);
                 for(i=0; i<sizeof(inv); i++)
                 {
-			if( (string)(inv[i]->query("name")) == "ÓÍÓÍµÄÖ½")
+			if( (string)(inv[i]->query("name")) == "æ²¹æ²¹çš„çº¸")
 				{
 					paper = inv[i];		
 					break;
 				}
 		}
-	if( !paper) return notify_fail("ÄãÃ»ÓĞÓÍÓÍµÄÖ½£®\n");
+	if( !paper) return notify_fail("ä½ æ²¡æœ‰æ²¹æ²¹çš„çº¸ï¼\n");
 	if( !stringp(paper->query("targetid")))
-	return notify_fail("ÄãµÄÖ½ÉÏÃ»Ğ´×Ö(print)£®\n");
+	return notify_fail("ä½ çš„çº¸ä¸Šæ²¡å†™å­—(print)ï¼\n");
 	who->start_busy(2);
 	target = (string)paper->query("targetid");
 	killer = new(__DIR__"npc/killer");
@@ -63,8 +63,8 @@ int do_throw(string arg)
 	killer->set_temp("apply/move", targetprice);
 	killer->set_temp("apply/dodge", targetprice);
 	killer->set_temp("apply/damage", targetprice / 2 );
-	message_vision("$NÒõĞ¦Ò»Éù£¬ÃæÄ¿Òõ³ÂµÄ°ÑÖ½·ÅÈëÉñíè£®\n",who);
-	log_file("KILL_LOG",sprintf("(%s)%s¹ÍÁËÉ±ÊÖÉ±%s\n",
+	message_vision("$Né˜´ç¬‘ä¸€å£°ï¼Œé¢ç›®é˜´é™ˆçš„æŠŠçº¸æ”¾å…¥ç¥é¾›ï¼\n",who);
+	log_file("KILL_LOG",sprintf("(%s)%sé›‡äº†æ€æ‰‹æ€%s\n",
 		ctime(time()),
 		who->query("id"),
 		killer->query("haunttar")));
@@ -75,9 +75,9 @@ int do_throw(string arg)
 void gothim(object who, object killer)
 {
 	if(who && killer) {
-       message_vision("Ò»ÕóÒõ·çÂÓ¹ı£¬$N²»½û´òÁË¸öÀäÕ½£®\n",who);
+       message_vision("ä¸€é˜µé˜´é£æ è¿‡ï¼Œ$Nä¸ç¦æ‰“äº†ä¸ªå†·æˆ˜ï¼\n",who);
         killer->move(environment(who));
-        message_vision("$NÏò$nµÍÉùµÀ£º´øÎÒÈ¥£®£®\n",killer,who);
+        message_vision("$Nå‘$nä½å£°é“ï¼šå¸¦æˆ‘å»ï¼ï¼\n",killer,who);
 	}
 	return;
 }

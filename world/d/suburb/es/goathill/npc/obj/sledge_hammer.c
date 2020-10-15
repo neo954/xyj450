@@ -6,15 +6,15 @@ inherit HAMMER;
 
 void create()
 {
-	set_name("´ó½ğé³", ({ "sledge hammer", "hammer" }) );
+	set_name("å¤§é‡‘æ§Œ", ({ "sledge hammer", "hammer" }) );
 	set_weight(40000);
 	if( clonep() )
 		set_default_object(__FILE__);
 	else {
-		set("unit", "°Ñ");
+		set("unit", "æŠŠ");
 		set("value", 1600);
 		set("material", "steel");
-		set("long", "Ò»°Ñ¼«ÆäÉòÖØµÄ´óé³£¬Òª»Ó¶¯ÕâÑùµÄÎäÆ÷·ÇµÃÓĞ¹ıÈËµÄëöÁ¦²»¿É¡£\n");
+		set("long", "ä¸€æŠŠæå…¶æ²ˆé‡çš„å¤§æ§Œï¼Œè¦æŒ¥åŠ¨è¿™æ ·çš„æ­¦å™¨éå¾—æœ‰è¿‡äººçš„è†‚åŠ›ä¸å¯ã€‚\n");
 		set("weapon_prop/attack", -4);
 		set("weapon_prop/defense", 5);
 	}

@@ -4,10 +4,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "����ʯ��");
+        set("short", "花岗石街");
         set("long", @LONG
-����ͨ���Ǳ���ʯ�֣�����ʯ��ȫ���þ޴�Ļ��������ɵġ�
-������ʯ·�����ѱ����Ǳ����˵ĸ��к����ơ�
+这是通往城堡的石街，整条石街全是用巨大的花岗岩砌成的。
+单这条石路就足已表明城堡主人的富有和气势。
 LONG
         );
         set("exits", ([ /* sizeof() == 2 */
