@@ -1,11 +1,14 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //
 // file: globals.h
 //
 // This file is #included in all objects automatically by the driver.
 // (See config file of driver)
+
+#ifndef GLOBALS_H
+#define GLOBALS_H
 
 // Directories
 
@@ -133,8 +136,10 @@
 
 // Profiling switches
 //
-// If you changed any of these defines, you'll need reboot to make it 
+// If you changed any of these defines, you'll need reboot to make it
 // in effect.
 
 #define PROFILE_COMMANDS
 #undef PROFILE_COMMANDS
+
+#endif

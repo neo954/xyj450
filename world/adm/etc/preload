@@ -4,7 +4,7 @@
 /adm/daemons/logind
 /adm/daemons/cmd_d
 /adm/daemons/chinesed
-/adm/daemons/convertd
+#/adm/daemons/convertd
 /adm/daemons/emoted
 /adm/daemons/aliasd
 /adm/daemons/fingerd
@@ -18,4 +18,3 @@
 /adm/daemons/combatd
 /adm/auxil/moneyd
 /adm/auxil/pigd
-
