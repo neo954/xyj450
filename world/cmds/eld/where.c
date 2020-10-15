@@ -55,7 +55,7 @@ int where_all()
 {
     string str;
     object *list;
-    int i, j, ppl_cnt;
+    int /*i,*/ j/*, ppl_cnt*/;
     object me, where;
         me = this_player();
         str = "■ " + MUD_NAME + "\n";
@@ -93,4 +93,3 @@ HELP
    );
    return 1;
 }
-

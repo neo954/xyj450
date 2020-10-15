@@ -10,8 +10,8 @@ int do_bian(object me);
 
 int main(object me, string arg)
 {
-      string id;
-      object who,obj;
+//    string id;
+      object who/*,obj*/;
       int mana,spells,dmana;
 
       seteuid(getuid());
@@ -133,6 +133,5 @@ HELP
    );
    return 1;
 }
-
 
 

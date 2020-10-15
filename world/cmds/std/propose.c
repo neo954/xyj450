@@ -8,8 +8,8 @@ inherit F_CLEAN_UP;
 int main(object me, string arg)
 {
         object who;
-   string *wives;
-   mapping wiv;
+// string *wives;
+// mapping wiv;
 
         if(me->query("age") < 16)
            return notify_fail("小孩子一边玩儿去。\n");
@@ -67,4 +67,3 @@ write(@HELP
 HELP);
     return 1;
 }
-

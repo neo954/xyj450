@@ -47,7 +47,7 @@ private int do_purge_players(int day)
 {
    int i, j, ppl_cnt, count;
    string *dir, *ppls, name;
-   mixed info;
+// mixed info;
 object who;
 
    if(day<31) return notify_fail("天数应该大于31。\n");

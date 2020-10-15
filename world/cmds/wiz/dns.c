@@ -11,7 +11,7 @@ int help(object me);
 
 int main(object me, string arg)
 {
-   string file;
+// string file;
 
    seteuid(geteuid(me));
    if(arg && arg="on") {

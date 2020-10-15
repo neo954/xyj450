@@ -10,7 +10,7 @@ int main(object me, string arg)
    mapping mud_list;
    mapping mud_svc;
    mixed *muds;
-   string output;
+// string output;
    int loop, size, nb, total=0;
 
    if( !find_object(DNS_MASTER) )
@@ -39,5 +39,4 @@ int main(object me, string arg)
    tell_object (me,chinese_number(total));
    return 1;
 }
-
 

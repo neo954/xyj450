@@ -26,7 +26,7 @@ string age_string(int time)
 string finger_all()
 {
    object *ob;
-   string msg, fip;
+   string msg/*, fip*/;
    int i;
 
    ob = users();
@@ -208,4 +208,3 @@ object acquire_login_ob(string id)
      return 0;
         }
 }
-

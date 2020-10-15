@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// by snowcat 
+
+// by snowcat
 
 inherit NPC;
 
-#include <quest_cl.h>
-#include <reporting.h>
+#include "quest_cl.h"
+#include "reporting.h"
 
 int test_player();
 
@@ -74,7 +74,7 @@ int test_player()
     "$N对$n说道：哦，对了，姑娘想帮人找一找什么",
     "$N对$n点头笑着说道：谢谢啦，姑娘想替人找",
     "$N微笑着对$n一点头说道：有人曾打听是否有",
-  });  
+  });
   string str;
   object me = this_object();
   object who = this_player();
@@ -178,7 +178,7 @@ int accept_object(object who, object ob)
   }
 
   if (ob->is_character()) return 0;
-  
+
   if (who->query("quest/pending/cloth/name") != ob->query("name"))
   {
     message_vision ("$N对$n说道：这位"+RANK_D->query_respect(who)+
@@ -237,7 +237,3 @@ void rewarding (object who, object ob)
   who->delete("quest/pending/cloth");
   call_out ("quest_done",1,who);
 }
-
-
-
-

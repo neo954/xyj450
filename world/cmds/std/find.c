@@ -41,7 +41,7 @@ void create()
 
 int main(object me, string target)
 {
-       object ob, env=environment(me);
+       object /*ob,*/ env=environment(me);
         int mana_cost;
 
 //        if (me->is_busy() || me->is_fighting() )
@@ -87,8 +87,8 @@ void fail(object me)
 
 void find_result(object me, object env, string target)
 {
-        object ob, where, bang;
-   string fail, msg, filename, filename1, answer;
+        object ob, where/*, bang*/;
+   string /*fail,*/ msg, filename, filename1, answer;
    int len;
 
         if(!me) return;

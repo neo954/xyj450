@@ -14,7 +14,7 @@ int main(object me, string arg)
 {
    string name, reason;
    string status;
-   int day;
+// int day;
 
    status = wizhood(me);
    if( me!=this_player(1)

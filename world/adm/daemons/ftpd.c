@@ -1796,7 +1796,7 @@ void in_close_callback( int fd ) {
 protected string get_path( int fd, string str )
 {
    string *dirlist, *dirlist1, temp;
-   int i, j, s;
+   int i/*, j*/, s;
 
    if ( !str || str == "" ) return socket_info[ fd ][ CWD ];
 

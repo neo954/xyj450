@@ -11,7 +11,7 @@ inherit F_CLEAN_UP;
 int main(object me, string arg)
 {
    object obj;
-   string *killer, callname, id, *host;
+   string /**killer,callname,*/ id, *host;
 
    if( !arg )
      return notify_fail("你想邀请谁？\n");

@@ -8,7 +8,7 @@ inherit F_CLEAN_UP;
 int main(object me, string arg)
 {
    string item, targ = "";
-   object ob, owner;
+   object /*ob,*/ owner;
    int i, price, afford;
    object* inv;
 

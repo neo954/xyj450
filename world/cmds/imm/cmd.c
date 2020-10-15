@@ -10,7 +10,7 @@ void create() { seteuid(getuid()); }
 
 int main(object me, string arg)
 {
-   string str;
+// string str;
    object *list;
    int i, j, threshold;
 

@@ -80,7 +80,7 @@ int main(object me, string arg)
 int do_give(object me, object obj, object who)
 {
    int   is_accept;
-   object   *inv;
+// object   *inv;
    mixed no_give;
     if(me->is_busy())
       return notify_fail("你正忙着呢．．．\n");

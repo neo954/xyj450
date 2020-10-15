@@ -8,7 +8,7 @@ inherit F_CLEAN_UP;
 int main(object me, string arg)
 {
    object link_ob;
-   string file;
+// string file;
    object* inv;
    int     i, cur_time;
 

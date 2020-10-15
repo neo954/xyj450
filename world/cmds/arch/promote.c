@@ -9,7 +9,7 @@ int main(object me, string arg)
 {
     object ob;
     string old_status, new_status;
-    int my_level, ob_level, level;
+//  int my_level,ob_level,level;
 
     if( me!=this_player(1) ) return 0;
 
@@ -50,4 +50,3 @@ HELP
   );
   return 1;
 }
-

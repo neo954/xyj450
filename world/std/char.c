@@ -156,7 +156,7 @@ int command_function (string arg)
 // present(), ... so must be fast.
 int visible(object ob)
 {
-   int lvl, invis;
+   int /*lvl,*/ invis;
 
 /*
    lvl = wiz_level(this_object());

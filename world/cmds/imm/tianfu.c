@@ -19,7 +19,7 @@ int main(object me, string arg)
 {
     mapping my;
     string line, player_id, flag;
-    int i;
+//  int i;
     object player;
  
     seteuid(getuid(me));

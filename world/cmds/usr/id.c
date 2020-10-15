@@ -7,9 +7,9 @@ inherit F_CLEAN_UP;
 
 int main(object me, string arg)
 {
-   int i, j;
-   object obj, *inv;
-   string *id;
+   int i/*, j*/;
+   object /*obj,*/ *inv;
+// string *id;
 
    if( !arg ) {
      inv = all_inventory(me);

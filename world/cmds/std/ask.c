@@ -20,7 +20,7 @@ int main(object me, string arg)
 {
    string dest, topic, msg;
    object ob;
-   mapping inquiry;
+// mapping inquiry;
 
    seteuid(getuid());
 

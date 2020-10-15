@@ -45,7 +45,7 @@ int wield()
 {
    object owner, old_weapon;
    mapping weapon_prop;
-   string *apply, type;
+   string *apply/*, type*/;
    int flag;
 
    // Only character object can wear armors.

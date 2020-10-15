@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 2/8/1997
 
-#include <ground.h>
+#include "ground.h"
 
 object my_room = 0;
 object this_room ()
@@ -33,7 +33,7 @@ void announce (string str)
 {
   string s = str;
   int i, j;
-  
+
   while ((i = strlen(s)) > 0)
   {
     j = strsrch (s, "\n");
@@ -41,7 +41,7 @@ void announce (string str)
     {
       announcing (s);
       return;
-    }  
+    }
     announcing (s[0..j]);
     s = s[j+1..i];
   }
@@ -63,7 +63,7 @@ varargs void inform (object who, string str, string msg)
       message_vision (msgs[random(sizeof(msgs))]+str,who);
   }
   else
-    tell_room (this_room(),"\n魏征点点头："+str);  
+    tell_room (this_room(),"\n魏征点点头："+str);
 }
 
 void broadcast_room (object room, string str)
@@ -106,7 +106,7 @@ void broadcast_room (object room, string str)
   s1 = replace_string(s1,"\n","\n"+prefix)+s2;
   if (room)
   {
-    tell_room (room, HIY + prefix+s1 + NOR);     
+    tell_room (room, HIY + prefix+s1 + NOR);
   }
 }
 
@@ -142,17 +142,17 @@ int do_report ()
 
   switch (step)
   {
-    case STEP_PREPARE: 
+    case STEP_PREPARE:
     {
       do_report1();
       break;
     }
-    case STEP_FIGHT: 
+    case STEP_FIGHT:
     {
       do_report2();
       break;
     }
-    case STEP_FINISH: 
+    case STEP_FINISH:
     {
       do_report3();
       break;

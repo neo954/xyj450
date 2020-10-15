@@ -107,9 +107,9 @@
  * and are manually generated, so don't change them)
  */
 /* #define VALID_WRITE      0              // rely on valid_write() */
-#define VALID_WRITE     1
-#define RESTRICTED_WRITE 1              // ditto, but limited to public dirs
-#define READ_ONLY        2              // no write access, at all
+// #define VALID_WRITE     1
+// #define RESTRICTED_WRITE 1              // ditto, but limited to public dirs
+// #define READ_ONLY        2              // no write access, at all
 /*#endif*/
 
 /* define as (ie set to) one of the flags above */

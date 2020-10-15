@@ -41,7 +41,7 @@
  */
 int check_access(string name)
 {
-  string file;
+//string file;
 
 #ifdef FTP_USERS
     if (!sizeof(FTP_USERS))

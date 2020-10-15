@@ -73,8 +73,8 @@ int main(object me, string arg)
 
 int do_put(object me, object obj, object dest)
 {
-   object*   inv;
-   int     amount;
+// object*   inv;
+// int     amount;
 /*
    if( userp(dest) )  {
        inv = all_inventory(dest);

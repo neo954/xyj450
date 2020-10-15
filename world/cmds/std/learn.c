@@ -17,7 +17,7 @@ void create() { seteuid(getuid()); }
 
 int main(object me, string arg)
 {
-   string skill, teacher, master;
+   string skill, teacher/*, master*/;
    object ob;
    int master_skill, my_skill, sen_cost;
    int time, upper, sen1;

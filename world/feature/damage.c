@@ -17,7 +17,7 @@ int is_ghost() { return ghost; }
 int self_purge()
 {
     object me=this_object();
-        object link_ob = me->query_temp("link_ob");
+//      object link_ob = me->query_temp("link_ob");
  
         if( !userp(me) ) return 0;
         if (
@@ -371,7 +371,7 @@ int max_water_capacity()
 
 int heal_up()
 {
-   int update_flag, i;
+   int update_flag/*, i*/;
    mapping my;
 
 //     if( this_object()->is_fighting() && !userp(this_object())

@@ -11,9 +11,9 @@ void create() { seteuid(getuid()); }
 int main(object me, string arg)
 {
     string targetname, fabaoname;
-    object obj, *inv, target, obj2,old_env, fabao;
-    int i, amount;
-    mixed no_get;
+    object /*obj,*inv,*/ target/*, obj2,old_env*/, fabao;
+//  int i,amount;
+//  mixed no_get;
 
     if( !wizardp(me) && environment(me)->query("no_magic") )
    return notify_fail("这里禁止祭法宝。\n");

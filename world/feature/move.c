@@ -279,7 +279,7 @@ int move_or_destruct( object dest )
 object ride ()
 {
  object me = this_object();
- string ridemsg = "";
+// string ridemsg = "";
  object ridee;
 
  if (ridee = me->query_temp("ridee")) {

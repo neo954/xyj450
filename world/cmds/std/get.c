@@ -119,9 +119,9 @@ int main(object me, string arg)
    
 int do_get(object me, object obj, object old_env)
 {
-   object *enemy;
+// object *enemy;
    int equipped;
-   object* inv;
+// object* inv;
 /*
    inv = all_inventory(me);
    if( sizeof(inv) > 30 )

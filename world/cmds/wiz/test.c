@@ -11,7 +11,7 @@ inherit F_CLEAN_UP;
 int main(object me, string arg)
 {
    object ob, second, first;
-   string attack_skill, martial_skill, first_skill;
+   string attack_skill, martial_skill/*, first_skill*/;
 
 
    ob = present(arg, environment(me));
