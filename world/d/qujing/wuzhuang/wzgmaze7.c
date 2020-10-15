@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //wgzmaze7.c
 
@@ -21,23 +21,23 @@ void create ()
 
 几座木桥架在静悄悄的荷塘上面，纵横交错，显得甚是精巧。桥
 到此处，可见桥面上刻了一个大字：
-     ───
-     ─　─
-     ───
+     ------
+     --　--
+     ------
 
 LONG);
 
    //set("item_desc", ([" *** " : " *** \n", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "east" : __DIR__"wzgmaze3",
      "northeast" : __DIR__"wzgmaze6",
      "southeast" : __DIR__"wzgmaze8",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/***" : 1,
    ]));
@@ -49,7 +49,7 @@ LONG);
 }
 
 void init()
-{       
+{
    object me=this_player();
 
    add_action("do_jump", "jump");
@@ -62,7 +62,7 @@ void init()
    {
      reset_path(me);
    }
-   
+
    if( check_out(me) ) me->move(__DIR__"northpool");
 }
 
@@ -105,7 +105,7 @@ int check_out(object me)
 }
 
 int do_jump(string arg)
-{       
+{
    object me;
    me=this_player();
 

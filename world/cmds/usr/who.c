@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // who.c
 
 #include <net/dns.h>
@@ -54,8 +54,8 @@ mixed main(object me, string arg, int remote)
    } else
        str = "■ " + MUD_NAME + "\n";
 
-   str += "─────────────────────────────────────\n";
-   
+   str += "--------------------------------------------------------------------------\n";
+
         list = users();
 
    ppl_cnt = 0;
@@ -82,7 +82,7 @@ mixed main(object me, string arg, int remote)
         if( !environment(list[j]) ) continue;
         if( me && !me->visible(list[j]) ) continue;
         if( remote &&
-          list[j]->query("env/invisibility")) 
+          list[j]->query("env/invisibility"))
           continue;
 
         str = sprintf("%s%-15s%s",
@@ -94,11 +94,11 @@ mixed main(object me, string arg, int remote)
      }
      if( ppl_cnt%5 ) str += "\n";
    }
-   
+
    if(!remote || strlen(str)<1024) {
    //don't add last two lines for remote who if it is too long.
    //small packets maybe arrived to remote machine out of order.
-     str += "─────────────────────────────────────\n";
+     str += "--------------------------------------------------------------------------\n";
      str = sprintf("%s共有 %d 位使用者连线中，系统负担：%s\n", str, ppl_cnt,
      query_load_average() + "\n");
         }
@@ -112,13 +112,13 @@ mixed main(object me, string arg, int remote)
 int sort_user(object ob1, object ob2)
 {
    if( wizardp(ob1) && !wizardp(ob2) ) return -1;
-   
+
    if( wizardp(ob2) && !wizardp(ob1) ) return 1;
 
    if( wizardp(ob1) && wizardp(ob2) )
-     return (int)SECURITY_D->get_wiz_level(ob2) 
+     return (int)SECURITY_D->get_wiz_level(ob2)
         - (int)SECURITY_D->get_wiz_level(ob1);
-   
+
    return (int)ob2->query("combat_exp") - (int)ob1->query("combat_exp");
 }
 

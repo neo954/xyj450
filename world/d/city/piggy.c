@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /******************************************************************************/
 // piggy room, test, by pickle.
 // 1-17-98
@@ -14,7 +14,7 @@ inherit ROOM;
 // declare global variables.
 
 // cards are each a mapping variable, with name, status (played?
-// in hand? on table? collected?), worth, misc (pig? sheep? 
+// in hand? on table? collected?), worth, misc (pig? sheep?
 // blood? doubler?).
 
 mapping *CARDS=({
@@ -396,7 +396,7 @@ string COLLECT_STATE = "
 %s
 
 　　　　　　　　　"+HIC+"%|12s"+NOR+"
-　　　　　　　┌────────┐
+　　　　　　　┌----------------┐
 　　　　　　　│　　　　　│
 　　　　　　　│　　　　　　　　│
 　　　　　　　│　　　　　　　　│
@@ -404,7 +404,7 @@ string COLLECT_STATE = "
 　　　　　　　│　　　　　　　　│
 　　　　　　　│　　　　　　　　│
 　　　　　　　│　　　　　│
-　　　　　　　└────────┘
+　　　　　　　└----------------┘
 　　　　　　　　　"+HIC+"%|12s"+NOR+"
 
 ";
@@ -413,9 +413,9 @@ string PIGSTATE_FULL = "
 %s
 
 　　　　　　　　　　"+HIC+"%|12s"+NOR+"
-　　　　　　　　┌────────┐
+　　　　　　　　┌----------------┐
 　　　　　　　　│%s│
-　　　　　　┌─┼────────┼─┐
+　　　　　　┌--┼----------------┼--┐
 　　　　　　│%2s│　　 %6s 　　│%2s│
 　　　　　　│　│　　　　　　　　│　│
 　　　　　　│%2s│　　　　　　　　│%2s│
@@ -423,9 +423,9 @@ string PIGSTATE_FULL = "
 　　　　　　│%2s│　　　　　　　　│%2s│
 　　　　　　│　│　　　　　　　　│　│
 　　　　　　│%2s│　　 %6s 　　│%2s│
-　　　　　　└─┼────────┼─┘
+　　　　　　└--┼----------------┼--┘
 　　　　　　　　│%s│
-　　　　　　　　└────────┘
+　　　　　　　　└----------------┘
 　　　　　　　　　　"+HIC+"%|12s"+NOR+"
 
 ";
@@ -434,7 +434,7 @@ string PIGSTATE_SHORT = "
 %s
 
 　　　　　　　　　"+HIC+"%|12s"+NOR+"
-　　　　　　　┌────────┐
+　　　　　　　┌----------------┐
 　　　　　　　│　　 %6s 　　│
 　　　　　　　│　　　　　　　　│
 　　　　　　　│　　　　　　　　│
@@ -442,7 +442,7 @@ string PIGSTATE_SHORT = "
 　　　　　　　│　　　　　　　　│
 　　　　　　　│　　　　　　　　│
 　　　　　　　│　　 %6s 　　│
-　　　　　　　└────────┘
+　　　　　　　└----------------┘
 　　　　　　　　　"+HIC+"%|12s"+NOR+"
 
 ";
@@ -479,7 +479,7 @@ mapping NCARD=([
 mapping CCARD=([
 "pig": "猪（"+HIB+"黑桃Ｑ"+NOR+"）",
 "sheep": "羊（"+HIR+"方片Ｊ"+NOR+"）",
-"doubler": "变压器（"+HIB+"草花Ｔ"+NOR+"）", 
+"doubler": "变压器（"+HIB+"草花Ｔ"+NOR+"）",
 "blood": "血（"+HIR+"红桃Ａ"+NOR+"）",
 ]);
 
@@ -528,7 +528,7 @@ mapping CLAIM=([
 "south": "no",
 ]);
 
-// possible states: "等人", "等发牌", "等卖牌", "出牌", "算分", 
+// possible states: "等人", "等发牌", "等卖牌", "出牌", "算分",
 
 mapping TABLE=([
 "cond": "等人",
@@ -1320,7 +1320,7 @@ int score_player(string dir)
     }
     else full = 0;
 //    tell_room(HERE, "so far after pig score is "+score+"\n");
-    
+
 
 // then sheep.
     if (member_array(30, collected) != -1)
@@ -1741,7 +1741,7 @@ int all_have(string arg)
      continue;
        }
        break;
-       
+
    default:
        tell_room(HERE,"函数用法错误：all_have。\n");
        value = 0;
@@ -1813,9 +1813,9 @@ string display_score()
 {
     int i = NUM;
     string format = "│%2s家：%-12s　　　%6d　　%6d　　　%2s│\n";
-    string str = "\n┌────────────────────────┐\n"
+    string str = "\n┌------------------------------------------------┐\n"
      +  "│方向　玩家　　　　　　　　盘分　　　总分　　　猪│\n"
-     +  "├────────────────────────┤\n";
+     +  "├------------------------------------------------┤\n";
 
 
     while (i--)
@@ -1825,7 +1825,7 @@ string display_score()
         (member_array(DIR[i], PIGHEAD) == -1 ? "　": "√"));
    continue;
     }
-    str += "└────────────────────────┘\n";
+    str += "└------------------------------------------------┘\n";
     return str;
 }
 
