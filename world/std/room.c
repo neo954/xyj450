@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // room.c
 
-#pragma save_binary
+// #pragma save_binary
 
 #include <dbase.h>
 #include <room.h>
@@ -34,7 +34,7 @@ void reset()
 
    //
    // Check loaded objects to match the objects specified in "objects"
-   // while query("objects") is 
+   // while query("objects") is
    // ([ <object filename>: <amount>, ..... ])
    // and query_temp("objects") is
    // ([ <object filename>: ({ob1, ob2, ...}), .... ])
@@ -42,7 +42,7 @@ void reset()
    set("no_clean_up", 0);
    ob_list = query("objects");
    if( !mapp(ob_list) ) return;
-   
+
    if( !mapp(ob = query_temp("objects")) )
      ob = allocate_mapping(sizeof(ob_list));
    list = keys(ob_list);

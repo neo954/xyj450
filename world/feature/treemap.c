@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-#pragma save_binary
+
+// #pragma save_binary
 
 // This file is part of the TMI mudlib distribution.
 // Please include this header if you use this code.

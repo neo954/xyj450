@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // char.c
 
-#pragma save_binary
+// #pragma save_binary
 
 #include <action.h>
 #include <ansi.h>
@@ -91,7 +91,7 @@ void heart_beat()
      // We don't want heart beat be halt eventually, so return here.
      return;
    }
-    // added by snowcat, pickle's implementation 
+    // added by snowcat, pickle's implementation
    if ( query_temp("no_move") ) {
      continue_action();
      return;
@@ -111,7 +111,7 @@ void heart_beat()
    if( !userp(this_object()) ) {
      this_object()->chat();
      // chat() may do anything -- include destruct(this_object())
-     if( !this_object() ) return;   
+     if( !this_object() ) return;
    }
 
    if( tick--  ) return;
@@ -123,7 +123,7 @@ void heart_beat()
    // heal_up() must be called prior to other two to make sure it is called
    // because the && operator is lazy :P
    if( ((cnd_flag & CND_NO_HEAL_UP) || !heal_up())
-   &&   !is_fighting() 
+   &&   !is_fighting()
    &&   !interactive(this_object())) {
      if( environment() ) {
         ob = first_inventory(environment());
@@ -185,7 +185,7 @@ varargs int eff_skill_level(int level, int usage)
      switch( usage )  {
       case SKILL_USAGE_ATTACK:
       case SKILL_USAGE_DEFENSE:
-        if( level > 300 )   level += 35 + (level-300)*2/5; 
+        if( level > 300 )   level += 35 + (level-300)*2/5;
         else if( level > 200 )   level += 15 + (level-200)/5;
         else if( level > 100 )   level += 5 + (level-100)/10;
         else           level += level / 20;
@@ -202,12 +202,12 @@ varargs int eff_skill_level(int level, int usage)
         level -= level / 10;
         break;
       case SKILL_USAGE_SPELL:
-        if( level > 300 )   level += 35 + (level-300)*2/5; 
+        if( level > 300 )   level += 35 + (level-300)*2/5;
         else if( level > 200 )   level += 15 + (level-200)/5;
         else if( level > 100 )   level += 5 + (level-100)/10;
         else           level += level / 20;
         break;
-     } 
+     }
    }
 
    return level;

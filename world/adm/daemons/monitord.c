@@ -1,10 +1,10 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // monitord.c
 // by snowcat 6/20/97
 
-#pragma optimize
+// #pragma optimize
 
 #include <ansi.h>
 

@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-#pragma save_binary
+
+// #pragma save_binary
 
 /*
  * ftpd.c:
@@ -278,7 +278,7 @@
  * 94.12.07 Robocoder
  * o fixed typos in ftpd.c and ftpdsupp.h...so #define'ing ANONYMOUS_FTP
  *   loads properly
- * o Ack...removed "\r\n" processing to nlst output...back to 
+ * o Ack...removed "\r\n" processing to nlst output...back to
  *   some ftp clients complaining about bare linefeeds in ls output, to
  *   satisfy broken ftp clients that demand only "\n".
  *

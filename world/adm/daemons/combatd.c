@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // combatd.c
 
-#pragma optimize
+// #pragma optimize
 
 #include <ansi.h>
 #include <skill.h>
@@ -32,7 +32,7 @@ mapping family=(["方寸山三星洞":1,
                  "大雪山":-1,
                  "翠云山芭蕉洞":-1,
                  "陷空山无底洞":-1,
-                 "乱石山碧波潭":-1, 
+                 "乱石山碧波潭":-1,
 ]);
 
 string *guard_msg = ({
@@ -214,21 +214,21 @@ string sen_status_msg(int ratio)
 
 varargs void report_status(object ob, int effective)
 {
-   if( effective ) 
+   if( effective )
      message_vision( "( $N" + eff_status_msg(
-               (int)ob->query("eff_kee") * 100 /(1+(int)ob->query("max_kee")) ) 
+               (int)ob->query("eff_kee") * 100 /(1+(int)ob->query("max_kee")) )
                + " )\n", ob);
    else
      message_vision( "( $N" + status_msg(
-               (int)ob->query("kee") * 100/(1+(int)ob->query("max_kee")) ) 
+               (int)ob->query("kee") * 100/(1+(int)ob->query("max_kee")) )
                + " )\n", ob);
 }
 
 varargs void report_sen_status(object ob, int effective)
 {
-   
+
    message_vision( "( $N" + sen_status_msg(
-     (int)ob->query("sen") * 100 /(1+(int)ob->query("max_sen")) ) 
+     (int)ob->query("sen") * 100 /(1+(int)ob->query("max_sen")) )
      + " )\n", ob);
 }
 
@@ -335,7 +335,7 @@ varargs int do_attack(object me, object victim, object weapon, int attack_type)
    if( action["dodge"] )  mod_val += action["dodge"];
    if( dp > 1000000 )
        mod_val = dp / 100 * (100 + mod_val);
-    else 
+    else
       mod_val = (100 + mod_val) * dp / 100;
    if( mod_val < 1 ) mod_val = 1;
    if( mod_val > ((ap + dp)/100*80)) mod_val = (ap + dp)/100*80;
@@ -349,7 +349,7 @@ varargs int do_attack(object me, object victim, object weapon, int attack_type)
    if( random(ap + dp) < mod_val ) {      // Does the victim dodge this hit?
 
      if( !dodge_skill ) {
-        dodge_skill = "dodge"; 
+        dodge_skill = "dodge";
            result += SKILL_D(dodge_skill)->query_dodge_msg(limb);
      }
      else   {
@@ -359,7 +359,7 @@ varargs int do_attack(object me, object victim, object weapon, int attack_type)
           result += SKILL_D(dodge_skill)->query_dodge_msg(limb);
      }
 
-     if( dp < ap && (!userp(victim) || !userp(me)) 
+     if( dp < ap && (!userp(victim) || !userp(me))
      &&     random(sizeof(victim->query_enemy())) < 4
      &&   random(your["sen"]*100/your["max_sen"] + your["int"]*your["cps"]) > 100 ) {
         your["combat_exp"] += 1;
@@ -412,7 +412,7 @@ varargs int do_attack(object me, object victim, object weapon, int attack_type)
         else
             result += SKILL_D("parry")->query_parry_msg(weapon);
 
-        if( pp < ap && (!userp(victim) || !userp(me)) 
+        if( pp < ap && (!userp(victim) || !userp(me))
         &&     random(sizeof(victim->query_enemy())) < 4
         &&   random(your["sen"]*100/your["max_sen"] + your["int"]*your["cps"]) > 100 ) {
           your["combat_exp"] += 1;
@@ -511,7 +511,7 @@ varargs int do_attack(object me, object victim, object weapon, int attack_type)
           }
         }
      }
-   } 
+   }
 
    result = replace_string( result, "$l", limb );
    if( objectp(weapon) )
@@ -519,14 +519,14 @@ varargs int do_attack(object me, object victim, object weapon, int attack_type)
    else if( stringp(action["weapon"]) )
      result = replace_string( result, "$w", action["weapon"] );
    if( objectp(victim->query_temp("weapon")) )
-     result = replace_string( result, "$W", 
+     result = replace_string( result, "$W",
        victim->query_temp("weapon")->name() );
 
    if ((damage != RESULT_DODGE) && (damage != RESULT_PARRY) )
      message_vision(result, me, victim );
    else
-     if ( (string)me->query("env/brief_message") != "YES" 
-       && (string)victim->query("env/brief_message") != "YES" ) 
+     if ( (string)me->query("env/brief_message") != "YES"
+       && (string)victim->query("env/brief_message") != "YES" )
         message_vision(result, me, victim );
 
    if( wizardp(me) && (string)me->query("env/combat")=="verbose" ) {
@@ -642,7 +642,7 @@ void auto_fight(object me, object obj, string type)
    if( !userp(me) && !userp(obj) ) return;
 
    // Because most of the cases that we cannot start a fight cannot be checked
-   // before we really call the kill_ob(), so we just make sure we have no 
+   // before we really call the kill_ob(), so we just make sure we have no
    // aggressive callout wating here.
    if( me->query_temp("looking_for_trouble") ) return;
    me->set_temp("looking_for_trouble", 1);
@@ -656,7 +656,7 @@ void start_berserk(object me, object obj)
    int bellicosity;
 
    if( !me || !obj ) return;          // Are we still exist( not becoming a corpse )?
-   if( wizardp(obj) ) return;   
+   if( wizardp(obj) ) return;
 
    me->set_temp("looking_for_trouble", 0);
 
@@ -671,7 +671,7 @@ void start_berserk(object me, object obj)
 
    if(   (int)me->query("force") > (random(bellicosity) + bellicosity)/2 ) return;
 
-   if( bellicosity > (int)me->query("score") 
+   if( bellicosity > (int)me->query("score")
    &&   !wizardp(obj) ) {
      message_vision("$N对着$n喝道：" + RANK_D->query_self_rude(me)
         + "看你实在很不顺眼，去死吧。\n", me, obj);
@@ -773,7 +773,7 @@ void killer_reward(object killer, object victim)
       victim->clear_condition();
       // Give the death penalty to the dying user.
       victim->set("bellicosity", 0);
-     
+
            if(userp(killer)) {
         killer->apply_condition("no_pk_time",120+
           killer->query_condition("no_pk_time"));
@@ -794,7 +794,7 @@ void killer_reward(object killer, object victim)
           killer->delete("kill/last_killer");
         //any one can kill this killer to
         //get maximum dx benefit.
-        //including the one who last killed 
+        //including the one who last killed
         //this killer.
         //here check lose>100, so one can't
         //pk a newbie to erase the last_killer flag.
@@ -810,7 +810,7 @@ void killer_reward(object killer, object victim)
         //victim loss is in /death/combat_exp_loss
         victim->add("kill/pklose",lose);
         victim->add("combat_exp",-lose);
-             
+
         //for death recovery.
              victim->set("death/mud_age",victim->query("mud_age"));
              victim->set("death/combat_exp_loss",lose);
@@ -821,7 +821,7 @@ void killer_reward(object killer, object victim)
              str=chinese_daoxing(gain);
              if(strlen(str)>1) {
                str=killer->name(1)+"得到"+str+"道行！";
-             } 
+             }
         str=victim->name(1)+"被"+killer->name(1)+
             "吃掉了。"+str;
         CHANNEL_D->do_channel(this_object(), "rumor",str);
@@ -846,8 +846,8 @@ void killer_reward(object killer, object victim)
        killer->add("combat_exp",reward);
                   str=chinese_daoxing(reward);
                   tell_object(killer,"\n你得到了"+str+"道行。\n");
-       msg=sprintf("%s(%d)杀死了%s(%d)，得到%d点道行。", 
-         killer->query("id"),killer->query("combat_exp"), 
+       msg=sprintf("%s(%d)杀死了%s(%d)，得到%d点道行。",
+         killer->query("id"),killer->query("combat_exp"),
          victim->query("id"),victim->query("combat_exp"),reward);
        log_file("npc_kill","["+ctime(time())+"] "+msg+"\n");
        CHANNEL_D->do_channel(this_object(), "sys",msg);
@@ -927,14 +927,14 @@ int nk_gain(object killer, object victim)
 
               if(eff_dx!=0 && cla*eff_dx>0)
            return 0;
-     //for NPC being set eff_dx, only 
+     //for NPC being set eff_dx, only
      //if cla*eff_dx<=0 (not all in xian or all in yao)
      //can gain daoxing.
 
               //For NPC which has not been set eff_dx,
          //the default is everyone can kill them to get
          //dx reward, however, the default value is low.
-         if(!eff_dx) { 
+         if(!eff_dx) {
            //default value for eff_dx and nkgain.
      //the default nkgain is low.
      //If want to increase the value for certain NPC,
@@ -947,7 +947,7 @@ int nk_gain(object killer, object victim)
        dxn=eff_dx/3;
      else if(eff_dx>5000)
        dxn=eff_dx/2;
-                else 
+                else
        dxn=eff_dx;
        //make it easier for newbie.
                 eff_dx=dxn;
@@ -958,7 +958,7 @@ int nk_gain(object killer, object victim)
 
      if(effdx<0) effdx=-effdx;
 
-     if(effdx>667000) 
+     if(effdx>667000)
        nkgain=600;
                 else if(effdx>333000)
        nkgain=500;
@@ -995,12 +995,12 @@ int nk_gain(object killer, object victim)
      //        no family NPC, dx reward reduse.
 
      return reward;
-             
+
             }
        return 0;
 }
 
-int victim_lose(object killer,object victim,string killerid) 
+int victim_lose(object killer,object victim,string killerid)
 {            int lose,exp_k,exp_v;
 
              if((wizardp(victim)&&!wizardp(killer))
@@ -1048,4 +1048,3 @@ int check_family(string fam)
     else
       return 0;
 }
-

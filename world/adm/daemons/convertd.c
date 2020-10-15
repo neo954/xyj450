@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /* rewritten by Snowcat */
 
-#pragma optimize
+// #pragma optimize
 
 inherit F_DBASE;
 
@@ -6850,7 +6850,7 @@ void add(int *a1, mixed *am, int i, int code)
     }
     else
     {
-   /* First multiple mapping, allocate new list. 
+   /* First multiple mapping, allocate new list.
       Needs two spaces, one for the terminating 0. */
    am[i] = (int *) allocate (2);
    am[i][0] = code;
@@ -6924,7 +6924,7 @@ int cvrt(int *a1, mixed *am, int i, int *result, int n)
 {
     int k = 0;
     int x, codeDes = a1[i];
-    
+
     if (codeDes == 0) return(0);
     result[0] = codeDes;
     if (am[i])
@@ -6943,9 +6943,9 @@ int sc_convert(int mode, int codeSrc, int *result, int n)
      if (mode == SC_GBtoBIG)
     {
    result[0] = b5_default_code;
-   if (inGBrange(codeSrc)) 
+   if (inGBrange(codeSrc))
        return cvrt(GtoB, mGtoB, codeSrc - GBfirst, result, n);
-    }   
+    }
     else if (mode == SC_BIGtoGB)
     {
    result[0] = gb_default_code;
@@ -6988,7 +6988,7 @@ string sc_convert_fp(string sin, int mode, int do_mult)
      sout += to_str(SC_HB(result[0]));
      sout += to_str(SC_LB(result[0]));
        }
-       else 
+       else
        {
      sout += to_str('<');
      for (c1=0; c1<n; c1++)
@@ -7011,7 +7011,7 @@ string GB2BIG (string str)
     if (! tab_init)
         sc_inittab();
 
-    return sc_convert_fp(str, mode, mapping1); 
+    return sc_convert_fp(str, mode, mapping1);
 }
 
 string BIG2GB (string str)
@@ -7022,7 +7022,7 @@ string BIG2GB (string str)
     if (! tab_init)
         sc_inittab();
 
-    return sc_convert_fp(str, mode, mapping1); 
+    return sc_convert_fp(str, mode, mapping1);
 }
 
 string input (string str, object me)
@@ -7053,4 +7053,3 @@ void create()
    set("name", "GB BIG5 converter");
    set("id", "GB BIG5 converter");
 }
-

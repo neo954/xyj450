@@ -8,7 +8,7 @@ handy features as:
 * macros (#define, #undef)
 * conditional compilation (#if, #ifdef, #ifndef, #else, #elif, #endif)
 * debugging (#echo)
-* compiler specific (#pragma)
+* compiler specific (// #pragma)
 * text formatting short cuts (@, @@)
 </DL>
 
@@ -196,7 +196,7 @@ Compiler Specific
 
 This facility performs implementation-dependent actions.
 
-    Syntax:     #pragma keyword
+    Syntax:     // #pragma keyword
 
 At this time the following control keywords are recognized:
 
@@ -226,7 +226,7 @@ Notes:
     'optimize' directs the compiler to spend a little extra time generating
     better code
 
-    'show_error_context' adds information about where on the line an error 
+    'show_error_context' adds information about where on the line an error
     occured to error messages
 
 Text Formatting Shortcuts
@@ -240,7 +240,7 @@ descriptions, etc.
                 marker
 </pre>
 
-<pre>    
+<pre>
     Syntax 2:   @@marker
                   <... text block ...>
                 marker

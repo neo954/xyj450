@@ -1,11 +1,11 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // move.c
 
 // 4/24/98 mon adds max_items related stuff.
 
-#pragma optimize
+// #pragma optimize
 
 #include <dbase.h>
 #include <room.h>
@@ -84,7 +84,7 @@ string ride_suffix (object me)
 varargs int move(mixed dest, int silently)
 {
   if(_move(dest, silently)) return 1;
-  
+
   call_out("dest_obj", 2, this_object());
   return 0;
 }
@@ -116,7 +116,7 @@ varargs int _move(mixed dest, int silently)
 //   call_other(dest, "???");
 // by mon 10/29/97. remove call_other, use load_object to find and load.
    ob=load_object(dest);
-   if(!ob) 
+   if(!ob)
     return notify_fail("move: destination unavailable.\n");
   } else
    return notify_fail(sprintf("move: invalid destination %O.\n", dest));
@@ -152,16 +152,16 @@ varargs int _move(mixed dest, int silently)
   if( !env && (int)ob->query_encumbrance() + weight()
    > (int)ob->query_max_encumbrance() ) {
    if( ob==this_player() )
-    return notify_fail( this_object()->name() + 
+    return notify_fail( this_object()->name() +
      "对你而言太重了。\n");
    else
-    return notify_fail( this_object()->name() + 
+    return notify_fail( this_object()->name() +
      "对" + ob->name() + "而言太重了。\n");
   }
 
   // Move the object and update encumbrance
   // by snowcat 3/10/1998
-  if( environment() ) 
+  if( environment() )
   {
    environment()->add_encumbrance( - weight());
    if (userp(environment()) &&
@@ -194,7 +194,7 @@ varargs int _move(mixed dest, int silently)
   // If we are players, try look where we are.
   if( interactive(this_object())   // are we linkdead?
   &&  living(this_object())    // are we still concious?
-  &&  silently!=1 ) 
+  &&  silently!=1 )
   if (silently==2 || this_object() -> query("env/brief_all"))
    tell_object(this_object(), environment()->query("short") ? environment()->query("short")+"\n": "\n");
   else {
@@ -234,7 +234,7 @@ varargs int _move(mixed dest, int silently)
     // the following is made by snowcat on 6/20/1997
   // modified by mon 8/29/97
     if ((this_object()->query("is_monitored") ||
-    file_name(this_object())[0..2]=="/u/") 
+    file_name(this_object())[0..2]=="/u/")
     && userp(ob))
       MONITOR_D->report_system_object_msg (ob,"得到了"+
        this_object()->query("name")
@@ -270,7 +270,7 @@ void remove(string euid)
 int move_or_destruct( object dest )
 {
   if( userp(this_object()) ) {
-   tell_object(this_object(), 
+   tell_object(this_object(),
     "一阵时空的扭曲将你传送到另一个地方．．．\n");
    move(VOID_OB);
   }
@@ -282,7 +282,7 @@ object ride ()
  string ridemsg = "";
  object ridee;
 
- if (ridee = me->query_temp("ridee")) { 
+ if (ridee = me->query_temp("ridee")) {
   if ((environment(ridee) != environment(me) &&
      environment(ridee) != me) ||
     (ridee->is_character() && ! living(ridee))) {

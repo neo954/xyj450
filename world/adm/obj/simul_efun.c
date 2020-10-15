@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-#pragma optimize
+
+// #pragma optimize
 
 #include "/adm/simul_efun/atoi.c"
 #include "/adm/simul_efun/chinese.c"
