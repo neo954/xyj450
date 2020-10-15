@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // alias.c
 
 #define MAX_REPEAT 50
@@ -9,9 +9,9 @@
 
 mapping alias;
 
-static string *history, last_input;
-static int last_cmd, repeat_cnt = 0;
-static int last_time=time(), cmd_cnt=0, cmd_cnt1=0, cmd_cnt2=0;
+nosave string *history, last_input;
+nosave int last_cmd, repeat_cnt = 0;
+nosave int last_time=time(), cmd_cnt=0, cmd_cnt1=0, cmd_cnt2=0;
 
 // speed of player input commands.
 int query_cmd_count() {return cmd_cnt2;}
@@ -27,10 +27,10 @@ string process_input(string str)
 
    notify_fail("什么？\n"); // default fail messages.
                             // for both gb and big5 environment.
-                            // need to be set here. otherwise big5 
+                            // need to be set here. otherwise big5
                             // will not show it correctly.
                             // mon 5/12/98
-          
+
    str = CONVERT_D->input(str,this_object());
 
 // by mon 7/19/97. command counting.
@@ -45,7 +45,7 @@ string process_input(string str)
             }
             cmd_cnt1++;
        if(cmd_cnt1>30) cmd_cnt1=0;
-            last_time=curr_time; 
+            last_time=curr_time;
         //in case of flooding, has to wait a few
         //seconds without input to be able to
         //input again.
@@ -125,4 +125,3 @@ mapping query_all_alias()
 {
    return alias;
 }
-

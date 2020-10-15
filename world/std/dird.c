@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-static mapping opp_dir = ([
+
+nosave mapping opp_dir = ([
   "east"        :       "west",
   "west"        :       "east",
   "north"       :       "south",
@@ -22,7 +22,7 @@ static mapping opp_dir = ([
   "down"        :       "up",
 ]);
 
-static mapping chinese_dir = ([
+nosave mapping chinese_dir = ([
         "north":                "北边",
         "south":                "南边",
         "east":                 "东边",
@@ -44,7 +44,7 @@ static mapping chinese_dir = ([
         "out":                  "外面",
 ]);
 
-static mapping abbr_dir = ([
+nosave mapping abbr_dir = ([
         "n"     :       "north",
         "s"     :       "south",
         "e"     :       "east",

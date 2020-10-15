@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // user.c
 
 #include <origin.h>
@@ -12,7 +12,7 @@ inherit F_SAVE;
 inherit F_BACKUP;
 inherit F_ENCODING;
 
-static int last_age_set;
+nosave int last_age_set;
 
 void create()
 {
@@ -143,7 +143,7 @@ private void user_dump(int type)
         break;
      case DUMP_IDLE:
            if(!wizardp(this_object())){
-        tell_object( this_object(), "对不起，您已经发呆超过 " 
+        tell_object( this_object(), "对不起，您已经发呆超过 "
           + IDLE_TIMEOUT/60 + " 分钟了，请下次再来。\n");
         tell_room( environment(), "一阵风吹来，将发呆中的" + query("name")
           + "化为一堆飞灰，消失了。\n", ({this_object()}));
@@ -195,4 +195,3 @@ void reconnect()
    remove_call_out("user_dump");
    tell_object(this_object(), "重新连线完毕。\n");
 }
-

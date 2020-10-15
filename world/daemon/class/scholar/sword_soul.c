@@ -45,7 +45,7 @@ void chant()
         call_out("chant_sword", 20, 1);
 }
 
-static void chant_sword(int stage)
+protected void chant_sword(int stage)
 {
         switch(stage) {
                 case 1:

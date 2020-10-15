@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // team.c
 
 #include <command.h>
 #include <dbase.h>
 #include <origin.h>
 
-static object leader, *team;
+nosave object leader, *team;
 
 int set_leader(object ob)
 {
@@ -41,7 +41,7 @@ int follow_me(object ob, string dir)
    }
    return follow_path(dir);
   }
-  
+
   return 0;
 }
 
@@ -79,7 +79,7 @@ varargs int dismiss_team(object ob)
   int i;
 
   if( !arrayp(team) ) return 0;
-  
+
   if( !ob ) {
    if( team[0]==this_object() ) {
     team -= ({ 0 });
@@ -101,4 +101,3 @@ object *query_team()
 {
   return team;
 }
-

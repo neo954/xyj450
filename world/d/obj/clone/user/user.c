@@ -7,7 +7,7 @@ inherit CHARACTER;
 inherit F_AUTOLOAD;
 inherit F_SAVE;
 
-static int last_age_set;
+nosave int last_age_set;
 
 void create()
 {
@@ -82,7 +82,7 @@ private void user_dump(int type)
                        if ((this_object()->query("id") != "ding") &&
                        (this_object()->query("id") != "rover"))
                          {
-			tell_object( this_object(), "对不起，您已经发呆超过 " 
+			tell_object( this_object(), "对不起，您已经发呆超过 "
 				+ IDLE_TIMEOUT/60 + " 分钟了，请下次再来。\n");
 			tell_room( environment(), "一阵风吹来，将发呆中的" + query("name")
 				+ "化为一堆飞灰，消失了。\n", ({this_object()}));
@@ -124,4 +124,3 @@ void reconnect()
 	remove_call_out("user_dump");
 	tell_object(this_object(), "重新连线完毕。\n");
 }
-

@@ -1,11 +1,11 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // natured.c
 
 #define TIME_TICK (time()*60)
 
-static int current_day_phase;
+nosave int current_day_phase;
 mapping *day_phase;
 
 mapping *query_day_phase() { return day_phase; }
@@ -48,7 +48,7 @@ void init_day_phase()
    current_day_phase = (i==0? sizeof(day_phase)-1: i - 1);
 
    // Since in our time scale, 1 minute == 1 second in RL, so we don't need
-   // any conversion before using this number as call_out dalay, if you 
+   // any conversion before using this number as call_out dalay, if you
    // changed the time scale, be sure to convert it.
 
    call_out("update_day_phase",
@@ -62,7 +62,7 @@ void update_day_phase()
    remove_call_out("update_day_phase");
 
    current_day_phase = (++current_day_phase) % sizeof(day_phase);
-   
+
    // to re-syncronize with the local time.
    // mon 5/5/98
    if(current_day_phase==0) {
@@ -75,7 +75,7 @@ void update_day_phase()
      call_other(this_object(), day_phase[current_day_phase]["event_fun"]);
 
    if(i==0)
-       call_out("update_day_phase", 
+       call_out("update_day_phase",
          day_phase[current_day_phase]["length"]);
 }
 
@@ -144,5 +144,3 @@ mapping *read_table(string file)
    }
    return data;
 }
-
-

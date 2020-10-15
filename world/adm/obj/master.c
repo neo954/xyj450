@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //
 // master.c
 //
@@ -17,7 +17,7 @@ object connect()
 {
    object login_ob;
    mixed err;
-   
+
    err = catch(login_ob = new(LOGIN_OB));
 
    if (err) {
@@ -45,7 +45,7 @@ mixed compile_object(string file)
 // This is called when there is a driver segmentation fault or a bus error,
 // etc.  As it's static it can't be called by anything but the driver (and
 // master).
-static void crash(string error, object command_giver, object current_object)
+protected void crash(string error, object command_giver, object current_object)
 {       object *ob;
         string msg;
    int i,j=0;
@@ -82,7 +82,7 @@ static void crash(string error, object command_giver, object current_object)
 // Arguements:      file: a string that shows what file to read in.
 // Return:          Array of nonblank lines that don't begin with '#'
 // Note:            must be declared static (else a security hole)
-static string *update_file(string file)
+protected string *update_file(string file)
 {
    string *list;
    string str;
@@ -126,7 +126,7 @@ void preload(string file)
      write(" -> Error " + err + " when loading " + file + "\n");
    else
      write(".... Done.\n");
-     
+
 }
 
 // Write an error message into a log file. The error occured in the object
@@ -134,7 +134,7 @@ void preload(string file)
 void log_error(string file, string message)
 {
    string name, home;
-   
+
    if( find_object(SIMUL_EFUN_OB) )
      name = file_owner(file);
 
@@ -147,7 +147,7 @@ void log_error(string file, string message)
        else
      efun::write(get_config(__DEFAULT_ERROR_MESSAGE__)+"\n");
    }
-   
+
    efun::write_file(home + "log", message);
 }
 
@@ -157,7 +157,7 @@ void log_error(string file, string message)
 int save_ed_setup(object who, int code)
 {
    string file;
-  
+
     if (!intp(code))
         return 0;
     file = user_path(getuid(who)) + ".edrc";
@@ -171,7 +171,7 @@ int retrieve_ed_setup(object who)
 {
    string file;
    int code;
-  
+
     file = user_path(getuid(who)) + ".edrc";
     if (file_size(file) <= 0) {
         return 0;
@@ -244,7 +244,7 @@ string standard_trace(mapping error, int caught)
     res = sprintf("%s\n执行时段错误：%s\n程序：%s 第 %i 行\n物件：%s\n",
        res, error["error"],
         (undefinedp(error["program"])?
-      "(none)":error["program"]), 
+      "(none)":error["program"]),
    error["line"],
         ( (undefinedp(error["object"]) || !error["object"])?
       "(none)":file_name(error["object"])) );
@@ -257,7 +257,7 @@ string standard_trace(mapping error, int caught)
             error["trace"][i]["function"],
             error["trace"][i]["line"],
             error["trace"][i]["object"] );
-       
+
        res+="调用参数："+
      error["trace"][i]["function"]+"("+
      print_vars(error["trace"][i]["arguments"])+
@@ -266,7 +266,7 @@ string standard_trace(mapping error, int caught)
      print_vars(error["trace"][i]["locals"])+
      "\n";
       }
-    
+
     if(env=this_player()) {
       res+=sprintf("this_player: %O\n",this_player());
       while(env=environment(env)) {
@@ -278,7 +278,7 @@ string standard_trace(mapping error, int caught)
 // this_object() is always master.c, so no need to print.
     obj=previous_object(-1);
     size=sizeof(obj);
-    if(size>0) 
+    if(size>0)
    for(i=0;i<size;i++) {
        res+=sprintf("previous_object(%d): %O\n",i,obj[i]);
    }
@@ -321,7 +321,7 @@ string print_vars(mixed *vars) {
 string error_handler( mapping error, int caught )
 {
     string trace;
-    
+
     trace=standard_trace(error, caught);
 
     if (this_player(1)) {
@@ -335,7 +335,7 @@ string error_handler( mapping error, int caught )
    }
     } else
    report_error(error);
-    
+
     // whatever we return goes to the debug.log
     return trace;
 }
@@ -345,10 +345,10 @@ void report_error(mapping error)
        CHANNEL_D->do_channel(this_object(), "sys",
                sprintf("%s 第 %i 行，物件：%s\n        %s",
                (undefinedp(error["program"])?
-          "(none)":error["program"]), 
+          "(none)":error["program"]),
           error["line"],
                ( (undefinedp(error["object"]) || !error["object"])?
-          "(none)":file_name(error["object"])), 
+          "(none)":file_name(error["object"])),
               error["error"]));
 }
 
@@ -429,7 +429,7 @@ int valid_save_binary( string filename )
 }
 
 // valid_write: write privileges; called with the file name, the object
-//   initiating the call, and the function by which they called it. 
+//   initiating the call, and the function by which they called it.
 int valid_write( string file, mixed user, string func )
 {
    object ob;

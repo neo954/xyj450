@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // combined_item.c
 // 4/25/98 mon changed move() so that money will be combined
 // even at a non-living thing, eg, room.
@@ -13,7 +13,7 @@ inherit F_DBASE;
 inherit F_MOVE;
 inherit F_NAME;
 
-static int amount;
+nosave int amount;
 
 void setup()
 {

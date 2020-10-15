@@ -9,7 +9,7 @@ int settle_lawsuit(object);
 void test_crime( );
 int do_charge(string);
 
-static int in_test=0;
+nosave int in_test=0;
 
 void create()
 {
@@ -125,7 +125,7 @@ message_vision(HIR"来人哪！把$N拖下去打"+chinese_number(level*10)
                         crime->unconcious();
                         crime->add("crime_lv",-1);
                         }
-                message_vision(HIR "$N对$n说道: 再敢犯案, 定斩不饶!\n" NOR,this_object(),crime); 
+                message_vision(HIR "$N对$n说道: 再敢犯案, 定斩不饶!\n" NOR,this_object(),crime);
                 }
         crime->move(find_object("/d/suburb/es/choyin/court1.c"));
         if (!crime->query("crime_lv"))

@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // chinese_d.c
 // A minor chinese-english or english-chinese converter.
 // by Annihilator@Eastern.Stories 09-27-93
@@ -12,10 +12,10 @@
 
 inherit F_SAVE;
 
-static string *c_digit = ({ "零","十","百","千","万","亿","兆" });
-static string *c_num = ({"零","一","二","三","四","五","六","七","八","九","十"});
-static string *sym_tien = ({ "甲","乙","丙","丁","戊","己","庚","辛","壬","癸" });
-static string *sym_dee = ({ "子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥" });
+nosave string *c_digit = ({ "零","十","百","千","万","亿","兆" });
+nosave string *c_num = ({"零","一","二","三","四","五","六","七","八","九","十"});
+nosave string *sym_tien = ({ "甲","乙","丙","丁","戊","己","庚","辛","壬","癸" });
+nosave string *sym_dee = ({ "子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥" });
 
 
 mapping dict = ([]);
@@ -127,4 +127,3 @@ string chinese_date(int date)
      sym_dee[(local[LT_HOUR]%24)/2],
      chinese_number(local[LT_HOUR]%2 * 2 + local[LT_MIN]/30 + 1) );
 }
-

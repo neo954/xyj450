@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // File     : /adm/daemons/network/dns_master.c
 // Created  : 93-08-09
 // By       : Grendel@tmi-2
@@ -63,7 +63,7 @@ private mapping seq_entries;
 // Used for debugging
 #ifdef DEBUG
 #  define debug(x) if(monitor) message("diagnostic", (x), monitor)
-static object monitor = 0;
+nosave object monitor = 0;
 #else
 #  define debug(x)
 #endif
@@ -260,7 +260,7 @@ void read_callback(int sock, string msg, string addr)
 
        //  debug("DNS: NAME:"+muds[args["NAME"]]["NAME"]+
    //        "  USERS:"+muds[args["NAME"]]["USERS"]+
-   //   "  TIME:"+muds[args["NAME"]]["TIME"]);   
+   //   "  TIME:"+muds[args["NAME"]]["TIME"]);
    }
 
    // we now execute the function we have received
@@ -298,7 +298,7 @@ void send_shutdown()
 string start_message()
 {
    return sprintf( "||MUDNAME:%s||NAME:%s||VERSION:%s||MUDLIB:%s||HOST:%s||PORT:%d"
-     "||PORTUDP:%d||TCP:%s", 
+     "||PORTUDP:%d||TCP:%s",
      INTERMUD_NAME, Mud_name(),
      MUDLIB_VERSION, MUDLIB_NAME, query_host_name(),
      mud_port(), my_port, TCP_SERVICE_LEVEL);
@@ -318,7 +318,7 @@ void init_database()
 {
    int i;
    string message, *list;
- 
+
    // if we have received any muds then we stop starting up.
    if( MUDLIST_A->query_db_flag() ) {
        // start call outs - note we do the sequence clean up
@@ -360,7 +360,7 @@ void refresh_database()
    call_out("refresh_database", REFRESH_INTERVAL);
    list = values( LISTNODES );
    i = sizeof( list );
-  
+
    while( i-- ) {
      sscanf( list[i], "%s %d", bootsrv[0], bootsrv[1] );
      MUDLIST_Q->send_mudlist_q(bootsrv[0], bootsrv[1]);
@@ -410,7 +410,7 @@ void set_mud_info(string name, mapping junk)
    if( !(ACCESS_CHECK(previous_object()))
    &&   file_name(previous_object())[0..strlen(AUX_PATH) - 1] != AUX_PATH)
      return;
-  
+
    name = htonn( name );
    while( name[strlen(name)-1] == '.' ) name = name[ 0..strlen(name)-2 ];
 
@@ -441,7 +441,7 @@ void set_mud_info(string name, mapping junk)
 
         if( (undefinedp(muds[name]) ||
        undefinedp(muds[name]["TIME"])) &&
-       !undefinedp(junk["TIME"]) ) 
+       !undefinedp(junk["TIME"]) )
       //if this is a new mud or has lost connection.
           CHANNEL_D->do_channel(this_object(), "sys",
             junk["MUDNAME"]+"("+junk["NAME"]+")   "+
@@ -517,7 +517,7 @@ void zap_mud_info(string name, mapping junk)
    ||   !ACCESS_CHECK(previous_object())
    ||   file_name(previous_object())[0..strlen(AUX_PATH) - 1] != AUX_PATH)
      return;
-*/    
+*/
 // permission check removed by mon 8/28/97
 // when called by do_pings, previous_object() is not defined.
 
@@ -713,7 +713,7 @@ int dns_mudp(string name)
 mapping query_muds()
 {
 //   if (ACCESS_CHECK(previous_object()))
-   return muds + ([ mud_nname():this_host + 
+   return muds + ([ mud_nname():this_host +
      ([ "TIME":ctime(time()) ]) +
      (["USERS" :""+ sizeof(users()) ]) ]);
 }
@@ -889,7 +889,7 @@ void create()
    int i, j;
    string *list;
    string *strs;
-   string ip, port, *listkey;    
+   string ip, port, *listkey;
 
    restore_euid();
 
@@ -962,8 +962,8 @@ int check_mud(string ip, string port, string name)
 
     name=htonn(name); //htonn will transform to lower_case.
     while(i--)
-      if(ip==muds_ip[i] && 
-         (name=="" || name==muds_name[i]) 
+      if(ip==muds_ip[i] &&
+         (name=="" || name==muds_name[i])
 //    && (port=="" || port==muds_port[i])
 // don't check port number as it may not be fixed.
 // usually udpport=mudport+4, but if that port is in use,
@@ -971,4 +971,3 @@ int check_mud(string ip, string port, string name)
     ) return 1;
     return 0;
 }
-

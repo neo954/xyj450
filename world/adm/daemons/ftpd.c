@@ -341,7 +341,7 @@ void lose_user( int fd ) {
 }
 
 #ifdef FILE_LOCKING
-static int flock_wrapper( string fname, int flag, int fd ) {
+protected int flock_wrapper( string fname, int flag, int fd ) {
    int res;
 
    seteuid( socket_info[ fd ][ USER_NAME ] );
@@ -490,7 +490,7 @@ void create()
    }
 }
 
-static void setup_ftp( int port )
+protected void setup_ftp( int port )
 {
    our_socket = socket_create( STREAM, "in_read_callback",
                     "in_close_callback" );
@@ -784,7 +784,7 @@ void data_write_callback( int fd ) {
 } /* data_write_callback() */
 
 
-static void data_conn( int fd, string mess, string name, int type ) {
+protected void data_conn( int fd, string mess, string name, int type ) {
    int new_fd, ret, data_mode;
    string data_mode_name;
    mixed tmp;
@@ -838,7 +838,7 @@ static void data_conn( int fd, string mess, string name, int type ) {
    data_write_callback( new_fd );
 }  /* data_conn() */
 
-static void read_connection( int fd, string path, int append ) {
+protected void read_connection( int fd, string path, int append ) {
    int new_fd, ret, data_mode;
    string data_mode_name;
    mixed tmp;
@@ -949,7 +949,7 @@ void data_close_callback( int fd ) {
 }  /* data_close_callback() */
 
 
-static void logout( int fd ) {
+protected void logout( int fd ) {
    socket_info[ fd ][ LOGGED_IN ] = 0;
    if ( UNAME ) {
 #ifdef LOG_TIME
@@ -967,7 +967,7 @@ static void logout( int fd ) {
 /*
  * parse user command
  */
-static void parse_comm( int fd, string str ) {
+protected void parse_comm( int fd, string str ) {
    string *command, tmp, tmp2;
    mixed *misc;
    int port, i, s;
@@ -1793,7 +1793,7 @@ void in_close_callback( int fd ) {
 /*
  * resolve path (absolute vs relative) ... does not validate path here
  */
-static string get_path( int fd, string str )
+protected string get_path( int fd, string str )
 {
    string *dirlist, *dirlist1, temp;
    int i, j, s;
@@ -1909,7 +1909,7 @@ static string get_path( int fd, string str )
 }
 
 
-static void check_connections() {
+protected void check_connections() {
    int *sockets, i, limit;
    int pfd;
 
