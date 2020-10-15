@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // tidu.c
 
 #include <ansi.h>
@@ -129,13 +129,13 @@ int do_kneel()
    string name, new_name;
 
    if( !this_player()->query_temp("pending/join_bonze") ) return 0;
-   message_vision(   HIC "$N双手合十，恭恭敬敬地跪了下来。\n\n" + 
+   message_vision(   HIC "$N双手合十，恭恭敬敬地跪了下来。\n\n" +
         "$n伸出手掌，在$N头顶轻轻地摩挲了几下，将$N的头发尽数剃去。\n\n" NOR,
      this_player(), this_object() );
    name = this_player()->query("name");
-   new_name = ( (string)this_player()->query("gender") == "男性" )? 
-     prename1[random(sizeof(prename1))] + name[0..1]
-     :prename2[random(sizeof(prename2))] + name[0..1];
+   new_name = ( (string)this_player()->query("gender") == "男性" )?
+     prename1[random(sizeof(prename1))] + name[0..0]
+     :prename2[random(sizeof(prename2))] + name[0..0];
    command("say 从今以後你的法名叫做" + new_name + "。");
    command("smile");
    this_player()->delete_temp("pending/join_bonze");
@@ -160,8 +160,8 @@ string ask_for_leave()
 
    return ("贫僧不知。\n");
 }
-        
-        
+
+
 int do_agree(string arg)
 {
    if(this_player()->query_temp("betray")) {

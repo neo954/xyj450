@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // master.c
 
 #include <ansi.h>
@@ -104,7 +104,7 @@ int do_kneel()
         "$n伸出手掌，在$N头顶轻轻地摩挲了几下，将$N的头发尽数剃去。\n\n" NOR,
      this_player(), this_object() );
    name = this_player()->query("name");
-   new_name = prename[random(sizeof(prename))] + name[0..1];
+   new_name = prename[random(sizeof(prename))] + name[0..0];
    command("say 从今以後你的法名叫做" + new_name + "。");
    command("smile");
    this_player()->delete_temp("pending/join_bonze");
@@ -152,6 +152,6 @@ int accept_fight(object me)
      command("say 阿弥陀佛！出家人戒逞强恶斗！老衲不敢违反清规。");
    else
      command("say 施主既然身负绝艺，老衲佩服便是，也不必较量了。");
-   
+
    return 0;
 }

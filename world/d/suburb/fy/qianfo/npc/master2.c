@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 #include <ansi.h>
 inherit NPC;
@@ -110,7 +110,7 @@ HIC "$N双手合十，恭恭敬敬地跪了下来。\n\n"
 "$n伸出手掌，在$N头顶轻轻地摩挲了几下，将$N的头发尽数剃下．\n\n" NOR,
 this_player(), this_object() );
         name = this_player()->query("name");
-        new_name = prename[random(sizeof(prename))] + name[0..1];
+        new_name = prename[random(sizeof(prename))] + name[0..0];
         command("say 从今以後你的法名叫做" + new_name + "。");
         command("smile");
         this_player()->delete_temp("pending/join_bonze");
