@@ -3,7 +3,7 @@
 
 // natured.c
 
-#define TIME_TICK (time()*60)
+#define TIME_TICK (time()*10)
 
 nosave int current_day_phase;
 mapping *day_phase;
