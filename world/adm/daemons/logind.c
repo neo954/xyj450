@@ -76,7 +76,7 @@ void logon(object ob)
 {
 
     cat(BANNER);
-    write("            Welcome to Xi You Ji! Select GB or BIG5 (gb/big5):");
+    write("            Welcome to Xi You Ji!");
     input_to( (: encoding :), ob );
 }
 
@@ -88,16 +88,7 @@ private void encoding(string arg, object ob)
    int ii;
    int encode;
 
-   if(arg[0..0]=="b" || arg[0..0]=="B")
-      encode = 1;
-   else {
-      encode = 0;
-   }
-
-   if(encode==0)
-       write("\nUse GB encoded Chinese.\n");
-   else
-       write("\nUse BIG5 encoded Chinese.\n");
+   encode = 0;
 
    ob->set_encoding(encode);
 
