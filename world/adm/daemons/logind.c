@@ -76,7 +76,8 @@ void logon(object ob)
 {
 
     cat(BANNER);
-    write("            Welcome to Xi You Ji!");
+    write("       Welcome to Xi You Ji\n");
+    write("                                             Press Enter to continue...");
     input_to( (: encoding :), ob );
 }
 
