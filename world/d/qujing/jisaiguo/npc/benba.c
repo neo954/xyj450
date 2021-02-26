@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/1/1997
 
 inherit NPC;
@@ -17,8 +17,8 @@ void create()
   set("attitude", "heroism");
   set("combat_exp", 50000);
 
-  set_skill("force",  50); 
-  set_skill("spells", 50); 
+  set_skill("force",  50);
+  set_skill("spells", 50);
   set_skill("unarmed",50);
   set_skill("sword",  50);
   set_skill("dodge",  50);
@@ -58,14 +58,14 @@ void autofight(object me, object ob)
     return;
   if (! living(me))
     return;
-   
+
   message_vision("$N对$n叫道：哪来的鸟贼人！\n",me,ob);
   message_vision("$N揪住$n就打了起来！\n\n",me,ob);
 
   me->fight_ob(ob);
   ob->fight_ob(me);
   remove_call_out("check_result");
-  call_out("check_result", 1, me, ob);  
+  call_out("check_result", 1, me, ob);
 }
 
 int check_result(object me, object ob)
@@ -102,7 +102,7 @@ int check_result(object me, object ob)
     tie = new ("/d/qujing/jisaiguo/obj/tie");
     tie->move(ob);
     message_vision ("$N交给$n一封帖。\n",me,ob);
-    
+
   }
 
   if (( (int)ob->query("kee")*100/his_max_kee)<=50)
@@ -110,7 +110,7 @@ int check_result(object me, object ob)
     message_vision ("$N对$n发出一阵狂笑。\n",me,ob);
   }
 
-  return 1;  
+  return 1;
 }
 
 void die()
