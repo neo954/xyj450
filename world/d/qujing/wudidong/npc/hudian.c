@@ -72,12 +72,3 @@ void greeting(object me)
       return;
     }
 }
-
-
-
-
-
-
-
-
-
