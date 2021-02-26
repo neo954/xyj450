@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // eval.c
 // written by mon 4/21/98
 
@@ -14,7 +14,7 @@ int main(object me, string str)
      seteuid(getuid());
      if(str) this_player()->force_me(str);
      end=eval_cost();
-     
+
      write("\nEvaluation Cost: "+(start-end)+" ("+start+" -> "+end+")\n");
 
      return 1;
