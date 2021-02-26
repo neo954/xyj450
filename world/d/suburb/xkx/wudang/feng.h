@@ -1,5 +1,5 @@
-// feng.h 
-// by Marz 
+// feng.h
+// by Marz
 
 #include <ansi.h>
 
@@ -15,7 +15,7 @@ int look_feng(string arg)
 
                       ^
                      ^ ^
-                   @@@__^    
+                   @@@__^
                     ^ @@@__
                    ^   ^  ^
 
@@ -38,7 +38,7 @@ int look_feng(string arg)
 		message_vision(HIY"$N一个趔趄摔了一跤！还好，只伤了些皮骨，没有滚下去。\n\n"NOR, me);
 		me->receive_damage("kee", 30+4*random((int)me->query("age")));
 		me->receive_damage("gin", 50);
-	}else // bad luck 
+	}else // bad luck
 	{
 		message_vision(HIR"$N光顾着抬头看天，一不留神脚下踏了个空，... 啊...！\n\n"NOR, me);
 		tell_object(me, HIR"你控制不住地直往山下滚，只觉得浑身无处不疼，痛得要晕死过去。\n\n"NOR);
