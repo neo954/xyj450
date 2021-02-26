@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /changan/southseashore.c
 //cglaem...12/12/96.
 #include <ansi.h>
