@@ -122,5 +122,3 @@ int checking(object me, object ob)
         }
         return 1;
 }
-
-
