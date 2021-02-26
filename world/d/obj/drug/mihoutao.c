@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // mihoutao.c 猕猴桃
 
 #include <ansi.h>
@@ -17,7 +17,7 @@ void init()
     set("no_give","这么珍贵的药，哪能随便给人？\n");
     set("no_drop","这么宝贵的丹药，扔了多可惜呀！\n");
     set("no_sell","凡人哪里知道"+this_object()->query("name")+"的价值？还是自己留着吧。\n");
-  }                                    
+  }
   add_action("do_eat", "eat");
 }
 
@@ -33,17 +33,17 @@ void create()
     set("value", 5000);
     set("drug_type", "补品");
   }
-  
+
   setup();
 }
 
 int do_eat(string arg)
 {
   object me = this_player();
-  
+
   if (!id(arg))
     return notify_fail("你要吃什么？\n");
-  
+
   me->set("food", (int)me->max_food_capacity());
   if((int)me->query("max_force")<10*(int)me->query_skill("force")){
     me->add("max_force",1);
@@ -52,7 +52,7 @@ int do_eat(string arg)
     me->add("max_mana",1);
   }
   message_vision(HIG "$N吃下一颗弥猴桃，忍不住抓耳挠腮，高兴得直想翻跟头！ \n" NOR, me);
-  
+
   destruct(this_object());
   return 1;
 }
