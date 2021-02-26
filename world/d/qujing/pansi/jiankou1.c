@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 11/16/1997
 
 inherit ROOM;
@@ -38,7 +38,7 @@ int do_jump ()
   {
     message_vision ("$N鼓足勇气纵身一跃，却如断线风筝一般落了下去。\n",who);
     who->move(__DIR__"jiandi");
-    who->unconcious();    
+    who->unconcious();
     return 1;
   }
   message_vision ("$N胆颤心惊地掂脚一跳，嗖地一声跃了过去。\n",who);
