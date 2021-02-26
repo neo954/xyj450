@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 26 1997
 
 inherit ITEM;
@@ -69,7 +69,7 @@ int do_lift (string arg)
   }
   me->move(who);
   if (environment(me) != who)
-  {    
+  {
     message_vision("$N憋红了脸一使劲，$n只是晃了一晃。\n",who,me);
     return 1;
   }
