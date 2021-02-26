@@ -185,4 +185,3 @@ int do_loan(string arg)
         return 1;
 
 }
-
