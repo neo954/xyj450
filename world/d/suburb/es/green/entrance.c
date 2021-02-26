@@ -18,9 +18,9 @@ LONG
         ])
 	);
         create_door("north","大石门","south", DOOR_CLOSED);
-        set("item_desc",([ 
+        set("item_desc",([
         "painting":"这是一副八卦阵图,图下面有一行模糊的小字：八卦古阵\n"
-        ]) 
+        ])
         );
 
         set("no_clean_up",0);
@@ -29,7 +29,7 @@ LONG
 
 int valid_leave(object me,string dir)
 {
-        if ( dir == "east" && me->query("combat_exp") < 100000 ) 
+        if ( dir == "east" && me->query("combat_exp") < 100000 )
                 return notify_fail("你向石洞走去，忽然一阵狂风涌至，你抵受不住，只好退了回来\n");
         if ( dir == "east" ) {
 		tell_room(environment(me),(string)me->query("name")+
