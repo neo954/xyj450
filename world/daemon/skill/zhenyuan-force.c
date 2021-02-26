@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhenyuan-force.c  【镇元神功】
 inherit FORCE;
 
 int valid_enable(string usage) { return usage=="force"; }
 
-int valid_learn(object me) 
+int valid_learn(object me)
 {
    if( (int)me->query_skill("force", 1) < 10 )
 //     || (int)me->query_skill("force", 1) <= (int)me->query_skill("zhenyuan-force", 1) )
