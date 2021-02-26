@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // cleanup.c
 
 inherit F_CLEAN_UP;
@@ -10,7 +10,7 @@ int main(object me, string str)
    object /*ob,where,*/ *ob_list;
    int old_size, i;
 
-   if (!str) return notify_fail("指令格式：cleanup <档名>\n"); 
+   if (!str) return notify_fail("指令格式：cleanup <档名>\n");
 
    str = resolve_path(me->query("cwd"), str);
    ob_list = children(str);
