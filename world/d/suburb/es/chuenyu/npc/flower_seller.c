@@ -18,7 +18,7 @@ void create()
         set_skill("throwing", 100);
 
         set("inquiry", ([
-                "小娟" : "这要到黑松山去问。", 
+                "小娟" : "这要到黑松山去问。",
         ]) );
         set("chat_chance", 5);
         set("chat_msg", ({
