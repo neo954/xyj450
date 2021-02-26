@@ -23,4 +23,3 @@ notify_fail("你的法力不够了！\n");
 
         return 1;
 }
-
