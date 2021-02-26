@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 
 void kick();
@@ -28,7 +28,7 @@ void init()
 int do_kick(string arg)
 {
    object ob;
-   
+
    if(arg=="stone") {
      message_vision("$N一脚踢到大石头上，痛的哇哇乱叫！\n\n", this_player());
      message("vision", "顽石动了动，竟站了起来！\n\n", environment());
