@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /moon/wroom.c
 //cglaem...12/13/96.
 
@@ -19,7 +19,7 @@ LONG);
 
   set("no_fight", 1);
   set("item_desc", ([ /* sizeof() == 1 */
-  "bed" : "睡觉用的床铺(gosleep,gobed,bed)。 
+  "bed" : "睡觉用的床铺(gosleep,gobed,bed)。
 ",
 ]));
   set("exits", ([ /* sizeof() == 1 */
