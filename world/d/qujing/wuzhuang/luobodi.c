@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //luobodi.c
 
 inherit ROOM;
@@ -14,13 +14,13 @@ void create ()
 来种蔬菜瓜果。这里是萝卜地。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "north" : __DIR__"huludi",
      "southeast" : __DIR__"huangguadi",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      "/d/obj/food/carrot" : 3,
    ]));
