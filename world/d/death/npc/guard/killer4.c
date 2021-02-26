@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // hell_guard.c
 
 #include <ansi.h>
@@ -30,7 +30,7 @@ void create()
    set("cor", 30);
    set("cps", 30);
 
-   
+
    set("combat_exp", 250000);
 
    set("chat_chance", 15);
