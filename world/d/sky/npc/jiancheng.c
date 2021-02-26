@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
- 
+
+
 inherit NPC;
 int give_horse();
 void create()
 {
-   set_name("监丞", ({"jian cheng"})); 
+   set_name("监丞", ({"jian cheng"}));
         set("gender", "男性" );
    set("long", "御马监监丞。\n");
         set("age",40);
@@ -29,7 +29,7 @@ void create()
         setup();
         carry_object("/d/obj/cloth/xianpao")->wear();
 }
- 
+
 int give_horse()
 {
    object me, who, horse;
