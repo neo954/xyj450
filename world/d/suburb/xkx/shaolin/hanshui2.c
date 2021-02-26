@@ -72,7 +72,7 @@ void check_trigger()
         else
             message("vision", "ERROR: boat not found\n", this_object() );
     }
-    else 
+    else
         message("vision", "岸边一只渡船上的老艄公说道：正等着你呢，上来吧。\n",
             this_object() );
 }
@@ -118,7 +118,7 @@ void close_passage()
     if( room = find_object(__DIR__"duchuan") ) {
         room->delete("exits/out");
         message("vision","艄公把踏脚板收起来，把扁舟驶向江心。\n", room);
-        room->delete("yell_trigger"); 
+        room->delete("yell_trigger");
     }
 }
 
@@ -156,6 +156,6 @@ void reset()
 
     ::reset();
     //if( room = find_object(__DIR__"duchuan") )
-        //room->delete("yell_trigger"); 
+        //room->delete("yell_trigger");
 }
 */
