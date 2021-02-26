@@ -54,33 +54,33 @@ void create()
         	carry_object(__DIR__"seven_belt")->wear();
         	carry_object(__DIR__"green_dress")->wear();
       }
-   
+
 void attempt_apprentice(object ob)
  {
-	if( ((int)ob->query("per") < 25)) 
+	if( ((int)ob->query("per") < 25))
           {     command("say 入我派者，需人品文采，无一不是上上之选。" +
               RANK_D->query_respect(ob) + "的资质不宜！");
                return; }
-                         
-        if (  ((int)ob->query_skill("literate",1) < 50) ) 
-	  {	command("say 入我派者，需人品文采，无一不是上上之选。" + 
+
+        if (  ((int)ob->query_skill("literate",1) < 50) )
+	  {	command("say 入我派者，需人品文采，无一不是上上之选。" +
               RANK_D->query_respect(ob) + "的文采不宜！");
 		return;	}
 
 	if((string)ob->query("title")!="普通百姓")
        	 {
 	    command("chat "+ob->query("title")+ob->query("nickname")+
-            ob->query("name")+"要叛师！！！");	 
+            ob->query("name")+"要叛师！！！");	
             command("grin");
 	    kill_ob(ob);
 	    return;
 	 }
 
 	command("smile");
-	command("say 很好�" + RANK_D->query_respect(ob) + 
+	command("say 很好�" + RANK_D->query_respect(ob) +
         "多加努力�他日必定有成。\n");
 	command("recruit " + ob->query("id") );}
- 
+
 void recruit_apprentice(object ob)
          {
         	if( ::recruit_apprentice(ob) )
