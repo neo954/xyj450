@@ -57,4 +57,3 @@ string exert_function_file(string func)
 {
 	return __DIR__"hamagong/" + func;
 }
-
