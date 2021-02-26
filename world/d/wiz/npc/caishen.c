@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 // caishen.c, weiqi...97/12/21.
 //财神爷赵公明, this guy is used to steal money from players.
@@ -26,7 +26,7 @@ void create()
    set("max_kee", 500);
    set("max_sen", 300);
    set("max_force", 300);
-   
+
    set("str", 30);
    set("per", 10+random(15));
 
@@ -43,17 +43,17 @@ void create()
 }
 
 void init()
-{       
+{
         if(!clonep()) return;
 
    ::init();
 
-   call_out ("steal_money", 60);     
+   call_out ("steal_money", 60);
 }
 
 void steal_money()
 {//this function checks who has too many money.
-   
+
     if(!player || i>=sizeof(player) || i<0) {
    player = users();
    i=0;
@@ -72,7 +72,7 @@ void check_one(object player)
    int myexp, allowed;
    int removed;
    int cash_a, gold_a;
-   object cash, gold;   
+   object cash, gold;
 
         if(!player) return;
 
@@ -91,13 +91,13 @@ void check_one(object player)
         if(myexp<1) myexp=1;
         if(myexp>10) myexp=10;
         allowed=myexp*200;
-        //each 10-year can have 200 gold, range 200-2000 gold. 
+        //each 10-year can have 200 gold, range 200-2000 gold.
 
                    cash = present("thousand-cash_money", player );
                    gold = present("gold_money", player);
                    total_gold = 0;
                    if( cash ) total_gold += 10*cash->query_amount();
-                   if( gold ) total_gold += gold->query_amount();   
+                   if( gold ) total_gold += gold->query_amount();
 
         removed=total_gold-allowed;
         if(removed>0) {
@@ -124,7 +124,7 @@ void check_one(object player)
 
             message_vision("\n只见一道金光闪过，财神爷赵公明跳了出来！\n赵公明对$N拱了拱手道：带钱太多恐有遗失，我已替您保管了一部份。\n", player);
             log_file("MONEY_RESET", ctime( time() )+"：财神爷替"+player->query("name")+"("+player->query("id")+")"+"保管了"+removed+"两黄金。\n");
-            MONITOR_D->report_system_object_msg (player, "有"+removed+"两黄金上缴财神爷。"); 
-        }   
+            MONITOR_D->report_system_object_msg (player, "有"+removed+"两黄金上缴财神爷。");
+        }
      }
 }
