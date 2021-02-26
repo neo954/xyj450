@@ -52,7 +52,7 @@ int climbing(string arg)
         write("你不可以爬"+arg+"\n");
         return 1;
         }
-        
+
 }
 
 int fliping(object me)
