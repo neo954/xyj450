@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create ()
 怕寒冷，是以堂中冷冷清清，与大殿形成鲜明的对比。
 LONG);
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
   "/d/sea/npc/gonge" : 1,
 ]));
    set("cold", 1);
