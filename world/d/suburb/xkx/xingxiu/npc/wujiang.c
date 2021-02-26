@@ -36,4 +36,3 @@ int accept_fight(object me)
         command("say 老夫从不枉杀无名之人。");
         return 0;
 }
-
