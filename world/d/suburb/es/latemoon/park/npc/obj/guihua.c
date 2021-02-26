@@ -19,4 +19,4 @@ void create()
         set_amount(10);
         init_throwing(1);
         setup();
-}       
+}
