@@ -45,8 +45,8 @@ void init()
 	room->delete("exits");
 
 	if ( (fam = ob->query("family"))
-	&& fam["family_name"] == "少林派" 
-	&& ob->query("guilty") != 1 )  
+	&& fam["family_name"] == "少林派"
+	&& ob->query("guilty") != 1 )
 	ob->set("guilty",3);
 
 	ob->set("startroom", "/d/suburb/xkx/shaolin/jlyuan");
@@ -65,7 +65,7 @@ void trapping(object ob, object room)
 	if ( !living(ob) ) return;
 
 	message_vision(HIY "\n僧兵们把$N从陷井里起了出来，送进了戒律院！\n\n\n" NOR, ob);
-     	ob->move(__DIR__"jlyuan"); 
+     	ob->move(__DIR__"jlyuan");
 
 	room->set("exits/south", __DIR__"shulin"+(random(8)+6));
 	room->set("exits/north", __DIR__"shulin"+(random(8)+6));
