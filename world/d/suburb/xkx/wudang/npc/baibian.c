@@ -33,14 +33,14 @@ void create()
 
 	set("combat_exp", 25000);
 
-	set_skill("force", 43); 
+	set_skill("force", 43);
 	set_skill("unarmed", 51);
 	set_skill("sword", 37);
 	set_skill("dodge", 59);
 	set_skill("parry", 40);
-	set_skill("taiji-quan", 42); 
-	set_skill("taiji-jian", 41); 
-	set_skill("taiji-shengong", 40); 
+	set_skill("taiji-quan", 42);
+	set_skill("taiji-jian", 41);
+	set_skill("taiji-shengong", 40);
 	set_skill("tiyunzong", 53);
 
 	map_skill("force", "taiji-shengong");
@@ -60,7 +60,7 @@ void create()
 
 	carry_object("/d/obj/clone/misc/mask");
 	add_money("gold", 3);
-        
+
 }
 
 void init()
@@ -107,7 +107,7 @@ void pretending(object ob)
 {
 
 	object me = this_object();
- 
+
 	if(!ob || !userp(ob) || environment(ob) != environment()) return;
 
 	switch( random(3) ) {
@@ -120,7 +120,7 @@ void pretending(object ob)
                        command("hi " + ob->query("id"));
                        command("exert heal");
                        command("exert recover");
-		       break; 
+		       break;
 		case 2:
                        command("stare " + ob->query("id"));
 		       me->fight_ob(ob);
