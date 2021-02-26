@@ -48,4 +48,3 @@ setup();
         carry_object("/d/obj/armor/gujia")->wear();
         carry_object("/d/obj/weapon/staff/budd_staff")->wield();
 }
-
