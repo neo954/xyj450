@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // wuya-guai.c...weiqi, 97.09.15.
 
 inherit NPC;
@@ -29,7 +29,7 @@ void create()
    set_skill("parry", 50);
    set_skill("blade", 50);
    set_skill("bingpo-blade", 50);
-   set_skill("force", 50);   
+   set_skill("force", 50);
    set_skill("ningxie-force", 50);
    set_skill("literate", 30);
    set_skill("spells", 50);
@@ -45,7 +45,7 @@ void create()
    set("force", 400);
    set("max_force", 400);
    set("mana", 500);
-   set("max_mana", 400);   
+   set("max_mana", 400);
    set("force_factor", 35);
    set("mana_factor", 20);
 
@@ -57,7 +57,7 @@ void create()
      "here" : "管它呢！反正比不上我们大雪山。\n",
      "怎么去" : "飞过去最快，走也能到。\n",
      "怎么走" : "好像是从昆仑山往北走。\n",
-     "怎么飞" : (: help_fly :),      
+     "怎么飞" : (: help_fly :),
      "大雪山" : (: give_map :),
    ]) );
 
@@ -135,8 +135,8 @@ int do_yes(string arg)
    object me;
 
    me=this_player();
-   
-   if(me->query_temp("need_map")) 
+
+   if(me->query_temp("need_map"))
    {
      message_vision("$N答道：想去！\n\n", me);
      if( query("no_map") == 0 )
