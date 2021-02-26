@@ -5,7 +5,7 @@ inherit SSERVER;
 int exert(object me, object target, int amount)
 {
 	int force, lvl;
-        if( target != me ) return 
+        if( target != me ) return
 	notify_fail("你只能用真气将自己体内毒素逼出。\n");
         force =(int) me->query("force") - (int) me->query("max_force");
 	if( force <=100) return notify_fail("你的真气不足。\n");
@@ -22,4 +22,4 @@ int exert(object me, object target, int amount)
         return 1;
 	}
 }
- 
+
