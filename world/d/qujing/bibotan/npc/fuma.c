@@ -50,4 +50,3 @@ int recognize_apprentice(object who)
    }
    return 0;
 }
-
