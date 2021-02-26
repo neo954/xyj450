@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// phone.c 
+
+// phone.c
 // it will send you to someone place
 // usage: dial <someone>
 
@@ -52,18 +52,18 @@ int do_dial(string arg)
 
    if (!arg)
    {
-     return notify_fail("你要去哪里？\n");   
+     return notify_fail("你要去哪里？\n");
    }
    if ( file_size("/u/"+arg+"/workroom.c")<0)
    {
       message_vision("空间传送器对$N说道：没有这家。\n",me);
-         return notify_fail(""); 
+         return notify_fail("");
    }
 
       message_vision("空间传送器对$N说道：接通啦！\n", me);
-   
+
       me->move("/u/"+arg+"/workroom.c");
-      
+
       message_vision("空间传送器对$N说道：你到了。\n", me);
    return 1;
 }
