@@ -31,7 +31,7 @@ void create()
 	w_or = me->query("weapon/or");
 	w_lv = me->query("weapon/lv");
 	set_name(w_name, ({w_id}));
-	set("unit", "柄");   
+	set("unit", "柄");
 	set("no_get",1);
 	set("no_drop",1);
 	set_desc(w_lv,w_or,w_name);
@@ -50,7 +50,7 @@ void create()
 			set("material", "bamboo");
 			break;
 		default :
-		} 
+		}
 	set("wield_msg", "$N往腰中一摸，刷的抖出了一把"+w_name+"\n");
 	set("unwield_msg", "$N手中"+w_name+"一抖，眨眼间卷回腰间不见了影踪。\n");
 	init_whip(w_lv * 10 + 2);
@@ -107,7 +107,7 @@ int do_duanlian(object weapon)
 		message_vision(HIY "鞭身忽的一亮，一道金光隐入$N的"+w_name+"，不见了！\n" NOR,me);
 		message_vision(HIG "$N的"+w_name+"的等级提高了！\n" NOR, me);
 		weapon=this_object();
-		if(weapon->query("equipped") ) 
+		if(weapon->query("equipped") )
 			weapon->unequip();
 		reload_object( weapon );
 		me->set("weapon/value",0);
