@@ -6,7 +6,7 @@ void create()
         set("long",
                 "一个高大的，全身通红的巨人\n");
         set("age", 51);
-        
+
         set("cor", 37);
 
         set("combat_exp", 2000000);
