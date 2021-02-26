@@ -32,4 +32,3 @@ void init()
         add_action("do_buy", "buy");
         add_action("do_list", "list");
 }
-
