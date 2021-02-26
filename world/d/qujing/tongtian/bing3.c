@@ -90,4 +90,3 @@ void testing (object who, object where)
   }
   who->move(__DIR__"hedi");
 }
-
