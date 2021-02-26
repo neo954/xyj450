@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 2/8/1997
 
 inherit ROOM;
@@ -53,31 +53,31 @@ int do_take (string arg)
   if (! arg)
     return notify_fail ("您要拿什么？\n");
   if (arg == "axe")
-    ob = new ("/d/obj/weapon/standard/axe");    
+    ob = new ("/d/obj/weapon/standard/axe");
   else if (arg == "blade")
-    ob = new ("/d/obj/weapon/standard/blade");    
+    ob = new ("/d/obj/weapon/standard/blade");
   else if (arg == "dagger")
-    ob = new ("/d/obj/weapon/standard/dagger");    
+    ob = new ("/d/obj/weapon/standard/dagger");
   else if (arg == "fork")
-    ob = new ("/d/obj/weapon/standard/fork");    
+    ob = new ("/d/obj/weapon/standard/fork");
   else if (arg == "hammer")
-    ob = new ("/d/obj/weapon/standard/hammer");    
+    ob = new ("/d/obj/weapon/standard/hammer");
   else if (arg == "mace")
-    ob = new ("/d/obj/weapon/standard/mace");    
+    ob = new ("/d/obj/weapon/standard/mace");
   else if (arg == "rake")
-    ob = new ("/d/obj/weapon/standard/rake");    
+    ob = new ("/d/obj/weapon/standard/rake");
   else if (arg == "spear")
-    ob = new ("/d/obj/weapon/standard/spear");    
+    ob = new ("/d/obj/weapon/standard/spear");
   else if (arg == "staff")
-    ob = new ("/d/obj/weapon/standard/staff");    
+    ob = new ("/d/obj/weapon/standard/staff");
   else if (arg == "stick")
-    ob = new ("/d/obj/weapon/standard/stick");    
+    ob = new ("/d/obj/weapon/standard/stick");
   else if (arg == "sword")
-    ob = new ("/d/obj/weapon/standard/sword");    
+    ob = new ("/d/obj/weapon/standard/sword");
   else if (arg == "throwing")
-    ob = new ("/d/obj/weapon/standard/throwing");    
+    ob = new ("/d/obj/weapon/standard/throwing");
   else if (arg == "whip")
-    ob = new ("/d/obj/weapon/standard/whip");    
+    ob = new ("/d/obj/weapon/standard/whip");
   else
     return notify_fail ("您要拿什么？\n");
   message_vision ("$N从架子上拿起$n。\n",who,ob);
