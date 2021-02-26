@@ -33,13 +33,13 @@ void create()
 
 //	set_heart_beat(0);
 
-	set_skill("force", 30); 
+	set_skill("force", 30);
 	set_skill("unarmed", 30);
 	set_skill("dodge", 30);
 	set_skill("parry", 30);
 
 	setup();
-        
+
 }
 
 int accept_fight(object ob)
