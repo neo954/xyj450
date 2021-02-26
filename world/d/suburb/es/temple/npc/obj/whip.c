@@ -19,6 +19,6 @@ void create()
      set("unwield_msg", "$N将手中的$n放下斜插在背后的腰带上。\n");
      }
      init_whip(10);
-    
+
      setup();
 }
