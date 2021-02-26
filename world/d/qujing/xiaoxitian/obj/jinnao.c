@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 12/17/1997
 
 #include <ansi.h>
 #include <weapon.h>
- 
+
 inherit ITEM;
- 
+
 void create()
 {
   set_name("金铙",({"jin nao", "nao"}));
@@ -24,7 +24,7 @@ void create()
   set("no_fight", 1);
   set("no_magic", 1);
   setup();
-} 
+}
 
 void init ()
 {
