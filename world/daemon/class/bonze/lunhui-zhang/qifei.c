@@ -121,4 +121,3 @@ int remove_effect(object me, object target, int amount)
    message_vision(GRN"$N和$n的「枪杖齐飞」招式一收，那一团团的杀气顿时消失，周围的人也都松了一口气。\n"NOR, me, target);
    return 0;
 }
-
