@@ -8,7 +8,7 @@ inherit F_CLEAN_UP;
 inherit ROOM;
 
 string 	*seat = ({ "north", "west", "south", "east" });
-mapping chinese_seat = ([ 
+mapping chinese_seat = ([
 	"north": "北边",
 	"west" : "西边",
 	"south": "南边",
@@ -35,7 +35,7 @@ mapping	pl = allocate_mapping(4),
 	
 string	dealer;
 int	*allow_playbid = allocate(4);
-int 	*oldcards = allocate(52), 
+int 	*oldcards = allocate(52),
 	*newcards = allocate(52);
 
 int pl_count();
@@ -119,7 +119,7 @@ void play_init()
 void round_init(string rw)
 {
 	int i;
-	for (i = 0; i < 4; i++) 
+	for (i = 0; i < 4; i++)
 		roundcards[seat[i]] = -1;
 	roundcard_count = 0;
 	round_order = PIG_D->order_turn(rw);
@@ -144,12 +144,12 @@ void init()
 string picks_str()
 {
 	int i;
-        string r = "", t; 
+        string r = "", t;
         for (i = 0; i < 4; i++) {
 		t = "";
 		if (objectp(pl[seat[i]]))
                 	t = pl[seat[i]]->query("name");
-		else 
+		else
 			t = chinese_seat[seat[i]];
                 if (pick_count[seat[i]] > 0) {
                         t += "捡了下面这些牌：\n";
@@ -177,7 +177,7 @@ string table_str(string dir)	// what's going on in table ?
 	string r = "", z = "";
 
 	if (pig_stage == PIG_PLAYING && pl_count() == 4) { // if in playing mode
-		if (dir != "north" && dir != "west" && dir != "south" 
+		if (dir != "north" && dir != "west" && dir != "south"
 			&& dir != "east")
 			rseat = PIG_D->order_turn("north");
 		else
@@ -185,19 +185,19 @@ string table_str(string dir)	// what's going on in table ?
 //		r = "桌上面正在激烈的拱着！！\n";
 	
 		if (roundcard_count < 4)
-			r = sprintf("现在是第%s轮，该由%s出牌。\n", 
-			chinese_number(round_no), 
+			r = sprintf("现在是第%s轮，该由%s出牌。\n",
+			chinese_number(round_no),
 			pl[round_order[roundcard_count]]->query("name"));
 		if (bidcard_str != "")
 			r += "卖了的牌：" + bidcard_str + "\n\n";
 		else
 			r += "没有人卖牌。\n";
 		r = sprintf("%s%24s（%s）\n", r, "", pl[rseat[2]]->query("name"));	// writes north name
-		r = sprintf("%s%26s%s\n", r, "", 
+		r = sprintf("%s%26s%s\n", r, "",
 			PIG_D->card_str(roundcards[rseat[2]]));
-		r = sprintf("%s%4s%16s%6s%6s%6s%s\n", r, "", "（" + 
-			pl[rseat[3]]->query("name") + "）", 
-			PIG_D->card_str(roundcards[rseat[3]]), "", 
+		r = sprintf("%s%4s%16s%6s%6s%6s%s\n", r, "", "（" +
+			pl[rseat[3]]->query("name") + "）",
+			PIG_D->card_str(roundcards[rseat[3]]), "",
 			PIG_D->card_str(roundcards[rseat[1]]), "（" +
 			pl[rseat[1]]->query("name") + "）");
 		r = sprintf("%s%26s%s\n", r, "",
@@ -213,7 +213,7 @@ string table_str(string dir)	// what's going on in table ?
                         r += "卖了的牌：" + bidcard_str + "\n\n";
                 else
                         r += "没有人卖牌。\n";
-		for (i = 0; i < 4; i++) 
+		for (i = 0; i < 4; i++)
 			if (objectp(pl[seat[i]])) {
 				if (pl[seat[i]] == server) z = "@"; else z = "";
 				r = sprintf("%s%s的椅子上坐的是：%s(%s)%s。\n", r,
@@ -264,7 +264,7 @@ int do_skip(string arg)
 void after_claim()
 {
 	int i, j, k;
-	for (i = 0; i < roundcard_count; i++) 
+	for (i = 0; i < roundcard_count; i++)
 		if (PIG_D->is_special(roundcards[i]))
 			picks[claimer][pick_count[claimer]++] = roundcards[j];
 	for (i = 0; i < 4; i++)
@@ -292,7 +292,7 @@ int do_claim(string arg)
 		write("你发出全收的要求！等待回音……\n");
 		for (i = 0; i < 4; i++)
 			if (seat[i] != claimer)
-				tell_object(pl[seat[i]], me->query("name") + 
+				tell_object(pl[seat[i]], me->query("name") +
 					"认为他手中的牌都是大的了！\n" +
 					refresh_str(me->query_temp("pigging_seat")) +
 					"请用 claim yes 通过，或者 claim no 否决。\n");
@@ -370,7 +370,7 @@ int do_leave(string arg)
 	else if (server == me) {
 		message_vision("桌长$N不想再拱下去了！\n", me);
 		server = 0;
-		for (i = 0; i < 4; i++) 
+		for (i = 0; i < 4; i++)
 			if (objectp(pl[seat[i]])) {
 				message_vision("$N站了起来。\n", pl[seat[i]]);
 				pl[seat[i]]->delete_temp("pigging_seat");
@@ -392,7 +392,7 @@ void do_assign_cards()	// assign cards to players
 	int i, j, k = 0;
 
 	for (i = 0; i < 13; i++)
-		for (j = 0; j < 4; j++) 
+		for (j = 0; j < 4; j++)
 			cards[seat[j]][i] = newcards[k++];
 	for (i = 0; i < 4; i++) {
 		cards[seat[i]] = sort_array(cards[seat[i]], 1);
@@ -412,7 +412,7 @@ int do_deal(string arg)
 	PIG_D->shuffle(oldcards, newcards, 2);
 
 	for (i = 0; i < 13; i++)
-		for (j = 0; j < 4; j++) 
+		for (j = 0; j < 4; j++)
 			cards[seat[j]][i] = newcards[k++];
 	for (i = 0; i < 4; i++) {
 		cards[seat[i]] = sort_array(cards[seat[i]], 1);
@@ -431,10 +431,10 @@ int do_refresh(string arg)
 	object me = this_player();
 	if (!me->query_temp("pigging_seat"))
 		return notify_fail("你没有在拱猪！\n");
-	if (pig_stage < PIG_BIDDING || 
+	if (pig_stage < PIG_BIDDING ||
 		card_count[me->query_temp("pigging_seat")] < 1)
 		return notify_fail("你手上没有牌！\n");
-	tell_object(pl[(string)me->query_temp("pigging_seat")], 
+	tell_object(pl[(string)me->query_temp("pigging_seat")],
 		"你手上有这些牌：\n" + refresh_str(me->query_temp("pigging_seat")));
 	return 1;
 }
@@ -491,7 +491,7 @@ int do_pass(string arg)
 		return notify_fail("你已经停卖了！\n");
 	passed[me->query_temp("pigging_seat")] = 1;
 	message_vision("$N说道：我停卖！\n", me);
-	for (i = 0; i < 4; i++) 
+	for (i = 0; i < 4; i++)
 		if ((int)passed[seat[i]] == 0)
 			return 1;
 
@@ -508,9 +508,9 @@ void after_play()
 {
 	int i;
 	roundcard_count++;
-	for (i = 0; i < 4; i++) 
+	for (i = 0; i < 4; i++)
 		if (card_count[seat[i]] > 0)
-			tell_object(pl[seat[i]], table_str(seat[i])); 
+			tell_object(pl[seat[i]], table_str(seat[i]));
 	if (roundcard_count > 3)
 		after_round();
 }
@@ -521,7 +521,7 @@ void after_winner(string rw)
 	message_vision("$N的" + PIG_D->card_str(roundcards[rw]) + "最大！\n", pl[rw]);
 	for (i = 0; i < 4; i++)
                 if (PIG_D->is_special(roundcards[seat[i]])) {
-                        picks[rw][pick_count[rw]++] = 
+                        picks[rw][pick_count[rw]++] =
                                 roundcards[seat[i]];
                         if (roundcards[seat[i]] == SPIG) {
 				message_vision("$N得到了猪头！！\n", pl[rw]);
@@ -540,7 +540,7 @@ void after_round()
 	after_winner(rw = PIG_D->card_cmp4(roundcards, SUIT(roundcards[round_order[0]])));
 	round_init(rw);
 	
-	if (round_no++ == 12) 
+	if (round_no++ == 12)
 		auto_play();  // starts auto_play
 }
 void auto_play()
@@ -551,7 +551,7 @@ void auto_play()
 	roundcard_count = 4;
         for (i = 0; i < 4; i++) {
 		card_count[seat[i]] = 0;
-		tell_object(pl[seat[i]], table_str(seat[i])); 
+		tell_object(pl[seat[i]], table_str(seat[i]));
 	}
 	after_winner(PIG_D->card_cmp4(roundcards, SUIT(roundcards[round_order[0]])));
 	after_hand();
@@ -573,15 +573,15 @@ void after_hand()
 	if (collect_all == "")
 		for (i = 0; i < 4; i++) {
 			tscore[seat[i]] += hscore[seat[i]];
-			if (tscore[seat[i]] <= -1000) 
+			if (tscore[seat[i]] <= -1000)
 				pl[seat[i]]->add("pig_head", 1);
 		}
 	else {
 		for (i = 0; i < 4; i++)
-			if (seat[i] != collect_all) 
+			if (seat[i] != collect_all)
 				pl[seat[i]]->add("pig_head", 1);
 	}
-	for (i = 0; i < 4; i++) 
+	for (i = 0; i < 4; i++)
 		if (tscore[seat[i]] <= -1000)
 			message_vision("$N是一头猪！\n", pl[seat[i]]);
 	for (i = 0; i < 4; i++)
@@ -606,15 +606,15 @@ int do_play(string arg)
 		return notify_fail("还没轮到你出牌！\n");
 	if (!arg || (c = PIG_D->is_validcard(arg)) == -1)
 		return notify_fail("你要出哪张牌？\n");
-	for (i = 0; i < card_count[ms]; i++) 
+	for (i = 0; i < card_count[ms]; i++)
 		if (cards[ms][i] == c) {
 			cpos = i; break;
 		}
 	if (cpos == -1)
 		return notify_fail("你手里没有这张牌！\n");
 
-	if (roundcard_count > 0 && (sc = PIG_D->has_suit(cards[ms], 0, 
-		card_count[ms] - 1, SUIT(roundcards[round_order[0]]))) > 0 && 
+	if (roundcard_count > 0 && (sc = PIG_D->has_suit(cards[ms], 0,
+		card_count[ms] - 1, SUIT(roundcards[round_order[0]]))) > 0 &&
 		SUIT(c) != SUIT(roundcards[round_order[0]]))
 		return notify_fail("你不能出这张牌！\n");
 
@@ -628,7 +628,7 @@ int do_play(string arg)
 			if (!allow_playbid[HEART])
 				nbc = 1;
 			break;
-		case DSHEEP : 
+		case DSHEEP :
 			if (!allow_playbid[DIAMOND])
 				nbc = 1;
 			break;
