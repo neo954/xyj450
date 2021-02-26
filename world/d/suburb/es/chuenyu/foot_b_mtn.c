@@ -16,8 +16,8 @@ LONG
           "up" : __DIR__"high_b_mtn",
           ]));
           set("outdoors", "chuenyu");
-          
+
           setup();
           replace_program(ROOM);
 }
-                  
+
