@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
         set_name("金仪彤", ({ "eton","zhin" }) );
