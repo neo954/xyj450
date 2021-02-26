@@ -2,7 +2,7 @@ catch - catch an evaluation error
 
 mixed catch( mixed expr );
 
-mixed catch { ... }; 
+mixed catch { ... };
 
 Note: catch is really a keyword and not an efun.
 
