@@ -12,11 +12,11 @@ void create()
 上的山庄。这里是「西毒」欧阳锋的秘宅，一般人闯进去非死既伤。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
             "east" : __DIR__"shamo4",
             "west" : __DIR__"btshan1",
         ]));
-        set("objects", ([ 
+        set("objects", ([
             __DIR__"npc/ke" : 1,
             __DIR__"npc/snake" : 3,
          ]) );
@@ -34,8 +34,8 @@ int valid_leave(object me, string dir)
         if (objectp(present("ouyang ke", environment(me))))
                 return notify_fail(
 "欧阳克抖开折扇，一伸手挡住了你的去路：叔父正在练功，请改日再来。\n");
-        
-       
+
+
         me->move(__DIR__"btshan1");
         write("欧阳锋弓身伏拳，口内发出「咕咕」的叫声，双目圆睁。\n");
         write("猛然间欧阳锋双腿一蹬，两掌平伸向你打来。\n");
