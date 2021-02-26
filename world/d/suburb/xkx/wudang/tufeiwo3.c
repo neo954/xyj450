@@ -22,7 +22,7 @@ LONG
 
         set("objects", ([
                 __DIR__"npc/tufei1" : 2 ,
-                __DIR__"npc/tufeitou" : 1, 
+                __DIR__"npc/tufeitou" : 1,
         ]));
 
 	setup();
