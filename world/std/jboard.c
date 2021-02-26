@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // jboard.c
 
 #include <ansi.h>
@@ -128,7 +128,7 @@ int do_project(string arg)
    mapping note;
 
    if(!arg) return notify_fail("工作计画请指定一个标题。\n");
-   
+
    note = allocate_mapping(5);
    note["title"] = arg;
    note["owner"] = this_player()->query("id");
