@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit NPC;
 inherit F_MASTER;
@@ -76,7 +76,7 @@ void init()
 {
         add_action("give_quest", "quest");
 }
- 
+
 
 void re_rank(object student)
 {
