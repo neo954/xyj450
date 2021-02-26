@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //snowmaze7.c
 
@@ -28,7 +28,7 @@ LONG);
    //set("item_desc", ([" *** " : " *** \n", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "north" : __DIR__"snowmaze2",
      "south" : __DIR__"snowmaze6",
@@ -37,8 +37,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/***" : 1,
    ]));
@@ -50,7 +50,7 @@ LONG);
 }
 
 void init()
-{       
+{
    object me=this_player();
 
    if( me->query_temp("xmaze7") == 0 )
@@ -61,9 +61,9 @@ void init()
    {
      reset_path(me);
    }
-   
+
    if( check_out(me) )
-   { 
+   {
      if( random(10) < 5 ) me->move(__DIR__"xueshan4");
      else me->move(__DIR__"xueshan3");
    }
