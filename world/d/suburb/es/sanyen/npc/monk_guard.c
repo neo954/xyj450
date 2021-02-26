@@ -59,4 +59,3 @@ int accept_fight(object me)
                 command("say 佛门圣地也是可随意骚扰的么！");
 	return 1;
 }
-
