@@ -75,7 +75,7 @@ void init()
 
 	me = this_player();
 
-	if (!mapp(mine = me->query("family"))) 
+	if (!mapp(mine = me->query("family")))
 		return;
 
 	if(!( room = find_object("/d/suburb/xkx/shaolin/cjlou")) )
@@ -85,9 +85,9 @@ void init()
 	|| ((!present("daoyi chanshi", room)) && (!present("letter", me)))      )
 	{
 		  command("say 大胆狂徒，竟敢杀人闯入藏经阁，看招!\n");
-		  call_out("kill_ob", 0, this_player()); 
+		  call_out("kill_ob", 0, this_player());
 
-	 	  COMBAT_D->do_attack(this_object(), this_player(), query_temp("weapon"));		  
+	 	  COMBAT_D->do_attack(this_object(), this_player(), query_temp("weapon"));		
 		  return;
 	}
 
