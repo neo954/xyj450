@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 // ludongbin.c...weiqi, 98.02.24.
 
@@ -27,7 +27,7 @@ void create()
    set_skill("parry", 80);
    set_skill("sword", 90);
    set_skill("sanqing-jian", 100);
-   set_skill("force", 70);   
+   set_skill("force", 70);
    set_skill("zhenyuan-force", 70);
    set_skill("literate", 120);
    set_skill("spells", 80);
@@ -43,7 +43,7 @@ void create()
    set("force", 1000);
    set("max_force", 800);
    set("mana", 1600);
-   set("max_mana", 800);   
+   set("max_mana", 800);
    set("force_factor", 40);
    set("mana_factor", 40);
 
@@ -51,7 +51,7 @@ void create()
      "name" : "五庄观纯阳子是也。\n",
      "here" : "身在何处？心老普陀。\n",
      "rumors": (: ask_jinguzhou :),
-     "心得" : (: give_book :),      
+     "心得" : (: give_book :),
      "纯阳心得" : (: give_book :),
    ]) );
 
@@ -75,7 +75,7 @@ void attempt_apprentice(object ob)
      {
         command("say 你这个" + RANK_D->query_rude(ob) + "，高升了也不用消遣我嘛！\n");
      }
-     else 
+     else
      {
         command("consider");
         command("say 是你自己要拜的，你师父打上门来我可得拿你挡。\n");
@@ -118,10 +118,10 @@ string give_book()
 
 string ask_jinguzhou()
 {
-   if (this_player() -> query_temp("aware_of_jinguzhou")) 
+   if (this_player() -> query_temp("aware_of_jinguzhou"))
      return "不都对你说了吗，怎么又来问？\n";
    this_player() -> set_temp("aware_of_jinguzhou", 1);
-   command("whisper " + this_player() -> query("id") 
+   command("whisper " + this_player() -> query("id")
      + " 听说紫竹林里藏有如来所赐的紧箍咒。");
    return "有缘者得之，无缘者弃之。就看您的福气了。\n";
 }
