@@ -90,4 +90,3 @@ string ask_spear(object me)
    command("give " + who->query("id") + " spear");
    return "千万记住，兵器只可用来防身，不可滥杀无辜。";
 }
-
