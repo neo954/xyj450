@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // wizlock.c
 
 inherit F_CLEAN_UP;
@@ -28,13 +28,13 @@ int help (object me)
 {
         write(@HELP
 指令格式: wizlock <巫师等级>
- 
+
 限制某个等级以下的使用者进入游戏。
 其中巫师等级分别为 (immortal) (wizard) (arch) (admin), 若要取
 消限制, 则输入 (player).
- 
+
 HELP
 );
         return 1;
 }
- 
+
