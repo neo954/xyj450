@@ -95,4 +95,3 @@ void announce_success(object me,object who)
                chinese_number((i-(i/4)*4)*3)+"时辰的道行！\n");
   who->save();
 }
-
