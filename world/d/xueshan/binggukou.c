@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //binggukou.c
 
@@ -20,7 +20,7 @@ LONG);
    set("item_desc", (["north" : "冰谷中雪雾缭绕，什么也看不清。\n", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "south" : __DIR__"bingchuan",
      "north" : __DIR__"bingya-up7",
@@ -29,8 +29,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/xunshi" : 1,
    ]));
@@ -58,8 +58,8 @@ int do_climb(string arg)
    }
    message_vision("$N手足并用，攀住冰崖向下爬了过去。\n", me);
    me->move(__DIR__"bingya-up7");
-   message_vision("$N气喘呼呼地从上面爬了过来。\n", me);   
-   return 1;    
+   message_vision("$N气喘呼呼地从上面爬了过来。\n", me);
+   return 1;
 }
 
 int valid_leave(object me, string dir)
