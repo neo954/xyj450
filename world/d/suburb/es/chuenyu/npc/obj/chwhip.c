@@ -21,4 +21,3 @@ void create()
         set("unwield_msg", "$N将手中的$n束在腰间。\n");
         setup();
 }
-
