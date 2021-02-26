@@ -9,7 +9,7 @@ void create()
         set("gender", "男性");
         set("age", 27);
         set("long",
-                
+
 "僵尸侍者是林忌的弟子，着一身黑色的道袍\n"
 );
         set("combat_exp", 1400);
@@ -35,17 +35,17 @@ void create()
         set("mana_factor", 5);
 
         set("inquiry", ([
-                "谷衣心法": 
+                "谷衣心法":
 "谷衣心法是我茅山派为对抗邪魔外道所创的内功心法。\n",
-                "茅山派": 
+                "茅山派":
 "我茅山派自张天师开山立派至今，世世代代皆以降妖伏魔为己任。\n"
         ]) );
         set("chat_chance", 25);
         set("chat_msg", ({
                 "僵尸侍者说道：我们茅山派实力最强！谁敢欺负我们？\n",
                 "僵尸侍者说道：大家快加入茅山派吧! \n",
-                (:random_move :)        
-        }) ); 
+                (:random_move :)
+        }) );
 
         set("chat_chance_combat", 70);
         set("chat_msg_combat", ({
@@ -54,7 +54,7 @@ void create()
                 (: cast_spell, "feeblebolt" :),
                 (: cast_spell, "invocation" :),
                 (: command("cast manimate on corpse") :),
-                (: command("cast animate on corpse") :),         
+                (: command("cast animate on corpse") :),
         }) );
 
         create_family("茅山派", 6, "弟子");
@@ -71,7 +71,7 @@ void create()
         set_skill("gouyee", 20);
 
         set_skill("taoism", 20);
-        set_skill("necromancy", 20);    
+        set_skill("necromancy", 20);
 
         map_skill("spells", "necromancy");
 
@@ -95,4 +95,4 @@ int accept_fight(object me)
         command("say 茅山派不和别派的人过招。");
         return 0;
 }
- 
+
