@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // baguazhen.c
 //【八卦阵法】weiqi... 980304
 //can consider future development of 阵法.
