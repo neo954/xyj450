@@ -57,7 +57,7 @@ int do_ketou()
 
 	message_vision("$N虔诚地跪下来，在如来佛祖面前磕头。\n", me);
 
-	if ( random(100) == 37 
+	if ( random(100) == 37
 	&& !present("silk", me)
 	&& query("book_count") >= 1)
 	{
@@ -67,8 +67,8 @@ int do_ketou()
 		tell_object(me, "突然你面前，啪地一声掉下一束羊皮线穿起来的薄绢！\n");
 	}
 
-	if ((int)me->query_skill("force", 1) >= 30 
-	&& (int)me->query_skill("force", 1) <= 100 
+	if ((int)me->query_skill("force", 1) >= 30
+	&& (int)me->query_skill("force", 1) <= 100
 	&& present("silk", me) )
 	{
 		me->receive_damage("gin", 20);
