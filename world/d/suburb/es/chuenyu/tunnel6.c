@@ -13,8 +13,8 @@ LONG
         "north" : __DIR__"tortureroom2",
           "east" : __DIR__"tunnel5",
           ]));
-          
+
           setup();
           replace_program(ROOM);
-          
+
 }
