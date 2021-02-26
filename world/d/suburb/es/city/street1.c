@@ -12,7 +12,7 @@ void create()
 府和午门。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
 		"north":	__DIR__"biaoju",
 		"south":	__DIR__"street2",
 		"west":		__DIR__"shenwumen",
