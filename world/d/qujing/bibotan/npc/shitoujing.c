@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 void create()
 {
@@ -52,7 +52,7 @@ int heal_up()
 void leave()
 {
    object stone;
-   
+
    this_object()->add("time", 1);
    if( (int)this_object()->query("time") >= 8 ) {
         message("vision",name() + "伸了个懒腰，又躺倒在地下。\n", environment(),this_object() );
