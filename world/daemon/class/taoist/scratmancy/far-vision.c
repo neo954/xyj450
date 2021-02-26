@@ -12,18 +12,18 @@ int scribe(object me, object sheet)
         if((int)me->query_skill("scratching") < 50 )
                 return notify_fail("你的符之术不够高！\n");
 
-        if( sheet->name() != "桃符纸" ) 
+        if( sheet->name() != "桃符纸" )
                 return notify_fail("天通眼符要画在桃符纸上！\n");
 
-        if( (int)me->query("mana") < 5 ) 
+        if( (int)me->query("mana") < 5 )
                 return notify_fail("你的法力不够了！\n");
 
         sheet->set_amount((int)sheet->query_amount() - 1);
         me->save();
         seteuid( geteuid(me));
         newsheet = new("/obj/magic_seal");
-        newsheet->set_name(YEL "天通眼符" NOR, 
-                ({ "far-vision sheet", "sheet"}));      
+        newsheet->set_name(YEL "天通眼符" NOR,
+                ({ "far-vision sheet", "sheet"}));
         newsheet->set("burn_func", (: call_other, __FILE__, "do_burn" :));
         newsheet->move(me);
         me->add("mana", -5);
@@ -34,12 +34,12 @@ int scribe(object me, object sheet)
 }
 
 int do_burn(object sheet)
-{ 
+{
         string target;
         object obj;
 
         if( !(sheet->query("targetname")) )
-                return notify_fail("你想用这道符" NOR 
+                return notify_fail("你想用这道符" NOR
 "看哪里？\n");
         message_vision("$N集中精神，祭起三味真火，唿的一声" + sheet->name() +
      		"着了起来！\n", this_player());
