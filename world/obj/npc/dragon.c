@@ -99,4 +99,3 @@ enemy[i]->fight_ob(this_object());
         }
 
 }
-
