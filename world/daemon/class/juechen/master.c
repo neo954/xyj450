@@ -89,7 +89,7 @@ void attempt_apprentice(object ob)
 	if ( ob->query("combat_exp") < 100000 ) {
 		command("say "+RANK_D->query_respect(ob) + "似乎尚缺江湖历练，不宜投入绝尘门下。" );
 		return ;
-	} 
+	}
 
         command("smile");
         command("say 很好�" + RANK_D->query_respect(ob) +
