@@ -93,4 +93,3 @@ void recruit_apprentice(object ob)
                 ob->set("class", "guardman");
 		}
 }
-
