@@ -46,4 +46,3 @@ void create()
         setup();
    set("is_monitored", 1);
 }
-
