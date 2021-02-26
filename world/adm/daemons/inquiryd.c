@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // inquiryd.c
 // Created by Annihilator@ES2 (01-19-95)
 
