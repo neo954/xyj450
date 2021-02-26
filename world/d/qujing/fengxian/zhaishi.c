@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 12/2/1997
 
 inherit ROOM;
@@ -13,7 +13,7 @@ void create ()
 这里原为迎客栈的雅室，因客栈主人近来施财求雨，已将此雅
 室改为供远道而来的客人稍事休息的地方。屋子里有一木桌和
 一木床。
-    
+
 LONG);
 
   set("exits", ([
