@@ -10,8 +10,8 @@ string *dodge_msg = ({
     "$n左一摇，右一晃，一招「紫燕呢喃」已轻松闪过。\n",
 });
 
-int valid_enable(string usage) 
-{ 
+int valid_enable(string usage)
+{
     return (usage == "dodge") ;
 }
 
