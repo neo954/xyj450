@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 // sanqing-jian.c【三清剑法】
-//for 道士 NPCs, if going to be used by players, need refine. 
+//for 道士 NPCs, if going to be used by players, need refine.
 
 /*
 三清剑法    dodge  -5    parry  15    damage  20
