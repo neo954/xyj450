@@ -20,4 +20,3 @@ void create()
         setup();
         carry_object("/d/obj/armor/tenjia")->wear();
 }
-
