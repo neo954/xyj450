@@ -73,4 +73,3 @@ void death_stage(object ob, int stage)
         tell_room(environment(ob),
      "眼前一股青气飘荡，满满地聚成了一个人的样子。\n",({ob, ob}));
 }
-
