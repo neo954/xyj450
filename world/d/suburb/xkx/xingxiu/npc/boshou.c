@@ -41,4 +41,3 @@ void create()
 
         carry_object("/d/suburb/xkx/xingxiu/obj/tongbo")->wield();
 }
-
