@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 #include <login.h>
 
 inherit NPC;
 
-string *death_msg = ({  
+string *death_msg = ({
         HIW "崔判官向你招招手，说道：新来的，你莫乱跑，画了生死簿，我好送你还阳。\n\n" NOR,
         HIW "崔判官看着你笑了笑，说道：生死有命，你也不要太难过了。\n\n" NOR,
         HIW "崔判官从怀中拿出一个黑底白字的册子翻看着。。。\n\n" NOR,
@@ -70,7 +70,7 @@ void death_stage(object ob, int stage)
                 ob->reincarnate();
      //ob->set("gin", (int)ob->query("max_gin"));
         ob->move(REVIVE_ROOM);
-        tell_room(environment(ob), 
+        tell_room(environment(ob),
      "眼前一股青气飘荡，满满地聚成了一个人的样子。\n",({ob, ob}));
 }
 
