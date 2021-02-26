@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 
 #include <ansi.h>
@@ -39,7 +39,7 @@ int do_read(string arg)
   chapters = (string *)sort_array (chapters, 1);
   ob->set("value", 0);
 
-  if (arg == "new") return 0; 
+  if (arg == "new") return 0;
 //::read();
 
   if (! arg ||
