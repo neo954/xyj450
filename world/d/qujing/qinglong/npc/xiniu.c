@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat on 12/5/1997
 
 inherit NPC;
@@ -40,14 +40,14 @@ void die ()
     bone->move(where);
   }
 
-  message_vision ("\n$N倒了下去，化为一堆兽骨。\n",me);  
+  message_vision ("\n$N倒了下去，化为一堆兽骨。\n",me);
   if (! present("shoumen niujing 4",where))
   {
     object ob = new ("/d/qujing/qinglong/npc/xiniu");
     ob->move(where);
-    message_vision ("\n从里面又蹿出一位$N！\n",me);   
+    message_vision ("\n从里面又蹿出一位$N！\n",me);
   }
-  destruct (me);  
+  destruct (me);
 }
 
 void unconcious ()
