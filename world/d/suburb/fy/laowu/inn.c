@@ -10,7 +10,7 @@ void create()
 方的主人，一定是整天在做着发财梦的穷小子。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "south" : __DIR__"street2",
   "east" : __DIR__"pofang",
 ]));
