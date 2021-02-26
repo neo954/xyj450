@@ -29,4 +29,3 @@ set("long","龙少爷的表弟和死党．\n");
         carry_object("/d/ourhome/obj/choupao")->wear();
 
 }
-
