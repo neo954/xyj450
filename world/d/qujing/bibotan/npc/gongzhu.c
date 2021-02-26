@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 string say_position();
@@ -54,8 +54,8 @@ void create()
 
 int recognize_apprentice(object who)
 {   who= this_player();
-   if( who->query("family/family_name")=="乱石山碧波潭" 
-     && who->query("can_learn_stealing") ) { 
+   if( who->query("family/family_name")=="乱石山碧波潭"
+     && who->query("can_learn_stealing") ) {
            return 1;
    }
    return 0;
@@ -120,7 +120,7 @@ void tell_position(object who)
 void kill_him(object who)
 {
    object husband = present("jiutou fuma", environment(this_object()));
-   
+
    if(husband)
    husband->kill_ob(who);
    ::kill_ob(who);
