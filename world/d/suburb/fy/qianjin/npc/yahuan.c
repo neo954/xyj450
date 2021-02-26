@@ -21,4 +21,3 @@ void create()
         carry_object(__DIR__"obj/wch_skirt")->wear();
         carry_object(__DIR__"obj/clothtwo");
 }
-
