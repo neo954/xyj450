@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 4/4/1997
 // room: /d/nuerguo/changshi.c
 
@@ -30,7 +30,7 @@ int valid_leave (object me, string dir)
   object queen;
 
 /*
-  if (dir=="northwest" && 
+  if (dir=="northwest" &&
       me->query("obstacle/nuerguo") != "done")
   {
     queen = new (__DIR__"npc/queen");
