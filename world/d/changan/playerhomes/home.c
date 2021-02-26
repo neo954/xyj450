@@ -140,4 +140,3 @@ int save_room_file(string yn, string file, string str)
                 return 0;
         }
 }
-
