@@ -1,4 +1,4 @@
-valid_override - controls the use of efun:: 
+valid_override - controls the use of efun::
 
 int valid_override( string file, string efun_name, string mainfile );
 
