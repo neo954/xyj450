@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/6/1997
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create()
 丝竹乐声轻缓飘来。
 
 LONG);
-  set("exits", ([ 
+  set("exits", ([
     "northwest" : __DIR__"neiyuan",
     "northeast" : __DIR__"nei",
     "west" : __DIR__"zhaoyang",
