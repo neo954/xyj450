@@ -9,7 +9,7 @@ void create()
 {
 	set_name("天狼子", ({ "tianlang zi", "tianlang" }));
 	set("nickname", "星宿派三师兄");
-	set("long", 
+	set("long",
 		"他就是丁春秋的三弟子天狼子。\n");
 	set("gender", "男性");
 	set("age", 30);
