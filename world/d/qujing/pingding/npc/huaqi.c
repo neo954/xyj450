@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 12/18/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("狐阿七大王", ({ "huaqi dawang", "huaqi", "dawang", "wang" }));
-  set("title", "压龙洞");   
+  set("title", "压龙洞");
   set("long", "一位扭腰摆臀的压龙洞妖王，身上隐隐地发出狐臭。\n");
   set("gender", "男性");
   set("age", 64);
@@ -75,7 +75,7 @@ void taishang_appearing (object who)
   object taishang = new ("/d/qujing/pingding/npc/taishang");
 
   taishang->announce_success (who);
-  destruct (taishang); 
+  destruct (taishang);
 }
 
 void unconcious ()
@@ -95,7 +95,7 @@ void kill_ob (object ob)
   object me = this_object();
 
   set_temp("my_killer",ob);
-  call_out ("hurting",random(5)+5,me,ob);  
+  call_out ("hurting",random(5)+5,me,ob);
   ::kill_ob(ob);
 }
 
@@ -106,7 +106,7 @@ void hurting (object me, object ob)
   if (fabao)
     fabao->ji_ob (ob);
 
-  remove_call_out ("hurting");  
-  call_out ("hurting",random(10)+10,me,ob);  
+  remove_call_out ("hurting");
+  call_out ("hurting",random(10)+10,me,ob);
 }
 
