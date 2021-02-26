@@ -33,7 +33,7 @@ up the the next ocurrence of the text.  For example, the format
 "foxxybarxyz".  If the %s occurs at the end of the string, the
 remainder of the string is matched.  If it is followed immediately
 by another pattern, then %s matches up to the first valid match for
-the following pattern.  "%s%s" is illegal. 
+the following pattern.  "%s%s" is illegal.
 
 See also:
  explode,
