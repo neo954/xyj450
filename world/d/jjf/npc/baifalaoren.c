@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // lao ren, 9-28-97 pickle
 
 #include <ansi.h>
@@ -57,7 +57,7 @@ void create()
 
   set("max_sen", 4500);
   set("max_kee", 3500);
-  set("force", 1500); 
+  set("force", 1500);
   set("max_force", 1500);
   set("force_factor", 40);
   set("max_mana", 3000);
