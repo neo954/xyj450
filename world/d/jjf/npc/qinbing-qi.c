@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //created 6-9-97 pickle
 //亲兵
- 
+
 inherit NPC;
 
 void create()
@@ -11,7 +11,7 @@ void create()
   set_name("亲兵", ({"qin bing", "qin", "bing", "soldier", "qinbing"}));
   set ("long", @LONG
 一个彪形大汉，看身上衣服大概是齐府的亲兵，齐王李建成的近身护卫。
-LONG); 
+LONG);
   set("title", "齐王府");
   set("gender", "男性");
   set("age", 25);
@@ -31,14 +31,14 @@ LONG);
         "拆房子" : "哼，除非把老子打发了，否则谁也别想来这儿撒野！",
          ]) );
   setup();
- 
+
   carry_object("/d/obj/weapon/blade/blade")->wield();
   carry_object("/d/obj/cloth/bingfu")->wear();
 }
 int accept_object(object me, object ob)
 {
   object npc=this_object();
- 
+
   if ((string)ob->query("name_recognized")!="齐府令箭")
     {
       command ("say 哈哈！老子最爱受人贿络了！");
