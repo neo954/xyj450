@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // drooler.c
 //
 // This is an example of interactive npc which applied relay_say, relay_emote
