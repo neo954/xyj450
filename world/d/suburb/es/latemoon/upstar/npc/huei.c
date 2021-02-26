@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
         set_name("邢千慧", ({ "huei","girl" }) );
