@@ -79,14 +79,14 @@ void init()
 			command("say 你这佛门败类，哪里逃！ 还不速到戒律院领罪！\n");
 			me->set_leader(ob);
 			remove_call_out("fight_ob");
-			call_out("fight_ob", 1, ob); 
-		}       
+			call_out("fight_ob", 1, ob);
+		}
 		if ( ob->query("guilty") >= 2 )
 		{
 			if ( random(2) ==1 )
 			command("say 戒律院玄痛大师请你去陈述此次下山经过 ！\n");
 			me->set_leader(ob);
-		}       
+		}
 	}
 	else if( environment(ob)->query("no_fight") ) me->set_leader(0);
 }
