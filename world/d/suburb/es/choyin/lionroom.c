@@ -34,7 +34,7 @@ int do_smell (string arg)
 	if (arg != "grass")
 		return notify_fail ("你要用什么？\n");
 
-	list = all_inventory(this_player());  
+	list = all_inventory(this_player());
 	i = sizeof(list);
 	while (i--) {
 		if (((string)list[i]->query("id")) == "grass")
