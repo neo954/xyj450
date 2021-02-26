@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/4/1997 by snowcat
 
 inherit NPC;
@@ -22,7 +22,7 @@ void create()
   setup();
   carry_object("/d/qujing/nuerguo/obj/skirt")->wear();
   is_busy = 0;
-  add_money ("coin", 10+random(200));  
+  add_money ("coin", 10+random(200));
 }
 
 void init()
@@ -143,24 +143,24 @@ int accept_object (object who, object ob)
     message_vision ("$N神秘地一笑，摇了一下头。\n", me);
     return 1;
   }
-  
-  if ( ob->value() < (2000+random(1000))) 
+
+  if ( ob->value() < (2000+random(1000)))
   {
     message_vision ("$N稍微犹豫了一下，又显出一副无动于衷的样子。\n",me);
     return 1;
-  }  
+  }
 
   if (is_busy)
   {
     message_vision ("$N两眼有点发直，好象什么都没看见。\n",me);
     return 1;
-  }  
+  }
 
   if (random(2) == 0)
   {
     message_vision ("$N向$n点了一下头，想了一想，又突然摇摇头。\n", me, who);
     return 1;
-  }  
+  }
   is_busy = 1;
   call_out("reset_busy",60);
   message_vision ("$N向四周仔细地看了看。\n", me);
