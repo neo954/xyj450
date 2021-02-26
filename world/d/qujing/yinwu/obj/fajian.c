@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/22/1997
 
 inherit ITEM;
@@ -70,8 +70,8 @@ int do_apply (string arg)
     return notify_fail ("你要拿法简干什么？\n");
 
   message_vision ("$N拿起法简，口中念念有辞地对$n一晃。\n",who,xiaoyao);
-  remove_call_out ("applying");    
-  call_out ("applying",2,who,xiaoyao);    
+  remove_call_out ("applying");
+  call_out ("applying",2,who,xiaoyao);
   return 1;
 }
 
