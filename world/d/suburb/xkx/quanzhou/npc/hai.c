@@ -102,4 +102,3 @@ int do_decide()
         this_player()->unconcious();
         return 1;
 }
-
