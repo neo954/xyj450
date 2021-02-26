@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 //northpool.c
 
@@ -15,13 +15,13 @@ void create ()
 几座小木桥，不知哪一座是通往对岸的。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "south" : __DIR__"wzgmaze5",
      "north" : __DIR__"huangguadi",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
