@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 #include <room.h>
 
@@ -21,11 +21,11 @@ LONG);
   setup();
 }
 int valid_leave(object me, string dir)
-{       
+{
    object room;
 
    if (dir=="northup"){
-   
+
 //     if( !(room=find_object(__DIR__"yashang")))
 //     room=load_object(__DIR__"yashang");
 
