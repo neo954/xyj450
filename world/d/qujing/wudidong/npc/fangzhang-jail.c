@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // fangzhang, the one in jail.
 // created by mes, updated 6-21-97 pickle
 
@@ -179,7 +179,7 @@ int do_subtract(string arg)
     && arg != "per"
     && arg != "con"
     && arg != "kar")
-   return notify_fail("这个 "+arg+" 不是一项天赋。\n"); 
+   return notify_fail("这个 "+arg+" 不是一项天赋。\n");
     if (credit >= 3)
    return notify_fail("你总共只能改变三点天赋，请用 state 查你现在的选择。\n");
     if (total >= 3)
@@ -202,7 +202,7 @@ int do_add(string arg)
 
     if (!arg) return notify_fail("请选择你要增加的天赋。 (ask monk about 天赋)\n");
     if (member_array(arg, gift_name) == -1)
-   return notify_fail("这个 "+arg+" 不是一项天赋。\n"); 
+   return notify_fail("这个 "+arg+" 不是一项天赋。\n");
     if (total <= 0)
    return notify_fail("你总共只能改变三点天赋，请用 state 查你现在的选择。\n");
     if (me->query(arg) >= 30)
@@ -285,7 +285,7 @@ int award(object me)
   command("thank " + myid);
   command("say 老纳这就起程回寺！");
   command("south");
-  call_out ("destroy",2, monk);   
+  call_out ("destroy",2, monk);
 /*  if (me->query_temp("mark/wudidong_gift")!=1 && random(mykar)>10)
   {
       command("say 这位" + myrespect +"和我有缘。这是家传之宝，赠于" + RANK_D->query_respect(me) +"，略表寸心。\n");
@@ -300,7 +300,7 @@ int award(object me)
   reward=4000+random((mykar-10)*80);
   year = reward / 1000;
   day = (reward - year * 1000) / 4;
-  hour = (reward - year * 1000 - day * 4) * 3; 
+  hour = (reward - year * 1000 - day * 4) * 3;
   tell_object (me,"你赢得了"+chinese_number(year)+"年"+chinese_number(day)+"天"+chinese_number(hour)+"时辰的道行！\n");
   command("rumor 听说"+myname+"独闯无底洞，救出了玉鼠精抓去的一个老和尚，也不知是真是假。");
   me->add("combat_exp",reward);
