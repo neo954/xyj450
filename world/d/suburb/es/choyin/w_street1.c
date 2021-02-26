@@ -15,7 +15,7 @@ void create()
 LONG
         );
         set("item_desc", ([ /* sizeof() == 1 */
-  "statue" : 
+  "statue" :
 "这尊石狮跟一般寻常人家放在门口镇宅避邪的石狮颇有不同，姿势是立
 著的，而且大小要大得多，只怕有几万斤重，从来没见过谁能举起它。
 你注意到石狮的额头上刻著一个「□」字，不知是何用意？
@@ -66,7 +66,7 @@ int do_lift (string arg)
         message_vision ("$N努力地抬着石狮子，试图抬起一点点。\n", this_player())
 ;
 	id = (string) query("liftid");
-/*	if ( id && ( id != (string)this_player()->query("id")) ) 
+/*	if ( id && ( id != (string)this_player()->query("id")) )
 		return 1 ;
 */
 	if ( id ) {
