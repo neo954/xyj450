@@ -45,7 +45,7 @@ int do_break(string arg)
 
         message_vision(
         "$N走到后门前，拜出骑马蹲裆式，深吸一口气，双掌同时拍出。\n", this_player());
-        
+
         if (n>=200) {
         message_vision(
         "$N只听一声轰响，$N把门震开了！\n", this_player());
