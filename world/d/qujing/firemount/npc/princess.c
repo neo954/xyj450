@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/5/1997 by snowcat
 #include <ansi.h>
 #define NAME "铁扇公主"
@@ -78,13 +78,13 @@ void announce_success(object who)
   {
     tell_object (who,"你的道行不够，什么都没有得到！\n");
     return;
-  }  
+  }
 
   if (who->query("obstacle/firemount") == "done")
   {
     tell_object (who,"你已经过了这一关，什么都得不到了！\n");
     return;
-  }  
+  }
   i = random(600);
   message_vision (HIY "一团红色云雾飘来，显现出"+NAME+"。\n" NOR,who);
   who->add("obstacle/number",1);
@@ -112,7 +112,7 @@ int accept_object (object who, object ob)
   {
     command("shake");
     call_out("return_object",1,who,ob);
-    return 1;    
+    return 1;
   }
 
   if (who->query("combat_exp")<4000)
@@ -120,7 +120,7 @@ int accept_object (object who, object ob)
     message_vision ("$N对$n摇摇头：你道行不够，这芭蕉骨怕是假货。\n",me,who);
     call_out("return_object",1,who,ob);
     return 1;
-  }  
+  }
 
   message_vision ("$N接下芭蕉骨，对$n连声道谢。\n",me,who);
   who->set("obstacle/firemount_bone",who->query("obstacle/firemount_bone")+1);
@@ -144,7 +144,7 @@ void attempt_apprentice(object who)
   {
     inform_player ("$N向$n摇了摇头：你道行不够，公主怕是教不了你。\n",who);
     return;
-  }  
+  }
   return; // now disabled
   command("recruit " + who->query("id") );
 }
@@ -178,18 +178,18 @@ int test_player (object me)
   {
     inform_player (msg+"道行不够，公主怕铁扇伤了你的根骨！\n",who);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/firemount") == "won" ||
       who->query("obstacle/firemount") == "done")
   {
     give_tieshan (me,who);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/firemount") == "fight")
     inform_player (msg+"又来啦？好，公主奉陪！\n",who);
-  else    
+  else
     inform_player (msg+"想必是个爽快之人，公主最喜欢热闹！\n",who);
 
   call_out ("fight_player",3,who);
@@ -203,7 +203,7 @@ void fight_player (object who)
   message_vision ("$N对众妖一喝：闪开！\n",me,who);
   who->set("obstacle/firemount","fight");
   command("fight "+who->query("id"));
-} 
+}
 
 int accept_fight(object who)
 {
@@ -273,7 +273,7 @@ int do_fight(string arg)
     message_vision ("$N对$n摇摇头：一个一个地来，不要一拥而上！\n",me,who);
     return 1;
   }
-  
+
   if (who->query("obstacle/firemount") == "fight")
   {
     me->set("kee", me->query("max_kee"));
