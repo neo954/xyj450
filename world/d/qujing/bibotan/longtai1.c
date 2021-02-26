@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create ()
 台上舞刀弄枪，比划拳脚。前方就看到水晶宫了。
 LONG);
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
   "/d/sea/npc/soldier2" : 1,
 ]));
 //  set("outdoors", 1);
