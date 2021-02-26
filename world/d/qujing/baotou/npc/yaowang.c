@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat 11/6/1997
 
 inherit NPC;
@@ -44,11 +44,11 @@ void create()
   map_skill("spells", "gouhunshu");
   set("eff_dx",-80000);
   set("nkgain",100);
-  
+
   setup();
   carry_object("/d/obj/cloth/shoupiqun")->wear();
   carry_object("/d/qujing/baotou/obj/siming")->wield();
-  
+
 }
 
 void die()
