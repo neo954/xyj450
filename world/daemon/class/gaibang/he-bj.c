@@ -9,7 +9,7 @@ void create()
 	set("title", "丐帮七袋弟子");
 	set("gender", "男性");
 	set("age", 30);
-	set("long", 
+	set("long",
 		"这是位衣著邋塌，蓬头垢面的丐帮七袋弟子。\n");
 	set("attitude", "heroism");
 	set("str", 28);
@@ -25,15 +25,15 @@ void create()
 	
 	set("combat_exp", 70000);
 	
-	set_skill("force", 70); 
-	set_skill("huntian-qigong", 75); 
-	set_skill("unarmed", 75); 
-	set_skill("xianglong-zhang", 75); 
-	set_skill("dodge", 65); 
-	set_skill("xiaoyaoyou", 70); 
-	set_skill("parry", 73); 
-	set_skill("begging", 60); 
-	set_skill("stealing", 70); 
+	set_skill("force", 70);
+	set_skill("huntian-qigong", 75);
+	set_skill("unarmed", 75);
+	set_skill("xianglong-zhang", 75);
+	set_skill("dodge", 65);
+	set_skill("xiaoyaoyou", 70);
+	set_skill("parry", 73);
+	set_skill("begging", 60);
+	set_skill("stealing", 70);
 	
 	map_skill("force", "huntian-qigong");
 	map_skill("unarmed", "xianglong-zhang");
