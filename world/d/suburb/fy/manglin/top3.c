@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 #include <ansi.h>
 inherit ROOM;
@@ -31,7 +31,7 @@ add_action("do_look","look");
 }
 int do_look(string arg)
 {
-	if( arg == "vine" 
+	if( arg == "vine"
 		|| arg == "树枝" )
 	{
 	write("这是一根粗壮光滑的树枝，现在对着正"+directions[query("current_dir")]+"。\n");
