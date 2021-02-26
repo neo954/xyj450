@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //inventory.c
 
 #include <ansi.h>
@@ -46,11 +46,11 @@ int help (object me)
 {
         write(@HELP
 指令格式: inventory
- 
+
 可列出你目前身上所携带的所有物品。
- 
+
 注 : 此指令可以 " i " 代替。
- 
+
 HELP
 );
         return 1;
