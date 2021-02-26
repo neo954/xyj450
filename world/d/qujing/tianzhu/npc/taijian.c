@@ -29,4 +29,3 @@ void create()
   set_temp("no_return",1);
   carry_object("/d/qujing/tianzhu/obj/guanpao")->wear();
 }
-
