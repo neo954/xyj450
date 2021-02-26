@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //qianjun-bang.c 【千钧棒法】
 
 /*
@@ -51,7 +51,7 @@ mapping *action = ({
      "parry":     -5,
                 "damage":               30,
                 "damage_type":  "砸伤"
-        ]),   
+        ]),
         ([      "name":                 "三打白骨精",
                 "action":
 "$N连翻几个筋斗云，手中$w转得如风车一般，\n一连三棒从半空中击向$n顶门",
@@ -59,7 +59,7 @@ mapping *action = ({
      "parry":   -10,
                 "damage":               20,
                 "damage_type":  "砸伤"
-        ]),   
+        ]),
         ([      "name":                 "千钧澄玉宇",
                 "action":
 "$N手中$w一抖，化为千万道霞光，\n就在$n目眩神摇之时，再一抖，霞光顿收，\n$w已到了$n的$l！这一招有个名堂，叫作「千钧澄玉宇」",
