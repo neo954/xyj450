@@ -88,7 +88,7 @@ void init()
 
 int repairing_1(object me, object ob)
 {
-	if ( !present(ob, environment()) ) return 1; 
+	if ( !present(ob, environment()) ) return 1;
 
 	command("say 是这个木人吧？ 唔，我来瞧瞧！ 你在边上呆着，看能帮我什么忙。");
 	
@@ -100,7 +100,7 @@ int repairing_1(object me, object ob)
 
 int repairing_2(object me, object ob)
 {
-	if ( !present(ob, environment()) ) return 1; 
+	if ( !present(ob, environment()) ) return 1;
 
 	if( ob->query("damaged") )
 	{
@@ -136,14 +136,14 @@ int repairing_3(object me, object ob)
 
 int repairing_4(object me, object ob)
 {
-	if( random(2) == 0 ) 
+	if( random(2) == 0 )
 	{		
 		command("say 好，修好了！");
 		ob->delete("damaged");
 		ob->set("fight_times", 0);	
 		message_vision(GRN "\n木人的身体吱吱地扭动了几下，恢复了正常站立的姿态。\n\n" NOR, me);
 	}
-	else 
+	else
 		message_vision(GRN "\n道果禅师叹了口气，说道：看来不行，这木人损坏得太厉害了，没法子修了！\n" NOR, me);
 
 	command("say 好，那我走了！");
@@ -167,13 +167,13 @@ int do_back(object me)
 
 string ask_me()
 {
-	mapping fam; 
+	mapping fam;
 	object ob;
 
 	ob = this_player();
 	
 	if (!(fam = ob->query("family")) || fam["family_name"] != "少林派")
-		return RANK_D->query_respect(ob) + 
+		return RANK_D->query_respect(ob) +
 		"与本派素无来往，不知此话从何谈起？";
 
 	command("say 木人打坏了是吧？ 好吧，我跟你去看看。");
