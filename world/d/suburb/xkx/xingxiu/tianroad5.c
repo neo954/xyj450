@@ -17,7 +17,7 @@ LONG
             "enter" : __DIR__"cave",
         ]));
         set("objects", ([
-               __DIR__"npc/caiyaoren" : 1, 
+               __DIR__"npc/caiyaoren" : 1,
         ]));
 
        set("item_desc", ([
