@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // hockshop.c
 // modified by mon 2/28/98
 
@@ -33,7 +33,7 @@ void init()
 // find the shopbox object for this shop to hold sold items.
 object findbox()
 {
-    if(shop_box && environment(shop_box)==this_object()) 
+    if(shop_box && environment(shop_box)==this_object())
       return shop_box;
 
     shop_box=new(__DIR__"shopbox");
@@ -87,7 +87,7 @@ int do_value(string arg)
    if(sale>0 && sale<value) value=sale;
 
    if( !value) printf("%s一文不值。\n", ob->query("name"));
-   else 
+   else
      printf("%s价值%s。\n如果你要典当(pawn)，可以拿到%s及一张当票。\n如果卖断(sell)，可以拿到%s。\n",
         ob->query("name"), value_string(value),
         value_string(value * 60 / 100), value_string(value * 80 / 100));
@@ -216,7 +216,7 @@ int do_retrieve(string arg)
       return notify_fail("你要用当票才能赎回物品。\n");
 
    value = ob->query_temp("value");
-   if(!value) 
+   if(!value)
       return notify_fail("用空白当票来赎物，光天化日之下想打劫不成！\n");
 
    if( !(afford = this_player()->can_afford(value)) )  {
@@ -263,7 +263,7 @@ int do_list(string arg)
    if( !mapp(goods = findbox()->query_temp("goods")) )
      return notify_fail("当铺目前没有任何货物可卖。\n");
    name = keys(goods);
-   if(!sizeof(goods)) 
+   if(!sizeof(goods))
      return notify_fail("当铺目前没有任何货物可卖。\n");
 
    if( !arg )   {
@@ -336,7 +336,7 @@ int do_list(string arg)
    me->start_more(list);
       }
    }
-   else if( arg == "axe" || arg == "blade" || arg == "dagger" || 
+   else if( arg == "axe" || arg == "blade" || arg == "dagger" ||
    arg == "fork" || arg == "hammer" || arg == "spear" || arg == "mace" || arg == "rake" ||
    arg == "staff" || arg == "stick" || arg == "sword" || arg == "whip" ||
    arg == "throwing" )  {
@@ -476,30 +476,30 @@ int do_buy(string arg)
    if( !mapp(goods = findbox()->query_temp("goods")) )
      return notify_fail("当铺目前没有任何货物可卖。\n");
    name = keys(goods);
-   if(!sizeof(goods)) 
+   if(!sizeof(goods))
      return notify_fail("当铺目前没有任何货物可卖。\n");
 
    j = 0;
    i=sizeof(name);
    while(i--) {
           if(!goods[name[i]]) continue;
-     if( member_array(fname, 
+     if( member_array(fname,
          goods[name[i]]->parse_command_id_list()) != -1 )  {
-        j++;    
+        j++;
      }
      if( j == order )   {
        obj_file = goods[name[i]];
-          value = obj_file->query("value"); 
+          value = obj_file->query("value");
           if( !(afford=this_player()->can_afford(value)) )  {
              write("你没有足够的钱。\n");
-             return 1; 
+             return 1;
           }
           else if( afford == 2 )  {
               write("你没有足够的零钱，而银票又没人找得开。\n");
              return 1;
           }
 
-       ob = new( base_name( obj_file ) ); 
+       ob = new( base_name( obj_file ) );
        ob->set_name(obj_file->query("name"),
          obj_file->parse_command_id_list());
          //so that the bought item would be the
@@ -519,11 +519,11 @@ int do_buy(string arg)
            findbox()->delete_temp("goods/"+arg);
           }
           else    {
-           findbox()->set_temp("numbers/"+arg, oldnum-1); 
+           findbox()->set_temp("numbers/"+arg, oldnum-1);
        }
 
           this_player()->pay_money(value);
-     
+
           message_vision("$N向当铺买下一" +
         ob->query("unit") + ob->query("name") + "。\n", this_player() );
 
@@ -544,7 +544,7 @@ int do_quit()
 }
 
 // no clean up at hockshop to prevent items lose.
-int clean_up()  
+int clean_up()
 {
       return 0;
 }
