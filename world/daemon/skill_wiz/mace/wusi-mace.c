@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //无私锏法，wusi-mace.c
 //created 5-12-97 pickle
-  
+
 /*
 无私锏法    dodge  5    parry  -5    damage  25
 原名秦家无敌锏，为秦家祖传秘技，后秦琼决定公开传给
@@ -54,7 +54,7 @@ mapping *action = ({
     "parry":     -5,
     "damage":     20,
     "damage_type":  "戳伤"
-   ]),   
+   ]),
   ([
     "name":     "追魂锏",
     "action":
@@ -64,7 +64,7 @@ mapping *action = ({
     "parry":     -5,
     "damage":     25,
     "damage_type":  "砸伤"
-   ]),   
+   ]),
   ([
     "name":     "夺命锏",
     "action":
@@ -74,7 +74,7 @@ mapping *action = ({
     "parry":     -5,
     "damage":     25,
     "damage_type":  "撞伤"
-   ]),   
+   ]),
   ([
     "name":     "无情锏",
     "action":
@@ -84,7 +84,7 @@ mapping *action = ({
     "parry":     5,
     "damage":     15,
     "damage_type":  "砸伤"
-   ]),   
+   ]),
   ([
     "name":     "杀手锏",
     "action":
@@ -101,13 +101,13 @@ mapping *action = ({
 int valid_learn(object me)
 {
   object ob;
-  
+
   if( (int)me->query("max_force") < 150 )
     return notify_fail("你的内力不够，不能学无私锏法， 多练些内力再来吧。\n");
   if (!(ob = me->query_temp("weapon"))
       ||      (string)ob->query("skill_type") != "mace" )
     return notify_fail("你必须先找一柄锏才能练锏法。\n");
-  
+
   return 1;
 }
 
