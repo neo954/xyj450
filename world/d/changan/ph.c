@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /changan/phomes
 //cglaem...12/31/96.
 //mon. 2/23/97.
@@ -35,8 +35,8 @@ void init()
 }
 
 int show_name(string arg)
-{     
-      mixed *files; 
+{
+      mixed *files;
       string who,result,content,chinese;
       int n,i,j,k;
       string host, host1, host2;
@@ -82,17 +82,17 @@ int show_name(string arg)
           }
         }
       }
-      
+
       result="\n"+result+"\n\n\n"+
         "注：请键入各家的第一个名字来进入。\n";
-        
+
       this_player()->start_more(result);
-      
+
       return 1;
 }
 
 int enter_home(string arg)
-{     
+{
       string name,*files;
       object env,*inv,room,me=this_player();
       string roomid;
@@ -104,7 +104,7 @@ int enter_home(string arg)
         return 0;
       }
 
-      if(!valid_move(me)) return 0; 
+      if(!valid_move(me)) return 0;
       //check if can move. mon 9/25/97
 
       env=environment(me);
@@ -115,12 +115,12 @@ int enter_home(string arg)
             room=inv[i];
             break;
           }
-        } 
+        }
       }
       if(!room) {
         room=new("/obj/home.c");
         room->set("file_name",roomid);
-        room->restore();        
+        room->restore();
         room->set("no_fight",1);
         room->set("no_magic",1);
         room->move(env);
@@ -141,7 +141,7 @@ int clean_up()
        for(i=sizeof(inv)-1; i>=0; i--)
     if(inv[i]->is_home() ||
        userp(inv[i])) return 1;
- 
+
        return ::clean_up();
 
 }
