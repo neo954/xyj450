@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -12,14 +12,14 @@ void create ()
 非常的安静，偶尔从外面的竹林中传来一两声鸟叫。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "west" : __DIR__"westway5",
    ]));
         set("sleep_room",1);
         set("if_bed",1);
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
