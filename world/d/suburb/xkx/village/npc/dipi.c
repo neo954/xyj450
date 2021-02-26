@@ -27,4 +27,3 @@ void create()
         }) );
         carry_object(__DIR__"obj/cloth")->wear();
 }
-
