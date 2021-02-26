@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // poison_dust.c
 
 inherit COMBINED_ITEM;
@@ -45,7 +45,7 @@ int do_pour(string arg)
    f = (: call_other, __FILE__, "drink_drug" :);
    ob->set("liquid/drink_func", bind(f, ob));
    ob->add("liquid/slumber_effect", 100);
-   message_vision("$N将一些" + name() + "倒进" + ob->name() 
+   message_vision("$N将一些" + name() + "倒进" + ob->name()
      + "，摇晃了几下。\n", this_player());
    add_amount(-1);
    return 1;
@@ -54,7 +54,7 @@ int do_pour(string arg)
 int drink_drug(object ob)
 {
    this_player()->apply_condition("slumber_drug",
-     (int)this_player()->query_condition("slumber_drug") 
+     (int)this_player()->query_condition("slumber_drug")
      + (int)ob->query("liquid/slumber_effect") );
    return 0;
 }
