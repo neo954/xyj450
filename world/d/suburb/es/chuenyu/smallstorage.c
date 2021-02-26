@@ -14,7 +14,7 @@ LONG
           set("objects", ([
           __DIR__"npc/rat" : 6,
           ]) );
-          
+
           setup();
 }
- 
+
