@@ -49,7 +49,7 @@ int ask_me()
 	} else {
 	say(
 "王小二看了" + this_player()->name() + "一眼，满不在乎的说道：\n"
-"不错，鸡是我偷的，你要怎麽样?! 看你也是出来闯江湖的，难道\n" 
+"不错，鸡是我偷的，你要怎麽样?! 看你也是出来闯江湖的，难道\n"
 "不知江湖上谁的拳头大谁说话?! 你不服气? 那好，咱俩练几招，\n"
 "要是你赢了，我马上按双倍价赔给老太太。而且我还另外送你点\n"
 "东西。你要输了，就给我爬着出去。怎麽着，敢不敢比划(bihua)几下?\n");
@@ -68,11 +68,11 @@ int do_bihua()
 	book = new(__DIR__"obj/sword_book");
 	current_qi = (int)me->query("kee");
 
-	say(obj->name() + "对王小二说：好吧，那" + RANK_D->query_self_rude(obj) + 
+	say(obj->name() + "对王小二说：好吧，那" + RANK_D->query_self_rude(obj) +
 "就同你练几招。\n");
         if( obj->query_temp("marks/王2") ) {
                 obj->set_temp("marks/王2", 0);
-		while ( ((int)obj->query("kee")*100 / (int)obj->query("max_kee")) > 50) { 
+		while ( ((int)obj->query("kee")*100 / (int)obj->query("max_kee")) > 50) {
 			if ( !present(obj, environment()) )
 				return 1;
                         COMBAT_D->do_attack(obj, me, query_temp("weapon"));
