@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 
@@ -22,7 +22,7 @@ void create()
    set_skill("parry", 140);
    set("max_kee", 1300);
    set("max_sen", 1300);
-        set("force", 600); 
+        set("force", 600);
         set("max_force", 600);
         set("force_factor", 30);
    set("max_name", 600);
@@ -51,7 +51,7 @@ void accept_kill(object me)
 {
         object xiong=present("xiong shanjun", environment(this_object()));
         object yin=present("yin jiangjun", environment(this_object()));
- 
+
         if(xiong){
                 xiong->kill_ob(me);
         }
