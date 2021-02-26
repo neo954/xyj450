@@ -45,4 +45,3 @@ void free_jingu(object ob, object who)
    }
    return;
 }
-
