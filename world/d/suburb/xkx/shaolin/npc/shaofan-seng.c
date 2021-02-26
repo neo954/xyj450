@@ -43,6 +43,3 @@ void create()
 	setup();
 
 }
-
-
-
