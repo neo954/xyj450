@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat.c 4/4/1997
 // room: /d/nuerguo/juxianan.c
 
@@ -23,7 +23,7 @@ LONG);
   "northdown" : __DIR__"jieyang",
 ]));
 
-  create_door("enter","庵门","out",DOOR_CLOSED); 
+  create_door("enter","庵门","out",DOOR_CLOSED);
 
   set("objects", ([
          __DIR__"npc/daoshi" : 1,
