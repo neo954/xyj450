@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 12/17/1997
 
 #include <ansi.h>
 #include <weapon.h>
- 
+
 inherit ITEM;
- 
+
 void create()
 {
   set_name("紫金红葫芦",({"hu lu", "hu", "lu", "fabao"}));
@@ -29,7 +29,7 @@ void create()
   set("no_give", "紫金红葫芦乃法宝不可赠人也。\n");
   set("is_monitored",1);
   setup();
-} 
+}
 
 void init ()
 {
