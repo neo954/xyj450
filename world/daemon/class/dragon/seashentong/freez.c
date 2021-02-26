@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // dingshen.c 定身法
 #include <ansi.h>
 
@@ -46,7 +46,7 @@ int cast(object me, object target)
         ap += (int)me->query("combat_exp");
         dp = target->query("combat_exp");
         if( random(ap + dp) < dp ) success = 0;
-//here we compared exp and spells level. 
+//here we compared exp and spells level.
 //note: has nothing to do with target's spells level.
 
         ap = (int)me->query("max_mana");
@@ -59,7 +59,7 @@ int cast(object me, object target)
         if( random(ap + dp) < dp ) success = 0;
 //here we compare current mana. this is important. you need recover to try again.
 
-        howlong = 0;        
+        howlong = 0;
         if(success == 1 ){
                 msg +=  HIR "结果$n手足被冻的僵硬，动弹不得。\n" NOR;
                 target->set_temp("no_move", 1);
@@ -67,10 +67,10 @@ int cast(object me, object target)
                 howlong = 20 + random(15);
 // so this one weaker, about 30 seconds.
 //a typical level is 100+100 ->enabled 150, so will "ding" about 1 minute in the best case.
-        }           
+        }
         else {
                 msg +=  HIR "$n回手一挥，漫天飞雪顿时淡去了。\n" NOR;
-        } 
+        }
 
         message_vision(msg, me, target);
 
@@ -82,15 +82,15 @@ if (success == 0) {
 return 1+random(2);
 }
 
-//      me->start_busy(5);        
+//      me->start_busy(5);
         if( howlong>0 ) call_out("free", howlong, target);
-        
+
         return 3+random(5);
 }
 
 void free(object target)
 {
-        if(target) target->delete_temp("no_move");      
+        if(target) target->delete_temp("no_move");
         return;
 }
 
