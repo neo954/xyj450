@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // more.c
 
 #include <ansi.h>
@@ -25,7 +25,7 @@ varargs void more(string cmd, string *text, int line, int force)
    case "q":
     return;
   }
-  printf("== 未完继续 " HIY "%d%%" NOR 
+  printf("== 未完继续 " HIY "%d%%" NOR
    " == (ENTER 继续下一页，q 离开，b 前一页)",
    (line*100/sizeof(text)) );
   input_to("more", text, line);
