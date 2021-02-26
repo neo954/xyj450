@@ -91,4 +91,3 @@ target->kill_ob(me);
         me->start_busy(3);
         return 3+random(5);
 }
-
