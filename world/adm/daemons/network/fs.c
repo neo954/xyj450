@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /*
  * Intermud finger server
  * Original author: Huthar@Portals
@@ -113,9 +113,9 @@ service_request(int id, mixed *parms)
 
   if (!parms || !sizeof(parms) || !parms[0])
     {
-      lines = explode((string)FINGER_D->finger_all(), "\n"); 
+      lines = explode((string)FINGER_D->finger_all(), "\n");
       INETD->write_socket(id, "\n");
-      for (i=0;i<sizeof(lines);i++) 
+      for (i=0;i<sizeof(lines);i++)
    INETD->write_socket(id, lines[i] + "\n");
     }
   else
@@ -124,7 +124,7 @@ service_request(int id, mixed *parms)
    {
      lines = explode((string)FINGER_D->finger_user(parms[0]), "\n");
      INETD->write_socket(id, "\n");
-     for (i=0;i<sizeof(lines);i++) 
+     for (i=0;i<sizeof(lines);i++)
        INETD->write_socket(id, lines[i] + "\n");
    }
     }
@@ -142,7 +142,7 @@ void
 close_callback(int id)
 {
   map_delete(requests, id);
-}   
+}
 
 void
 timeout(int id)
