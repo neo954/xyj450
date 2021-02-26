@@ -23,22 +23,22 @@ void create()
 
 void init()
 {	
-	object ob; 
-	mapping myfam; 
+	object ob;
+	mapping myfam;
 
 	ob = this_player();
 
 	::init();
 	if( interactive(ob) && !is_fighting() ) {
-		if ( (myfam = ob->query("family")) 
-		&& myfam["family_name"] == "丐帮" 
+		if ( (myfam = ob->query("family"))
+		&& myfam["family_name"] == "丐帮"
 		&& ob->query_skill("begging",1) > 10 )
 		{
 			remove_call_out("saying");
 			call_out("saying", 0, ob);
 		}
 		else
-		{ 
+		{
 			remove_call_out("greeting");
 			call_out("greeting", 1, ob);
 		}
