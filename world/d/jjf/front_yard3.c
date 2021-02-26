@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/jjf/front_yard2.c
 
 inherit ROOM;
@@ -45,7 +45,7 @@ int valid_leave(object me, string dir)
    {
      return notify_fail("那里只有将军府的弟子才能进去．\n");
         }
-      return ::valid_leave(me, dir); 
+      return ::valid_leave(me, dir);
     }
   return 1;
 }
@@ -59,7 +59,7 @@ int do_strike(string arg)
 {
   object me=this_player(), weapn;
   string skll;
- 
+
   if( (!arg) || !((arg == "logs") || (arg == "木桩")))
     return notify_fail("你要打什么？\n");
   if( (me->query("kee") < me->query("eff_kee")/5) || (me->query("eff_kee") < me->query("max_kee")/5))
@@ -68,7 +68,7 @@ int do_strike(string arg)
     {
       message_vision("$N挥拳向木桩打去，结果把拳头打得鲜血淋漓。\n", me);
       me->receive_wound("kee", me->query("eff_kee")/10);
-      return 1;   
+      return 1;
  }
   if(!weapn=me->query_temp("weapon"))
     {
@@ -100,7 +100,7 @@ int do_strike(string arg)
 int do_tiao(string arg)
 {
   object me=this_player();
- 
+
   if( (!arg) || !((arg == "pits") || (arg == "沙坑")))
     return notify_fail("你要往哪里跳？\n");
   if( me->query("kee") < (int)(me->query("max_kee")/5))
