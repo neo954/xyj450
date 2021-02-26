@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/hkgroup/village
 inherit ROOM;
 
@@ -42,7 +42,7 @@ int valid_leave(object me, string dir)
    string membership = memberhood(me);
 
         if ( dir=="enter" &&
-//     ( membership == "(NotMember)" || membership == "(guest)") ) 
+//     ( membership == "(NotMember)" || membership == "(guest)") )
               ( membership == "(NotMember)"))
         {
         return notify_fail("只听『嘭』的一声，你的脑门儿被反弹回来的门撞个正着~~~~~~~~\n");
