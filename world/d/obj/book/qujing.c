@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // literate.c
 
 inherit ITEM;
@@ -91,7 +91,7 @@ int do_decide (string arg)
   string str;
   int i;
   int size = sizeof (skills);
- 
+
   if (me->query("my_owner") != who->query("id"))
   {
     tell_object (who,"这本经书不是你的。\n");
@@ -133,10 +133,10 @@ int reading (object me, object book)
   mapping skill;
   int cost, my_skill;
 
-  if (environment(me)->query("no_fight") && 
+  if (environment(me)->query("no_fight") &&
       environment(me)->query("no_magic"))
     return notify_fail("安全区内禁止练功。\n");
-                    
+
   if (me->is_fighting())
     return notify_fail("你无法在战斗中专心下来研读新知！\n");
 
@@ -147,7 +147,7 @@ int reading (object me, object book)
     return notify_fail("你是个文盲，先学学读书识字(literate)吧。\n");
 
   message_vision ("$N正专心地研读$n。\n",me,book);
-  
+
   skill = book->query("skill");
   my_skill=me->query_skill(skill["name"],1);
 
@@ -163,7 +163,7 @@ int reading (object me, object book)
   if (!SKILL_D(skill["name"])->valid_learn(me))
     return 0;
 
-  cost = skill["sen_cost"] + skill["sen_cost"] 
+  cost = skill["sen_cost"] + skill["sen_cost"]
          * (skill["difficulty"] - (int)me->query_int())/20;
   if ((int)me->query("sen") < cost)
   {
@@ -201,7 +201,7 @@ int do_read (string arg)
     return 1;
   }
 
-  if (! me->query("skill"))  
+  if (! me->query("skill"))
   {
     if (who->query("obstacle/book"))
       me->set_skill(who->query("obstacle/book"));
