@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/20/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("绛裙", ({ "jiang qun", "jiang", "qun" }));
-  set("title", "七姐妹");   
+  set("title", "七姐妹");
   set("long", "一位红霞脸朱唇蛾眉蝉鬓的美女子。\n");
   set("gender", "女性");
   set("age", 20);
@@ -48,7 +48,7 @@ void die ()
 {
   object me = this_object();
   object ob = query_temp("my_killer");
-  if (ob && 
+  if (ob &&
       ! ob->query_temp("obstacle/pansi_killed_"+me->query("name")))
   {
     ob->set_temp("obstacle/pansi_killed_"+me->query("name"),1);
@@ -69,7 +69,7 @@ void kill_ob (object ob)
   object me = this_object();
 
   set_temp("my_killer",ob);
-  call_out ("hurting",random(5)+5,me,ob);  
+  call_out ("hurting",random(5)+5,me,ob);
   ::kill_ob(ob);
 }
 
@@ -95,12 +95,12 @@ void hurting (object me, object ob)
 
   if (environment(ob) != environment(me))
     return;
- 
+
   message_vision ("\n"+msgs[random(sizeof(msgs))],me,ob);
   message_vision (strs[random(sizeof(strs))],ob);
   damage = ob->query("max_kee")/(8+random(4));
-  ob->add("kee",-damage); 
-  ob->add("sen",-damage); 
+  ob->add("kee",-damage);
+  ob->add("sen",-damage);
 
-  call_out ("hurting",random(10)+10,me,ob);  
+  call_out ("hurting",random(10)+10,me,ob);
 }
