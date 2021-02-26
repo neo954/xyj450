@@ -29,4 +29,3 @@ void create()
 	carry_object(__DIR__"obj/monk_cloth")->wear();
 	carry_object(__DIR__"obj/needle");
 }
-
