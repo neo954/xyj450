@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //碧藕
 
 
@@ -34,7 +34,7 @@ void create()
     set("value", 0);
     set("drug_type", "补品");
   }
-  
+
   // the following line is added by snowcat
   set("is_monitored",1);
   setup();
@@ -47,7 +47,7 @@ int do_eat(string arg)
   howold= (int)me->query("mud_age") + (int)me->query("age_modufy");
   if (!id(arg))
     return notify_fail("你要吃什么？\n");
-  
+
   me->set("food", (int)me->max_food_capacity());
   me->set("water", (int)me->max_water_capacity());
    mana_add = 2+random(2);
@@ -69,7 +69,7 @@ int do_eat(string arg)
     me->add("age_modify", -1200);
     me->add("age_modify_time", 1);
   }
-  
+
   destruct(this_object());
   return 1;
 }
