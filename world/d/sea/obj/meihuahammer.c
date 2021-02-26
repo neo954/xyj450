@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <weapon.h>
 
 inherit HAMMER;
@@ -52,7 +52,7 @@ int do_read(string arg)
 {   int gain;
    object me=this_player();
    object ob=this_object();
-   
+
    if(! ob->query("OK_to_STUDY"))
      return notify_fail("你无法从这样东西上学到任何东西。\n");
    if( ob->query("transferred"))
