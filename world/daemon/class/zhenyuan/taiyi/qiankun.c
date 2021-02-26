@@ -160,4 +160,3 @@ int cast(object me, object target)
 
    return 3+random(5);
 }
-
