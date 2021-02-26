@@ -1,24 +1,24 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/death/road2.c
- 
+
 inherit ROOM;
- 
+
 void create()
 {
         set("short", "鬼门大道");
         set("long", @LONG
 你走在一条阴森森的路上, 浓浓的雾环绕在你的四周, 好像永
 远都不会散去似的. 整条路前后只看到零星的几盏灯笼........
- 
+
 LONG
         );
         set("exits", ([ /* sizeof() == 2 */
   "north" : "/d/death/road3",
   "south" : "/d/death/road1",
 ]));
- 
+
         setup();
 }
 int valid_leave(object me, string dir)
