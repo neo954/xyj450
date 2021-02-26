@@ -77,4 +77,3 @@ void duty_end()
 	if( home ) return_home(home);
 	else destruct(this_object());
 }
-
