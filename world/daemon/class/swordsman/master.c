@@ -21,7 +21,7 @@ void create()
         set("rank_info/respect", "柳馆主");
 
         set("long",
-                
+
 "柳淳风是个相当高大的中年儒生，若不是从他腰间挂著的「玄苏剑」你\n"
                 "大概猜不到眼前这个温文儒雅的中年人竟是家大武馆的馆主。\n");
 
@@ -54,9 +54,9 @@ void create()
         map_skill("dodge", "chaos-steps");
 
         set("inquiry", ([
-                "淳风武馆" : 
+                "淳风武馆" :
 "淳风武馆是先父所创，在下辱承其名，虽忝掌封山门户，不敢忘了先人遗志。",
-                "先人遗志" : 
+                "先人遗志" :
 "先父临终之时将这武馆交到在下手中，需得好好照看。",
                 "刘安禄" : "刘兄弟在寒舍管事已经五年了，过去之事不须再提。",
                 "name": "你既然知道我是柳□主，怎麽不知道我是柳淳风？",
@@ -70,14 +70,14 @@ void create()
 
 void attempt_apprentice(object ob)
 {
-        if( ((int)ob->query_cor() < 20) 
+        if( ((int)ob->query_cor() < 20)
         ||      ((int)ob->query_cps() < 20)) {
-                command("say 学剑之人必须胆大心细，依我看" + 
+                command("say 学剑之人必须胆大心细，依我看" +
 RANK_D->query_respect(ob) + "的资质似乎不宜？");
                 return;
         }
         command("smile");
-        command("say 很好，" + RANK_D->query_respect(ob) + 
+        command("say 很好，" + RANK_D->query_respect(ob) +
 "多加努力，他日必定有成。\n");
         command("recruit " + ob->query("id") );
 }
@@ -87,4 +87,4 @@ void recruit_apprentice(object ob)
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "swordsman");
 }
- 
+
