@@ -14,9 +14,9 @@ LONG
         "east" : __DIR__"tunnel4",
         ]));
         set("objects", ([
-         __DIR__"npc/highrat": 2, 
+         __DIR__"npc/highrat": 2,
          __DIR__"npc/guard2" : 2
          ]) );
-         
+
          setup();
 }
