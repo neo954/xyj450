@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 12/2/1997
 
 inherit ROOM;
@@ -37,7 +37,7 @@ int do_break (string arg)
 
   message_vision ("$N憋红了脸大喝一声向门砸去！\n",who);
   message_vision ("\n一阵乱石轰响，砸在$N的头上！\n",who);
-  who->unconcious();    
+  who->unconcious();
   if (who->query("combat_exp") < 10000 ||
       random(4))
   {
