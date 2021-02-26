@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// by snowcat 
+
+// by snowcat
 
 inherit NPC;
 
@@ -76,7 +76,7 @@ int test_player()
     "$N对$n说道：巧极了，有户人家要成亲，没钱办事又急需",
     "$N对$n点头笑着说道：昨天有户穷苦人家正打听什么",
     "$N微笑着对$n一点头说道：姑娘正许愿替一办喜事的破落户找一找",
-  });  
+  });
   string str;
   object me = this_object();
   object who = this_player();
@@ -180,7 +180,7 @@ int accept_object(object who, object ob)
   }
 
   if(ob->is_character()) return 0;
-  
+
   if (who->query("quest/pending/wearing/name") != ob->query("name"))
   {
     message_vision ("$N对$n说道：这位"+RANK_D->query_respect(who)+
