@@ -6,18 +6,18 @@ inherit NPC;
 
 void create()
 {
-        set_name("潘军禅", ({ "master executioner", "executioner", "master" }) 
+        set_name("潘军禅", ({ "master executioner", "executioner", "master" })
 );
         set("title", "水烟阁执法使");
         set("nickname", HIC "书 剑 侠" NOR);
         set("gender", "男性");
         set("age", 28);
         set("long",
-                
+
 "潘军禅是当今武林的一位传奇性人物，以他仅仅二十八岁的年龄竟能做到\n"
-                
+
 "水烟阁执法使的职位，著实是一位不简单的人物。潘军禅是封山剑派掌门\n"
-                
+
 "柳淳风的结拜义弟，但是他为人其实十分风趣，又好交朋友，丝毫不会摆\n"
                 "出武林执法者的架子。\n" );
 
@@ -62,4 +62,4 @@ void create()
         carry_object(__DIR__"soulimpaler")->wield();
 }
 
- 
+
