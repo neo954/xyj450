@@ -18,4 +18,3 @@ void create()
         set_skill("move", 150);
         setup();
 }
-
