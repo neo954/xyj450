@@ -76,4 +76,3 @@ int do_examine (string arg)
   }
   return 1;
 }
-
