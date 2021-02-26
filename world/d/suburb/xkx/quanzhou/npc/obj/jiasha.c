@@ -51,4 +51,3 @@ int do_move(string arg)
                 return 1;
         }
 }
-
