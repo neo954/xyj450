@@ -13,7 +13,7 @@ void create()
 北去的道路一直通向振远总局。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
 		"east":		__DIR__"shangshu/gate",
 		"west":		__DIR__"wumen",
 		"north":	__DIR__"street2",
@@ -35,7 +35,7 @@ void init ()
 
 int do_climb (string arg)
 {
-	if ((arg == "wall") || (arg == "up") || (arg == "墙")) 
+	if ((arg == "wall") || (arg == "up") || (arg == "墙"))
 		this_player()->move(__DIR__"wall");
  	return 1;
 }
