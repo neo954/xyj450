@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // powder.c
 
 inherit COMBINED_ITEM;
@@ -30,7 +30,7 @@ int do_pour(string arg)
    // powder object got destructed after used up.
    f = (: call_other, base_name(this_object()), "effect_in_liquid" :);
    ob->set("liquid/drink_func", bind(f, ob));
-   message_vision("$N将一些" + name() + "倒进" + ob->name() 
+   message_vision("$N将一些" + name() + "倒进" + ob->name()
      + "，摇晃了几下。\n", this_player());
    add_amount(-1);
    return 1;
