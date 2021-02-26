@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 惊雷鞭法，jinglei-mace.c
 // created 5-19-97 pickle
 
@@ -109,7 +109,7 @@ int valid_learn(object me)
      return notify_fail("手里没有兵器怎么练？\n");
    return 1;
 }
-   
+
 int practice_skill(object me)
 {
    if ((int)me->query("kee") < 30)
