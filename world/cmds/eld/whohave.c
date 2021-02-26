@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 6/21/1997
 // whohave.c
 
@@ -23,7 +23,7 @@ void listing (object who, string prefix, string arg)
      string *ids = ob->parse_command_id_list();
      if (member_array(arg, ids) == -1) {
         continue;
-     }   
+     }
      write (" "+ob->short());
    }
    write ("\n");
@@ -54,10 +54,10 @@ int help (object me)
 {
         write(@HELP
 指令格式 : whohave <id>
- 
+
 可列出目前携带某个物品的玩家。
- 
- 
+
+
 HELP
 );
         return 1;
