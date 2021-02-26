@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // propose.c
 
 inherit F_CLEAN_UP;
@@ -42,7 +42,7 @@ return notify_fail("出家人四大皆空，婚嫁之事就免了吧。\n");
 
         if (who->query("married"))
                 return notify_fail("还是算了吧，"+who->name()+"是有夫之妇啦！\n");
-   
+
         message_vision("$N对着$n拍着胸脯说：只要你嫁给我，你叫我做什么我就做什么！\n", me, who);
 
         me->set("proposing",1);
@@ -57,7 +57,7 @@ int help(object me)
 {
 write(@HELP
 指令格式 : propose <某人>
- 
+
 这个指令用来向人求婚，求婚者必须为男性，等女方答应后，双方到月老亭登记，
 再完成一定的仪式，就算正式成婚了。
 
