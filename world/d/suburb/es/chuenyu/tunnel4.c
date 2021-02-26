@@ -92,4 +92,3 @@ void reset()
         ::reset();
         delete("trigger");
 }
-
