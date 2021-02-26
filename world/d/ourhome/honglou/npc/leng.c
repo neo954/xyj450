@@ -42,4 +42,3 @@ void greeting(object ob)
 {
   command ("hmm");
 }
-
