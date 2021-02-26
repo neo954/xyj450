@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // haunt.c
 
 #include <ansi.h>
@@ -10,12 +10,12 @@ inherit F_CLEAN_UP;
 int scribe(object me, object sheet, string arg)
 {
    if( me->is_fighting() )   return notify_fail("你正在战斗中！\n");
-   
+
    if( (int)me->query("mana") < 20 ) return notify_fail("你的法力不够了！\n");
 
    if( !arg ) return notify_fail("你要在这张符上写谁的名字？\n");
 
-   sheet->set_name(YEL "僵□追魂符" NOR, ({ "haunting sheet", "sheet"}) );   
+   sheet->set_name(YEL "僵□追魂符" NOR, ({ "haunting sheet", "sheet"}) );
    sheet->set("attach_func", (: call_other, __FILE__, "do_haunt", arg :) );
    me->add("mana", -20);
    me->receive_damage("sen", 10);
