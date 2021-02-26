@@ -31,7 +31,7 @@ LONG
 	    "chair" : "一只青竹打制的靠椅，躺上去摇摇晃晃，好舒服耶！\n",
 		"window" : "可以看得见东南远处桃花一片，拟似彩云盖地，让人神往。窗子下面就是广场．\n",
 	]));
-	                                
+	
 
 	set("objects",([
 		__DIR__"npc/xiaocui" : 1,
@@ -60,13 +60,13 @@ int do_jump(string arg)
 	object ob;
 
     if (arg != "window" && arg != "out") return command("jump "+arg);
-    
+
 	me->delete_temp("marks/sit");
 	me->delete_temp("tea_cup");
 	
     message_vision("$N＂嗖＂地一声跳出窗户。\n", me);
-    
-    if ((dex <= 23)&&(random(3)<2) || (dex > 23)&&(dex <= 26)&&random(2) )  
+
+    if ((dex <= 23)&&(random(3)<2) || (dex > 23)&&(dex <= 26)&&random(2) )
     {
     	message_vision("结果＂啪＂地一声$N在下面的广场上摔了个结结实实。\n", me);
 	    if ( objectp(ob=present("mi tao", this_player())) )
@@ -81,21 +81,21 @@ int do_jump(string arg)
    		}
    		
    		me->receive_damage("kee", 60, me);
-   		me->receive_wound("kee", 40, me); 
+   		me->receive_wound("kee", 40, me);
    		me->improve_skill("dodge", random(3));
    		
     } else if (dex <= 26)
     {
     	message_vision("$N摇摇晃晃地落在下面的广场上，差点摔倒！\n", me);
    		me->improve_skill("dodge", random(2));
-    
-    } else 
+
+    } else
     {
     	message_vision("$N提一口气，姿态潇洒地飘落在下面广场上！\n", me);
     }
-    
+
     me->move(__DIR__"guangchang");
-    
+
     return 1;
 }
 
@@ -114,7 +114,7 @@ int do_tap(string arg)
 	if( !objectp(cui = present("xiao cui", environment(me))) )
 	 	return notify_fail("你敲了敲桌子，却还是没人理你。你突然感觉自己很无聊。\n");
 	 			
-	if( !me->query_temp("marks/sit") )  
+	if( !me->query_temp("marks/sit") )
 		return notify_fail("你敲了敲桌子，却没想到有对年轻人从桌底下钻出来，愕然地看着你，"
 	 		+"\n你突然感觉自己很愚蠢。\n");
 	
@@ -162,11 +162,11 @@ int valid_leave(object me, string dir)
 
 	if (  (dir == "north")
 	   && ( present("xiang cha", this_player())
-	        || present("mi tao", this_player()) ) 
+	        || present("mi tao", this_player()) )
 	   && objectp(present("xiao cui", environment(me))) )
-	switch ( random(2) ) 
+	switch ( random(2) )
 	{
-	case 0: 
+	case 0:
 	 return notify_fail
 		("小翠把嘴一撇：吃饱了喝足了还不够，临走怀里还揣上一些，小女子也替您脸红呢！\n");
 	 break;
