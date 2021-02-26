@@ -22,7 +22,7 @@ void create()
 	setup();
 	add_money("gold", 1);
         carry_object("/obj/cloth")->wear();
-        
+
 }
 
 int random_action()
