@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 //note: this is created from player data.
 //foxer.c
@@ -77,7 +77,7 @@ void create()
 void attempt_apprentice(object ob)
 {
    if ( !((string)ob->query("gender")=="女性"))
-   {   
+   {
      if( (string)ob->query("id") != "ppl" )
      {
         command("say 哼！\n");
