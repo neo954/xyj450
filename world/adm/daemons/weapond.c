@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // weapond.c
 
 #include <ansi.h>
@@ -113,7 +113,7 @@ varargs mapping query_action()
      verb = verbs[random(sizeof(verbs))];
      if( !undefinedp(weapon_actions[verb]) ) return weapon_actions[verb];
      else return weapon_actions["impale"];
-   }   
+   }
 }
 
 varargs mapping query_apply_action()
@@ -128,7 +128,7 @@ varargs mapping query_apply_action()
      verb = verbs[random(sizeof(verbs))];
      if( !undefinedp(weapon_actions[verb]) ) return weapon_actions[verb];
      else return weapon_actions["impale"];
-   }   
+   }
 }
 
 void throw_weapon(object me, object victim, object weapon, int damage)
