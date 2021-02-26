@@ -1,5 +1,5 @@
 // tygate1.c 桃园篱笆
-// by Marz 
+// by Marz
 
 inherit ROOM;
 
@@ -14,7 +14,7 @@ LONG
 	
 	
 	set("item_desc",([
-		"fence"	:	"\n\t\t\t篱笆门上有首诗：\n\n\n" 
+		"fence"	:	"\n\t\t\t篱笆门上有首诗：\n\n\n"
 					"\t\t∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷\n"
 					"\t\t∷∷∷　　　　　　　　　　　　　　　∷∷∷\n"
 					"\t\t∷∷∷　应　怜　屐　齿　印　苍　苔　∷∷∷\n"
