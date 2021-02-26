@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mes/cave2.c
 
 inherit ROOM;
@@ -9,7 +9,7 @@ void create()
 {
   set("short", "绝崖");
   set("long", @LONG
-      
+
 这是绝崖的另一面。往西就是玉鼠精的练功房了。
 LONG);
   set("exits", ([ /* sizeof() == 1 */
@@ -17,7 +17,7 @@ LONG);
       ]));
   set("outdoors", 0);
   set("no_clean_up", 0);
-  
+
   setup();
 }
 void init()
