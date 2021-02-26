@@ -24,14 +24,14 @@ LONG
 }
 
 void init()
-{       
+{
 	object ob;
 
-	if( interactive(ob = this_player()) 
+	if( interactive(ob = this_player())
 	&& (int)ob->query_condition("bonze_jail") >= 0 )
 	{
 		message("vision",
-			HIY "只听水声哗啦啦地一响，一个满脸漆黑，全身泥浆的家伙爬了过来！\n\n" NOR, 
+			HIY "只听水声哗啦啦地一响，一个满脸漆黑，全身泥浆的家伙爬了过来！\n\n" NOR,
 			environment(ob), ob);
 
 		tell_object(ob, "你觉得混身轻松，总算走出了这个五行迷魂阵，逃出生天了！\n");
