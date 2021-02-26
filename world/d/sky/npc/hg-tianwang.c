@@ -1,10 +1,10 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // huguo-tianwang.c
 //created 4-8-97 pickle
 inherit NPC;
- 
+
 void create()
 {
         set_name("魔礼山", ({ "huguo tianwang", "huguo", "tianwang", "wang" }) );
