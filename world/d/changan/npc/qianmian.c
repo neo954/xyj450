@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // qianmian guai
 // mon 8/7/97
 
@@ -40,7 +40,7 @@ void create()
         }));
         set("chat_chance_combat", 5);
         set("chat_msg_combat", ({
-             (: random_walk :), 
+             (: random_walk :),
         }));
 
    set("str", 40);
@@ -58,7 +58,7 @@ void create()
    set("combat_exp", DAOXING);
 
    set_skill("spells",SPELLS);
-   set_skill("force", 140); 
+   set_skill("force", 140);
    set_skill("unarmed", 140);
    set_skill("dodge", 140);
    set_skill("parry", 140);
@@ -104,7 +104,7 @@ int random_walk()
    no_player=0;
    find_newplace();
    return 1;
-      } 
+      }
       // try move away.
       move_away();
       return 1;
@@ -114,7 +114,7 @@ int random_walk()
     ran=random(30);
     if(ran<3 && just_steal==0) {
       do_steal(me,user);
-      return 1; 
+      return 1;
     } else if(ran<15 && just_steal==0) {
       if (is_fighting()) return 1;
       move_away();
@@ -173,7 +173,7 @@ void do_steal(object me, object user)
         user->parse_command_id_list()[0]);
       just_steal=1;
       call_out("del_steal",20);
-      return; 
+      return;
 }
 
 string check_give(object obj)
@@ -230,8 +230,8 @@ void move_away()
        if(random_move()) {
          find_obj();
          return;
-       } 
-      } 
+       }
+      }
       find_newplace();
       return;
 }
@@ -244,12 +244,12 @@ void find_newplace()
   inv=all_inventory(me);
   size=sizeof(inv);
   if(size) {
-    command("drop "+ 
+    command("drop "+
       check_give(inv[random(size)]));
   }
   message_vision("$N向地里一钻，消失得无影无踪了。\n",me);
-  
-  if(find_user() && 
+
+  if(find_user() &&
     me->move(curr_env=environment(new_user))) {
     curr_user=new_user;
 //    command("sys "+curr_user->query("id"));
@@ -284,7 +284,7 @@ void find_obj()
       me->parse_command_id_list())!=-1) continue;
     me->set("max_mana",MAX_MANA);
     me->set("mana",MAX_MANA);
-    if(me->query_skill("spells")<SPELLS/2) 
+    if(me->query_skill("spells")<SPELLS/2)
       me->set_skill("spells",SPELLS);
     if(!command("bian "+obj[i]->parse_command_id_list()[0]))
       continue;
@@ -293,7 +293,7 @@ void find_obj()
          break;
        }
      }
-     
+
      return;
 }
 
@@ -310,7 +310,7 @@ void del_bian()
 int find_user()
 {    object *users,ob,env;
      int size, i;
-    
+
      users=children("/obj/user");
      size=sizeof(users);
 
@@ -373,7 +373,7 @@ void copy_status(object me, object ob)
      me->set_skill(sname[i], skill_status[sname[i]]);
       }
         }
-   
+
    //delete old skill mappings.
    if(map_status = me->query_skill_map()) {
      mname  = keys(map_status);
@@ -382,7 +382,7 @@ void copy_status(object me, object ob)
        me->map_skill(mname[i]);
           }
         }
-         
+
         //add new skill mappings.
    if (map_status = ob->query_skill_map()) {
      mname  = keys(map_status);
@@ -401,7 +401,7 @@ void copy_status(object me, object ob)
    me->set("spi", hp_status["spi"]);
    me->set("per", hp_status["per"]);
    me->set("kar", hp_status["kar"]);
- 
+
         if(fresh==1) {
            fresh=0;
      me->set("eff_kee",    hp_status["eff_kee"]);
@@ -460,7 +460,7 @@ void auto_recovery()
    me->set("kee", (int)me->query("max_kee"));
    me->set("eff_sen", (int)me->query("max_sen"));
    me->set("sen", (int)me->query("max_sen"));
-        
+
         me->set("force", (int)me->query("max_force"));
         me->set("atman", (int)me->query("max_atman"));
         me->set("mana", (int)me->query("max_mana"));
