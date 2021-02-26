@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 string fan_me(object me);
 
@@ -31,7 +31,7 @@ void create()
 string fan_me(object me)
 {   object who;
    who=this_player();
-   
+
    if(!present("fan he", me)){
    return "这天黑路远的，算了吧，多谢了！\n";
    }
