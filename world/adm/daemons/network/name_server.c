@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //   File   :  /adm/daemons/network/name_server.c
 //   Creator   :  Huthar@Portals|MIRE|TMI|Genocide|OD
 //
@@ -13,7 +13,7 @@
 #include <net/services.h>
 #include <net/dns.h>
 #include <net/macros.h>
- 
+
 mapping muds;
 
 void error(int i,string file, string message);
@@ -159,7 +159,7 @@ void load_services()
    }
 }
 
-void error(int line, string file, string message) 
+void error(int line, string file, string message)
 {
    write("ERROR: Line "+line+" of "+file+": ");
    write(message+"\n");
