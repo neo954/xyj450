@@ -1,5 +1,5 @@
 // tyroad6.c 崎岖山路
-// by Marz 
+// by Marz
 
 inherit ROOM;
 
