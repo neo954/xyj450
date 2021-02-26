@@ -9,7 +9,7 @@ void create()
 {
 	set_name("宋远桥", ({ "song yuanqiao", "song" }));
 	set("nickname", "武当首侠");
-	set("long", 
+	set("long",
 		"他就是张三丰的大弟子、武当七侠之首的宋远桥。\n"
 		"身穿一件干干净净的灰色道袍。\n"
 		"他已年过六十，身材瘦长，满脸红光。恬淡冲和，沉默寡言。\n");
@@ -75,11 +75,11 @@ void attempt_apprentice(object ob)
 
 string ask_me()
 {
-	mapping fam; 
+	mapping fam;
 	object ob;
 	
 	if (!(fam = this_player()->query("family")) || fam["family_name"] != "武当派")
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"与本派素无来往，不知此话从何谈起？";
 	if (query("book_count") < 1)
 		return "你来晚了，本派的内功心法不在此处。";
