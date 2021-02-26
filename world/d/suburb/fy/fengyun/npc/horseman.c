@@ -22,5 +22,5 @@ void create()
 	setup();
 	add_money("silver", 2);
         carry_object("/obj/cloth")->wear();
-        
+
 }
