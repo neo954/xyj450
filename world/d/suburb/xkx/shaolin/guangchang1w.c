@@ -37,9 +37,9 @@ LONG
 int valid_leave(object me, string dir)
 {
 
-	if (!wizardp(me) 
-	&& dir == "west" 
-	&& me->query_skill("dodge",1) <= 20 
+	if (!wizardp(me)
+	&& dir == "west"
+	&& me->query_skill("dodge",1) <= 20
 	&& (present("qingwei biqiu", environment(me))))
 
 	return notify_fail("清为拦住劝你: 西边是本寺护法松林，向来有进无出，\n"
