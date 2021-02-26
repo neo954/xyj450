@@ -58,5 +58,3 @@ int drink_drug(object ob)
      + (int)ob->query("liquid/slumber_effect") );
    return 0;
 }
-
-
