@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4/12/1997
 #include "cloudfog.h"
 
@@ -39,7 +39,7 @@ void create()
 
 void attempt_apprentice(object ob)
 {
-  return; // disabled 
+  return; // disabled
   command("recruit " + ob->query("id") );
 }
 
