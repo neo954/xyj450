@@ -32,4 +32,3 @@ int do_climb(string arg)
 	this_player()->move(__DIR__"cave1");
 	return 1;
 }
-
