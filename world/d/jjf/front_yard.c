@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/jjf/front_yard.c
 
 inherit ROOM;
@@ -50,7 +50,7 @@ int do_da(string arg)
   object me=this_player();
   int unarmedskll=(int)(me->query_skill("unarmed", 1)/2);
   int maxlevel, exp=(int)me->query("combat_exp");
- 
+
   if( !arg || !((arg == "sandbags") || (arg == "沙袋")))
     return notify_fail("你要打什么？\n");
   if( me->query("kee") < (int)(me->query("max_kee")/5))
@@ -84,7 +84,7 @@ int do_da(string arg)
 }
 
 int do_hammer(string arg)
-{       
+{
   object me;
   me=this_player();
   if ( !present("hammer", me) || (arg != "door"))
