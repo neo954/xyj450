@@ -79,13 +79,13 @@ void init()
 	ob = this_player();
 	me = this_object();
 	
-	if (interactive(ob) 
+	if (interactive(ob)
 	&& !environment(ob)->query("no_fight")
 	&& ( (fam = ob->query("family")) && fam["family_name"] != "少林派" && ob->query("class") == "bonze") )
 	{
 		command("say 你这个无耻少林叛徒，纳命来吧！！！\n");
 		me->set_leader(ob);
 		remove_call_out("kill_ob");
-		call_out("kill_ob", 1, ob); 
-	}       
+		call_out("kill_ob", 1, ob);
+	}
 }
