@@ -19,4 +19,3 @@ int do_eat(string arg)
    if( !id(arg) ) return notify_fail("你要吃什么？\n");
 
 }
-
