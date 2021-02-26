@@ -49,4 +49,3 @@ int valid_leave(object me, string dir)
            return notify_fail("你向那边走去，结果发现那是沙漠中的海市蜃楼。\n");
         return ::valid_leave(me, dir);
 }
-
