@@ -90,5 +90,3 @@ void speaking(object ob)
 		}
 	}
 }
-
-
