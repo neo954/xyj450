@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //   equip.c
 
 #include <dbase.h>
@@ -72,7 +72,7 @@ int wield()
      if( !(old_weapon = owner->query_temp("weapon")) )
          owner->set_temp("weapon", this_object());
 
-     else // If we still have a free hand? 
+     else // If we still have a free hand?
      if( !owner->query_temp("secondary_weapon")
      &&   !owner->query_temp("armor/shield") ) {
 
@@ -82,7 +82,7 @@ int wield()
           if(old_weapon->query("apply/skill_type") &&
              old_weapon->query("apply/skill_type") ==
              this_object()->query("apply/skill_type") &&
-             old_weapon->query("skill_type") != 
+             old_weapon->query("skill_type") !=
              this_object()->query("skill_type") )  {
                  owner->set_temp("use_apply_action", 1);
                 old_weapon->set_temp("use_apply_skill", 1);
@@ -110,7 +110,7 @@ int wield()
    if(owner->query_temp("use_apply_action") == 1) {
       owner->reset_apply_action();
    }
-    else   
+    else
       owner->reset_action();
    set("equipped", "wielded");
    return 1;
