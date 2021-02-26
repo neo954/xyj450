@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4.12.1997
 
 inherit NPC;
@@ -56,7 +56,7 @@ int give_fajian()
   fajian = new ("/d/qujing/yinwu/obj/fajian");
   fajian->move(me);
   command("hmm");
-  command("give "+who->query("id")+" fa jian"); 
+  command("give "+who->query("id")+" fa jian");
   who->set_temp("obstacle/yinwu_fajian",1);
   return 1;
 }
