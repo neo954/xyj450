@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 string money_str(int amount)
 {
         // returns a chinese string of `amount` of money
@@ -97,10 +97,10 @@ int player_pay(object who, int amount)
 	else
 		cc = 0;
 	
-	if (cc + sc * 100 + gc * 10000 < amount) 
+	if (cc + sc * 100 + gc * 10000 < amount)
 		if (present("thousand-cash", who))
 			return 2;
-		else 
+		else
 			return 0;
 	else {
 		left = cc + sc * 100 + gc * 10000 - amount;
