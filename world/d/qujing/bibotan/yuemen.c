@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -14,12 +14,12 @@ void create ()
 气，夹杂着些风火雷电的声音，平添几丝诡臆。
 LONG);
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
   __DIR__"npc/qingshan" : 1,
   __DIR__"npc/niqiu" : 1,
 ]));
 //  set("outdoors", 1);
-  
+
 
   set("exits", ([ /* sizeof() == 2 */
   "south" : __DIR__"longtai2",
@@ -38,7 +38,7 @@ int valid_leave(object me, string dir)
         return notify_fail("天波儿笑喝道：后院是禁地，还是莫去的好！\n");
         if (objectp(present("xiaoboer tian", environment(me))))
         return notify_fail("笑波儿天喝道：后院是禁地，还是莫去的好！\n");
-        }   
+        }
         return ::valid_leave(me, dir);
 }
 
