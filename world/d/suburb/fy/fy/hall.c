@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit ROOM;
 void create()
@@ -11,7 +11,7 @@ void create()
 奖的英雄都成为不死之身。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "south" : __DIR__"ecloud5",
 ]));
         set("objects", ([
