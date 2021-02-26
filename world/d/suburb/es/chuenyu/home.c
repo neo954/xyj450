@@ -15,13 +15,13 @@ LONG
             "west" : __DIR__"smallyard",
               "southwest" : __DIR__"dustyroad3",
               ]));
-              
+
               create_door("southwest", "木门", "northeast", DOOR_CLOSED);
-              
-              
+
+
               set("objects", ([
               __DIR__"npc/oldliu" : 1,
                       ]) );
-                      
+
               setup();
 }
