@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 10/14/1997
 // room: /d/qujing/baoxiang/zhendong.c
 
@@ -24,7 +24,7 @@ LONG);
         __DIR__"npc/bing" : 4,
       ]));
 
-  set("resource", ([ 
+  set("resource", ([
     "water" : 1,
     ]));
 
