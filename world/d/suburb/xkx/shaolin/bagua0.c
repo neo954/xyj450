@@ -41,4 +41,3 @@ int valid_leave(object me, string dir)
 		return notify_fail("你踩动了机关，掉进僧监。\n");
 	return ::valid_leave(me, dir);
 }
-
