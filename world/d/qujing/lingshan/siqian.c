@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 12/8/1997
 
 inherit ROOM;
@@ -33,8 +33,8 @@ LONG);
 int valid_leave (object who, string dir)
 {
   object where = this_object ();
-  object anuo = present ("anuo zunzhe",where); 
-  object jiaye = present ("jiaye zunzhe",where); 
+  object anuo = present ("anuo zunzhe",where);
+  object jiaye = present ("jiaye zunzhe",where);
 
   if (dir == "north")
     return ::valid_leave (who, dir);
