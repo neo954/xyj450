@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /changan/aolaiws.c
 
 inherit ROOM;
@@ -65,7 +65,7 @@ void check_trigger()
         else
             message("vision", "ERROR: mufa not found\n", this_object() );
     }
-    else 
+    else
         message("vision", "木筏已经靠岸了，随时都可上去。\n",
             this_object() );
 }
@@ -117,7 +117,7 @@ int do_zuo(string arg)
 {
     string dir;
 
-    if( (arg=="mufa") || (arg=="木筏")){ 
+    if( (arg=="mufa") || (arg=="木筏")){
         message_vision("$N试着想坐上木筏。\n", this_player());
         check_trigger();
         return 1;
@@ -131,5 +131,5 @@ void reset()
 
     ::reset();
     if( room = find_object(__DIR__"mufa") )
-        room->delete("zuo_trigger"); 
+        room->delete("zuo_trigger");
 }
