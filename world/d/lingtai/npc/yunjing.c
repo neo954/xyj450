@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // worker.c
 
 inherit NPC;
@@ -16,22 +16,22 @@ void create()
    set("int", 25);
    set("class", "taoist");
         create_family("方寸山三星洞", 3, "弟子");
-   
+
         set("eff_dx", 30000);
         set("nkgain", 200);
 
         set_skill("unarmed", 40);
         set_skill("dodge", 40);
         set_skill("parry", 40);
-        set_skill("spells", 40);  
+        set_skill("spells", 40);
         set_skill("dao", 40);
         set_skill("literate", 40);
-        set_skill("stick", 40);  
+        set_skill("stick", 40);
         set_skill("qianjun-bang", 40);
-        set_skill("puti-zhi", 40);  
+        set_skill("puti-zhi", 40);
         set_skill("jindouyun", 40);
-        set_skill("dodge", 40);  
-        set_skill("force", 40);   
+        set_skill("dodge", 40);
+        set_skill("force", 40);
         set_skill("wuxiangforce", 40);
 
         map_skill("spells", "dao");
@@ -64,7 +64,7 @@ void attempt_apprentice(object ob, object me)
 "多加努力，他日必定有成。\n");
         command("recruit " + ob->query("id") );
    return;
-}     
+}
 
 int recruit_apprentice(object ob)
 {
