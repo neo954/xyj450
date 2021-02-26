@@ -119,4 +119,3 @@ void skill_improved(object me)
         } else
                 me->add("bellicosity", 10);
 }
-
