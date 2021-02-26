@@ -1,4 +1,4 @@
-// hulu.c 
+// hulu.c
 
 inherit ITEM;
 inherit F_LIQUID;
