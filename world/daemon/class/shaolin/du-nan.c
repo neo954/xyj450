@@ -67,14 +67,14 @@ void init()
 	ob = this_object();
 
 	::init();
-	if( interactive(me) ) 
+	if( interactive(me) )
 	{
-		if ( mapp(fam = me->query("family")) && fam["family_name"] == "少林派" 
+		if ( mapp(fam = me->query("family")) && fam["family_name"] == "少林派"
 		&& fam["generation"] == 36 ) return;
 
-		if ( mapp(fam = me->query("family")) && fam["family_name"] == "少林派" 
+		if ( mapp(fam = me->query("family")) && fam["family_name"] == "少林派"
 		&& fam["generation"] > 36 		
-		&& me->query("kee") < 50 ) 
+		&& me->query("kee") < 50 )
 		{
 			me->move("/d/suburb/xkx/shaolin/qyping");
 			me->unconcious();
@@ -103,10 +103,10 @@ void halt()
 
 string ask_me()
 {
-	mapping fam; 
+	mapping fam;
 	object ob;
 	
-	if ( !this_player()->query_temp("fighter") 
+	if ( !this_player()->query_temp("fighter")
 	||    this_player()->query("combat_exp") < 5000 )
 	{
 		command("say 大胆鼠辈，乳臭未干，竟敢偷入金刚伏魔圈，且让老衲来超度与你！");
@@ -115,11 +115,11 @@ string ask_me()
 	}
 
 	if ( present("puti zi", this_player()) )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"菩提子只有一颗，而且就在你身上，真是贪得无餍！";
 
 	if ( present("puti zi", environment()) )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"菩提子只有一颗，而且就在这里任你取走，真是贪得无餍！";
 
 	if (query("count") < 1)
