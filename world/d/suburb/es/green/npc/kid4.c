@@ -18,4 +18,3 @@ void create()
         carry_object("/obj/cloth")->wear();
         add_money("coin",(random(10)+10));
 }
-
