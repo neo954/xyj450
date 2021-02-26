@@ -85,4 +85,3 @@ int practice_skill(object me)
 
    return 1;
 }
-
