@@ -75,11 +75,3 @@ int accept_fight(object me)
   command("kill "+ me->query("id"));
   return 1;
 }
-
-
-
-
-
-
-
-
