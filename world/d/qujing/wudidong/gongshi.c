@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 inherit ROOM;
 int do_turn(string arg);
@@ -48,7 +48,7 @@ int do_turn(string arg)
 {
   object me=this_player();
   int mykee, mymaxkee, num, mypot, mylp, mynewpot;
-  
+
   if ( !arg )
     return notify_fail("你要转什么？\n");
   if(arg=="wheel")
@@ -67,9 +67,9 @@ int do_turn(string arg)
    }
       me->receive_damage("kee", 200);
       me->receive_wound("kee", 180);
-      message_vision(RED "$N显然伤得不轻！\n" NOR, me);   
+      message_vision(RED "$N显然伤得不轻！\n" NOR, me);
       return 1;
-    }                                           
+    }
   else
     {
       message_vision("只听“叮”的一声，一道暗门突起，$N身不由己被推进暗室去了！\n", me);
