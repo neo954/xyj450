@@ -3,7 +3,7 @@
 
 inherit NPC;
 
-string ask_me(object who); 
+string ask_me(object who);
 
 void create()
 {
