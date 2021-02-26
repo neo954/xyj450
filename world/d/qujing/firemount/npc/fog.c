@@ -52,5 +52,3 @@ void init()
         "公主"     :   (: test_player :),
       ]));
 }
-
-
