@@ -1,4 +1,4 @@
-// egg.c 
+// egg.c
 
 inherit ITEM;
 inherit F_FOOD;
