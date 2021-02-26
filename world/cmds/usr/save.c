@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // save.c
 
 inherit F_CLEAN_UP;
@@ -21,8 +21,8 @@ int main(object me, string arg)
      return notify_fail("你迟点才可以储存。\n");
         }
         // mon shortened the no_save time. 4/2/98
-     
-   me->set("last_save", cur_time);   
+
+   me->set("last_save", cur_time);
    if( environment(me)->query("valid_startroom") ) {
      me->set("startroom", base_name(environment(me)));
      write("当你下次连线进来时，会从这里开始。\n");
