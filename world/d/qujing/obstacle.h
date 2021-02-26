@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 12 15 1997
 
-// this shared file is used at several places. 
+// this shared file is used at several places.
 
 mapping obstacles = ([
   "wuzhuang"   : "  1. 五庄观／人参果",
