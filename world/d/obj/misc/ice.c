@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // ice.c...weiqi, 970925
 
 #include <ansi.h>
@@ -56,7 +56,7 @@ void melt()
 }
 
 void init()
-{                                             
+{
         remove_call_out("do_melt");
         call_out("do_melt", 1);
    add_action("do_make", "make");
@@ -81,7 +81,7 @@ int do_make(string arg)
      message_vision("$N拿起冰块捏来捏去，结果冰块很快就化掉了。\n", me);
      destruct(this_object());
      return 1;
-   }   
+   }
 
    ob=new("/d/obj/weapon/blade/iceblade");
    ob->move(me);
@@ -93,7 +93,7 @@ int do_make(string arg)
 }
 
 int do_chi(string arg)
-{   
+{
    if( !this_object()->id(arg) ) return 0;
    if( this_player()->is_busy() )
      return notify_fail("你上一个动作还没有完成。\n");
