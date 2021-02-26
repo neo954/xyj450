@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bonze.c 和尚�
 // By Dream Dec. 20, 1996
 
@@ -58,9 +58,9 @@ void create()
    set("chat_msg", ({
      (: random_move :)
    }) );
-        
+
    create_family("南海普陀山", 3, "弟子");
-   
+
    setup();
    carry_object("/obj/money/gold");
    carry_object("/d/nanhai/obj/sengpao")->wear();
