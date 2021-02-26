@@ -10,7 +10,7 @@ void create()
 二年的清明才解冻。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "north" : __DIR__"town",
   "south" : __DIR__"road5",
 ]));
