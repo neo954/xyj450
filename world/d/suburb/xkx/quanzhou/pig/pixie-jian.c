@@ -143,4 +143,3 @@ int valid_learn(object me)
 {
         return notify_fail("辟邪剑法只能通过研习《葵花宝典》来学习。\n");
 }
-
