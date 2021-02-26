@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -13,12 +13,12 @@ void create ()
 着各类瓜果，都是观中自己种的。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "east" : __DIR__"eastway5",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
