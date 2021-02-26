@@ -86,4 +86,3 @@ void close_down()
 
    delete("exits/down");
 }
-
