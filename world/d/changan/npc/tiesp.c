@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // changan/npc/tiesp.c
 
 inherit NPC;
@@ -11,10 +11,10 @@ void create()
    set("title", "钱庄掌柜");
    set("gender", "男性");
    set("age", 54);
-   set("kee", 800); 
+   set("kee", 800);
    set("max_kee", 800);
    set("sen", 200);
-   set("max_sen", 200);   
+   set("max_sen", 200);
    set("combat_exp", 50000);
    set("attitude", "friendly");
    set("env/wimpy", 50);
