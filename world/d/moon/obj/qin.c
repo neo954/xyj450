@@ -45,4 +45,3 @@ int do_play (string arg)
   message_vision (msgs[random(sizeof(msgs))],me);
   return 1;
 }
-
