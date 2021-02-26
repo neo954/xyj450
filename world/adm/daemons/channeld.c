@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // channeld.c
 // modified by tool on 96/10/05
 // modified by mon@xyj on 10/97 to add support for
@@ -90,7 +90,7 @@ varargs int do_channel(object me, string verb, string arg, int emote)
      if(me->query("channel/chat_block") &&
        (time-me->query("channel/chat_block"))<0 )
         return notify_fail("你的交谈频道被暂时关闭了。\n");
-              
+
            count=me->query("channel/chat_count");
                 count++;
      last_chat=me->query("channel/last_chat");
@@ -148,12 +148,12 @@ varargs int do_channel(object me, string verb, string arg, int emote)
    if( channels[verb]["anonymous"] ) {
      who = channels[verb]["anonymous"];
      if (userp(me))
-                do_channel( this_object(), "sys", 
+                do_channel( this_object(), "sys",
        sprintf("谣言：%s(%s)。", me->name(),me->query("id")));
    }
    else if( userp(me) || !stringp(who = me->query("channel_id")) ) {
      who = me->query("name");
-     if(me->query("id")) 
+     if(me->query("id"))
        who=who+"(" + capitalize(me->query("id")) + ")";
              }
 
@@ -185,7 +185,7 @@ varargs int do_channel(object me, string verb, string arg, int emote)
      if( sizeof(channels[verb]["extra_listener"]) )
         channels[verb]["extra_listener"]->relay_channel(me, verb, arg);
    }
-   
+
    if( !undefinedp(channels[verb]["intermud"])
    &&   base_name(me) != channels[verb]["intermud"] ) {
           if(userp(me)) {
@@ -194,11 +194,11 @@ varargs int do_channel(object me, string verb, string arg, int emote)
             arg=replace_string(arg, "$N", me->name());
           }
      channels[verb]["intermud"]->send_msg(
-     channels[verb]["channel"], me->query("id"), 
+     channels[verb]["channel"], me->query("id"),
                    me->name(1), arg, emote, channels[verb]["filter"] );
         }
 
-   if( userp(me) ) 
+   if( userp(me) )
      me->set_temp("last_channel_msg", arg);
 
    return 1;
