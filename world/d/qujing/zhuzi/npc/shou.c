@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 15 1997
 
 inherit NPC;
@@ -32,4 +32,4 @@ void messaging (object who)
   else
     command("slap dianzhu");
 }
-                
+
