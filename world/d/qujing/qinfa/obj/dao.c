@@ -93,4 +93,3 @@ void cutting (object me, object ob)
   me->add_temp("obstacle/qinfa_cut_times",1);
   ob->check_hair();
 }
-
