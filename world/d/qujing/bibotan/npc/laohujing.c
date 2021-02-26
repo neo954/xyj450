@@ -81,4 +81,3 @@ void die()
    env->set("done", 1);
         destruct(this_object());
 }
-
