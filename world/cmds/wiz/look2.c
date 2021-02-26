@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // look.c
 // "per" parts modified by none at 96/10/02
 
@@ -31,13 +31,13 @@ string *per_msg_male3 = ({
 });
 string *per_msg_male4 = ({
         CYN "长得一副姥姥不疼，舅舅不爱的模样。\n" NOR,
-        CYN "长得蔫蔫的，一副无精打采的模样。 \n" NOR, 
-        CYN "五短三粗，肥头大耳，大概是猪八戒的本家。 \n" NOR, 
+        CYN "长得蔫蔫的，一副无精打采的模样。 \n" NOR,
+        CYN "五短三粗，肥头大耳，大概是猪八戒的本家。 \n" NOR,
 });
 string *per_msg_female1 = ({
         CYN "长发如云，肌肤胜雪，不知倾倒了多少英雄豪杰。 \n" NOR,
         CYN "俏脸生春，妙目含情，轻轻一笑，不觉让人怦然心动。 \n" NOR,
-        CYN "风情万种，楚楚动人，当真是我见犹怜。 \n" NOR, 
+        CYN "风情万种，楚楚动人，当真是我见犹怜。 \n" NOR,
 });
 string *per_msg_female2 = ({
         CYN "婷婷玉立，容色秀丽，风姿动人。 \n" NOR,
@@ -83,7 +83,7 @@ string ride_suffix (object me)
   string ridemsg = "";
   object ridee = 0;
 
-  if (ridee = me->query_temp("ridee")) { 
+  if (ridee = me->query_temp("ridee")) {
     if (environment(ridee) != environment(me) ||
         ! living(ridee) ||
         ! living(me)) {
@@ -178,7 +178,7 @@ int look_item(object me, object obj)
 }
 string per_status_msg(int age, int per, string gender)
 {
-   // added by snowcat 
+   // added by snowcat
    if (age < 14) {
      if ( per>=25 )
         return ( per_msg_kid1[random(sizeof(per_msg_kid1))]);
@@ -188,7 +188,7 @@ string per_status_msg(int age, int per, string gender)
         return ( per_msg_kid3[random(sizeof(per_msg_kid3))]);
      else    return ( per_msg_kid4[random(sizeof(per_msg_kid4))]);
      }
-     
+
    if ( gender == "男性" ) {
      if ( per>=25 )
         return ( per_msg_male1[random(sizeof(per_msg_male1))]);
@@ -198,7 +198,7 @@ string per_status_msg(int age, int per, string gender)
         return ( per_msg_male3[random(sizeof(per_msg_male3))]);
      else    return ( per_msg_male4[random(sizeof(per_msg_male4))]);
      }
-     
+
    if ( gender == "女性" ) {
      if ( per>=25 )
                            return ( per_msg_female1[random(sizeof(per_msg_female1))]);
@@ -221,7 +221,7 @@ int look_living(object me, object obj)
         mapping ofamily;
    string ogender,orace;
    int oage;
- 
+
    if(obj->query_temp("d_mana")>0) {
      ofamily=obj->query_temp("family");
      ogender=obj->query_temp("gender");
@@ -237,7 +237,7 @@ int look_living(object me, object obj)
 //but need a "look" to activate all the relatived settings...weiqi
 //only when one is not in the status of "bian", check his/her
 //fake_age. mon 9/4/97
-     if(obj->query("always_young") ) { 
+     if(obj->query("always_young") ) {
         if(oage>obj->query("fake_age")) {
         //if "age" is less than fake_age, reset fake_age.
         //mon 9/4/97
@@ -250,7 +250,7 @@ int look_living(object me, object obj)
      if(obj->query("combat_exp") > 729000){
         obj->set("always_young", 1);
         obj->set("fake_age", oage);
-     }     
+     }
      }
 //done with fake_age.
         }
@@ -273,7 +273,7 @@ int look_living(object me, object obj)
    pro = (obj==me) ? gender_self(ogender) : gender_pronoun(ogender);
 
         if(obj->query_temp("d_mana")==0 || obj->query_temp("is_character")) {
-   
+
    if( orace=="人类"
    &&   intp(oage) )
      if(oage<10) {
@@ -295,9 +295,9 @@ int look_living(object me, object obj)
    // If we both has family, check if we have any relations.
    if( obj!=me
    &&   mapp(fam = ofamily)
-   &&   mapp(my_fam = me->query("family")) 
+   &&   mapp(my_fam = me->query("family"))
    &&   fam["family_name"] == my_fam["family_name"] ) {
-   
+
      if( fam["generation"]==my_fam["generation"] ) {
         if( ogender == "男性" )
           str += sprintf( pro + "是你的%s%s。\n",
@@ -350,12 +350,12 @@ int look_living(object me, object obj)
         str += sprintf( obj->is_corpse() ? "%s的遗物有：\n%s\n" : "%s身上带着：\n%s\n",
           pro, implode(inv, "\n") );
    }
-        
+
    }
 
         me->start_more(str);
 
-   if( obj!=me 
+   if( obj!=me
    &&   living(obj)
    &&   random((int)obj->query("bellicosity")/10) > (int)me->query_per() ) {
      write( obj->name() + "突然转过头来瞪你一眼。\n");
@@ -365,10 +365,10 @@ int look_living(object me, object obj)
 
 //this part is  taken from attack.c
 //mon 1/22/98
-   if( obj!=me 
+   if( obj!=me
    && living(obj)
    && userp(obj)
-        && random((int)obj->query("bellicosity")/40) > (int)obj->query("cps") ) 
+        && random((int)obj->query("bellicosity")/40) > (int)obj->query("cps") )
      COMBAT_D->auto_fight(obj, me, "berserk");
 
 
@@ -403,7 +403,7 @@ int look_room_item(object me, string arg)
         write(item[arg]);
      else if( functionp(item[arg]) )
         write((string)(*item[arg])(me));
-        
+
      return 1;
    }
    if( mapp(exits = env->query("exits")) && !undefinedp(exits[arg]) ) {
@@ -421,9 +421,9 @@ int help (object me)
 {
    write(@HELP
 指令格式: look [<物品>|<生物>|<方向>]
- 
+
 这个指令让你查看你所在的环境、某件物品、生物、或是方向。
- 
+
 HELP
 );
    return 1;
