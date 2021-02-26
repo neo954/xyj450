@@ -74,7 +74,7 @@ int cast(object me, object target)
                 return 1;
         }
         switch ( random(5) ) {
-	case 0:    
+	case 0:
         msg = HIW "$N口中喃喃地念著咒文，忽然大喝一声“疾！”\n"  +
 	"只见一道黑气罩在$n身上！\n\n"NOR ;
 	break ;
