@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit ROOM;
 void create()
@@ -43,7 +43,7 @@ int do_look(string arg)
 	return 1;
 	}
 }
- 
+
 int do_study(string arg)
 {
 	if(!arg || (arg != "残棋" && arg != "canqi"))
