@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 枪杖齐飞
 
 #include <ansi.h>
@@ -24,7 +24,7 @@ int perform(object me, object target)
      return notify_fail("你想与自己进行「枪杖齐飞」？\n");
    if( victim->query("id") == target->query("id") )
      return notify_fail("不能与你的对手进行「枪杖齐飞」。\n");
-   if( target->query("id") != me->query("bonze/dadangid") 
+   if( target->query("id") != me->query("bonze/dadangid")
     && target->query("id") != me->query("couple/id") )
      return notify_fail("你只能与搭档进行「枪杖齐飞」。\n");
 
@@ -34,7 +34,7 @@ int perform(object me, object target)
      return notify_fail("你的搭档不在与对手战斗中。\n");
    if( !objectp(weapon=target->query_temp("weapon")) ||
      (weapon->query("apply/skill_type") != "spear" &&
-     weapon->query("skill_type") != "spear" ) || 
+     weapon->query("skill_type") != "spear" ) ||
      target->query_skill_mapped("spear") !="huoyun-qiang" )
      return notify_fail("你的搭档没有在使用火云枪。\n");
    if( (int)target->query_temp("qifei") )
@@ -86,24 +86,24 @@ void check_fight(object me, object target, object victim, int amount)
 {
    object weapon;
 
-   if( !living(victim) || !present(victim->query("id"), environment(me)) ) 
+   if( !living(victim) || !present(victim->query("id"), environment(me)) )
      remove_effect(me, target, amount);
 
-   else if(   !present(victim->query("id"), environment(me)) 
+   else if(   !present(victim->query("id"), environment(me))
      || !target->is_fighting(victim)
-     || !present(target->query("id"), environment(me)) 
-     || !me->is_fighting(victim) ) 
+     || !present(target->query("id"), environment(me))
+     || !me->is_fighting(victim) )
      remove_effect(me, target, amount);
 
    else if( !objectp(weapon=target->query_temp("weapon")) ||
      (weapon->query("apply/skill_type") != "spear" &&
-     weapon->query("skill_type") != "spear" ) || 
+     weapon->query("skill_type") != "spear" ) ||
      target->query_skill_mapped("spear") != "huoyun-qiang" )
      remove_effect(me, target, amount);
 
    else if( !objectp(weapon=me->query_temp("weapon")) ||
      (weapon->query("apply/skill_type") != "staff" &&
-     weapon->query("skill_type") != "staff" ) || 
+     weapon->query("skill_type") != "staff" ) ||
      me->query_skill_mapped("staff") != "lunhui-zhang" )
      remove_effect(me, target, amount);
 
