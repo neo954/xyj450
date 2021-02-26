@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/22/1997 by snowcat
 #include <ansi.h>
 
@@ -61,17 +61,17 @@ void check_king ()
     return;
 
   me->set("seen_king",1);
-  call_out ("reset_seen_king",600); 
+  call_out ("reset_seen_king",600);
   message_vision ("$N见到$n，急忙扑过去大哭起来。\n",me,king);
   message_vision ("$N顿时老泪纵横，禁不住叫道：我儿受苦了哇！\n",king);
-  call_out ("crying",5,me,king); 
+  call_out ("crying",5,me,king);
 }
 
 void crying (object me, object king)
 {
   message_vision ("\n父女俩哭成一团！\n",king);
   message_vision ("边上所有的人都流下了悲喜的眼泪。\n",king);
-  call_out ("finishing",5,me,king); 
+  call_out ("finishing",5,me,king);
 }
 
 void finishing (object me, object king)
