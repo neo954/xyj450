@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat
 // 5/22/1997
 
@@ -38,8 +38,8 @@ string new_unit()
   return "枝";
 }
 
-int init ()  
-{   
+int init ()
+{
   add_action ("do_transform", "transform");
   add_action ("do_wield", "wield");
   return 1;
