@@ -9,8 +9,8 @@ void continue_action()
 如果战斗中使用者有 busy 著个 flag, 则 heart_beat() 会改呼叫这个函
 数.
 
-This function will be called in the place of attack() during 
-combat to indicate a person is in busy statue. 
+This function will be called in the place of attack() during
+combat to indicate a person is in busy statue.
 
 void interrupt_me(object who, string how)
 This function interrupts whatever the user is doing.
