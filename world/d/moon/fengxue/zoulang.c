@@ -54,5 +54,3 @@ int do_open(string arg)
 
         return 0;
 }
-
-
