@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // kunxian suo
 // created by mes, updated 6-30-97 pickle
 
@@ -49,18 +49,18 @@ int ji(string target)
     object victim,me=this_player();
     int damage,ratio,mykar=me->query_kar(), dingtime, condition;
     string msg, objname=this_object()->name();
-    
+
     if (this_object()->query("in_use"))
    return notify_fail("蛟龙已经离索而去，现在的"+objname+"不过是一条普通的绳索罢了。\n");
     if (!target)
    return notify_fail("你想用对谁用"+objname+"？\n");
-    
+
     if(!objectp(victim=present(target,environment(me))))
    return notify_fail("这里没有 "+target+"。\n");
     if(!living(victim))
    return notify_fail("你的目标不是活物！\n");
     if(!me->is_fighting())
-   return notify_fail("只有战斗中才能祭"+objname+"。\n");  
+   return notify_fail("只有战斗中才能祭"+objname+"。\n");
     if(victim->query("no_move"))
    return notify_fail("对方已经无暇自顾了，有必要用"+objname+"么？\n");
     if( (int)me->query("mana") < 250)
@@ -120,7 +120,7 @@ void remove_ding(object me, object victim)
 {
     string msg=CYN"只见蛟龙腾空而起，附回了"+query("name")+CYN"。\n"NOR;
     this_object()->delete("in_use");
-    
+
     if(!victim) return;
 
     if (living(victim))
