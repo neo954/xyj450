@@ -37,7 +37,7 @@ string ask_for_employment()
 	if( me->query("gender") != "男性" )
 		return "这位" + RANK_D->query_respect(me) + "别心急，有点耐心慢慢等，呵呵呵 ...\n";
 	command("giggle");
-	if( me->query("spouce") ) 
+	if( me->query("spouce") )
 		return "这位" + RANK_D->query_respect(me) + "您的胃口还真不小啊，呵呵呵 ...\n";
 	if( query_temp("custom") )
 		return me==query_temp("custom") ?
@@ -100,7 +100,7 @@ int perform_propose(object ob)
 					+ "这样的人品真是不错了，姑娘您认为呢？");
 					break;
 				case 2:
-					command("whisper " + ob->query("id") 
+					command("whisper " + ob->query("id")
 					+ "如果您中意，就点点头(nod)吧，不然摇摇头(shake)我再去物色别的对象 ...");
 					break;
 				case 3:		command("smile"); break;
