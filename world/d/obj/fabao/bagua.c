@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bagua.c 铁八卦
 // 9-26-97 pickle
 
@@ -38,14 +38,14 @@ int ji(string target)
     object me=this_player(),victim;
     int condition;
     string msg, objname=this_object()->name();
-    
+
     if (!target) victim=me;
     else if(!victim=present(target,environment(me)))
    return notify_fail("这里没有 "+target+"。\n");
     if(!living(victim))
    return notify_fail("你的目标不是活物！\n");
     if(!victim->is_fighting())
-   return notify_fail("只有战斗中才能祭"+objname+"。\n");  
+   return notify_fail("只有战斗中才能祭"+objname+"。\n");
     if( (int)me->query("mana") < 100)
    return notify_fail("你的法力不够了！\n");
     msg=BLU+me->name()+"于百忙之中从怀中掏出一块"+objname+BLU"，念了几句咒语，";
@@ -69,7 +69,7 @@ int ji(string target)
    break;
     }
     me->set("mana", 0);
-    me->set("sen",10); 
+    me->set("sen",10);
     destruct(this_object());
     return 1;
 }
