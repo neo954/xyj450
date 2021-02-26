@@ -35,7 +35,7 @@ int do_du(string arg)
         object where = environment(me);
         object ob;
         mapping skill;
-        int pxlevel; 
+        int pxlevel;
 	int neili_lost;
 
 	if (!(arg=="kuihua baodian" || arg == "baodian" || arg == "book"))
@@ -179,7 +179,7 @@ write("                   《葵花宝典》阅读指南\n"
         return 1;
 }
 
-        
+
 int do_join()
 {
         if( this_player()->query("rank_info/respect") == "公公") {
