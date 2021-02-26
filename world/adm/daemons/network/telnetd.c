@@ -10,7 +10,7 @@
 #include <mudlib.h>
 #include <net/telnet.h>
 #include <net/socket.h>
-#include <uid.h>
+#include "uid.h"
 
 inherit DAEMON ;
  
