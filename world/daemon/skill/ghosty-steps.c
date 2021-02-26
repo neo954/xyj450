@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit SKILL;
 string *dodge_msg = ({
