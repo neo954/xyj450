@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 inherit F_MASTER;
 
@@ -92,7 +92,7 @@ int give_me(object ob)
      return 1;
    }
    if( (int)me->query("have") ){
-     
+
      command("give yao pai to " + who->query("id"));
      me->delete("have");
      return 1;
