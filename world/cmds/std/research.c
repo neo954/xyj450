@@ -13,7 +13,7 @@ int main(object me, string arg)
 	if(!arg) return notify_fail("指令格式: research <技能>\n");
 	if( !(int)my_skill=me->query_skill(arg,1) )
                 return notify_fail("你对此项技能一无所知，如何搞研究？\n");
-                                                                                
+
         if( !SKILL_D(arg)->valid_learn(me) ) return 0;
 //	if( !SKILL_D(arg)->valid_research(me) ) return 0;
 
