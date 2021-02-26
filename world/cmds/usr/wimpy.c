@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // wimpy.c
 
 inherit F_CLEAN_UP;
@@ -12,7 +12,7 @@ int main(object me, string arg)
    int wmp;
 
    if( !arg ) {
-     write("你现在的当「气」低于 " + (int)me->query("env/wimpy") 
+     write("你现在的当「气」低于 " + (int)me->query("env/wimpy")
         + "% 时就会尝试逃跑。\n");
      return 1;
    }
