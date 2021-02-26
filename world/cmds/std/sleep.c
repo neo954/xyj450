@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // sleep.c
 
 #include <ansi.h>
@@ -11,9 +11,9 @@ int main(object me, string arg)
 {
    object obj, old_target;
    int i;
-   object *inv;   
+   object *inv;
    object where = environment(me);
-   
+
    seteuid(getuid());
 
    if( !where->query("sleep_room") &&
@@ -26,7 +26,7 @@ int main(object me, string arg)
 
    if( me->is_fighting() )
      return notify_fail("战斗中不能睡觉！\n");
-        
+
    if ((time()-me->query("last_sleep"))<90)
      return notify_fail("你刚睡过一觉, 先活动活动吧。 \n");
         if((!arg)||arg==(string)me->query("id"))
@@ -39,7 +39,7 @@ int main(object me, string arg)
      me->set_temp("block_msg/all",1);
      message_vision(HIY "$N往被中一钻，不一会便鼾声大作，进入了梦乡。\n" NOR,me);
    }
-   else { 
+   else {
      write("你就地一躺，开始睡觉。\n");
      write("不一会儿，你就进入了梦乡。\n");
      me->set("last_sleep",time());
@@ -55,7 +55,7 @@ int main(object me, string arg)
    me->disable_player("<睡梦中>");
 
    call_out("wakeup1",random(45 - me->query("con")) + 10, me, where);
-        
+
    return 1;
 
         }
@@ -74,7 +74,7 @@ int main(object me, string arg)
      return notify_fail("？对方跟你可是同性呢．．．\n");
 
    if( !living(obj) )
-     return notify_fail(obj->name() + "没法跟你睡了。\n"); 
+     return notify_fail(obj->name() + "没法跟你睡了。\n");
 
    if (!where->query("if_bed"))   return notify_fail("就在这里？不太好吧。\n");
 
@@ -87,22 +87,22 @@ int main(object me, string arg)
         tell_object(old_target, YEL + me->name() + "改变主意不想跟你睡了。\n" NOR);
      me->set_temp("pending/sleep", obj);
      tell_object(obj, YEL "看来" + me->name() +
-     "("+(string)me->query("id")+")"+ 
+     "("+(string)me->query("id")+")"+
      "很想跟你．．．如果你愿意，请也下一次 sleep 指令。\n" NOR);
      write(YEL "对方正在考虑中．．．\n" NOR);
      return 1;
    }
 
      message_vision(RED "\n$N冲着$n会心地一笑，点了点头。\n\n" NOR, me, obj);
-     
+
    inv = all_inventory(me);
                 for(i=0; i<sizeof(inv); i++)
                                 REMOVE_CMD->do_remove(me, inv[i]);
    inv = all_inventory(obj);
                 for(i=0; i<sizeof(inv); i++)
                                 REMOVE_CMD->do_remove(obj, inv[i]);
-   
-   
+
+
    if(me->query("gender")=="男性"){
      tell_object(me, HIY "\n\n你搂着"+obj->query("name")+
      "温软的身体，不由得心醉神迷．．．\n\n\n" NOR);
@@ -137,7 +137,7 @@ int main(object me, string arg)
 
    call_out("wakeup2",random(45 - me->query("con")) + 10, me,obj, where);
    call_out("wakeup2",random(45 - obj->query("con")) + 10, obj, me,where);
-        
+
    return 1;
 
 }
@@ -172,17 +172,17 @@ int wakeup2(object me,object slept,object where)
         object obj;
 
    kee_cost=50+5*((int)me->query("str")-(int)me->query("con"));
-   if(kee_cost>(int)me->query("max_kee")/2)    
-     kee_cost=(int)me->query("max_kee")/2+1;   
+   if(kee_cost>(int)me->query("max_kee")/2)
+     kee_cost=(int)me->query("max_kee")/2+1;
 
            me->set("sen",(int)me->query("max_sen"));
      if ((int)me->query("mana") < (int)me->query("max_mana"))
      me->set("mana", (int)me->query("max_mana"));
      me->add("max_atman",1);
-     me->add("kee", -kee_cost);   
+     me->add("kee", -kee_cost);
 
    me->enable_player();
- 
+
    while( environment(me)->is_character() )
      me->move(environment(environment(me)));
 
@@ -200,7 +200,7 @@ int wakeup2(object me,object slept,object where)
                         return 1;
    }
      else{
-     // we add bearing function here. wuliao@xyj Feb. 1997   
+     // we add bearing function here. wuliao@xyj Feb. 1997
         message_vision(HIY "$N醒了过来，脸上还挂着甜蜜的笑容。\n" NOR,me);
         me->set_temp("block_msg/all", 0);
                         write("你醒了过来，脸上还挂着甜蜜的笑容。\n");
@@ -209,7 +209,7 @@ int wakeup2(object me,object slept,object where)
 // added by pickle 10-13-97
 // sleep with someone other than husband will also give child.
         obj=slept;
-                        if(me->query("max_atman")<40 || me->query("max_atman")/40 < me->query("child")) 
+                        if(me->query("max_atman")<40 || me->query("max_atman")/40 < me->query("child"))
                         return 1;
                         if (obj!=slept ){
              if (!obj || !userp(obj)
@@ -238,10 +238,10 @@ int wakeup2(object me,object slept,object where)
         call_out("birth1",15,me,obj);
         return 3;
                         }
-        
+
     }
-   } 
-       
+   }
+
 }
 
 int birth1(object me,object obj)
@@ -268,8 +268,8 @@ void birth2(object me,object obj)
    if (random(100)<50){
    baby->set("gender","男性");
    baby->set_name("小"+obj->query("name"),({"xiao "+obj->query("id"),"baby"}));
-   }   
-   else{   
+   }
+   else{
    baby->set("gender","女性");
    baby->set_name("小"+me->query("name"),({"xiao "+me->query("id"),"baby"}));
    }
@@ -296,12 +296,12 @@ void birth2(object me,object obj)
         if(!baby->move(environment(me)))
      baby->move(environment(environment(me)));
 
-}   
+}
 int help(object me)
 {
   write(@HELP
 指令格式 : sleep <人物>
- 
+
 顾名思义，这个指令是用来睡觉的。
 HELP
     );
