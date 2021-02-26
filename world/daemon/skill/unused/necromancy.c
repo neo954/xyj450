@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // necromancy.c
 
 inherit SKILL;
@@ -27,7 +27,7 @@ string scribe_spell_file(string spell)
 }
 
 int practice_skill(object me)
-{   
+{
    object bug;
 
    if( bug = me->query_temp("mind_bug") )
@@ -58,6 +58,6 @@ int practice_skill(object me)
      me->set_temp("mind_bug", bug);
      bug->set("owner", me->query("id"));
      return notify_fail("你的魂魄正被" + bug->name() + "缠住，快把它除掉吧！\n");
-   }   
+   }
    else return 1;
 }
