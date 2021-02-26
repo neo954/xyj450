@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -15,13 +15,13 @@ LONG);
 
    set("item_desc", (["bei" : "石碑上大书：万寿山福地，五庄观洞天。\n", ]));
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "southdown" : __DIR__"linyin2",
      "northup" : __DIR__"shaoxiang",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/***" : 1,
    ]));
