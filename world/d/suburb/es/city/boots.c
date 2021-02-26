@@ -32,4 +32,3 @@ string look_sign(object me)
 {
         return HIY "专卖各式鞋。\n"NOR;
 }
-
