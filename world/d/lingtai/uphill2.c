@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: some place in 西牛贺洲
 // uphill2.c
 
@@ -37,7 +37,7 @@ void init()
 }
 
 int do_climb(string arg)
-{       
+{
    object me;
         me=this_player();
 
