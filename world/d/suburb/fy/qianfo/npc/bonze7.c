@@ -56,4 +56,3 @@ void reset()
 {
 delete("given");
 }
-
