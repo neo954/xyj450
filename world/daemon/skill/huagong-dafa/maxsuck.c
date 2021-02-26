@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // maxsuck.c
 
 #include <ansi.h>
@@ -50,7 +50,7 @@ int exert(object me, object target)
 
 	me->set_temp("sucked", 1);		
 
-	if( random(sp) > random(dp) ) 
+	if( random(sp) > random(dp) )
 	{
 		tell_object(target, HIR "你只觉天顶骨裂，全身功力贯脑而出，如融雪般消失得无影无踪！\n" NOR);
 		tell_object(me, HIG "你觉得" + target->name() + "的丹元自手掌源源不绝地流了进来。\n" NOR);
