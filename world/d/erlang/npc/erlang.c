@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by mon
 
 inherit NPC;
@@ -105,7 +105,7 @@ int do_leave()
 //  lose=me->query("pkgroup/lose");
 //  if(gain==1 && lose==1) {
 //    message_vision("二郎真君朝$N飞起一脚，骂道："+
-//      RANK_D->query_rude(me)+"又没试过，怎知不灵？！\n",me);  
+//      RANK_D->query_rude(me)+"又没试过，怎知不灵？！\n",me);
 //  } else {
 //    if(5*gain>4*lose) {
     if(me->query("PKS")) {
