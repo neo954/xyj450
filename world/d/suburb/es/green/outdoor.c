@@ -25,4 +25,3 @@ int valid_leave(object me,string dir)
 		return notify_fail("入口被魔法封住了！\n");
 	return ::valid_leave(me,dir);
 }
-
