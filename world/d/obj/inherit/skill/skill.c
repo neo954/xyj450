@@ -13,26 +13,26 @@ void create()
 //
 // valid_learn()
 //
-// This function is to check if a character should be able to 
+// This function is to check if a character should be able to
 // learn/study/practice the skill. The default function just
 // returns 1 to allow any characters improve the skill. However,
 // a good skill should has its own feature and restriction. Redefine
-// this function in your skill object and make it reasonable 
+// this function in your skill object and make it reasonable
 // according to the power of the skill.
 
 int valid_learn(object me) { return 1; }
 
-int valid_effect(object me, object weapon, string action_name, int skill) 
-{ 
+int valid_effect(object me, object weapon, string action_name, int skill)
+{
 	return 1;
 }
 
-// 
+//
 // type()
 //
 // This function should return the type of the skill. The skill type now
 // affects if the skill requires combat exp in order to be learned (see
-// /cmds/std/learn.c ) and the ranking of a skill level (see 
+// /cmds/std/learn.c ) and the ranking of a skill level (see
 // /cmds/usr/skills.c )。
 // Currently we have only 2 types of skill: "martial" and "knowledge".
 
@@ -49,14 +49,14 @@ void skill_improved(object me) {}
 //
 // exert_function()
 //
-//     This function is used by the "exert" command as specific skill's 
+//     This function is used by the "exert" command as specific skill's
 // command parser. This function parses the arguments in the standard form
 // (that is, exert <function> [<target>]). When <target> is not present,
 // use the character himself as default.
 //     In order to use this default exert command parser, you must define
 // a function called exert_function_file(string func) in the skill object
 // that takes the function name as argument and return the file name that
-// defines the specified function. 
+// defines the specified function.
 
 int exert_function(object me, string arg)
 {
@@ -143,7 +143,7 @@ int sum(int n,int base,int d)
 }
 
 int NewRandom(int n,int base,int d)
-{ 
+{
   int i = 1;
   int randnum = random(sum(n,base,d));
 
@@ -156,6 +156,6 @@ int NewRandom(int n,int base,int d)
   else {
     while (sum(i,base,d) < randnum)
         i++;
-   } 
+   }
   return (i-1);
 }
