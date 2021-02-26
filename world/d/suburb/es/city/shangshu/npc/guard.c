@@ -38,12 +38,12 @@ int accept_object(object who, object ob)
 {
         if ( !who->query("marks/尚书") ) {
                 if( ob->value() >=30000 ) {
-                        say("门房说道:这位大人，里面请！\n"); 
+                        say("门房说道:这位大人，里面请！\n");
                         who->set("marks/尚书",1);
                         return 1;
-			}  
+			}
 	           else {
-       		         say ("鼻子里哼了一声，头掉了过去。\n"); 
+       		         say ("鼻子里哼了一声，头掉了过去。\n");
 			 return 1;
        			 }
 		}
