@@ -17,7 +17,7 @@ LONG
 ]));
 	set("outdoors", "choyin");
         set("objects", ([
-                __DIR__"npc/visitor" : 4 
+                __DIR__"npc/visitor" : 4
         ]) );
 
 
