@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/changan/duchang3
 // by snowcat 7/5/1997
 inherit ROOM;
@@ -9,10 +9,10 @@ int room_status = 0;
 object hg_ji = 0;
 object lw_ji = 0;
 
-mapping jis = ([ 
+mapping jis = ([
   "hg"  : "红冠鸡",
   "lw"  : "绿尾鸡",
- ]); 
+ ]);
 
 int random2 (int i)
 {
@@ -32,9 +32,9 @@ void create()
 LONG);
 
   set("item_desc",([
-    "paizi" : "押红冠鸡： dou hg <amount> <money>\n"+ 
-              "押绿尾鸡： dou lw <amount> <money>\n", 
-  ])); 
+    "paizi" : "押红冠鸡： dou hg <amount> <money>\n"+
+              "押绿尾鸡： dou lw <amount> <money>\n",
+  ]));
   set("objects", ([ /* sizeof() == 1 */
     __DIR__"npc/jixian" : 1,
   ]));
@@ -121,7 +121,7 @@ int valid_leave(object me, string dir)
 {
   if (dir == "south")
   {
-    if (me->query_temp ("gamble_ji/amount") > 0) 
+    if (me->query_temp ("gamble_ji/amount") > 0)
       message_vision ("$N扔下押鸡的钱不要了。\n",me);
     me->delete_temp("gamble_ji");
   }
@@ -142,7 +142,7 @@ void gamble_prepare ()
   room_status = 1;
   call_out ("gamble_start",20);
 }
- 
+
 void gamble_start ()
 {
   object room = this_object();
@@ -193,7 +193,7 @@ void gamble_perform ()
   }
 
   call_out ("gamble_finish",1);
-  
+
 }
 
 void player_wins (object who, int total)
