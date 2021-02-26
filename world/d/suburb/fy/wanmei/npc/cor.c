@@ -32,7 +32,7 @@ void use_poison()
         tell_object(ob,
 "你觉得脸上剧痛，伸手一摸发现两个毒牙印痕。\n");
         if( random(query("combat_exp")) > (int)ob->query("combat_exp") )
-                ob->apply_condition("snake_poison", 
+                ob->apply_condition("snake_poison",
                 (int)this_player()->query_condition("snake_poison")
                 + random(3)+3);
 }
