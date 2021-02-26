@@ -9,7 +9,7 @@ void create()
 到着看都不顺眼，墙上帖着的财神爷画得到像是一个暴发户。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "west" : __DIR__"inn",
 ]));
         set("objects", ([
