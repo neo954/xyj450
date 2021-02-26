@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create ()
 风从林中穿过，听之萧然。
 LONG);
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
   __DIR__"npc/zhu" : 1,
 ]));
   set("outdoors", 1);
