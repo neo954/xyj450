@@ -3,7 +3,7 @@
 inherit SKILL;
 
 mapping *action = ({
-        ([      "action":               
+        ([      "action":
 "$N左手化出一个圆圈，右手中的$w一招［威镇四方］向$n的$l挥去！",
                 "force":               70,
                 "dodge":                10,
@@ -11,7 +11,7 @@ mapping *action = ({
                 "post_action":  (: call_other, WEAPON_D, "bash_weapon" :),
                 "damage_type":  "挫伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N一弹手中的$w，一招［气盖山河］，手中的$w向$n的$l雷霆般地砸下。",
                 "damage":               70,
                 "dodge":                20,
@@ -19,7 +19,7 @@ mapping *action = ({
                 "post_action":  (: call_other, WEAPON_D, "bash_weapon" :),
                 "damage_type":  "挫伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N暴喝一声，腾空飞起，以泰山压顶之式扑下，手中的$w带着轰轰雷声一招［千钧一发］击向$n的$l。",
 
                 "damage":               70,
@@ -29,7 +29,7 @@ mapping *action = ({
                 "post_action":  (: call_other, WEAPON_D, "bash_weapon" :),
                 "damage_type":  "挫伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N手中的$w一转，一招［狂风暴雨］从四面八方盖向$n的$l",
                 "damage":               40,
 		"force" :		200,
@@ -52,7 +52,7 @@ mapping *action = ({
 int valid_learn(object me)
 {
         if( (int)me->query("str") + (int)me->query("max_force") / 10 < 55 )
-                return 
+                return
 notify_fail("你的膂力还不够，也许该练一练内力来增强力量。\n");
 
         return 1;
@@ -74,17 +74,17 @@ int practice_skill(object me)
 
         if( !objectp(weapon = me->query_temp("weapon"))
         ||      (string)weapon->query("skill_type") != "hammer" )
-                return 
+                return
 notify_fail("你必须先找一个锤或者是类似的武器，才能练盘古九式。\n");
 
         if( (int)me->query("kee") < 60 )
-                return 
+                return
 notify_fail("你的体力不够练盘古九式，还是先休息休息吧。\n");
         me->receive_damage("kee", 60);
         return 1;
 }
 int effective_level() { return 20;}
- 
+
 string *parry_msg = ({
         "$n后退一步，一招［荡气回肠］手中的$v猛的砸向$N的$w。\n",
 	"$n身形微顿，手中的$v一招［围韩救赵］反捣$N的必救之处。\n",
