@@ -20,4 +20,3 @@ void create()
         carry_object("/d/obj/clone/misc/cloth")->wear();
 
 }
-
