@@ -27,4 +27,3 @@ NOR,
 
         return 1;
 }
-
