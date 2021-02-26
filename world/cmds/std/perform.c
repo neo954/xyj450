@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // perform.c
 #include <skill.h>
 #include "/cmds/std/valid_kill.h";
@@ -11,14 +11,14 @@ int main(object me, string arg)
 {
    object weapon, target;
    string martial, skill, perf;
-   
+
    seteuid(getuid());
 
    if( me->is_busy() )
      return notify_fail("( 你上一个动作还没有完成，不能施用外功。)\n");
 
    if( !arg ) return notify_fail("你要用外功做什么？\n");
-   if ( !wizardp(me) && environment(me)->query("no_fight")) 
+   if ( !wizardp(me) && environment(me)->query("no_fight"))
      return notify_fail("这里不能施用外功。\n");
 
         if( sscanf(arg, "%s on %s", perf, arg)==2 ) {
@@ -28,7 +28,7 @@ int main(object me, string arg)
 
                 if(!valid_kill(me,target)) return 0;
 
-                if( userp(me) && userp(target) && 
+                if( userp(me) && userp(target) &&
                     target->query_temp("netdead") )
                    return notify_fail("对方正在断线中，不能对其施用外功。\n");
 
