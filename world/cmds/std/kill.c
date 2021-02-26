@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // kill.c
 
 #include <ansi.h>
@@ -32,8 +32,8 @@ int main(object me, string arg)
 
    callname = RANK_D->query_rude(obj);
 
-   message_vision("\n$N对着$n喝道：「" 
-     + callname + "！今日不是你死就是我活！」\n\n", me, obj);   
+   message_vision("\n$N对着$n喝道：「"
+     + callname + "！今日不是你死就是我活！」\n\n", me, obj);
 
    do_kill(me, obj);
 
@@ -47,7 +47,7 @@ void do_kill(object me, object obj)
      obj->kill_ob(me);
    else {
      obj->fight_ob(me);
-     tell_object(obj, HIR "如果你要和" + me->name() 
+     tell_object(obj, HIR "如果你要和" + me->name()
         + "性命相搏，请你也对这个人下一次 kill 指令。\n" NOR);
    }
 
@@ -56,7 +56,7 @@ int help(object me)
 {
   write(@HELP
 指令格式 : kill <人物>
- 
+
 这个指令让你主动开始攻击一个人物，并且□试杀死对方，kill 和 fight 最大的
 不同在于双方将会真刀实枪地打斗，也就是说，会真的受伤。由于 kill 只需单方
 面一厢情愿就可以成立，因此你对任何人使用 kill 指令都会开始战斗，通常如果
@@ -73,4 +73,3 @@ HELP
     );
     return 1;
 }
- 
