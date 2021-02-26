@@ -19,4 +19,3 @@ int update_condition(object me, int duration)
         if( duration < 1 ) return 0;
         return 1;
 }
-
