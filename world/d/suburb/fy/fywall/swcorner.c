@@ -11,7 +11,7 @@ LONG
         );
         set("exits", ([ /* sizeof() == 4 */
   "north" : __DIR__"wwall10",
-  "east"  : __DIR__"swall10", 
+  "east"  : __DIR__"swall10",
 ]));
         set("objects", ([
         __DIR__"npc/wall_solider" : 3,
