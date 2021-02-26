@@ -1,6 +1,6 @@
 //girl_yu
 inherit NPC;
- 
+
 void create()
 {
         set_name("芙云", ({ "fuyun" }) );
