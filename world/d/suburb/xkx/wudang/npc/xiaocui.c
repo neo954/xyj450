@@ -50,7 +50,7 @@ void create()
         ]));
 
         setup();
-        
+
 		carry_object("/d/suburb/xkx/wudang/obj/greenrobe")->wear();
 		carry_object("/d/suburb/xkx/city/obj/necklace");
 }
@@ -80,15 +80,15 @@ int accept_object(object who, object ob)
 	object obn;
 	
 	if( !who || environment(who) != environment() ) return 0;
-	if ( !objectp(ob) ) return 0; 
+	if ( !objectp(ob) ) return 0;
 	if ( !present(ob, who) ) return notify_fail("你没有这件东西。");
 
 	if (  (string)ob->query("name") == "茶叶"
-		|| (string)ob->query("name") == "金项链"  ) 
+		|| (string)ob->query("name") == "金项链"  )
 	{
-		if ( (string)ob->query("name") == "金项链" ) 
+		if ( (string)ob->query("name") == "金项链" )
 		{
-			command("kiss " + (string)who->query("id")); 
+			command("kiss " + (string)who->query("id"));
 			command("wear lace");
 //			carry_object("/d/suburb/xkx/city/obj/necklace")->wear();
 		}
@@ -98,7 +98,7 @@ int accept_object(object who, object ob)
 			if ((int)who->query_temp("tea_cup") > 0)	
 	   		{
 				command("smile " + who->query("id"));
-            } else 
+            } else
 			{
 	    		say("小翠作了个揖道：" + RANK_D->query_respect(who)
 	       		+ "请稍候，小女子这就给您换香茶。\n");
@@ -108,7 +108,7 @@ int accept_object(object who, object ob)
 			remove_call_out("serve_tea");
 			call_out("serve_tea", 1, who);
 
-		} else 
+		} else
 		{
 			who->set_temp("tea_cup", 5);
 	    	say("小翠道了个万福：" + RANK_D->query_respect(who)
@@ -118,12 +118,12 @@ int accept_object(object who, object ob)
 		return 1;
 	}
 
-	if ((string)ob->query("name") == "「女儿香」茶叶") 
+	if ((string)ob->query("name") == "「女儿香」茶叶")
 	{
 		if ( who->query_temp("marks/sit") )
 		{
 			command("dance " + who->query("id"));
-		} else 
+		} else
 		{
 			message_vision("小翠引$N到窗边风景最好的桌边坐下．\n", who);
 		}
@@ -160,7 +160,7 @@ void serve_tea(object who)
 		obn->move(room);
 		message_vision("小翠搬出个大茶壶来，将桌上的大碗茶倒满．\n",
 			who);
-	} else 
+	} else
 	{
 		who->add_temp("tea_cup", -1);
 	 	obn = new("/d/suburb/xkx/wudang/obj/xiangcha");
