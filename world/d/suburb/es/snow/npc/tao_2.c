@@ -9,7 +9,7 @@ void create()
         set("gender", "男性");
         set("age", 32);
         set("long",
-                
+
 "僵尸护法是茅山派的护法，着一身黑色的道袍\n"
 );
         set("combat_exp", 2000);
@@ -36,9 +36,9 @@ void create()
         set("mana_factor", 5);
 
         set("inquiry", ([
-                "谷衣心法": 
+                "谷衣心法":
 "谷衣心法是我茅山派为对抗邪魔外道所创的内功心法。\n",
-                "茅山派": 
+                "茅山派":
 "我茅山派自张天师开山立派至今，世世代代皆以降妖伏魔为己任。\n"
         ]) );
         set("chat_chance", 25);
@@ -46,8 +46,8 @@ void create()
                 "僵尸护法说道：我们茅山派实力最强！谁敢欺负我们？\n",
                 "僵尸护法对你说道：小心我把你变成僵尸! \n",
                 "僵尸护法对你念了一会咒，你不禁毛骨悚然起来...\n",
-                (:random_move :)        
-        }) ); 
+                (:random_move :)
+        }) );
 
         set("chat_chance_combat", 70);
         set("chat_msg_combat", ({
@@ -57,7 +57,7 @@ void create()
                 (: cast_spell, "feeblebolt" :),
                 (: cast_spell, "invocation" :),
                 (: command("cast animate on corpse") :),
-                (:command("cast animate on corpse") :),         
+                (:command("cast animate on corpse") :),
         }) );
 
         create_family("茅山派", 6, "弟子");
@@ -74,7 +74,7 @@ void create()
         set_skill("gouyee", 30);
 
         set_skill("taoism", 30);
-        set_skill("necromancy", 30);    
+        set_skill("necromancy", 30);
 
         map_skill("spells", "necromancy");
 
@@ -100,4 +100,4 @@ int accept_fight(object me)
         command("say 茅山派不和别派的人过招。");
         return 0;
 }
- 
+
