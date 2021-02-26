@@ -25,4 +25,3 @@ void reset()
           	"east" : __DIR__"cave4",
         ]));
 }
-
