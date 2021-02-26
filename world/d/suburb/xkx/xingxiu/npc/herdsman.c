@@ -39,5 +39,3 @@ void create()
         carry_object(__DIR__"obj/wcloth")->wear();
         carry_object(__DIR__"obj/bian")->wield();
 }
-
-
