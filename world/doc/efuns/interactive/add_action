@@ -39,7 +39,7 @@ convenient time to add such commands.  The commands are removed when the
 user moves out of range (or the object does).
 
 If argument 'flag' is 1, then only the leading characters of the command has
-to match the verb 'cmd' and the entire verb is returned by query_verb().  If 
+to match the verb 'cmd' and the entire verb is returned by query_verb().  If
 argument 'flag' is 2, then again, only the leading characters must match,
 but query_verb() will only return the characters following 'cmd'.
 
