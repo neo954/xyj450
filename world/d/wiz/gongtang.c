@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/wiz/gongtang.c
 
 inherit ROOM;
@@ -16,13 +16,13 @@ void create()
 里去了。你不由得双腿发软，浑身嗦嗦直抖。
 LONG
    );
-   
+
    set("no_clean_up", 0);
    set("objects", ([
      __DIR__"npc/baogong":1 ]) );
 
    setup();
-   
+
 }
 
 
