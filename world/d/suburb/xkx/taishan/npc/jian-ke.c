@@ -38,11 +38,11 @@ void init()
 	if(!( room = find_object("/d/suburb/xkx/taishan/fengchan")) )
 	room = load_object("/d/suburb/xkx/taishan/fengchan");
 
-	if( objectp(ob = present("mengzhu", room)) ) 
+	if( objectp(ob = present("mengzhu", room)) )
 	mengzhu = ob->query("winner");
 
 	if( this_player()->query("id") == mengzhu ) {
-		message_vision(HIY "剑客向$N躬身为礼，说道：盟主您老人家好！\n" NOR, 
+		message_vision(HIY "剑客向$N躬身为礼，说道：盟主您老人家好！\n" NOR,
 		this_player());
 	}	
 }
