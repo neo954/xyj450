@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //dixiashi.c
 
@@ -21,7 +21,7 @@ LONG);
    //set("item_desc", ([" *** " : " *** ", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      //"south" : __DIR__"xiaomuwu",
      //"north" : __DIR__"eroad2",
@@ -30,8 +30,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      __DIR__"npc/dapeng" : 1,
    ]));
@@ -51,11 +51,11 @@ void init()
 int do_knock(string arg)
 {
    object me, uproom;
-   
+
    me=this_player();
 
    if( !arg || (arg != "wall" && arg != "qiang" && arg != "墙" && arg != "墙壁" ) )
-     return notify_fail("你要敲什么？\n");       
+     return notify_fail("你要敲什么？\n");
 
 /*
    if( !(uproom = find_object(__DIR__"xiaomuwu")) )
@@ -64,24 +64,24 @@ int do_knock(string arg)
    if( uproom = find_object(__DIR__"xiaomuwu") )
    {
      uproom->open_down();
-     return 1; 
+     return 1;
    }
    else return notify_fail("看样子机关出毛病了，你耐心等一等吧。\n");
 */
    call_out("open_up", 1);
-   return 1; 
+   return 1;
 }
 
 void open_up()
 {
-   object uproom; 
+   object uproom;
 
 /*
    if( !(uproom = find_object(__DIR__"xiaomuwu")) )
      uproom = load_object(__DIR__"xiaomuwu");
 */
 
-   if( uproom = find_object(__DIR__"xiaomuwu") ) 
+   if( uproom = find_object(__DIR__"xiaomuwu") )
    {
      set("exits/up", __DIR__"xiaomuwu");
      uproom->set("exits/down", __FILE__);
@@ -100,7 +100,7 @@ void close_up()
 
    message("vision", "天花板上发出轧轧的声音，软梯被收了上去。\n", this_object() );
 
-   if( uproom = find_object(__DIR__"xiaomuwu") ) 
+   if( uproom = find_object(__DIR__"xiaomuwu") )
    {
      message("vision", "桌子底下发出轧轧的声音，洞口又封上了。\n", uproom );
      uproom->delete("exits/down");
