@@ -136,7 +136,7 @@ int exert_function(string func)
 		SKILL_D(force_skill)->exert_function(this_object(), func);
 }
 
-// Default chat function: Let the npc perform special action with 
+// Default chat function: Let the npc perform special action with
 // his/her enabled martial art
 int perform_action(string action)
 {
