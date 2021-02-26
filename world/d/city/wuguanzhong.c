@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create()
@@ -18,9 +18,9 @@ set("item_desc",(["qi":"
         ＊＊＊＊＊＊＊＊\n"
 ]));
         set("objects", ([
-                __DIR__"npc/fan": 1, 
+                __DIR__"npc/fan": 1,
                 "/d/obj/misc/chairs" : 2,
-                                                
+
 ]));
         set("exits", ([ /* sizeof() == 2 */
         "west" : __DIR__"wuguan",
