@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #ifndef __LOGIN__
 #define __LOGIN__
 
@@ -32,7 +32,7 @@
 // By Annihilator (05-26-95)
 #define ROBOT_CHECK        "/d/wiz/courthouse"
 
-// This defines the minimum wiz_level of users that are allowed to 
+// This defines the minimum wiz_level of users that are allowed to
 // enter the mud. Note players has wiz_level 0.
 #define WIZ_LOCK_LEVEL 0
 
