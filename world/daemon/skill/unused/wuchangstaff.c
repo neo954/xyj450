@@ -92,4 +92,3 @@ notify_fail("你的内力或气不够，没有办法练习无常杖法。\n");
 int valid_effect(object me, object weapon, string name, int skill)
 {
 }
-
