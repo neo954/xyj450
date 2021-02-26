@@ -13,7 +13,7 @@ void create()
 如果姑娘喜欢这个小伙子，落鞭就会轻些。否则的话，有小伙子好受的。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
              "southeast" : __DIR__"beijiang",]));
         set("no_clean_up", 0);
         set("outdoors", "xingxiuhai");
