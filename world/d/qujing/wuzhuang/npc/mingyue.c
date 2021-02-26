@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //mingyue.c
 
 inherit NPC;
@@ -27,7 +27,7 @@ void create()
 }
 
 void init()
-{       
+{
    object ob=this_player();
    object me=this_object();
 
