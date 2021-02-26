@@ -38,4 +38,3 @@ int practice_skill(object me)
    me->add_temp("dragonforce_practice",-1);
         return 1;
 }
-
