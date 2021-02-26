@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // guanyin.c 惠岸行者
 // By Dream Dec. 20, 1996
 
@@ -12,7 +12,7 @@ string ask_for_partner();
 void create()
 {
    set_name("惠岸行者", ({ "huian xingzhe", "huian", "xingzhe" }));
-   set("title", "观音首徒");   
+   set("title", "观音首徒");
    set("long", @LONG
 李天王二太子木叉，南海观音大徒弟惠岸行者。
 LONG);
@@ -83,7 +83,7 @@ void attempt_apprentice(object ob)
    if (!((string)ob->query("bonze/class") =="bonze" )) {
      command("say " + RANK_D->query_respect(ob) + "未入佛门，恕贫僧不能接纳。\n");
      return;
-   }   
+   }
    if (((int)ob->query_skill("buddhism", 1) < 50 )) {
      command("say " + RANK_D->query_respect(ob) + "若欲深修，需得熟读佛法。\n");
      return;
@@ -92,7 +92,7 @@ void attempt_apprentice(object ob)
    command("say 很好，贫僧就收下你，希望你多加努力，早成正果。\n");
 
    command("recruit " + ob->query("id") );
-   return;   
+   return;
 }
 
 string ask_for_partner()
@@ -124,11 +124,11 @@ string dadang;
      return notify_fail("施主既非佛门中人，何必多问？\n");
    if( (dadang=(string)me->query("bonze/dadang")) !=0 )
      return notify_fail("你的搭档是"+dadang+"。\n");
-   if( !me->query_temp("pending/dadang_inquiry") ) 
+   if( !me->query_temp("pending/dadang_inquiry") )
      return notify_fail("你还没问过"+this_object()->query("name")+"呢！\n");
    me->delete("pending/dadang_inquiry");
 
-   if (!arg) 
+   if (!arg)
      return notify_fail("你要和谁做搭档？\n");
 
    obj = present(arg, environment(me));
@@ -141,7 +141,7 @@ string dadang;
 
    if( obj->query_temp("pending/dadang") != me) {
      message_vision("\n$N当着"+this_object()->query("name")+"的面，对$n说道："
-        + RANK_D->query_self(me)+ me->name() 
+        + RANK_D->query_self(me)+ me->name()
         + "，欲与" + RANK_D->query_respect(obj)
         + "做一对搭档，日后一起行走江湖，同生死，共患难，"
         + RANK_D->query_respect(obj) + "意下如何？\n\n", me, obj);
@@ -151,7 +151,7 @@ string dadang;
 
    obj->delete_temp("pending/jiebai");
    message_vision("\n$N当着"+this_object()->query("name")+"的面，对$n说道："
-     + RANK_D->query_self(me)+ me->name() 
+     + RANK_D->query_self(me)+ me->name()
      + "，愿与" + RANK_D->query_respect(obj)
      + "做一对搭档！\n\n", me, obj);
 
