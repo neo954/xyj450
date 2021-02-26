@@ -34,5 +34,3 @@ carry_object("/d/gao/obj/ruler")->wield();
 carry_object("/d/gao/obj/changpao")->wear();
 add_money("silver", 5);
 }
-
-
