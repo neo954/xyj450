@@ -10,7 +10,7 @@ void create()
         set("gender", "男性");
         set("age", 47);
         set("long",
-                
+
 "林忌是一位道行十分高深的修道者，你发现他的眼珠一个是黑色的，一\n"
                 "个是金色的，这正是「谷衣心法」修炼到极高境界的徵兆。\n");
 
@@ -37,9 +37,9 @@ void create()
         set("mana_factor", 5);
 
         set("inquiry", ([
-                "谷衣心法": 
+                "谷衣心法":
 "谷衣心法是我茅山派为对抗邪魔外道所创的内功心法。\n",
-                "茅山派": 
+                "茅山派":
 "我茅山派自张天师开山立派至今，世世代代皆以降妖伏魔为己任。\n"
         ]) );
 
@@ -110,4 +110,4 @@ int recruit_apprentice(object ob)
         add("apprentice_availavble", -1);
 }
 
- 
+
