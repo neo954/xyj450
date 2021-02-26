@@ -128,4 +128,3 @@ int practice_skill(object me)
 	me->receive_damage("qi", 30);
 	return 1;
 }
-
