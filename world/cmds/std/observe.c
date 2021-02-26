@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // observe.c
 // mon 1/4/97, msg_exp by crab.
 
@@ -43,7 +43,7 @@ int main(object me, string arg)
     !living(who))
     return notify_fail("你想查看谁？\n");
      if (who==me) return notify_fail("看你自己？\n");
-     
+
      if (me->query("mana")<100)
     return notify_fail("你的法力不足。\n");
      me->add("mana",-50);
@@ -51,7 +51,7 @@ int main(object me, string arg)
      spellme=me->query_skill("spells");
      spellwho=who->query_skill("spells");
 
-     if (random(20)<((spellme-spellwho)/10+10) && 
+     if (random(20)<((spellme-spellwho)/10+10) &&
     who->name()!=who->query("name") &&
     who->query_temp("d_mana")>0) {
        str="却见"+who->query("name");
@@ -67,7 +67,7 @@ int main(object me, string arg)
          "正把一道锐利的目光向你投来。\n");
      write("你微一凝神，向"+who->name()+"细细打量过去，"
        +str+msg_expression[random(size)]+"\n\n");
-    
+
      if(know==1&&who->query_temp("d_mana")>0) {
        write("\n你要运用法力迫使"+who->name()+
          "现出本形吗？(y/n)[n]");
@@ -76,9 +76,9 @@ int main(object me, string arg)
 
      return 1;
 }
-    
+
 void do_force(string yn,object me,object who)
-{    
+{
      if(!objectp(present(who,environment(me)))) {
        write("你的目标已经不在了。\n");
        return;
@@ -100,7 +100,7 @@ void do_force(string yn,object me,object who)
             who->delete_temp("apply/name");
             who->delete_temp("apply/id");
             who->delete_temp("apply/short");
-            who->delete_temp("apply/long"); 
+            who->delete_temp("apply/long");
          }
      }
    }
