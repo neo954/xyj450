@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/6/1997
 inherit ROOM;
 
@@ -15,7 +15,7 @@ void create()
 
 LONG);
 
-  set("exits", ([ 
+  set("exits", ([
     "west" : __DIR__"dinglu",
     "northeast" : __DIR__"hougong",
     "southeast" : __DIR__"bopi",
