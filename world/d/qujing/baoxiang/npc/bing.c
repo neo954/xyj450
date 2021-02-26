@@ -110,4 +110,3 @@ void remove_no_return(object me)
 {
   me->set_temp("no_return",0);
 }
-
