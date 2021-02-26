@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/4world/shuilian_dong.c
 #include <ansi.h>
 inherit ROOM;
@@ -26,12 +26,12 @@ void init()
 int do_expand(string arg)
 {
    object me=this_player();
-   object ob; 
+   object ob;
 
    if( (!arg) || !((arg == "gap") || (arg == "石缝")))
      return notify_fail("你要扒开什么？\n");
 
-   if( !(ob = me->query_temp("weapon")) || ( (string)ob->query("skill_type")!="axe" && (string)ob->query("skill_type")!="blade" && (string)ob->query("skill_type")!="sword" ) ) 
+   if( !(ob = me->query_temp("weapon")) || ( (string)ob->query("skill_type")!="axe" && (string)ob->query("skill_type")!="blade" && (string)ob->query("skill_type")!="sword" ) )
      return notify_fail("没有工具怎么干活？\n");
 
    if( me->query_str() < 50 )
@@ -45,7 +45,7 @@ int do_expand(string arg)
      me->receive_damage("kee", 200);
      message("vission", HIR "\n只听得轰的一声，一大块石壁塌了下来。\n\n" NOR, environment(me));
      }
-     
+
 
     if( "/d/obj/weapon/stick/fake-jingubang"->in_mud() )  {
         message("vission", HIR "你看见石块之中空空如也。\n"NOR, me);
