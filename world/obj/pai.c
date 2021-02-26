@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 
 void create()
@@ -12,7 +12,7 @@ void create()
     else  {
            set("unit", "个");
            set("long", "一个小铜牌，上面还雕着花，写着字．\n");
-   set("player", "bula"); 
+   set("player", "bula");
           set("no_sell", 1);
         }
 }
