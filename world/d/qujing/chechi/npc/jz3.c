@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 22 1997
 
 inherit NPC;
@@ -47,12 +47,12 @@ int check_valid_player (object who)
   if (! where)
     return 0;
   if (where->query("short") != "祈雨场")
-    return 0;  
+    return 0;
 
-  yangli = present("yangli daxian",where);  
-  huli = present("huli daxian",where);  
-  luli = present("luli daxian",where);  
-  king = present("guo wang",where);  
+  yangli = present("yangli daxian",where);
+  huli = present("huli daxian",where);
+  luli = present("luli daxian",where);
+  king = present("guo wang",where);
   youguo = present("da youguo",where);
 
   if (! yangli || ! huli || ! luli || ! king || ! youguo)
@@ -105,7 +105,7 @@ int do_enter (string arg)
   if (present(arg,where) != youguo)
     return 0;
   status = check_valid_player(who);
-  yangli = present("yangli daxian",where);  
+  yangli = present("yangli daxian",where);
   if (yangli && yangli->query("id") != "yangli daxian")
     yangli = 0;
   if (status == 0)
@@ -119,11 +119,11 @@ int do_enter (string arg)
   else if (who->query_temp("obstacle/chechi_youguo_times") == 0)
   {
     who->set_temp("obstacle/chechi_youguo_times",1);
-    call_out ("failing_enter",1,me,who,where,youguo,yangli);    
+    call_out ("failing_enter",1,me,who,where,youguo,yangli);
   }
   else if (random(3))
   {
-    call_out ("failing_enter",1,me,who,where,youguo,yangli);    
+    call_out ("failing_enter",1,me,who,where,youguo,yangli);
   }
   else
   {
@@ -147,7 +147,7 @@ void display_enter (object me, object who,
   message_vision ("$N一个起身，纵入热浪翻滚的大油锅。\n\n",who);
   who->move(youguo);
 }
- 
+
 void failing_enter (object me,object who, object where,
                     object youguo, object yangli)
 {
@@ -242,13 +242,13 @@ void daxians_die (object where)
   object yangli;
   object huli;
   object luli;
-  yangli = present("yangli daxian",where);  
+  yangli = present("yangli daxian",where);
   if (yangli && yangli->query("id") == "yangli daxian")
     yangli->die();
-  huli = present("huli daxian",where);  
+  huli = present("huli daxian",where);
   if (huli && huli->query("id") == "huli daxian")
     huli->die();
-  luli = present("luli daxian",where);  
+  luli = present("luli daxian",where);
   if (luli && luli->query("id") == "luli daxian")
     luli->die();
 }
