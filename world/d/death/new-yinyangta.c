@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhting.c
 
 inherit ROOM;
@@ -53,7 +53,7 @@ int heal_up(object who)
    &&    (int)who->query("max_kee")==(int)who->query("max_kee") ){
      return 1;
    }
-   
+
 
         who->set("eff_gin", (int)who->query("max_gin"));
         who->set("eff_kee", (int)who->query("max_kee"));
