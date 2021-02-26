@@ -382,5 +382,3 @@ int do_back(string arg)
 
    return 1;
 }
-
-
