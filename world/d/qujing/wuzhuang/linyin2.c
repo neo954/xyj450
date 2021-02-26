@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -12,7 +12,7 @@ void create ()
 是让人清心脱俗。而东面树丛中水光掩映，想来是一片池塘。
 LONG);
 
-        set("exits", 
+        set("exits",
         ([ //sizeof() == 4
                 "south" : __DIR__"linyin1",
                 "northup" : __DIR__"gate",
@@ -22,7 +22,7 @@ LONG);
                 //"down" : __DIR__"***",
         ]));
 
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
                 //__DIR__"npc/***" : 1,
         ]));
