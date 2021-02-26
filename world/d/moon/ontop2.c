@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /moon/ontop.c
 //cglaem...12/13/96.
 
@@ -58,7 +58,7 @@ int do_climb(string arg)
 {
    object wugang;
   object me=this_player();
- 
+
   if( (!arg) || !((arg == "tree") || (arg == "桂树")))
     return notify_fail("爬什么？\n");
   if( me->query("kee") < (int)(me->query("max_kee")/3)){
@@ -91,7 +91,7 @@ int do_climb(string arg)
 int do_kan(string arg)
 {
   object me=this_player();
-  object ob; 
+  object ob;
   object wugang;
   if( (!arg) || !((arg == "tree") || (arg == "桂树")))
     return notify_fail("你要砍什么？\n");
@@ -113,7 +113,7 @@ int do_kan(string arg)
           tell_object(me, "累了个臭死，你总算领悟出一些运劲使力方面的窍门。\n");
         }
       else {
-   tell_object(me, "你试着砍了几下，不明白为什么有人会做这种傻事。\n"); 
+   tell_object(me, "你试着砍了几下，不明白为什么有人会做这种傻事。\n");
    }
 
     }
