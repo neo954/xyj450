@@ -236,7 +236,3 @@ void rewarding (object who, object ob)
   who->delete("quest/pending/furniture");
   call_out ("quest_done",1,who);
 }
-
-
-
-
