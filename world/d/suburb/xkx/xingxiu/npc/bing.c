@@ -41,4 +41,3 @@ int accept_fight(object me)
 		+ "过招玩。\n");
         return 0;
 }
-
