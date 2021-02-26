@@ -434,4 +434,3 @@ void reset_is_busy(object me)
 {
   me->set_temp("huanggong/is_busy",0);
 }
-
