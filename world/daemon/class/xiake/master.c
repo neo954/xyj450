@@ -12,7 +12,7 @@ void create()
 	set("nickname", "不败神龙");
 	set("gender", "男性");
 	set("age", 80);
-	set("long", 
+	set("long",
 		"这难道就是传说中的侠客岛岛主龙亦凡吗？\n他看上去跟一般的中年人无异，可是他已有百岁高龄。\n");
 	set("attitude", "peaceful");
 	
