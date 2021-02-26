@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create ()
 但闻鸟语猿啼不绝。
 LONG);
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
 //  __DIR__"npc/hunter" : 2,
 ]));
 
@@ -41,7 +41,7 @@ int do_clean(string arg)
    object obj;
         if(!arg || arg != "jingji" )
                 return notify_fail("你要干什么？\n");
-   
+
         if(query("clean"))
                 return notify_fail("周围已经没有荆棘了。\n");
 
@@ -56,11 +56,11 @@ int do_clean(string arg)
      me->receive_damage("kee", 50);
      i=(int)me->query_str();
      ob->set("coe",(int)ob->query("coe") + i );
-     
+
      if( i < 30 ){
-        tell_room(environment(me), "结果只拨开几枝小刺。\n"); 
+        tell_room(environment(me), "结果只拨开几枝小刺。\n");
      }
-     else if (i < 50 ) { 
+     else if (i < 50 ) {
         tell_room(environment(me), "结果拨倒一片荆棘。\n");
      }
      else if (i < 100 ) {
@@ -68,7 +68,7 @@ int do_clean(string arg)
                 }
      else tell_room(environment(me), "只见荆棘如潮水般退后。\n");
    }
-   
+
    if( (int)ob->query("coe") >= 1000 ) {
      tell_room(environment(me), "荆棘被推到两旁，闪出一条道路。\n\n");
      me->set_temp("obstacle/jingji/clean_1", 1);
