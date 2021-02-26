@@ -27,14 +27,14 @@ LONG
         set("score", -500);
         set("combat_exp", 1);
         set("attitude", "friendly");
-        
+
         set("chat_chance_combat", 50);
         set("chat_msg_combat", ({
 "小娟说道：唉！ 没料道你和那些坏人是一伙的！\n",
         }) );
-        
+
         setup();
-        
+
         carry_object(__DIR__"obj/torn_pink_cloth")->wear();
 }
 
@@ -90,10 +90,10 @@ void die()
 {
         int i;
         object killer;
-        
+
         if(objectp(killer = query_temp("last_damage_from")))
         killer->set("marks/murder", 1);
-        
+
         ::die();
-        
+
 }
