@@ -1,6 +1,6 @@
 //mac's zhengyuan.c
-// 
-// 
+//
+//
 
 #include <room.h>
 inherit ROOM;
