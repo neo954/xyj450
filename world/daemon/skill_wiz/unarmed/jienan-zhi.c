@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //【劫难指】 jienan-zhi.c
 // dream...12/18/96
 //menpai skill
@@ -19,7 +19,7 @@ mapping *action = ({
      "dodge":     -5,
      "parry":     -5,
      "force":     80,
-     "damage_type":   "刺伤",     
+     "damage_type":   "刺伤",
                         "weapon":     "$N的右手食指",
    ]),
    ([   "action":     "只见$N侧身抬臂，右指划了个半圈，击向$n的$l",
@@ -34,7 +34,7 @@ mapping *action = ({
      "parry":     -5,
      "force":     120,
      "damage_type":   "刺伤",
-                        "weapon":     "$N的左手食指", 
+                        "weapon":     "$N的左手食指",
    ]),
             ([   "action":     "只见$N身形不动，只是稍稍抬起右手食指，等着$n的$l自行撞上来",
      "dodge":     -5,
@@ -54,7 +54,7 @@ mapping *action = ({
 
 int valid_learn(object me)
 {
-   
+
    if( me->query_temp("weapon") || me->query_temp("secondary_weapon") )
      return notify_fail("练劫难指必须空手。\n");
    return 1;
