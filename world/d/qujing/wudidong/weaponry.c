@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/qujing/wudidong/weaponry.c
 
 inherit ROOM;
@@ -47,7 +47,7 @@ LONG);
 ]));
   set("item_desc", ([
    "wall": (: update_wall :),
-   "四壁": (: update_wall :), 
+   "四壁": (: update_wall :),
    "chair": (: look_chair :),
    "石凳" : (: look_chair :),
 ]));
@@ -192,7 +192,7 @@ int do_pull(string arg)
     pull_count+=1;
     return 1;
 }
-    
+
 int do_push(string arg)
 {
     object me=this_player();
