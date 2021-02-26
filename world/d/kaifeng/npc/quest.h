@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat
 
 #ifndef __KAIFENG_QUEST__
@@ -25,17 +25,17 @@
 // the quest format is the following mapping:
 // daoxing :     type     name     id            object         amount
 //---------------------------------------------------------------
-//  1000   : ({ "find",  "秘笈",   "mi ji" ,     "",             "1" }), 
-//  5000   : ({ "give",  "灾民",   "zai min" ,   "白银(silver)", "5" }), 
+//  1000   : ({ "find",  "秘笈",   "mi ji" ,     "",             "1" }),
+//  5000   : ({ "give",  "灾民",   "zai min" ,   "白银(silver)", "5" }),
 // 12000   : ({ "kill",  "白骨精", "baigu jing", "",             "3" });
- 
+
 //找一本秘笈，救济灾民五两银子，三打白骨精．．．．．．
 
 int *order_list (int *list)
 {
   int i, j;
   int size = sizeof(list);
-        
+
   for (i = size-2; i >= 0; i--)
   {
     for (j = 0; j <= i; j++)
@@ -73,15 +73,15 @@ int quest_accurate_index (int *quest_keys, int daoxing)
     if (quest_keys[j] == daoxing)
     {
       return j;
-    }  
+    }
     else if (quest_keys[j] > daoxing)
     {
       k = j - 1;
-    }  
+    }
     else
     {
       i = j + 1;
-    }  
+    }
   }
   return j;
 }
@@ -94,17 +94,17 @@ void reduce_cache (object who, string cache_name)
   int k = 0;
   string *my_keys;
   int *my_values;
-  
+
   if (! cache)
     return;
-    
+
   my_keys = keys(cache);
   my_values = values(cache);
-  
-  k = sizeof (cache);  
+
+  k = sizeof (cache);
   if (k < CACHESIZE)
     return;
-    
+
   while (k--)
   {
     if (my_values[k] < value ||
@@ -113,7 +113,7 @@ void reduce_cache (object who, string cache_name)
       key = my_keys[k];
       value = my_values[k];
     }
-  } 
+  }
   who->delete (cache_name+"/"+key);
 }
 
@@ -143,14 +143,14 @@ int quest_random_index (int *quest_keys, int i, object who, string cache_name)
   lower = upper/4;
   if (upper - lower < INDEXDELTA)
     lower = 0;
-  
+
   reduce_cache (who, cache_name);
   while (j--)
   {
     string str;
-    
+
     reset_eval_cost();
-    k = lower + random (upper-lower);  
+    k = lower + random (upper-lower);
     str = cache_name+"/"+to_chinese(k);
     if (! who->query(str))
     {
