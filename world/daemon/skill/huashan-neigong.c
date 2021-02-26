@@ -27,4 +27,3 @@ string exert_function_file(string func)
 {
 	return SKILL_D(__DIR__"taiji-qigong/") + func;
 }
-
