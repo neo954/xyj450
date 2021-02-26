@@ -32,4 +32,3 @@ void create()
 
 int is_container() { return 1; }
 //int query_autoload() { return 1; }
-
