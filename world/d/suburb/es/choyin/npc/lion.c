@@ -46,4 +46,3 @@ void die()
 	obj->move(this_object());
 	return ::die();
 }
-
