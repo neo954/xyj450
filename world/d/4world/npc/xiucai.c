@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -15,7 +15,7 @@ void create()
         set("combat_exp", 30000);
         set("attitude", "friendly");
         set_skill("literate", 40);
-        set("force", 500); 
+        set("force", 500);
         set("max_force", 500);
         set("inquiry", ([
                 "读书识字": "对了，你是来对地方了！\n",
