@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/rainy/sea/shiwu.c
 inherit ROOM;
 
@@ -32,7 +32,7 @@ void init()
 }
 int do_turn(string arg)
 {
-   object me,inside; 
+   object me,inside;
    me=this_player();
 
         if ( !arg || ((arg != "status") ))
