@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // buy.c
 
 inherit F_CLEAN_UP;
@@ -45,7 +45,7 @@ int main(object me, string arg)
    if( price < 1 ) return 0;
 
    if( afford = me->can_afford(price) ) {
-           if( afford==2 ) 
+           if( afford==2 )
         return notify_fail("你没有足够的零钱，而银票又没人找得开。\n");
 
 //     me->start_busy(1);
