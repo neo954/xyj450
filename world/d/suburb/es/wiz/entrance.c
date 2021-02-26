@@ -52,4 +52,3 @@ int re_route_cmd(string str)
         else write("这里是巫师会客室, 不是让你拿来练功的地方哦!\n");
         return 1;
 }
-
