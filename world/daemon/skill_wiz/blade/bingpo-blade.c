@@ -1,8 +1,8 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //bingpo-blade.c 【冰魄寒刀】weiqi...97.09.13.
-//need ice blade to learn or practice this skill, want check out how 
+//need ice blade to learn or practice this skill, want check out how
 //to force the use of a ice blade even when use this skill.
 
 /*
@@ -58,7 +58,7 @@ $n周身的血液都似被这无尽的刀势冻住，而生命也仿佛要离体
      "parry":     5,
                    "damage":                  30,
                    "damage_type":     "劈伤"
-        ]),   
+        ]),
         ([      "name":                 "无",
                 "action":
 "$N刀势渐慢，而$w上带出的寒气却越来越浓。
@@ -67,7 +67,7 @@ $n周身的血液都似被这无尽的刀势冻住，而生命也仿佛要离体
      "parry":     5,
                    "damage":                  20,
                    "damage_type":     "刺伤"
-        ]),   
+        ]),
         ([      "name":                 "无",
                 "action":
 "$N也不管三七二十一，高举$w呼！地就是一刀向$n迎面斩下！
@@ -76,7 +76,7 @@ $n周身的血液都似被这无尽的刀势冻住，而生命也仿佛要离体
      "parry":     5,
                    "damage":                  20,
                    "damage_type":     "劈伤"
-        ]),   
+        ]),
 });
 
 
