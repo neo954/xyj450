@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 //iceblade.c...weiqi, 970926.
 //add duandao断刀射人...weiqi, 980203.
@@ -81,7 +81,7 @@ int do_duandao(string arg)
    object me, target;
 
    me = this_player();
-   
+
    if( this_player()->is_busy() )
      return notify_fail("你正忙着呢，哪有空运力断刀。\n");
 
@@ -105,7 +105,7 @@ int do_duandao(string arg)
      return notify_fail("看清楚一点，那并不是活物。\n");
 
    if( !living(target) )
-     return notify_fail(target->name() + "已无还手之力，一刀砍下去即可，何必炫耀功夫。\n"); 
+     return notify_fail(target->name() + "已无还手之力，一刀砍下去即可，何必炫耀功夫。\n");
 
    if(target==me)     return notify_fail("想自杀？\n");
 
@@ -122,32 +122,32 @@ int do_duandao(string arg)
    ap = ap * ap * ap /10 ; //usually no throwing skill, so not useful...
    ap += (int)me->query("combat_exp");
    ap = 2*ap; //make it easier.
-   
+
    dp = target->query_skill("dodge");
    dp = dp * dp * dp /10 ; //dodge is useful here.
    dp += target->query("combat_exp");
    if( random(ap + dp) < dp ) success = 0;
-   //here we compared exp and throwing, dodge levels. 
+   //here we compared exp and throwing, dodge levels.
 
    //now check if the target is busy or no_move...
    //if so, we set success = 1.
    if(success == 0)
    {//here only check this if previously failed.
-     if( target->is_busy() || target->query_temp("no_move") ) 
+     if( target->is_busy() || target->query_temp("no_move") )
      //target can not move at all...
      {
         if( target->query("force")/40 > (10+me->query("force_factor")) )
         //btw, target still have chance...
-        {     
+        {
           msg +=  HIW "结果$n虽然动弹不得，运功硬挡之下，倒也无甚大害。\n" NOR;
-          message_vision(msg, me, target);   
+          message_vision(msg, me, target);
           me->start_busy(3);
 
           me->add("force", -200);
           destruct(this_object()); //let this ice blade disappear.
-          return 1;   
+          return 1;
         }
-        else success = 1; 
+        else success = 1;
      }
    }//end of check 动弹不得。
 
@@ -157,17 +157,17 @@ int do_duandao(string arg)
      message_vision(msg, me, target);
      target->receive_wound("kee", random(3*me->query("force_factor"))+50, me);
      COMBAT_D->report_status(target);
-   }    
+   }
    else
     {
      msg +=  HIW "结果$n轻轻一跳，躲了开去。\n" NOR;
-     message_vision(msg, me, target);     
+     message_vision(msg, me, target);
    }
-   
+
    me->start_busy(3);
 
    me->add("force", -200);
    destruct(this_object()); //let this ice blade disappear.
-   return 1;   
+   return 1;
 }
 
