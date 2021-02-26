@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // cat.c
 
 inherit F_CLEAN_UP;
@@ -29,9 +29,9 @@ int help(object me)
 {
 write(@HELP
 指令格式 : more <档案>|<物件名>
- 
+
 分页显示档案内容。
- 
+
 more 模式下的指令:
 q      : 离开 more.
 b      : 显示前一页的内容.
