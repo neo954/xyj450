@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 10/14/1997
 // room: /d/qujing/baoxiang/chaoxing.c
 
@@ -22,7 +22,7 @@ LONG);
       ]));
   set("outdoors","/d/qujing/baoxiang");
 
-  set("objects", ([ 
+  set("objects", ([
           __DIR__"npc/shanyao" : 6,
        ]));
 
@@ -57,7 +57,7 @@ int do_down(string arg)
   tell_object (who,"你脚下一软！\n");
   if (random(2))
     who->move(__DIR__"shana");
-  else  
+  else
     who->move(__DIR__"shanb");
   return 1;
 }
