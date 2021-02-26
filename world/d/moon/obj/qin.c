@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/5/1997 by snowcat
 #include <ansi.h>
 #include <dbase.h>
@@ -10,7 +10,7 @@ inherit ITEM;
 
 void create()
 {
-  set_name(HIB "五弦琴" NOR, ({ "wuxian qin"})); 
+  set_name(HIB "五弦琴" NOR, ({ "wuxian qin"}));
   set_weight(100000);
   set("long","一架古色古香的五弦琴。\n");
   set("unit", "架");
