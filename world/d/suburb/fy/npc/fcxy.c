@@ -10,7 +10,7 @@ void create()
 	set("nickname",HIR"武当鼻祖"NOR);
 	set("gender", "男性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他就是负担起兴复武当大业的大巫师温约红！\n");
 
 	setup();
