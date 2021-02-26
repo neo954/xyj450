@@ -55,4 +55,3 @@ void die()
         ob->move(environment(this_object()));
         destruct(this_object());
 }
-
