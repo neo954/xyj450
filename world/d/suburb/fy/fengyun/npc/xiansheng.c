@@ -78,4 +78,3 @@ int accept_object(object who, object ob)
     }
     else return 0;
 }
-
