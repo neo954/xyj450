@@ -10,10 +10,10 @@ void create()
         set("long", "这是一本介绍拆招卸力之法的入门书\n");
         set("value", 100);
         set("skill", ([
-                "name":                 "parry",      
-                "exp_required": 2000,       
+                "name":                 "parry",
+                "exp_required": 2000,
                 "sen_cost":             20,
-                "difficulty":   15,  
-                "max_skill":    60     
+                "difficulty":   15,
+                "max_skill":    60
         ]) );
 }
