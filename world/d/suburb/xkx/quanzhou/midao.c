@@ -7,7 +7,7 @@ inherit ROOM;
 int do_press(string);
 
 void create()
-{ 
+{
        set("short","密道");
        set("long", @LONG
 这是水井里的一个密道。周围都是些机关，只有出口很明显在哪里。
@@ -17,9 +17,9 @@ LONG
      );
         set("exits", ([
                 "out" : __DIR__"well",
-        ]));       
+        ]));
         set("item_desc", ([
-                "tieban" :      
+                "tieban" :
         "铁板歪歪斜斜地写着：方人智到此一游，空手悻悻而归。\n"
         ]) );
 
@@ -43,9 +43,9 @@ int do_press(string arg)
         }
         if( arg==p)
         {
-                message_vision("只听得一阵隆隆的响声由远及近。\n", 
+                message_vision("只听得一阵隆隆的响声由远及近。\n",
                                this_player());
-                message_vision("石板缓缓移了开来，露出一个洞。\n", 
+                message_vision("石板缓缓移了开来，露出一个洞。\n",
                          this_player());
                 set("exits/enter", __DIR__"mishi");
                 write("\n\n一个声音提醒你：记住你的密码，以后你就靠它来进出这里了！\n\n");
@@ -77,4 +77,4 @@ void close(object room)
         message("vision","轰隆隆的响声响过之后，石板又合上了。\n", room);
         room->delete("exits/enter");
 }
- 
+
