@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 12/15/1997
 
 inherit ROOM;
@@ -65,7 +65,7 @@ int test_player (object who)
 
   if (present ("bishui zhou",who))
     return 2;
-  return 1;    
+  return 1;
 }
 
 void testing (object who, object where)
