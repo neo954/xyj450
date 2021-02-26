@@ -31,7 +31,7 @@ int valid_leave(object me, string dir)
 	{
 		if ( me->query_skill("jiuyang-shengong", 1) < 80 )
 		{
-			return notify_fail("你试着推了推顶上的砖盖，触手冰凉，纹丝不动。\n" 
+			return notify_fail("你试着推了推顶上的砖盖，触手冰凉，纹丝不动。\n"
 			+ "看来已被铁汁浇透，坚如铁板一般。看来你只能另想办法了。\n");
 		}		
 
