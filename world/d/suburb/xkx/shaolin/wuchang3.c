@@ -41,9 +41,9 @@ int valid_leave(object me, string dir)
 
 	if (dir == "northup")
 	{
-		if( mapp(fam = me->query("family")) 
-		&&  fam["family_name"] == "少林派" 
-		&&  fam["generation"] != 37  ) 
+		if( mapp(fam = me->query("family"))
+		&&  fam["family_name"] == "少林派"
+		&&  fam["generation"] != 37  )
 		{
 			return notify_fail("你级别不够，不能进入达摩院。\n");
 		}
