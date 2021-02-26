@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // baby.c
 
 inherit NPC;
@@ -17,7 +17,7 @@ void create()
         set("combat_exp", 1);
    set("str",3);
    set("parents",({"dad","mom"}));
-   
+
    set("chat_chance", 2);
    set("chat_msg", ({
      (: random_move :)
@@ -40,7 +40,7 @@ void init()
      this_object()->set_leader(this_player());
         }
    */
-   
+
    remove_call_out("try_move");
         call_out("try_move",1);
 }
@@ -69,7 +69,7 @@ int do_drop(string arg)
 
 int do_get(string arg)
 {    object me=this_object(),who=this_player(),env;
-     
+
      if(!arg) return 0;
      env = environment(who);
      if(present(arg,env)!=me) return 0;
@@ -87,20 +87,20 @@ int do_get(string arg)
 }
 
 int do_kill(string arg)
-{       
+{
    object me,who;
    string name,verb,what,obj;
    if (!arg) return 0;
    verb=query_verb();
    me=this_player();
-   
+
    if(verb=="steal") {
-     if(sscanf(arg, "%s from %s", what, obj)!=2 ) 
+     if(sscanf(arg, "%s from %s", what, obj)!=2 )
        return 0;
           }
         else obj=arg;
 
-   if(!objectp(who=present(obj,environment(me))) 
+   if(!objectp(who=present(obj,environment(me)))
       || !living(who)) return 0;
 //   if(who->query("is_baby")) {
    if(who==this_object()) {
@@ -148,10 +148,10 @@ void relay_emote(object ob, string verb)
                         break;
         case "bite":
                 command("face " + ob->query("id"));
-                        break;  
+                        break;
         case "papaya":
                 command("pout");
-                        break;  
+                        break;
 
                 }
 }
