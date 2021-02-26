@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // baixiang-zunzhe.c...weiqi, 97.09.15.
 
 inherit NPC;
@@ -24,7 +24,7 @@ void create()
    set_skill("parry", 120);
    set_skill("blade", 110);
    set_skill("bingpo-blade", 120);
-   set_skill("force", 90);   
+   set_skill("force", 90);
    set_skill("ningxie-force", 80);
    set_skill("literate", 70);
    set_skill("spells", 90);
@@ -40,7 +40,7 @@ void create()
    set("force", 1600);
    set("max_force", 800);
    set("mana", 800);
-   set("max_mana", 400);   
+   set("max_mana", 400);
    set("force_factor", 60);
    set("mana_factor", 20);
 
@@ -99,7 +99,7 @@ int recruit_apprentice(object ob)
 }
 
 void init()
-{       
+{
    object ob=this_player();
 
    ::init();
