@@ -17,7 +17,7 @@ int main(object me, string arg)
 	if( !arg ) return notify_fail("指令格式：curse <降头> [on <目标>]\n");
 	if( sscanf(arg, "%s on %s", spl, trg)==2 ) {
 		target = present(trg, environment(me));
-                if(!objectp(target)) 
+                if(!objectp(target))
 	 		return notify_fail(" 你的降头要用在谁身上？\n");
 //        if( userp(target) &&
 //                (int) target->query("combat_exp") < LOWER_LIMIT &&
@@ -42,7 +42,7 @@ int help (object me)
 {
         write(@HELP
 指令格式：curse <降头> [on <目标>]
- 
+
 HELP
         );
         return 1;
