@@ -19,4 +19,3 @@ LONG
 	create_door("south","密门","north",DOOR_CLOSED);
 	setup();
 }
-
