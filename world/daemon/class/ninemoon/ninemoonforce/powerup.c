@@ -47,4 +47,3 @@ void remove_effect(object me, int amount)
         me->delete_temp("powerup");
         tell_object(me, "你的九阴心经运行完毕，将内力收回丹田。\n");
 }
-
