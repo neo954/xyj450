@@ -81,7 +81,7 @@ private void compelete_steal(object me, object victim, object ob, int sp, int dp
 	if( !living(victim) || (random(sp*50/(dp+1)+50) > 50) ) {
 	//success chance is sp/(sp+dp).
 		if( !ob->move(me) ) {
-			tell_object(me, "你摸到一" + ob->query("unit") + ob->name() 
+			tell_object(me, "你摸到一" + ob->query("unit") + ob->name()
 				+ "，可是对你而言太重了，不得不放弃。\n");
 			return;
 		}
