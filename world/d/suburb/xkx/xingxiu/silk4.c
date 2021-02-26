@@ -49,7 +49,7 @@ int do_push(string arg)
 
 	if( arg=="shibei" )
 	{
-		if( (fam = me->query("family")) && fam["family_name"] == "丐帮" ) 
+		if( (fam = me->query("family")) && fam["family_name"] == "丐帮" )
 		{
 			message_vision("$N推开石碑，只见泥沙纷纷跌落，地面上露出一个小洞。\n", me);
 			message("vision",
@@ -61,7 +61,7 @@ int do_push(string arg)
                 		environment(me), ({me}) );
 			return 1;
 		}
-		else 
+		else
 			return notify_fail("这么小的洞，你钻得进去吗？\n");
 	}
 }	
