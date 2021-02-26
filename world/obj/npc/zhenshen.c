@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // jia-shen.c 假身
 #include <ansi.h>
 
@@ -72,12 +72,12 @@ void copy_status(object me,object ob)
 
    inv = all_inventory(ob);
         for(i=0; i<sizeof(inv); i++) {
-                if( inv[i]->query("weapon_prop") 
+                if( inv[i]->query("weapon_prop")
                 &&  inv[i]->query("equipped") ) {
                         carry_object(base_name(inv[i]))->wield();
                         me->set("weapon", base_name(inv[i]));
                 }
-                else if( inv[i]->query("armor_prop") 
+                else if( inv[i]->query("armor_prop")
                 &&  inv[i]->query("equipped") ) {
                         carry_object(base_name(inv[i]))->wear();
                         me->set("armor", base_name(inv[i]));
@@ -124,7 +124,7 @@ void die()
    if( objectp(owner_ob = find_player(owner)) ) {
                         tell_object(owner_ob, "你的真身被人杀死了，你觉得一阵天旋地转....\n");
         owner_ob->move("/obj/void");
-        owner_ob->unconcious(); 
+        owner_ob->unconcious();
    }
        message("vision",HIB + name() + "身子一晃，变成一股青烟散去了。\n" NOR,environment(),this_object() );
         destruct(this_object());
@@ -133,7 +133,7 @@ void die()
 int heal_up()
 {   object owner_ob;
    object me=this_object();
-        if( objectp(owner_ob=query("owner_ob")) 
+        if( objectp(owner_ob=query("owner_ob"))
      &&  owner_ob->query_temp("in_hell") ) {
      ::heal_up();
      return 1;
