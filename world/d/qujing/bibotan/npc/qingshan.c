@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -69,7 +69,7 @@ int heal_up()
                         case 4:
                                 command("say 天波儿笑，看好了门，别让人溜进去！");
                                 command("kick xiao");
-                        break; 
+                        break;
         case 5:
           command("say 天波儿笑，快去向公主请示方位！");
           command("lazy xiao");
