@@ -4,7 +4,7 @@
 
 int exert(object me, object target, int amount)
 {
-        if( target != me ) return 
+        if( target != me ) return
 		notify_fail("你只能用内功疗自己的伤。\n");
 
         if( me->is_fighting() )
@@ -14,13 +14,13 @@ int exert(object me, object target, int amount)
                 return notify_fail("你的真气不够。\n");
 
         if( (int)me->query("eff_kee") < (int)me->query("max_kee") / 2 )
-                return 
+                return
 notify_fail("你已经受伤过重，只怕一运真气便有生命危险！\n");
 
         write( HIW "你全身放松，坐下来开始运功疗伤。\n" NOR);
         message("vision",
-                HIW + me->name() + 
-"坐下来运功疗伤，脸上一阵红一阵白，不久，吐出一口瘀血，脸色看起来好多了。\n" 
+                HIW + me->name() +
+"坐下来运功疗伤，脸上一阵红一阵白，不久，吐出一口瘀血，脸色看起来好多了。\n"
 NOR,
                 environment(me), me);
 
@@ -30,4 +30,4 @@ NOR,
 
         return 1;
 }
- 
+
