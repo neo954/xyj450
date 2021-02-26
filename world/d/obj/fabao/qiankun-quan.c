@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // qiankun-quan.c, 4-12-98 bbs
 
 /************************************************************/
@@ -85,7 +85,7 @@ void create()
 
 /************************************************************/
 
-// ********make sure your fabao has this function******** 
+// ********make sure your fabao has this function********
 // this is the function that the "ji" command looks for
 
 int ji(string target)
@@ -93,7 +93,7 @@ int ji(string target)
     object victim,me=this_player();
     int damage,ratio,mykar=me->query_kar(), dingtime, condition;
     string msg, objname=this_object()->name();
-    
+
     // some fabao require a target, such as this one.
     // (the target is passed in by the "ji" command, if
     // you are interested/suspicious in how it works, you
@@ -111,7 +111,7 @@ int ji(string target)
     if(!living(victim))
    return notify_fail("你的目标不是活物！\n");
     if(!me->is_fighting(victim))
-   return notify_fail("只有战斗中才能祭"+objname+"。\n");  
+   return notify_fail("只有战斗中才能祭"+objname+"。\n");
 
     // every fabao will have a mana cost and a sen cost.
 
