@@ -1,6 +1,6 @@
 epilog - handle initialization
 
-string array epilog( int load_empty ); 
+string array epilog( int load_empty );
 
 The driver calls epilog() in master after the master object has been loaded.
 Required initialization may be done at this point.  If epilog() returns an
