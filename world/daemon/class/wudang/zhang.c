@@ -7,7 +7,7 @@ void create()
 {
 	set_name("张三丰", ({ "zhang sanfeng", "zhang" }));
 	set("nickname", "邋遢真人");
-	set("long", 
+	set("long",
 		"他就是武当派开山鼻祖、当今武林的泰山北斗张三丰真人。\n"
 		"身穿一件污秽的灰色道袍，不修边幅。\n"
 		"身材高大，年满百岁，满脸红光，须眉皆白。\n");
@@ -56,8 +56,8 @@ void create()
 void attempt_apprentice(object ob)
 {
 	if ((int)ob->query_skill("taiji-shengong", 1) < 50) {
-		command("say 我武当派乃内家武功，最重视内功心法。"); 
-		command("say " + RANK_D->query_respect(ob) + 
+		command("say 我武当派乃内家武功，最重视内功心法。");
+		command("say " + RANK_D->query_respect(ob) +
 			"是否还应该在太极神功上多下点功夫？");
 		return;
 	}
