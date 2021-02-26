@@ -58,7 +58,7 @@ void create()
 }
 
 void init()
-{       
+{
 	object ob;
 
 	::init();
