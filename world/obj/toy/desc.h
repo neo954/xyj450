@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //Descriptions for camera.c
 //Crab, Dec 17, 1996
 
@@ -24,7 +24,7 @@ string *per_msg_female1 = ({
         CYN "俏脸生春，妙目含情，轻轻一笑，不觉让人怦然心动。 \n" NOR,
         CYN "风情万种，楚楚动人，当真是我见犹怜。 \n" NOR,
 });
-                
+
 string *per_msg_female2 = ({
         CYN "容色秀丽，风姿绰约。 \n" NOR,
         CYN "长发如云，肌肤胜雪，不知倾倒了多少英雄豪杰。 \n" NOR,
@@ -37,7 +37,7 @@ string *per_msg_female3 = ({
         CYN "长得还不错，颇有几份姿色。  \n" NOR,
 });
 
-              
+
 string *msg_expression = ({
    "脸上露出愉快的微笑。",
    "躲在一边幸灾乐祸地笑。",
