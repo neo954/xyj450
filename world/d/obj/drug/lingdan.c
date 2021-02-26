@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// lingdan.c 灵丹 
+
+// lingdan.c 灵丹
 
 inherit ITEM;
 
@@ -35,7 +35,7 @@ int do_eat(string arg)
 {
    if (!id(arg))
      return notify_fail("你要吃什么？\n");
-   if ((int)this_player()->query("eff_sen") == 
+   if ((int)this_player()->query("eff_sen") ==
        (int)this_player()->query("max_sen"))
      return notify_fail("你现在精血充足。\n");
    else {
