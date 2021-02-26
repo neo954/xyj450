@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -15,7 +15,7 @@ void create()
 
    set("chat_chance",30);
    setup();
-   
+
    carry_object(__DIR__"obj/cloth")->wear();
    add_money("coin", 60);
 }
