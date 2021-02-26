@@ -40,12 +40,12 @@ void init()
 
 void greeting (object ob)
 {
-	if( !ob || environment(ob) != environment() ) 
+	if( !ob || environment(ob) != environment() )
 		return;
 
-	if (!ob->query("rank")) 
+	if (!ob->query("rank"))
 		say ("钱千万皱了皱眉，说:这里是可不是为你们开的，吃完了快走。\n");
-	    else 
+	    else
 		say ("钱千万堆满了笑脸引上去：哪阵香风把你迎来了。\n");
 }
 
