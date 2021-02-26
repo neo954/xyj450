@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // qingshi-laomo.c...weiqi, 97.09.15.
 
 inherit NPC;
@@ -24,7 +24,7 @@ void create()
    set_skill("parry", 70);
    set_skill("blade", 120);
    set_skill("bingpo-blade", 110);
-   set_skill("force", 90);   
+   set_skill("force", 90);
    set_skill("ningxie-force", 90);
    set_skill("literate", 70);
    set_skill("spells", 90);
@@ -40,7 +40,7 @@ void create()
    set("force", 1600);
    set("max_force", 800);
    set("mana", 1600);
-   set("max_mana", 800);   
+   set("max_mana", 800);
    set("force_factor", 60);
    set("mana_factor", 25);
 
@@ -94,11 +94,11 @@ int recruit_apprentice(object ob)
 }
 
 void init()
-{       
+{
    object ob=this_player();
 
    ::init();
-   if ( ((string)ob->query("family/family_name")=="方寸山三星洞") 
+   if ( ((string)ob->query("family/family_name")=="方寸山三星洞")
      && ((int)ob->query("combat_exp")  >= 100000) )
    {
                    remove_call_out("greeting");
