@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat
 
 inherit NPC;
@@ -57,7 +57,7 @@ void reward (object who)
   {
     switch (random(8))
     {
-      case 0: 
+      case 0:
       {
         if (who->query_str() < limit)
         {
@@ -66,7 +66,7 @@ void reward (object who)
           break;
         }
       }
-      case 1: 
+      case 1:
       {
         if (who->query_cor() < limit)
         {
@@ -75,7 +75,7 @@ void reward (object who)
           break;
         }
       }
-      case 2: 
+      case 2:
       {
         if (who->query_int() < limit)
         {
@@ -84,7 +84,7 @@ void reward (object who)
           break;
         }
       }
-      case 3: 
+      case 3:
       {
         if (who->query_spi() < limit)
         {
@@ -93,7 +93,7 @@ void reward (object who)
           break;
         }
       }
-      case 4: 
+      case 4:
       {
         if (who->query_cps() < limit)
         {
@@ -102,7 +102,7 @@ void reward (object who)
           break;
         }
       }
-      case 5: 
+      case 5:
       {
         if (who->query_per() < limit)
         {
@@ -111,7 +111,7 @@ void reward (object who)
           break;
         }
       }
-      case 6: 
+      case 6:
       {
         if (who->query_con() < limit)
         {
@@ -120,7 +120,7 @@ void reward (object who)
           break;
         }
       }
-      case 7: 
+      case 7:
       {
         if (who->query_kar() < limit)
         {
@@ -136,14 +136,14 @@ void reward (object who)
     str = "apply/personality";
     name = "容貌";
   }
-  
+
   points = 2;
   message_vision ("$N对$n一拜：陛下有旨，赐"+RANK_D->query_respect(who)+
                   chinese_number(points)+"点"+name+"！\n",me,who);
-/*  
+/*
   command (channel+" "+who->query("name")+who->query("quest/reason")+"陛下有旨，赐"+
            chinese_number(points)+"点"+name+"！");
-*/  
+*/
   who->add("quest/gain/"+str,points);
   reporting (who, who->query("quest/reason"), points, "点"+name);
 
