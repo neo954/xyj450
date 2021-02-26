@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // standard home for players.
 // by mon. 3/3/97
 
@@ -22,11 +22,11 @@ int is_home() {return 1;}
 
 void create()
 {
-     set_name("新房",({"room"}));     
+     set_name("新房",({"room"}));
      set("short", "标准新房");
      set("long", @LONG
 
-一切都设置好了，只等一些室内装修。 
+一切都设置好了，只等一些室内装修。
 LONG
      );
      set("home_host",({"def_host"}));
@@ -78,7 +78,7 @@ void init()
          k=1;
          break;
                   }
-     }   
+     }
               }
               if(!k) {
      write("主人不在家，您还是呆会儿再来吧。\n");
@@ -86,7 +86,7 @@ void init()
                 tell_room(out,me->query("name")+
                   "失望地走了出来。\n",({me}));
      return;
-              } 
+              }
             } else {
      tell_object(me, "啊哈！ 闯进来了！\n");
                 tell_object(me, "某某飞起一脚，正好踢中你的屁股 。  \n");
@@ -97,7 +97,7 @@ void init()
                 return;
             }
 tell_room(env,me->query("name")+"拉开门，走了进来。\n",({me}));
-     } 
+     }
      add_action("do_bed", "gosleep");
      add_action("do_bed", "gobed" );
      add_action("do_bed", "bed");
@@ -144,7 +144,7 @@ int do_findbaby()
        write(where->short());
                 }
                 write("。\n");
-                break; 
+                break;
 // If one have more than one boys or girls, break here after first match. Dream 01/03/98.
               }
             }
@@ -190,9 +190,9 @@ object find_bed(object me)
               bed=inv[i];
               break;
             }
-          } 
+          }
         }
-   
+
    if(!bed) {
           bed=new("d/changan/bed.c");
           bed->set("out",this_object());
@@ -217,7 +217,7 @@ int do_bed()
           write(HIY "床上已经挤不下了！\n" NOR);
         } else {
           message_vision(HIY "\n沙帐轻轻一动，$N钻了进来。\n" NOR, me);
-        } 
+        }
         return 1;
 }
 
@@ -308,7 +308,7 @@ void get_long_text(string str, string text)
 
 void get_bed_long_text(string str, string text)
 {   object bed;
-    
+
     str=check_str(text);
     set("bed_long",str);
     if(objectp(bed=present("home_bed",this_object()))) {
@@ -319,7 +319,7 @@ void get_bed_long_text(string str, string text)
 }
 
 string check_str(string str)
-{ 
+{
     str=replace_string(str,"\"","");
     str=replace_string(str,";","");
     str=replace_string(str,"\\","");
@@ -357,4 +357,4 @@ int clean_up()
 
     destruct(this_object());
     return 0;
-}    
+}
