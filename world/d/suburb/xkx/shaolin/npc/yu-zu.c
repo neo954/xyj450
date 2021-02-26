@@ -30,7 +30,7 @@ int accept_object(object who, object ob)
 {
 	object room;
 
-	if (ob->query("money_id") && ob->value() >= 1000) 
+	if (ob->query("money_id") && ob->value() >= 1000)
 	{
 		tell_object(who, "狱卒说道：下水道里老鼠真多，替我去打几只，可别乘机溜了呵！\n\n");
 		message_vision("狱卒左右张望了一下，偷偷替$N打开通往南边的小门。\n", who);
