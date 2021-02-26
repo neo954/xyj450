@@ -35,9 +35,9 @@ int help(object me)
 {
 	write(@HELP
 指令格式：alert
- 
+
 这个指令让官员呼唤高手来保护自己.
- 
+
 HELP
     );
     return 1;
