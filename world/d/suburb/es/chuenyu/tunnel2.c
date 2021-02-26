@@ -14,8 +14,8 @@ LONG
                   "north" : __DIR__"tunnel3",
                     "south"   : __DIR__"tunnel1",
                     ]));
-                    
+
         setup();
         replace_program(ROOM);
-                   
+
 }
