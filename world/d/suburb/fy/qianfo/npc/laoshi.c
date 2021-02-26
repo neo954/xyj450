@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 int give_silk();
 inherit NPC;
@@ -8,7 +8,7 @@ void create()
         set_name("老实和尚", ({ "lao shi", "lao"}) );
         set("gender", "男性" );
         set("age", 32);
-        set("long", 
+        set("long",
 "老实和尚整天疯疯癫癫，怪里怪气的．他的功夫也是如此．
 老实和尚从来不说谎话，所以得名＂老实和尚＂\n");
         set("combat_exp", 100000);
