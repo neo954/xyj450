@@ -27,13 +27,13 @@ int perform(object me, object target)
 				return notify_fail("没有这个人啊？你要化装成谁的模样？\n");
 			target = ob;
 			}
-		    else 
+		    else
 			return notify_fail("你要化装成谁的模样？\n");
 		}
 	
 	ob = me;
 
-	if ( !target || me->is_busy() ) 
+	if ( !target || me->is_busy() )
 		return notify_fail ("你正忙着呢，哪有空易容？\n");
 
 	if ( random (skill = me->query_skill("yirong") ) > 35 ) {
