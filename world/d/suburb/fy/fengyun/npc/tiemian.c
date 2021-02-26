@@ -41,4 +41,3 @@ int accept_object(object who, object ob)
 	    kill_ob(who);
             return 0;
 }
-
