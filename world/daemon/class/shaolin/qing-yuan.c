@@ -72,7 +72,7 @@ void init()
 
 void speaking(object ob)
 {
-	if ( random(5) < 1 ) 
+	if ( random(5) < 1 )
 	{	
 		switch( random(4) ) {
 		case 0:
