@@ -16,4 +16,3 @@ string exert_function_file(string func)
 {
         return CLASS_D("fighter") + "/lengquan-force/" + func;
 }
-
