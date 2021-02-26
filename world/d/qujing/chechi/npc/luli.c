@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat 10/16/1997
 
 inherit NPC;
@@ -42,10 +42,10 @@ void create()
   map_skill("spells", "dao");
   set("eff_dx",-160000);
   set("nkgain",240);
-  
+
   setup();
   carry_object("/d/obj/cloth/daopao")->wear();
-  
+
 }
 
 void init()
@@ -66,7 +66,7 @@ void follow_player (object me, object who)
 
   if (me->query("have_followed"))
     return;
-    
+
   if (who->query("obstacle/chechi")=="done")
     return;
 
