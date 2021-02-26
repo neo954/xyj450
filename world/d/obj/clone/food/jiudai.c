@@ -25,4 +25,3 @@ void create()
 		"drunk_supply": 6,
 	]));
 }
-
