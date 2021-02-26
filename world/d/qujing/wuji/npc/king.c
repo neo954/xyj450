@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // gao.c
 
 inherit NPC;
@@ -24,7 +24,7 @@ void create()
   set("max_gin", 1);
   set("max_kee", 1);
   set("max_sen", 1);
-  
+
   set("inquiry", ([
       "name": "老夫乃是乌鸡国国王，三年前被一道人所害，推下御花园琉璃井。\n",
       "here": "此乃宝林寺也",
@@ -56,7 +56,7 @@ int talk_king(){
     "乌鸡国王叹道：可恨那妖道变做朕的模样，霸占了朕的江山，暗侵了我的国土。\n",
     "乌鸡国王叹道：可恨那妖道神通广大，地府天堂竟无我伸冤之处。\n",
     "乌鸡国王对你说：今日夜游神将我吹来此间，说师父你可以帮朕。\n",
-    "乌鸡国王对你说：师父您若能拿住那妖道，辨明邪正，朕当结草衔环报答师父。\n", 
+    "乌鸡国王对你说：师父您若能拿住那妖道，辨明邪正，朕当结草衔环报答师父。\n",
    });
 
   if (random(7) == 0)
@@ -71,7 +71,7 @@ int talk_king(){
 
 int give_jade()
 {
-  object king = this_object(); 
+  object king = this_object();
   object who = this_player();
   string id = who->query("id");
   object where = environment(king);
@@ -114,7 +114,7 @@ int give_jade()
 
 int king_disappear()
 {
-  object king = this_object(); 
+  object king = this_object();
   message_vision ("冷风一过，你像是猛然惊醒，乌鸡国王已经不见了。\n",king);
   destruct (king);
   return 1;
@@ -122,7 +122,7 @@ int king_disappear()
 
 void die ()
 {
-  object king = this_object(); 
+  object king = this_object();
   message_vision ("$N大惊失色，噌地一声化为一缭青烟飞去。\n",king);
   destruct (king);
 }
