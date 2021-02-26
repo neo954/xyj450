@@ -33,4 +33,3 @@ me->add("sen",-30);
 me->set("marks/金狮", time());
 return 1;
 }
-
