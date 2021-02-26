@@ -37,5 +37,3 @@ LONG);
         setup();
    replace_program(ROOM);
 }
-
-
