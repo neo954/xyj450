@@ -149,4 +149,3 @@ int perform_action(string action)
 	if( stringp(martial_skill) )
 		return SKILL_D(martial_skill)->perform_action(this_object(), act);		
 }
-
