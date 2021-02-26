@@ -36,5 +36,3 @@ void create()
         carry_object(__DIR__"obj/changpao")->wear();
         add_money("silver", 20);
 }
-
-
