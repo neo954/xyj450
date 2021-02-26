@@ -1,6 +1,6 @@
 clean_up - periodically called in inactive objects
 
-int clean_up( int inherited ); 
+int clean_up( int inherited );
 
 The clean_up() function is called by the driver on a regular basis in all
 objects that have been inactive for the time specified for clean_up() in the
