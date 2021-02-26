@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 
 void create()
@@ -31,7 +31,7 @@ int do_get(string arg)
         }
 
         if( move(this_player()) ) {
-                message_vision("$N弯腰将地下的" + name()+"扛了起来。\n", 
+                message_vision("$N弯腰将地下的" + name()+"扛了起来。\n",
 this_player());
                 this_player()->consume_stat("kee", 10);
                 return 1;
