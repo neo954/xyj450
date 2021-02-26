@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 15 1997
 
 inherit ITEM;
@@ -62,11 +62,11 @@ int do_open (string arg)
     who->add_temp("obstacle/biqiu_xiaoer",1);
     call_out ("reset_elong",1800);
     destruct (kid);
-  }  
+  }
   else
   {
     message_vision ("$N将鹅笼打开，将头伸进去看了看。\n",who);
-  }  
+  }
   return 1;
 }
 
