@@ -7,11 +7,11 @@ int valid_learn(object me) { return 1; }
 
 int practice_skill(object me)
 {
-        return 
+        return
 notify_fail("金刚不坏功只能用学的。\n");
 }
 
- 
+
 int effective_level() { return 20;}
 
 string *absorb_msg = ({
