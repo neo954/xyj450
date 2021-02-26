@@ -102,4 +102,3 @@ int cast(object me)
 	me->start_busy(5);
 	return 1;
 }
-
