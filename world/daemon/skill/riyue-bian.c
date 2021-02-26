@@ -86,4 +86,3 @@ string perform_action_file(string action)
 	if ( this_player()->query_skill("riyue-bian", 1) >= 50 )
 		return __DIR__"riyue-bian/" + action;
 }
-
