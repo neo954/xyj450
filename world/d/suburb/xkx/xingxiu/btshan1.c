@@ -10,10 +10,10 @@ void create()
 这里是「西毒」欧阳锋练功的地方，屋内什么摆设也没有。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
             "eastdown" : __DIR__"btshan",
         ]));
-        set("objects", ([ 
+        set("objects", ([
             __DIR__"npc/feng" : 1,
             __DIR__"npc/snake" : 5,
          ]) );
