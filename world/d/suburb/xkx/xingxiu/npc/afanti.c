@@ -239,6 +239,3 @@ int do_answer(string arg)
           write ("谁把谜底告诉你的? 不对!!\n");
         return 1;
 }
-
-
-
