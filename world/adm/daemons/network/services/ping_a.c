@@ -36,4 +36,3 @@ void incoming_request(mapping info)
      MAIL_Q -> check_for_mail( info["NAME"], 3 );
     }
 }
-
