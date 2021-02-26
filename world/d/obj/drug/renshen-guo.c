@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 // renshen-guo.c 人参果
 // suppose to be able to be given and got,
@@ -30,7 +30,7 @@ void create()
      set("value", 500000);
      set("drug_type", "补品");
    }
-  
+
    set("is_monitored",1);
    setup();
 }
@@ -40,11 +40,11 @@ int do_eat(string arg)
    int howmany;
 
    object me = this_player();
-  
+
    if (!id(arg)) return notify_fail("你要吃什么？\n");
 
    howmany = (int)me->query("rsg_eaten");
-  
+
    me->set("food", (int)me->max_food_capacity());
 
    if((int)me->query("max_force")<10*(int)me->query_skill("force"))
@@ -58,7 +58,7 @@ int do_eat(string arg)
 
    me->set("rsg_eaten", howmany+1);
 
-   message_vision(HIW "$N把人参果往嘴里一塞，忍不住大叫一声：人参果啊人参果，不愧是人参果！ \n说罢兴奋得都快晕了过去。\n" NOR, me);  
+   message_vision(HIW "$N把人参果往嘴里一塞，忍不住大叫一声：人参果啊人参果，不愧是人参果！ \n说罢兴奋得都快晕了过去。\n" NOR, me);
 
    me->set("obstacle/wuzhuang","done");
    me->unconcious();
