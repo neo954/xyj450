@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // cost.c
 
 inherit F_CLEAN_UP;
@@ -24,7 +24,7 @@ int main(object me, string arg)
    stime = after["stime"] - before["stime"];
    printf("\n系统时间：%d 微秒\n使用者时间：%d 微秒\nEval cost：%d 单位\n",
      stime, usertime, eval_cost );
-     
+
    return 1;
 }
 
