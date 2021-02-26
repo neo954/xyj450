@@ -18,5 +18,5 @@ void create()
 	setup();
 	add_money("silver", 1);
         carry_object(__DIR__"obj/jinzhuang")->wear();
-        
+
 }
