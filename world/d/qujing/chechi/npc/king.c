@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat 10/16/1997
 
 inherit NPC;
@@ -41,10 +41,10 @@ void create()
   map_skill("spells", "seashentong");
   set("eff_dx",30000);
   set("nkgain",180);
-  
+
   setup();
   carry_object("/d/obj/cloth/mangpao")->wear();
-  
+
 }
 
 void init()
@@ -155,7 +155,7 @@ void announce_success(object who)
   {
     tell_object (who,"你已经过了这一关，什么都得不到了！\n");
     return;
-  }  
+  }
 
   i = random(600);
   who->add("obstacle/number",1);
