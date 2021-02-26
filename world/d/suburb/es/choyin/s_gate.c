@@ -17,7 +17,7 @@ LONG
 	set("exits", ([ /* sizeof() == 3 */
 		"north" : __DIR__"crossroad",
 		"east" : __DIR__"dragon_temple",
-	        "south" :__DIR__"spath",  
+	        "south" :__DIR__"spath",
            ]));
 	set("objects", ([
 		__DIR__"npc/cityguard": 2
