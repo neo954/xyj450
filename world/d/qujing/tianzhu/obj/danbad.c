@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 12/2/1997
 
 #include <ansi.h>
@@ -31,9 +31,9 @@ void init()
 int do_eat(string arg)
 {
   object me = this_player();
-  if (arg!="yangshen dan" && arg!="dan") 
+  if (arg!="yangshen dan" && arg!="dan")
     return 0;
-  
+
   tell_object(me, "坏药还能吃吗？\n");
   return 1;
 }
