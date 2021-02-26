@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // expell.c
 
 #include <skill.h>
@@ -49,10 +49,10 @@ int help(object me)
 {
    write(@HELP
 指令格式 : expell <某人>
- 
+
 这个指令可以让你开除不成才的弟子，被开除的弟子虽离开你的门下，但仍
 属于这个门派，可以随便传投本派其他师父。
- 
+
 HELP
    );
    return 1;
