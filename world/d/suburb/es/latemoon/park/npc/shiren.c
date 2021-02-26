@@ -24,4 +24,3 @@ TEXT
         carry_object("/d/suburb/es/latemoon/obj/skirt4")->wear();
         carry_object(__DIR__"obj/amulet")->wear();
 }
-
