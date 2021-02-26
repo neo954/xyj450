@@ -13,6 +13,3 @@ void create()
 		set("value", 10);
 	}
 }
-
-
-
