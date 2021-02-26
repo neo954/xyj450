@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 
 inherit SKILL;
@@ -33,21 +33,21 @@ mapping *action = ({
                 "dodge":                -40,
                 "damage":               20,
                 "damage_type":  "擦伤"
-        ]),   
+        ]),
         ([      "name":                 "无中生有",
                 "action":
 "$N使出「无中生有」，$w从$n意想不到的地方使出，弄得$n一时手足无措",
                 "dodge":                -40,
                 "damage":               30,
                 "damage_type":  "刺伤"
-        ]),   
+        ]),
         ([      "name":                 "饮恨吞声",
                 "action":
 "$N脸上突现煞气，举起手中$w，猛向$n$l击落，这一招「饮恨吞声」出手又快又狠",
                 "dodge":                -40,
                 "damage":               40,
                 "damage_type":  "砸伤"
-        ]),   
+        ]),
 });
 
 
