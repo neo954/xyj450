@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 22 1997
 
 inherit NPC;
@@ -47,12 +47,12 @@ int check_valid_player (object who)
   if (! where)
     return 0;
   if (where->query("short") != "坛场")
-    return 0;  
+    return 0;
 
-  yangli = present("yangli daxian",where);  
-  huli = present("huli daxian",where);  
-  luli = present("luli daxian",where);  
-  king = present("guo wang",where);  
+  yangli = present("yangli daxian",where);
+  huli = present("huli daxian",where);
+  luli = present("luli daxian",where);
+  king = present("guo wang",where);
   guizi = present("zhuhong guizi",where);
 
   if (! yangli || ! huli || ! luli || ! king || ! guizi)
@@ -96,7 +96,7 @@ void display_guess (object me, object who, object guizi,
 
   message_vision ("$N指着柜子说，这里面是"+arg+"吧。\n",who);
 }
- 
+
 void failing_guess (object me,object who, object where,
                     object guizi, string arg, object luli)
 {
@@ -163,7 +163,7 @@ void failing (object me, object who, object where,
     message_vision ("只见$N苦思冥想，说道：“是"+str+"”。\n\n",luli);
     message_vision ("话音未落，$N打开朱红柜子，却果然是"+str+"。\n\n",me);
   }
-  else   
+  else
     message_vision ("$N哼地一声打开朱红柜子，里面是"+str+"。\n\n",me);
 }
 
@@ -228,7 +228,7 @@ int do_guess (string arg)
   status = check_valid_player(who);
   if (status == 0)
     return 0;
-  luli = present("luli daxian",where);  
+  luli = present("luli daxian",where);
   if (luli && luli->query("id") != "luli daxian")
     luli = 0;
   if (me->query_temp("obstacle/chechi")=="busy")
@@ -246,17 +246,17 @@ int do_guess (string arg)
   me->set_temp("obstacle/chechi","busy");
   if (status == 1 || ! luli)
   {
-    failing_guess(me,who,where,guizi,arg,luli);    
+    failing_guess(me,who,where,guizi,arg,luli);
   }
   else if (who->query_temp("obstacle/chechi_guizi_times") == 0)
   {
     who->set_temp("obstacle/chechi_guizi_times",1);
-    failing_guess(me,who,where,guizi,arg,luli);    
+    failing_guess(me,who,where,guizi,arg,luli);
   }
   else if (random(3))
-    failing_guess(me,who,where,guizi,arg,luli);    
+    failing_guess(me,who,where,guizi,arg,luli);
   else if (arg != "宫衣" && arg != "桃子" && arg != "道童")
-    failing_guess(me,who,where,guizi,arg,luli);    
+    failing_guess(me,who,where,guizi,arg,luli);
   else
     success_guess(me,who,where,guizi,arg,luli);
   return 1;
