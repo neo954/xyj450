@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // find.c
 // cglaem...01/25/97.
 
@@ -13,8 +13,8 @@ void fail(object me);
 void find_result(object me, object env, string target);
 
 mapping maps=([]);
-void create() 
-{ 
+void create()
+{
    string filename=__DIR__"find.map";
    string buf, *buf1;
    string dir, name;
@@ -51,7 +51,7 @@ int main(object me, string target)
      return notify_fail("安全区内不能用天眼通。\n");
 
         if( !target) return notify_fail("你想用天眼通查谁？\n");
-   
+
    if((int)me->query("combat_exp")<5000)
             return notify_fail("你的道行不够，用不了天眼通。\n");
 
@@ -65,11 +65,11 @@ int main(object me, string target)
 
         mana_cost=-60;
 
-        if((int)me->query("mana")+mana_cost <= 30 )  
+        if((int)me->query("mana")+mana_cost <= 30 )
      return notify_fail("你的法力不够，用不了天眼通。\n");
 
         me->add("mana", mana_cost);
-   
+
    message_vision(HIY
    "$N口中念了几句咒文，眼中突然精光一闪，大喝一声“千里眼何在！”\n"
    NOR,me);
@@ -96,11 +96,11 @@ void find_result(object me, object env, string target)
 
    message_vision(HIY
    "只听嘿嘿几声奸笑，不知从哪里钻出来一个尖嘴猴腮的家伙，在$N耳边低声说了几句话。\n" NOR, me);
-        
+
    ob = find_player(target);
    if( !ob ) ob = find_living(target);
 
-   if (!ob || ob->query("env/invisibility")) 
+   if (!ob || ob->query("env/invisibility"))
      return fail(me);
    where = environment(ob);
    if (!where) return fail(me);
@@ -134,7 +134,7 @@ void find_result(object me, object env, string target)
      answer=where->query("name")+"身上";
         } else if(sscanf(filename,"/obj/home#%*s")==1) {
           answer="住家里";
-        } else { 
+        } else {
           answer=undefinedp(where->query("short"))?
        where->short():
        where->query("short");
