@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // shizhe.c 净瓶使者�
 // By Dream Dec. 20, 1996
 
@@ -9,7 +9,7 @@ inherit NPC;
 void create()
 {
    set_name("净瓶使者", ({ "shizhe" }));
-   set("title", "南海观音侍从");   
+   set("title", "南海观音侍从");
    set("long", @LONG
 南海观音座前净瓶使者。
 LONG);
