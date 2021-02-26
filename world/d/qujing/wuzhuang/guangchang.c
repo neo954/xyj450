@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -14,15 +14,15 @@ void create ()
 前的往来，东西有小廊通往后殿。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "southdown" : __DIR__"linkway",
      "enter" : __DIR__"zhengdian",
      "east" : __DIR__"eastway1",
      "west" : __DIR__"westway1",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      __DIR__"npc/tieguaili" : 1,
