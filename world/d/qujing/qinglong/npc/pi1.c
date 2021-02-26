@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/20/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("辟寒大王", ({ "pihan dawang", "dawang" }));
-  set("title", "玄英洞");   
+  set("title", "玄英洞");
   set("long", "一位妖怪，鼻子上长着一根角。");
   set("gender", "男性");
   set("age", 50);
@@ -68,7 +68,7 @@ void fuling_appearing (object who)
   object prince = new ("/d/qujing/jinping/npc/fuling");
 
   prince->announce_success (who);
-  destruct (prince); 
+  destruct (prince);
 }
 
 void destruct_me(object me)
