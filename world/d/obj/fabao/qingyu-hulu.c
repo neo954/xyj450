@@ -1,14 +1,14 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 青玉葫芦, created by mes
 // updated 6-9-97 pickle
- 
+
 #include <ansi.h>
 #include <weapon.h>
- 
+
 inherit ITEM;
- 
+
 void create()
 {
     set_name(HIC "青玉葫芦" NOR,({"qingyu hulu", "qingyu", "hulu", "qingyuhulu", "fabao"}));
@@ -26,7 +26,7 @@ void create()
     set("replace_file", "/d/obj/fabao/qingyu-fake.c");
     set("is_monitored",1);
     setup();
-} 
+}
 int ji(string target)
 {
     object victim,weapon,hulu,me=this_player(), ob=this_object();
@@ -42,7 +42,7 @@ int ji(string target)
     if(!me->is_fighting()) return notify_fail("只有战斗中才能祭"+obname+"。\n");
     if( (int)me->query("mana") < 300 ) return notify_fail("这么一点点法力也想驱动法宝？\n");
     if( (int)me->query("sen") < 100 ) return notify_fail("你无法集中精神念咒语。\n");
-    weapon = victim->query_temp("weapon"); 
+    weapon = victim->query_temp("weapon");
     if(!weapon) return notify_fail("你的敌人并没有使用武器。\n");
     msg="$N抛起"+obname+"，口中念念有词，\n";
     msg+="只见一阴风刮起，青玉葫芦口射出一道青光。\n";
@@ -61,7 +61,7 @@ int ji(string target)
     if(random(ap+dp)>dp)
     {
    msg+=BLU"$n被青光罩个正着，手中"+ weapon->name() +BLU"向葫芦里飞去！ \n"NOR;
-   msg+="$n手中的"+weapon->query("name")+"被$N收去了！\n"NOR; 
+   msg+="$n手中的"+weapon->query("name")+"被$N收去了！\n"NOR;
    weapon->unequip();
    if (weapon->query_weight()>hulu->query_max_encumbrance())
    {
