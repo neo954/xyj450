@@ -73,4 +73,3 @@ int recruit_apprentice(object ob)
                 ob->set("class", "youling");
 //     ob->set("title", "地府引魄司阴兵");
 }
-
