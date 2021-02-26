@@ -169,4 +169,3 @@ int ji (string target)
   sheng->ji_ob(victim);
   return 1;
 }
-
