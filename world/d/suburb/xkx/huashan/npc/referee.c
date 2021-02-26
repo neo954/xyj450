@@ -68,13 +68,13 @@ string ask_me()
 }
 
 int do_bihua(string arg)
-{     
+{
 	object ob1, ob2;
         object old_target;
 
 	ob1 = this_player();
-        
-	if( !arg || arg=="" ) return 0;  
+
+	if( !arg || arg=="" ) return 0;
 
 	if ( arg == "gongping zi" || arg == "zi" || arg == "referee" )
            {
@@ -82,17 +82,17 @@ int do_bihua(string arg)
              return 1;
             }
 
-	if ( this_object()->query_temp("busy") ) 
+	if ( this_object()->query_temp("busy") )
 		return notify_fail("每次只能有两人参加比武。\n");
 
-        if (!ob2 = present(arg,environment(ob1)) ) 
+        if (!ob2 = present(arg,environment(ob1)) )
 		return notify_fail("你想跟谁比划？\n");
         if (ob1 == ob2)    return notify_fail("你不能攻击自己。\n");
 
 
 	if( userp(ob2) && (object)ob2->query_temp("pending/fight") !=ob1 ) {
-		message_vision("\n$N对着$n说道�" 
-			+ RANK_D->query_self(ob1) 
+		message_vision("\n$N对着$n说道�"
+			+ RANK_D->query_self(ob1)
 			+ ob1->name() + "�领教"
 			+ RANK_D->query_respect(ob2) + "的高招ⅵ\n\n", ob1, ob2);
 		if( objectp(old_target = ob1->query_temp("pending/fight")) )
@@ -103,7 +103,7 @@ int do_bihua(string arg)
 		write(YEL "由於对方是由玩家控制的人物�你必须等对方同意才能进行比试。\n" NOR);
 		return 1;
 	}
-	    
+	
         ob1->delete_temp("halted");
         ob2->delete_temp("halted");
 
@@ -128,7 +128,7 @@ void fighting(object ob1, object ob2)
 void check(object ob1, object ob2)
 {
 	this_object()->set_temp("busy",1);
-	command("chat " + ob1->query("name") 
+	command("chat " + ob1->query("name")
 		+ "与" + ob2->query("name") + "，现在华山绝顶上开始比武论剑！\n");
 	call_out("observe",1,ob1,ob2);
 }
@@ -137,7 +137,7 @@ int observe(object ob1,object ob2)
 {
 	object ob;
 
-	if(ob1->is_fighting()) 
+	if(ob1->is_fighting())
 	{
 		call_out("observe",1,ob1,ob2);
 		return 1;
@@ -147,48 +147,48 @@ int observe(object ob1,object ob2)
         ob1->delete_temp("pending/fight");
         ob2->delete_temp("pending/fight");
 
-	if ( !present(ob1, environment()) ) 
+	if ( !present(ob1, environment()) )
 	{
 		command("chat " + ob1->query("name") + "落荒而逃了！\n");
 		return 1;
 	}
 
-	if ( !present(ob2, environment()) ) 
+	if ( !present(ob2, environment()) )
 	{
 		command("chat " + ob2->query("name") + "落荒而逃了！\n");
 		return 1;
 	}
-           
+
         if (ob1->query_temp("halted"))
          {
 	       ob1->delete_temp("halted");
-               command("chat " + ob1->query("name") + 
+               command("chat " + ob1->query("name") +
                        "中途放弃比武！\n");
                 return 1;
          }
         if (ob2->query_temp("halted"))
          {
                ob2->delete_temp("halted");
-               command("chat " + ob2->query("name") + 
+               command("chat " + ob2->query("name") +
                        "中途放弃比武！\n");
                 return 1;
          }
 
-	if ( ob1->query("kee")*2 > ob1->query("max_kee")) 
+	if ( ob1->query("kee")*2 > ob1->query("max_kee"))
 	{
 		if  (ob2->query("kee")*2 > ob2->query("max_kee")) {
-			command("chat " + ob1->query("name") 
+			command("chat " + ob1->query("name")
 				+ "与" + ob2->query("name") + "比武不分胜负！\n");
 			return 1;
 		}
-		command("chat " + ob1->query("name") 
+		command("chat " + ob1->query("name")
 			+ "比武战胜" + ob2->query("name") + "！\n");
 		ob = new("/d/obj/clone/money/silver");
 		ob->move(ob1);
 	}
 	else
 	{
-		command("chat " + ob2->query("name") 
+		command("chat " + ob2->query("name")
 			+ "比武战胜" + ob1->query("name") + "！\n");
 		ob = new("/d/obj/clone/money/silver");
 		ob->set_amount(2);
