@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <weapon.h>
 
 inherit HAMMER;
@@ -20,7 +20,7 @@ void create()
     set("wield_msg", "$N抓起一个$n，握在手中当武器。\n");
     set("material", "bone");
   }
-  
+
   set("liquid", ([
        "type": "water",
        "name": "西湖龙井茶",
