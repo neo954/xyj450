@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // where.c
 // 06-14-95
 
@@ -14,7 +14,7 @@ int main(object me, string str)
 
    if (!str)
      return where_all();
-        notify_fail("指令格式：where <人物或档名>\n"); 
+        notify_fail("指令格式：where <人物或档名>\n");
    ob = find_player(str);
    if( !ob ) ob = find_living(str);
 
@@ -25,7 +25,7 @@ int main(object me, string str)
    if( !ob ) {
      str = resolve_path(me->query("cwd"), str);
      ob_list = children(str);
-     
+
      if(sizeof(ob_list)<1)
          return notify_fail("Can't find such player or file.\n");
 
