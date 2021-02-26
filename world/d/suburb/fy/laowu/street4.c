@@ -10,7 +10,7 @@ void create()
 枯枝也不知被谁削平了，树干却还有一小半露在河面外。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "west" : __DIR__"street3",
 ]));
         set("outdoors", "laowu");
