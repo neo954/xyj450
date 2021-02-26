@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //bingya-up3.c
 
@@ -20,7 +20,7 @@ LONG);
    //set("item_desc", ([" *** " : " *** ", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      //"south" : __DIR__"xiaomuwu",
      //"north" : __DIR__"chufang",
@@ -29,8 +29,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/xunshi" : 1,
    ]));
@@ -58,20 +58,20 @@ int do_climb(string arg)
      return notify_fail("你要爬到哪里去？\n");
    }
 
-   if( arg == "down" ) 
+   if( arg == "down" )
    {
      message_vision("$N手足并用，小心翼翼地往"+direction_name(arg)+"爬了过去。\n", me);
      me->move(__DIR__"bingya-up2");
    }
-   else if( arg == "up" ) 
+   else if( arg == "up" )
    {
      message_vision("$N手足并用，小心翼翼地往"+direction_name(arg)+"爬了过去。\n", me);
      me->move(__DIR__"bingya-up4");
-   } 
+   }
    else return notify_fail( "往"+direction_name(arg)+"已经没有着手之点了。\n" );
 
-   message_vision("$N从"+direction_rev(arg)+"面爬了过来，长长地舒了口气。\n", me);   
-   return 1;    
+   message_vision("$N从"+direction_rev(arg)+"面爬了过来，长长地舒了口气。\n", me);
+   return 1;
 }
 
 string direction_name(string arg)
