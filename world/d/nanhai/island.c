@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/nanhai/haibian
 inherit ROOM;
 #include <ansi.h>
@@ -31,7 +31,7 @@ void init()
 int do_swim()
 {
         object me = this_player();
-   
+
 message_vision(HIY "$N纵身一跃，跳入海中。只见$N使足了全身力气，手足并用，不一会儿就游到了大陆岸边。\n" NOR, me);
         me->move("/d/changan/southseashore");
    message_vision(HIY "只见$N浑身湿漉漉地从海里爬了上来。\n" NOR, me);
