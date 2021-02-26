@@ -32,4 +32,3 @@ string look_sign(object me)
 {
         return "缔结（ｍａｒｒｙ）或解除（ｕｎｍａｒｒｙ）婚约。\n";
 }
-
