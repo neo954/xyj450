@@ -63,7 +63,7 @@ int askabout ( string arg)
                 	skill_type = "unarmed";
                 	parry_type = "unarmed";
         	}
-		attackp = COMBAT_D->skill_power(me, skill_type, SKILL_USAGE_ATTACK);   
+		attackp = COMBAT_D->skill_power(me, skill_type, SKILL_USAGE_ATTACK);
         	dodgep = COMBAT_D->skill_power(me, "dodge", SKILL_USAGE_DEFENSE);
         	parryp = COMBAT_D->skill_power(me, parry_type, SKILL_USAGE_DEFENSE);
 		printf("攻击力：%d\t躲闪力：%d\n招架力：%d\n",
