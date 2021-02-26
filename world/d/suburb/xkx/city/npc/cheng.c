@@ -26,7 +26,7 @@ void create()
 	set_temp("apply/armor", 50);
 	set_temp("apply/damage", 15);
 
-	set("force", 500); 
+	set("force", 500);
 	set("max_force", 500);
 	set("jiali", 10);
 
