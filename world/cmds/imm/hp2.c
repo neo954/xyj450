@@ -1,22 +1,22 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // hp cmds (Mon  09-04-95)
- 
+
 #include <ansi.h>
- 
+
 inherit F_CLEAN_UP;
- 
+
 string status_color(int current, int max);
- 
+
 int main(object me, string arg)
 {
    object ob;
    mapping my;
    int  year, day, hour;
- 
+
    seteuid(getuid(me));
- 
+
    if(!arg)
      ob = me;
    else if (wizardp(me)) {
@@ -26,9 +26,9 @@ int main(object me, string arg)
         if (!ob) return notify_fail("你要察看谁的状态？\n");
    } else
      return notify_fail("只有巫师能察看别人的状态。\n");
- 
+
    my = ob->query_entire_dbase();
- 
+
     printf(" 精  ： %s%4d/ %4d %s(%3d%%)" NOR "    灵力： %s%4d / %4d (+%d)\n" NOR,
      status_color(my["gin"], my["eff_gin"]),   my["gin"],   my["eff_gin"],
      status_color(my["eff_gin"], my["max_gin"]),   my["eff_gin"] * 100 / my["max_gin"],
@@ -51,9 +51,9 @@ int main(object me, string arg)
         HIY,
         (int)ob->query("potential") - (int)ob->query("learned_points"));
 
-   year = my["combat_exp"] / 1000; 
+   year = my["combat_exp"] / 1000;
    day = (my["combat_exp"] - year * 1000) / 4;
-   hour = (my["combat_exp"] - year * 1000 - day * 4) * 3; 
+   hour = (my["combat_exp"] - year * 1000 - day * 4) * 3;
     //printf(" 饮水： %s%4d/ %4d      " NOR "     经验： %s%d\n" NOR,
     printf(" 饮水： %s%4d/ %4d      " NOR "     道行： %s",
    //%s年%s天%s时辰\n" NOR,
@@ -68,11 +68,11 @@ int main(object me, string arg)
    printf("\n"NOR);
    return 1;
 }
- 
+
 string status_color(int current, int max)
 {
    int percent;
- 
+
    if( max>0 ) percent = current * 100 / max;
    else percent = 100;
    if( percent > 100 ) return HIC;
@@ -82,15 +82,15 @@ string status_color(int current, int max)
    if( percent >= 10 ) return HIR;
    return RED;
 }
- 
+
 int help(object me)
 {
    write(@HELP
 指令格式 : hp
            hp <对象名称>                   (巫师专用)
- 
+
 这个指令可以显示你或指定对象(含怪物)的精, 气, 神数值。
- 
+
 see also : score
 HELP
     );
