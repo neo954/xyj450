@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -13,7 +13,7 @@ void create ()
 家。
 LONG);
 
-        set("exits", 
+        set("exits",
         ([ //sizeof() == 4
                 "northup" : __DIR__"shanlu2",
                 "south" : "/d/westway/yunti",
@@ -23,7 +23,7 @@ LONG);
                 //"down" : __DIR__"***",
         ]));
 
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
                 //__DIR__"npc/***" : 1,
         ]));
