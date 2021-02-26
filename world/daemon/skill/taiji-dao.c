@@ -116,4 +116,3 @@ int practice_skill(object me)
 	me->receive_damage("kee", 30);
 	return 1;
 }
-
