@@ -26,12 +26,12 @@ void create()
 
         set_skill("unarmed", 20);
         set_skill("sword", 30);
-        set_skill("parry", 80); 
+        set_skill("parry", 80);
                setup();
         set_skill("dodge", 80);
                 set_skill("move", 100);
                setup();
-                               
+
         carry_object("/obj/cloth")->wear();
         carry_object("/obj/longsword")->wield();
 }
