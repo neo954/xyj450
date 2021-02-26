@@ -1,8 +1,8 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // chicken.c
- 
+
 inherit ITEM;
 inherit F_FOOD;
 
