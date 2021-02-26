@@ -32,4 +32,3 @@ void destruct_me (object me)
 {
   destruct (me);
 }
-
