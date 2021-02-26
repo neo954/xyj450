@@ -23,4 +23,3 @@ void create()
         init_staff(10);
         setup();
 }
-
