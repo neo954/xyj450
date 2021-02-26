@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // nick.c
 
 #include <ansi.h>
@@ -10,9 +10,9 @@ inherit F_CLEAN_UP;
 int main(object me, string arg)
 {
    int i;
-   
+
    if( !arg ) return notify_fail("你要替自己取什么绰号？\n");
-   
+
    if( arg=="none" ) {
    me->delete("nickname");
    return 1;
@@ -53,7 +53,7 @@ int help(object me)
         write(@HELP
 指令格式 : nick <外号, 绰号>
       nick none   取消
- 
+
 这个指令可以让你为自己取一个响亮的名号或头衔，你如果希望在绰号中
 使用 ANSI 的控制字元改变颜色，可以用以下的控制字串：
 
@@ -65,7 +65,7 @@ $BLU$ - 深蓝色     $HIB$ - 蓝色
 $MAG$ - 浅紫色     $HIM$ - 粉红色
 $CYN$ - 蓝绿色     $HIC$ - 天青色
 $WHT$ - 浅灰色     $HIW$ - 白色
- 
+
 其中系统自动会在字串尾端加一个 $NOR$。
 
 HELP
