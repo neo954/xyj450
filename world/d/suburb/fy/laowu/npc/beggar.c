@@ -39,4 +39,3 @@ int accept_fight(object me)
 "饶命！小的这就离开！\n");
         return 0;
 }
-
