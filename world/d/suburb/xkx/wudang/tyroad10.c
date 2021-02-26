@@ -1,5 +1,5 @@
 // tyroad10.c 桃园小路
-// by Marz 
+// by Marz
 
 inherit ROOM;
 
