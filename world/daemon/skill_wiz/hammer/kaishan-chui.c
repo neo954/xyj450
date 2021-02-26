@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 //【开山锤】kaishan-chui.c, weiqi...980307
 inherit SKILL;
