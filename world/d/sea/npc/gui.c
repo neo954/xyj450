@@ -61,4 +61,3 @@ int give_me(object ob)
      message_vision("$N拿出张符纸来，画出金龙，递给了$n。\n", me, who);
                 return 1;
 }
-
