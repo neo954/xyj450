@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 
@@ -25,7 +25,7 @@ void create()
 
   set("can_sleep",1);
   setup();
- 
+
   carry_object("/d/obj/cloth/gongpao")->wear();
 }
 
