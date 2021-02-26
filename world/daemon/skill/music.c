@@ -1,4 +1,4 @@
-// music. 
+// music.
 
 #include <ansi.h>
 
