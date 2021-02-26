@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // poem.c
 
 inherit ITEM;
@@ -18,7 +18,7 @@ void create()
                 set("unit", "本");
    set("long",
    "一本手抄的＂断肠集＂，字迹娟秀，书页上隐隐有一些泪痕．\n");
-        set("value", 500);   
+        set("value", 500);
         }
 }
 
@@ -44,7 +44,7 @@ int do_read(string arg)
      "无绪倦寻芳，闲却秋千索。",
      "小院湘帘闲不卷，曲房朱户闷长扃",
      });
-   
+
    me=this_player();
 
        if( !this_object()->id(arg) ) return 0;
@@ -52,7 +52,7 @@ int do_read(string arg)
              return notify_fail("你现在忙着呢，哪有闲情逸致吟诗...\n");
       if( me->is_fighting() )
              return notify_fail("太风雅了吧？打架时还吟诗...\n");
-   
+
    if ((me->query("gender") == "男性") || !((string)me->query("family/family_name")=="月宫"))
      return notify_fail("嫦娥的私物，外人看不太好吧！\n");
 
@@ -63,14 +63,14 @@ int do_read(string arg)
 
    sen_cost = 50 + (35-(int)me->query("int"));
    if( (int)me->query("sen")<sen_cost )
-     return notify_fail("你现在头晕脑胀，该休息休息了。\n");   
+     return notify_fail("你现在头晕脑胀，该休息休息了。\n");
    me->receive_damage("sen", sen_cost);
 
    gain = (int)me->query_skill("literate", 1)/5+(int)me->query("int")/4+1;
    me->improve_skill("literate", gain);
 
        message_vision("$N轻轻叹道：" + poem[random(sizeof(poem))] + "\n", me);
-     
+
    return 1;
 }
 
