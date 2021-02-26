@@ -9,7 +9,7 @@ void create()
 的关着。地上铺着层木板，木板下就是冰冻三尺的松花江。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "west" : __DIR__"yingou",
 ]));
         set("item_desc", ([
