@@ -22,4 +22,3 @@ void create()
         "drunk_apply" : 7,
     ]) );
 }
-
