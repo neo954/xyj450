@@ -185,4 +185,3 @@ int random_go(object victim, string* dirs)
 
         return 0;
 }
-
