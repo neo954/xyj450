@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //zhenhuo.c 【太乙真火】weiqi...980305
 
 #include <ansi.h>
@@ -36,7 +36,7 @@ int cast(object me, object target)
    me->add("force", -100);
    me->receive_damage("sen", 10);
 
-   if( random(me->query("max_mana")) < 50 ) 
+   if( random(me->query("max_mana")) < 50 )
    {
      write("这一次好象不灵。\n");
      return 1;
@@ -48,13 +48,13 @@ int cast(object me, object target)
    ap = ( ap * ap * ap / (4 * 400) ) * (int)me->query("sen");
    ap += (int)me->query("combat_exp");
    dp = target->query("combat_exp");
-   if( random(ap + dp) > dp ) 
+   if( random(ap + dp) > dp )
    {
      damage = (int)me->query("max_mana") / 10 + random((int)me->query("eff_sen") / 5);
      damage -= (int)target->query("max_mana") / 10 + random((int)me->query("eff_sen") / 5);
      damage +=(int)me->query("mana_factor")-random((int)target->query("mana_factor"));
      //here we can see if 2 players are at same status, the attacker has higher chance.
-     if( damage > 0 ) 
+     if( damage > 0 )
      {
         //finally damage also depends on enabled spells level.
         damage +=random((damage*(int)me->query_skill("spells"))/100);
@@ -65,9 +65,9 @@ int cast(object me, object target)
         target->receive_wound("kee", damage/4, me);
         me->improve_skill("moonshentong", 1, 1);
      }
-     else 
+     else
      {
-        //here, cast failed and the target's mana_factor will be added to the previous 
+        //here, cast failed and the target's mana_factor will be added to the previous
         //damage to hurt yourself:(...note, damage<0.
         msg += HIC "结果火焰被$n以法力一逼，反向$N回卷而去！\n" NOR;
         damage -= (int)target->query("mana_factor");
@@ -78,18 +78,18 @@ int cast(object me, object target)
         me->receive_wound("kee", -damage/4, target);
         me->improve_skill("taiyi", 1, 1);
      }
-   } 
+   }
    else
      msg += "但是被$n躲开了。\n";
 
    message_vision(msg, me, target);
    if( damage > 0 ) COMBAT_D->report_status(target);
    else if( damage < 0 ) COMBAT_D->report_status(me);
-   //damage=0 corresponding to "但是被$n躲开了。\n"--no report.   
+   //damage=0 corresponding to "但是被$n躲开了。\n"--no report.
 
-   if( !target->is_fighting(me) ) 
+   if( !target->is_fighting(me) )
    {
-     if( living(target) ) 
+     if( living(target) )
      {
         if( userp(target) ) target->fight_ob(me);
         else target->kill_ob(me);
