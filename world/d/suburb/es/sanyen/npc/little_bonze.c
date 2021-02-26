@@ -21,9 +21,9 @@ void create()
      set_skill("dodge",25);
      set_skill("buddhism",50);
      set_skill("lotusforce",30);
-     
+
      map_skill("force", "lotusforce");
-     
+
      setup();
 
      carry_object(__DIR__"obj/cloth")->wear();
