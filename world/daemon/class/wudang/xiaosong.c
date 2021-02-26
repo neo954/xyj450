@@ -5,7 +5,7 @@ inherit NPC;
 void create()
 {
 	set_name("宋青书", ({ "song qingshu", "song" }));
-	set("long", 
+	set("long",
 		"他就是宋远桥的儿子宋青书。\n"
 		"他今年二十岁，乃是武当第三代中出类拔萃的人物。\n");
 	set("gender", "男性");
