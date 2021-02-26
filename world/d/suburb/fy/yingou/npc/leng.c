@@ -70,4 +70,3 @@ message_vision("$N向$n挤出一丝勉强的笑容，道：
 	}
 	return 1;
 }
-
