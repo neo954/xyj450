@@ -65,4 +65,3 @@ string receive_mail()
         return
 "好，待我找找....有了，你的信箱在这，慢慢看吧，不打搅你了。\n";
 }
-
