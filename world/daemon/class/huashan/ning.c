@@ -6,7 +6,7 @@ inherit F_MASTER;
 void create()
 {
 	set_name("宁中则", ({ "ning zhongze", "ning", "zhongze", "shiniang" }));
-	set("long", 
+	set("long",
 "宁中则女士是掌门人岳不群的师妹兼妻子，虽然已步入\n"
 "中年，但风韵依旧。其武功只比岳不群略逊而已。\n");
 
