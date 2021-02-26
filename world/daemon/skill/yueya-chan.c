@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-//【月牙铲】yueya-chan.c 
+
+//【月牙铲】yueya-chan.c
 inherit SKILL;
 
 /*
@@ -42,7 +42,7 @@ mapping *action = ({
      "parry":   -5,
                 "damage":               30,
                 "damage_type":  "砸伤"
-        ]),   
+        ]),
         ([      "name":                 "",
                 "action":
 "$N怪叫一声，$w一气乱舞势若疯虎地朝$n冲了过去，手中$w看似不成章法，实则暗藏凶险",
@@ -50,7 +50,7 @@ mapping *action = ({
      "parry":   -15,
                 "damage":               35,
                 "damage_type":  "刺伤"
-        ]),   
+        ]),
         ([      "name":                 "",
                 "action":
 "$N一抖$w，使了个「月黑风高」，手中的$w就象追魂的恶鬼一样缠上了$n的$l",
@@ -58,7 +58,7 @@ mapping *action = ({
      "parry":   -5,
                 "damage":               15,
                 "damage_type":  "割伤"
-        ]),   
+        ]),
 });
 
 
@@ -71,7 +71,7 @@ int valid_learn(object me)
 notify_fail("你的内力不够，没有办法学月牙铲，等内力提高了再来吧。\n");
 
         if(  !(ob = me->query_temp("weapon"))
-        ||     ( (string)ob->query("skill_type") != "staff" 
+        ||     ( (string)ob->query("skill_type") != "staff"
    &&   (string)ob->query("skill_type") != "fork" ))
                 return
 notify_fail("你必须先找一条禅杖或钢叉之类的东西才能学月牙铲。\n");
