@@ -21,4 +21,3 @@ void create()
                 set("armor_prop/spells", 5);
              }
 }
-
