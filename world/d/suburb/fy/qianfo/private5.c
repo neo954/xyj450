@@ -1,6 +1,6 @@
 //mac's private.c
 #include <room.h>
-#define MAX_STAFF 50 
+#define MAX_STAFF 50
 
 inherit ROOM;
 
@@ -21,9 +21,9 @@ void init()
    add_action("do_leave","ring");
 }
 
-int do_leave() 
+int do_leave()
 {
-  object *inv,env,me,*inv_con,env_con,mbox; 
+  object *inv,env,me,*inv_con,env_con,mbox;
   string data,data_con;
   int i,staff_count,j,con_count,item_count;
 
@@ -35,7 +35,7 @@ int do_leave()
 
   if(sizeof(inv)) {
     if(sizeof(inv)>MAX_STAFF)
-       return notify_fail("你在房间里放了太多的东西，连门都打不开了。"); 
+       return notify_fail("你在房间里放了太多的东西，连门都打不开了。");
     for(i=0;i<sizeof(inv);i++){
      if(inv[i]->is_character());
      else{
@@ -46,16 +46,16 @@ int do_leave()
          inv_con=all_inventory(env_con);
          for(j=0;j<sizeof(inv_con);j++){
            if(inv_con[j]->is_character());
-           else{ 
+           else{
             data_con = base_name(inv_con[j])+".c";
             me->set("container"+sprintf("%d/%d",con_count,item_count),data_con);
             destruct(inv_con[j]);
             item_count=item_count+1;
-            }       
+            }
           }
           con_count=con_count+1;
        }
-      data=base_name(inv[i])+".c"; 
+      data=base_name(inv[i])+".c";
       me->set("homestaff/"+sprintf("%d",staff_count),data);
       destruct(inv[i]);
       staff_count=staff_count+1;
@@ -68,7 +68,7 @@ int do_leave()
         }
 
    tell_object(me,"你摁铃招来领班\n
-   “出门哪您？”领班毕恭毕敬的接过你手中的钥匙，恭送你出了大门。\n");  
+   “出门哪您？”领班毕恭毕敬的接过你手中的钥匙，恭送你出了大门。\n");
    me->save();
    me->move("/open/mac/qianfo/shungeng.c");
    return 1;
