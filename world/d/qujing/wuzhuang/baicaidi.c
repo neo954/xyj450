@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //baicaidi.c
 
 inherit ROOM;
@@ -14,13 +14,13 @@ void create ()
 来种蔬菜瓜果。这里是白菜地。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "south" : __DIR__"qiezidi",
      "northwest" : __DIR__"xiguadi",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      "/d/obj/food/dbc" : 2,
      "/d/obj/food/xbc" : 2,
