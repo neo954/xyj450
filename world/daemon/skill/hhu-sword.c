@@ -122,6 +122,6 @@ int practice_skill(object me)
 //{
       //  return CLASS_D("swordsman") + "/hhu/" + func;
 //}
- 
+
 
 
