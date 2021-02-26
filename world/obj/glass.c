@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // glass.c
 
 inherit EQUIP;
@@ -43,7 +43,7 @@ int do_detect(string arg)
      sk = 0;
 
    printf("探测器显示%s的战斗力是：%d\n",
-     ob->query("name"), 
+     ob->query("name"),
      (sk*sk*sk) * (100 + sen) / 100 + (int)ob->query("combat_exp") );
 
    return 1;
