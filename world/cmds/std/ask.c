@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // ask.c
 
 #include <ansi.h>
@@ -36,7 +36,7 @@ int main(object me, string arg)
    }
 
    if( !ob->query("can_speak") ) {
-     message_vision("$N向$n打听有关『" + topic 
+     message_vision("$N向$n打听有关『" + topic
         + "』的消息，但是$p显然听不懂人话。\n", me, ob);
      return 1;
    }
