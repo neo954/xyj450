@@ -108,5 +108,3 @@ mapping quests_wearing = ([
  2200000 : ({ "find", "踏云靴",          "cloudy shoes",       "", "1" }),
 
 ]);
-
-
