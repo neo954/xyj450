@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit ITEM;
 void create()
