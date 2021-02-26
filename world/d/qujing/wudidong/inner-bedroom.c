@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // inner-bedroom.c
 // created by mes
 // updated 6/97 by pickle
