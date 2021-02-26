@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // head.c 赵老大
 
 inherit NPC;
@@ -9,7 +9,7 @@ void create()
 {
        set_name("夏鹏展", ({"xia pengzhan", "xia"}));
        set("title", "清风寨强盗头领");
-       
+
 set("long","夏鹏展原是长安城中一名捕头，因贼性难改，落草作了强盗．
 使一路雁歌刀法，手中雁云刀阴狠无比．\n");
        set("gender", "男性");
