@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /*
  * Intermud services daemon
  * Original author: Huthar@Portals
@@ -10,7 +10,7 @@
 
  * 93-07-30 Grendel@tmi-2 Removed defines, replaced with inetd.h
  */
- 
+
 #include "config.h"
 #include <net/daemons.h>
 #include <net/socket.h>
@@ -43,13 +43,13 @@ mapping sockets, service;
  //  "owner": object that owns the socket
  //  "wcb_pending": a write callback is pending on this socket
  //  "closing": no further operations should be permitted on this socket
- //  "read_callback": name of the owner's read callback function 
+ //  "read_callback": name of the owner's read callback function
  //  "close_callback": name of the owner's close callback function
  //  "service_callback": name of the owner's "service callback" function
  //  "fd": socket's file descriptor
  //  "service_desired": service that we want from the remote mapping service;
  // indexed on service name, contains string filename of server object
- 
+
 void
 possible_close(int id)
 {
@@ -64,7 +64,7 @@ possible_close(int id)
       }
    }
 }
- 
+
 string
 read_socket(int id)
 {
@@ -74,7 +74,7 @@ read_socket(int id)
       && (previous_object() != sockets[id]["owner"])))
    {
       log("read_socket: security violation on socket id " + id + "\n");
-      return 0;                                                  
+      return 0;
    }
    if (strlen(sockets[id]["incoming"]) > 0) {
       string rcv;
@@ -124,14 +124,14 @@ write_socket(int id, string msg)
    }
    return 1;
 }
- 
+
 void
 load_services()
 {
    string file, *lines, svc;
    string path;
    int i;
- 
+
    service = ([]);
    file = read_file(INETD_SERVICES);
    if (!file) {
@@ -150,7 +150,7 @@ load_services()
       service[svc] = path;
    }
 }
- 
+
 void
 create_listen_socket()
 {
@@ -158,7 +158,7 @@ create_listen_socket()
 
    listen_fd = socket_create(STREAM, "read_callback", "close_callback");
    if (listen_fd < 0) {
-      log("create_listen_socket: socket_create: " + 
+      log("create_listen_socket: socket_create: " +
          socket_error(listen_fd) + "\n");
       return;
    }
@@ -166,19 +166,19 @@ create_listen_socket()
       (int)DNS_MASTER->get_mudresource(mud_nname(), "inetd"));
    if (error != EESUCCESS) {
       socket_close(listen_fd);
-      log("create_listen_socket: socket_bind: " + 
+      log("create_listen_socket: socket_bind: " +
          socket_error(listen_fd) + "\n");
       return;
    }
    error = socket_listen(listen_fd, "read_callback");
    if (error != EESUCCESS) {
       socket_close(listen_fd);
-      log("create_listen_socket: socket_listen: " + 
-         socket_error(listen_fd) + "\n");   
+      log("create_listen_socket: socket_listen: " +
+         socket_error(listen_fd) + "\n");
       return;
    }
 }
- 
+
 void
 close_socket(int id)
 {
@@ -186,12 +186,12 @@ close_socket(int id)
       && (previous_object() != sockets[id]["owner"])))
    {
       log("close_socket: security violation on socket id " + id + "\n");
-      return 0;                                                  
+      return 0;
    }
    sockets[id]["closing"] = 1;
    possible_close(id);
 }
- 
+
 void
 close_callback(int fd)
 {
@@ -203,7 +203,7 @@ close_callback(int fd)
    call_other(sockets[fd]["owner"], sockets[fd]["close_callback"], fd);
    map_delete(sockets, fd); // nuke this puppy
 }
- 
+
 void
 write_callback(int id)
 {
@@ -217,7 +217,7 @@ write_callback(int id)
       possible_close(id);
    }
 }
- 
+
 void read_callback(int fd, string msg)
 {
    string tmp1, tmp2;
@@ -252,7 +252,7 @@ void read_callback(int fd, string msg)
       sockets[fd]["incoming"] = tmp2;
    }
 }
- 
+
 int
 create_socket(string dest)
 {
@@ -268,7 +268,7 @@ create_socket(string dest)
       socket_close(fd);
       log("create_socket: socket_connect: " + socket_error(error) + "\n");
       return -1;
-   }  
+   }
    sockets[fd] = allocate_mapping(8);
    sockets[fd]["fd"] = fd;
    sockets[fd]["incoming"] = "";
@@ -279,7 +279,7 @@ create_socket(string dest)
    sockets[fd]["service_callback"] = "service_callback";
    return fd;
 }
- 
+
 int
 open_service(string mud, string svc, string *parms)
 {
@@ -295,17 +295,17 @@ open_service(string mud, string svc, string *parms)
       return id;
    }
    sockets[id]["service_status"] = AWAITING_CONNECT_ACK;
-   sockets[id]["service_desired"] = 
+   sockets[id]["service_desired"] =
       svc + (parms ? (" " + implode(parms, " ")) : "");
    return id;
 }
- 
+
 void process_incoming(int fd)
 {
    object ob;
    int error, l;
    string msg, svc, *parms;
- 
+
    msg = this_object()->read_socket(fd);
    switch (sockets[fd]["service_status"]) {
       case AWAITING_CONNECT_ACK:
@@ -316,7 +316,7 @@ void process_incoming(int fd)
             call_other(sockets[fd]["owner"],
                sockets[fd]["service_callback"], fd);
             return;
-         } 
+         }
       break;
       case AWAITING_DATA:
          call_other(sockets[fd]["owner"],
@@ -351,24 +351,24 @@ create()
 
 /*
   client:
-     To initiate, use 
+     To initiate, use
      INETD->open_service(string mudname, string servicename, string *parms)
-     The id of the socket assigned to your service request will be returned, 
+     The id of the socket assigned to your service request will be returned,
      or -1 for failure.  the calling object is used as the owner.
      The function service_callback(id) will be called in the owner when
      the service is open and ready for data transfer.
- 
-  server:           
-    service_request(int id, string *parms) will be called in the server 
-     object of the appropriate service whenever a request for that 
+
+  server:
+    service_request(int id, string *parms) will be called in the server
+     object of the appropriate service whenever a request for that
      service is made.  The server object is set as owner.
-    
+
   both:
     INETD->write_socket(int id, string msg) sends text out the socket
-    the function read_callback(int id, string msg) will be called in the 
+    the function read_callback(int id, string msg) will be called in the
     owner when data is received.
     The function close_callback(id) will be called in the owner if the socket
-    closes from the other end, INETD->close_socket(int id) can be used to 
+    closes from the other end, INETD->close_socket(int id) can be used to
     close it from our end
 */
 
