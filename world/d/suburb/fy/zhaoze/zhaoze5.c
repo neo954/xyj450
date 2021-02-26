@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 
 #include <ansi.h>
@@ -16,7 +16,7 @@ void create()
 陷下去的危险。
 LONG
 	);
-	set("exits", ([ 
+	set("exits", ([
   "east" : __DIR__"zhaoze4",
 ]));
 
