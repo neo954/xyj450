@@ -10,7 +10,7 @@ void create()
 	set("gender", "男性");
 	set("nickname", "雪山飞狐");
 	set("age", 25);
-	set("long", 
+	set("long",
 		"他就是胡一刀之子，因其武功高强神出鬼没。\n"
 		"在江湖上人送外号「雪山飞狐」。\n"
 		"他身穿一件白色长衫，腰间别着一把看起来很旧的刀。\n"
@@ -36,7 +36,7 @@ void create()
 	set("jiali", 100);
 	set("combat_exp", 190000);
 	set("score", 20000);
-	 
+	
 	set_skill("force", 110);             // 基本内功
 	set_skill("hujia-daofa", 150);    // 胡家刀法	
 	set_skill("blade", 120);           // 基本刀法
@@ -56,7 +56,7 @@ void create()
     setup();
 	carry_object(__DIR__"obj/cwbdao")->wield();
     carry_object("/d/suburb/fy/city/obj/cloth")->wear();
- 
+
 }
 
 string ask_me()
@@ -90,13 +90,13 @@ string ask_me()
 
 void do_kill(object ob)
 {
-	object me, room1;       
+	object me, room1;
     me = this_object();
     room1 = environment(me);
- 
+
     if (room1->query("no_fight"))
 	    room1->set("no_fight", 0);
- 
+
     if (interactive(ob))
     {
         command("say 你这恶贼竟敢打我宝刀的主意, 给我纳命来！\n");
@@ -104,6 +104,6 @@ void do_kill(object ob)
         remove_call_out("kill_ob");
         call_out("kill_ob", 1, ob);
     }
- 
+
 }	
 
