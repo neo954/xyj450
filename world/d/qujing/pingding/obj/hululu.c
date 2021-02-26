@@ -1,14 +1,14 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 12/17/1997
 
 #include <ansi.h>
 #include <weapon.h>
- 
+
 inherit F_UNIQUE;
 inherit ITEM;
- 
+
 void create()
 {
   set_name("紫金红葫芦",({"hu lu", "hu", "lu", "fabao"}));
@@ -31,7 +31,7 @@ void create()
   set("replace_file", "/d/qujing/pingding/obj/hulufake.c");
   set("is_monitored",1);
   setup();
-} 
+}
 
 void init ()
 {
@@ -191,13 +191,13 @@ void reviving (object who)
     call_out("wake", 1, who);
     who->set("gin",who->query_temp("fabao/gin")*25/100);
     who->set("kee",who->query_temp("fabao/kee")*25/100);
-    who->set("sen",who->query_temp("fabao/sen")*25/100); 
+    who->set("sen",who->query_temp("fabao/sen")*25/100);
     who->set("eff_gin",who->query_temp("fabao/eff_gin"));
     who->set("eff_kee",who->query_temp("fabao/eff_kee"));
     who->set("eff_sen",who->query_temp("fabao/eff_sen"));
     who->start_busy(3);
     return;
-    
+
   }
   call_out("reviving", 1, who);
 }
