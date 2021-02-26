@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/wiz/punish.c
 
 inherit ROOM;
@@ -13,19 +13,19 @@ void create()
 进了这里，你活下来的希望已经很小了。
 LONG
    );
-   
+
    set("valid_startroom", 1);
 
    setup();
-   
+
 }
 
 void init()
-{   
+{
    if (!wizardp(this_player())) {
           this_player()->set("startroom","/d/wiz/punish");
      this_player()->save();
-     add_action("block_cmd","",1);      
+     add_action("block_cmd","",1);
    }
    call_out("hehe", 2, this_player());
 }
@@ -33,7 +33,7 @@ void init()
 int block_cmd()
 {
         string verb = query_verb();
-   
+
         if (verb=="say") return 0; //allow say
    if (verb=="help") return 0;
    if (verb=="look") return 0;
