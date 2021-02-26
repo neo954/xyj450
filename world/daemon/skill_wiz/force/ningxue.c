@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // ningxue.c  【冰谷凝血功】
 inherit FORCE;
 
