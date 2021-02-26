@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // vendor.c
 
 #include <dbase.h>
@@ -21,7 +21,7 @@ int last_profit;
 
 int take_money(int paid, int price);
 void set_new_owner(string id, string name, string long);
-void set_default_owner(); 
+void set_default_owner();
 int query_price() {return price_ratio;}
 int pay_back(string id, int amount);
 void new_owner();
@@ -55,10 +55,10 @@ int complete_trade(object me, string what)
      ob = new(ob_file);
      if(!ob->move(me)) return 0;
      price=ob->query("value");
-     
+
      if(sale_price>5)
          sale_price=5;
-     ob->set_temp("sale_price", 
+     ob->set_temp("sale_price",
         price*sale_price/10);
 
      if(!take_money(price*price_ratio/10, price)) {
@@ -67,7 +67,7 @@ int complete_trade(object me, string what)
      }
      save();
 
-     message_vision("$N向$n买下一" + 
+     message_vision("$N向$n买下一" +
         ob->query("unit") + ob->query("name") + "。\n",
         me, this_object() );
 
@@ -94,7 +94,7 @@ int take_money(int paid, int price)
          }
          deposit+=earn;
      }
-     
+
      return 1;
 }
 
@@ -102,14 +102,14 @@ string price_string(int v)
 {
     string str="";
     int val;
-    
+
     val=v/10000;
     if(val) str+=chinese_number(val) + "两黄金";
     val=(v%10000)/100;
     if(val) str+=chinese_number(val) + "两银子";
     val=(v%100);
     if(val) str+=chinese_number(val)  + "文钱";
-    
+
     if(str=="") str="零文钱";
 
      return str;
@@ -133,17 +133,17 @@ int do_vendor_list(string arg)
           *price_ratio/10 ));
         }
    write(list);
-   return 1;   
+   return 1;
 }
 
 void init()
 {
     ::init();
-    
+
     if(close_time<time()+60) new_owner();
 
     if(!userp(this_player())) return;
-    
+
     add_action("do_bid","bid");
     add_action("do_deposit","deposit");
     add_action("do_setprice", "set_price");
@@ -158,18 +158,18 @@ int do_bid(string arg)
     object who1;
     string roomname;
     object env;
-    
+
     notify_fail("Usage: bid <amount> <gold|silver>\n");
 
     if(!arg) return 0;
     if(sscanf(arg,"%d %s", amount, money)!=2) return 0;
-    
+
     if(money=="gold") amount*=10000;
     else if(money=="silver") amount*=100;
     else return 0;
 
     if(amount<1) return 0;
-    
+
     if(!bid) minimum=minimum_bid;
     else {
    minimum=bid;
@@ -178,14 +178,14 @@ int do_bid(string arg)
    else
        minimum+=1000;
     }
-    
+
     minimum=(minimum/100)*100; // round to silver
     if(amount<minimum) return notify_fail(
        "你至少需要出"+price_string(minimum)+"。\n");
 
     if(who->query("balance")<amount) return notify_fail(
        "你户头里没有这么多钱。\n");
-    
+
     env=environment(this_object());
     if(base_name(env)!=this_object()->query("startroom"))
    roomname=this_object()->query("name");
@@ -207,7 +207,7 @@ int do_bid(string arg)
                                               // when there are new bidding.
     who->add("balance",-amount);
     who->save();
-    
+
     bidder=who->query("id");
     bidder_name=who->query("name");
     bidder_long=who->long();
@@ -216,14 +216,14 @@ int do_bid(string arg)
     save();
     message_vision("$N出价"+price_string(amount)+"收购"+
        roomname+"！\n",who);
-    
+
     return 1;
 }
-    
+
 int pay_back(string id, int amount)
 {
     object who;
-    
+
     who=find_player(id);
     if(who) {
    who->add("balance",amount);
@@ -249,7 +249,7 @@ int pay_back(string id, int amount)
         " coin to "+id+"\n");
      destruct(who);
      return 0;
-       } 
+       }
        log_file("shop_log","pay "+amount+" to "+id+"\n");
        destruct(who);
        return 1;
@@ -262,30 +262,30 @@ int do_deposit(string arg)
     object who=this_player();
     string money;
     int amount;
-    
+
     if(getuid(who)!=owner_id) return
    notify_fail("只有店主能用这个命令。\n");
-    
+
     notify_fail("Usage: deposit <amount> <gold|silver>\n");
 
     if(!arg) return 0;
     if(sscanf(arg,"%d %s", amount, money)!=2) return 0;
-    
+
     if(money=="gold") amount*=10000;
     else if(money=="silver") amount*=100;
     else return 0;
 
     if(amount<10000) return notify_fail("一次至少要一两金子。\n");
-    
+
     if(who->query("balance")<amount) return
        notify_fail("你户头里没有这么多钱。\n");
 
     who->add("balance",-amount);
     who->save();
-    
+
     deposit+=amount;
     save();
-    
+
     write("现在共有"+price_string(deposit)+"预付金。\n");
 
     return 1;
@@ -296,7 +296,7 @@ int do_setprice(string arg)
     object who=this_player();
     int ratio;
     string str;
-    
+
     if(getuid(who)!=owner_id) return
    notify_fail("只有店主能用这个命令。\n");
 
@@ -306,13 +306,13 @@ int do_setprice(string arg)
     if(!arg) return 0;
     if(sscanf(arg,"%d",ratio)!=1) return 0;
     if(ratio<1 || ratio>100) return 0;
-    
+
     if(ratio<5 && deposit<1) return
    notify_fail("你的定价少于成本，必须先付定金(deposit)。\n");
-    
+
     price_ratio=ratio;
     save();
-    
+
     if(ratio<10)
    message_vision("$N决定所有物品"+chinese_number(ratio)+
      "折出售。\n", who);
@@ -325,7 +325,7 @@ int do_setprice(string arg)
    message_vision("$N决定所有物品按原价的"+
      str+"倍出售。\n", who);
     }
-    
+
     return 1;
 }
 
@@ -334,12 +334,12 @@ int do_status(string arg)
     object who=this_player();
     int hour, next;
     string str;
-    
+
     if(!close_time) {
    close_time=time()+86400;
    save();
     }
-    
+
     next=close_time-time();
     if(next<60)
    new_owner();
@@ -368,7 +368,7 @@ int do_status(string arg)
    write("剩余预付金："+price_string(deposit)+"\n");
    write("价格指数　："+price_ratio+"\n");
     }
-    
+
     return 1;
 }
 
@@ -381,7 +381,7 @@ void new_owner()
     string msg;
 
     close_time=time()+86400;
-    
+
     if(owner_id) {
    prof=profit+deposit;
    if(prof>0)
@@ -409,7 +409,7 @@ void new_owner()
    mbx->send_mail(owner_id,mail,1);
    destruct(mbx);
     }
-    
+
     if(bidder) {
    owner_id=bidder;
    owner_name=bidder_name;
@@ -429,7 +429,7 @@ void new_owner()
     bidder_name=0;
     bid=0;
     price_ratio=10;
-    
+
     save();
 
 }
@@ -443,7 +443,7 @@ void set_new_owner(string id, string name, string long)
     string *newid;
 
     set_temp("apply/name",({name}));
-    
+
     if(pointerp(newid=query("shop_id"))) {
    newid=({newid[0]+" "+id})+newid;
     } else {
@@ -459,7 +459,7 @@ void set_new_owner(string id, string name, string long)
    short+=" ";
     } else
         short=query("name")+" ";
-    
+
     short+=name+"("+capitalize(newid[0])+")";
     set_temp("apply/short",({short}));
     message_vision("\n新店主"+name+"走马上任！\n\n",
@@ -477,7 +477,7 @@ void set_default_owner()
 void reload(string filename)
 {
     ::reload(filename);
-    
+
     if(owner_id)
    set_new_owner(owner_id, owner_name, owner_long);
 }
