@@ -151,4 +151,3 @@ int do_zhu(string arg)
 	this_object()->die();
 	return 1;
 }
-
