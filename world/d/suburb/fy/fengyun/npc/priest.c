@@ -15,7 +15,7 @@ void create()
 }
 
 void init()
-{       
+{
         object ob;
 
         ::init();
@@ -40,7 +40,7 @@ int accept_object(object who, object ob)
         if( val > 100 ) {
                 if( ((int)who->query("bellicosity") > 0)
                 &&      (random(val/10) > (int)who->query("kar")) )
-                        who->add("bellicosity", - 
+                        who->add("bellicosity", -
 (random((int)who->query("kar")) + val/1000) );
         }
         say( "教父说道：多谢这位" + RANK_D->query_respect(who)
@@ -48,4 +48,4 @@ int accept_object(object who, object ob)
 
         return 1;
 }
- 
+
