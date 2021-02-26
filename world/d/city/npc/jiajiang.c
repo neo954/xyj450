@@ -52,4 +52,3 @@ void greeting(object ob)
                         break;
         }
 }
-
