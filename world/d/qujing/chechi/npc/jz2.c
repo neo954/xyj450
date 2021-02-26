@@ -261,4 +261,3 @@ int do_guess (string arg)
     success_guess(me,who,where,guizi,arg,luli);
   return 1;
 }
-
