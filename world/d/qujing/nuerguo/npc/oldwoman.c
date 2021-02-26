@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/4/1997 by snowcat
 
 
@@ -30,7 +30,7 @@ void create()
       ]));
   setup();
   carry_object("/d/qujing/nuerguo/obj/skirt")->wear();
-  add_money ("silver", 2);  
+  add_money ("silver", 2);
 }
 
 void init()
