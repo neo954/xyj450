@@ -57,4 +57,3 @@ int perform(object me, object target)
         me->start_busy(2);
         return 1;
 }
-
