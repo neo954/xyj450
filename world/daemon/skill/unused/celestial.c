@@ -24,4 +24,3 @@ string exert_function_file(string func)
 {
    return CLASS_D("fighter") + "/celestial/" + func;
 }
-
