@@ -225,4 +225,3 @@ int do_skate(string arg)
    message_vision("$N吹了声口哨，稳稳地停了下来！\n", me);
    return 1;
 }
-
