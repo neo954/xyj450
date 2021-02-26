@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhangguolao.c...weiqi, 98.02.24.
 
 inherit NPC;
@@ -23,7 +23,7 @@ void create()
    set_skill("parry", 80);
    set_skill("hammer", 90);
    set_skill("kaishan-chui", 100);
-   set_skill("force", 70);   
+   set_skill("force", 70);
    set_skill("zhenyuan-force", 70);
    set_skill("literate", 50);
    set_skill("spells", 80);
@@ -39,7 +39,7 @@ void create()
    set("force", 1000);
    set("max_force", 800);
    set("mana", 1600);
-   set("max_mana", 800);   
+   set("max_mana", 800);
    set("force_factor", 40);
    set("mana_factor", 40);
 
@@ -52,7 +52,7 @@ void create()
 }
 
 void init()
-{       
+{
    object ob=this_player();
    object me=this_object();
 
@@ -65,7 +65,7 @@ void init()
     ]) );
 
    set("chat_msg", ({
-     "张果老嘻嘻嘻地笑了几声。\n",   
+     "张果老嘻嘻嘻地笑了几声。\n",
      "张果老拿起酒葫芦又灌了一口，满意地咂了咂嘴。\n",
      "张果老打了个响指：哈哈，我的小毛驴就是听话。\n",
      (: random_move :)
@@ -86,7 +86,7 @@ void qi_maolu()
            maolu = new(__DIR__"xiaomaolu.c");
            maolu->move( environment(this_object()) );
    command("mount maolu");
-   return;   
+   return;
 }
 
 void attempt_apprentice(object ob)
@@ -103,7 +103,7 @@ void attempt_apprentice(object ob)
         if ( (string)ob->query("gender") == "男性" ) command("say 师兄太客气了。\n");
         else command("say 师妹太客气了。\n");
      }
-     else 
+     else
      {
         command("consider");
         command("say 是你自己要拜的，你师父打上门来我可得拿你挡。\n");
