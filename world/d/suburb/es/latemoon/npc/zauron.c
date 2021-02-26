@@ -63,4 +63,3 @@ RANK_D->query_respect(ob)
                    + "，你好！欢迎来到晚月庄。\n");
         }
 }
-
