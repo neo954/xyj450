@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
- 
+
+
 inherit NPC;
- 
+
 void create()
 {
- 
+
         set_name("药叉将", ({ "yaocha jiang", "jiang", "yaocha" }) );
         set("gender", "男性" );
         set("long","托塔李天王帐下大将，膀阔腰圆，力大无穷。\n");
@@ -33,10 +33,10 @@ void create()
    set_skill("hammer", 159);
    set_skill("force", 159);
    set_skill("spells", 159);
- 
+
         setup();
         carry_object("/d/obj/armor/tongjia")->wear();
    carry_object("/d/obj/weapon/hammer/tongchui")->wield();
 }
- 
+
 
