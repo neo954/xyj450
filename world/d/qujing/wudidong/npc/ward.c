@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // ward.c
 
 inherit NPC;
@@ -24,7 +24,7 @@ void create()
   map_skill("dodge", "lingfu-steps");
   map_skill("parry", "qixiu-jian");
   set("max_kee", 550);
-  
+
   setup();
   add_money("silver", 20);
   carry_object("/d/obj/weapon/sword/tiejian")->wield();
