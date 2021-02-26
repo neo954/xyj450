@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/5/1997 by snowcat
 #define NAME "小公主"
 inherit NPC;
@@ -86,7 +86,7 @@ void throw (object who, string where)
 
 /*
   dir = __DIR__;
-  dir[strlen(dir)-4] = 0;  
+  dir[strlen(dir)-4] = 0;
 */
   dir = "/d/qujing/nuerguo/";
   who->move(dir+where+".c");
@@ -142,7 +142,7 @@ void invite_player (object who)
 
 /*
   dir = __DIR__;
-  dir[strlen(dir)-4] = 0;  
+  dir[strlen(dir)-4] = 0;
 */
   dir = "/d/qujing/nuerguo/";
   message_vision("门外的几个大胖女人走进来，十分老练地簇拥起$N就走！\n",who);
@@ -190,7 +190,7 @@ int test_player(object who)
   {
     reject_player (msg+"看上去就没有什么道行，来这凑什么热闹！\n",who);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/nuerguo") == "done")
   {
@@ -198,20 +198,20 @@ int test_player(object who)
     queen->refuse_player (who);
     destruct (queen);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/nuerguo") == "stomachache")
   {
     reject_player (msg+"怀了一水胎，居然挺着大肚子来见我！\n",who);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/nuerguo") == "marriage")
   {
     say(msg+"不是已经来求过婚了吗？还是回后院去吧！\n");
     call_out ("invite_player",1,who);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/nuerguo") == "company")
   {
@@ -219,7 +219,7 @@ int test_player(object who)
     call_out ("invite_player",1,who);
     return 1;
   }
-    
+
   call_out ("ask_player",1,who);
   return 1;
 }
@@ -237,7 +237,7 @@ int test_player_male (object me)
     return 1;
   }
   return test_player(who);
-} 
+}
 
 int test_player_female (object me)
 {
@@ -252,7 +252,7 @@ int test_player_female (object me)
     return 1;
   }
   return test_player(who);
-} 
+}
 
 void send_to_greenyard (object who)
 {
@@ -266,14 +266,14 @@ void send_to_greenyard (object who)
     who->set("obstacle/nuerguo", "company");
   who->save();
   call_out ("invite_player",1,who);
-} 
+}
 
 void fight_player (object who)
 {
   message_vision (NAME+"对$N迷人地一笑：好吧，让我俩比试比试，进招罢！\n",who);
   message_vision (NAME+"从宝座上起身，一个轻跃飘到$N面前。\n",who);
   who->set_temp ("princess_fight", 1);
-} 
+}
 
 int do_answer(string arg)
 {
@@ -322,7 +322,7 @@ void player_win (object me, object who)
   queen->announce_success (who,"比武战胜小公主");
   destruct (queen);
   say (NAME+"叹了一口气：公主我天性好胜好强，自幼难容比我厉害的人。\n");
-  say (msg+"如此武艺高强，公主无法挽留，还是请"+msg+"自行上路西天，多多保重！\n"); 
+  say (msg+"如此武艺高强，公主无法挽留，还是请"+msg+"自行上路西天，多多保重！\n");
 
 }
 
@@ -343,7 +343,7 @@ void player_lose_info (object who)
 
   if (random(5) == 0)
     say ("旁边有小宫女偷偷说道：作孽哟，唉，"+msg+
-         "何不找个人向小公主求求情！\n"); 
+         "何不找个人向小公主求求情！\n");
 }
 
 void check_fight (object me, object who)
@@ -383,7 +383,7 @@ int do_fight(string arg)
     message_vision (NAME+"对$N摇摇头：一个一个地来，不要一拥而上！\n",who);
     return 1;
   }
-  
+
   if (who->query_temp("princess_fight"))
   {
     me->set("kee", me->query("max_kee"));
