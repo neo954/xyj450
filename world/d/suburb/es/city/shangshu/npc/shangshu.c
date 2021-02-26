@@ -50,12 +50,12 @@ void create()
         carry_object(__DIR__"obj/blade")->wield();
 }
 void attempt_apprentice(object ob)
- {          
+ {
 	command("smile");
-	command("say 很好,朝庭正是用人之季！�" + RANK_D->query_respect(ob) + 
+	command("say 很好,朝庭正是用人之季！�" + RANK_D->query_respect(ob) +
         "多加努力�他日必定有成。\n");
 	command("recruit " + ob->query("id") );}
- 
+
 void recruit_apprentice(object ob)
          {
         	if( ::recruit_apprentice(ob) )
