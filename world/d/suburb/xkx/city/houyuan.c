@@ -51,7 +51,7 @@ int do_unlock(string arg)
 
 int valid_leave(object me, string dir)
 {
-	if (!wizardp(me) && objectp(present("cui yuanwai", environment(me))) && 
+	if (!wizardp(me) && objectp(present("cui yuanwai", environment(me))) &&
 		dir == "west")
 		return notify_fail("崔员外挡住了你。\n");
 	return ::valid_leave(me, dir);
