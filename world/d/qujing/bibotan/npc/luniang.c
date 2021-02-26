@@ -75,4 +75,3 @@ void greeting(object ob)
 
    return;
 }
-
