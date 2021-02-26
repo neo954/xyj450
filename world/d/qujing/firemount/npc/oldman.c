@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4/12/1997
 
 inherit NPC;
@@ -10,7 +10,7 @@ void create()
   set_name("老者", ({"oldman","man"}));
   set("gender", "男性");
   set("age", 60);
-  set("long","这是一位常住此地的老人。白眉白须，铜面碧眼，极为和蔼。\n"); 
+  set("long","这是一位常住此地的老人。白眉白须，铜面碧眼，极为和蔼。\n");
   set("attitude", "friendly");
   set("combat_exp", 5000);
   set("per", 25);
