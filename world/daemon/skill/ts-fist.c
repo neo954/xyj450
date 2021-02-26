@@ -95,4 +95,3 @@ mixed hit_ob(object me, object victim, int damage_bonus)
 		}
 	}
 }
-
