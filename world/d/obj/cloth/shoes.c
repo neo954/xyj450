@@ -26,4 +26,3 @@ void create()
    setup();
 }
 //int query_autoload() { return 1; }
-
