@@ -41,4 +41,3 @@ varargs void message_vision(string msg, object me, object you)
       tell_object (ob,str3);
   }
 }
-
