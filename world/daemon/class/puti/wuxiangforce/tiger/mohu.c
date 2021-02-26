@@ -40,4 +40,3 @@ int exert(object me, object target)
         message_vision(msg, me, target);
         return 1;
 }
-
