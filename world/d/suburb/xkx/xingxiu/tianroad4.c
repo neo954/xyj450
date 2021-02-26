@@ -47,11 +47,11 @@ int do_jump(string arg)
 
         if( !arg || arg=="" ) return 0;
         if( arg=="valley" ) {
-               message("vision", me->name() + 
+               message("vision", me->name() +
                           "一提气，双足点地跳过了深涧。\n",
                environment(me), ({me}) );
                me->move("/d/suburb/xkx/xingxiu/tianroad3");
-               message("vision", me->name() + 
+               message("vision", me->name() +
                           "从深涧上面跳了下来。\n",
                environment(me), ({me}) );
                return 1;
