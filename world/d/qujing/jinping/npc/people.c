@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat  11/22/1997
 
 inherit NPC;
@@ -75,7 +75,7 @@ void initing ()
 {
   switch (random(2))
   {
-    case 0: 
+    case 0:
     {
       command ("wear deng long");
       break;
@@ -85,5 +85,5 @@ void initing ()
       command ("remove deng long");
       break;
     }
-  }    
+  }
 }
