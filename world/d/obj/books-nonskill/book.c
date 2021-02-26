@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // book.c: a file that all non-skill books will inherit
 // created 9-26-97 pickle
 
@@ -12,7 +12,7 @@ int read_book(object me,string name)
 {
         object obj,ob;
         int fuyuan,chance,fuyuanchance;
-   obj=this_object(); 
+   obj=this_object();
      fuyuan = (int)me->query_kar();
      chance = random(1000);
      fuyuanchance = (fuyuan * fuyuan);
@@ -24,7 +24,7 @@ int read_book(object me,string name)
       //    at getting something. and the chance of getting a guo is, for the
       //    player with the best fuyuan, about 1 per refresh.
 
-  if (toberead[name] == 3) 
+  if (toberead[name] == 3)
     {
       message_vision("只见" + obj->query("name") + "化成片片碎屑，从$N的手中飘落。\n", me);
       call_out("destroy", 1, obj);
