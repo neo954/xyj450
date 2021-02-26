@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //wuchang-nw.c
 
@@ -20,7 +20,7 @@ LONG);
    //set("item_desc", ([" *** " : " *** \n", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "south" : __DIR__"wuchang-w",
      //"north" : __DIR__"icegate",
@@ -29,8 +29,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      "/d/obj/misc/ice" : 2,
      //__DIR__"npc/yingwu-guai" : 1,
@@ -49,6 +49,6 @@ LONG);
 
 //int do_jump(string arg)
 //{
-       
+
 //}
 
