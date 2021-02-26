@@ -10,7 +10,7 @@ void create()
 	set("nickname", GRN"大理王子"NOR);
 	set("gender", "男性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他是一个身穿青衫的年轻男子。脸孔略尖，自有一股书生的呆气。\n");
 	set("attitude", "peaceful");
 	
@@ -43,7 +43,7 @@ void create()
 	
 	set("combat_exp", 500000);
 	set("score", 20000);
-	 
+	
 	set_skill("force", 100);		// 基本内功
 	set_skill("beiming-shengong", 100);	// 北冥神功
 	set_skill("finger", 120);		// 基本指法
