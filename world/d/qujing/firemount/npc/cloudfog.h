@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/5/1997 by snowcat
 
 void invite_player (object who)
@@ -35,28 +35,28 @@ int test_player (object me)
     inform_player (msg+"快请进！\n",who);
     call_out("invite_player",1,who);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/firemount") == "done")
   {
     inform_player (msg+"失礼了！\n",who);
     call_out("invite_player",1,who);
     return 1;
-  }  
+  }
 
   if (present("palm bone",who))
   {
     inform_player (msg+"送宝来啦，请！\n",who);
     call_out("invite_player",1,who);
     return 1;
-  }  
+  }
 
   if (who->query_temp("won_cloud_fog"))
   {
     inform_player (msg+"功夫过人，请！\n",who);
     call_out("invite_player",1,who);
     return 1;
-  }  
+  }
 
   inform_player (msg+"非本门派弟子，又未必是武林高手，不能求见公主。\n",who);
   return 1;
