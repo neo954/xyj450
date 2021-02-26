@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by mes, updated 6-17-97 pickle
 
 inherit ROOM;
@@ -39,4 +39,4 @@ int clean_up()
 }
 
 
-   
+
