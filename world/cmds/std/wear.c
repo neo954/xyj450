@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // wear.c
 
 #include <ansi.h>
@@ -80,9 +80,9 @@ int help(object me)
 {
    write(@HELP
 指令格式：wear|chuan <装备名称>
- 
+
 这个指令让你装备某件防具。
- 
+
 HELP
     );
     return 1;
