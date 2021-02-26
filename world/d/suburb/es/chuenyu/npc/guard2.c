@@ -45,4 +45,3 @@ void init()
                 kill_ob(ob);
         }
 }
-
