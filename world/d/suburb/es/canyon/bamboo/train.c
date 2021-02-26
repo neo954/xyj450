@@ -38,7 +38,7 @@ int search_case(string arg)
 	
 	me=this_player();
 	if ( query_temp("got") ) {
-		message_vision("$N在书柜找了找但没找到些什么\n",me); 
+		message_vision("$N在书柜找了找但没找到些什么\n",me);
 		return 1;
 	}
 	
