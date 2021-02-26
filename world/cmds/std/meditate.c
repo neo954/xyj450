@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
-
+ 
 // meditate.c
 
 #include <skill.h>
@@ -14,16 +14,16 @@ int main(object me, string arg)
         int sen_cost, busy_time;
 
         seteuid(getuid());
-
-       if(environment(me)->query("no_fight") ||
+        
+       if(environment(me)->query("no_fight") || 
            environment(me)->query("no_magic") )
               return notify_fail("安全区内禁止练功。\n");
-
+                        
         if (me->is_busy() || me->query_temp("pending/exercising"))
                 return notify_fail("你现在正忙着呢。\n");
 
         if( me->is_fighting() ) return
-notify_fail("战斗中冥思----找死吗？\n");
+notify_fail("战斗中冥思──找死吗？\n");
 
         if( !arg
         ||      !sscanf(arg, "%d", sen_cost) )
@@ -77,7 +77,7 @@ int finish(object me, int sen_cost)
 (int)me->query_skill("spells") * 10) {
 
         tell_object(me, "当你的法力增加的瞬间你忽然觉得脑中一片混乱，似乎法力的提升已经到了瓶颈。\n");
-                }
+                } 
      else {
                            tell_object(me, "你的法力提高了！\n");
                            me->add("max_mana", 1);
@@ -85,19 +85,20 @@ int finish(object me, int sen_cost)
                    me->set("mana", me->query("max_mana"));
            }
 
-        me->start_busy(1);
+        me->start_busy(1);   
         return 1;
 }
 int help(object me)
 {
         write(@HELP
 指令格式 : meditate|mingsi [<耗费「神」的量，预设值 30>]
-
+ 
 静坐冥思，将游离的精神力有效地集中凝聚成能够用来施展法术的能量
 ，藉以增加自己的法力。
 
-请参考 help stat
+请参考 help stat 
 HELP
         );
         return 1;
 }
+
