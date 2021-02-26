@@ -6,7 +6,7 @@ void create()
         set("age", 34+random(20));
         set("long",
 "这是一个面目不清的刺客．．．\n"
-               ); 
+               );
 
         set("attitude", "peaceful");
         set("combat_exp", 1000000);
@@ -20,7 +20,7 @@ void create()
 	set_skill("move", 150);
         set("chat_chance_combat", 15);
         set("chat_msg_combat", ({
-               (: random_move :) 
+               (: random_move :)
         }) );
 
         set("arrive_msg", "＂嗖＂的一声蹿了过来");
