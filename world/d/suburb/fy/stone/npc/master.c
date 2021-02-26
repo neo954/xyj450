@@ -86,7 +86,7 @@ void init()
 {
         add_action("give_quest", "quest");
 }
- 
+
 int accept_object(object who, object ob)
 {
 if(ob->query("name") == "七彩丝缎带" && ob->query("realsilk"))
