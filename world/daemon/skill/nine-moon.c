@@ -18,14 +18,14 @@ mapping *action = ({
          ]),
         ([      "name":                 "阴云迭起",
                 "action":               "$N舞动$w，一招「阴云迭起」挟著无数剑光
-刺向$n的$l",                
+刺向$n的$l",
                  "dodge":                -40,
                  "damage":               90,
                  "damage_type":  "刺伤"
          ]),
         ([      "name":                 "阴曹地府",
                 "action":               "$N手中$w龙吟一声，祭出「阴曹地府」往$n
-的$l刺出数剑",                
+的$l刺出数剑",
                  "dodge":                -40,
                  "damage":               40,
                  "damage_type":  "刺伤"
@@ -58,15 +58,15 @@ int valid_learn(object me)
         if( !(ob = me->query_temp("weapon"))
         ||      (string)ob->query("skill_type") != "sword" )
                 return notify_fail("你必须先找一把剑才能练剑法。\n");
-                
+
         return 1;
 }
-        
+
 int valid_enable(string usage)
 {
          return usage=="sword" || usage=="parry";
 }
-        
+
 mapping query_action(object me, object weapon)
 {
         return action[random(sizeof(action))];
@@ -103,5 +103,4 @@ string perform_action_file(string action)
         return CLASS_D("ninemoon") + "/ninemoonsword/" + action;
 }
 
-                                                                
-                                                                                  
+
