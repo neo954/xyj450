@@ -1,6 +1,6 @@
 inherit NPC;
 #include <ansi.h>
- 
+
 void create()
 {
         set_name("虞琼衣" , ({ "chungyu","chung","yu" }) );
