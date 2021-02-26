@@ -66,4 +66,3 @@ int move_player()
   who->set("mana",0);
   return 1;
 }
-
