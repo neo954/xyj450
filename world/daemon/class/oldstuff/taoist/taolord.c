@@ -109,4 +109,3 @@ int recruit_apprentice(object ob)
      ob->set("class", "taoist");
    add("apprentice_availavble", -1);
 }
-
