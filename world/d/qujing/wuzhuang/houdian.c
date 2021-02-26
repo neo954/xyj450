@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -13,14 +13,14 @@ void create ()
 花香鸟语，大概是个花园。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "north" : __DIR__"houyuan",
      "east" : __DIR__"eastway6",
      "west" : __DIR__"westway6",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
