@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/4/1997 by snowcat
 
 inherit NPC;
@@ -33,7 +33,7 @@ void create()
 
   setup();
   carry_object("/d/qujing/nuerguo/obj/skirt")->wear();
-  add_money ("coin", 10+random(200));  
+  add_money ("coin", 10+random(200));
 }
 
 void init()
@@ -59,20 +59,20 @@ void classified_greeting(object me)
   {
     message_vision (name+"对$N说：大家都在议论你的婚事哩，快去见公主。\n",me);
       return;
-  }  
+  }
 
   if (me->query("obstacle/nuerguo") == "company")
   {
     message_vision (name+"认出了$N，说道：哟，公主还在等你作伴呢。\n",me);
       return;
-  }  
+  }
 
   if (me->query("obstacle/nuerguo") == "stomachache")
   {
     message_vision (name+"看着$N，忍不住说道：瞧瞧，肚子有点大。\n",me);
       return;
   }
-  
+
   if (me->query("gender") == "女性")
     message_vision (name+"看了$N一眼，吃吃地笑了起来。\n",me);
   else
