@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
           // finance.c
 // mon 12/31/96
 
@@ -59,25 +59,25 @@ int pay_money(int amount)
         if( coin ) total += coin->value();
 
         if( total < amount ) return 0;
-        
+
         total -= amount;
         goldno = total/10000;
         silverno = (total % 10000) / 100;
         coinno = total % 100;
 
-        if (!coin && coinno>0) 
+        if (!coin && coinno>0)
            coin=new("/obj/money/coin");
         if (coin) coin->set_amount(coinno);
         if (coinno>0) coin->move(me);
         if ( coinno == 0 && coin) destruct(coin);
 
-        if (!silver && silverno>0) 
+        if (!silver && silverno>0)
            silver=new("/obj/money/silver");
         if (silver) silver->set_amount(silverno);
         if (silverno>0) silver->move(me);
         if (silverno == 0 && silver) destruct(silver);
-   
-        if (!gold && goldno>0) 
+
+        if (!gold && goldno>0)
            gold=new("/obj/money/gold");
         if (gold) gold->set_amount(goldno);
         if (goldno>0) gold->move(me);
