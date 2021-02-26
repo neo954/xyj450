@@ -1,6 +1,6 @@
 //mac's houqing.c
-// 
-// 
+//
+//
 
 inherit ROOM;
 #include <ansi.h>
