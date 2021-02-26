@@ -43,5 +43,3 @@ setup();
 
         carry_object("/d/obj/cloth/luoyi")->wear();
 }
-
-
