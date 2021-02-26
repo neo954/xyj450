@@ -1,6 +1,6 @@
 //mac's xibei.c
-// 
-// 
+//
+//
 
 #include <room.h>
 inherit ROOM;
@@ -16,7 +16,7 @@ LONG
   set("exits",([
          "east":__DIR__"zhengyuan.c",
                ]));
-   
+
   setup();
   replace_program(ROOM);
 }
