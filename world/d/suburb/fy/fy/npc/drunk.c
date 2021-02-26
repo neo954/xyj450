@@ -1,13 +1,13 @@
 inherit NPC;
- 
+
 void do_drink();
- 
+
 void create()
 {
         seteuid(getuid());
         set_name("醉汉", ({"drunk", "man", "drunk man"}));
         set("long", @TEXT
- 
+
 TEXT
         );
         set("gender","男性");
@@ -23,7 +23,7 @@ TEXT
         carry_object("/obj/cloth")->wear();
         carry_object("/obj/example/wineskin");
 }
- 
+
 void do_drink()
 {
     object *list, ob;
@@ -49,7 +49,7 @@ void do_drink()
     }
     return;
 }
- 
+
 int accept_object(object who, object ob)
 {
     if ((string)ob->query("liquid/type")=="alcohol") {
@@ -66,4 +66,4 @@ int accept_object(object who, object ob)
     }
     else return 0;
 }
- 
+
