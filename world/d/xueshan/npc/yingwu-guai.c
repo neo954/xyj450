@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // yingwu-guai.c...weiqi, 97.09.15.
 // drooler parts added by pickle 9-18-97
 
@@ -40,7 +40,7 @@ void create()
    set_skill("parry", 50);
    set_skill("blade", 50);
    set_skill("bingpo-blade", 50);
-   set_skill("force", 50);   
+   set_skill("force", 50);
    set_skill("ningxie-force", 50);
    set_skill("literate", 80);
    set_skill("spells", 50);
@@ -56,7 +56,7 @@ void create()
    set("force", 400);
    set("max_force", 400);
    set("mana", 300);
-   set("max_mana", 300);   
+   set("max_mana", 300);
    set("force_factor", 10);
    set("mana_factor", 15);
 
