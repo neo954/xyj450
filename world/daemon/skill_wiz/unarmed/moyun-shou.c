@@ -84,4 +84,3 @@ void skill_improved(object me)
      me->start_budy(5+random(2));
         }
 }
-
