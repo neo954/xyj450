@@ -26,5 +26,3 @@ string scribe_spell_file(string spell)
 {
         return CLASS_D("fighter") + "/baguazhou/" + spell;
 }
-
-
