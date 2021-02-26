@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // invite.c
 // mon 3/8/97
 
@@ -43,12 +43,11 @@ int help(object me)
 {
   write(@HELP
 指令格式 : invite|yaoqing <人物>
- 
+
 邀请别人到你家里作客。
 
- 
+
 HELP
     );
     return 1;
 }
- 
