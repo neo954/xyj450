@@ -28,7 +28,7 @@ LONG
                 "south"          : __DIR__"street16" ]) );
 
         set("objects", ([
-                __DIR__"npc/guard" : 3, ]) );  
+                __DIR__"npc/guard" : 3, ]) );
 
           create_door("out", "城门", "enter");
         setup();
@@ -44,8 +44,8 @@ string look_sign(object me)
 
 int valid_leave(object me,string dir)
 {
-        if ( dir=="out" && 
-		( !(string) me->query("marks/京师") 
+        if ( dir=="out" &&
+		( !(string) me->query("marks/京师")
 		&& !(string) me->query("marks/令牌") ) ) {
 		tell_object (me, "京师守城兵说道：没有官府通令，任何人不能出入京师。\n");
                 return notify_fail("出城方向的路被京师守城兵挡住了。\n");
