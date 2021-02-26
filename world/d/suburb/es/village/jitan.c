@@ -18,13 +18,13 @@ LONG
 		"north" : "/d/suburb/es/city/street7",
 	]));
 	set("item_desc", ([
-		"altar": 
+		"altar":
 	"园祭坛的栏杆是用汉白玉作成的，坛面由精细磨过的花岗岩铺成，中\n"
 	"间有个台子(platform)。\n",
-		"platform": 
+		"platform":
 	"只有皇帝能站在这个汉白玉台子上面，隐约地你好象看到台子的下面\n"
 	"有个凸起(sth)。\n",
-		"sth": 
+		"sth":
 	"这很象一个按钮(button)，上面长着细细的青苔，你突然一阵莫名其\n"
 	"妙的紧张，好奇心却驱使你摸摸这个按钮，你发现它可以按(press)，\n"
 	"也可以旋转(turn)。\n"
