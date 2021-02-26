@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 10/05/1997 by snowcat
 #include <ansi.h>
 
@@ -118,7 +118,7 @@ string get_respect (object who)
 void announce (object me, string str)
 {
   if (DEBUG)
-  { 
+  {
     object snowcat = find_player ("snowcat");
     if (snowcat && wizardp(snowcat))
       tell_object (snowcat,"◆ "+str+"\n");
@@ -290,12 +290,12 @@ int execute_ask ()
     me->move("/obj/empty");
     remove_call_out ("make_asked");
     call_out ("make_asked",10,me,who);
-    return 1;  
+    return 1;
   }
   // LEVEL_ASKED, LEVEL_RANKED
   remove_call_out ("continue_asked");
   call_out ("continue_asked",1,me,who);
-  return 1;  
+  return 1;
 }
 
 void make_asked (object me, object who)
@@ -367,7 +367,7 @@ int execute_approve_fight(object who, object ob, int position, int category)
 
   announce (me,who->query("name")+"前来拜揭"+categories[category-1]+
             "，与"+ob->query("name")+"比武争夺"+positions[position-1]+"！\n");
-  
+
   me->set_temp("huanggong/is_busy",1);
   me->set_leader(0);
   call_out("reset_is_busy",60,me);
