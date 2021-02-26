@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // copperjian.c
 // created 5-30-97 pickle
 
@@ -23,7 +23,7 @@ void create()
     set("wield_msg", "$N举起一柄$n，在地上撞出点点火星。\n");
     set("unwield_msg", "$N抹了抹$n上的锈，把它收了起来。\n");
   }
-  
+
   init_mace(25);
   setup();
 }
