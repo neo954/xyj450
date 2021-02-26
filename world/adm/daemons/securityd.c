@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // securityd.c
 
 #include <login.h>
@@ -16,7 +16,7 @@
 // wizardp() and interactive() efun.
 // The parenthesis is nessessary to prevend players naming themself "admin"
 // to hack the security system.
-// 
+//
 // 01/14/95 Annihilator - wiz_status are defined outside this daemon in the
 //                        WIZLIST file.
 
@@ -34,7 +34,7 @@ private string *wiz_levels = ({
 });
 
 // A valid write attempt must pass 2 checks: your uid or status must not be
-// "excluded" and must be "trusted" on that directory in order to write in 
+// "excluded" and must be "trusted" on that directory in order to write in
 // that directory. The directories containing the file is searched backward
 // from the current directory to root. And exclude is checked prior than
 // trusted.
@@ -45,14 +45,14 @@ private mapping trusted_write = ([
    "u":      ({ "(wizard)" }),
 //     "cmds/std":    ({ "(wizard)" }),
 //     "cmds/usr":    ({ "(wizard)" }),
-//tool disabled these 2 lines not long ago, who enabled it without 
+//tool disabled these 2 lines not long ago, who enabled it without
 //telling any admin? ok, I disabled it again...weiqi
      "daemon/skill":    ({ "(wizard)" }),
      "daemon/class":    ({ "(wizard)" }),
      "daemon/condition":    ({ "(wizard)" }),
      "open":   ({ "(wizard)", "(apprentice)" }),
      "ftp":      ({ "(wizard)", "(apprentice)" }),
-   
+
 ]);
 
 private mapping exclude_write = ([
@@ -103,7 +103,7 @@ string *query_wizlist() { return keys(wiz_status); }
 string get_status(mixed ob)
 {
    string euid;
-   
+
    if( objectp(ob) ) {
      euid = geteuid(ob);
      if( !euid ) euid = getuid(ob);
@@ -150,7 +150,7 @@ int set_status(mixed ob, string status)
    if( userp(ob) )        uid = getuid(ob);
    else if(stringp(ob))   uid = ob;
    else return 0;
-   
+
    if( status == "(player)" )
      map_delete(wiz_status, uid);
    else
@@ -173,7 +173,7 @@ string *get_wizlist() { return keys(wiz_status); }
 //     The argument user should be an object according to the source code
 // of driver. However, it is a mixed type in the released docs. We assume
 // it is an object in normal case here and issue an error if it was not
-// an object.                               - tool 
+// an object.                               - tool
 
 int valid_read(string file, mixed user, string func)
 {
@@ -185,7 +185,7 @@ int valid_read(string file, mixed user, string func)
    status = get_status(user);
         log_file("read_files", sprintf("%s(%s) %ss %s.\n",euid,status,func,file));
 */
-   
+
 
 // valid_write - called by the master object to determine whether if an user
 //               is allowed to write on a certain file.
@@ -232,7 +232,7 @@ int valid_write(string file, mixed user, string func)
 
    if( sscanf(file, "/u/" + euid + "/%*s") ) {
      log_file("FILES", sprintf("[%s] %s(%s) %ss %s.\n",ctime(time()),euid,status,func,file));
-          return 1; 
+          return 1;
         }
 
    path = explode(file, "/");
@@ -247,7 +247,7 @@ int valid_write(string file, mixed user, string func)
 
    // And then check if we are trusted in one of the directories containing
    // the file.
-   if( member_array(euid, trusted_write["/"])!=-1 ) 
+   if( member_array(euid, trusted_write["/"])!=-1 )
    {
         log_file("FILES", sprintf("[%s] %s(%s) %ss %s.\n",ctime(time()), euid, status, func, file));
      return 1;
