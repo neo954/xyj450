@@ -154,4 +154,3 @@ int kill_him()
         me->kill_ob(this_object());
         return 1;
 }
-
