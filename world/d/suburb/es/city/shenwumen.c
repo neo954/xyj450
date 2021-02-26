@@ -11,7 +11,7 @@ void create()
 一年一度祭天时那总很冷清。东西向的道路分别通向京师东，西路。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
 		"north":	__DIR__"jitan",
 //		"south":	__DIR__"zijincheng",
 		"east":		__DIR__"street1",
