@@ -35,4 +35,3 @@ int accept_fight(object me)
         command("say 我已沦落到这个地步了，就可怜可怜我吧！");
         return 0;
 }
-
