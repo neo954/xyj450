@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // practice.c
 
 #include <ansi.h>
@@ -14,7 +14,7 @@ int main(object me, string arg)
 
    seteuid(getuid());
 
-   if( environment(me)->query("no_fight") || 
+   if( environment(me)->query("no_fight") ||
      environment(me)->query("no_magic") )
         return notify_fail("安全区内禁止练功。\n");
 
@@ -44,7 +44,7 @@ int main(object me, string arg)
 
         //added by mon. 7/24/97
    if(skill_basic <= skill && random(100)==0)
-     write("你的" + to_chinese(skillname)+ 
+     write("你的" + to_chinese(skillname)+
             "很难提高了，还是向你师父请教请教吧！\n");
 
    if( SKILL_D(skillname)->practice_skill(me) ) {
