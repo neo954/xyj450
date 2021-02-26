@@ -88,4 +88,3 @@ void autoload(string arg)
 	set("blood_soaked", 3);
 	::wear();
 }
-
