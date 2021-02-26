@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4/11/1997
 // room: xiaomiao
 
@@ -43,7 +43,7 @@ int do_push(string arg)
   int i,j;
 
   i = 5 + random(10);
-  j = i + 3 + random(7);  
+  j = i + 3 + random(7);
 
   me = this_player();
   where = environment(me);
@@ -82,7 +82,7 @@ int do_push(string arg)
     {
       message_vision("\n$N推了推泥像，泥像竟似晃了晃。\n"NOR,me);
       return 1;
-    } 
+    }
     if(!me->query_temp("called_tudi"))
     {
       message_vision(HIR"泥像忽然猛烈地摇了摇，土地神颤巍巍地从后面走了出来。\n"NOR,me);
