@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 inherit F_FOOD;
 string *first_name = ({ "猪头","牛头","羊头"});
@@ -9,7 +9,7 @@ void create()
 {
    string name;
         name = first_name[random(sizeof(first_name))];
-   
+
         set_name(name, ({ "head" }) );
         set_weight(80);
         if( clonep() )
