@@ -12,6 +12,3 @@ void create()
 		set("value", 0);
 	}
 }
-
-
-
