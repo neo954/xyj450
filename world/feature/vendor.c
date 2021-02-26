@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // vendor.c
 
 #include <dbase.h>
@@ -58,7 +58,7 @@ int complete_trade(object me, string what)
   if( stringp(ob_file = query("vendor_goods/" + what)) ) {
    ob = new(ob_file);
    if(ob->move(me)) {
-      message_vision("$N向$n买下一" + 
+      message_vision("$N向$n买下一" +
       ob->query("unit") + ob->query("name") + "。\n", me, this_object() );
       return 1;
    }
@@ -91,7 +91,7 @@ int complete_trade(object me, string what)
      {
        ob = new(goods[name[i]]);
        if(ob->move(me)) {
-          message_vision("$N向$n买下一" + 
+          message_vision("$N向$n买下一" +
           ob->query("unit") + ob->query("name") + "。\n", me, this_object() );
           return 1;
        }
@@ -139,5 +139,5 @@ int do_vendor_list(string arg)
    }
     }
   write(list);
-  return 1;  
+  return 1;
 }
