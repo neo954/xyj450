@@ -10,7 +10,7 @@ void create()
         else {
                 set("unit", "卷");
                 set("long",
-                        
+
 "这卷罗巾由上等丝绸编成，绣了一幅幅美女图。个个体态轻盈，翩然\n"
 "起舞。每一曲舞步姿态美妙迷人，旁题著舞曲名称与步法。\n");
                 set("value", 100);
@@ -19,7 +19,7 @@ void create()
                 set("skill", ([
                         "name":                 "move",
                   "exp_required": 5000,
-                        "sen_cost":             
+                        "sen_cost":
 30,
                         "difficulty":   20,
                         "max_skill":    50
