@@ -58,6 +58,3 @@ void create()
         carry_object("/d/suburb/xkx/shaolin/obj/chanzhang")->wield();
         carry_object("/d/suburb/xkx/shaolin/obj/hui-cloth")->wear();
 }
-
-
-
