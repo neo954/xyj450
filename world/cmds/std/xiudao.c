@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xiudao.c
 
 #include <skill.h>
@@ -22,14 +22,14 @@ int main(object me, string arg)
 
    seteuid(getuid());
    where = environment(me);
-   
+
    if(where->query("no_fight") || where->query("no_magic") )
         return notify_fail("安全区内禁止练功。\n");
-   
+
 //   if (!where->query("jingzuo_room"))
 //     return notify_fail("此处不宜静坐修练！\n");
 
-   if ( (xiudao_lvl = me->query_skill("spells")) < 20 ) 
+   if ( (xiudao_lvl = me->query_skill("spells")) < 20 )
      return notify_fail("你法术修为太低，不能行功修炼！\n");
 
    if (me->is_busy() || me->query_temp("pending/exercising"))
