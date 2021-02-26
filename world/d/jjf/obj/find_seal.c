@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <skill.h>
 #include <ansi.h>
 
@@ -73,7 +73,7 @@ int do_attach(string arg)
    if( !arg )
                 return notify_fail("你想对谁使用追魂符？\n");
         if(!objectp(victim = present(arg, environment(me))))
-                return notify_fail("这里没有这个人。\n");   
+                return notify_fail("这里没有这个人。\n");
    if(me->is_busy())
      return notify_fail("你正忙着呢，无法用追魂符。\n");
         if( !victim->is_character() || victim->is_corpse() )
@@ -90,9 +90,9 @@ int do_attach(string arg)
    ap= (int)seal->query("ap");
    dp= (int)victim->query("combat_exp");
    dp+= (int)victim->query_skill("dodge")*(int)victim->query_kar();
-   
+
    if( random(ap+dp) > dp ){
-   
+
    tell_room( environment(me), me->name()+"悄悄地将追魂符贴到"+victim->name()+"背后。\n",({me,victim}));
 
    a=(int)me->query_kar() * (int)me->query("mana");
@@ -144,4 +144,4 @@ int report(object who)
    call_out("report", 30, who);
    return 1;
 }
-     
+
