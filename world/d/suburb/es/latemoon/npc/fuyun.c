@@ -1,6 +1,6 @@
 inherit NPC;
 #include <ansi.h>
- 
+
 void create()
 {
         set_name("芙云", ({ "fuyun" }) );
