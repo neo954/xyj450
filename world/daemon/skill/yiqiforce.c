@@ -44,8 +44,8 @@ mixed hit_ob(object me, object victim, int damage_bonus, int factor)
         return foo;
 }
 
-int valid_enable(string usage) 
-{ 
+int valid_enable(string usage)
+{
 return 	usage=="iron-cloth" ||
 	usage=="unarmed" ||
 	usage=="force";
@@ -55,11 +55,11 @@ int valid_learn(object me) { return 1; }
 
 int practice_skill(object me)
 {
-        return 
+        return
 notify_fail("混元一气功只能用学的。\n");
 }
 
- 
+
 int effective_level() { return 50;}
 
 string *absorb_msg = ({
@@ -127,6 +127,6 @@ void skill_improved(object me)
 		me->skill_death_penalty();
 		me->delete_skill("yiqiforce");
 		me->unconcious();
-        } 
+        }
 }
 
