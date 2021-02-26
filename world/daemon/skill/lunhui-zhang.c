@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //【轮回杖】lunhui-zhang.c
 inherit SKILL;
 
@@ -41,7 +41,7 @@ mapping *action = ({
      "parry":               0,
                 "damage":               30,
                 "damage_type":  "砸伤"
-        ]),   
+        ]),
         ([      "name":                 "天网恢恢",
                 "action":
 "$N倒提$w，轻轻一纵，一招「天网恢恢」从$n意想不到的地方刺出，$n顿时手足无措，狼狈万分",
@@ -49,7 +49,7 @@ mapping *action = ({
      "parry":               -5,
                 "damage":               15,
                 "damage_type":  "刺伤"
-        ]),   
+        ]),
         ([      "name":                 "再堕轮回",
                 "action":
 "$N脸上突现煞气，举起手中$w，猛向$n$l击落，这招「再堕轮回」出手又快又狠",
@@ -57,7 +57,7 @@ mapping *action = ({
      "parry":               -15,
                 "damage":               35,
                 "damage_type":  "砸伤"
-        ]),   
+        ]),
 });
 
 
