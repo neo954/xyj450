@@ -17,4 +17,3 @@ int valid_kill(object killer, object victim)
 
      return 1;
 }
-
