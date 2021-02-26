@@ -38,5 +38,3 @@ int apply_medicine()
 	destruct(this_object());
 	return 1;
 }
-
-
