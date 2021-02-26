@@ -14,6 +14,6 @@ LONG
         set("objects", ([
         __DIR__"npc/smallgardener" : 2,
         ]) );
-        
+
         setup();
 }
