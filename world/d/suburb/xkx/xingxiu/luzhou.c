@@ -50,4 +50,3 @@ int do_drink(string arg)
 
         return 1;
 }
-
