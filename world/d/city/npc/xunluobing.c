@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // wujiang.c 武将
 
 inherit NPC;
@@ -29,7 +29,7 @@ void create()
    map_skill("parry", "bawang-qiang");
    set("max_kee", 700);
    set("max_sen", 700);
-        set("force", 400); 
+        set("force", 400);
         set("max_force", 400);
         set("force_factor", 20);
    set("max_mana", 100);
