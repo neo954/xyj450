@@ -89,5 +89,3 @@ void attempt_apprentice(object ob, object me)
      "还是先去学些基础功夫吧！\n");
   return;
 }
-
-
