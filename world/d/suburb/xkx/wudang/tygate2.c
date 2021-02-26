@@ -1,5 +1,5 @@
 // tygate2.c 桃园木门
-// by Marz 
+// by Marz
 
 inherit ROOM;
 
@@ -14,7 +14,7 @@ LONG
 	
 	
 	set("item_desc",([
-		"door"	:	"\n\t\t\t桃木门上有首诗：\n\n\n" 
+		"door"	:	"\n\t\t\t桃木门上有首诗：\n\n\n"
 					"\t\t∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷\n"
 					"\t\t∷∷∷　　　　　　　　　　　　　　　∷∷∷\n"
 					"\t\t∷∷∷　去　年　今　日　此　门　中　∷∷∷\n"
