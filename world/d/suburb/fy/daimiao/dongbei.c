@@ -1,6 +1,6 @@
 //mac's dongbei.c
-// 
-// 
+//
+//
 
 #include <room.h>
 inherit ROOM;
