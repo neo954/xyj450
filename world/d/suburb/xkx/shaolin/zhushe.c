@@ -78,7 +78,7 @@ int do_move(string arg)
 void fainting(object me, object ob)
 {
 
-	if ( (int)me->query("kee") <= 50 ) 
+	if ( (int)me->query("kee") <= 50 )
 	{
 		message_vision("乔三槐缓缓苏醒了过来，说道: 谢...谢......。\n",ob);
 		me->die();
