@@ -29,4 +29,3 @@ LONG );
         replace_program(ROOM);
 	"/d/obj/clone/board/gaibang_r"->foo();
 }
-
