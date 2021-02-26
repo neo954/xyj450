@@ -26,5 +26,3 @@ void create()
   carry_object("/d/qujing/tianzhu/obj/guanpao")->wear();
   carry_object("/d/qujing/tianzhu/obj/simao")->wear();
 }
-
-
