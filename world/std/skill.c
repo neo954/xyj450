@@ -162,4 +162,3 @@ int NewRandom(int n,int base,int d)
    }
   return (i-1);
 }
-
