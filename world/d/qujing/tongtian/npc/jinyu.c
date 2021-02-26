@@ -93,4 +93,3 @@ void kill_ob (object ob)
   set_temp("my_killer",ob);
   ::kill_ob(ob);
 }
-
