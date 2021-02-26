@@ -9,7 +9,7 @@ void create() { seteuid(getuid()); }
 
 string type() { return "knowledge"; }
 
-int valid_learn(object me) 
+int valid_learn(object me)
 {
 	int lvl;
 	
