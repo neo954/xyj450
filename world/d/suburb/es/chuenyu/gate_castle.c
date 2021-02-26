@@ -18,9 +18,9 @@ LONG
               "down" : __DIR__"high_b_mtn2",
 ]));
         set("outdoors", "chuenyu");
-        
+
         create_door("north", "城门", "south", DOOR_CLOSED);
-        
+
         setup();
 }
 
