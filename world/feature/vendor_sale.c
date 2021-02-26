@@ -489,4 +489,3 @@ string query_save_file()
     if( !stringp(id) ) return 0;
     return sprintf(DATA_DIR "npc/boss/%s", id);
 }
-
