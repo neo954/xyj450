@@ -10,9 +10,9 @@ int valid_learn(object me) { return 1; }
 
 int practice_skill(object me)
 {
-        return 
+        return
 notify_fail("封山派内功只能用学的或是从运用(exert)中增加熟练度。\n");
-} 
+}
 int effective_level() { return 10;}
 
 int learn_bonus()
