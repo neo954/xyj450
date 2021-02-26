@@ -12,18 +12,18 @@ int scribe(object me, object sheet)
         if((int)me->query_skill("scratching") < 90 )
                 return notify_fail("你的符之术不够高！\n");
 
-        if( sheet->name() != "桃符纸" ) 
+        if( sheet->name() != "桃符纸" )
                 return notify_fail("天师符要画在桃符纸上！\n");
 
-        if( (int)me->query("mana") < 75 ) 
+        if( (int)me->query("mana") < 75 )
                 return notify_fail("你的法力不够了！\n");
 
         sheet->set_amount((int)sheet->query_amount() - 1);
         me->save();
         seteuid( geteuid(me));
         newsheet = new("/obj/magic_seal");
-        newsheet->set_name(YEL "天师符" NOR, 
-                ({ "save-me sheet", "sheet"}));      
+        newsheet->set_name(YEL "天师符" NOR,
+                ({ "save-me sheet", "sheet"}));
         newsheet->set("burn_func", (: call_other, __FILE__, "do_burn" :));
         newsheet->move(me);
         me->add("mana", -75);
@@ -34,7 +34,7 @@ int scribe(object me, object sheet)
 }
 
 int do_burn(object sheet)
-{ 
+{
         object obj, soldier, me;
 	int	spells;
 
