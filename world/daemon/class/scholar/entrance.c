@@ -39,4 +39,3 @@ int valid_leave(object me,string dir)
         	me->set("taolin_steps", 3);
 	return ::valid_leave(me,dir);
 }
-
