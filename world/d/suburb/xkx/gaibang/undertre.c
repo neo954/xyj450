@@ -23,7 +23,7 @@ LONG
 		"5":__DIR__"wdandao1",
 	]));
 
-	set("item_desc",([ "map" : 
+	set("item_desc",([ "map" :
 		"出口一：通往小村。\n" +
 		"出口二：通往竹林。\n" +
 		"出口三：通往少林。\n" +
