@@ -8,7 +8,7 @@ int valid_learn(object me) { return 1; }
 
 int practice_skill(object me)
 {
-        return 
+        return
 notify_fail("冰心诀只能用学的，或是从运用(exert)中增加熟练度。\n");
 }
 
