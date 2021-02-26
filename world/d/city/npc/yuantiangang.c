@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 void create()
 {
@@ -20,8 +20,8 @@ void create()
         set_skill("spells", 100);
    set_skill("baguazhou", 100);
         set_skill("literate", 50);
-        set_skill("sword", 60);  
-        set_skill("changquan", 50);  
+        set_skill("sword", 60);
+        set_skill("changquan", 50);
 
         map_skill("spells", "baguazhou");
         map_skill("unarmed", "changquan");
@@ -66,7 +66,7 @@ int accept_object(object who,object ob)
      }
      if (((string)who->query("family/family_name")!="将军府")){
         command("say 多谢多谢，我正饿着哪！");
-        command("give 1 silver to " + who->query("id"));        
+        command("give 1 silver to " + who->query("id"));
         call_out("destroy", 1, ob);
                         return 1;
      }
