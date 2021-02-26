@@ -10,7 +10,7 @@ void create()
         else {
                 set("unit", "卷");
                 set("long",
-                        
+
 "这是一卷由上等丝绸编成，以湘绣作成的舞曲图。上有记载一些舞曲 \n"
 "每一曲都有它独特的风格与内涵。一幅幅玄天玉女翩然起舞，十分壮观。\n"
  "\n  曲目： \n \n"
@@ -22,7 +22,7 @@ MAG "  广陵散 \n" "  春宫怨 \n \n" NOR
                 set("skill", ([
                         "name":                 "music",
                   "exp_required": 5000,
-                        "sen_cost": 30,            
+                        "sen_cost": 30,
                      "class" : "dancer",
                         "difficulty":   20,
                         "max_skill":   60 ,
