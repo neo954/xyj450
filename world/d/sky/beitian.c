@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //beitian.c
 //created 4-8-97, pickle
 
@@ -47,7 +47,7 @@ create_door("south", "北天门", "north", DOOR_CLOSED);
 
 int valid_leave(object me, string dir)
 {
- 
+
         if (dir == "north") {
            message_vision ("$N纵身跳入云海中！\n",me);
            return ::valid_leave(me,dir);
@@ -55,11 +55,11 @@ int valid_leave(object me, string dir)
         if (dir != "south") {
                 return ::valid_leave(me,dir);
         }
- 
- 
+
+
 if (objectp(present("huguo tianwang", environment(me)))) {
- 
-if (me->query("combat_exp")>100000) 
+
+if (me->query("combat_exp")>100000)
 return notify_fail(HIY"护国天王对你拱手作了个揖：这位" + RANK_D->query_respect(me) +"，实在对不起。若想进去还是从南门走吧。\n看来这里不能进。\n"NOR);
 else
 return notify_fail(HIY"护国天王厉声说道：此乃天宫重地，闲杂人等不得入内！\n你满怀失望的离开了。\n"NOR);
