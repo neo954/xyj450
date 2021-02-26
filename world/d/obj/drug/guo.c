@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 #include <ansi.h>
 
@@ -40,7 +40,7 @@ int do_eat(string arg)
 {
   object me = this_player();
   if (arg!="dan" && arg!="huanhun dan")   return 0;
-  
+
   me->set("eff_sen", (int)me->query("max_sen"));
   me->set("sen", (int)me->query("max_sen"));
   me->set("eff_gin", (int)me->query("max_gin"));
