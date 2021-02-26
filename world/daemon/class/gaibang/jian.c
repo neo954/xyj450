@@ -13,7 +13,7 @@ void create()
 	set("nickname", "执法长老");
 	set("gender", "男性");
 	set("age", 50);
-	set("long", 
+	set("long",
 		"简长老是丐邦的执法长老，代帮主执掌法刀以及青竹令等。\n"
 		"他向来嫉恶如仇，弟子中有谁犯过，出手决不容情。\n");
 
@@ -56,7 +56,7 @@ void init()
 {
         object ob;
 	mapping myfam;
-        
+
         ::init();
         if (interactive(ob = this_player()) && !is_fighting()) {
 		myfam = (mapping)ob->query("family");
