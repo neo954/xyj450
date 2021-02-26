@@ -63,12 +63,12 @@ void init()
 
 }
 void greeting(object ob)
-{   string item;  
+{   string item;
     object foods;
- 
- item = "tomatoo";  
 
- if( !ob || environment(ob)!=environment() ) return;   
+ item = "tomatoo";
+
+ if( !ob || environment(ob)!=environment() ) return;
  else if( objectp(foods = present(item, ob)) )  {
                 tell_object(ob, "我给你的山药蛋好吃吗??\n" NOR );
         }  else  {
@@ -76,13 +76,13 @@ void greeting(object ob)
                   message_vision("老者抚摸着$N的头，老泪纵横。\n 说道: " +
           "说道：哎。。。$N这可怜的孩子，饿得面黄肌瘦的。\n" +
           "老者哆哆嗦嗦从怀里拿出个小布包，打开一层又一层，打开一层又一层.." +
-          "最后拿出个小山药蛋塞到$N手里。\n",ob);   
+          "最后拿出个小山药蛋塞到$N手里。\n",ob);
                 foods = new("/d/suburb/es/choyin/npc/obj/tomatoo");
                 foods->move(ob);
                 ob->set_temp("choyin/山药蛋", 1);
                   }
- return;              
-}        
+ return;
+}
 
 
 
@@ -91,7 +91,7 @@ void reset()
 {
         int learn;
 
-   
+
         set("pills", 9);
         if( (int)query("potential") > (int)query("learned_points") ) {
                 learn = (int)query("potential") - (int)query("learned_points");
@@ -106,7 +106,7 @@ void reset()
 
 int accept_fight(object who)
 {
-set("short", "桐柏山妖  山药蛋(yam)"); 
+set("short", "桐柏山妖  山药蛋(yam)");
         if( is_fighting() ) {
                 if( random(query("eff_kee")) > (int)query("kee") ) {
                         say( CYN "老者颤声道：我这一把年纪，哎！老者气得几乎晕倒在地。\n" NOR);
@@ -160,8 +160,8 @@ void revive()
 
 void kill_ob(object ob)
 {   object me;
-        me=this_player();      
-        set("short", "桐柏山妖  山药蛋(yam)"); 
+        me=this_player();
+        set("short", "桐柏山妖  山药蛋(yam)");
 
         message_vision("采药老者眼放异光，说道：你真的不喜欢山药蛋吗??\n\n"
 + "沉吟半响道：既然如此，老头子今天豁出去了，纳命来！\n" + "山药蛋双手一招，一团黑雾涌起......\n",me);
@@ -183,16 +183,16 @@ void kill_ob(object ob)
         message_vision("$N出窍的真魂绕了一大圈，终于归位了。\n",me);
         message_vision("黑雾慢慢消散了\n",me);
         message_vision("山药蛋就地一滚，没入土中不见了......\n"NOR,me);
-        destruct(this_object());                   
+        destruct(this_object());
         return 0;
 
 
 }
 void defeated_enemy(object ob)
-{       command("fear"); 
+{       command("fear");
         say(CYN "老者骨碌碌就地打了个滚，说道：我赢了！" NOR);
         remove_killer(ob);
-}      
+}
 
 
 
