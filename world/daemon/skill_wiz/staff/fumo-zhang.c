@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 //【伏魔杖】fumo-zhang.c, weiqi...980305
 inherit SKILL;
