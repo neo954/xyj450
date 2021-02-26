@@ -27,4 +27,3 @@ LONG);
   set("outdoors",1);
   setup();
 }
-
