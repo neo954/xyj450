@@ -10,7 +10,7 @@ string process_input(string str)
 用者离开.
 接下来系统会判定使用者是否要重覆使用前面用过的指令, 再来会核对使用者
 自己所设定的替代指令表, 若有找到符合的则将输入的替代指令扩张为完整的
-指令. 传回值为处理过後的输入指令. 若以上条件都不符合则呼叫 ALIAS_D 
+指令. 传回值为处理过後的输入指令. 若以上条件都不符合则呼叫 ALIAS_D
 的 process_global_alias() 函数并将结果做为此函数的传回值.
 
 int set_alias(string verb, string replace)
