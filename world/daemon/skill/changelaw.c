@@ -8,11 +8,11 @@ void create() { seteuid(getuid()); }
 
 string type() { return "knowledge"; }
 
-int valid_learn(object me) 
+int valid_learn(object me)
 {
 	return 1;
 }
-int effective_level() 
+int effective_level()
 { return 25;}
 
 int learn_bonus()
