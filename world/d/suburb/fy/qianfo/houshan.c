@@ -18,7 +18,7 @@ LONG
           set("objects", ([
                 __DIR__"obj/bigstone" : 1,
        ]) );
-  set("outdoors","qianfo"); 
+  set("outdoors","qianfo");
   setup();
   replace_program(ROOM);
 }
