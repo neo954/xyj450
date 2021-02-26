@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // powerup.c
 
 #include <ansi.h>
@@ -20,12 +20,12 @@ int exert(object me, object target)
      skill=250;
    }
 
-        if( target != me ) 
+        if( target != me )
      return notify_fail("你只能用反五行摄气诀提升自己的战斗力。\n");
 
-        if( (int)me->query("force") < skill*2 )     
+        if( (int)me->query("force") < skill*2 )
      return notify_fail("你的内力不够。\n");
-        if( (int)me->query_temp("powerup") ) 
+        if( (int)me->query_temp("powerup") )
      return notify_fail("你已经在运功中了。\n");
 
         me->add("force", -skill);
