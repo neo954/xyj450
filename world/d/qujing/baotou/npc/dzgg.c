@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4.12.1997
 
 inherit NPC;
@@ -58,7 +58,7 @@ int move_player()
     message_vision ("$N摇摇头：不认得你，不认得你。\n",me);
     return 1;
   }
- 
+
   message_vision ("$N说：$n今天糊涂了也，兄弟我一脚就把你踢进洞里。\n",me,who);
   message_vision ("说着$N飞起一脚，$n顺势往上一跃。\n",me,who);
   who->move("/d/qujing/baotou/dongwai");
