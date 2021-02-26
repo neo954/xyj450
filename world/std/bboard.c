@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bboard.c
 
 #include <ansi.h>
@@ -113,7 +113,7 @@ int do_post(string arg)
       return notify_fail("只有巫师才可以在这里留言。\n");
 
    if(!arg) return notify_fail("留言请指定一个标题。\n");
-   
+
    note = allocate_mapping(4);
    note["title"] = arg;
    note["author"] = this_player()->query("name")+
@@ -143,7 +143,7 @@ int do_read(string arg)
      else
         for(num = 1; num<=sizeof(notes); num++)
           if( notes[num-1]["time"] > last_read_time[myid] ) break;
-        
+
    } else if( !sscanf(arg, "%d", num) )
      return notify_fail("你要读第几张留言？\n");
 
@@ -158,7 +158,7 @@ int do_read(string arg)
    // Keep track which post we were reading last time.
    if( !mapp(last_read_time) )
      this_player()->set("board_last_read", ([ myid: notes[num]["time"] ]) );
-   else 
+   else
      if( undefinedp(last_read_time[myid]) || notes[num]["time"] > last_read_time[myid] )
         last_read_time[myid] = notes[num]["time"];
 
@@ -177,7 +177,7 @@ int do_discard(string arg)
    if( !arrayp(notes) || num < 1 || num > sizeof(notes) )
      return notify_fail("没有这张留言。\n");
    num--;
-   if( notes[num]["author"] != 
+   if( notes[num]["author"] !=
      (string) this_player(1)->query("name")+
      "("+capitalize(this_player(1)->query("id"))+")"
 && (string)SECURITY_D->get_status(this_player(1)) !="(arch)"
@@ -204,7 +204,7 @@ int do_document(string arg)
    string *strmon=({"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"});
 
    if( (string)SECURITY_D->get_status(this_player(1)) != "(admin)"
-    && (string)SECURITY_D->get_status(this_player(1)) !="(arch)" 
+    && (string)SECURITY_D->get_status(this_player(1)) !="(arch)"
     && (string)SECURITY_D->get_status(this_player(1)) !="(wizard)" )
      return notify_fail("你没有存档的权力！\n");
 
@@ -226,7 +226,7 @@ int do_document(string arg)
      }
    if (argn==2) {
      if (defmon>1995) {
-        dirname = dirname + sprintf("%d",defmon)+"/";    
+        dirname = dirname + sprintf("%d",defmon)+"/";
         mon=ctime(time())[4..6];
         }
      else {
@@ -283,7 +283,7 @@ int do_document(string arg)
    content->restore();
    if ( !objectp(content) )
      return notify_fail("文档读取失败！\n");
-   if (content->query("msg")) content->set("msg", content->query("msg")+ 
+   if (content->query("msg")) content->set("msg", content->query("msg")+
 sprintf("[%3d] %-40s %12s (%s)\n",
 nummonth, notes[num]["title"], notes[num]["author"], ctime(notes[num]["time"])[0..9])
 );
@@ -304,7 +304,7 @@ sprintf("[%3d] %-40s %12s (%s)\n------------------------------------------------
    if (!document->save())
      return notify_fail("存档失败！\n");
    write("OK.\n");
-   
+
 /*
    if (num >0)
              notes = notes[0..num-1] + notes[num+1..sizeof(notes)-1];
@@ -314,4 +314,4 @@ sprintf("[%3d] %-40s %12s (%s)\n------------------------------------------------
         save();
 */
    return 1;
-}   
+}
