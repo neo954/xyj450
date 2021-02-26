@@ -49,4 +49,3 @@ int exert(object me, object target, int amount)
 	me->start_busy(1);
 	return 1;
 }
-
