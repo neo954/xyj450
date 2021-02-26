@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bbsboard.c
 
 #include <ansi.h>
@@ -29,27 +29,27 @@ void init()
 {
     mapping *news;
     int    i, j;
-    
+
    add_action("do_makegroup", "mkgroup");
    add_action("do_rmgroup", "rmgroup");
    add_action("do_readgroup", "read");
    add_action("do_cpbboard", "cpbboard");
 
-   news = query("news");   
+   news = query("news");
    if( !pointerp(news) || !sizeof(news) )
       return;
-      
+
    for(i=0; i<sizeof(news); i++)  {
       news[i]["used"] = 0;
       for(j=0; j<sizeof(news[i]["index"]); j++) {
          news[i]["index"][j]["used"] = 0;
       }
    }
-   
+
     set("news", news);
     save();
-    
-      return;   
+
+      return;
 }
 
 string query_save_file()
@@ -67,8 +67,8 @@ string short()
    news = query("news");
    if( !pointerp(news) || !sizeof(news) )
      return ::short() + " [ 目前没有任何新闻组 ]";
-     
-   return sprintf("%s [ 目前共有 %d 个新闻组 ]", ::short(), sizeof(news));   
+
+   return sprintf("%s [ 目前共有 %d 个新闻组 ]", ::short(), sizeof(news));
 }
 
 string long()
@@ -85,7 +85,7 @@ string long()
    for(i=0; i<sizeof(news); i++)   {
      msg += sprintf("[%2d]    %3d      %-30s   %12s\n",
         i+1, sizeof(news[i]["index"]), news[i]["name"], news[i]["id"]);
-    }        
+    }
    return msg;
 }
 
@@ -93,16 +93,16 @@ void done_postnews(object ob, int idx, int sidx, mapping note, string text)
 {
      mapping *news;
      int  last;
-      
+
      note["msg"] = text;
      news = query("news");
      news[idx]["time"] = time();
      if( !sizeof(news[idx]["index"]) )
          news[idx]["index"] = ({ });
-         
-     news[idx]["index"] += ({ note });    
+
+     news[idx]["index"] += ({ note });
      note["time"] = time();
-      
+
      if(sidx != -1)  {
         last = sidx;
         while(1)  {
@@ -110,30 +110,30 @@ void done_postnews(object ob, int idx, int sidx, mapping note, string text)
            if(!news[idx]["index"][last]["next"])  break;
            last += news[idx]["index"][last]["next"];
         }
-        news[idx]["index"][last]["next"] = 
+        news[idx]["index"][last]["next"] =
            (sizeof(news[idx]["index"]) - last -1);
      }
-     
+
      if( sizeof(news[idx]["index"]) > 100 )
          news[idx]["index"] = news[idx]["index"][50..100];
 
      set("news", news);
      tell_object(ob, "留言完毕。\n\n\n");
-     
+
      save();
-     
+
      //if(sidx == -1)
         do_readnewsgroup(ob, idx);
      /*else
-        do_readarticle(ob, idx, sidx);   
-     */   
+        do_readarticle(ob, idx, sidx);
+     */
 }
 
 
 void do_postnews(object ob, int idx, int sidx, string title)
 {
     mapping note;
-    
+
     note = allocate_mapping(7);
     note["title"] = title;
     if(sidx == -1)
@@ -143,7 +143,7 @@ void do_postnews(object ob, int idx, int sidx, string title)
     note["next"] = 0;
     note["used"] = 0;
     note["author"] = ob->query("name") + "(" + capitalize(ob->query("id"))+")";
-    ob->edit( (: done_postnews, ob, idx, sidx, note :) ); 
+    ob->edit( (: done_postnews, ob, idx, sidx, note :) );
     return;
 }
 
@@ -153,8 +153,8 @@ void inside_group(string line, object ob, int idx, int sidx)
     string cmds, title;
     int   cur, num;
     mapping  *news;
-   
-    news = query("news"); 
+
+    news = query("news");
     if(line == "q" )  {
         cur =  sidx;
         while(1)   {
@@ -169,13 +169,13 @@ void inside_group(string line, object ob, int idx, int sidx)
         sscanf(line, "%s %s", cmds, title);
         if(!title)
             write("留言请指定一个标题。\n");
-        else   
+        else
             do_postnews(ob, idx, sidx,  title);
     }
     else  {
        write("\n想留言吗？(q 退出 p 留言)");
         input_to("inside_group", ob, idx, sidx);
-    }    
+    }
 }
 
 void do_readarticle(object ob, int idx, int sidx)
@@ -184,41 +184,41 @@ void do_readarticle(object ob, int idx, int sidx)
     mapping last_read_time;
     string msg, myid;
     int   i, cur;
-    
-    myid = query("board_id");    
+
+    myid = query("board_id");
     last_read_time = ob->query("bbs_last_read/"+myid);
-   
+
     news = query("news");
     // add group check here
-    
+
     msg = "\n\n", cur = sidx;
     while( 1 ) {
-       msg += sprintf("%s%s%s [%d] %-30s %s(%s)\n", HIC, 
+       msg += sprintf("%s%s%s [%d] %-30s %s(%s)\n", HIC,
        news[idx]["name"], NOR, cur+1, news[idx]["index"][cur]["title"],
-       news[idx]["index"][cur]["author"], 
+       news[idx]["index"][cur]["author"],
        ctime(news[idx]["index"][cur]["time"])[0..9]);
        msg += "-------------------------------------------------------------------\n";
        msg += news[idx]["index"][cur]["msg"];
        msg += "\n\n";
 
        news[idx]["index"][cur]["used"] += 1;
-                
+
        if( !news[idx]["index"][cur]["next"] ) break;
-       
-       cur += news[idx]["index"][cur]["next"];  
+
+       cur += news[idx]["index"][cur]["next"];
     }
-   
+
     if( !mapp(last_read_time) )   {
-        ob->set("bbs_last_read/"+myid, 
-          ([ news[idx]["id"]: news[idx]["index"][cur]["time"] ]) ); 
-    }  
+        ob->set("bbs_last_read/"+myid,
+          ([ news[idx]["id"]: news[idx]["index"][cur]["time"] ]) );
+    }
     else {
        if( undefinedp(last_read_time[news[idx]["id"]]) ||
          news[idx]["index"][cur]["time"] > last_read_time[news[idx]["id"]] )
             last_read_time[news[idx]["id"]] = news[idx]["index"][cur]["time"];
     }
-    
-    //write(msg); 
+
+    //write(msg);
     do_startmore("", explode(msg, "\n"), 0, ob, idx, sidx);
 
     /*write("\n想留言吗？(q 退出 p 留言)");
@@ -233,9 +233,9 @@ void  in_group(string line, object ob, int idx, int restricted)
     mapping  *news, *nnews;
     string  cmds, title, msg;
     string  myid;
-   
+
     news = query("news");
-    
+
     if( line == "q")  {
        news[idx]["used"] -= 1;
        do_readgroup("board");
@@ -253,7 +253,7 @@ void  in_group(string line, object ob, int idx, int restricted)
        }
        else {
           myid = ob->query("name")+"("+capitalize(ob->query("id"))+")";
-          if(wizhood(ob) != "(admin)" && 
+          if(wizhood(ob) != "(admin)" &&
              myid != news[idx]["index"][num-1]["author"])  {
              write("你不能删去这个留言！！\n");
           }
@@ -263,8 +263,8 @@ void  in_group(string line, object ob, int idx, int restricted)
                 if(news[idx]["index"][i]["next"] == num-1-i)  {
                    if(news[idx]["index"][num-1]["next"] == 0)
                       news[idx]["index"][i]["next"] = 0;
-                   else   
-                      news[idx]["index"][i]["next"] += 
+                   else
+                      news[idx]["index"][i]["next"] +=
                          (news[idx]["index"][num-1]["next"]-1);
                 }
                 else  if(news[idx]["index"][i]["next"] != 0 &&
@@ -274,13 +274,13 @@ void  in_group(string line, object ob, int idx, int restricted)
              }
              for(i=num; i<sizeof(news[idx]["index"]); i++)
                 nnews += ({ news[idx]["index"][i] });
-             
+
              news[idx]["index"] = nnews;
-          
-             msg = sprintf("删除第 %d 号留言....Ok。", num);  
-             tell_object(ob, msg); 
+
+             msg = sprintf("删除第 %d 号留言....Ok。", num);
+             tell_object(ob, msg);
              set("news", news);
-             save();                                
+             save();
           }
        }
        do_readnewsgroup(ob, idx);
@@ -289,12 +289,12 @@ void  in_group(string line, object ob, int idx, int restricted)
        sscanf(line, "%s %s", cmds, title);
        if(!title)  {
           write("留言请指定一个标题。\n");
-          do_readnewsgroup(ob, idx);   
-       }   
-       else   
+          do_readnewsgroup(ob, idx);
+       }
+       else
           do_postnews(ob, idx, -1,  title);
     }
-    else { 
+    else {
        sscanf(line, "%d", num);
        if( num < 1 || num > sizeof(news[idx]["index"]) )  {
           write("没有这个留言。\n");
@@ -302,9 +302,9 @@ void  in_group(string line, object ob, int idx, int restricted)
        }
        else {
           do_readarticle(ob, idx, num-1);
-       }   
-    } 
-} 
+       }
+    }
+}
 
 
 void do_readnewsgroup(object ob, int idx)
@@ -314,16 +314,16 @@ void do_readnewsgroup(object ob, int idx)
     int   i, j, num, sum, cur;
     string msg, readflag;
     int   last_time, next;
-   
-    myid = query("board_id");    
+
+    myid = query("board_id");
     last_read_time = ob->query("bbs_last_read/"+myid);
     news = query("news");
-    
+
     if( !mapp(last_read_time) || undefinedp(last_read_time[news[idx]["id"]]) )
         last_time = 0;
     else
         last_time = last_read_time[news[idx]["id"]];
- 
+
     write("\n"+HIR+"******************************************************************"+NOR+"\n");
     write("欢迎来到"+HIC+news[idx]["name"]+NOR+"新闻组！！！\n");
     write(HIR+"******************************************************************"+NOR+"\n");
@@ -347,13 +347,13 @@ void do_readnewsgroup(object ob, int idx)
                 news[idx]["index"][cur+next]["reply"] = "t";
                 sum++;  cur += next;     //
                 next = news[idx]["index"][cur]["next"];
-             } 
+             }
              msg = sprintf("%2s  [%2d]  %3d   %30-s  %12s(%s)\n",
                  readflag, i+1, sum, news[idx]["index"][i]["title"],
                  news[idx]["index"][i]["author"],
                  ctime(news[idx]["index"][i]["time"])[0..9]);
-             write(msg);       
-          } 
+             write(msg);
+          }
        }
        write("\n");
        write("请选择要读的留言：(q 退出 l 重列  p 贴文 d 删去 号码进入)");
@@ -367,27 +367,27 @@ int do_makegroup(string arg)
    mapping *news;
    mapping one_news;
    string name, id;
-   
+
    if(wizhood(this_player()) != "(admin)")
       return notify_fail("你没有创建新闻组的权利！\n");
-      
+
    if(sscanf(arg, "%s %s", name, id) != 2)
      return notify_fail("请用 mkgroup 新闻组中文名 新闻组英文名\n去创建一个新的新闻组。\n");
-     
+
    news = query("news");
    if( !pointerp(news) || !sizeof(news) )
      num = 0;
    else
      num = sizeof(news);
-     
+
    if( num == BOARD_CAPACITY )
       return notify_fail("已经有太多的新闻组，请先用 rmgroup 删去一些不常用的。\n");
-  
+
    for(i=0; i<num; i++)   {
      if(news[i]["id"] == id)
       return notify_fail("该新闻组已存在。\n");
    }
-      
+
    one_news = allocate_mapping(6);
    one_news["id"] = id;
    one_news["name"] = name;
@@ -395,21 +395,21 @@ int do_makegroup(string arg)
    one_news["time"] = time();
    one_news["used"] = 0;
    one_news["maker"] = this_player()->query("name");
-   
+
    if(!num)
       news = ({ one_news });
    else
-      news += ({ one_news });    
-      
+      news += ({ one_news });
+
    set("news", news);
    tell_object(this_player(), "新闻组创建成功！\n");
-   
-   save();
-   return 1; 
-}
-  
 
-      
+   save();
+   return 1;
+}
+
+
+
 int do_rmgroup(string arg)
 {
    int  num, i, delflag;
@@ -417,45 +417,45 @@ int do_rmgroup(string arg)
    mapping one_news;
    string name, id;
    string msg;
-   
+
    if(wizhood(this_player()) != "(admin)")
       return notify_fail("你没有删新闻组的权利！\n");
-      
+
    if(!arg)
      return notify_fail("请用 rmgroup 新闻组英文名 去删一个新闻组。\n");
-     
+
    news = query("news");
    if( !pointerp(news) || !sizeof(news) )
      num = 0;
    else
      num = sizeof(news);
- 
+
    for(i=0; i<num; i++)   {
      if(news[i]["id"] == arg)  {
          if( news[i]["used"] > 0 )  {
-            msg = sprintf("%s%d%s", "目前共有", news[i]["used"], 
+            msg = sprintf("%s%d%s", "目前共有", news[i]["used"],
                "人使用"+HIC+news[i]["name"]+NOR+"新闻组，请慎重考虑！");
             write(msg);
             return 0;
         }
      }
    }
-         
-   nnews = ({ }); 
+
+   nnews = ({ });
    delflag = 0;
    for(i=0; i<num; i++)   {
      if(news[i]["id"] != arg)
         nnews += ({ news[i] });
-      else 
-        delflag = 1; 
+      else
+        delflag = 1;
    }
-   if(delflag)        
+   if(delflag)
       tell_object(this_player(), "新闻组删去成功！\n");
    else
       tell_object(this_player(), "没有这个新闻组！\n");
-     
-   set("news", nnews);    
-   save();         
+
+   set("news", nnews);
+   save();
    return 1;
 }
 
@@ -464,16 +464,16 @@ void enter_group(string line)
     object me;
     int num;
     mapping *news;
-   
+
     news = query("news");
-    
-    me = this_player(); 
+
+    me = this_player();
     if( line == "q")  {
        write("退出 " + HIG + "BBS "+NOR+"板。\n");
        return;
     }
     else if( line == "l" ) {
-       do_readgroup("board"); 
+       do_readgroup("board");
     }
     else  {
        sscanf(line, "%d", num);
@@ -484,7 +484,7 @@ void enter_group(string line)
            return;
        }
        else {
-          news[num-1]["used"] += 1; 
+          news[num-1]["used"] += 1;
           do_readnewsgroup(me, num-1);
        }
     }
@@ -496,16 +496,16 @@ int do_readgroup(string arg)
     string myid;
     int   i, num, last_read;
     string msg;
-   
-    myid = query("board_id");    
+
+    myid = query("board_id");
     last_read_time = this_player()->query("bbs_last_read/"+myid);
     news = query("news");
-    
+
     if( !pointerp(news) || !sizeof(news) )
        return notify_fail(HIG+" BBS " + NOR + "板没有任何新闻组。\n");
-       
+
     if( !arg || arg != "board") return notify_fail("指令格式：read board\n");
-   
+
     write("\n"+HIR+"=================================================================="+NOR+"\n");
     write("欢迎使用害虫俱乐部 " + HIG + "BBS " + NOR + "板！\n");
     write(HIR+"=================================================================="+NOR+"\n");
@@ -516,7 +516,7 @@ int do_readgroup(string arg)
        msg = sprintf("%2s  [%2d]  %4d    %-30s   %12s\n",
          ( news[i]["time"] > last_read ? "N" : " "),
          i+1, sizeof(news[i]["index"]), news[i]["name"], news[i]["id"]);
-       write(msg); 
+       write(msg);
     }
     write("\n请选择要阅读的新闻组：(q 退出 l 重列 号码进入)");
     input_to("enter_group");
@@ -529,32 +529,32 @@ int do_cpbboard(string arg)
     string  bb, bb_file, newsgroup;
     mapping *news, *notes, note;
     int     i, j, k;
-    
+
     if( sscanf(arg, "%s %s", bb, newsgroup) != 2 )
      return notify_fail("指令格式：cpbboard b_board newsgroup\n");
-   
-    bb_file = "/obj/board/" + bb;        
-    if( file_size(bb_file+".c") <= 0 ) 
+
+    bb_file = "/obj/board/" + bb;
+    if( file_size(bb_file+".c") <= 0 )
        return notify_fail("找不到 " + bb_file + ".c 这个文件。\n");
-    
-    news = query("news"); 
+
+    news = query("news");
    if( !pointerp(news) || !sizeof(news) )
       return 0;
-     
-   k=-1;    
+
+   k=-1;
    for(i=0; i<sizeof(news); i++)   {
       if( news[i]["id"] ==  newsgroup )  {
          k = i;
          break;
       }
-   } 
+   }
    if(k == -1)
       return notify_fail("没有 "+ newsgroup + " 这个新闻组。\n");
-      
+
     notes = bb_file->query("notes");
    if( !pointerp(notes) || !sizeof(notes) )
       return 0;
-    
+
     for(j=0; j<sizeof(notes); j++)  {
        note = allocate_mapping(7);
        note["title"] = notes[j]["title"];
@@ -564,13 +564,13 @@ int do_cpbboard(string arg)
        note["next"] = 0;
        note["used"] = 0;
        note["msg"] = notes[j]["msg"];
-       
+
        news[k]["index"] += ({ note });
     }
-    
+
     set("news", news);
     tell_object(this_player(), "拷贝完毕！\n");
-    
+
     save();
     return 1;
 }
@@ -583,7 +583,7 @@ void do_startmore(string cmd, string *text, int line, object ob, int idx, int si
         case "":
             for(i=line + 23; line<sizeof(text) && line<i; line++)
                 write(text[line] + "\n");
-            if( line>=sizeof(text) )  { 
+            if( line>=sizeof(text) )  {
            write("\n想留言吗？(q 退出 p 留言)");
            input_to("inside_group", ob, idx, sidx);
      return;
