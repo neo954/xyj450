@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //created 8-3-97 pickle
 //副将
 
@@ -89,7 +89,7 @@ LONG);
   set("force", 1000);
   set("force_factor", 25);
   setup();
- 
+
   carry_object("/d/obj/weapon/"+weapon_file)->wield();
   carry_object("/d/obj/armor/tiejia")->wear();
 }
