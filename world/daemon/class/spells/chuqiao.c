@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // transfer.c
 #include <ansi.h>
 inherit SSERVER;
 
 int cast(object me, object target)
-{   
+{
    object zhenshen;
 
    if ( me->is_fight() )
@@ -20,10 +20,10 @@ int cast(object me, object target)
 
    if( (int)me->query("max_mana") <100 )
      return notify_fail("你的法力不够！\n");
-   
+
    if( (int)me->query("combat_exp") < 30000 )
      return notify_fail("你的经验不够，灵魂出了壳怕很难回来。\n");
-   
+
    if( (int)me->query("mana") - (int)me->query("max_mana") < 50)
      return notify_fail("你的法力不足！\n");
 
@@ -52,16 +52,16 @@ int cast(object me, object target)
    me->set_temp("zhenshen", zhenshen);
    me->move("/d/death/gate");
    message_vision("四出刮起阴风，现出了$N的影子。\n", me);
-   me->apply_condition("in_hell", 1);   
-   
-  
+   me->apply_condition("in_hell", 1);
+
+
   return 1;
 }
 int help(object me)
 {
 write(@HELP
 指令格式 : cast chuqiao
- 
+
 这个指令可以让你灵魂出壳，你的魂魄则会到地狱中。
 
 使用这个指令是会相当的危险，因为这时你的魂魄在地狱中会受到各
