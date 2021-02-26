@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xiaolin1.c
 
 inherit ROOM;
@@ -20,7 +20,7 @@ set("exits", ([ /* sizeof() == 4 */
 
 set("objects", ([
                 __DIR__"npc/tufei": 4,
-                __DIR__"npc/guard": 1 
+                __DIR__"npc/guard": 1
  ]) );
 
         set("outdoors", 1);
