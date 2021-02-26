@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // EXAMPLE.c, 9-26-97 pickle
 
 /************************************************************/
@@ -84,7 +84,7 @@ void create()
 
 /************************************************************/
 
-// ********make sure your fabao has this function******** 
+// ********make sure your fabao has this function********
 // this is the function that the "ji" command looks for
 
 int ji(string target)
@@ -92,7 +92,7 @@ int ji(string target)
     object victim,me=this_player();
     int damage,ratio,mykar=me->query_kar(), dingtime, condition;
     string msg, objname=this_object()->name();
-    
+
     // sometimes due to the nature of the fabao it can only be used
     // on one person, such as in this case. a rope cannot be tied on
     // more than one person, unless you really push the logic...
@@ -123,7 +123,7 @@ int ji(string target)
     if(!living(victim))
    return notify_fail("你的目标不是活物！\n");
     if(!me->is_fighting())
-   return notify_fail("只有战斗中才能祭"+objname+"。\n");  
+   return notify_fail("只有战斗中才能祭"+objname+"。\n");
     if(victim->query("no_move"))
    return notify_fail("对方已经无暇自顾了，有必要用"+objname+"么？\n");
 
