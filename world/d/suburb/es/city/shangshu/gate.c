@@ -40,4 +40,3 @@ int valid_leave(object me,string dir)
 		me->set("marks/尚书",0);
         return ::valid_leave(me,dir);
 }
-
