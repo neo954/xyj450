@@ -36,16 +36,16 @@ void init()
 }
 
 int do_bihua(string arg)
-{     
+{
 	object ob1, ob2;
 	ob1 = this_player();
 
 	if( !arg || arg=="" ) return 0;
 
-	if ( this_object()->query_temp("busy") ) 
+	if ( this_object()->query_temp("busy") )
 		return notify_fail("每次只能有两人参加比武。\n");
 
-        if (!ob2 = present(arg,environment(ob1)) ) 
+        if (!ob2 = present(arg,environment(ob1)) )
 		return notify_fail("你想跟谁比划？\n");
 
 	remove_call_out("check");
@@ -64,7 +64,7 @@ void fighting(object ob1, object ob2)
 void check(object ob1, object ob2)
 {
 	this_object()->set_temp("busy",1);
-	command("chat 现在由" + ob1->query("name") 
+	command("chat 现在由" + ob1->query("name")
 		+ "与" + ob2->query("name") + "开始比武较艺！\n");
 	call_out("observe",1,ob1,ob2);
 }
@@ -73,22 +73,22 @@ int observe(object ob1,object ob2)
 {
 	object ob;
 
-	if(ob1->is_fighting()) 
+	if(ob1->is_fighting())
 	{
 		call_out("observe",1,ob1,ob2);
 		return 1;
 	}
 
-	if (ob1->query("kee")*100/ob1->query("max_kee") > 50 ) 
+	if (ob1->query("kee")*100/ob1->query("max_kee") > 50 )
 	{
-		command("chat " + ob1->query("name") 
+		command("chat " + ob1->query("name")
 			+ "比武战胜" + ob2->query("name") + "！\n");
 		ob = new("/d/obj/clone/money/silver");
 		ob->move(ob1);
 	}
 	else
 	{
-		command("chat " + ob2->query("name") 
+		command("chat " + ob2->query("name")
 			+ "比武战胜" + ob1->query("name") + "！\n");
 		ob = new("/d/obj/clone/money/silver");
 		ob->move(ob2);
