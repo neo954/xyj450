@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit NPC;
 int custom();
