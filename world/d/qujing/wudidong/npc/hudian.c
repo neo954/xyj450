@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // hudian.c
 // created by mes, updated 6-20-97 pickle
 #include <ansi.h>
@@ -45,7 +45,7 @@ void greeting(object me)
   if( !me || environment(me) != environment() ) return;
 
   myspells=me->query_skill("spells");
-  mykar=me->query_kar(); 
+  mykar=me->query_kar();
   diff=40-mykar;
 
   if(me->query("family/family_name") == "陷空山无底洞")
@@ -67,7 +67,7 @@ void greeting(object me)
       me->delete_temp("apply/name");
       me->delete_temp("apply/id");
       me->delete_temp("apply/short");
-      me->delete_temp("apply/long"); 
+      me->delete_temp("apply/long");
       kill_ob(me);
       return;
     }
