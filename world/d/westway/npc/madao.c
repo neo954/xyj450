@@ -147,4 +147,3 @@ void killing(object who)
     command("kill " + who->query("id"));
   }
 }
-
