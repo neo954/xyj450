@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit F_SAVE;
 
@@ -25,14 +25,14 @@ int main(object me, string arg)
           return notify_fail("你不能删除文档！\n");
         else argn=3;
         }
-     else 
+     else
         return notify_fail("指令格式：doc [<month> [<number>]] [<year>]\n");
-   
-   if (argn==3) { 
+
+   if (argn==3) {
      option=3;
      dirname=dirname+sprintf("%d",year)+"/";
      }
-   if (argn==2) 
+   if (argn==2)
      if (number <1996) {
         dirname=dirname+ctime(time())[20..23] + "/";
         option=3;
@@ -56,11 +56,11 @@ int main(object me, string arg)
    cont_num->set("file_name", dirname+"month.number");
    cont_num->restore();
    if (!objectp(cont_num) )
-     return notify_fail("文档读取失败！\n"); 
+     return notify_fail("文档读取失败！\n");
 
    if (option==1) {
      file="";
-     for (i=1;i<=12;i++) 
+     for (i=1;i<=12;i++)
      if (cont_num->query(mon[i-1])) {
         file+=chinese_number(i)+"月：总共"
 +chinese_number(cont_num->query(mon[i-1]))
@@ -76,7 +76,7 @@ int main(object me, string arg)
      return 1;
      }
 
-   if (month<=0 || month >=13) return notify_fail("要读的文档不存在！\n"); 
+   if (month<=0 || month >=13) return notify_fail("要读的文档不存在！\n");
    nummonth=cont_num->query(mon[month-1]);
 
    if( option==2 ) {
@@ -92,7 +92,7 @@ int main(object me, string arg)
      }
 
    if (!nummonth || nummonth < number)
-     return notify_fail("要读的文档不存在！\n"); 
+     return notify_fail("要读的文档不存在！\n");
    document=new("/obj/not.c");
    document->set("file_name", dirname+ sprintf("%s/doc%d.%d",mon[month-1],month,number) );
    document->restore();
@@ -112,11 +112,11 @@ int main(object me, string arg)
         sscanf(srcstr, "[%d]%s\n%s", j, file, srcstr);
         if (i >number) file=sprintf("[%3d]", i-1)+file+"\n";
         else file=sprintf("[%3d]", i)+file+"\n";
-        if (i!=number) dststr+=file; 
+        if (i!=number) dststr+=file;
         }
      content->set("msg", dststr);
      content->save();
-     if (nummonth==number) 
+     if (nummonth==number)
         rm(dirname+sprintf("%s/doc%d.%d.o",mon[month-1],month,number));
      else
      for (i=number+1;i<=nummonth;i++) {
@@ -126,7 +126,7 @@ int main(object me, string arg)
         srcstr=document->query("msg");
         sscanf(srcstr, "[%d]%s\n%s", j, file, srcstr);
         dststr=sprintf("[%3d]", i-1)+file+"\n"+srcstr;
-        document->set("file_name", dirname+sprintf("%s/doc%d.%d",mon[month-1],month,i-1));  
+        document->set("file_name", dirname+sprintf("%s/doc%d.%d",mon[month-1],month,i-1));
         document->set("msg", dststr);
         document->save();
         }
@@ -157,7 +157,7 @@ doc 5 1997
 Example: 阅读某篇文档：
 doc 5 1
 doc 5 1 1997
- 
+
 HELP
 );
         return 1;
