@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 10/05/1997
 // wu??.c 武进士
 
@@ -45,7 +45,7 @@ void init()
   add_action("do_bian", "bian");
 
   if (me->query("current_player")=="none of us")
-    me->reset_me(me);    
+    me->reset_me(me);
   me->restore();
   me->fully_recover(me);
   me->setup();
