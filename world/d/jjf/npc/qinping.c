@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //qinping.c
 //created 5-10-97 pickle
 
@@ -48,7 +48,7 @@ void create()
         "兵器": (: try_me :),
         "衣甲": (: try_me :)
 ]) );
-  
+
   create_family("将军府", 3, "蓝");
   carry_object("/d/obj/armor/tenjia")->wear();
   carry_object("/d/obj/weapon/spear/tieqiang")->wield();
@@ -77,7 +77,7 @@ void init()
 int do_yao(string arg)
 {
   object me=this_player(), npc=this_object(), obj;
-  
+
   if((string)me->query("family/family_name")!="将军府")
     return notify_fail(CYN"秦平道：对不住，将军府衣甲兵器只发给本派子弟。\n"NOR);
   if( !arg ||
@@ -100,7 +100,7 @@ int do_yao(string arg)
    && arg != "waist"))
     return notify_fail(CYN"秦平道：对不住，你要的东西我这里没有。\n"NOR);
     if(count[arg]>=total)
-   return notify_fail(CYN"秦平道：对不住，你要的东西我已经发完了。\n"NOR); 
+   return notify_fail(CYN"秦平道：对不住，你要的东西我已经发完了。\n"NOR);
     if (arg == "body"
      || arg == "head"
      || arg == "feet"
