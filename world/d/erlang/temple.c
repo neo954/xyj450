@@ -51,5 +51,3 @@ string look_zi()
   }
   return str;
 }
-
-
