@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //created 8-8-97 pickle
 //罗春
- 
+
 inherit NPC;
 
 void create()
@@ -46,10 +46,10 @@ LONG);
   set("force", 2000);
   set("max_force", 1500);
   set("force_factor", 20);
- 
+
   create_family("将军府", 2, "蓝");
   setup();
- 
+
   carry_object("/d/obj/weapon/spear/tieqiang")->wield();
   carry_object("/d/obj/armor/tiejia")->wear();
 }
