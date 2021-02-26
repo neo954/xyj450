@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //fabao-road2.c
 inherit ROOM;
 
@@ -15,14 +15,14 @@ void create ()
 中一阵狂跳，不由得加快了脚步。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      //"out" : __DIR__"guangchang",
      "east" : __DIR__"fabao-road1",
      "west" : __DIR__"fabao-room",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
