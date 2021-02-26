@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // snoop.c
 
 #include <ansi.h>
@@ -33,7 +33,7 @@ else if(query_snooping(me)) snoop(me);
 
    ob = find_player(arg);
    if(!ob) ob = find_living(arg);
-   
+
    if(!ob) ob = LOGIN_D->find_body(arg);
    /* added by mon. 2/23/97 */
 
@@ -44,14 +44,14 @@ else if(query_snooping(me)) snoop(me);
      return notify_fail("你没有监听" + ob->name() + "所收听讯息的权利。\n");
 
    if( me==ob ) return notify_fail("请用 snoop none 解除监听。\n");
-     
+
    snoop(me, ob);
    write("你现在开始窃听" + ob->name(1) + "所收到的讯息。\n");
    if( userp(ob) ) log_file("SNOOP_PLAYER",
      sprintf("%s(%s) snoops %s on %s.\n", me->name(1), geteuid(me), ob->name(1),
         ctime(time()) ) );
 // if( wizardp(ob) && wizhood(me) != "(admin)")
-if( wizardp(ob)) 
+if( wizardp(ob))
      tell_object(ob, HIW + me->name(1) + "开始监听你所收到的讯息。\n" + NOR);
 
    return 1;
