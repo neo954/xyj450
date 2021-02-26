@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -13,14 +13,14 @@ void create ()
 雕着一些山水人物。南面有一座高台。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "southup" : __DIR__"xunzhen",
      "north" : __DIR__"eastway2",
      "west" : __DIR__"guangchang",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
