@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // finger.c
 
 inherit F_CLEAN_UP;
@@ -35,13 +35,13 @@ int help(object me)
 指令格式： finger
            finger [使用者英文代号]
            finger [使用者英文代号]@Mudname
- 
+
 这个指令，如果没有指定使用者姓名，会显示出所有正在线上玩家
 的连线资料。反之，则可显示有关某个玩家的连线，权限等资料。
- 
+
 see also : who, mudlist
 HELP
     );
     return 1;
 }
- 
+
