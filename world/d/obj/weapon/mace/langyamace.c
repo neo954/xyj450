@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //langyamace.c
 //created 5-30-97 pickle
 
@@ -23,7 +23,7 @@ void create()
     set("wield_msg", "$N“呼”的一声抽出一柄$n，恶狠狠地盯着周围的人！\n");
     set("unwield_msg", "$N小心翼翼地收起$n，差点被倒刺伤着自己。\n");
   }
-  
+
   init_mace(35);
   setup();
 }
