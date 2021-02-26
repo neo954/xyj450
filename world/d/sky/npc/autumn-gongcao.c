@@ -1,10 +1,10 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 秋值功曹
 //created 4-8-97 pickle
 inherit NPC;
- 
+
 void create()
 {
         set_name("日值功曹", ({ "rizhi gongcao", "ri", "day",
@@ -33,7 +33,7 @@ void create()
 
         set("eff_dx", 250000);
         set("nkgain", 350);
-   
+
    set_skill("spells", 100);
         set_skill("unarmed",120);
         set_skill("parry",120);
