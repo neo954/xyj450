@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // goto.c
 // modified by tool on 96/10/05
 
@@ -25,7 +25,7 @@ int main(object me, string arg)
 
         obj = find_player(arg);
         if(!obj) obj = find_living(arg);
-       
+
    if(!obj) obj = LOGIN_D->find_body(arg);
    /* added by mon. 2/23/97 */
    if(!obj) obj = find_object(arg);
@@ -71,7 +71,7 @@ int main(object me, string arg)
         {
           ridemsg = ridee->query("ride/msg")+"着"+ridee->name();
      ridee->move(obj);
-   }  
+   }
    else
      ridemsg = "";
         me->move(obj);
