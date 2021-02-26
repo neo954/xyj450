@@ -1,9 +1,9 @@
 // flower_leaf.c
- 
+
 #include <weapon.h>
- 
+
 inherit THROWING;
- 
+
 void create()
 {
 	set_name("花瓣", ({ "flower leaf", "hua ban", "ban" }) );
