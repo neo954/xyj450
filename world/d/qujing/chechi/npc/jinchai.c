@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 24 1997
 
 inherit NPC;
@@ -61,7 +61,7 @@ void get_fainted (object who, object me)
   object *objs = all_inventory(who);
   int i = sizeof (objs);
   message_vision ("$N对$n神秘地一笑。\n\n",me,who);
-  who->unconcious();    
+  who->unconcious();
   while (i--)
   {
     object obj = objs[i];
