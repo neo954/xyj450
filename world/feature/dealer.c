@@ -13,8 +13,8 @@ string is_vendor_good(string arg)
 	object ob;
 	int i;
 
-	if (arrayp(goods = query("vendor_goods"))) 
-		for (i = 0; i < sizeof(goods); i++) 
+	if (arrayp(goods = query("vendor_goods")))
+		for (i = 0; i < sizeof(goods); i++)
 			if (goods[i]->id(arg))
 				return goods[i];
 	return "";
@@ -34,8 +34,8 @@ int do_value(string arg)
 	value = ob->query("value");
 	if (value < 1)
 		write(ob->query("name") + "一文不值！\n");
-	else 
-		write(ob->query("name") + "值" + 
+	else
+		write(ob->query("name") + "值" +
 		MONEY_D->price_str(value * 70 / 100) + "。\n");
 	return 1;
 }
@@ -54,7 +54,7 @@ int do_sell(string arg)
 	if (stringp(ob->query("no_drop")))
 		return notify_fail("这样东西不能卖。\n");
 
-	if (is_vendor_good(arg) != "") 
+	if (is_vendor_good(arg) != "")
 		return notify_fail("卖给你好不好？\n");
 
 	if (ob->query("food_supply"))
@@ -67,7 +67,7 @@ int do_sell(string arg)
 	if (value < 30)
 		write(ob->query("name") + "一文不值！\n");
 	else {
-		message_vision("$N卖掉了一" + ob->query("unit") + 
+		message_vision("$N卖掉了一" + ob->query("unit") +
 		ob->query("name") + "给$n。\n", this_player(), this_object());
 		MONEY_D->pay_player(this_player(), value * 70 / 100);
 		if (value < 50)
@@ -90,7 +90,7 @@ int do_list()
 		return notify_fail("目前没有可以卖的东西。\n");
 	
 	printf("你可以向%s购买下列物品：\n", query("name"));
-	for (i = 0; i < sizeof(inv); i++) 
+	for (i = 0; i < sizeof(inv); i++)
 		if (!inv[i]->query("equipped") && !inv[i]->query("money_id"))
 		printf("%30-s：%s\n", inv[i]->short(),
 		MONEY_D->price_str(inv[i]->query("value") * 6 / 5));
@@ -108,7 +108,7 @@ int do_buy(string arg)
 	object ob;
 //	mapping fam;
 
-//      if ( (fam = this_player()->query("family")) && fam["family_name"] == "丐帮" ) 
+//      if ( (fam = this_player()->query("family")) && fam["family_name"] == "丐帮" )
 //		return notify_fail("你是个穷叫化，买什麽东西！\n");
 	
 	if (!arg)
@@ -138,7 +138,7 @@ int do_buy(string arg)
 		return notify_fail("您的零钱不够了，银票又没人找得开。\n");
 	default:
         	set_temp("busy", 1);
-		message_vision("$N从$n那里买下了一" + ob->query("unit") + 
+		message_vision("$N从$n那里买下了一" + ob->query("unit") +
 		ob->query("name") + "。\n", this_player(), this_object());
 		ob->move(this_player());
 	}
