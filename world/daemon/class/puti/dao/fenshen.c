@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // fenshen.c 分身术
 
 inherit SSERVER;
 
 int cast(object me, object target)
 {
-   int fenshen_time; //this time is the time interval fenshen can be used again. 
+   int fenshen_time; //this time is the time interval fenshen can be used again.
    object soldier;
 
    if( !me->is_fighting() )
@@ -19,7 +19,7 @@ int cast(object me, object target)
      return notify_fail("你刚刚分过身，再分身很危险！\n");
      //hehe...at least 1 minute between 2 fenshens to
      //prevent ppls using too many 假身 to kill top masters...weiqi.
-   
+
    if( (int)me->query("mana") <4*(int)me->query_skill("spells"))
      return notify_fail("你的法力不够了！\n");
 
