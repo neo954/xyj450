@@ -1,5 +1,5 @@
 // Room: /city/nandajie2.c
-// YZC 1995/12/04 
+// YZC 1995/12/04
 // CLEANSWORD 1996/2/2
 
 inherit ROOM;
