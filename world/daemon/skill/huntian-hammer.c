@@ -94,4 +94,3 @@ notify_fail("你的内力或气不够，没有办法练习混天锤。\n");
 int valid_effect(object me, object weapon, string name, int skill)
 {
 }
-
