@@ -98,4 +98,3 @@ int prevent_learn(object me, string skill)
   }
   return 0;
 }
-
