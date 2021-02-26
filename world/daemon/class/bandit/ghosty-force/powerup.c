@@ -30,4 +30,3 @@ void remove_effect(object me, int amount)
         me->delete_temp("powerup");
         tell_object(me, "你的无坎真阴运行完毕，全身没了那种轻飘飘的感觉。\n");
 }
-
