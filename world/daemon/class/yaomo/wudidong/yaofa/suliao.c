@@ -45,5 +45,3 @@ int cast(object me, object target)
    message_vision(msg, me);
         return 1;
 }
-
-
