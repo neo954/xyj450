@@ -1,6 +1,6 @@
 //mac's tiankuang.c
-// 
-// 
+//
+//
 
 #include <room.h>
 inherit ROOM;
