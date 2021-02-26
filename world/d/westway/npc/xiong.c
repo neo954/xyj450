@@ -63,4 +63,3 @@ void accept_kill(object me)
         return;
 
 }
-
