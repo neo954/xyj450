@@ -12,7 +12,7 @@ void create()
         set("age", 34);
         set("long",
 "西门吹雪乃是当代绝顶高手之一．剑法已经到达了＂无剑＂的境界．．\n"
-               ); 
+               );
 
         set("attitude", "peaceful");
         set("combat_exp", 10000000);
@@ -42,8 +42,8 @@ void create()
         set("force_factor", 30);
 
         set("inquiry", ([
-                "拜师": 
-"我向来有个规矩，凡是想拜我为师的，得接我三招不死，你想试试(accept 
+                "拜师":
+"我向来有个规矩，凡是想拜我为师的，得接我三招不死，你想试试(accept
 test)？\n",
 		"apprentice" :
 "我向来有个规矩，凡是想拜我为师的，得接我三招不死，你想试试(accept
@@ -91,33 +91,33 @@ int do_accept(string arg)
 
         if( arg== "test" ) {
                 say("\n西门吹雪点了点头，说道：很好，这是第一招....\n\n");
-                COMBAT_D->do_attack(this_object(), this_player(), 
+                COMBAT_D->do_attack(this_object(), this_player(),
 query_temp("weapon"));
-                if( (int)this_player()->query("kee") < 0 
+                if( (int)this_player()->query("kee") < 0
                 || !present(this_player(), environment())) {
-                        
+
 say("西门吹雪叹了口气，说道：连第一招都撑不过，真是自不量力....\n");
                         return 1;
 		}
                 say("\n西门吹雪说道：这是第二招....\n\n");
-                COMBAT_D->do_attack(this_object(), this_player(), 
+                COMBAT_D->do_attack(this_object(), this_player(),
 query_temp("weapon"));
-                if( (int)this_player()->query("kee") < 0 
+                if( (int)this_player()->query("kee") < 0
                 || !present(this_player(), environment())) {
-                        
+
 say("西门吹雪「哼」地一声，说道：便是有这许多不怕死的家伙....\n");
                         return 1;
                 }
                 say("\n西门吹雪说道：第三招来了....\n\n");
-                COMBAT_D->do_attack(this_object(), this_player(), 
+                COMBAT_D->do_attack(this_object(), this_player(),
 query_temp("weapon"));
-                if( (int)this_player()->query("kee") < 0 
+                if( (int)this_player()->query("kee") < 0
                 || !present(this_player(), environment())) {
-                        
+
 say("西门吹雪叹道：可惜，难道我一身武功竟无传人....\n");
                         return 1;
                 }
-                
+
 say("\n西门吹雪哈哈大笑，说道：今日终於觅得一个可造之才！\n\n");
                 command("recruit " + this_player()->query("id") );
                 return 1;
