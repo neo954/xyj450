@@ -39,4 +39,3 @@ int do_dissolve(string arg)
    add_amount(-1);
    return 1;
 }
-
