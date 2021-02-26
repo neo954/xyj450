@@ -41,4 +41,3 @@ void says (object me)
   remove_call_out ("says");
   call_out("says",random(40),me);
 }
-
