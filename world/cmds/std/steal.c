@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // steal.c
 
 #include <ansi.h>
@@ -73,7 +73,7 @@ private void compelete_steal(object me, object victim, object ob, int sp, int dp
 
    if( !living(victim) || (random(sp+dp) > dp) ) {
      if( !ob->move(me) ) {
-        tell_object(me, "你摸到一" + ob->query("unit") + ob->name() 
+        tell_object(me, "你摸到一" + ob->query("unit") + ob->name()
           + "，可是对你而言太重了，不得不放弃。\n");
         return;
      }
