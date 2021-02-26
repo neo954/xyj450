@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // archery.c
 
 #include <weapon.h>
@@ -13,7 +13,7 @@ varargs void init_archery(int damage, int flag)
    if( clonep(this_object()) ) return;
 
    set("weapon_prop/damage", damage);
-   set("flag", flag); 
+   set("flag", flag);
 }
 
 void setup()
