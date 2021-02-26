@@ -10,4 +10,3 @@ void create()
 	set("unit", "把");
 	set("weight", 10);
 }
-
