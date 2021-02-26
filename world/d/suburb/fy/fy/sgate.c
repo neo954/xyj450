@@ -54,4 +54,3 @@ int valid_leave(object me, string dir)
 	}
 	else return 1;
 }
-
