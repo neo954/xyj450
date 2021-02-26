@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //living.c
 
 inherit ROOM;
@@ -16,12 +16,12 @@ LONG);
   set("item_desc", ([ /* sizeof() == 2 */
   "schedules" : @LONG
 
-jobs                  dates (of every month) responsible person 
-monthly meeting       decided by the head    the head 
-the table of contents the 1st                the acting chief 
-the contents          the 3rd                the acting chief 
-proofreading          the 5th                proof readers 
-publishing            the 7th                techniqcal supports 
+jobs                  dates (of every month) responsible person
+monthly meeting       decided by the head    the head
+the table of contents the 1st                the acting chief
+the contents          the 3rd                the acting chief
+proofreading          the 5th                proof readers
+publishing            the 7th                techniqcal supports
 详见：http://www.qucis.queensu.ca/home/guo/fxtd/schedule.html
 
 LONG,
