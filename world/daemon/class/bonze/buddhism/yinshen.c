@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // yinshen.c 隐身术
 
 inherit SSERVER;
@@ -10,7 +10,7 @@ inherit SSERVER;
 int cast(object me)
 {
    int howlong;
-   
+
    if((int)me->query_skill("spells") < 100)
      return notify_fail("你还没学会隐身法。。。\n");
 
@@ -39,7 +39,7 @@ int cast(object me)
 
    me->set("env/invisibility", 1);
    message_vision(HIW"\n只见一道白光闪过，$N踪迹皆无。\n\n"NOR, me);
-   
+
    return 5+random(5);
 }
 
@@ -48,14 +48,14 @@ void free(object user, int howlong)
         if(!user) return;
    if (!user->query("env/invisibility")) return;
    if (user->query_temp("yinshentime") - howlong) {
-     user->set_temp("yinshentime", 
+     user->set_temp("yinshentime",
         user->query_temp("yinshentime") - howlong);
-     call_out("free", user->query_temp("yinshentime"), 
+     call_out("free", user->query_temp("yinshentime"),
         user, user->query_temp("yinshentime"));
      return;
      }
    user->delete_temp("yinshentime");
-   user->set("env/invisibility", 0);      
+   user->set("env/invisibility", 0);
    user->save();
    message_vision(HIW"\n白光闪过之后，$N又现出了身形。\n\n"NOR, user);
    return;
