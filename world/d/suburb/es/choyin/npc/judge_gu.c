@@ -13,7 +13,7 @@ void create()
 	set("int", 25);
 	set("per", 27);
 	set("long", @LONG
-衙役精明强干, 满脸正气. 
+衙役精明强干, 满脸正气.
 LONG
 );
 	set("combat_exp", 8000);
