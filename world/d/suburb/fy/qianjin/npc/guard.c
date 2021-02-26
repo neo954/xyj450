@@ -1,7 +1,7 @@
 inherit NPC;
- 
+
 void do_drink();
- 
+
 void create()
 {
         seteuid(getuid());
