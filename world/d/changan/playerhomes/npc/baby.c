@@ -185,4 +185,3 @@ void relaying (string msg)
 {//execute the order.
         command (msg);
 }
-
