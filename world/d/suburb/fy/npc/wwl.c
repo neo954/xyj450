@@ -10,7 +10,7 @@ void create()
 	set("title", "桃花岛第二代弟子");
 	set("gender", "女性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他就是桃花岛的才女欣云，后来被风云给骗去了。");
         setup();
 	
