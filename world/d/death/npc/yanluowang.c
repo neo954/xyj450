@@ -690,4 +690,3 @@ int round_18(object who)
         call_out("winning", 3, who);
         return 1;
 }
-
