@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /*
  * File    : gfinger_a.c
  * Creator : Pinkfish@Discworld
@@ -43,6 +43,6 @@ void incoming_request(mapping info)
          ((!mudinfo || undefinedp(mudinfo["MUDNAME"]))?
            upper_case(info["NAME"]):mudinfo["MUDNAME"])+
            "告诉你：\n"+info["MSG"],ob);
-     }      
+     }
    }
 }
