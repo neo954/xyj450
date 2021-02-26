@@ -10,7 +10,7 @@ void create()
 	set("nickname", HIY"观日剑"NOR);
 	set("gender", "男性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他就是武当首侠「温火」。\n");
 
 	setup();
