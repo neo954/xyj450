@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4/11/1997
 // Room: south2
 
@@ -25,6 +25,6 @@ LONG);
         "northup"   : __DIR__"south1",
         "southdown" : __DIR__"south3",
       ]));
-      
+
   setup();
 }
