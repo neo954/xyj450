@@ -17,10 +17,10 @@ LONG
                 "north"          : "/d/suburb/es/city/nroad2",
                 "enter"          : "/d/suburb/es/city/northdoor" ]) );
 
-        set("outdoors", "city"); 
+        set("outdoors", "city");
         create_door("enter", "城门", "out" );
         setup();
-        replace_program(ROOM); 
+        replace_program(ROOM);
 }
 void init()
 {
@@ -28,6 +28,6 @@ void init()
 }
 void do_yell()
 {
-	if(!query("exit/up")) 
+	if(!query("exit/up"))
 	   set("exits/up",__DIR__"room");
 }
