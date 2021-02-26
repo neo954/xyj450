@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat
 
 inherit NPC;
@@ -43,12 +43,12 @@ void init ()
       interactive(who))
   {
     object where = environment(me);
-    
+
     if (! where->valid_player(who))
       message_vision ("$N对$n说道：这里是赛场，"+RANK_D->query_respect(who)+
                       "不可随便乱闯也。\n",me,who);
-    else 
-      command ("hi "+who->query("id")); 
+    else
+      command ("hi "+who->query("id"));
     if (who->query("env/wimpy") > 0)
     {
       who->set("env/wimpy",0);
