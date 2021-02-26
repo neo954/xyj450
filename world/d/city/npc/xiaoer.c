@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit F_VENDOR_SALE;
 
@@ -57,7 +57,7 @@ RANK_D->query_respect(ob)
 
 int accept_object(object who, object ob)
 {
-   if (ob->query("money_id") && ob->value() >= 300) 
+   if (ob->query("money_id") && ob->value() >= 300)
    {
      tell_object(who, "小二一哈腰，说道：多谢您老，客官请上楼歇息。\n");
      who->set_temp("rent_paid",1);
