@@ -1000,11 +1000,3 @@ int do_my()
    write(msg+"\n\n");
    return 1;
 }
-
-
-
-
-
-
-
-
