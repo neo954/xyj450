@@ -107,4 +107,3 @@ int do_chop(string arg)
          write("你要砍开什么？\n");
                 return 1;
 }
-
