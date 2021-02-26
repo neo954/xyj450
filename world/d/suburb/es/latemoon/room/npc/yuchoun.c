@@ -51,4 +51,3 @@ void greeting(object ob)
        command("close door");
        return;
 }
-
