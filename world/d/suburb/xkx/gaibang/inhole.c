@@ -58,5 +58,3 @@ void close(object room)
 	message("vision","只见小木门乒地关上了。\n", room);
 	room->delete("exits/down");
 }	
-
-
