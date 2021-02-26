@@ -26,4 +26,3 @@ void create()
         add_money("coin", 50);
         carry_object(__DIR__"obj/yaochu")->wield();
 }
-
