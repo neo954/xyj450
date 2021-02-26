@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/nanhai/zhulin.c
 
 #include <ansi.h>
@@ -32,7 +32,7 @@ void init()
 
         object me=this_player();
 
-        if ( (me->query_temp("aware_of_jinguzhou")) && 
+        if ( (me->query_temp("aware_of_jinguzhou")) &&
      (me -> query_kar() > 20) ) {
                 tell_object(me, HIY"你心中一动，似乎有所觉悟。\n"NOR);
         }
@@ -61,7 +61,7 @@ int do_search (string arg)
        message_vision ("$N眼睛一亮：紧箍咒！\n",me);
        if (me->query_temp("aware_of_jinguzhou"))
      me -> delete_temp("aware_of_jinguzhou");
-       return 1;   
+       return 1;
    }
 
    message_vision ("$N蹲下去在竹丛里仔细地翻来翻去。\n",me);
