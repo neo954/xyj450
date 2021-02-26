@@ -40,7 +40,7 @@ int give_quest(string arg)
 	me = this_player();
 // Let's see if this player is a ghost
         local = localtime(time()*60);
-        t = local[2] * 60 + local[1];       
+        t = local[2] * 60 + local[1];
 	if( t < 240 || t > 1380)
 	{
 		write("夜深了．．还要什么任务！！\n");
@@ -94,7 +94,7 @@ int give_quest(string arg)
 	me->set("task_time", (int) time()+(int) timep);
 	if((int)me->query_temp("quest_number") < 5)
 	me->add_temp("quest_number",1);
-	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)：%s", 
+	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)：%s",
 	me->query("name"),me->query("id"),sysmsg));
 
 return 1;
