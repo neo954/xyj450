@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4/11/1997
 // room: cuiyun3
 
@@ -58,7 +58,7 @@ int do_search (string arg)
   {
     message_vision ("$N道行不够，也在枯树枝里装模作样地翻来翻去。\n",me);
     return 1;
-  }  
+  }
 
   if (room_busy)
   {
@@ -84,7 +84,7 @@ int do_search (string arg)
     message_vision ("\n$N看看四下没人注意赶紧把芭蕉骨揣进怀里。\n",me);
     no_bone = 1;
     call_out ("reset_no_bone",3600);
-    return 1;   
+    return 1;
   }
 
   message_vision ("$N认真地在枯树枝里翻来翻去找芭蕉骨。\n",me);
