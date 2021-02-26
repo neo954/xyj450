@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 15 1997
 
 inherit ITEM;
@@ -88,7 +88,7 @@ int do_command (string arg)
   }
 */
   message_vision (msg,who);
-  msg = replace_string (msg,"$N",who->name());  
+  msg = replace_string (msg,"$N",who->name());
   tell_room(environment(me),str+msg);
   return 1;
 }
