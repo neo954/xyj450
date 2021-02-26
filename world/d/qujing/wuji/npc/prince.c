@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 
@@ -31,7 +31,7 @@ void create()
   set("force", 1000);
   set("force_factor", 45);
   setup();
- 
+
   carry_object("/d/obj/weapon/blade/jindao")->wield();
   carry_object("/d/obj/armor/jinjia")->wear();
 }
@@ -66,7 +66,7 @@ void refuse_it (object me, object who, object ob)
 void accept_it (object me, object who, object ob)
 {
   message_vision ("$N看见金厢白玉圭脸色一变，禁不住叫道："+
-                  "“恩人！此乃吾家珍国宝也！”\n",me,ob);  
+                  "“恩人！此乃吾家珍国宝也！”\n",me,ob);
   message_vision ("$N涕泪皆下。\n",me);
   call_out ("give_jing",2,me,who);
   destruct (ob);
@@ -75,7 +75,7 @@ void accept_it (object me, object who, object ob)
 void give_jing (object me, object who)
 {
   object ob = new ("/d/qujing/wuji/obj/jing");
-  message_vision ("\n$N对$n说道：“恩人，我身边亦有一宝，请笑纳！”\n",me,who);   message_vision ("\n说着$N取出一匣子，拿出一小瓶来。\n",me,who);  
+  message_vision ("\n$N对$n说道：“恩人，我身边亦有一宝，请笑纳！”\n",me,who);   message_vision ("\n说着$N取出一匣子，拿出一小瓶来。\n",me,who);
   ob->move(me);
   me->command_function("give "+who->query("id")+" jing");
 }
