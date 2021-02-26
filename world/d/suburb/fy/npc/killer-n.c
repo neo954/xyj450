@@ -85,6 +85,6 @@ void greeting(object ob)
 		command("say 你这家伙不要跑，让大爷我宰了你！！！\n");
 		me->set_leader(ob);
 		remove_call_out("kill_ob");
-		call_out("kill_ob", 1, ob); 
-	}       
+		call_out("kill_ob", 1, ob);
+	}
 
