@@ -1,9 +1,9 @@
 inherit NPC;
- 
+
 void cancel_give();
 void start_give();
 void set_flag();
- 
+
 void create()
 {
         seteuid(getuid());
@@ -38,7 +38,7 @@ TEXT
         setup();
         carry_object("/obj/cloth")->wear();
 }
- 
+
 void relay_say(object me, string str)
 {
         if ((str == "必有妖孽")) {
@@ -48,21 +48,21 @@ void relay_say(object me, string str)
                 return;
         }
 }
- 
+
 void start_give()
 {
         command("say 国之将亡.....");
 }
- 
+
 void cancel_give()
 {
         command("sigh");
 }
- 
+
 void set_flag()
 {
     object ob;
- 
+
     if( !objectp(ob = query_temp("last_asker")) ) return;
     ob->set_temp("elder_info",1);
 	return;
