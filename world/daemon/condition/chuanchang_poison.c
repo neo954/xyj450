@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // chuanchang_poison.c
 
 #include <ansi.h>
 
 int update_condition(object me,int duration)
 {
-   int damage_kee = me->query("max_kee")/10; 
+   int damage_kee = me->query("max_kee")/10;
    int damage_sen = me->query("max_sen")/10;
    int myyf = me->query_skill("yaofa", 1)/10;
    int ff = me->query("force")/100;
