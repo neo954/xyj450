@@ -10,7 +10,7 @@ void create()
 //	set("title", "星宿淫贼");
 	set("nickname", "赛昆仑");
         set("age", 38);
-        set("long", 
+        set("long",
              "采花子是星宿派的一个小喽罗，武功虽不好，但生性淫邪，"
 	     "经常奸淫良家妇女，是官府通缉的犯人，故而星宿派名义上"
 	     "也不承认有这个弟子。\n");
@@ -61,7 +61,7 @@ void greeting(object me)
         mapping myfam;
         myfam = (mapping)me->query("family");
 
-        if (myfam && myfam["family_name"] == "星宿派") 
+        if (myfam && myfam["family_name"] == "星宿派")
           command("say 我昨天从山下捉了个小妞来，水灵极了，就关在我的逍遥洞里"
 		+"，你要不要进去试试？");
 	me->set_temp("marks/花",0);
@@ -81,7 +81,7 @@ int accept_object(object me, object obj)
         mapping myfam;
         myfam = (mapping)me->query("family");
 
-        if (!myfam || myfam["family_name"] != "星宿派") 
+        if (!myfam || myfam["family_name"] != "星宿派")
 	  command("say 少跟我套近乎。");
 	else {
 	  if (!obj->query("money_id")) {
