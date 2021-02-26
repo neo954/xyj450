@@ -134,4 +134,3 @@ void use_poison()
         if( random(query("combat_exp")) > (int)ob->query("combat_exp") )
                 ob->apply_condition("rose_poison", 20);
 }
-
