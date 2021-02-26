@@ -18,7 +18,7 @@ LONG
         "蔓藤": "蔓藤长满了城墙，你似乎可以试着爬(climb)上去。\n"
         ]) );
         set("outdoors", "chuenyu");
-        
+
         setup();
 }
 
