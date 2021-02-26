@@ -48,4 +48,3 @@ int do_search(string arg)
         message_vision("$N在水中忙了半天，结果一无所获。\n",me);		
 	return 1 ;
 }
-
