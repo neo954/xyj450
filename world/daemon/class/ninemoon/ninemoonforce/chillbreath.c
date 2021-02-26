@@ -44,4 +44,3 @@ int exert(object me, object target, int amount)
 
 	return 1;
 }
-
