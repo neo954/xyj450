@@ -58,4 +58,3 @@ NOR, env);
 
         return 1;
 }
-
