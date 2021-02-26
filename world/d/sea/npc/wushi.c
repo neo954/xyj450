@@ -27,4 +27,3 @@ set("long","一个穿着盔甲的大虾米，正走来走去维护秩序．\n");
         carry_object("/d/obj/armor/tiejia")->wear();
 
 }
-
