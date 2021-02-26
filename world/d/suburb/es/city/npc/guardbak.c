@@ -113,13 +113,13 @@ int do_kill(string arg)
 int accept_object(object who, object ob)
 {
 //        if ( (string)ob->name() != "官府通令")
-	if ( ob->query("id") != "token") 
+	if ( ob->query("id") != "token")
         {
                 command("say 这是什么东西啊！你想偷渡呀？");
                 return 0;
         }
 
-//        if ( !who->query("marks/京师") ) 
+//        if ( !who->query("marks/京师") )
 //	{
                 say("京师守城兵连忙说道：原来是官府中人，您请出城。\n");
                 who->set("marks/令牌",1);
