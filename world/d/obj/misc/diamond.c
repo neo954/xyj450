@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // goldring.c 金戒指
 
 #include <armor.h>
@@ -20,4 +20,4 @@ void create()
      set("armor_prop/armor", 1);
    }
    setup();
-}   
+}
