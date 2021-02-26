@@ -26,7 +26,7 @@ LONG
 
         setup();
 }
- 
+
 void init()
 {
 	add_action("do_open", "open");
