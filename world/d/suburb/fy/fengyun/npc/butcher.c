@@ -45,11 +45,11 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) return;
         switch( random(4) ) {
                 case 2:
-                        say( "大胡子咧开大嘴, 笑着道：这位"  
+                        say( "大胡子咧开大嘴, 笑着道：这位"
                                 + RANK_D->query_respect(ob)
                                 + "，要买肉是吗? \n");
                         break;
         }
 }
 
- 
+
