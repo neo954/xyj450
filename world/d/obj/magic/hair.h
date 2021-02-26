@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat
 // 5/22/1997
 
@@ -9,7 +9,7 @@ string new_unit();
 
 int display_info (object who)
 {
-  tell_object (who,"请使用：transform <new-english-name> <中文名称>。\n");  
+  tell_object (who,"请使用：transform <new-english-name> <中文名称>。\n");
   return 1;
 }
 
