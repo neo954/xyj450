@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 3/31/1997 by snowcat
 #include <weapon.h>
 
@@ -17,7 +17,7 @@ void create()
     set("long", "这是一只粗瓷茶碗。\n");
     set("unit", "只");
     set("value", 40);
-    set("max_liquid", 80); 
+    set("max_liquid", 80);
   }
 
   set("liquid", ([
