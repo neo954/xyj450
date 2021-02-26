@@ -17,7 +17,7 @@ LONG
                 set("objects", ([
                 __DIR__"npc/cleangirl" : 1,
                 ]) );
-                
+
                 setup();
 }
 
