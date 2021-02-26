@@ -57,5 +57,3 @@ int fliping(object me)
 	}
         return 1;
 }
-
-
