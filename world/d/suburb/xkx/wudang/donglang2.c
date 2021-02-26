@@ -1,5 +1,5 @@
 // Room: /d/shaolin/donglang2.c
-// By Marz 04/01/96 
+// By Marz 04/01/96
 
 inherit ROOM;
 
@@ -28,11 +28,11 @@ LONG
 	"south" : __DIR__"chashi",
 	"west" : __DIR__"donglang1",
     ]));
-                                                    
+
     set("item_desc",([
         "men"        :    (: look_men :),
     ]));
-    
+
     setup();
 }
 
@@ -71,7 +71,7 @@ int do_knock(string arg)
 
     if(!( room = find_object(__DIR__"xiuxishi")) )
         room = load_object(__DIR__"xiuxishi");
-        
+
     if(objectp(room))
     {
     if ((int)room->query_temp("sleeping_person") > 0)
@@ -91,7 +91,7 @@ int do_knock(string arg)
         	this_player());
         	
         	break;
-       	case 1: 
+       	case 1:
         	message_vision(
         	"$N轻轻地敲了敲门，只听见里面有些响动，\n"
 		"好象有人在踱来踱去，拿不定主意是否开门。\n",
@@ -112,7 +112,7 @@ int do_knock(string arg)
     	message("vision",
     	"外面传来一阵敲门声，你从门缝往外一瞧，是"+this_player()->query("name")+"一脸焦急地站在门外，\n"
     	"看样子也想进来休息。\n", room);
-        
+
     return 1;
 }
 
@@ -128,7 +128,7 @@ int do_push(string arg)
 
     if(!(room = find_object(__DIR__"xiuxishi")))
         room = load_object(__DIR__"xiuxishi");
-        
+
     if(objectp(room))
     {
     if((int)room->query_temp("person_inside")<=0)
@@ -140,7 +140,7 @@ int do_push(string arg)
 //      message("vision", "有人从外面把门推开了。\n", room);
         remove_call_out("close_men");
         call_out("close_men", 10);
-    } else 
+    } else
     {
         message_vision("$N想把门推开，却发觉门被人从里面闩上了。\n",
 	 	this_player());
@@ -165,8 +165,8 @@ string look_men()
     if( (int)room->query_temp("person_inside") > 0 )
     {
 	return ("门上挂了个牌子：请毋打扰\n");
-    } 
-    
+    }
+
     return ("门上挂了个牌子：休息室\n");
 }
 
@@ -181,7 +181,7 @@ int valid_leave(object me, string dir)
 	if(objectp(room) && dir == "north")
 	{
 		room->add_temp("person_inside", 1);
-		// will open the door if ppl inside stay too long 
+		// will open the door if ppl inside stay too long
 		remove_call_out("force_open");
 		call_out("force_open", 599, room);
 	}		
@@ -193,14 +193,14 @@ int force_open(object room)
 {
 	if ( !objectp(room) ) return 0;
     if((int)room->query_temp("person_inside")<=0) return 0;
-    
-/***    
+
+/***
     if((int)room->query_temp("sleeping_person")>0)
     {
 		remove_call_out("force_open");
 		call_out("force_open", 599, room);
 		return 0;
-   	} 
+   	}
 ***/	
 
 	room->delete_temp("person_inside");
