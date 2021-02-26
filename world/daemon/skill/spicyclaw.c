@@ -116,4 +116,3 @@ string query_parry_msg(object weapon)
         else
                 return unarmed_parry_msg[random(sizeof(unarmed_parry_msg))];
 }
-
