@@ -48,10 +48,10 @@ int valid_leave(object me, string dir)
 	ob3 = load_object("/d/obj/clone/npc/fa-e");
 	fae = ob3->query("winner");
 
-	if( dir == "northup" ) { 
-		if( present("jiang baisheng", environment(me)) 
-		&& me->query("id") != mengzhu 
-		&& me->query("id") != shangshan 
+	if( dir == "northup" ) {
+		if( present("jiang baisheng", environment(me))
+		&& me->query("id") != mengzhu
+		&& me->query("id") != shangshan
 		&& me->query("id") != fae )
 			return notify_fail("江百胜伸手拦住你说道：盟主很忙，现在不见外客，你下山去吧！\n");
 		else if( me->query("id") == mengzhu ) {
