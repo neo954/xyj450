@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // mark.c
 // pickle 10-27-97
 
@@ -16,7 +16,7 @@ int main(object me, string arg)
     string *spells_systems=({"yaofa"});
     int allowed, i;
     object room;
-    
+
     seteuid(getuid());
 
     if (member_array(me->query_skill_mapped("spells"), spells_systems) == -1)
@@ -62,7 +62,7 @@ int main(object me, string arg)
    return notify_fail("你并没有用「"+iden+"」来记任何地方。\n");
     me->delete("记号/"+iden);
     tell_object(me, "你删除「"+iden+"」这个记号。\n");
-    
+
 
     return 1;
 }
@@ -70,7 +70,7 @@ int main(object me, string arg)
 int help (object me)
 {
         write(SYNTAX + @HELP
- 
+
 你可以用这个指令在房间中留下自己的记号，这样你可以用
 法术直接遁至这个房间。只有某些门派的法术有遁术，所以
 这个指令对没有遁术的门派是无用的。
