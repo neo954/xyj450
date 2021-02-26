@@ -49,7 +49,7 @@ int do_eat(string arg)
 	{
 /*		improve = force_limit - neili_limit;
 
-		if ( improve < 100 ) { 
+		if ( improve < 100 ) {
 			add_skill = force_skill + (100 - improve)/5 + 1;
 			me->set_skill("force", add_skill );
 		}
