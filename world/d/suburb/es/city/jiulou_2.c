@@ -12,7 +12,7 @@ void create()
 茶座。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
 		"down":		__DIR__"jiulou",
         ]));
 
