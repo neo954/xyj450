@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // block.c
 // modified by mon 7/25/97
 
@@ -25,7 +25,7 @@ int main(object me, string arg)
      obj->set("channel/tell_block",time()+86400);
      tell_object(obj, "你的交谈频道被暂时关闭了！\n");
      write( "使用者" + obj->query("name") + "的交谈频道被关闭了！\n");
-     
+
         } else if(option=="-u") { // open channel
           obj->delete("channel/tell_block");
           obj->delete("channel/chat_block");
@@ -37,7 +37,7 @@ int main(object me, string arg)
      if( wizardp(obj)) return notify_fail("有必要吗？\n");
           obj->set("channel/chat_block",time()+86400);
      tell_object(obj, "你的公用频道被暂时关闭了！\n");
-     write( "使用者" + obj->query("name") + "的公用频道被关闭了！\n");   
+     write( "使用者" + obj->query("name") + "的公用频道被关闭了！\n");
         }
 
    return 1;
