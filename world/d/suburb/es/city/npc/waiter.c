@@ -38,7 +38,7 @@ int go_up (string arg)
         if ( !me || environment(me) != environment() ) return 0;
 
         if( arg == "up" ) {
-		if (!(me->query("rank")) && !(me->query("marks/酒楼"))) { 
+		if (!(me->query("rank")) && !(me->query("marks/酒楼"))) {
 			message_vision("店小二对$N一白眼:你是谁呀，闯什么闯！\n",me);
 			write("上楼的路被店小二挡住了 。\n");
 			return 1;
@@ -63,7 +63,7 @@ int accept_object(object who, object ob)
 
         if ( !who->query("marks/酒楼") )  {
                 if( ob->value() >= 1000 ) {
-                        command("say 谢谢这位客官了。");   
+                        command("say 谢谢这位客官了。");
                         who->set("marks/酒楼",1);
                         return 1;
                 	}
