@@ -28,4 +28,3 @@ TEXT
         carry_object("/d/suburb/es/latemoon/obj/deer_boot")->wear();
         carry_object("/d/suburb/es/latemoon/obj/necklace");
 }
-
