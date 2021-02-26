@@ -1,4 +1,4 @@
-// monkey.c 
+// monkey.c
 
 inherit NPC;
 
