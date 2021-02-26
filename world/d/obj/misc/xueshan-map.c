@@ -36,4 +36,3 @@ LONG
 void init()
 {
 }
-
