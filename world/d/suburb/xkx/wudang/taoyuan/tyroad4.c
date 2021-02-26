@@ -33,4 +33,3 @@ void init()
 {
         add_action("look_feng", "look");
 }
-
