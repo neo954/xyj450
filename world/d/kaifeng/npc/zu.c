@@ -26,6 +26,3 @@ void create()
   carry_object("/d/obj/weapon/mace/copperjian")->wield();
   carry_object("/d/obj/cloth/bingfu")->wear();
 }
-
-
-
