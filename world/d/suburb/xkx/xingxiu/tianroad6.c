@@ -15,7 +15,7 @@ LONG
             "eastdown" : __DIR__"tianroad5",
         ]));
         set("objects", ([
-               __DIR__"npc/snake" : 2, 
+               __DIR__"npc/snake" : 2,
         ]));
 
         set("no_clean_up", 0);
