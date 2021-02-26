@@ -57,4 +57,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/jia_sha")->wear();
 }
-
