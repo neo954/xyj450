@@ -23,5 +23,3 @@ void create()
    setup();
         carry_object("/d/obj/cloth/piyi")->wear();
 }
-
-
