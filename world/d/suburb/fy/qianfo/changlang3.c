@@ -65,4 +65,3 @@ void close_path()
                 this_object() );
                 delete("exits/south");
 }
-
