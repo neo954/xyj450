@@ -32,4 +32,3 @@ string look_jiebei()
 {
 	return "由此往前，通向山顶。道路尚未修好。\n—时空书于侠客行\n";
 }
-
