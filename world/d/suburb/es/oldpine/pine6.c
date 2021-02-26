@@ -25,7 +25,7 @@ void reset()
 	  "south" : __DIR__"pine" + (random(5)+2),
 	  "north" : __DIR__"pine" + (random(5)+2),
 	 /// "west" : __DIR__"pine" + (random(6)+1),
-	  "west" : __DIR__"pine7", 
+	  "west" : __DIR__"pine7",
           "east" : __DIR__"pine" + (random(5)+2),
 	]));
 }
