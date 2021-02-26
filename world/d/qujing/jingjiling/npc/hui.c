@@ -124,4 +124,3 @@ int do_answer(string arg)
         return 1;
         }
 }
-
