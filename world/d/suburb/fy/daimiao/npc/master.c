@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit NPC;
 inherit F_MASTER;
@@ -90,7 +90,7 @@ void init()
 {
         add_action("give_quest", "quest");
 }
- 
+
 int kill_him()
 {
 	object me;
@@ -147,7 +147,7 @@ void re_rank(object student)
         } else if ( exp <= 26244000 ) {
                 student->set("title","西方神教大长老");
                 return ;
-        } else 
+        } else
                 student->set("title","西方神教副教主");
                 return ;
 
