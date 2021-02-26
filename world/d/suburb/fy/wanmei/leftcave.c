@@ -70,4 +70,3 @@ void close_path()
                 delete("exits/west");
 		set("frozen",10+random(5));
 }
-
