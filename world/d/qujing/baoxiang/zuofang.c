@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 10/14/1997
 // room: /d/qujing/baoxiang/zuofang.c
 
@@ -21,7 +21,7 @@ LONG);
         "west"       : __DIR__"bei3",
       ]));
 
-  set("objects", ([ 
+  set("objects", ([
     __DIR__"npc/fangzhu" : 1,
   ]));
   setup();
