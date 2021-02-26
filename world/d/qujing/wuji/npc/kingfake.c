@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // gao.c
 
 inherit NPC;
@@ -50,7 +50,7 @@ void create()
 }
 
 void autokill (object me)
-{ 
+{
   object where = environment (me);
   object king1 = present ("guo wang 1",where);
   object king2 = present ("guo wang 2",where);
@@ -73,7 +73,7 @@ void autokill (object me)
 
 void init ()
 {
-  autokill (this_object());  
+  autokill (this_object());
 }
 
 void die ()
@@ -90,7 +90,7 @@ void die ()
   me->delete("title");
   me->delete("long");
   if (longpao)
-    destruct (longpao);  
+    destruct (longpao);
   me->setup();
   me->remove_all_killer();
   me->set("gin",2000);
@@ -111,6 +111,6 @@ void destruct_me (object me)
 {
   message_vision ("一道金光照住$N，将$N唰地一声收去。\n",me);
   message_vision ("天上远远传来文殊菩萨的笑声。\n",me);
- 
-  destruct (me);   
+
+  destruct (me);
 }
