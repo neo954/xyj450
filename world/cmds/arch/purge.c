@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // purge.c
 
 #include <ansi.h>
@@ -32,7 +32,7 @@ int main(object me, string arg)
    if( file_size(DATA_DIR + "login/" + name[0..0] + "/" + name + __SAVE_EXTENSION__)<0 )
      return notify_fail("没有这位使用者。\n");
    if( (string)SECURITY_D->get_status(name)!="(player)" )
-     return notify_fail("非玩家档案不能被删除。\n"); 
+     return notify_fail("非玩家档案不能被删除。\n");
 
    rm(DATA_DIR + "login/" + name[0..0] + "/" + name + __SAVE_EXTENSION__);
    rm(DATA_DIR + "user/" + name[0..0] + "/" + name + __SAVE_EXTENSION__);
@@ -67,8 +67,8 @@ object who;
           if( (string)SECURITY_D->get_status(name)!="(player)" )
              continue;
 
-// Modified by dream on June 26, 1997 to avoid incorrect touching  
-// from outer sources like shell modification 
+// Modified by dream on June 26, 1997 to avoid incorrect touching
+// from outer sources like shell modification
 //        info = stat(DATA_DIR + "login/" + dir[i] + "/" + ppls[j]);
 who = new(LOGIN_OB);
 who->set("id", name);
