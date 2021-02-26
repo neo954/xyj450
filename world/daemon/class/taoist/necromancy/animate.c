@@ -4,15 +4,15 @@ inherit F_CLEAN_UP;
 
 int cast(object me, object target)
 {
-        if( me->is_fighting() ) 
+        if( me->is_fighting() )
 		return notify_fail("你正在战斗中！\n");
-        
+
         if( (int)me->query_skill("spells") < 10 )
 		return notify_fail("你的法术不够高！\n");
 
-        if( !target || !target->is_corpse() ) 
+        if( !target || !target->is_corpse() )
         	return notify_fail("你要驱动哪一具尸体？\n");
-        
+
         if( (int)me->query("mana") < 50 )
 		return notify_fail("你的法力不够了！\n");
 
@@ -24,4 +24,4 @@ int cast(object me, object target)
         me->receive_damage("sen", 10);
         return 1;
 }
- 
+
