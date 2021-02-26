@@ -10,7 +10,7 @@ void create()
 枯枝也不知被谁削平了，树干却还有一小半露在河面外。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "northeast" : __DIR__"street3",
 ]));
         set("outdoors", "laowu");
@@ -38,7 +38,7 @@ int do_zha()
 			if( (int) inv[i]->query("explosive") )
 				exp = inv[i];
 		}
-	if( !exp) 
+	if( !exp)
 	{
 	tell_object(me,"你没有引爆的东西．\n");
 	return 1;
