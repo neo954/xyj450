@@ -152,4 +152,3 @@ int ji (string target)
   zhuo->ji_ob(victim);
   return 1;
 }
-
