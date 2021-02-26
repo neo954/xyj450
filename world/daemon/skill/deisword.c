@@ -2,36 +2,36 @@
 inherit SKILL;
 
 mapping *action = ({
-        ([      "action":               
+        ([      "action":
 "$N使一招「伫倚危楼风细细」，手中$w如一风一般卷向$n的$l",
                 "dodge":                20,
 		"force" :		100,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出蝶恋花剑中的「草色烟光残照里」，剑光向残照般洒向$n的$l",
                 "dodge":                20,
                 "force":               200,
                 "damage_type":  "割伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N一招「无言谁会凭栏意」，手中$w默默的削向$n的$l",
                 "dodge":                30,
                 "force":               50,
                 "damage_type":  "割伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N手中$w一式「拟把疏狂图一醉」对准$n的$l一连刺出七剑",
                 "force":                90,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N的$w凭空一指，一招「衣带渐宽终不悔」刺向$n的$l",
                 "dodge":                20,
                 "force":               300,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N手中$w向外一分，使一招「为伊消得人憔悴」反手对准$n$l一剑刺去",
                 "dodge":                20,
                 "force":               100,
@@ -67,7 +67,7 @@ int practice_skill(object me)
 {
         if( (int)me->query("kee") < 30
         ||      (int)me->query("force") < 3 )
-                return 
+                return
 notify_fail("你的内力或气不够，没有办法练习蝶恋花剑法。\n");
         me->receive_damage("kee", 30);
         me->add("force", -3);
@@ -79,7 +79,7 @@ string perform_action_file(string action)
 {
         return CLASS_D("legend") + "/deisword/" + action;
 }
- 
+
 int effective_level() { return 23;}
 
 string *parry_msg = ({
