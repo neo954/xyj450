@@ -23,4 +23,3 @@ varargs void init_stick(int damage, int flag)
      set("verbs", ({ "bash", "crush", "slam" }) );
    }
 }
-
