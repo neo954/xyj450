@@ -36,7 +36,7 @@ int main(object me, string arg)
 	if( t[i])
 	if( environment(me) != environment(t[i]))
 		return notify_fail("队员不都在场。(use kill)\n");		
-	message_vision("\n$N对著$n喝道：「" 
+	message_vision("\n$N对著$n喝道：「"
 		+ callname + "！今日不是你死就是我们活！」\n\n", me, obj);
         for(i=0;i<sizeof(t);i++)
 	{
@@ -52,7 +52,7 @@ int help(object me)
 {
   write(@HELP
 指令格式 : teamkill <人物>
- 
+
 这个指令让你的队伍主动攻击一个人物．所得奖励在所有队员间均分．
 但必需是拿到任务的队员亲手杀死才行．
 其他相关指令: team,fight,kill
@@ -61,4 +61,3 @@ HELP
     );
     return 1;
 }
- 
