@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 
 //bankowner.c
@@ -86,7 +86,7 @@ int do_balance(string arg)
         tell_object(this_player(),"你现在没有存款。\n");
 	return 1;
 	}
-	if(value > 0) 
+	if(value > 0)
 	tell_object(this_player(),"你现在共有存款：\n");
 	if(value < 0){
 	tell_object(this_player(),"你现在共欠款：\n");
@@ -153,7 +153,7 @@ int do_withdraw(string arg)
 	hamount = (int) this_player()->query("balance");
 	if(amount <=0 )
 		return notify_fail("指令格式：withdraw <数量> \n");
-	if(amount>hamount) 
+	if(amount>hamount)
 		return notify_fail("你没这么多存款 ！！\n");
 	hamount -=amount;
 	this_player()->set("balance", hamount);
