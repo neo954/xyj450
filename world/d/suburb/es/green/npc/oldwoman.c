@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
         int has_game;
@@ -22,7 +22,7 @@ TEXT
         carry_object("/obj/cloth")->wear();
         add_money("coin",100);
 }
- 
+
 void ask_for_help()
 {
         object helper;
@@ -33,7 +33,7 @@ void ask_for_help()
         helper->kill_ob(query_temp("killer"));
         return;
 }
- 
+
 void kill_ob(object ob)
 {
         set_temp("killer",ob);
