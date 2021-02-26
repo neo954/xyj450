@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // combat.h
 
 #ifndef __COMBAT__
@@ -17,8 +17,8 @@
 // usage will be used in calculating skill power.
 #define SKILL_USAGE_ATTACK     1
 #define SKILL_USAGE_DEFENSE     2
-#define SKILL_USAGE_SPELL     3   
-#define SKILL_USAGE_DODGE     4   
-#define SKILL_USAGE_PARRY     5   
+#define SKILL_USAGE_SPELL     3
+#define SKILL_USAGE_DODGE     4
+#define SKILL_USAGE_PARRY     5
 
 #endif
