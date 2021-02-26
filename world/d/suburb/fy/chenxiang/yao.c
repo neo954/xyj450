@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit ROOM;
 void create()
@@ -54,7 +54,7 @@ return 0;
 int give_soup(object me)
 {
 object soup;
-if(me) 
+if(me)
 if( environment(me) == this_object())
 {
 soup = new(__DIR__"obj/med");
