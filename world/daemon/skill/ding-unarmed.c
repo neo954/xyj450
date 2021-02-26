@@ -34,4 +34,3 @@ int practice_skill(object me)
 	me->add("neili", -10);
 	return 1;
 }
-
