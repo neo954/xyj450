@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create ()
 响，象是猛兽发出的吼声。
 LONG);
 
-//  set("objects", ([ /* sizeof() == 1*/ 
+//  set("objects", ([ /* sizeof() == 1*/
 //  __DIR__"npc/erlang" : 1,
 //]));
   set("outdoors", 1);
@@ -27,7 +27,7 @@ LONG);
 }
 
 void init()
-{       
+{
    object me=this_player();
    if( !present("liushu jing") || interactive(me)) {
      remove_call_out("greeting");
