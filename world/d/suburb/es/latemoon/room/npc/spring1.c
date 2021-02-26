@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
         set_name("惜春", ({ "shi-chung","shi","chung" }) );
