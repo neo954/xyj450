@@ -13,5 +13,3 @@ string exert_function_file(string func)
 {
         return "/daemon/class/force/" + func;
 }
-
-
