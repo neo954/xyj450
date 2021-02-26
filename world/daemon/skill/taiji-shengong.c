@@ -42,4 +42,3 @@ string exert_function_file(string func)
 {
 	return __DIR__"taiji-shengong/" + func;
 }
-
