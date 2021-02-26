@@ -149,5 +149,3 @@ void reward (object who)
 
   who->add_temp(str,points);
 }
-
-
