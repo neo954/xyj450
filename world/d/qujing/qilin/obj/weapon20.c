@@ -20,4 +20,3 @@ void create()
   set("wield_msg","$N操起$n握在手里。\n");
   setup();
 }
-
