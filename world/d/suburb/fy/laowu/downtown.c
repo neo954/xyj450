@@ -9,7 +9,7 @@ void create()
 盏灯，两盏灯变成四盏灯，如满天星光闪烁，就算是京城里最热闹的街道也比不上。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "east" : __DIR__"street",
   "southeast" : __DIR__"daroad",
 ]));
