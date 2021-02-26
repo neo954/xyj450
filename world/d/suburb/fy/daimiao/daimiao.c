@@ -17,7 +17,7 @@ LONG
                 __DIR__"npc/yin" : 1,
        ]) );
 
-   
+
   setup();
   replace_program(ROOM);
 }
