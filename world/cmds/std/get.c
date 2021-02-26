@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // get.c
 
 #include <ansi.h>
@@ -36,9 +36,9 @@ int main(object me, string arg)
    if(sscanf(arg, "%d %s", amount, item)==2) {
      if( !objectp(obj = present(item, env)) )
         return notify_fail("这里没有这样东西。\n");
-     if( no_get = obj->query("no_get") 
+     if( no_get = obj->query("no_get")
      && !(wizardp(me) && me->query("env/override")) )
-        return notify_fail(stringp(no_get) ? 
+        return notify_fail(stringp(no_get) ?
           no_get : "这个东西拿不起来。\n");
      if( !obj->query_amount() )
         return notify_fail( obj->name() + "不能被分开拿走。\n");
@@ -101,7 +101,7 @@ int main(object me, string arg)
        undefinedp(obj->query_temp("unit"))?
        "个":obj->query_temp("unit")
        ), me, obj);
-       return 1; 
+       return 1;
        } else return 0;
           }
         } else {
@@ -110,13 +110,13 @@ int main(object me, string arg)
         }
    }
 
-        if( no_get = obj->query("no_get") 
+        if( no_get = obj->query("no_get")
    && !(wizardp(me) && me->query("env/override")))
                 return notify_fail(stringp(no_get) ? no_get : "这个东西拿不起来。\n");
 
    return do_get(me, obj,0);
 }
-   
+
 int do_get(object me, object obj, object old_env)
 {
 // object *enemy;
@@ -145,7 +145,7 @@ int do_get(object me, object obj, object old_env)
      if( obj->is_character() )
        message_vision( "$N将$n扶了起来背在背上。\n", me, obj );
      else
-       message_vision( sprintf("$N%s一%s$n。\n", 
+       message_vision( sprintf("$N%s一%s$n。\n",
        (!old_env || old_env==environment(me))? "捡起":
        (old_env->is_character() ?
        "从" + old_env->name() + "身上" + (equipped? "除下" : "搜出"):
@@ -162,11 +162,10 @@ int help(object me)
 {
    write(@HELP
 指令格式 : get <物品名称> [from <容器名>]
- 
+
 这个指令可以让你捡起地上或容器内的某样物品.
- 
+
 HELP
     );
     return 1;
 }
- 
