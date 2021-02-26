@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // fingerd.c
 
 #include <net/dns.h>
@@ -19,7 +19,7 @@ string age_string(int time)
    time /= 24;
    day = time % 30;
    month = time / 30;
-   return (month?month + "m":"") + (day?day + "d":"") + 
+   return (month?month + "m":"") + (day?day + "d":"") +
    (hour?hour + "h":"") + min + "m";
 }
 
@@ -39,7 +39,7 @@ string finger_all()
           msg, ob[i]->query("name"), ob[i]->query("id"),
           query_idle(ob[i]) + "s");
      }
-     return "■ 西游记 \n" + 
+     return "■ 西游记 \n" +
      "——————————————————\n"
      + "姓名          帐号          发呆\n" +
      "——————————————————\n"
@@ -51,10 +51,10 @@ string finger_all()
         if( this_player() && !this_player()->visible(ob[i]) ) continue;
         msg = sprintf("%s%-14s%-14s%-14s%-7s%s\n",
           msg, ob[i]->query("name"), ob[i]->query("id"),
-          age_string( (int)ob[i]->query("mud_age")), 
+          age_string( (int)ob[i]->query("mud_age")),
           query_idle(ob[i]) + "s", query_ip_name(ob[i]));
      }
-     return "■ 西游记   \n" + 
+     return "■ 西游记   \n" +
      "—————————————————————————————————————\n"
      + "姓名          帐号          年龄          发呆   连线\n" +
      "—————————————————————————————————————\n"
@@ -62,7 +62,7 @@ string finger_all()
      "—————————————————————————————————————\n";
    }
 }
-   
+
 string finger_user(string name)
 {
    object ob, body;
@@ -79,18 +79,18 @@ string finger_user(string name)
    if( !ob->restore() ) {
      destruct(ob);
      return "没有这个玩家。\n";
-        }   
-   
+        }
+
    if (!this_player() || !wizardp(this_player()) )  // player finger
    // !this_player() is used for inter-mud finger.
    // in that case, this_player() is not defined, so treat as player.
    // mon 8/27/97
    {
-   
+
      if( objectp(body = find_player(name)) && geteuid(body)==name )
      {
         public_flag = body->query("env/public")?1:0;
-     } else 
+     } else
      {
         body = LOGIN_D->make_body(ob);
         if( !body->restore() ) {
@@ -99,8 +99,8 @@ string finger_user(string name)
                         }
         public_flag = body->query("env/public")?1:0;
         destruct(body);
-     }     
-     
+     }
+
      msg =  sprintf("\n英文代号：\t%s\n姓    名：\t%s\n权限等级：\t%s\n"
         "电子邮件地址：\t%s\n上次连线：\t%s\n\n",
         ob->query("id"),
@@ -110,17 +110,17 @@ string finger_user(string name)
         ctime(ob->query("last_on"))
      );
      // !body->query("env/invisibility") added by snowcat
-     if( objectp(body = find_player(name)) 
-        && geteuid(body)==name 
+     if( objectp(body = find_player(name))
+        && geteuid(body)==name
         && interactive(body)
         && !body->query("env/invisibility")) {
          // can only query_idle on an interactive player.
              int idle=query_idle(body);
 
         msg += sprintf("\n%s目前正在连线",body->name(1));
-        if(idle>59) 
+        if(idle>59)
             msg+=sprintf("，已发呆 %d 秒钟。\n", idle);
-        else 
+        else
             msg+="中。\n";
      }
    } else     // wizard finger
@@ -135,16 +135,16 @@ string finger_user(string name)
         ctime(ob->query("last_on"))
      );
      // !body->query("env/invisibility") added by snowcat, removed by mon
-     if( objectp(body = find_player(name)) 
+     if( objectp(body = find_player(name))
         && interactive(body)
         && geteuid(body)==name ) {
         msg += sprintf(
-          "\n%s目前正在从 %s 连线，已发呆 %d 秒钟。\n", 
+          "\n%s目前正在从 %s 连线，已发呆 %d 秒钟。\n",
           body->name(1),
           query_ip_name(body), query_idle(body));
      }
-   }   
-   
+   }
+
    destruct(ob);
    return msg;
 }
