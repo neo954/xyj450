@@ -10,7 +10,7 @@ void create()
 经之路岱庙坊。岱庙坊现由西方神教所控。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "northwest" : __DIR__"roadp",
   "southup" : __DIR__"chenxiang3",
   "northeast" : "/d/suburb/fy/daimiao/yaocan",
