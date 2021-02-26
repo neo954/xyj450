@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 
 inherit ROOM;
@@ -15,14 +15,14 @@ void create ()
 得是灵妙非常，落款袁天罡。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "east" : __DIR__"eastway2",
      "west" : __DIR__"zhengdian",
      "north" : __DIR__"shuofa",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      __DIR__"npc/mingyue" : 1,
