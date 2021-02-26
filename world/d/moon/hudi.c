@@ -50,6 +50,3 @@ int do_dig(string arg)
   me->receive_damage("sen", (int)me->query("max_sen")*10/100);
   return 1;
 }
-
-
-
