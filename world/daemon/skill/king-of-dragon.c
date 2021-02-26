@@ -18,9 +18,9 @@ mapping *action = ({
 });
 
 
-int valid_enable(string usage) 
-{ 
-    return usage == "sword" || usage == "dodge" || usage == "unarmed" || usage == "parry" 
+int valid_enable(string usage)
+{
+    return usage == "sword" || usage == "dodge" || usage == "unarmed" || usage == "parry"
            || usage == "blade" || usage == "whip" || usage == "force" || usage == "claw" ;
 }
 
@@ -52,7 +52,7 @@ string exert_function_file(string func)
 }
 mixed hit_ob(object me, object victim, int damage_bonus)
 {
-	if ( ! userp (victim)) 
+	if ( ! userp (victim))
 	if ( living (victim)) victim -> unconcious () ;
 }
 
