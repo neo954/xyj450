@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //token.c
 // modified 8-13-97 pickle
- 
+
 inherit ITEM;
 inherit F_AUTOLOAD;
 inherit F_SAVE;
@@ -22,7 +22,7 @@ void create()
 string short()
 {
     string guild;
- 
+
     if( stringp(query("short")) || !stringp(guild = query("guild_name")) )
         return ::short();
     else
@@ -93,14 +93,14 @@ int do_create(string arg)
 
     if( query("unsealed") )
         return notify_fail( query("name") + "的封印已经被解开了。\n");
- 
+
     if( !wizardp(me) )
         return notify_fail(
             "只有巫师能解除此物封印。如果你要创立一个新的山洞，请\n"
             "先找一位巫师做担保人，请他（她）为你解除封印。\n");
- 
+
     if(!arg) return notify_fail(SYN_CREATE);
- 
+
     if( sscanf(arg, "%s (%s) for %s", guild_name, guild_id, player_name)!=3)
    return notify_fail(SYN_CREATE);
 
@@ -115,12 +115,12 @@ int do_create(string arg)
     set("guild_id", guild_id);
     set("guild_name", guild_name);
     set("unsealed", 1);
-    set("leader", player_name); 
+    set("leader", player_name);
 
     if(file_size(query_save_file() + __SAVE_EXTENSION__)>=0 )
    restore();
     else {
-   log_file("GUILD", 
+   log_file("GUILD",
        sprintf("%s（%s）于%s（%s）\n\t创"+HIG+"%s（%s）"+NOR+"，"
          "有"+HIY+"%s（%s）"+NOR+"在场为证。\n\n",
        guild_leader->query("name"), guild_leader->query("id"),
@@ -130,7 +130,7 @@ int do_create(string arg)
        save();
        message_vision(HIY"恭喜$N成立了"+guild_name+"("+guild_id+")！\n"NOR, guild_leader);
     }
- 
+
     return 1;
 }
 
@@ -140,13 +140,13 @@ int do_assign(string arg)
     mapping family;
     string assign_msg;
     object me=this_player();
- 
+
     if( !arg || !objectp(ob = present(arg, environment(me)))
-    || !living(ob) ) 
+    || !living(ob) )
         return notify_fail("你要将洞主之位传给谁？\n");
- 
+
     family = me->query("family");
- 
+
     if( wizardp(me) || (
         mapp(family) && family["family_name"]==(string)query("guild_name")
         && (string)me->query("id")==(string)query("leader")))
@@ -199,10 +199,10 @@ int do_modify(string arg)
 int do_dismiss(string arg)
 {
     if( !query("guild_id") ) return 0;
- 
+
     rm(query_save_file() + __SAVE_EXTENSION__);
     write( query("guild_name") + "被解散了。\n");
-    log_file("GUILD", 
+    log_file("GUILD",
         sprintf("%s（%s）于%s（%s）\n\t解散%s（%s）。\n",
         this_player()->query("name"), this_player()->query("id"),
         NATURE_D->game_time(), ctime(time()),
