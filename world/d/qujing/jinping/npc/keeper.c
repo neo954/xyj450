@@ -49,5 +49,3 @@ int accept_object(object who, object ob)
      + "，神明一定会保佑你的。\n");
   return 1;
 }
-
-
