@@ -39,4 +39,3 @@ void force_quit(object me)
 {
    if(me) me->force_me("quit");
 }
-
