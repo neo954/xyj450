@@ -20,4 +20,3 @@ varargs void init_club(int damage, int flag)
 		set("verbs", ({ "bash", "crush", "slam" }) );
 	}
 }
-
