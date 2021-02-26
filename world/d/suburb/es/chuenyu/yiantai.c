@@ -14,7 +14,7 @@ LONG
          set("objects", ([
          __DIR__"npc/pigeon" : 2,
          ]) );
-         
+
          set("outdoors", "chuenyu");
          setup();
 }
