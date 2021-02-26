@@ -28,7 +28,7 @@ LONG
 void init()
 {
         add_action("do_climb", "climb");
-        add_action("do_hold", "hold");  
+        add_action("do_hold", "hold");
 }
 int do_climb(string arg)
 {
@@ -48,12 +48,12 @@ int do_hold(string arg)
                 this_player());
         if( random((int)this_player()->query_skill("dodge")) < 30 ) {
                 message_vision("\n只听见一声杀猪般的惨叫，$N已坠落深谷。。\n\n
-", this_player());  
-        this_player()->move(__DIR__"hollow");        
+", this_player());
+        this_player()->move(__DIR__"hollow");
       } else {
                 message_vision("$N手脚俐落地攀附著藤蔓，慢慢地爬近山洞。\n\n",
                       this_player() );
-        this_player()->move(__DIR__"halfhole");  
+        this_player()->move(__DIR__"halfhole");
         }
         return 1;
 }
