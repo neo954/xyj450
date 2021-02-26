@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // updated.c
 
 void create() { seteuid(getuid()); }
@@ -143,7 +143,7 @@ void check_user(object ob)
        }
        else if (tmpstr != "done")
          ob->set("obstacle/firemount",tmpstr);
-       else 
+       else
          ob->set("obstacle/firemount","done");
      }
      if (tmpint = ob->query("obstacle/2_bone"))
