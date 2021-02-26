@@ -29,7 +29,7 @@ LONG
 int valid_leave(object me, string dir)
 {
 	if ( dir == "enter" )
-	if ( present("fumo dao", me) || present("jingang zhao", me) 
+	if ( present("fumo dao", me) || present("jingang zhao", me)
 	  || present("fumo dao", environment(me)) || present("jingang zhao", environment(me)) )
 		return notify_fail("只听里面有人说道: 大侠上回已来过此处，此刻身携重宝，不便进入，\n恕老衲等失礼了。\n");
 
