@@ -16,9 +16,9 @@ LONG
    create_door("south", "铜钉大门", "north", DOOR_CLOSED);
 	set("no_clean_up", 0);
  set("objects", ([
-                __DIR__"npc/judgeman" : 1,     
+                __DIR__"npc/judgeman" : 1,
                 __DIR__"npc/magistra" : 2,
-                __DIR__"npc/yamen_po" : 8     
+                __DIR__"npc/yamen_po" : 8
                  ]) ); 	
         setup();
 	replace_program(ROOM);
