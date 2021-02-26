@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 6/1/1997
 // xiantao.c 仙桃
 
@@ -31,7 +31,7 @@ void init()
     set("no_give","这么珍贵的药，哪能随便给人？\n");
     set("no_drop","这么宝贵的丹药，扔了多可惜呀！\n");
     set("no_sell","凡人哪里知道"+this_object()->query("name")+"的价值？还是自己留着吧。\n");
-  }            
+  }
   add_action("do_eat", "eat");
 }
 
