@@ -90,4 +90,3 @@ string perform_action_file(string func)
 {
 return CLASS_D("bonze") + "/jienan-zhi/" + func;
 }
-
