@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat on 12/9/1997
 
 inherit NPC;
@@ -51,6 +51,6 @@ void create()
   carry_object("/d/qujing/baotou/obj/cloth1")->wear();
   str = "/d/qujing/baotou/obj/weapon0";
   str[strlen(str)-1] = '0'+random(4);
-  carry_object(str)->wield(); 
+  carry_object(str)->wield();
 }
 
