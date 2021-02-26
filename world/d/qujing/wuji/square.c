@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mimi/zhuziguo/square.c  snowcat moved to /d/qujing/wuji
 inherit ROOM;
 
@@ -20,7 +20,7 @@ LONG);
     "east" : __DIR__"estreet2",
     "north" : __DIR__"nstreet.c",
   ]));
-  set("outdoors", __DIR__"");                   
+  set("outdoors", __DIR__"");
 
   setup();
 }
