@@ -57,21 +57,21 @@ int do_drink(string arg)
 		{	
 			this_player()->add("eff_gin", heal);
 		}	
-	} 
+	}
 
     e_jing = (int)this_player()->query("eff_gin");
     jing = (int)this_player()->query("gin");
 	recover = 30+heal;
-    
+
 	if (jing < e_jing )
 	{
         if ( (jing + recover) >= e_jing )
         {
             this_player()->set("gin", e_jing);
         } else
-        {   
+        {
             this_player()->add("gin", recover);
-        }   
+        }
 	}
 
     if( this_player()->is_fighting() ) this_player()->start_busy(2);
@@ -81,8 +81,8 @@ int do_drink(string arg)
 	{
    		 message_vision("$N端起杯香茶，有滋有味地品了几口。\n"+
       		"一股香气直入心脾，$N觉得精神好多了。\n", this_player());
-	} else 
-	{ 
+	} else
+	{
    		 message_vision("$N端起雕花小杯，把里面的「女儿香」一饮而尽。\n"+
       		"一股幽香直入心脾，$N顿时觉得精神大振。\n", this_player());
 		
