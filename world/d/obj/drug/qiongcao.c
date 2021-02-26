@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 
 inherit ITEM;
@@ -28,7 +28,7 @@ void create()
     set("value", 0);
     set("drug_type", "补品");
   }
-  
+
   // the following line is added by snowcat
   set("is_monitored",1);
   setup();
@@ -84,7 +84,7 @@ int do_eat(string arg)
    object me=this_object();
    object who=this_player();
    int force_add, mana_add, howold;
-   
+
      if (!id(arg))
          return notify_fail("你要吃什么？\n");
    if( !me->query("can_eat"))
@@ -104,7 +104,7 @@ int do_eat(string arg)
 
    force_add=5;
    mana_add=5;
-   
+
    message_vision("$N将一颗$n轻轻嚼着咽下了肚，脸上泛起阵红晕。\n", who, me);
    tell_object(who, "你觉得一阵热气直通七窍，浑身上下好象有使不完的力气。\n");
 
@@ -114,7 +114,7 @@ int do_eat(string arg)
   who->set("gin", (int)who->query("max_gin"));
   who->set("eff_kee", (int)who->query("max_kee"));
   who->set("kee", (int)who->query("max_kee"));
-   
+
    if( (int)who->query("max_force")< 10*(int)who->query_skill("force")){
          who->add("max_force",force_add);
    }
@@ -161,7 +161,7 @@ int grow_c(object me)
         int i=800+random(800);
         tell_room(environment(me), me->name()+"慢慢地长出了一个小叶。\n", ({me, me}));
         set_name(RED "三叶琼草" NOR, ({"qiong cao","cao"}));
-        call_out("grow_d", i, me);  
+        call_out("grow_d", i, me);
         return 1;
 }
 
@@ -170,7 +170,7 @@ int grow_d(object me)
         int i=1000+random(1000);
         tell_room(environment(me), me->name()+"慢慢地长出了一个小叶。\n", ({me, me}));
         set_name(RED "四叶琼草" NOR, ({"qiong cao","cao"}));
-        call_out("grow_e", i, me);  
+        call_out("grow_e", i, me);
         return 1;
 }
 
@@ -179,7 +179,7 @@ int grow_e(object me)
         int i=1200+random(1000);
         tell_room(environment(me), me->name()+"慢慢地长出了一个小叶。\n", ({me, me}));
         set_name(RED "五叶琼草" NOR, ({"qiong cao","cao"}));
-        call_out("grow_f", i, me);  
+        call_out("grow_f", i, me);
         return 1;
 }
 
@@ -188,7 +188,7 @@ int grow_f(object me)
         int i=1500+random(1000);
         tell_room(environment(me), me->name()+"慢慢地长出了一个小叶。\n", ({me, me}));
         set_name(RED "六叶琼草" NOR, ({"qiong cao","cao"}));
-        call_out("grow_g", i, me);  
+        call_out("grow_g", i, me);
         return 1;
 }
 
