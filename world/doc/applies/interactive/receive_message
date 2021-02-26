@@ -4,7 +4,7 @@ void receive_message( mixed cl, mixed message );
 
 The message() efun calls this method in the player object.  The cl
 parameter is typically used to indicate the class (say, tell, emote,
-combat, room description, etc) of the message.  The receive_message() 
+combat, room description, etc) of the message.  The receive_message()
 apply together with the message() efun can provide a good mechanism for
 interfacing with a "smart" client.
 
