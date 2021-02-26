@@ -309,7 +309,7 @@ int number_of_users;
 #include <net/ftpdconf.h>
 #include <net/ftpdsupp.h>
 
-// #include <daemons.h>
+// #include "daemons.h"
 #ifdef FILE_LOCKING
 #include <flock.h>
 #endif
