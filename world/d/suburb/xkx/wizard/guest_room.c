@@ -31,4 +31,3 @@ int valid_leave(object me, string dir)
                 return notify_fail("那里只有巫师才能进去。\n");
         return ::valid_leave(me, dir);
 }
-
