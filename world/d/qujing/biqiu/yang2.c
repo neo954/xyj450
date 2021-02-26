@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 11/21/1997
 
 inherit ROOM;
@@ -44,7 +44,7 @@ int do_turn (string arg)
       (arg != "left" &&
       arg != "right"))
     return notify_fail ("你象无头苍蝇一样围着树转了起来。\n");
- 
+
   if (arg == "left")
   {
     message_vision ("$N围着树往左转了一圈。\n",who);
@@ -52,7 +52,7 @@ int do_turn (string arg)
       times++;
     else
       times = 0;
-  }  
+  }
   if (arg == "right")
   {
     message_vision ("$N围着树往右转了一圈。\n",who);
@@ -60,7 +60,7 @@ int do_turn (string arg)
       times++;
     else
       times = 0;
-  }  
+  }
   who->set_temp("obstacle/biqiu_turns",times);
   return 1;
 }
@@ -73,14 +73,14 @@ int do_push (string arg)
   if (! arg ||
       arg != "tree")
     return notify_fail ("你伸出手想推什么。\n");
- 
+
   message_vision ("$N伸出手将树用力一推。\n",who);
   if (times == 6 && random(50-who->query("kar")) == 0)
   {
     message_vision ("刹那间，一声响亮唿喇喇闪开两扇门，$N一头撞将进去。\n",
                     who);
     who->move(__DIR__"dong");
-  }  
+  }
   who->set_temp("obstacle/biqiu_turns",0);
   return 1;
 }
