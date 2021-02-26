@@ -287,7 +287,7 @@
 * o added some code for more robustness in in_read_callback()
  */
 
-// #include <config.h> /* from tmi-2 */
+// #include "config.h" /* from tmi-2 */
 
 #define FTPD_VERSION "5.8"
 
