@@ -17,4 +17,3 @@ string exert_function_file(string func)
 {
         return CLASS_D("puti") + "/wuxiangforce/" + func;
 }
-
