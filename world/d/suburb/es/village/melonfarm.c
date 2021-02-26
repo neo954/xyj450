@@ -29,7 +29,7 @@ void init()
 	add_action ("do_pick", "pick");
 }
 
-int do_pick (string arg) 
+int do_pick (string arg)
 {
  	object ob;
 	object room;
@@ -56,16 +56,16 @@ int do_pick (string arg)
 		ob->set_leader(me);
 		ob->kill_ob(me);
 		//me->kill_ok(ob);
-		return 1; 
+		return 1;
 	      }
 	      else {
 		message_vision( "瓜农似乎正在打瞌睡，没有发现$N的小动作。\n", me );
 		return 1;
-	      } 
+	      }
 	    }
 	    else{
 	      message_vision( "$N真幸运，瓜农没有在瓜棚看瓜。\n", me );
-	      return 1; 
+	      return 1;
 	    }
 	  }
           else {
