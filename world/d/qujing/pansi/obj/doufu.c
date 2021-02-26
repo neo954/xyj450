@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/20/1997
 
 inherit ITEM;
@@ -36,7 +36,7 @@ int do_eat (string arg)
     return 0;
 
   remove_call_out ("reacting");
-  call_out ("reacting",2+random(4),who);    
+  call_out ("reacting",2+random(4),who);
   return ::do_eat(arg);
 }
 
