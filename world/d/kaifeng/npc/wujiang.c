@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // wujiang.c 武将
 
 inherit NPC;
@@ -23,7 +23,7 @@ void create()
         set_skill("parry", 70);
         set("max_kee", 700);
         set("max_sen", 600);
-        set("force", 400); 
+        set("force", 400);
         set("max_force", 400);
         set("force_factor", 15);
         set("max_mana", 100);
@@ -38,7 +38,7 @@ void init()
 {
         object ob;
         ::init();
-        if (interactive(ob = this_player()) && 
+        if (interactive(ob = this_player()) &&
                 (int)ob->query_condition("killer")) {
 //                remove_call_out("kill_ob");
 //                call_out("kill_ob", 1, ob);
