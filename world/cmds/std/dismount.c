@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat feb 4 1998
 
 inherit F_CLEAN_UP;
@@ -20,11 +20,11 @@ int main(object who, string arg)
 
   if (me != who->query_temp("ridee"))
     return notify_fail ("你并没有"+me->query("ride/msg")+"在"+me->name()+"上。\n");
-      
+
   message_vision ("$N挺身从$n上跃下来。\n",who,me);
   me->set_temp("no_return",0);
   me->set_temp("rider",0);
-  who->set_temp("ridee",0);          
+  who->set_temp("ridee",0);
   who->add_temp("apply/dodge",-who->query_temp("ride/dodge"));
   who->set_temp("ride/dodge",0);
   return 1;
