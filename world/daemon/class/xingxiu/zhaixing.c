@@ -9,7 +9,7 @@ void create()
 {
 	set_name("摘星子", ({ "zhaixing zi", "zhaixing" }));
 	set("nickname", "星宿派大师兄");
-	set("long", 
+	set("long",
 		"他就是丁春秋的大弟子、星宿派大师兄摘星子。\n"
 		"他三十多岁，脸庞瘦削，眼光中透出一丝乖戾之气。\n");
 	set("gender", "男性");
