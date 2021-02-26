@@ -23,4 +23,3 @@ void create()
         add_money("silver", 10);
 
 }
-
