@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 7/17/1997 by snowcat
 
 inherit NPC;
@@ -79,7 +79,7 @@ int do_look (string arg)
       arg &&
       me == present(arg,environment(me)) &&
       who->query("gender") != "女性" &&
-      where && 
+      where &&
       where->query("short") == "仙泉")
   {
     message_vision ("$N朝着$n吃惊地呀了一声，立刻将身体藏入水中。\n",me,who);
