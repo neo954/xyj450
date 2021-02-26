@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // open.c
 
 #include <room.h>
@@ -25,7 +25,7 @@ int main(object me, string arg)
           break;
         }
      if( !dir ) return notify_fail("你要打开什么？\n");
-   
+
      if( environment(me)->open_door(dir) ) {
         message_vision("$N将" + doors[dir]["name"] + "打开。\n", me);
         return 1;
@@ -39,9 +39,9 @@ int help(object me)
 {
         write(@HELP
 指令格式 : open <door> 或 <方向>
- 
+
 这个指令可以让你打开门.
- 
+
 HELP
     );
     return 1;
