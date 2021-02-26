@@ -152,5 +152,3 @@ void enough_rest()
 {
         delete_temp("busy");
 }
-
-
