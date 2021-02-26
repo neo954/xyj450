@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xunshi.c
 
 inherit NPC;
@@ -21,7 +21,7 @@ void create()
    set_skill("blade", 30);
    set_skill("bingpo-blade", 30);
    set_skill("xiaoyaoyou", 30);
-   set_skill("force", 30);   
+   set_skill("force", 30);
    set_skill("ningxie-force", 30);
    map_skill("force", "ningxie-force");
    map_skill("blade", "bingpo-blade");
