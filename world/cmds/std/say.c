@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // say.c
 
 #include <ansi.h>
@@ -36,11 +36,11 @@ int help (object me)
 {
    write(@HELP
 指令格式: say <讯息>
- 
+
 说话，所有跟你在同一个房间的人都会听到你说的话。
- 
+
 注: 本指令可用 ' 取代.
- 
+
 HELP
    );
    return 1;
