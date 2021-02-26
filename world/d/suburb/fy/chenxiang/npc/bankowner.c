@@ -11,17 +11,17 @@ void create()
         set("gender", "男性" );
         set("age", 52);
         set("long",
-                
+
                 "中原南宫世家，家财万贯，产业不可胜数，南宫十三也是南宫世家
 的族人\n");
 
         set("attitude", "friendly");
 
-        set("max_atman", 1000);         set("atman", 1000);             
+        set("max_atman", 1000);         set("atman", 1000);
 set("atman_factor", 3);
-        set("max_force", 1000);         set("force", 1000);             
+        set("max_force", 1000);         set("force", 1000);
 set("force_factor", 3);
-        set("max_mana", 1000);          set("mana", 1000);              
+        set("max_mana", 1000);          set("mana", 1000);
 set("mana_factor", 3);
 
         set_skill("dodge", 10);
