@@ -26,4 +26,3 @@ int do_eat(string arg)
                 return notify_fail("你要吃什么？\n");
         return notify_fail("你找死啊。\n");
 }
-
