@@ -50,4 +50,3 @@ LONG,
   setup();
   "/obj/board/fxtd_b"->foo();
 }
-
