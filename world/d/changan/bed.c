@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // standard bed for players.
 // by mon. 3/7/97
 
@@ -12,10 +12,10 @@ int do_bed();
 
 void create()
 {
-     set_name("木床",({"home_bed"}));     
+     set_name("木床",({"home_bed"}));
      set("short","木床");
      set("long", @LONG
-一张大木床。 
+一张大木床。
 LONG
      );
      set("out","/d/changan/ph");
