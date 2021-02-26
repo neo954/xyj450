@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit F_VENDOR_SALE;
 
 string heal_me(object me);
@@ -14,7 +14,7 @@ void create()
         set("age", 37);
         set("long",
 "杨老板是长安城里祖传的名医。虽然年轻，却早已名声在外。\n");
-        set("kee", 300); 
+        set("kee", 300);
         set("max_kee", 300);
         set("sen", 200);
         set("max_sen", 200);
@@ -86,7 +86,7 @@ void accept_kill(object me)
                 ob=new("/d/city/npc/xunluobing");
                 ob->move(environment());
         }
-        message_vision("\n忽然从门外冲进来个巡逻官兵，对$N大喊一声“干什么？想杀人谋财么！\n\n",me);        
+        message_vision("\n忽然从门外冲进来个巡逻官兵，对$N大喊一声“干什么？想杀人谋财么！\n\n",me);
 
         ob->kill_ob(me);
         ob->set_leader(me);
