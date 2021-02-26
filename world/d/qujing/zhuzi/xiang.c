@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/6/1997
 inherit ROOM;
 
@@ -15,10 +15,10 @@ void create()
 
 LONG);
 
-  set("exits", ([ 
+  set("exits", ([
     "north" : __DIR__"huitong",
   ]));
-  set("objects", ([ 
+  set("objects", ([
     "/d/obj/food/chahu" : 1,
   ]));
   set("sleep_room",1);
