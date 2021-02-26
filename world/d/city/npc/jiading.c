@@ -18,4 +18,3 @@ void create()
         set_temp("apply/defense", 10);
    setup();
 }
-
