@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -41,12 +41,12 @@ int accept_object(object me,object ob)
      command("say "+RANK_D->query_respect(who)+ "已替朕取回了佛宝，真是辛苦了！\n");
      call_out("destroy", 1, ob);
      return 1;
-   }   
+   }
    if(who->query("obstacle/jisaiguo")=="allow") {
         command("say " +RANK_D->query_respect(who)+ "还没起身吗？\n");
                 call_out("destroy", 1, ob);
                 return 1;
-   }   
+   }
    if( who->query_temp("obstacle/jisaiguo/letter")) {
      command("say 原来如此，看来朕错怪了金光寺的僧人了。\n");
      command("say " +RANK_D->query_respect(who)+
