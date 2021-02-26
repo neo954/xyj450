@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/jjf/front_yard2.c
 
 inherit ROOM;
@@ -48,7 +48,7 @@ int do_da(string arg)
   object me=this_player(), weapn;
   string skll;
   int weaponskll, exp=(int)me->query("combat_exp");
- 
+
   if( (!arg) || !((arg == "logs") || (arg == "木桩")))
     return notify_fail("你要打什么？\n");
   if( (me->query("kee") < me->query("eff_kee")/5) || (me->query("eff_kee") < me->query("max_kee")/5))
@@ -57,7 +57,7 @@ int do_da(string arg)
     {
       message_vision("$N挥拳向木桩打去，结果把拳头打得鲜血淋漓。\n", me);
       me->receive_wound("kee", me->query("eff_kee")/10);
-      return 1;   
+      return 1;
  }
   if(!weapn=me->query_temp("weapon"))
     {
@@ -97,7 +97,7 @@ int do_tiao(string arg)
   object me=this_player();
   int dodgeskll=(int)me->query_skill("dodge", 1)/2;
   int exp=(int)me->query("combat_exp");
- 
+
   if( (!arg) || !((arg == "pits") || (arg == "沙坑")))
     return notify_fail("你要往哪里跳？\n");
   if( me->query("kee") < (int)(me->query("max_kee")/5))
