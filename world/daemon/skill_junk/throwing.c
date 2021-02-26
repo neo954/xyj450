@@ -4,4 +4,3 @@
 // throwing.c
 
 inherit SKILL;
-
