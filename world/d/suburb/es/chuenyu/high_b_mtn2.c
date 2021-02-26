@@ -15,9 +15,9 @@ LONG
           "up" : __DIR__"gate_castle",
           "west" : __DIR__"rope_bridge",
           ]));
-          
+
           set("outdoors", "chuenyu");
-          
+
           setup();
 }
-                  
+
