@@ -68,5 +68,3 @@ int accept_object(object me, object ob)
             return 1;
         }
 }
-
-
