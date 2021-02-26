@@ -238,4 +238,3 @@ int do_quit()
    this_player()->move("/cmds/std/quitroom");
        return 1;
 }
-
