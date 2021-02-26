@@ -1,4 +1,4 @@
-children - returns an array of objects cloned from a given file 
+children - returns an array of objects cloned from a given file
 
 object array children( string name );
 
