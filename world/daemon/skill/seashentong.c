@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // seashentong.c 【碧海神通】
 inherit SKILL;
 
