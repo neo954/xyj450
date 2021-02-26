@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // goldjian.c
 // created 5-30-97 pickle
 // please do not use this weapon, reserved for /d/jjf/npc/qinqiong.c
@@ -24,7 +24,7 @@ void create()
     set("wield_msg", "$N抽出了$n，喃喃道：锏儿，锏儿，再请你一回！\n");
     set("unwield_msg", "$N收起了$n，长吁了一口气道：宝锏果然又显雄风！\n");
   }
-  
+
   init_mace(95);
   setup();
 }
