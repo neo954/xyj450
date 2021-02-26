@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit F_CLEAN_UP;
 
 #include <ansi.h>
@@ -20,7 +20,7 @@ int main(object me, string arg)
         } else if (wizardp (me)) {
                 ob = find_player(arg);
                 if(!ob) ob = find_living(arg);
-        
+
                 if(!ob) ob = LOGIN_D->find_body(arg);
 
                 if(!ob || !me->visible(ob)) return notify_fail("没有这个人。\n");
@@ -39,7 +39,7 @@ int help()
         write(@TEXT
 指令格式：quests <某人>
 
-显示某人解谜的资料。 
+显示某人解谜的资料。
 
 请见：help jiemi
 TEXT
@@ -115,14 +115,14 @@ int telling (object me, object who)
   {
     write ("  “"+who->query("quest/reason")+"……”");
     if (who->query("quest/reward")) {
-      if (wizardp(me)) 
+      if (wizardp(me))
         write ("  即将有"+to_chinese(who->query("quest/reward"))+"点奖励。\n");
-      else  
+      else
         write ("  即将有奖励。\n");
-    }  
+    }
     else
       write ("\n");
-  }    
+  }
   write ("\n");
 
   write (name+"还有如下几个正在解的迷：\n");
@@ -131,7 +131,7 @@ int telling (object me, object who)
     write ("  食物："+mapp["name"]);
     if (wizardp(me))
       write (" 参考系数："+mapp["index"]+"/"+mapp["daoxing"]+"。\n");
-    else 
+    else
       write ("\n");
   }
   if (mapp = who->query("quest/pending/give"))
@@ -139,7 +139,7 @@ int telling (object me, object who)
     write ("  送物："+mapp["name"] + " " + mapp["objectname"]);
     if (wizardp(me))
       write (" 参考系数："+mapp["index"]+"/"+mapp["daoxing"]+"。\n");
-    else 
+    else
       write ("\n");
   }
   if (mapp = who->query("quest/pending/ask"))
@@ -147,7 +147,7 @@ int telling (object me, object who)
     write ("  拜贤："+mapp["name"]);
     if (wizardp(me))
       write (" 参考系数："+mapp["index"]+"/"+mapp["daoxing"]+"。\n");
-    else 
+    else
       write ("\n");
   }
   if (mapp = who->query("quest/pending/kill"))
@@ -155,7 +155,7 @@ int telling (object me, object who)
     write ("  灭妖："+mapp["name"]);
     if (wizardp(me))
       write (" 参考系数："+mapp["index"]+"/"+mapp["daoxing"]+"。\n");
-    else 
+    else
       write ("\n");
   }
   if (mapp = who->query("quest/pending/weapon"))
@@ -163,7 +163,7 @@ int telling (object me, object who)
     write ("  武器："+mapp["name"]);
     if (wizardp(me))
       write (" 参考系数："+mapp["index"]+"/"+mapp["daoxing"]+"。\n");
-    else 
+    else
       write ("\n");
   }
   if (mapp = who->query("quest/pending/armor"))
@@ -171,7 +171,7 @@ int telling (object me, object who)
     write ("  盔甲："+mapp["name"]);
     if (wizardp(me))
       write (" 参考系数："+mapp["index"]+"/"+mapp["daoxing"]+"。\n");
-    else 
+    else
       write ("\n");
   }
   if (mapp = who->query("quest/pending/cloth"))
@@ -179,7 +179,7 @@ int telling (object me, object who)
     write ("  衣物："+mapp["name"]);
     if (wizardp(me))
       write (" 参考系数："+mapp["index"]+"/"+mapp["daoxing"]+"。\n");
-    else 
+    else
       write ("\n");
   }
   if (mapp = who->query("quest/pending/wearing"))
@@ -187,7 +187,7 @@ int telling (object me, object who)
     write ("  首饰："+mapp["name"]);
     if (wizardp(me))
       write (" 参考系数："+mapp["index"]+"/"+mapp["daoxing"]+"。\n");
-    else 
+    else
       write ("\n");
   }
   if (mapp = who->query("quest/pending/furniture"))
@@ -195,14 +195,14 @@ int telling (object me, object who)
     write ("  家什："+mapp["name"]);
     if (wizardp(me))
       write (" 参考系数："+mapp["index"]+"/"+mapp["daoxing"]+"。\n");
-    else 
+    else
       write ("\n");
   }
   write ("\n");
 
   if (!wizardp(me))
     return 1;
-    
+
   write (name+"解迷暂存使用统计：\n");
   if (mapp = who->query("quest/cache/food"))
   {
