@@ -33,4 +33,3 @@ void remove_effect(object me, int amount)
         me->delete_temp("taixu");
         tell_object(me, "你的［太虚百幻］施展完毕，身行稳定了下来。\n");
 }
-
