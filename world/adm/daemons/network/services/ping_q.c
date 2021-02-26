@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /* File    : ping_q.c
  * Creator : Pinkfish@Discworld
  *         : Grendel@Tmi-2
@@ -10,7 +10,7 @@
  *
  * This protocol is used to ask another mud for infomation about itself.
  */
- 
+
 // Ported to ES2 mudlib by Annihilator@ES2 (06/15/95)
 
 #include <net/dns.h>
