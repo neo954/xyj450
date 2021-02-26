@@ -5,7 +5,7 @@
 
 inherit NPC;
 
-#include <quest_wp.h>
+#include "quest_wp.h"
 #include <reporting.h>
 
 int test_player();
