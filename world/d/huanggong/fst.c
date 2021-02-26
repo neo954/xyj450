@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 10/05/1997
 // room: /d/huanggong/fst.c
 
@@ -119,7 +119,7 @@ int do_look ()
 int valid_leave (object me, string dir)
 {
   if ((string)me->query("id")=="pang xuanling" &&
-      (dir=="southeast" || dir=="southwest")) 
+      (dir=="southeast" || dir=="southwest"))
     return 0;
   return 1;
 }
