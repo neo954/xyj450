@@ -32,7 +32,7 @@ int apply_medicine()
 	diff = this_player()->query("max_kee")-this_player()->query("eff_kee");
 	if(!(diff))    return notify_fail("你没有受伤！\n");
 	if(value > diff) value = diff;
-	    
+	
 	message_vision("$N用云南白药疗伤 ．\n",this_player());
 	this_player()->add("eff_kee",value);
 	destruct(this_object());
