@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhen.c 太极拳「震」字诀
 
 #include <ansi.h>
@@ -21,7 +21,7 @@ int perform(object me, object target)
 		
         if( (int)me->query_skill("taiji-quan", 1) < 30 )
 		return notify_fail("你的太极拳不够娴熟，不会使用「震」字诀。\n");
-	                        
+	
         if( (int)me->query_skill("taiji-shengong", 1) < 30 )
 		return notify_fail("你的太极神功不够高，不能用来反震伤敌。\n");
 			
@@ -48,7 +48,7 @@ int perform(object me, object target)
         	else if( damage < 80 ) msg += RED"结果$n被$N以内力一震，胸口有如受到一记重锤，连退了五六步！\n"NOR;
         	else msg += HIR"结果$N被$n的内力一震，眼前一黑，身子向后飞出丈许！！\n"NOR;
 		
-	} else 
+	} else
 	{
 		me->start_busy(1);
 		msg += CYN"可是$p看破了$P的企图，并没有上当。\n"NOR;
