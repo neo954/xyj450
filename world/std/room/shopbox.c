@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // this object is put in hockshop to hold items.
 // by mon. 2/28/98
 
@@ -10,7 +10,7 @@ inherit ITEM;
 
 void create()
 {
-     set_name("聚宝盒",({"treasure box", "box"}));     
+     set_name("聚宝盒",({"treasure box", "box"}));
      set("short", "聚宝盒");
      set("env/invisibility",1);
      set_max_encumbrance(50000000);
@@ -27,4 +27,4 @@ void create()
 int clean_up()
 {
     return 0;
-}    
+}
