@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // qload.c
 
 inherit F_CLEAN_UP;
@@ -14,7 +14,7 @@ int main()
 int help(object me)
 {
 write(@HELP
-指令格式 : qload 
+指令格式 : qload
 
 这个指令显示出目前 CPU 的负担, cmds/s 是每秒编译几个 cmds
 comp lines/s 是每秒几行。
