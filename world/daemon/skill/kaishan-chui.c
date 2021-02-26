@@ -88,4 +88,3 @@ int practice_skill(object me)
 int valid_effect(object me, object weapon, string name, int skill)
 {
 }
-
