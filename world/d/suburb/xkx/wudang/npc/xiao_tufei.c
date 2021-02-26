@@ -23,4 +23,3 @@ void create()
         carry_object("/d/obj/clone/misc/cloth")->wear();
         add_money("coin", 30);
 }
-
