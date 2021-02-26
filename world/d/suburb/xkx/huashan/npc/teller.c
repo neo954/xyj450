@@ -11,7 +11,7 @@ void create()
 	set_name("李铁嘴", ({ "fortune teller", "teller" }) );
 	set("gender", "男性" );
 	set("age", 48);
-	set("long", 
+	set("long",
 "李铁嘴是个买卜算卦的江湖术士，兼代客写书信、调幅。\n");
         set("str", 25);
         set("dex", 20);
@@ -71,11 +71,11 @@ int accept_object(object who, object ob)
 //              say("李铁嘴说：这是写好了的信，给我干什么?\n");
                 return 0;
 	}
-       
+
 	if( ob->value() >= 5000 ) {
 		 if( who->query_temp("marks/李4") ) {
 			write(
-"李铁嘴对你说道：这封信是造好了，但" + RANK_D->query_respect(who) + 
+"李铁嘴对你说道：这封信是造好了，但" + RANK_D->query_respect(who) +
 "要是出了事，千万别把我说出来呀。\n");
 			say("李铁嘴给了" + who->query("name") + "一封手信。\n");
 			this_player()->set_temp("marks/李4", 0);
@@ -88,7 +88,7 @@ int accept_object(object who, object ob)
 			this_player()->set_temp("marks/李4", 1);
 			this_player()->set_temp("marks/李3", 0);
 			return 1;
-		} 
+		}
 		if( who->query_temp("marks/李") ) {
 			write(
 "李铁嘴对你说道：你想伪造什么啊? 总得拿个样子来吧。\n");
@@ -97,7 +97,7 @@ int accept_object(object who, object ob)
 		return 1;
 		}
                 say(
-"李铁嘴一面急忙把钱收起来，一面笑嘻嘻说道：" + RANK_D->query_respect(ob) + 
+"李铁嘴一面急忙把钱收起来，一面笑嘻嘻说道：" + RANK_D->query_respect(ob) +
 "，这怎么敢当。\n");
 		return 1;
 	}
