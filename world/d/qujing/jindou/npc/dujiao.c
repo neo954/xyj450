@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 12/18/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("独角兕大王", ({ "dujiaosi dawang", "dujiaosi", "dawang", "wang" }));
-  set("title", "金兜洞");   
+  set("title", "金兜洞");
   set("long", "一位身材壮实的大块头妖王，头上长着一只角。\n");
   set("gender", "男性");
   set("age", 70);
@@ -86,7 +86,7 @@ void li_appearing (object who)
   object li = new ("/d/qujing/jindou/npc/lilao");
 
   li->announce_success (who);
-  destruct (li); 
+  destruct (li);
 }
 
 void unconcious ()
@@ -106,7 +106,7 @@ void kill_ob (object ob)
   object me = this_object();
 
   set_temp("my_killer",ob);
-  call_out ("hurting",random(5)+5,me,ob);  
+  call_out ("hurting",random(5)+5,me,ob);
   ::kill_ob(ob);
 }
 
@@ -117,7 +117,7 @@ void hurting (object me, object ob)
   if (fabao)
     fabao->ji_ob (ob);
 
-  remove_call_out ("hurting");  
-  call_out ("hurting",random(10)+10,me,ob);  
+  remove_call_out ("hurting");
+  call_out ("hurting",random(10)+10,me,ob);
 }
 
