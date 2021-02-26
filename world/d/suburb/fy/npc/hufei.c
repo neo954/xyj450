@@ -106,4 +106,3 @@ void do_kill(object ob)
     }
 
 }	
-
