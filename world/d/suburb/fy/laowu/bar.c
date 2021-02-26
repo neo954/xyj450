@@ -9,7 +9,7 @@ void create()
 冷清清，看不见一个客人。一块“太白遗风”的木板招牌孤零零的在寒风中摇曳。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "south" : __DIR__"street1",
 ]));
 
