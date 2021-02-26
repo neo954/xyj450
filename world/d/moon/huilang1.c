@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /moon/road.c
 
 inherit ROOM;
@@ -19,9 +19,9 @@ LONG);
   "south": __DIR__"huilang.c",
   "west" : __DIR__"wangmu_room.c",
 ]));
-  set("objects", ([ 
+  set("objects", ([
            __DIR__"npc/fairy4" : 1,
-  
+
         ]));
   setup();
 }
