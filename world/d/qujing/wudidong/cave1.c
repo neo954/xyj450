@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 int do_leap();
@@ -64,7 +64,7 @@ int do_push(string arg)
 
   if ( !arg || ((arg !="men") ))
     return notify_fail("你要推什么？ \n");
-  if ( mystr <50 || myeffstr<20) 
+  if ( mystr <50 || myeffstr<20)
     return notify_fail("你力气太小了，推不动！ \n");
   if (random(myforce)>1000)
     {
