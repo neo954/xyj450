@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // silverjian.c
 // created 5-30-97 pickle
 
@@ -23,7 +23,7 @@ void create()
     set("wield_msg", "只见一道银光闪过，$N手里已经多了一柄$n！\n");
     set("unwield_msg", "$N收起了$n，四周光芒为之一暗！\n");
   }
-  
+
   init_mace(65);
   setup();
 }
