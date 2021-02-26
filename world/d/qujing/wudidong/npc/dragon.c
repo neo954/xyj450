@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 void create()
@@ -22,7 +22,7 @@ void create()
   set("force", 1000);
   set("max_force", 1000);
   set("max_mana", 600);
-  set("mana",600);   
+  set("mana",600);
   set_skill("spells", 100);
   set_skill("force",100);
   set_skill("parry", 50+random(150));
