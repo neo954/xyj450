@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -45,7 +45,7 @@ void init()
 
         ::init();
         if( interactive(ob = this_player()) && !is_fighting() ) {
-   
+
    if ((string)ob->query("family/family_name")!="阎罗地府") {
    if (random((int)ob->query("age")) > 20 ){
    command("tell " + ob->query("id") + " 阎王爷叫我来勾你的魂，你却自己送上门来，跟我走吧！\n");
