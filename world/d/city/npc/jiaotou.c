@@ -30,4 +30,3 @@ int recognize_apprentice(object ob)
 {
    return 1;
 }
-
