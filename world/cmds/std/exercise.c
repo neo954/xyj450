@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // exercise.c
 
 #include <skill.h>
@@ -12,13 +12,13 @@ int finish(object me, int kee_cost);
 int main(object me, string arg)
 {
    int kee_cost, busy_time;
-   
+
    seteuid(getuid());
-   
+
    if(environment(me)->query("no_fight")  ||
       environment(me)->query("no_magic") )
          return notify_fail("安全区内禁止练功。\n");
-         
+
         if (me->is_busy() || me->query_temp("pending/exercising"))
                 return notify_fail("你现在正忙着呢。\n");
 
@@ -41,7 +41,7 @@ int main(object me, string arg)
 
    busy_time=kee_cost/20;
    me->start_busy(busy_time+1);
-   
+
    call_out("finish",busy_time+1, me, kee_cost);
    return 1;
 }
@@ -66,7 +66,7 @@ int finish(object me, int kee_cost)
    tell_object(me, "你行功完毕，吸一口气，缓缓站了起来。\n");
 
    if( (int)me->query("force") > (int)me->query("max_force") * 2) {
-     if( (int)me->query("max_force") >= 
+     if( (int)me->query("max_force") >=
         (int)me->query_skill("force") * 10 ) {
         tell_object(me, "当你的内息遍布全身经脉时却没有功力提升的迹象，似乎内力修为已经遇到了瓶颈。\n");
      } else {
@@ -74,8 +74,8 @@ int finish(object me, int kee_cost)
         me->add("max_force", 1);
      }
      me->set("force", me->query("max_force"));
-   }   
-   
+   }
+
    me->start_busy(1);
    return 1;
 }
