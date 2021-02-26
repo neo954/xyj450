@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // marry.c
 
 inherit F_CLEAN_UP;
@@ -34,7 +34,7 @@ int main(object me, string arg)
 
    if (me->query("propose_man")!=getuid(who))
      return notify_fail("嗯？"+who->name()+"没向你求过婚啊。\n");
-   
+
 
    if (who->query("propose_target")!=getuid(me))
      return notify_fail("对不起，"+who->name()+"已经改变主意不向你求婚了。\n");
@@ -58,12 +58,12 @@ int help(object me)
 {
 write(@HELP
 指令格式 : marry <某人>
- 
+
 这个指令用来答应别人的求婚，当然你必须是女性，目标必须是正在向你求婚的人。
 
 相关指令请参阅：propose
 相关程序请参阅：marriage
- 
+
 HELP
     );
     return 1;
