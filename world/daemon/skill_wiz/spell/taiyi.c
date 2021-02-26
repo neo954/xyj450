@@ -18,5 +18,3 @@ string cast_spell_file(string spell)
 {
         return CLASS_D("zhenyuan") + "/taiyi/" + spell;
 }
-
-
