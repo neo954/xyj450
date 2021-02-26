@@ -47,4 +47,3 @@ message_vision("$N向$n问道：谁死了？\n",this_object(),ob);
                         break;
         }
 }
-
