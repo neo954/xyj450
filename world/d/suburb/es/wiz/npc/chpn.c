@@ -47,7 +47,7 @@ set("combat_exp", 200000);
                 (: exert_function, "powerup" :),
                 (: exert_function, "recover" :),
         }) );
-                
+
 	set_skill("unarmed", 100);
 	set_skill("parry", 100);
 	set_skill("dodge", 100);
@@ -84,7 +84,7 @@ void init()
                 remove_call_out("greeting");
                 call_out("greeting", 1, ob);
         }
-        
+
 }
 
 void greeting(object ob)
