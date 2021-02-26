@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // check somebody's position
 
 #include <ansi.h>
@@ -51,11 +51,11 @@ int main(object me,string arg)
    int *levels,i;
    string msg;
 
-   if(!arg) 
+   if(!arg)
      return notify_fail("你想打听谁的状态？\n");
    if((int)me->query("combat_exp")<5000)
      return notify_fail("你的道行不够，用不了地耳灵。\n");
-   if((int)me->query("mana")<60) 
+   if((int)me->query("mana")<60)
      return notify_fail("你的法力不够，用不了地耳灵。\n");
    if((int)me->query("sen")<=50)
      return notify_fail("你现在太累了，休息休息吧！\n");
@@ -89,7 +89,7 @@ int main(object me,string arg)
    lvl=skill_level(3,mana_lvl);
    write("顺风耳告诉你： " + ob->name() + "目前法力已达" + lvl + "的境界。\n");
 
-        message_vision("$N忽然莫名其妙地哆嗦了一下。\n",ob); 
+        message_vision("$N忽然莫名其妙地哆嗦了一下。\n",ob);
    msg="你急忙掐指一算，";
         if(ob->query("combat_exp")>me->query("combat_exp")/5)
      msg+="原来是"+me->name()+"("+me->query("id")+")"+
@@ -153,7 +153,7 @@ int help(object me)
    渐入佳境   道心稳固   一日千里
    脱胎换骨   霞举飞升   道满根归
    不堕轮回   已证大道   天人合一
-   
+
 法力级别：
    初具法力   略晓变化   腾云驾雾
    预知祸福   妙领天机   呼风唤雨
