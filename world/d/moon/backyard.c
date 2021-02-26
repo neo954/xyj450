@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -48,7 +48,7 @@ int valid_leave()
 }
 
 int do_sit(string arg)
-{     
+{
       object me;
 
       me=this_player();
@@ -58,10 +58,10 @@ int do_sit(string arg)
 
         if (this_player()->query_temp("marks/sit"))
                 return notify_fail("你已经坐下了。\n");
-      
+
       if ( arg != "seat"&&arg != "deng")
               return notify_fail("坐桌子上？太不雅观了吧。\n");
-        
+
         this_player()->set_temp("marks/sit", 1);
         message_vision("$N轻轻巧巧地坐上了小木凳。\n",me);
       return 1;
@@ -87,8 +87,8 @@ int do_serve(string arg)
         if((int)this_player()->query("food") >=
      (int)this_player()->max_food_capacity()*90/100)
         return notify_fail("这儿风景这么好，别光想着吃：）\n");
-            
-        if(present("xue li", this_player()) || 
+
+        if(present("xue li", this_player()) ||
      present("guihuageng", this_player()) ||
      present("xue li", environment(this_player()))
    )
@@ -96,7 +96,7 @@ int do_serve(string arg)
 
         m=new(__DIR__"obj/xueli.c");
    mm=new(__DIR__"obj/guihuageng.c");
-   
+
    message_vision("$N嘴里嘟囔了两句，木桌上立刻有摆满了果品点心．\n", this_player());
 
         m->move(environment(this_player()));
