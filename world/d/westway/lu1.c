@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -17,7 +17,7 @@ LONG);
         "north"      : __DIR__"lu2",
       ]));
 //  set("outdoors", __DIR__);
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
                 "/d/westway/obj/tielong" : 1,
         ]));
