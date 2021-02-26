@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // huanyang.c 还阳丹
 
 #include <ansi.h>
@@ -16,7 +16,7 @@ void init()
                 set("no_get", "嘿嘿，做梦吧! \n");
                 set("no_drop","这么宝贵的还阳丹，哪能乱扔! \n");
         }
-                                              
+
         add_action("do_eat", "eat");
 }
 
