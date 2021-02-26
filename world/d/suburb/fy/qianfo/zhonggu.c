@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 #include <room.h>
 inherit ROOM;
