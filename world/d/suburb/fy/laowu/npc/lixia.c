@@ -9,7 +9,7 @@ void create()
         set("age", 24);
 	set("per",5);
         set("long",
-                
+
 "这个女人看起来二十多岁了，看著她粗壮的身形，你觉得．．．。\n");
         set("combat_exp", 1);
         set("chat_chance", 1);
@@ -27,7 +27,7 @@ int accept_object(object who, object ob)
         val = ob->value();
         if( !val )
                 return 0;
-        if( val >= 100000 ) 
+        if( val >= 100000 )
 	{
         say( "李霞说道：这位" + RANK_D->query_respect(who)
                 + "，你去冰河，把它炸（ｂｏｍｂ）出来．\n");
