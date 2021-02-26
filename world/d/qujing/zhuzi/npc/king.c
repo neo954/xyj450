@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/6/1997
 
 inherit NPC;
@@ -81,20 +81,20 @@ int test_player (object me)
     inform_player (msg+"道行不够，怕是庸医也！\n",who);
     call_out("throw_player",1,who);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/zhuzi") == "done" ||
       who->query_temp("obstacle/zhuzi_cured"))
   {
     inform_player (msg+"，多谢多谢，朕再拜顿首！\n",who);
     return 1;
-  }  
+  }
 
   if (this_object()->query_temp("cured"))
   {
     inform_player (msg+"不必多虑，朕已康复！\n",who);
     return 1;
-  }  
+  }
 
   inform_player (msg+"，可否为朕寻得乌金丹？\n",who);
   who->set_temp("obstacle/zhuzi_asked",1);
@@ -119,7 +119,7 @@ int accept_object (object who, object ob)
     inform_player (msg+"，朕已拥有江山社稷，岂可用这小恩惠打动朕心！\n",who);
     call_out("throw_player",1,who);
     call_out("destroy_object",1,ob);
-    return 1;    
+    return 1;
   }
 
   if (who->query("combat_exp")<10000)
@@ -128,7 +128,7 @@ int accept_object (object who, object ob)
     call_out("throw_player",1,who);
     call_out("destroy_object",1,ob);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/zhuzi") == "done" ||
       who->query_temp("obstacle/zhuzi_cured"))
@@ -136,14 +136,14 @@ int accept_object (object who, object ob)
     inform_player (msg+"，多谢多谢，朕再拜顿首！\n",who);
     call_out("destroy_object",1,ob);
     return 1;
-  }  
+  }
 
   if (this_object()->query_temp("cured"))
   {
     inform_player (msg+"不必多虑，朕已康复！\n",who);
     call_out("destroy_object",1,ob);
     return 1;
-  }  
+  }
 
   if (! who->query_temp("obstacle/zhuzi_waited"))
   {
@@ -151,11 +151,11 @@ int accept_object (object who, object ob)
     call_out("delayed_vision",1,"$N将药往旁边玉桶里一扔。\n",me);
     call_out("destroy_object",1,ob);
     return 1;
-  }  
+  }
 
   message_vision ("$N接下药，对$n连声道谢。\n",me,who);
   call_out("delayed_vision",3,
-           "早有几位宫女进来，伺候着$N将药用无根水服下。\n",me); 
+           "早有几位宫女进来，伺候着$N将药用无根水服下。\n",me);
   ob2 = copy_yao(ob);
   call_out("eat_drug",1,me,ob2,who);
   return 1;
@@ -163,7 +163,7 @@ int accept_object (object who, object ob)
 
 void delayed_vision (string msg, object me)
 {
-  message_vision (msg,me);  
+  message_vision (msg,me);
 }
 
 void destroy_object (object ob)
@@ -222,5 +222,5 @@ object copy_yao ( object me )
    who -> set("name", me->query("name"));
    who -> set_temp("is_ready", me->query_temp("is_ready") );
    who -> move(this_object());
-   
+
    return who;
