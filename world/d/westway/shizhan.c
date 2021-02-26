@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 4/8/1997
 // room: /d/westway/shizhen.c
 
@@ -28,7 +28,7 @@ LONG);
 
 
 void init()
-{       
+{
         object me=this_player();
         if( query("done") ) return;
         if( interactive(me)) {
@@ -36,7 +36,7 @@ void init()
                 call_out("greeting",25, me);
         }
 }
-   
+
 int greeting(object me)
 {
    object *list, ob;
