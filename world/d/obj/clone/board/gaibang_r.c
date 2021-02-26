@@ -12,4 +12,3 @@ void create()
 	set("capacity", 100);
 	replace_program(BULLETIN_BOARD);
 }
-
