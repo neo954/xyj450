@@ -81,4 +81,3 @@ void gothim(object who, object killer)
 	}
 	return;
 }
-
