@@ -25,5 +25,5 @@ void create()
 	add_money("silver", 2);
         carry_object("/obj/cloth")->wear();
         carry_object("/obj/weapon/sword")->wield();
-        
+
 }
