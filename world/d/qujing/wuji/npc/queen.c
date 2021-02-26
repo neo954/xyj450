@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 
@@ -23,7 +23,7 @@ void create()
   set("force", 100);
   set("force_factor", 4);
   setup();
- 
+
   carry_object("/d/obj/cloth/gongpao")->wear();
 }
 
@@ -45,10 +45,10 @@ int accept_object (object who, object ob)
 void telling (object me, object who, object ob)
 {
   object yugui = present ("yu gui",me);
-  
+
   if (! yugui)
   {
-    yugui = new ("/d/qujing/wuji/obj/jade");       
+    yugui = new ("/d/qujing/wuji/obj/jade");
     yugui->move(me);
   }
   message_vision ("王后对$N说：还是去见太子罢。\n",who);
