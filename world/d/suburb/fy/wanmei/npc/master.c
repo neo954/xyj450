@@ -160,4 +160,3 @@ void killed_enemy(object who)
 {
         command("say 狂妄之徒，死不足惜！\n");
 }
-
