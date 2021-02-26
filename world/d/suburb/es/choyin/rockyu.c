@@ -17,7 +17,7 @@ LONG
 ]));
 
         set("objects", ([
-                    __DIR__"npc/oldman" :1,            
+                    __DIR__"npc/oldman" :1,
                       ]) );
 	set("no_clean_up", 0);
 
