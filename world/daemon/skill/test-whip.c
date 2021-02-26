@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //【烈火鞭】hellfire-whip.c
 
 /*
@@ -31,7 +31,7 @@ mapping *action = ({
      "post_action":     (: second_attack :),
         ]),
         ([      "name":                 "地狱烈火",
-                "action":               
+                "action":
 "$N大喝一声，手中$w宛若矫龙飞在半空，大有「横空出世」的气概。\n$n只觉得全身俱在$w笼罩之下",
                 "dodge":                -20,
                 "parry":                -20,
@@ -123,7 +123,7 @@ mapping query_action(object me, object weapon)
    return action[i];
    }
 }
-     
+
 
 int practice_skill(object me)
 {
@@ -189,7 +189,7 @@ void second_attack()
    i=(int)me->query_skill("literate",1);
    if( i < random(100) ) {
      return;
-   }   
+   }
 
 //Reset weapon&action for the attack.
 
@@ -200,7 +200,7 @@ void second_attack()
 
    message_vision(RED"\n$N一招占了先机，连续发动进攻。\n"NOR, me);
    COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
-        
+
    second->set("equipped", "second_wield");
         first->set("equipped", "wielded");
         me->set_temp("weapon", first);
