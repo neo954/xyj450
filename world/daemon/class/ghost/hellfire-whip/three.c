@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 
 inherit SSERVER;
@@ -8,7 +8,7 @@ inherit SSERVER;
 int perform(object me, object target)
 {
         object weapon;
-           
+
    if( !target ) target = offensive_target(me);
 
         if( !target
@@ -44,7 +44,7 @@ int perform(object me, object target)
 
    me->set("HellZhen", 6);
 //   message_vision("\n$N双手一抖，手中$n顿时变的笔直，如同一根铁棍。\n", me, weapon);
-   COMBAT_D->do_attack(me, target, me->query_temp("weapon")); 
+   COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
 
    me->set("HellZhen", 1);
    COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
