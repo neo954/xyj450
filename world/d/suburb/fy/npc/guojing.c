@@ -10,7 +10,7 @@ void create()
 	set("nickname", HIY"北侠"NOR);
 	set("gender", "男性");
 	set("age", 25);
-	set("long", 
+	set("long",
 		"他就是人称北侠的郭靖，既是蒙古成吉思汗的金刀驸马，又是\n"
 		"江南七怪、全真派马钰道长、「北丐」洪七公和「老顽童」周\n"
 		"伯通等人的徒弟，身兼数门武功。\n"
@@ -46,7 +46,7 @@ void create()
 	
 	set("combat_exp", 800000);
 	set("score", 200000);
-	 
+	
 	set_skill("force", 150);		// 基本内功
 	set_skill("huntian-qigong", 130);	// 混天气功
 	set_skill("unarmed", 220);		// 基本拳脚
