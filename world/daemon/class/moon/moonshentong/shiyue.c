@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 蚀月咒�
 inherit SSERVER;
 #include <ansi.h>
@@ -23,10 +23,10 @@ int cast(object me, object target)
    ||      !target->is_character()
    ||      target->is_corpse()
    ||      target==me)
-     return notify_fail("你想对谁施展蚀月咒？\n");  
+     return notify_fail("你想对谁施展蚀月咒？\n");
 
    if(target->query("mark/moon_poison") == 1)
-   return notify_fail(target->query("name")+"已经中邪了！\n");  
+   return notify_fail(target->query("name")+"已经中邪了！\n");
 
    if((int)me->query("mana") < 300 )
      return notify_fail("你的法力不够！\n");
@@ -41,7 +41,7 @@ int cast(object me, object target)
    me->receive_damage("sen", 10);
 
    msg = HIC
-"$N低头默默念起咒文，手中渐渐聚起一团光球，雪白的脸庞似乎发射出柔和的光芒。\n" 
+"$N低头默默念起咒文，手中渐渐聚起一团光球，雪白的脸庞似乎发射出柔和的光芒。\n"
 NOR;
 
    success = 1;
@@ -50,7 +50,7 @@ NOR;
    ap += (int)me->query("combat_exp")/2;
    dp = target->query("combat_exp")/2;
 //   if( random(ap + dp) < dp ) success = 0;
-//here we compared exp and spells level. 
+//here we compared exp and spells level.
 //note: has nothing to do with target's spells level.
 
    ap2 = (int)me->query_spi();
@@ -67,16 +67,16 @@ NOR;
      msg +=  HIR "$n见到$N祥宁之态，娇美不可方物，心中一荡，却不防那光球一闪，突然射向$n。\n" NOR;
      target->set("mark/moon_ice", 1);
      target->apply_condition("moon_poison", ((int)me->query_skill("moonshentong",1)/5));
-     me->start_busy(1+random(2)); 
+     me->start_busy(1+random(2));
            if( living(target) ) target->kill_ob(me);
 
-   }       
+   }
    else {
-     msg +=  HIR "$N脸色苍白，似乎体力不支，光球在手中渐渐褪去。！\n" NOR;   
+     msg +=  HIR "$N脸色苍白，似乎体力不支，光球在手中渐渐褪去。！\n" NOR;
      if((int)me->query("mana") > 300 )
         me->add("mana", -300);
      me->apply_condition("moon_poison", ((int)me->query_skill("moonshentong")/10));
-   } 
+   }
 
    message_vision(msg, me, target);
    return 1;
