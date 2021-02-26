@@ -32,7 +32,7 @@ void create()
 	set("score",0);
 	
 	set("attitude", "peaceful");
-        
+
 	set("inquiry", ([
 		"铸杖"  : "师傅命我帮助别人铸剑，但到现在也不见一个人影。谁要铸剑呢？\n",
 		"原料"  : "铸剑可用寒丝羽竹，海底金母，千年神木。但效果各不一样。\n",
@@ -58,15 +58,15 @@ int accept_object(object who, object ob)
 	}
 	who->delete_temp("staff");
 	who->set_temp("m_staff",1);
-	switch ((string)ob->query("name") ) 
+	switch ((string)ob->query("name") )
 	{
-		case "千年神木": 
+		case "千年神木":
 			who->add_temp("shenmu",1);
 			break;
 		case "海底金母":
 			who->add_temp("jinmu",1);
 			break;
-		case "寒丝羽竹": 
+		case "寒丝羽竹":
 			who->add_temp("hanzhu",1);
 			break;
 		default :
@@ -87,7 +87,7 @@ int do_zhu(string arg)
 	object staff,make_time;   //生成的武器句柄
 	object me;
 	me = this_player();
-	if(!(me->query_temp("m_staff")) ) 
+	if(!(me->query_temp("m_staff")) )
 		return notify_fail("什么?\n");
 	me->delete_temp("m_staff");
 	me->delete_temp("get_orc");
