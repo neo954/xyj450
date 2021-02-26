@@ -6,7 +6,7 @@ void create()
 {
 	set_name("张松溪", ({ "zhang songxi", "zhang" }));
 	set("nickname", "武当四侠");
-	set("long", 
+	set("long",
 		"他就是张三丰的四弟子张松溪。\n"
 		"他今年四十岁，精明能干，以足智多谋著称。\n");
 	set("gender", "男性");
