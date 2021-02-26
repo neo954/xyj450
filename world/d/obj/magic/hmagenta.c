@@ -59,4 +59,3 @@ int do_wear (string arg)
   }
   return 0; // to invoke standard function
 }
-
