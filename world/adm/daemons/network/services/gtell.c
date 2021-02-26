@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /*
  * File    : gtell.c
  * Creator : Pinkfish@Discworld
@@ -67,7 +67,7 @@ void incoming_request(mapping info)
         PING_Q->send_ping_q(info["HOSTADDRESS"], info["PORTUDP"]);
 
      if (minfo && minfo["HOSTADDRESS"] != info["HOSTADDRESS"]) {
-        // Its been faked! 
+        // Its been faked!
         dns_log("dns_fake", "Tell: "+info["WIZFROM"]+"@"+info["NAME"]+
           "("+info["HOSTADDRESS"]+") telling "+info["WIZTO"]
           +" "+ info["MSG"]+"\n");
@@ -81,14 +81,14 @@ void incoming_request(mapping info)
         return ;
      }
 
-           reply=TELL_CMD->remote_tell( info["CNAME"], info["WIZFROM"], 
+           reply=TELL_CMD->remote_tell( info["CNAME"], info["WIZFROM"],
          info["NAME"], info["WIZTO"], info["MSG"]);
-                
+
      mudinfo=DNS_MASTER->query_mud_info(Mud_name());
      // query info about ourselves.
 
      (AUX_PATH+"affirmation_a")->send_affirmation_a(info["HOSTADDRESS"],
-        info["PORTUDP"], 
+        info["PORTUDP"],
         mudinfo["MUDNAME"], //"Gtell@"+Mud_name(),
         info["WIZFROM"], reply, "gtell");
    } //if (info["NAME"] && info["PORTUDP"])
