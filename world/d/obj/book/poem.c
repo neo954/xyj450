@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // poem.c
 
 inherit ITEM;
@@ -19,7 +19,7 @@ void create()
    set("long",
    "这本书大概有两三百页，蓝底白字的封面上龙飞凤舞地写着“太白自选集”。\n");
         set("material", "paper");
-        set("value", 500);   
+        set("value", 500);
         }
 }
 
@@ -50,7 +50,7 @@ int do_read(string arg)
      "安能摧眉折腰事权贵，使我不得开心颜。",
      "一枝红艳露凝香，云雨巫山枉断肠。",
      });
-   
+
    me=this_player();
 
        if( !this_object()->id(arg) ) return 0;
@@ -58,7 +58,7 @@ int do_read(string arg)
              return notify_fail("你现在忙着呢，哪有闲情逸致吟诗...\n");
       if( me->is_fighting() )
              return notify_fail("太风雅了吧？打架时还吟诗...\n");
-   
+
    if( (int)me->query_skill("literate",1)<100 )
      return notify_fail("你照着诗集摇头晃脑地哼了几句，不过没明白是啥意思。\n");
    if( (int)me->query_skill("literate",1)>140 )
@@ -66,14 +66,14 @@ int do_read(string arg)
 
    sen_cost = 20 + (35-(int)me->query("int"));
    if( (int)me->query("sen")<sen_cost )
-     return notify_fail("你现在头晕脑胀，该休息休息了。\n");   
+     return notify_fail("你现在头晕脑胀，该休息休息了。\n");
    me->receive_damage("sen", sen_cost);
 
    gain = (int)me->query_skill("literate", 1)/5+(int)me->query("int")+1;
    me->improve_skill("literate", gain);
 
        message_vision("$N拿着本诗集摇头晃脑地吟道：" + poem[random(sizeof(poem))] + "\n", me);
-     
+
    return 1;
 }
 
