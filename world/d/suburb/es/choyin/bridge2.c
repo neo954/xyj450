@@ -18,7 +18,7 @@ LONG
 
 	set("outdoors", "choyin");
 	set("objects", ([
-		__DIR__"npc/scholar" : 2 
+		__DIR__"npc/scholar" : 2
 	]) );
 
 	setup();
