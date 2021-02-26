@@ -201,4 +201,3 @@ void quest_done (object who)
 }
 
 #endif
-
