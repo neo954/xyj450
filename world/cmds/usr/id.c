@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // id.c
 
 inherit F_CLEAN_UP;
@@ -41,13 +41,12 @@ int help(object me)
 {
 write(@HELP
 指令格式 : id [here]
- 
+
 这个指令可以让你知道物品的英文名称及名字. 只打 id 会显示
 你身上所携带物品的名称. 'id here' 则显示所有跟你在同一个
 环境里的物件名称.
- 
+
 HELP
     );
     return 1;
 }
- 
