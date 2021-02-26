@@ -79,4 +79,3 @@ void reset_me ()
   me->set("eff_sen", (int)me->query("max_sen"));
   me->set("sen", (int)me->query("max_sen"));
 }
-
