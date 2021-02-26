@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat 10/16/1997
 
 inherit NPC;
@@ -40,7 +40,7 @@ void create()
   ]));
   setup();
   carry_object("/d/qujing/baoxiang/obj/spqun")->wear();
-  
+
 }
 
 void init()
