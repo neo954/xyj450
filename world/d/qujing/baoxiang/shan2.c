@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 10/14/1997
 // room: /d/qujing/baoxiang/shan2.c
 
@@ -47,23 +47,23 @@ void appearing (object who)
   if (! present ("lanpao guai", where))
   {
     guai = new (__DIR__"npc/lanpao");
-    guai->move(where);    
-    guai->appear();    
-    guai->disappear();    
+    guai->move(where);
+    guai->appear();
+    guai->disappear();
   }
   if (! present ("lupao guai", where))
   {
     guai = new (__DIR__"npc/lupao");
-    guai->move(where);    
-    guai->appear();    
-    guai->disappear();    
+    guai->move(where);
+    guai->appear();
+    guai->disappear();
   }
   if (! present ("qingpao guai", where))
   {
     guai = new (__DIR__"npc/qingpao");
-    guai->move(where);    
-    guai->appear();    
-    guai->disappear();    
+    guai->move(where);
+    guai->appear();
+    guai->disappear();
   }
   call_out ("no_reappearing",20);
 }
