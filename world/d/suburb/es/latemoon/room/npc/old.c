@@ -27,9 +27,9 @@ void create()
       set_skill("dodge", 70);
       set_skill("stormdance", 70);
       set_skill("tenderzhi", 70);
-      set_skill("snowwhip", 60); 
+      set_skill("snowwhip", 60);
       map_skill("dodge","stormdance");
-      map_skill("whip","snowwhip"); 
+      map_skill("whip","snowwhip");
       map_skill("unarmed","tenderzhi");
       set("force", 1000);
       set("max_force", 800);
@@ -48,19 +48,19 @@ int accept_object(object me, object ob)
         int iNeiLiTrans;
 	if( !ob->id("###token###") ) return 0;
 	command("sigh");
-      if( (int)me->query( "max_force" ) < 160 
+      if( (int)me->query( "max_force" ) < 160
                && ((string)me->query("family/family_name")=="晚月庄") )
       {
          command("say 作为感谢，我传你一些内力。");
          message_vision( "无名老妇手抵在$N的后心，头上冒出丝丝白气。 \n", me );
          message( "vision", "你感觉到一股热气传了过来。 \n", me );
          iNeiLiTrans = 160-(int)me->query( "max_force" );
-         if( iNeiLiTrans>50 ) 
+         if( iNeiLiTrans>50 )
              iNeiLiTrans = random( 50 );
          else
-             iNeiLiTrans = random( iNeiLiTrans ); 
+             iNeiLiTrans = random( iNeiLiTrans );
 	 if( iNeiLiTrans > 20 ) iNeiLiTrans = 20;
-	 iNeiLiTrans = iNeiLiTrans*(int)me->query_kar()/30; 
+	 iNeiLiTrans = iNeiLiTrans*(int)me->query_kar()/30;
          me->set("max_force", (int)me->query("max_force")+iNeiLiTrans );
          me->set("force", 0);
       }
