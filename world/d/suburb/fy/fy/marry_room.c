@@ -13,7 +13,7 @@ void create()
 LONG
         );
         set("exits", ([
-                "north"          : __DIR__"ecloud1", 
+                "north"          : __DIR__"ecloud1",
          ]) );
 
         set("item_desc", ([
@@ -23,7 +23,7 @@ LONG
         set("objects", ([
                 __DIR__"npc/mei_po" : 1,
         ]) );
- 
+
         setup();
 
 }
