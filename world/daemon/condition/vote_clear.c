@@ -12,7 +12,7 @@ int update_condition(object me, int duration)
 	    me->delete("vote/reason");
         me->delete("vote/juror");
         me->delete("vote/count");
-		            
+		
 		return 0;
 	}
 	
