@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // enforce.c
 
 inherit F_CLEAN_UP;
@@ -9,7 +9,7 @@ int main(object me, string arg)
 {
    int pts;
 
-   if( !arg || (arg!="none" && !sscanf(arg, "%d", pts)) ) 
+   if( !arg || (arg!="none" && !sscanf(arg, "%d", pts)) )
      return notify_fail("指令格式：enforce <使出几成内力伤敌>|none");
 
    if( !me->query_skill_mapped("force") )
@@ -31,10 +31,10 @@ int help (object me)
 {
         write(@HELP
 指令格式: enforce|jiali <使出几点内力伤敌>|none
- 
+
 这个指令让你指定每次击中敌人时，要发出几点内力伤敌。
 
-enforce none 则表示你不使用内力。 
+enforce none 则表示你不使用内力。
 
 SEE ALSO : enable, enchant
 HELP
