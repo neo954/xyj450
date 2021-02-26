@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // master.c
 
 #include <ansi.h>
@@ -152,7 +152,7 @@ int accept_fight(object me)
      command("say 阿弥陀佛！出家人戒逞强恶斗！老衲不敢违反清规。");
    else
      command("say 施主既然身负绝艺，老衲佩服便是，也不必较量了。");
-   
+
    return 0;
 }
 */
