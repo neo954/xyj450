@@ -62,4 +62,3 @@ string get_status(mixed ob)
         else if( member_array(euid, member_levels)!=-1 ) return euid;
         else return "(NotMember)";
 }
-
