@@ -64,5 +64,3 @@ int heal_up(object who)
 
         return 1;
 }
-
-
