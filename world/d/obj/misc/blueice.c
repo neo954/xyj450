@@ -114,4 +114,3 @@ int do_chi(string arg)
 
    return 1;
 }
-
