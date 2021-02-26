@@ -67,7 +67,7 @@ int accept_object(object who, object ob)
         //        call_out( (: destruct :), 1, ob);
                 return 1;
         }
-                                                                                
+
 	if ( !who->query("marks/军营") ) {
 		if( ob->value() >=3000 ) {
 			say("大队长说道:我已帮你列入名册了，从今天你可自由"
@@ -100,5 +100,5 @@ void make_stage(object who,int stage)
 	}
 	return;
 }
-         
+
 		
