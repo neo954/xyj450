@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 void create()
 {
@@ -56,7 +56,7 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-   
+
    command("look " + ob->query("id") );
    command("say 又白又胖，刚好让老子下酒！");
    command("chan " + ob->query("id") );
