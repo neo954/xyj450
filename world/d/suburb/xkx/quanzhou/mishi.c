@@ -70,4 +70,3 @@ int valid_leave(object me, string dir)
         me->delete_temp("marks/跳1");
         return ::valid_leave(me, dir);
 }
-
