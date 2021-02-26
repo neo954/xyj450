@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-//天女散花 
+
+//天女散花
 // dream 7/17/97
 #include <ansi.h>
 
@@ -32,7 +32,7 @@ int perform(object me, object target)
      return notify_fail("你的百花掌级别还不够！\n");
 
    tar=all_inventory(me);
-        size = sizeof(tar); 
+        size = sizeof(tar);
    if(size) {
            for(i=0;i<size;i++)
       if(tar[i]->query("material") == "flower") {
@@ -40,7 +40,7 @@ int perform(object me, object target)
      }
      }
 
-   
+
    if((int)number < 5)
      return notify_fail("你的花不足以施展「天女散花」！\n");
 
@@ -59,7 +59,7 @@ int perform(object me, object target)
         dp = target->query_skill("parry");
    dp = ( dp * dp * dp / (4 * 400) );
 // + (int)target->query("kee");
-   dp = dp*250 + target->query("combat_exp"); 
+   dp = dp*250 + target->query("combat_exp");
         if( random((ap + dp)/1000+1) <  dp/1000 ) {
      msg += HIC "谁知$n竟险中求胜，长袖一摆，已将所有花瓣打落！\n\n"NOR;
            message_vision(msg, me, target);
