@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 12/2/1997
 
 inherit ROOM;
@@ -37,7 +37,7 @@ int do_climb (string arg)
       random(4))
   {
     message_vision ("\n……哗哗一声，$N失手滑了下来。\n",who);
-    who->unconcious();    
+    who->unconcious();
   }
   else
     who->move(__DIR__"shanmen");
