@@ -40,5 +40,3 @@ void init()
 		ob->clear_condition("bonze_jail");
 	}
 }
-
-
