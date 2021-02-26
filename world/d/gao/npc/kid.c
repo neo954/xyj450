@@ -17,4 +17,3 @@ setup();
 // carry_object("/u/dream/obj/cloth")->wear();
 add_money("coin", 10);
 }
-
