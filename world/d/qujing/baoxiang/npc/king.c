@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat 10/16/1997
 
 inherit NPC;
@@ -41,10 +41,10 @@ void create()
   map_skill("spells", "seashentong");
   set("eff_dx",15000);
   set("nkgain",110);
-  
+
   setup();
   carry_object("/d/obj/cloth/mangpao")->wear();
-  
+
 }
 
 void check_princess(object me);
@@ -129,7 +129,7 @@ void check_princess(object me)
   ling = present ("junling pai",who);
   if (ling == 0)
     return;
-  
+
   baihua->set_leader(0);
   baihua->set_temp("no_return",0);
   remove_call_out ("cry_princess");
