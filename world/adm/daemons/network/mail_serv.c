@@ -12,7 +12,7 @@
 #include <net/daemons.h>
 #include "daemons.h"
 #include <uid.h>
-#include <post.h>
+#include "post.h"
 
 #define log(x) log_file("MS", x)
 #define MS_SAVE "mail-queue"
