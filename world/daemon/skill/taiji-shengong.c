@@ -27,7 +27,7 @@ int valid_learn(object me)
 	if ((int)me->query_skill("force", 1) < 10)
 		return notify_fail("你的基本内功火候还不够。\n");
 
-	if (lvl > 10 && (int)me->query("sen") < t * 100) 
+	if (lvl > 10 && (int)me->query("sen") < t * 100)
 		return notify_fail("你的侠义正气太低了。\n");
 
 	return 1;
