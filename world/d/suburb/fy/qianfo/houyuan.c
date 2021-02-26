@@ -14,7 +14,7 @@ LONG
          "west" :__DIR__"changlang3.c",
          "north":__DIR__"yezhang.c"
                ]));
-   
+
   setup();
   replace_program(ROOM);
 }
