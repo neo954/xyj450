@@ -70,4 +70,3 @@ void reset_work (object me)
 {
         me->set_temp("working_in_liangdian",0);
 }
-
