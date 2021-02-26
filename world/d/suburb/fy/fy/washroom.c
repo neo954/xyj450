@@ -34,4 +34,3 @@ TEXT
         setup();
         replace_program(ROOM);
 }
-
