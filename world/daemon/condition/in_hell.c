@@ -35,4 +35,3 @@ int update_condition(object me, int duration)
 
     return 1;
 }
-
