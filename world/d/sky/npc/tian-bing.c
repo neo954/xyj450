@@ -1,18 +1,18 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // tian-bing.c
- 
+
 inherit NPC;
- 
+
 void create()
 {
         int rd;
- 
+
         rd=random(4);
         set_name("天兵", ({ "tian bing", "tian", "bing" }) );
         set("gender", "男性" );
-        set("long", 
+        set("long",
                 "托塔李天王帐下天兵，膀阔腰圆，力大无穷。\n"
                 "他手持兵刃，身穿宝甲，目光扫视着每个路过的人。\n"
         );
@@ -46,7 +46,7 @@ void create()
                         set_skill("axe",59);
                         break;
         }
- 
+
         setup();
         carry_object("/d/obj/armor/tianjia")->wear();
         switch(rd) {
@@ -64,4 +64,4 @@ void create()
                 break;
         }
 }
- 
+
