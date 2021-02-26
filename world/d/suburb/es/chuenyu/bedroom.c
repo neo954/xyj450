@@ -17,7 +17,7 @@ LONG
               "eastdown" : __DIR__"east_blackge",
 ]));
         create_door("south", "玉帘门", "north", DOOR_CLOSED);
-        
+
         setup();
-        
+
 }
