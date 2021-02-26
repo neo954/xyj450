@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit ITEM;
 
@@ -31,7 +31,7 @@ void burning ()
     "灯火闪了一闪。\n",
     "灯火在缸里跳了一下。\n",
   });
-  tell_room (where,msgs[random(sizeof(msgs))]); 
+  tell_room (where,msgs[random(sizeof(msgs))]);
   remove_call_out ("burning");
   call_out ("burning",random(60)+1);
 }
