@@ -67,9 +67,9 @@ void init()
 	ob = this_player();
 	me = this_object();
 	
-	if (interactive(ob) 
+	if (interactive(ob)
 	&& !environment(ob)->query("no_fight")
-	&& !present("yingxiong ling", ob) 
+	&& !present("yingxiong ling", ob)
 	&& ( (fam = ob->query("family")) && fam["family_name"] != "少林派" ) )
 	{
 		if( !ob->query_temp("warned") ) {
@@ -82,8 +82,8 @@ void init()
 			command("say 大胆狂徒，竟敢闯到少林寺里来撒野！！！\n");
 			me->set_leader(ob);
 			remove_call_out("kill_ob");
-			call_out("kill_ob", 1, ob); 
+			call_out("kill_ob", 1, ob);
 		}
-	}       
+	}
 
 }
