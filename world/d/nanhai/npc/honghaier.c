@@ -77,4 +77,3 @@ void attempt_apprentice(object ob)
    command("recruit " + ob->query("id") );
    return;
 }
-
