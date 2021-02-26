@@ -100,4 +100,3 @@ int accept_fight(object me)
         command("say 茅山派不和别派的人过招。");
         return 0;
 }
-
