@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat
 
 inherit NPC;
@@ -52,7 +52,7 @@ void reward (object who)
   //  points *= 2;
   if(points<50)
     points *= 5;
-  else 
+  else
     points *= 4;
   // mon 3/30/98 increase the dx reward.
 
@@ -65,7 +65,7 @@ void reward (object who)
 /*
   command (channel+" "+who->query("name")+who->query("quest/reason")+"陛下有旨，赐"+
            COMBAT_D->chinese_daoxing(points)+"道行！");
-*/                  
+*/
   who->add("quest/gain/combat_exp",points);
   reporting (who, who->query("quest/reason"), points, "点道行");
   who->add("combat_exp",points);
