@@ -64,4 +64,3 @@ void incoming_request(mapping info)
         info["ASKWIZ"], reply));
    }
 }
-
