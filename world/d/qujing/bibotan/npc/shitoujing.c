@@ -75,4 +75,3 @@ void relay_emote(object ob,string verb)
                 break;
         }
 }
-
