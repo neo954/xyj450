@@ -10,7 +10,7 @@ void create()
 一条布满车痕的官道向西方和东方伸展。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "northwest" : "/u/quicksand/desert2",
   "southeast" : __DIR__"road",
 ]));
