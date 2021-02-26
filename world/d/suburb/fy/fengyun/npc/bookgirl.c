@@ -23,4 +23,3 @@ void create()
         carry_object("/obj/cloth")->wear();
 	carry_object(__DIR__"obj/flower")->wield();
 }
-
