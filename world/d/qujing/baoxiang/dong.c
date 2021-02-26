@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 10/14/1997
 // room: /d/qujing/baoxiang/dong.c
 
@@ -20,7 +20,7 @@ LONG);
   set("exits", ([
         "northwest"  : __DIR__"dongwai",
       ]));
-  set("objects", ([ 
+  set("objects", ([
       __DIR__"npc/shanyao" : 6,
       __DIR__"npc/huangpao" : 1,
       __DIR__"npc/baihua" : 1,
