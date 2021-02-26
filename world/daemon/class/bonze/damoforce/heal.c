@@ -4,7 +4,7 @@
 
 int exert(object me, object target, int amount)
 {
-        if( target != me ) return 
+        if( target != me ) return
                 notify_fail("你只能用内功疗自己的伤。\n");
 
 	if( me->is_fighting() )
