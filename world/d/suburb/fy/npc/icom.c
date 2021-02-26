@@ -9,7 +9,7 @@ void create()
       set("nickname",HIG "多情剑客" NOR);
 	set("gender", "男性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他就是少林首徒阿康。\n");
 
 	setup();
