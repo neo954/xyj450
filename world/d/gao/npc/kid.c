@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
 {
        set_name("小学童", ({ "xuetong" }));
-       
+
 set("long","小学童背不了书，正被教书先生罚站．\n");
        set("gender", "男性");
        set("age", 10);
