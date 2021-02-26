@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // summon command..
 
 inherit F_CLEAN_UP;
@@ -15,7 +15,7 @@ int main(object me, string str)
 
 //    if(wizardp(ob) && wiz_level(me) < wiz_level(ob))
 //      return notify_fail("你不能抓等级比你高的巫师。\n");
-            
+
    // moving
    tell_room(environment(ob),"天空中伸出一只大手把"+
    (string)ob->query("name")+"抓了起来，然后不见了。\n", ob);
