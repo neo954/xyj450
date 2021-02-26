@@ -31,5 +31,3 @@ this_player()->move(this_object());
 return 1;
 }
 }
-
-
