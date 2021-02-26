@@ -62,4 +62,3 @@ int do_enter(string arg)
 			return notify_fail("这么小的洞，你钻得进去吗？\n");
 	}
 }	
-
