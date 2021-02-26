@@ -105,4 +105,3 @@ void init()
 {
         add_action("give_quest", "quest");
 }
-
