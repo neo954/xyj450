@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 #include <room.h>
 inherit ROOM;
@@ -15,7 +15,7 @@ void create ()
 LONG);
 
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
   __DIR__"npc/zhang" : 1,
 ]));
   set("outdoors", 1);
