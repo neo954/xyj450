@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mimi/zhuziguo/yuhuayan.c  snowcat moved to /d/qujing/wuji
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create ()
 茂盛(bajiao)，比众花木不同。
 LONG);
 
-  set("outdoors", __DIR__"");                   
+  set("outdoors", __DIR__"");
   set("item_desc", ([ /* sizeof() == 1 */
     "bajiao" : "一种灵苗秀，天生体性空。翠缕千条细，丹心一点红。\n"+
                "青隐遮秀户，碧影上廉栊。愧无桃李色，冷落粉墙东。\n",
@@ -45,7 +45,7 @@ int do_kan(string arg)
 
   if (sizeof(query("exits"))>1)
     return notify_fail("芭蕉树已经倒了！\n");
-  
+
   message_vision("$N抡起大斧子朝芭蕉树砍去，芭蕉树晃了晃。\n",me);
   if (me->query("kee") <= 40)
     me->unconcious();
@@ -54,7 +54,7 @@ int do_kan(string arg)
   {
     message_vision("只听轰的一声，芭蕉树倒了，地下露出一口井。\n",me);
 
-    set("exits", ([ 
+    set("exits", ([
       "out" : __DIR__"huilang2.c",
       "down" : __DIR__"well",
     ]));
