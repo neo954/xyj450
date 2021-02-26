@@ -33,4 +33,3 @@ string look_sign(object me)
 {
         return RED"匾上三个大字：闯名堂\n"NOR;
 }
-
