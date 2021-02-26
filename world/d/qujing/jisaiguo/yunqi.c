@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -15,7 +15,7 @@ void create ()
 视，防止闲杂人等如内。
 LONG);
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
   __DIR__"npc/guan" : 2,
 ]));
   set("outdoors", 1);
@@ -29,7 +29,7 @@ LONG);
 }
 
 int valid_leave(object me, string dir)
-{       
+{
    object a,b;
         if( wizardp(me)) return 1;
    if( present("shu tie", me) ) return 1;
