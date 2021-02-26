@@ -27,4 +27,3 @@ void create()
 
         carry_object("/d/gao/obj/changpao")->wear();
 }
-
