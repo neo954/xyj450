@@ -37,4 +37,3 @@ void create()
         carry_object("/d/obj/cloth/skirt")->wear();
    carry_object("/d/sea/obj/bei")->wear();
 }
-
