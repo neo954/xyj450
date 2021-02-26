@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat
 
 inherit ITEM;
@@ -19,8 +19,8 @@ void create()
   setup();
 }
 
-int init ()  
-{   
+int init ()
+{
   add_action ("do_setid", "setid");
   add_action ("do_setname", "setname");
   add_action ("do_nie", "nie");
@@ -161,9 +161,9 @@ int do_nie (string arg)
     "说：叔叔阿姨能变魔术吗？变出糖糖来好不好？",
   });
 
-  string str1 = "$N"+rdm(dos)+"$n的"+rdm(parts)+"。\n";  
+  string str1 = "$N"+rdm(dos)+"$n的"+rdm(parts)+"。\n";
   string str2 = "$n"+rdm(actions)+"\n";
-  
+
   if (arg != this_object()->query("id"))
     return 0;
 
@@ -303,7 +303,7 @@ int do_shua (string arg)
   });
 
   string str1 = my_name+rdm(dos)+rdm(parts)+"上，"+rdm(actions)+"\n";
-  
+
   if (! arg)
     return 0;
 
