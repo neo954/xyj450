@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 #include "quest_fd.h"
@@ -83,7 +83,7 @@ int test_player()
     "$N对$n点头说道：水陆大会即将开宴请各路法师到会，听说有法师想要什么",
     "$N对$n一点头说道：俺老猪救济饥民，听说正需要",
     "$N想想说：有人倒是想让俺老猪给找个什么什么",
-  });  
+  });
   string str;
   object me = this_object();
   object who = this_player();
