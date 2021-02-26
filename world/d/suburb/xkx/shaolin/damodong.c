@@ -29,9 +29,9 @@ void init()
 {
 	object me = this_player();
 
-	if ((int)me->query_temp("bamboo/count") == 14 
-	&&  (int)me->query_skill("dodge", 1) >= 30 
-	&&  (int)me->query_skill("dodge", 1) <= 100 
+	if ((int)me->query_temp("bamboo/count") == 14
+	&&  (int)me->query_skill("dodge", 1) >= 30
+	&&  (int)me->query_skill("dodge", 1) <= 100
 	&&  present("bamboo", me) )
 	{
 		me->receive_damage("gin", 20);
