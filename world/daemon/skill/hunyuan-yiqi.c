@@ -27,7 +27,7 @@ int valid_learn(object me)
 	if ( nf < 10)
 		return notify_fail("你的基本内功火候还不够，无法领会混元一气功。\n");
 
-	if ( ns > 0 ) 
+	if ( ns > 0 )
 		return notify_fail("你屡犯僧家数戒，无法领会更高深的混元一气功。\n");
 
 	return 1;
