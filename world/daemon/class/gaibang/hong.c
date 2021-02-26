@@ -12,7 +12,7 @@ void create()
 	set("nickname", "九指神丐");
 	set("gender", "男性");
 	set("age", 75);
-	set("long", 
+	set("long",
 		"他就是丐帮第十七任帮主，号称“北丐”的洪七公老爷子。\n");
 	set("attitude", "peaceful");
 	
@@ -44,7 +44,7 @@ void create()
 	
 	set("combat_exp", 1000000);
 	set("score", 200000);
-	 
+	
 	set_skill("force", 150);             // 基本内功
 	set_skill("huntian-qigong", 150);    // 混天气功
 	set_skill("unarmed", 180);           // 基本拳脚
