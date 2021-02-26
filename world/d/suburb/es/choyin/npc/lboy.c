@@ -15,7 +15,7 @@ LONG
                 set("chat_chance", 2);
         set("chat_msg", ({
 "紫衣童子躬身一揖。 \n",
-"童子说道：仙人 ，只在此山中，云深不知处。\n", 
+"童子说道：仙人 ，只在此山中，云深不知处。\n",
        }) );
 
                 set("chat_chance_combat", 10);
@@ -30,7 +30,7 @@ LONG
 
         set_skill("dodge", 150);
         set_skill("unarmed", 150);
-        set_skill("mysterrier",150); 
+        set_skill("mysterrier",150);
         map_skill("dodge", "mysterrier");
         set_skill("force", 15);
         set("force", 500);
