@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // put.c
 
 inherit F_CLEAN_UP;
@@ -29,7 +29,7 @@ int main(object me, string arg)
    if(sscanf(item, "%d %s", amount, item)==2) {
      if( !objectp(obj = present(item, me)) )
         return notify_fail("你身上没有这样东西。\n");
-     if( obj->query("no_give") || 
+     if( obj->query("no_give") ||
         obj->query("no_drop") || obj->query("no_get") )
         return notify_fail( "Ok.\n" );
      if( !obj->query_amount() )
@@ -53,7 +53,7 @@ int main(object me, string arg)
    if(item=="all") {
      inv = all_inventory(me);
      for(i=0; i<sizeof(inv); i++)  {
-        if( inv[i]->query("no_give") || 
+        if( inv[i]->query("no_give") ||
           inv[i]->query("no_drop") || inv[i]->query("no_get") )
              continue;
 
@@ -65,7 +65,7 @@ int main(object me, string arg)
 
    if(!objectp(obj = present(item, me)))
      return notify_fail("你身上没有这样东西。\n");
-   if( obj->query("no_give") || 
+   if( obj->query("no_give") ||
      obj->query("no_drop") || obj->query("no_get") )
      return notify_fail( "Ok.\n" );
    return do_put(me, obj, dest);
@@ -101,9 +101,9 @@ int help(object me)
 {
 write(@HELP
 指令格式 : put <物品名称> in <某容器>
- 
+
 这个指令可以让你将某样物品放进一个容器，当然，首先你要拥有这样物品。
- 
+
 HELP
     );
     return 1;
