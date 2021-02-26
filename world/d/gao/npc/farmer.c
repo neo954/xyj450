@@ -21,4 +21,3 @@ void create()
         setup();
         add_money("coin", 20);
 }
-
