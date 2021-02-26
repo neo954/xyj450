@@ -64,4 +64,3 @@ void select_target(object me, string name)
    message( "vision", HIY "\n你的眼前突然出现一团耀眼的光芒，光芒中浮现出一个人影！\n\n" NOR,
      environment(ob), ({ me }) );
 }
-
