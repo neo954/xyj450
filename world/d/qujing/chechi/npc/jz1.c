@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 22 1997
 
 inherit NPC;
@@ -48,12 +48,12 @@ int check_valid_player (object who)
   if (! where)
     return 0;
   if (where->query("short") != "祭水场")
-    return 0;  
+    return 0;
 
-  yangli = present("yangli daxian",where);  
-  huli = present("huli daxian",where);  
-  luli = present("luli daxian",where);  
-  king = present("guo wang",where);  
+  yangli = present("yangli daxian",where);
+  huli = present("huli daxian",where);
+  luli = present("luli daxian",where);
+  king = present("guo wang",where);
   chantai1 = present("yun chantai 1",where);
   chantai2 = present("yun chantai 2",where);
 
@@ -109,7 +109,7 @@ int do_climb (string arg)
   if (present(arg,where) != chantai1)
     return 0;
   status = check_valid_player(who);
-  huli = present("huli daxian",where);  
+  huli = present("huli daxian",where);
   if (huli && huli->query("id") != "huli daxian")
     huli = 0;
   if (status == 0)
@@ -119,11 +119,11 @@ int do_climb (string arg)
   else if (who->query_temp("obstacle/chechi_chantai_times") == 0)
   {
     who->set_temp("obstacle/chechi_chantai_times",1);
-    call_out ("failing_climb",1,me,who,where,chantai1,chantai2,huli);    
+    call_out ("failing_climb",1,me,who,where,chantai1,chantai2,huli);
   }
   else if (random(3))
   {
-    call_out ("failing_climb",1,me,who,where,chantai1,chantai2,huli);    
+    call_out ("failing_climb",1,me,who,where,chantai1,chantai2,huli);
   }
   else
     call_out ("success_climb",1,me,who,where,chantai1,chantai2,huli);
@@ -149,7 +149,7 @@ void display_climb (object me, object who,
                   who);
   who->move(chantai2);
 }
- 
+
 void failing_climb (object me,object who, object where,
                     object chantai1, object chantai2, object huli)
 {
