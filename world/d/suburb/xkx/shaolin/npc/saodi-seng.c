@@ -73,4 +73,3 @@ void my_move()
 		command("down");
 	}
 }
-
