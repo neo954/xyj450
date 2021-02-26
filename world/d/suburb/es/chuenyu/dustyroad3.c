@@ -18,10 +18,10 @@ LONG
             "north" : __DIR__"sunnyroad",
 ]));
         create_door("northeast", "木门", "southwest", DOOR_CLOSED);
-        
+
         set("outdoors", "chuenyu");
         setup();
         replace_program(ROOM);
 }
 
-                            
+
