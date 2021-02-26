@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //【哭丧棒】kusang-bang.c
 
 /*
@@ -23,7 +23,7 @@ mapping *action = ({
                 "damage_type":  "砸伤"
         ]),
         ([      "name":                 "怨妇伤情",
-                "action":               
+                "action":
 "$N身形一转，面带戚色，一招「怨妇伤情」使出，\n手中$w好像沾上了$n，甩也甩不开",
                 "dodge":                -15,
      "parry":     -20,
