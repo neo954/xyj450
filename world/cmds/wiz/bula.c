@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // random load
 
 inherit F_CLEAN_UP;
@@ -25,7 +25,7 @@ int random_go(object me, string* dirs)
    }
 
     if( (newob=find_object(dirs[i]+file[j][0])) )   {
-     me->move( newob ); 
+     me->move( newob );
    }
    else  {
      seteuid(getuid(me));
@@ -47,7 +47,7 @@ int main(object me, string arg)
 
    dirs = ({"/d/4world/","/d/city/","/d/gao/", "/d/jjf/",
 "/d/lingtai/", "/d/meishan/","/d/moon/", "/d/nanhai/", "/d/penglai/",
-"/d/sea/","/d/sky/", "/d/xueshan/", "/d/qujing/nuerguo/", 
+"/d/sea/","/d/sky/", "/d/xueshan/", "/d/qujing/nuerguo/",
 "/d/qujing/wudidong/", "/d/qujing/firemount/"});
        random_go(me, dirs);
 
