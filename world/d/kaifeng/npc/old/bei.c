@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// by snowcat 
+
+// by snowcat
 
 inherit NPC;
 
@@ -77,7 +77,7 @@ int test_player()
     "$N从打开签盒取出一签对$n说道：他乡有难，请去给$w送点$o。\n",
     "$N将手中签一读，对$n说道：签曰现有$w急需$o。\n",
     "$N一扬签对$n说道：事不宜迟请去给$w送点$o。\n",
-  });  
+  });
   object me = this_object();
   object who = this_player();
   int *quest_keys;
