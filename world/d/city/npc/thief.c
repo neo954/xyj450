@@ -81,4 +81,3 @@ int accept_fight(object me)
         command("say 打架？我老头那是您的对手！\n");
         return 0;
 }
-
