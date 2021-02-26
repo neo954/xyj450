@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // guanjia.c
 // 9-2-97 pickle
 
@@ -23,8 +23,8 @@ void create()
   create_family("陷空山无底洞", 2, "弟子");
   set_skill("unarmed", 55);
   set_skill("parry", 55);
-  set_skill("spells", 55);  
-  set_skill("sword", 55);  
+  set_skill("spells", 55);
+  set_skill("sword", 55);
   set_skill("qixiu-jian", 55);
   set_skill("yinfeng-zhua", 55);
   set_skill("lingfu-steps", 55);
@@ -38,7 +38,7 @@ void create()
   map_skill("sword", "qixiu-jian");
   map_skill("parry", "qixiu-jian");
   map_skill("dodge", "lingfu-steps");
-  
+
   set("str", 30);
   set("per", 30);
   set("max_kee", 300);
@@ -56,7 +56,7 @@ void create()
         "here": "你瞎了眼啦？这里就是鼎鼎大名的陷空山无底洞！",
         "rumors": "不知道！找别人问去。",
         "人肉包子": "你瞎了眼啦？本姑娘又不是厨子！",
-                 ]) );  
+                 ]) );
   setup();
   carry_object("/d/obj/weapon/blade/blade.c")->wield();
   carry_object("/d/obj/cloth/yuanxiang")->wear();
