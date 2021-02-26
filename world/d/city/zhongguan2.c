@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //changan city
 
 inherit ROOM;
@@ -26,12 +26,12 @@ LONG);
 
         //set("item_desc", ([" *** " : " *** ", ]));
 
-        set("exits", 
+        set("exits",
         ([ //sizeof() == 4
      "north" : __DIR__"zhongguan",
         ]));
 
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
                 __DIR__"npc/kaishan" : 1,
                 "/d/obj/misc/tables" : 1,
@@ -46,11 +46,11 @@ LONG);
 
 void init()
 {
-        add_action("do_qiuxue", "qiuxue"); 
+        add_action("do_qiuxue", "qiuxue");
 }
 int do_qiuxue()
 {       object ob, pai_ob;
-        string object_file; 
+        string object_file;
         string obj_file;
         int i;
         object me;
@@ -68,16 +68,16 @@ write("殷开山从架上拿下一个小牌，笑道：望阁下珍惜机会，�
         pai_ob = new("/obj/pai");
                 obj_file = sprintf("%O", ob);
         for(i=0; i <sizeof(obj_file); i++)  {
-    }   
+    }
         obj_file = obj_file[0..i-1];
 
         pai_ob->set("player", this_player()->id());
 pai_ob->set_temp("long_1", "国子监秀才" + this_player()->name() + "\n" + "背面还刻着：" +
 student_msg[random(sizeof(student_msg))] + "\n");
-        
+
         this_player()->start_busy(1);
         pai_ob->move(this_player());
-        
+
         return 1;
 }
 
