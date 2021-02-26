@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /*
  * File    : gfinger_q.c
  * Creator : Pinkfish@Discworld
@@ -11,7 +11,7 @@
  *
  * This protocol is a request for information about a user at another mud.
  */
- 
+
 
 // Ported to ES2 mudlib by Annihilator@ES2 (06/15/95)
 
