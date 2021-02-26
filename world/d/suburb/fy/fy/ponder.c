@@ -32,4 +32,3 @@ int do_ponder(string arg)
        message_vision("$N身上的杀孽之气似乎轻了。 \n" , who);
     return 1;
 }
-
