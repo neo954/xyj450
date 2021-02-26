@@ -27,7 +27,7 @@ void init()
 {
 	object me = this_player();
 	
-	if( random((int)me->query_skill("dodge")) <= 10) 
+	if( random((int)me->query_skill("dodge")) <= 10)
 	{
 		me->receive_damage("kee", 50);
 		me->receive_wound("kee",  50);
