@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 int block_tell(object me)
 {               int time,count,last_tell;
 
@@ -11,7 +11,7 @@ int block_tell(object me)
                    write("你的交谈指令被暂时关闭了。\n");
                    return 0;
                 }
-              
+
                 count=me->query("channel/tell_count");
                 count++;
                 last_tell=me->query("channel/last_tell");
