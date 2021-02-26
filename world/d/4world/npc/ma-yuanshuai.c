@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // ma-yuanshuai.c
 
 inherit NPC;
@@ -17,7 +17,7 @@ void create()
         set_skill("unarmed", 80);
         set_skill("dodge", 110);
         set_skill("parry", 80);
-        set_skill("force", 50);   
+        set_skill("force", 50);
         set("per", 10);
         set("max_kee", 600);
         set("max_gin", 100);
