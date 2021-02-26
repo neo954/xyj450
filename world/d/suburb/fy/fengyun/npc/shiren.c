@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit NPC;
 int give_poem();
