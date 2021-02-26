@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 string *first_name = ({ "花皮", "背苍", "八爪金角", "金尾虬髯"});
@@ -66,7 +66,7 @@ int do_train()
      return notify_fail("这只龙正在战斗。\n");
    if((string)who->query("family/family_name")!="东海龙宫")
      return notify_fail("什么？\n");
-   
+
    call_out("reset_skill",1,who);
 
    message_vision("$N对$n大喊一声：孽畜，看你猖狂到几时！\n\n", who,me);
@@ -85,7 +85,7 @@ int reset_skill(object who)
    exp=(int)who->query("combat_exp");
 
 
-        if( exp > 1000000) {  
+        if( exp > 1000000) {
                 i=190;
         }else if( exp >900000){
                 i=180;
@@ -96,7 +96,7 @@ int reset_skill(object who)
         }else if( exp >600000){
                 i=150;
         }else if( exp >500000){
-                i=140;   
+                i=140;
         }else if( exp >400000){
                 i=130;
         }else if( exp >300000){
@@ -109,7 +109,7 @@ int reset_skill(object who)
                 i=90;
         }else if( exp >80000){
                 i=80;
-        }else if( exp >70000){ 
+        }else if( exp >70000){
                 i=70;
         }else if( exp >60000){
                 i=60;
@@ -146,7 +146,7 @@ void die()
    if(owner) owner_ob= find_player(owner);
 
    if(owner_ob &&  (object)query_temp("last_damage_from") == owner_ob ) {
-     if( (int)owner_ob->query_skill("seashentong",1) <=180 
+     if( (int)owner_ob->query_skill("seashentong",1) <=180
      && (int)owner_ob->query_skill("spells",1) <=180 ) {
      tell_object(owner_ob, "\n你驯服了恶龙，并且从中悟到了一些咒术的道理。\n");
      owner_ob->improve_skill("spells", random(owner_ob->query("spi"))+1);
