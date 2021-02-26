@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/death/road3.c
 
 inherit ROOM;
@@ -27,14 +27,14 @@ void init()
 }
 
 int do_open(string arg)
-{       
+{
         object me;
         me=this_player();
 
         if ( !arg || ((arg != "guancai")&&(arg != "棺材") ) )
                 return notify_fail("你要打开什么？\n");
         else {
-       
+
             message_vision("$N飞起一脚踢开棺材，爬了出去。\n\n",me);
        me->reincarnate();
        me->set("gin", (int)me->query("max_gin"));
