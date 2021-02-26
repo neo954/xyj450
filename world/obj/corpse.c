@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // corpse.c
 
 inherit ITEM;
@@ -51,7 +51,7 @@ void decay(int phase)
         if( environment() ) {
           object *inv;
           int i;
-          
+
           inv = all_inventory(this_object());
           for(i=0; i<sizeof(inv); i++) inv[i]->move(environment());
         }
@@ -76,7 +76,7 @@ object animate(object who, int time)
    return zombie;
 }
 void init()
-{                                             
+{
         add_action("do_mai", "mai");
    add_action("do_mai", "bury");
 }
