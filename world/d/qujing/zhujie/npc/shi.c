@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/20/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("九头狮", ({ "jiutou shi", "shi" }));
-  set("title", "九灵元圣");   
+  set("title", "九灵元圣");
   set("long", "一位老妖怪，长着九个狮子头。\n");
   set("gender", "男性");
   set("age", 70);
@@ -67,7 +67,7 @@ void prince_appearing (object who)
   object prince = new ("/d/qujing/yuhua/npc/prince");
 
   prince->announce_success (who);
-  destruct (prince); 
+  destruct (prince);
 }
 
 void destruct_me(object me)
@@ -92,8 +92,8 @@ void kill_ob (object ob)
   object me = this_object();
 
   set_temp("my_killer",ob);
-  call_out ("recovering",1,me,ob);  
-  call_out ("hurting",random(20)+20,me,ob);  
+  call_out ("recovering",1,me,ob);
+  call_out ("hurting",random(20)+20,me,ob);
   ::kill_ob(ob);
 }
 
@@ -120,7 +120,7 @@ void recovering (object me, object ob)
     me->set("eff_kee",me->query("max_kee"));
     me->set("eff_sen",me->query("max_sen"));
   }
-  call_out ("recovering",1,me,ob);  
+  call_out ("recovering",1,me,ob);
 }
 
 void hurting (object me, object ob)
@@ -141,7 +141,7 @@ void hurting (object me, object ob)
 
   if (environment(ob) != environment(me))
     return;
-  
+
   zhudao = present("taiyi zhu dao",ob);
   if (! zhudao ||
       zhudao != ob->query_temp("weapon"))
@@ -160,6 +160,6 @@ void hurting (object me, object ob)
     me->add("heads",-1);
     me->set("long", "一位老妖怪，还剩下"+chinese_number(heads-1)+"个狮子头。");
   }
-  remove_call_out ("hurting");  
-  call_out ("hurting",random(20)+20,me,ob);  
+  remove_call_out ("hurting");
+  call_out ("hurting",random(20)+20,me,ob);
 }
