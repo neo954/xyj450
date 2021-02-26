@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
          set_name("安妮儿", ({ "annihier"  }) );
