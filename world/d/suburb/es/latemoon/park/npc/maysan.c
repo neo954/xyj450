@@ -26,4 +26,3 @@ TEXT
         setup();
          carry_object("/d/suburb/es/latemoon/obj/flower_boot")->wear();
 }
-
