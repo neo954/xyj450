@@ -1,4 +1,4 @@
-□ SKILL 
+□ SKILL
 
 mapping query_skills()
 传回物件的所有技能.
@@ -7,7 +7,7 @@ mapping query_learned()
 传回所有技能的学习点数.
 
 void set_skill(string skill, int val)
-设定技能. 传入技能名称及等级, 若技能的 mapping 不存在则新建立一个, 
+设定技能. 传入技能名称及等级, 若技能的 mapping 不存在则新建立一个,
 否则直接设入技能名称及等级.
 
 int delete_skill(string skill)
@@ -28,7 +28,7 @@ varargs int query_skill(string skill, int raw)
 mapping query_skill_map()
 传回技能致能的列表.
 
- 
+
 int skill_death_penalty()
 人物死後会呼叫这个函数以计算死亡时所造成的技能损失.
 
