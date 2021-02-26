@@ -13,7 +13,7 @@
 //      and return a user's login name.
 
 #include <priv.h>
-#include <config.h>
+#include "config.h"
 #include <net/socket.h>
 #include <net/daemons.h>
 #include <mudlib.h>
