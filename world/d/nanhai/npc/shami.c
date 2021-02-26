@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // shami.c 小沙弥�
 // By Dream Dec. 20, 1996
 
@@ -22,7 +22,7 @@ void create()
    set_skill("dodge", 25);
    set_skill("parry", 20);
    set_skill("force", 10);
-   
+
    setup();
    carry_object("/d/nanhai/obj/sengpao")->wear();
 }
