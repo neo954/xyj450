@@ -24,18 +24,18 @@ LONG
 );
         set("combat_exp", 1000000);
         set("attitude", "heroism");
-        set_skill("blade",120); 
+        set_skill("blade",120);
         set_skill("parry", 80);
         set_skill("dodge", 120);
         set_skill("fall-steps",120);
         set_skill("shortsong-blade",150);
-        map_skill("blade","shortsong-blade");  
-        map_skill("dodge","fall-steps");  
+        map_skill("blade","shortsong-blade");
+        map_skill("dodge","fall-steps");
         set("pending/charge",0);
         setup();
         add_money("silver",40);
-        carry_object(__DIR__"obj/blade")->wield(); 
-        carry_object("/obj/cloth")->wear();        
+        carry_object(__DIR__"obj/blade")->wield();
+        carry_object("/obj/cloth")->wear();
 }
 
 void greeting(object who)
