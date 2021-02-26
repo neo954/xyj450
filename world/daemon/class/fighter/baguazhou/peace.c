@@ -26,4 +26,3 @@ int scribe(object me,object ob)
    me->start_busy(2);
    return 1;
 }
-
