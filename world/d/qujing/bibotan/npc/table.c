@@ -1,41 +1,41 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
 
-inherit ITEM;   
+
+inherit ITEM;
 int fail_to_push(object who);
 int ok_to_push(object who);
-        
+
 void create()
 {
         set_name("石桌",({"table"}));
         set_weight(5000000);
         if (clonep())
                 set_default_object(__FILE__);
-        else {  
+        else {
                 set("long","一张八角形的石桌，下边有不少划痕，似乎可以推动(push)。\n");
                 set("unit", "张");
     }
- 
+
         setup();
 }
-        
-void init()     
+
+void init()
 {
         add_action("do_push", "push");
-}       
-        
-                
+}
+
+
 int do_push(string arg)
 {   object who=this_player();
-                
+
         if( !arg || arg!="table")
                 return notify_fail("你要推什么？\n");
                 call_out("ok_to_push", 1, who);
      return 1;
 }
 int fail_to_push(object who)
-{   
+{
         if( !who || environment(who) != environment(this_object()) ) return 1;
         if( (int)who->query("kee") < 100
         ||      (int)who->query("force") < 100
@@ -51,7 +51,7 @@ int fail_to_push(object who)
         return 1;
 }
 int ok_to_push(object who)
-{   
+{
         if( !who || environment(who) !=environment(this_object()) ) return 1;
         if( (int)who->query("kee") <100
         ||      (int)who->query("force") < 100
@@ -92,7 +92,7 @@ int ok_to_push(object who)
    if ( (string)who->query_temp("enter_position") =="震" ) {
                 call_out("zhen", 2, who);
            return 1;
-   } 
+   }
    if ( (string)who->query_temp("enter_position") =="巽" ) {
                 call_out("gong", 2, who);
            return 1;
@@ -130,7 +130,7 @@ int qian(object who)
    }
         who->receive_wound("kee", i);
    COMBAT_D->report_status(who);
-        who->add_temp("push_time", 1);   
+        who->add_temp("push_time", 1);
         return 1;
 }
 int kun(object who)
@@ -146,8 +146,8 @@ int kun(object who)
    }
         message_vision("\n$N身上被擦破好几处，一幅狼狈不堪的样子。\n", who);
         who->receive_wound("kee", i);
-        COMBAT_D->report_status(who);  
-        who->add("push_time", 1);   
+        COMBAT_D->report_status(who);
+        who->add("push_time", 1);
         return 1;
 }
 int gen(object who)
@@ -164,7 +164,7 @@ int gen(object who)
         message_vision("\n$N从石堆从爬了出来，手脚都被砸破了。\n", who);
         who->receive_wound("kee", i);
         COMBAT_D->report_status(who);
-        who->add("push_time", 1);   
+        who->add("push_time", 1);
         return 1;
 }
 int dui(object who)
@@ -181,7 +181,7 @@ int dui(object who)
         message_vision("\n$N慢慢地从泥潭中爬了出来，看起来相当狼狈。\n", who);
         who->receive_wound("sen", i);
         COMBAT_D->report_sen_status(who);
-        who->add_temp("push_time", 1);   
+        who->add_temp("push_time", 1);
         return 1;
 }
 int zhen(object who)
@@ -198,7 +198,7 @@ int zhen(object who)
         message_vision("\n$N被震的晕头转向，瘫坐在地下。\n", who);
         who->receive_wound("sen", i);
         COMBAT_D->report_sen_status(who);
-        who->add_temp("push_time", 1);   
+        who->add_temp("push_time", 1);
         return 1;
 }
 int gong(object who)
@@ -232,7 +232,7 @@ int kan(object who)
         message_vision("\n$N被水柱击中，浑身上下都湿透了，冻的直打哆嗦。\n", who);
         who->receive_wound("kee", i);
         COMBAT_D->report_status(who);
-        who->add_temp("push_time", 1);   
+        who->add_temp("push_time", 1);
         return 1;
 }
 int li(object who)
@@ -250,7 +250,7 @@ int li(object who)
         message_vision("\n$N被烧的遍体粼伤，惨不忍睹。\n", who);
         who->receive_wound("kee",i);
         COMBAT_D->report_status(who);
-        who->add_temp("push_time", 1);   
+        who->add_temp("push_time", 1);
         return 1;
 }
 int faint_him(object who)
