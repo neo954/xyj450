@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit ITEM;
 inherit F_LIQUID;
@@ -18,7 +18,7 @@ void create()
     set("max_liquid", 20);
     set("material", "jade");
   }
-  
+
   set("liquid", ([
     "type": "water",
     "name": "灵山仙泉茶",
