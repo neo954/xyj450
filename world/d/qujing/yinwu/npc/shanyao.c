@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat on 12/5/1997
 
 inherit NPC;
@@ -52,15 +52,15 @@ void die ()
     bone->move(where);
   }
 
-  message_vision ("\n$N倒了下去，化为一堆兽骨。\n",me);  
+  message_vision ("\n$N倒了下去，化为一堆兽骨。\n",me);
   if (! present("shan yao 4",where) &&
       where->query("short")=="路口")
   {
     object ob = new ("/d/qujing/yinwu/npc/shanyao");
     ob->move(where);
-    message_vision ("\n突然，山岩上又蹦下来一个呲牙咧嘴的山妖！\n",me);   
+    message_vision ("\n突然，山岩上又蹦下来一个呲牙咧嘴的山妖！\n",me);
   }
-  destruct (me);  
+  destruct (me);
 }
 
 void unconcious ()
