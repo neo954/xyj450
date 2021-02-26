@@ -24,5 +24,3 @@ void create()
         setup();
         carry_object("/d/ourhome/obj/linen")->wear();
 }
-
-
