@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/jjf/guest_cabinet.c
 // 6-30-97 pickle
 
@@ -51,7 +51,7 @@ int valid_leave(object me, string dir)
         return notify_fail(CYN "罗春喝道：呔！若想上楼，先把背上的那个放下了！\n"NOR);
     }
     if (!(letter=present("shu xin", me)
-       && letter->query("header")=="秦琼至罗成") 
+       && letter->query("header")=="秦琼至罗成")
      && me->query("family/master_id")!="luo cheng"
      && guard)
     {
