@@ -48,4 +48,3 @@ void greeting (object ob)
 	    else
 		say ("钱千万堆满了笑脸引上去：哪阵香风把你迎来了。\n");
 }
-
