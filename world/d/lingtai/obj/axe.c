@@ -24,4 +24,3 @@ void create()
         init_axe(15, TWO_HANDED);
         setup();
 }
-
