@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // jiading.c 家丁
 
 inherit NPC;
@@ -18,4 +18,4 @@ void create()
         set_temp("apply/defense", 10);
    setup();
 }
-   
+
