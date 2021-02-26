@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // help.c
 
 #include "/doc/help.h"
@@ -115,10 +115,10 @@ int search_dir(string *dirs, string arg, object me, int wildcard, int wizp)
 
           j=sizeof(sub_dir);
      while(j--) {
-       dirs1+=({dirs[i]+sub_dir[j][0]+"/"}); 
+       dirs1+=({dirs[i]+sub_dir[j][0]+"/"});
      }
 
-     if(search_dir(dirs1, arg, me, wildcard, wizp)==1 
+     if(search_dir(dirs1, arg, me, wildcard, wizp)==1
        && !wildcard) return 1;
         }
       }
@@ -141,7 +141,7 @@ int help(object me)
 这个指令提供你针对某一主题的详细说明文件，若是不指定主题，则提供你有关
 主题的文件。
 
-除了有关指令名(command)的说明以外，在主题名称中 Help 支持 wildcards 
+除了有关指令名(command)的说明以外，在主题名称中 Help 支持 wildcards
 如 '?' 和 '*'，例如： help map-m*。
 
 HELP
