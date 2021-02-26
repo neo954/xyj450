@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 
@@ -33,7 +33,7 @@ int do_yao(string arg)
 
    if((int)this_player()->query("water") >= (int)this_player()->max_water_capacity()*90/100 )
         return notify_fail("老头笑道：等开饭时再来吧！\n");
-            
+
    if((present("bao", this_player())))
    return notify_fail("老头笑道：你还没吃完呢，怎么又要？\n");
 
@@ -45,11 +45,11 @@ int do_yao(string arg)
         mm=new("/d/obj/food/baozi");
 
    n=new("/d/obj/food/chahu");
-   
+
    m->move(this_player());
    mm->move(this_player());
    n->move(this_player());
 
    message_vision("老头对$N笑道：饿了吧，慢点吃。\n", this_player());
-return 1;   
+return 1;
 }
