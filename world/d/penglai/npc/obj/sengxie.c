@@ -37,4 +37,3 @@ int do_tear(string arg){
         destruct(this_object());
         return 1;
 }
-
