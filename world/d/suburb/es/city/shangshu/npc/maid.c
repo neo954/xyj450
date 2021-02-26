@@ -19,5 +19,3 @@ void create()
         setup();
         carry_object(__DIR__"obj/pink_cloth")->wear();
 }
-
-
