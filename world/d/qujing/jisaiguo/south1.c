@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create ()
 缘故。路边民居错落有序，几个小童在路边玩耍。
 LONG);
 
-//  set("objects", ([ /* sizeof() == 1*/ 
+//  set("objects", ([ /* sizeof() == 1*/
 //  __DIR__"npc/erlang" : 1,
 //]));
   set("outdoors", 1);
