@@ -84,4 +84,3 @@ int enter_home(string arg)
       else return 0;
 
 }
-
