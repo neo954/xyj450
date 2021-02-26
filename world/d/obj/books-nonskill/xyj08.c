@@ -40,4 +40,3 @@ int read_book(string arg)
   write("\n");
   return 1;
 }
-
