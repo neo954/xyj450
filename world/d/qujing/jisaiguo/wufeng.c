@@ -24,4 +24,3 @@ LONG);
    set("no_magic", 1);
   setup();
 }
-
