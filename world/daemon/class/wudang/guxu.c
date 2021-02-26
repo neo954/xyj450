@@ -8,7 +8,7 @@ string ask_me();
 void create()
 {
 	set_name("谷虚道长", ({ "guxu daozhang", "guxu" }));
-	set("long", 
+	set("long",
 		"他就是俞莲舟的弟子谷虚道长。\n"
 		"他今年四十岁，主管武当派的俗事。\n");
 	set("gender", "男性");
@@ -49,11 +49,11 @@ void create()
 	create_family("武当派", 3, "弟子");
 	set("class", "taoist");
 
-	set("inquiry", 
+	set("inquiry",
 		([
 			"道德经" : (: ask_me :),
 		]));
-                                
+
 	set("book_count", 1);
 
 	setup();
@@ -74,12 +74,12 @@ void attempt_apprentice(object ob)
 
 string ask_me()
 {
-        mapping fam; 
+        mapping fam;
         object ob;
 
-        if (!(fam = this_player()->query("family")) 
+        if (!(fam = this_player()->query("family"))
 	    || fam["family_name"] != "武当派")
-                return RANK_D->query_respect(this_player()) + 
+                return RANK_D->query_respect(this_player()) +
                 "与本派素无来往，不知此话从何谈起？";
         if (query("book_count") < 1)
                 return "你来晚了，本派的道德真经不在此处。";
