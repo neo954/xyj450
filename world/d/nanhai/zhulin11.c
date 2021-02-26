@@ -67,4 +67,3 @@ int do_search (string arg)
    message_vision ("$N蹲下去在竹丛里仔细地翻来翻去。\n",me);
    return 1;
 }
-
