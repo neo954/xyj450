@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //changan city
 
 inherit ROOM;
@@ -18,7 +18,7 @@ LONG);
 
         //set("item_desc", ([" *** " : " *** ", ]));
 
-        set("exits", 
+        set("exits",
         ([ //sizeof() == 4
      "south" : __DIR__"wailiu1",
                 "north" : __DIR__"chenghuang",
@@ -27,7 +27,7 @@ LONG);
                 "east" : __DIR__"gudongdian",
         ]));
 
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
                 __DIR__"npc/yiren1" : 1,
         ]));
