@@ -28,5 +28,3 @@ int valid_leave(object me, string dir)
                 return notify_fail("你个大老爷们儿去那干嘛！！\n");
         return 1;
 }
-
-
