@@ -1,18 +1,18 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // invocation.c
 
 inherit SSERVER;
 
 int cast(object me, object target)
-{   
+{
         int invocation_time;
         object soldier;
 
         if( !me->is_fighting() )
                 return notify_fail("只有战斗中才能召唤天将！\n");
-   
+
         invocation_time=60+(200-(int)me->query_skill("spells"));
         if(invocation_time<30) invocation_time=30;
         if((time()-me->query("last_invocation"))<invocation_time)
