@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // snowsword. 【雪山剑法】
 
 inherit SKILL;
@@ -29,7 +29,7 @@ mapping *action = ({
      "dodge":     -20,
      "damage_type":   "刺伤"
    ]),
-   
+
 });
 
 int valid_learn(object me)
