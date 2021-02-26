@@ -5,7 +5,7 @@ inherit NPC;
 void create()
 {
 	set_name("道童", ({ "daotong", "dao", "tong" }));
-	set("long", 
+	set("long",
 		"他是武当山的小道童。\n");
 	set("gender", "男性");
 	set("age", 16);
