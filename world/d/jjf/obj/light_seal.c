@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <skill.h>
 #include <ansi.h>
 
@@ -57,7 +57,7 @@ void destruct_me(object where, object me)
 void invocation(object who)
 {
    int i,a,b,c;
-   
+
    a=who->query("combat_exp");
    b=(int)who->query_skill("spells")*(int)who->query_skill("spells");
    c=(int)who->query("mana_factor")*(int)who->query("mana_factor")*(int)who->query("mana_factor");
@@ -73,7 +73,7 @@ int ji_ob(object victim)
    object where=environment(me);
 
    int damage, ap, dp;
-   
+
    if(me->is_busy())
      return notify_fail("你正忙着呢，无法祭神霄电法符。\n");
    if( !victim)
@@ -104,9 +104,9 @@ victim,seal);
                 damage = (int)me->query("max_mana") / 10 +
 random((int)me->query("eff_kee") / 5);
                 damage -= (int)victim->query("max_mana") / 10 +
-random((int)victim->query("eff_kee") / 5);                                 
+random((int)victim->query("eff_kee") / 5);
                 damage+=(int)me->query("mana_factor")-random((int)victim->query("mana_factor"));
-   
+
      if( damage> 0){
    message_vision(HIC"\n$N躲闪不及，银光电般透体而过，拖出一条长长的血箭。\n"NOR,victim);
         victim->receive_wound("kee", damage/3);
@@ -118,7 +118,7 @@ random((int)victim->query("eff_kee") / 5);
      message_vision(HIC"\n谁知被$N躲了过去。\n"NOR,victim);
    }
    if( damage>0 ) COMBAT_D->report_status(victim);
-   
+
            if( !victim->is_fighting(me) ) {
                 if( living(victim) ) {
                         if( userp(victim) ) victim->fight_ob(me);
