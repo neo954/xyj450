@@ -48,7 +48,7 @@ void create()
 	set("no_clean_up",1);
 	set("combat_exp", 500000);
 
-	set_skill("force",  100); 
+	set_skill("force",  100);
 	set_skill("unarmed",100);
 	set_skill("sword",  100);
 	set_skill("dodge",  100);
@@ -60,14 +60,14 @@ void create()
 	setup();
 
 	carry_object("/d/suburb/xkx/shaolin/obj/changjian")->wield();
-	carry_object("/d/suburb/xkx/city/obj/cloth")->wear();        
+	carry_object("/d/suburb/xkx/city/obj/cloth")->wear();
 	}
 	else {
 		set("id", "mengzhu");
 		set_name(query("name"), ({ query("id") }));
 		setup();
 		if( this_object()->query("weapon") ) carry_object(this_object()->query("weapon"))->wield();
-		if( this_object()->query("armor") )  carry_object(this_object()->query("armor"))->wear();        
+		if( this_object()->query("armor") )  carry_object(this_object()->query("armor"))->wear();
 	}
 }
 
@@ -104,13 +104,13 @@ int accept_fight(object ob)
 {
 	object me  = this_object();
 		
-	if ( me->query("winner") == ob->query("id") ) 
+	if ( me->query("winner") == ob->query("id") )
 		return notify_fail("你跟你自己打什么架？！\n");
 
 	if (wizardp(this_player()))
 		return notify_fail("巫师不能抢盟主之位！\n");
 
-	if ( me->is_fighting() ) 
+	if ( me->is_fighting() )
 		return notify_fail("已经有人正在挑战武林盟主！\n");
 
 	me->set("eff_kee", me->query("max_kee"));
@@ -141,7 +141,7 @@ int checking(object me, object ob)
 		return 1;
 	}
 
-	if ( !present(ob, environment()) ) return 1; 
+	if ( !present(ob, environment()) ) return 1;
 
 	if (( (int)me->query("kee")*100 / my_max_qi) <= 50 ) {
 		command("say 果然厉害，恭喜你成为当今武林盟主！\n");
@@ -153,12 +153,12 @@ int checking(object me, object ob)
 	}
 
 	if (( (int)ob->query("kee")*100 / his_max_qi) < 50 ) {
-		command("say 看来" + RANK_D->query_respect(ob) + 
+		command("say 看来" + RANK_D->query_respect(ob) +
 			"还得多加练习，方能在当今武林中出人头地 !\n");
 		return 1;
 	}
 
-	return 1;  
+	return 1;
 }
 
 int do_copy(object me, object ob)
@@ -211,7 +211,7 @@ int do_recopy(object me, object ob)
 	me = this_object();
 	ob = this_player();
 
-	if ( me->query("winner") != ob->query("id") ) 
+	if ( me->query("winner") != ob->query("id") )
 		return notify_fail("你不是现任武林盟主！\n");;
 
 	me->set("name",  ob->query("name") );
@@ -313,7 +313,7 @@ int do_clone(object me, object ob)
 
 	inv = all_inventory(ob);
 	for(i=0; i<sizeof(inv); i++) {
-		if( inv[i]->query("weapon_prop/damage") > 100 
+		if( inv[i]->query("weapon_prop/damage") > 100
 		||  inv[i]->query("armor_prop/armor") > 100 ) continue;
 
 		if( inv[i]->query("weapon_prop") &&  inv[i]->query("equipped") ) {
@@ -369,7 +369,7 @@ int do_recover()
 	me = this_object();
 	ob = this_player();
 
-	if ( me->query("winner") != ob->query("id") ) 
+	if ( me->query("winner") != ob->query("id") )
 		return notify_fail("你不是现任武林盟主！\n");;
 
 /* delete and copy skills */
