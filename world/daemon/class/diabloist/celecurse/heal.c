@@ -30,4 +30,3 @@ NOR,
 
         return 1;
 }
-
