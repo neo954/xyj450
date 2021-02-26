@@ -1,8 +1,8 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
 
-// huangtong-key.c 
+
+// huangtong-key.c
 
 #include <ansi.h>
 
@@ -18,7 +18,7 @@ void create()
      set("unit", "把");
      set("long", "一把黄铜钥匙。\n");
    }
-  
+
    set("is_monitored",1);
    setup();
 }
