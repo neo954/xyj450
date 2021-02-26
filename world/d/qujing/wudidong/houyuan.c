@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/qujing/wudidong/houyuan
 // created 6-18-97 pickle
 #include <ansi.h>
@@ -35,7 +35,7 @@ int do_dive(string arg)
   me=this_player();
   if ( !arg || ((arg !="well") ))
     return notify_fail("你要往哪儿跳？\n");
-  
+
   if (!tar=present("bishui zhou", me))
     return notify_fail(HIY "你纵身跳下井去，无奈水性欠佳，呛了两口水后，不得不拉着井绳爬了回来。\n" NOR);
   else message_vision(HIW "$N一纵身，跳下井去。\n" NOR, me);
