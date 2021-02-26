@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //houyuan.c
 #include <room.h>
 inherit ROOM;
@@ -15,14 +15,14 @@ void create ()
 梨花居然依旧盛开。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "north" : __DIR__"juyuan",
      "south" : __DIR__"houdian",
      //"west" : __DIR__"westway6",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
