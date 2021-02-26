@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/death/gateway.c
 
 inherit ROOM;
@@ -39,7 +39,7 @@ int valid_leave(object me, string dir)
         if(me->is_ghost()){
           me->reincarnate();
         }
-     return 1;          
+     return 1;
      }
      if(me->is_ghost()){
         me->reincarnate();
