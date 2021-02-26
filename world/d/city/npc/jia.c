@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit F_VENDOR_SALE;
 void create()
 {
@@ -22,8 +22,8 @@ void create()
         set_skill("parry", 20);
         set("vendor_goods", ([
                 "roubao": "/d/obj/food/bao1",
-                "haibao": "/d/obj/food/bao2",                
-                "subao": "/d/obj/food/bao3",                
+                "haibao": "/d/obj/food/bao2",
+                "subao": "/d/obj/food/bao3",
         ]) );
 
    setup();
