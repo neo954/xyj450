@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 // #include <net/telnet.h>
 
@@ -23,7 +23,7 @@ int  create_char_banned(string site);
 int  is_strict_banned(string site);
 void print();
 void print2();
-void print3(); 
+void print3();
 
 string *Sites;
 string *Sites2;
@@ -43,12 +43,12 @@ void load_sites()
    int loop;
 
    Sites = ({});
-   
+
    // reads in the list of the banned sites
 
    file = read_file(BANNED_SITES);
    if (!file) return;
-   
+
    tmp = explode(file, "\n");
       for(loop=0; loop<sizeof(tmp); loop++)
            if(tmp[loop][0] == '#' || tmp[loop][0] == '\n' || tmp[loop] == "")
@@ -62,12 +62,12 @@ void load_sites2()
    int loop;
 
    Sites2 = ({});
-   
+
    // reads in the list of the banned sites
 
    file = read_file(CHAR_BANNED_SITES);
    if (!file) return;
-   
+
    tmp = explode(file, "\n");
       for(loop=0; loop<sizeof(tmp); loop++)
            if(tmp[loop][0] == '#' || tmp[loop][0] == '\n' || tmp[loop] == "")
@@ -107,7 +107,7 @@ int is_banned(string site)
      if (sizeof(regexp(line, Sites[i])) == 1)
         return 1;
    return 0;
-}   
+}
 
 int create_char_banned(string site)
 {
@@ -121,7 +121,7 @@ int create_char_banned(string site)
      if (sizeof(regexp(line, Sites2[i])) == 1)
         return 1;
    return 0;
-}   
+}
 
 int is_strict_banned(string site)
 {
@@ -162,7 +162,7 @@ void print3()
 void add(string site)
 {
 // int i;
-   
+
    Sites += ({site});
    write_file(BANNED_SITES, Sites[sizeof(Sites)-1] + "\n", 0);
 }
@@ -170,7 +170,7 @@ void add(string site)
 void add2(string site)
 {
 // int i;
-   
+
    Sites2 += ({site});
    write_file(CHAR_BANNED_SITES, Sites2[sizeof(Sites2)-1] + "\n", 0);
 }
