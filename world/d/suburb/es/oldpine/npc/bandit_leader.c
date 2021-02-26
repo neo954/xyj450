@@ -36,4 +36,3 @@ void create()
 	carry_object(__DIR__"obj/leather")->wear();
 	add_money("silver", 30);
 }
-
