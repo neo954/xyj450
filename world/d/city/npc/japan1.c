@@ -92,4 +92,3 @@ void do_drink()
     }
     return;
 }
-
