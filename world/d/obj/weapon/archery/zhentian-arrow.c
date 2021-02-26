@@ -24,4 +24,3 @@ void create()
   init_archery(80);
   setup();
 }
-
