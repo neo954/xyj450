@@ -25,20 +25,20 @@ int exert(object me, object target)
                   i=target->query("kee");i=i*b/150;
               if (i>0) {      target->add("kee",-i);me->add("kee",i);}
                   i=target->query("sen");i=i*b/150;
-              if (i>0){      target->add("sen",-i);me->add("sen",i);} 
+              if (i>0){      target->add("sen",-i);me->add("sen",i);}
                  i=target->query("gin");i=i*b/150;
              if (i>0)  {     target->add("gin",-i);me->add("gin",i);}
 
 
 	//		COMBAT_D->do_attack(me, target, me->query("weapon"));
-		} 
+		}
 	    else {
 		msg +=HIB "但是被$p从容化解了，$p大吼一声：“你敢暗算我？，纳命来！”\n" NOR;
-                        target->kill_ob(me);	     
+                        target->kill_ob(me);	
                         //   me->kill_ob(target);
 	}
 	message_vision(msg, me, target);
-        
+
 	me->add("force",  -10);
 
 	return 1;
