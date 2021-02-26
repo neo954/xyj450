@@ -5,7 +5,7 @@ inherit NPC;
 void create()
 {
 	set_name("知客道长", ({ "zhike daozhang", "zhike" }));
-	set("long", 
+	set("long",
 		"他是武当山的知客道长。\n");
 	set("gender", "男性");
 	set("age", 30);
