@@ -18,4 +18,3 @@ LONG
          set("outdoors", "chuenyu");
          setup();
 }
-
