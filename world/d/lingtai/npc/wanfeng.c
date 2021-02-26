@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // worker.c
 
 inherit NPC;
@@ -34,7 +34,7 @@ int do_yao(string arg)
 
         if((present("bao", this_player())))
         return notify_fail("晚风笑道：不要拿着手里的，还看着锅里的！￥？\n");
-   
+
    if ( present("bao", environment()) )
                 return notify_fail("晚风笑道：那不是有一块呢嘛，吃完再说！\n");
 
