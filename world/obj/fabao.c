@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // fabao.c
 
 #include <weapon.h>
@@ -12,7 +12,7 @@ inherit F_BACKUP;
 
 void create()
 {
-   seteuid(0);   
+   seteuid(0);
    set_name("自制法宝物件", ({ "fabao object", "fabao", "object" }) );
    setup();
 }
