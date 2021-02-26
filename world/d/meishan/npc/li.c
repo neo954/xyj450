@@ -32,4 +32,3 @@ void create()
   carry_object("/d/obj/armor/yinjia")->wear();
   carry_object("/d/obj/weapon/fork/gangcha")->wield();
 }
-
