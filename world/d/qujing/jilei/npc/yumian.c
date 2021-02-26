@@ -102,5 +102,3 @@ void kill_ob (object ob)
   if (niumo && !niumo->is_fighting())
     niumo->kill_ob(ob);
 }
-
-
