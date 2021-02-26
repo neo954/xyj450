@@ -17,7 +17,7 @@ LONG
   "eastdown" : __DIR__"lakebottom1",
 ]));
 	set("objects", ([
-		__DIR__"npc/dragon":6, 
+		__DIR__"npc/dragon":6,
 	]) );
 	set("no_clean_up", 0);
 
