@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // waiter.c
 
 inherit F_VENDOR_SALE;
@@ -42,7 +42,7 @@ void greeting(object ob)
 }
 int accept_object(object who, object ob)
 {
-        if (ob->query("money_id") && ob->value() >= 200) 
+        if (ob->query("money_id") && ob->value() >= 200)
         {
                 tell_object(who, "张小二一哈腰，说道：多谢您老，您里边请。\n
 ");
