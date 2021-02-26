@@ -68,7 +68,7 @@ int do_ding(string arg)
         if( !check_legal_id(cid))
         return notify_fail("");
 
-	if( ccolor != "$BLK$" && 
+	if( ccolor != "$BLK$" &&
 	    ccolor != "$NOR$" &&
             ccolor != "$RED$" &&
             ccolor != "$GRN$" &&
@@ -84,7 +84,7 @@ int do_ding(string arg)
             ccolor != "$HIB$" &&
             ccolor != "$HIM$" &&
             ccolor != "$HIC$" &&
-            ccolor != "$HIW$" 
+            ccolor != "$HIW$"
 	)
 	return notify_fail("不知你要什么颜色．\n");
 	cname = ccolor + cname;
