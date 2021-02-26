@@ -31,4 +31,3 @@ string look_sign(object me)
 {
         return "招牌写著：京师武器店专营各式武器。\n";
 }
-
