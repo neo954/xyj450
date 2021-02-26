@@ -16,7 +16,7 @@ void create()
 	set("gender", "男性");
 	set("nickname",HIB"铁掌降龙"NOR);
 	set("age", 28);
-	set("long", 
+	set("long",
 		"他就是丐帮前任帮主，因被发现是契丹人而众叛亲离。\n"
 		"在江湖上与燕子坞的慕荣复并称为「北乔峰，南慕荣」。\n"
 		"他身穿一件普通的粗布褂子，腰间用一条麻绳随便一系。\n"
@@ -51,7 +51,7 @@ void create()
 	
 	set("combat_exp", 180000);
 	set("score", 20000);
-	 
+	
 	set_skill("force", 120);             // 基本内功
 	set_skill("huntian-qigong", 120);    // 混天气功
 	set_skill("unarmed", 120);           // 基本拳脚
@@ -86,7 +86,7 @@ void init()
 
 void check_skills(object ob)
 {
-	mapping skl; 
+	mapping skl;
 	object  me;
 	string *sname;
 	int i, counter, ob_shen;
@@ -134,7 +134,7 @@ int do_kill(object me, object dest)
 
 		call_out("checking", 0,  me, dest);
 	}
-	else  
+	else
 		call_out("waiting", 1, me, dest);
 	
 	return 1;
@@ -170,7 +170,7 @@ int checking(object me, object dest)
 {
 	object ob;
 
-	if (me->is_fighting()) 
+	if (me->is_fighting())
 	{
 		call_out("checking", 1, me);
 	        return 1;
@@ -192,7 +192,7 @@ int do_back(object me)
 
 	me->move("/d/suburb/fy/city/dongdajie2");
 	me->set("combat_exp", 1000000);
-	message("vision", "萧峰走了过来，拍了拍身上的尘土，微微一笑说道：又除了一个坏蛋。\n", 
+	message("vision", "萧峰走了过来，拍了拍身上的尘土，微微一笑说道：又除了一个坏蛋。\n",
 		environment(), me );
 
 	me->set_leader(0);
