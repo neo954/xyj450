@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
- 
+
+
 inherit NPC;
- 
+
 void create()
 {
- 
+
         set_name("巨灵神", ({ "juling shen", "shen", "juling" }) );
         set("gender", "男性" );
         set("long","托塔李天王帐下先锋大将，膀阔腰圆，力大无穷。\n");
@@ -54,5 +54,5 @@ void create()
         carry_object("/d/obj/armor/tongjia")->wear();
    carry_object("/d/obj/weapon/axe/huafu")->wield();
 }
- 
+
 
