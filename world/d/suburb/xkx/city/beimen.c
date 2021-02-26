@@ -1,5 +1,5 @@
 // Room: /city/beimen.c
-// YZC 1995/12/04 
+// YZC 1995/12/04
 
 #include <room.h>
 
