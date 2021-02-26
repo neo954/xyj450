@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //renshenguo-yuan.c
 
 inherit ROOM;
@@ -15,11 +15,11 @@ void create ()
 要是乱摘一气什么都吃不上。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
    ]));
 
@@ -37,7 +37,7 @@ void init()
    if( me->query_temp("used_huangtong_key") == 1 )
    {
      me->delete_temp("used_huangtong_key");
-     
+
      message_vision("只听几声哈哈大笑，镇元大仙走了出来。\n", me);
      message_vision("镇元大仙说道：居然被你发现了。那我们就开个人参果大会吧！\n\n\n", me);
 
