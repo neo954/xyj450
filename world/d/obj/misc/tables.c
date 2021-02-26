@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //
 
 #include <ansi.h>
@@ -51,12 +51,12 @@ void init ()
 {
   object me = this_object();
   object where = environment(me);
-  
+
   if (where && userp(where))
   {
     remove_call_out ("destruct_me");
     call_out ("destruct_me",900+random(900),me);
-  }  
+  }
 }
 
 void destruct_me (object me)
