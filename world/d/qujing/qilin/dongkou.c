@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/6/1997
 inherit ROOM;
 
@@ -15,7 +15,7 @@ void create()
 
 LONG);
 
-  set("exits", ([ 
+  set("exits", ([
     "eastdown" : __DIR__"yading",
     "northeast" : __DIR__"dongnei",
   ]));
@@ -78,7 +78,7 @@ int valid_leave (object who, string dir)
       }
       break;
     }
-  }  
+  }
   if (! to_die)
     call_out ("moving",1,who);
   //return notify_fail("你一阵天旋地转……\n");
@@ -87,5 +87,5 @@ int valid_leave (object who, string dir)
 
 void moving (object who)
 {
-  who->move(__DIR__"dongnei");        
+  who->move(__DIR__"dongnei");
 }
