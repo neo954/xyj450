@@ -24,7 +24,7 @@ LONG
 		"enter" :		__DIR__"front_yard",
 	]));
 	
- 
+
 	set("outdoors", "latemoon");
 
 	setup();
