@@ -17,8 +17,8 @@ LONG
         "rope": "这根绳子顺着墙垂下来，你似乎可以拉(pull)它，但是你有一种不祥的感觉。\n",
         "绳子": "这根绳子顺着墙垂下来，你似乎可以拉(pull)它，但是你有一种不祥的感觉。\n",
         ]) );
-        
-        
+
+
         setup();
 }
 
@@ -51,7 +51,7 @@ int roping(string arg)
         ob->set("eff_kee",(int) i - damage );
         i =  (int)ob->query("kee");
         ob->set("kee",(int) i - damage);
-        
+
         return 1;
         }
         else
