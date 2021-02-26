@@ -49,4 +49,3 @@ void init()
      zhenyuan->start_renshen();
    }
 }
-
