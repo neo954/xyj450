@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/5/1997 by snowcat
 #include <ansi.h>
 #include <dbase.h>
@@ -40,7 +40,7 @@ int do_wear (string arg)
 
   if (arg != "rose" &&  arg != "flower" )
     return 0;
-  msg = "$N戴上一朵"+name+"，不禁想起年少时曾经的梦中人。\n"; 
+  msg = "$N戴上一朵"+name+"，不禁想起年少时曾经的梦中人。\n";
   flower->set("wear_msg",msg);
   return 0;
 }
@@ -55,7 +55,7 @@ int do_remove (string arg)
   if (arg != "flower" && arg != "rose")
     return 0;
 
-  msg = "$N将"+name+"轻轻地摘下来……\n"; 
+  msg = "$N将"+name+"轻轻地摘下来……\n";
   flower->set("unequip_msg",msg);
   return 0;
 }
@@ -70,7 +70,7 @@ int do_smell (string arg)
   if (arg != "flower" && arg!= "rose")
     return 0;
 
-  msg = "$N将"+name+"捧起闻了闻，又惦记起昨天的故人。\n"; 
+  msg = "$N将"+name+"捧起闻了闻，又惦记起昨天的故人。\n";
   message_vision (msg,me);
   return 1;
 }
