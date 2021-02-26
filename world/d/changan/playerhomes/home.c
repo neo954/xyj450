@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // standard home for players.
 // by mon. 3/3/97
 
@@ -20,7 +20,7 @@ void create()
      set("short", "标准新房");
      set("long", @LONG
 
-一切都设置好了，只等一些室内装修。 
+一切都设置好了，只等一些室内装修。
 LONG
      );
      set("valid_startroom",1);
@@ -61,7 +61,7 @@ int do_bed()
         me=this_player();
    env=environment(me);
    home_name=file_name(env);
-         
+
    if(home_name) {
      message_vision(HIY "$N掀开纱帐，准备上床了。\n\n" NOR, me);
        me->move(home_name+"_bed.c");
@@ -69,7 +69,7 @@ int do_bed()
      } else {
      write("Can't find home_name! Tell a wiz please.\n");
      }
-        
+
         return 1;
 }
 
