@@ -61,4 +61,3 @@ set("inquiry", ([
    carry_object("/d/obj/weapon/staff/chanzhang")->wield();
         setup();
 }
-
