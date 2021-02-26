@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// hunyuandan.c 混元丹 
+
+// hunyuandan.c 混元丹
 
 inherit ITEM;
 
@@ -31,7 +31,7 @@ int do_eat(string arg)
 {
         if (!id(arg))
                 return notify_fail("你要吃什么药？\n");
-        if ((int)this_player()->query("eff_sen") == 
+        if ((int)this_player()->query("eff_sen") ==
             (int)this_player()->query("max_sen"))
                 return notify_fail("你现在不需要用混元丹。\n");
         else {
