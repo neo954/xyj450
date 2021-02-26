@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <skill.h>
 #include <ansi.h>
 
@@ -59,7 +59,7 @@ void destruct_me(object where, object me)
 void invocation(object who)
 {
    int i,a,b,c;
-   
+
    a=who->query("combat_exp");
    b=(int)who->query_skill("spells")*(int)who->query_skill("spells");
    c=(int)who->query("mana_factor")*(int)who->query("mana_factor")*(int)who->query("mana_factor");
@@ -75,7 +75,7 @@ int ji_ob(object victim)
    object where=environment(me);
 
    int damage, ap, dp;
-   
+
    if(me->is_busy())
      return notify_fail("你正忙着呢，无法祭神霄风法符。\n");
    if( !victim)
@@ -111,7 +111,7 @@ message_vision(HIC"$n「呼」地一下飞到半空，只见平地狂风乍起�
      message_vision(HIC"\n谁知$N如磐石般而立，毫不为其所动。\n"NOR,victim);
      destruct(this_object());
    }
-   
+
         if( !victim->is_fighting(me) ) {
                 if( living(victim) ) {
                         if( userp(victim) ) victim->fight_ob(me);
@@ -177,7 +177,7 @@ int random_go(object victim, string* dirs)
            if( file[j][1] > 0 )         break;          // pick up a file with size > 0
         }
     if( (newob=load_object(dirs[i]+file[j][0])) )   {
-                victim->move( newob ); 
+                victim->move( newob );
         }
         else  {
             random_go(victim,dirs);
