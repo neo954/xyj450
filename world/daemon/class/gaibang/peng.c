@@ -13,7 +13,7 @@ void create()
 	set("nickname", "掌钵龙头");
 	set("gender", "男性");
 	set("age", 50);
-	set("long", 
+	set("long",
 		"彭有敬是丐帮中净衣派的首领，衣着干净华丽，不象叫化子。\n"
 		"他脸上挂着慈祥的笑容，一双眼睛有摄人心魄的力量。\n");
 
