@@ -37,10 +37,10 @@ int help (object me)
 {
         write(@HELP
 指令格式：conjure <法术名称> [on <对象>]
- 
+
 施法，你必需要指定<法术名称>，<对象>则可有可无。
 在你使用某一个法术之前，你必须先用 enable 指令来指定你要使用的法术系。
- 
+
 HELP
         );
         return 1;
