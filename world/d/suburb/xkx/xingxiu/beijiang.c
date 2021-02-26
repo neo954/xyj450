@@ -12,7 +12,7 @@ void create()
 比赛。东面有家院落，院门口有棵大树。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
         "west" : __DIR__"store",
         "east" : __DIR__"house",
         "northwest" : __DIR__"saimachang",
