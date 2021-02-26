@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 
 inherit NPC;
@@ -120,7 +120,7 @@ int random_go(object me, string* dirs)
         }
 
     if( (newob=find_object(dirs[i]+file[j][0])) )   {
-                me->move( newob ); 
+                me->move( newob );
         }
         else  {
                 seteuid(getuid(me));
@@ -136,7 +136,7 @@ int random_go(object me, string* dirs)
 }
 
 int heal_up()
-{       
+{
         object me=this_object();
    if((int)me->query("stay_time") + 900 > time()) {
                 ::heal_up();
