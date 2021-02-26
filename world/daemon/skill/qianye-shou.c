@@ -121,4 +121,3 @@ int practice_skill(object me)
 	me->add("force", -5);
 	return 1;
 }
-
