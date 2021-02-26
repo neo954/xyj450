@@ -1,8 +1,8 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/22/1997
- 
+
 inherit ITEM;
 inherit F_FOOD;
 
