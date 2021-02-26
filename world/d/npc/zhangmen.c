@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 10/05/1997
 // zhangmen.c 掌门
 
@@ -41,7 +41,7 @@ void init()
   add_action("do_bandage","bandage");
 
   if (me->query("current_player")=="none of us")
-    me->reset_me(me);    
+    me->reset_me(me);
   me->restore();
   me->fully_recover(me);
   me->setup();
@@ -54,7 +54,7 @@ void reset_me (object me)
   object *inv;
   mapping skill_status, map_status;
   string *skillnames, *mapnames;
-    
+
   reset_eval_cost();
   if ( mapp(map_status = me->query_skill_map()) )
   {
@@ -68,7 +68,7 @@ void reset_me (object me)
   if ( mapp(skill_status = me->query_skills()) )
   {
     skillnames = keys(skill_status);
-   for(i=0; i<sizeof(skillnames); i++)  
+   for(i=0; i<sizeof(skillnames); i++)
     {
       me->delete_skill(skillnames[i]);
     }
@@ -95,8 +95,8 @@ void reset_me (object me)
   me->set("weapon", 0);
   me->set("armor", 0);
 
-  me->set_skill("force",  60); 
-  me->set_skill("spells", 60); 
+  me->set_skill("force",  60);
+  me->set_skill("spells", 60);
   me->set_skill("unarmed",60);
   me->set_skill("sword",  60);
   me->set_skill("dodge",  60);
@@ -185,7 +185,7 @@ int save_record(object me, object ob)
       me->set_skill(skillnames[i], skill_status[skillnames[i]]);
     }
   }
-  
+
   me->set("force_factor",me->query_skill("force")*3/4);
 
   reset_eval_cost();
@@ -207,7 +207,7 @@ int save_record(object me, object ob)
   }
 
   map_status = ob->query_skill_map();
-  if ( mapp(map_status) ) 
+  if ( mapp(map_status) )
   {
     mapnames  = keys(map_status);
 
@@ -215,7 +215,7 @@ int save_record(object me, object ob)
       me->map_skill(mapnames[i], map_status[mapnames[i]]);
     }
   }
-  
+
   inv = all_inventory(me);
   for(i=0; i<sizeof(inv); i++) {
     destruct(inv[i]);
@@ -241,7 +241,7 @@ int save_record(object me, object ob)
       me->set("weapon", base_name(inv[i]));
       weapon_cnt = 1;
     }
-    else if ( !inv[i]->query_unique() && !inv[i]->query("skill_type") && 
+    else if ( !inv[i]->query_unique() && !inv[i]->query("skill_type") &&
         inv[i]->query("equipped") && !armor_cnt ) {
       object obj = new(base_name(inv[i]));
       if (obj)
@@ -413,7 +413,7 @@ int fully_recover (object me)
   if (! player_name ||
       player_name == "none of us")
     return 1;
-  
+
   if (current_player = find_player(player_name))
   {
     if (current_player->query("combat_exp")>me->query("combat_exp"))
@@ -452,14 +452,14 @@ int fully_recover (object me)
   {
     ob = new(me->query("weapon"));
     if(ob && ob->move(me))
-      ob->wield();  
+      ob->wield();
   }
 
   if (me->query("armor"))
   {
     ob = new(me->query("armor"));
     if(ob && ob->move(me))
-      ob->wear(); 
+      ob->wear();
   }
 
   reset_eval_cost();
@@ -473,7 +473,7 @@ int accept_fight(object ob)
   object me = this_object();
   string default_name = me->query("default_name");
 
-  if (me->query("family/family_name") != ob->query("family/family_name")) 
+  if (me->query("family/family_name") != ob->query("family/family_name"))
   {
     command ("say 你与本门派无缘无故，掌门之事从何谈起！\n");
     return notify_fail("看来"+default_name+"无意与你交手。\n");
@@ -483,7 +483,7 @@ int accept_fight(object ob)
     command ("say 你曾叛师欺祖，言无信行不轨，岂能掌门！\n");
     return notify_fail("看来"+default_name+"无意与你交手。\n");
   }
-  if (me->query("current_player") == ob->query("id")) 
+  if (me->query("current_player") == ob->query("id"))
   {
     command ("say 本"+default_name+"不可与己较量！\n");
     return notify_fail("你就是"+default_name+"！\n");
@@ -497,7 +497,7 @@ int accept_fight(object ob)
   me->set_temp("zhangmen/kill",0);
   remove_call_out("check_result");
   call_out("check_result", 1, me, ob);
-  
+
   fully_recover (me);
   inv = all_inventory(ob);
   for(i=0; i<sizeof(inv); i++)  {
@@ -538,7 +538,7 @@ int check_result(object me, object ob)
       who = 0;
 
     if (who)
-    { 
+    {
       call_out("master_announce",1,me,who,ob);
     }
     else
@@ -558,7 +558,7 @@ int check_result(object me, object ob)
     message_vision ("$N将$n扶起。\n",me,ob);
   }
 
-  return 1;  
+  return 1;
 }
 
 void find_master (object me, object ob)
