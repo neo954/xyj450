@@ -22,4 +22,3 @@ int practice_skill(object me)
 {
         return notify_fail("法术类技能必须用学的或是从实战中获取经验。\n");
 }
-
