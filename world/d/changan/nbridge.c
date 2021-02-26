@@ -33,8 +33,3 @@ void init()
    if(sizeof(children(FILE))<2)
      new(FILE)->move(this_object());
 }
-
-
-
-
-
