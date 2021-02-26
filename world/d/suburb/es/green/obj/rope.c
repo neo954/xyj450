@@ -44,4 +44,3 @@ int hang_self(string str)
     this_player()->die();
     return 1;
 }
-
