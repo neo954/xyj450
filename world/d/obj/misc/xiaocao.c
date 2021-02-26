@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xiaocao.c...weiqi, 970926
 //used to make ice_poison.
 
@@ -20,7 +20,7 @@ void create()
      set("unit", "朵");
      set("value", 300);
    }
-   
+
    setup();
 }
 
@@ -32,7 +32,7 @@ void init()
 
 
 int do_chi(string arg)
-{   
+{
    if( !this_object()->id(arg) ) return 0;
 
    if(!arg) return notify_fail("你要吃什么？\n");
@@ -41,13 +41,13 @@ int do_chi(string arg)
 }
 
 int do_mix(string arg)
-{   
+{
    object mixob, ice, me;
    int type;
 
    me=this_player();
 
-   if(!arg || !(mixob=present(arg, me)) ) 
+   if(!arg || !(mixob=present(arg, me)) )
      return notify_fail("你要跟什么混合？\n");
 
    if( arg == "xue lian" ) type = 1;
@@ -66,9 +66,9 @@ int do_mix(string arg)
      message_vision("结果挤得满手都是汁。\n", me);
      destruct(mixob);
      destruct(this_object());
-     return 1;   
+     return 1;
    }
-   
+
    //if I have an ice...
    message_vision("然后将汁水滴到了冰块上，结果汁水很快被冰块吸了进去。\n", me);
 
