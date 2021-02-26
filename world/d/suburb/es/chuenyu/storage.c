@@ -18,4 +18,3 @@ LONG
         create_door("north", "木门", "south", DOOR_CLOSED);
         setup();
 }
-
