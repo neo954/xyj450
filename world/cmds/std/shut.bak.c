@@ -35,11 +35,11 @@ int help (object me)
 {
         write(@HELP
 指令格式: shutdown
- 
+
 马上重新起动游戏。
- 
+
 HELP
 );
         return 1;
 }
- 
+
