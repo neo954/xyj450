@@ -33,4 +33,3 @@ setup();
 
         carry_object("/d/gao/obj/blade")->wield();
 }
-
