@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -33,7 +33,7 @@ void create()
    set_skill("spells", 179);
         set_skill("unarmed", 179);
         set_temp("apply/damage", 40);
-   set_temp("apply/armor", 60);   
+   set_temp("apply/armor", 60);
    set_weight(5000000);
         setup();
 }
