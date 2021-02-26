@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
          object ob;
