@@ -1,6 +1,6 @@
 inherit NPC;
- 
-#include <ansi.h> 
+
+#include <ansi.h>
 void create()
 {
         set_name("吴青", ({"wuqing", "wu", "qing"}));
@@ -33,7 +33,7 @@ void create()
         setup();
         carry_object(__DIR__"obj/tangfu")->wear();
 }
- 
+
 int accept_object(object who, object ob)
 {
             command("grin");
@@ -41,4 +41,4 @@ int accept_object(object who, object ob)
 	    kill_ob(who);
             return 0;
 }
- 
+
