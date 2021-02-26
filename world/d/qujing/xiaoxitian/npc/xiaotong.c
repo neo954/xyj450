@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat on 12/16/1997
 
 inherit NPC;
@@ -46,7 +46,7 @@ void create()
   carry_object("/d/obj/cloth/sengyi")->wear();
   str = "/d/qujing/xiaoxitian/obj/weapon0";
   str[strlen(str)-1] = '0'+random(7);
-  carry_object(str); 
+  carry_object(str);
   carry_object("/d/qujing/xiaoxitian/obj/shield");
 }
 
