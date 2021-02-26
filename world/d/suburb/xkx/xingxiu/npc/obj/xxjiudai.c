@@ -25,4 +25,3 @@ void create()
 		"drunk_apply": 6,
 	]));
 }
-
