@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //changan city
 
 #include <ansi.h>
@@ -30,12 +30,12 @@ convert         兑换钱币。
 TEXT
         ]) );
 
-        set("exits", 
+        set("exits",
         ([ //sizeof() == 4
      "north" : __DIR__"baihu-w1",
         ]));
 
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
                 __DIR__"npc/tiesuanpan" : 1,
         ]));
@@ -61,7 +61,7 @@ void reset_balance(object me)
 
     if(myexp<1) myexp=1;
     if(myexp>100) myexp=100;
-    allowed=myexp*1000000;//each year can have 100 gold, range 100-10000. 
+    allowed=myexp*1000000;//each year can have 100 gold, range 100-10000.
     if (me->query("balance") > allowed)
     {
    me->set("balance_old", me->query("balance"));
