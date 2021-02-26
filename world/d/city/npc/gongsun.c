@@ -125,6 +125,3 @@ int do_yes(string arg)
 
    return 0;
 }
-
-
-
