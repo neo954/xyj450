@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 string apply_gongming(object me);
 
@@ -21,7 +21,7 @@ void create()
    set_skill("literate", 100);
         set_skill("parry", 50);
 
-        set("force", 500); 
+        set("force", 500);
         set("max_force", 500);
    set("inquiry", ([
      "name" : "薄名何足挂齿...老夫贺知章蒙皇上恩赏国子监大学士，实是愧不敢当。\n",
