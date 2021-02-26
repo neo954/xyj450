@@ -32,4 +32,3 @@ void messaging (object who)
   else
     command("slap dianzhu");
 }
-
