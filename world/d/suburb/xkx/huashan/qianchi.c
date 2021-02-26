@@ -20,7 +20,7 @@ LONG
 
         setup();
 }
- 
+
 int valid_leave(object me, string dir)
 {
         if (dir == "southup") {
