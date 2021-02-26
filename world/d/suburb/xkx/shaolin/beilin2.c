@@ -59,7 +59,7 @@ void check_trigger()
 		set("exits/down", __DIR__"beilin3");
 		if( room = find_object(__DIR__"beilin3") ) {
 		        room->set("exits/up", __FILE__);
-		        message("vision", 
+		        message("vision",
 "头顶上的石板忽然发出轧轧的声音，露出一个光亮亮的洞口。"
 "一块块踏脚石从墙壁中凸了出来，形成一个向上的阶梯。\n",room );
 		}
