@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 12/18/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("牛魔王", ({ "niumo wang", "niumo", "wang" }));
-  set("title", "大力王");   
+  set("title", "大力王");
   set("long", "一位身材魁伟力大无比的魔王，一双牛蛋眼正煞神一般瞪着你。\n");
   set("gender", "男性");
   set("age", 70);
@@ -95,7 +95,7 @@ int check_heads (object me, object ob)
     message_vision ("\n$N高高举起$n，排山倒海地大喝一声，将牛头抽了下来。\n",ob,weapon);
   else
     message_vision ("\n$N大喝一声扑向$n，以排山倒海之势将$n的牛头扳了下来。\n",ob,me);
-  
+
   head = new ("/d/qujing/jilei/obj/head");
   head->move(environment(me));
   return nb_heads;
@@ -140,7 +140,7 @@ void li_appearing (object who)
   object li = new ("/d/qujing/jilei/npc/li");
 
   li->announce_success (who);
-  destruct (li); 
+  destruct (li);
 }
 
 void unconcious ()
@@ -195,7 +195,7 @@ void kill_ob (object ob)
   message_vision ("\n$N大怒：哪个泼贼子冒充俺浑家！\n",me);
 
   set_temp("my_killer",ob);
-  call_out ("checking",1,me,ob);  
+  call_out ("checking",1,me,ob);
   ::kill_ob(ob);
   if (yumian && (! interactive(yumian)) && !yumian->is_fighting())
     yumian->kill_ob(ob);
@@ -207,8 +207,8 @@ void checking (object me, object ob)
 
   if (me->is_fighting())
   {
-    remove_call_out ("checking");  
-    call_out ("checking",1,me,ob);  
+    remove_call_out ("checking");
+    call_out ("checking",1,me,ob);
   }
   else
   {
