@@ -60,4 +60,3 @@ int do_wear (string arg)
   ob->set("unit", "件");
   return 0; // to invoke standard function
 }
-
