@@ -14,13 +14,13 @@ LONG
           set("objects", ([
           __DIR__"npc/smallgardener" : 2,
           ]) );
-          
+
           set("item_desc", ([
           "rock" : "这是一块千斤巨石，阻住了通向北面的路。\n",
           ]));
-          
-          
+
+
           set("outdoors", "chuenyu");
-          
+
           setup();
 }
