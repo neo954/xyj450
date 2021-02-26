@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/death/walk.c
 inherit ROOM;
 
@@ -43,7 +43,7 @@ void greeting(object ob)
 int do_pass()
 {
    object me=this_player();
-   
+
    if( me->is_ghost() && !me->query_temp("time_enough") )
      return notify_fail("城楼上隐约传来喊声：阳气太盛，不得入城！\n");
 
