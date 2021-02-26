@@ -20,4 +20,3 @@ varargs void init_blade(int damage, int flag)
 		set("verbs", ({ "slash", "slice", "hack" }) );
 	}
 }
-
