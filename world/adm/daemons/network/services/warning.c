@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /* File    : warning.c
  * Creator : Pinkfish@Discworld
  *         : Grendel@Tmi-2
@@ -28,6 +28,6 @@ incoming_request(mapping info)
 
   warn = "DNS warning from "+info["NAME"]+ info["MSG"]+" Fakehost: "+
      info["FAKEHOST"];
-  
+
   dns_log("dns_warning", warn);
 }
