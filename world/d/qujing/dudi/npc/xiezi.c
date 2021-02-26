@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 12/18/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("蝎子精", ({ "xiezi jing", "xiezi", "jing" }));
-  set("title", "琵琶洞");   
+  set("title", "琵琶洞");
   set("long", "一位艳色迷人的女妖精。\n");
   set("gender", "女性");
   set("age", 26);
@@ -70,7 +70,7 @@ int test_player (object who)
   if (name[len-2..len-1] != "鸡")
     return 0;
 
-  return 1;    
+  return 1;
 }
 
 void disappear_me (object me)
@@ -115,7 +115,7 @@ void maoxiu_appearing (object who)
   object maoxiu = new ("/d/qujing/dudi/npc/maoxiu");
 
   maoxiu->announce_success (who);
-  destruct (maoxiu); 
+  destruct (maoxiu);
 }
 
 void unconcious ()
@@ -135,8 +135,8 @@ void kill_ob (object ob)
   object me = this_object();
 
   set_temp("my_killer",ob);
-  call_out ("disappearing",1,me,ob);  
-  call_out ("hurting",random(5)+5,me,ob);  
+  call_out ("disappearing",1,me,ob);
+  call_out ("hurting",random(5)+5,me,ob);
   ::kill_ob(ob);
 }
 
@@ -157,7 +157,7 @@ void disappearing (object me, object ob)
   {
     disappear_me(me);
   }
-  call_out ("discovering",1,me,ob);  
+  call_out ("discovering",1,me,ob);
 }
 
 void hurting (object me, object ob)
@@ -182,23 +182,23 @@ void hurting (object me, object ob)
 
   if (environment(ob) != environment(me))
     return;
- 
+
   message_vision ("\n"+msgs[random(sizeof(msgs))],me,ob);
-  
+
   if (! test_player(ob))
   {
     message_vision (strs[random(sizeof(strs))],ob);
     damage = ob->query("max_kee")/(7+random(3));
-    ob->add("kee",-damage); 
-    ob->add("eff_kee",-damage); 
-    ob->add("sen",-damage); 
-    ob->add("eff_sen",-damage); 
+    ob->add("kee",-damage);
+    ob->add("eff_kee",-damage);
+    ob->add("sen",-damage);
+    ob->add("eff_sen",-damage);
   }
   else
   {
     message_vision ("只见$N发出一声鸡叫，"+
                     "$n顿时慌乱地放下裙子收起倒马桩！\n",ob,me);
   }
-  remove_call_out ("hurting");  
-  call_out ("hurting",random(10)+10,me,ob);  
+  remove_call_out ("hurting");
+  call_out ("hurting",random(10)+10,me,ob);
 }
