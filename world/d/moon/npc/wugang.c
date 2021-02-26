@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // wugang.c
 
 inherit NPC;
@@ -21,7 +21,7 @@ void create()
         set_skill("dodge", 50);
         set_skill("parry", 80);
         set_skill("literate", 50);
-        set_skill("force", 50);   
+        set_skill("force", 50);
         set_skill("axe", 100);
         set("per", 27);
         set("max_kee", 500);
@@ -37,7 +37,7 @@ void create()
 
 int accept_fight(object me)
 {
-        command("jump");     
+        command("jump");
         command("say 正好！我砍了半天树，也该换换了。");
         return 1;
 }
