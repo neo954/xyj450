@@ -1,11 +1,11 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 6-8-97 pickle
 // Room: /d/jjf/zuixing.c
- 
+
 inherit ROOM;
- 
+
 void create ()
 {
   set ("short", "醉星楼");
@@ -52,7 +52,7 @@ int do_kan(string arg)
 {
   object me=this_player(), here=this_object(), ob, zhuzi;
   int kar=me->query_kar();
- 
+
   if( (!arg || arg != "柱子") && (arg != "zhuzi" && arg!="pillar"))
     return notify_fail("你要从哪里下手？\n");
   if( !(ob = me->query_temp("weapon")) || (string)ob->query("skill_type") != "axe" )
