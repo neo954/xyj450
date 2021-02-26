@@ -67,4 +67,3 @@ notify_fail("你的体力不够练这门杖法，还是先休息休息吧。\n")
         me->receive_damage("kee", 60);
         return 1;
 }
-
