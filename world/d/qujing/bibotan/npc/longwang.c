@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -40,14 +40,14 @@ void create()
 
 void unconcious()
 {
-        object me,obj;   
+        object me,obj;
         if( !me = query_temp("last_damage_from") )
      me= this_player(1);
         if( environment() ) {
         message("sound", "\n\n万圣龙王怒道：你竟敢欺人太甚！\n\n", environment());
         message("sound", "\n万圣龙王半空中一转，现了真身！竟是一条五爪金龙！\n\n", environment());
                 seteuid(getuid());
-                obj=new("/d/qujing/bibotan/npc/dragon"); 
+                obj=new("/d/qujing/bibotan/npc/dragon");
                 obj->move(environment(me));
      obj->kill_ob(me);
      me->fight_ob(obj);
