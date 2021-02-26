@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // yuelao.c 月下老人
 // AceP
 // mon 1/2/97
@@ -14,7 +14,7 @@ int do_divorce(string);
 void create()
 {
    set_name("月下老人", ({ "yuexia laoren", "yuelao", "laoren" }));
-   set("long", 
+   set("long",
 "他就是专管天上地下姻缘的月下老人了。
 他满脸红光，须眉皆白，正坐在那儿翻看一本书，
 手上黏着一根红绳，口中正自言自语着些什么。\n");
@@ -25,7 +25,7 @@ void create()
    set("int", 30);
    set("con", 30);
    set("per", 25);
-      
+
    set("max_kee", 1200);
    set("max_gin", 1000);
    set("max_sen", 1200);
@@ -72,7 +72,7 @@ int do_register()
    if (! interactive(me))
      return 1;
    if (!me->query("waiting_marry")) {
-     command("say 咦？我这姻缘簿上没有你的名字呀 ... ..."); 
+     command("say 咦？我这姻缘簿上没有你的名字呀 ... ...");
      command("say 唉，请你先回去，等我给你找到你那姻缘再来吧。");
      return 1;
    }
