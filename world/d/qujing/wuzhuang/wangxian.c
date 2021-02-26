@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -13,12 +13,12 @@ void create ()
 凤。远望山下，但见山若伏兽，水若游龙，宛尔有出世之意。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "northdown" : __DIR__"westway1",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      __DIR__"npc/lancaihe" : 1,
