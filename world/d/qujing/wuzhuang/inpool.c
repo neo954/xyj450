@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 //inpool.c
 
@@ -15,12 +15,12 @@ void create ()
 荷叶底下钻出来。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "up" : __DIR__"southpool",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
@@ -32,7 +32,7 @@ LONG);
 }
 
 void init()
-{       
+{
    object me=this_player();
 
    if( me->query_temp("wzgmaze1") ) me->delete_temp("wzgmaze1");
