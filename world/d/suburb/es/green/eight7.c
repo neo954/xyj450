@@ -37,4 +37,3 @@ int valid_leave(object me,string dir)
 		me->set("八卦阵",1);
 	return ::valid_leave(me,dir);
 }
-
