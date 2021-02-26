@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <skill.h>
 #include <ansi.h>
 
@@ -57,7 +57,7 @@ void destruct_me(object where, object me)
 void invocation(object who)
 {
    int i,a,b,c;
-   
+
    a=who->query("combat_exp");
    b=(int)who->query_skill("spells")*(int)who->query_skill("spells");
    c=(int)who->query("mana_factor")*(int)who->query("mana_factor")*(int)who->query("mana_factor");
@@ -73,7 +73,7 @@ int ji_ob(object victim)
    object where=environment(me);
 
    int damage, ap, dp;
-   
+
    if(me->is_busy())
      return notify_fail("你正忙着呢，无法祭神霄雷法符。\n");
    if( !victim)
@@ -103,9 +103,9 @@ message_vision(HIC"$n「呼」地一下飞到半空，只见风云突变，几�
                 damage = (int)me->query("max_mana") / 10 +
 random((int)me->query("eff_sen") / 5);
                 damage -= (int)victim->query("max_mana") / 10 +
-random((int)victim->query("eff_sen") / 5);                                 
+random((int)victim->query("eff_sen") / 5);
                 damage+=(int)me->query("mana_factor")-random((int)victim->query("mana_factor"));
-   
+
      if( damage> 0){
    message_vision(HIC"\n$N被雷声震的眼冒金星，心神不定，差点跌倒在地！\n"NOR,victim);
         victim->receive_wound("sen", damage/3);
@@ -117,7 +117,7 @@ random((int)victim->query("eff_sen") / 5);
      message_vision(HIC"\n谁知$N毫无反应。\n"NOR,victim);
    }
    if( damage>0 ) COMBAT_D->report_sen_status(victim);
-   
+
            if( !victim->is_fighting(me) ) {
                 if( living(victim) ) {
                         if( userp(victim) ) victim->fight_ob(me);
@@ -129,7 +129,7 @@ random((int)victim->query("eff_sen") / 5);
    me->add("mana",-50);
 
         me->start_busy(2+random(2));
-   destruct(seal);  
+   destruct(seal);
    return 1;
 }
 
