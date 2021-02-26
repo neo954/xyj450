@@ -44,4 +44,3 @@ void greeting2 (object who)
     message_vision (str,me,who);
   }
 }
-
