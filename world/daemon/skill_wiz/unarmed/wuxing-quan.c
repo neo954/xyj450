@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 //wuxing-quan.c【五行拳】, weiqi...980213
 
 inherit SKILL;
 
-mapping *action = 
+mapping *action =
 ({
    ([   "action":
 "$N使出五行拳中的“金字诀”，提气沉马，双拳对合，\n居然嗡！地一声发出金器交鸣之声。便在各人心神一震之间，\n$N的两只拳头已经砸到了$n的$l",
