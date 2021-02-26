@@ -47,12 +47,12 @@ int do_jump(string arg)
         if( arg=="valley" ) {
 /*                if (present("horse", me))  { */
                 if (me->query_temp("marks/骑") ) {
-                        message("vision", me->name() + 
+                        message("vision", me->name() +
                           "猛地一提缰绳，胯下的伊犁马一声长嘶越过了深涧。\n",
                            environment(me), ({me}) );
                         write("你猛地一提缰绳，胯下的伊犁马一声长嘶越过了深涧。\n");
                         me->move("/d/suburb/xkx/xingxiu/tianroad4");
-                        message("vision", "只听得唏溜溜一声马嘶，" + 
+                        message("vision", "只听得唏溜溜一声马嘶，" +
  me->name() +  "从深涧的那端纵马跳了过来，好似当年马跳\n檀溪的玄德公。\n",
                         environment(me), ({me}) );
                         write("只听得唏溜溜一声马嘶，你从深涧的那端纵马跳了过来，"
