@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // thunder.c
 #include <ansi.h>
 
@@ -45,7 +45,7 @@ int cast(object me, object target)
                 damage = (int)me->query("max_mana") / 10 +
 random((int)me->query("eff_sen") / 5);
                 damage -= (int)target->query("max_mana") / 10 +
-random((int)target->query("eff_sen") / 5);                   
+random((int)target->query("eff_sen") / 5);
      damage+=(int)me->query("mana_factor")-random((int)target->query("mana_factor"));
 //here we can see if 2 players are at same status, the attacker has higher chance.
                 if( damage > 0 ) {
@@ -56,7 +56,7 @@ random((int)target->query("eff_sen") / 5);
                         target->receive_wound("sen", damage/2, me);
                 }
        else {
-//here, cast failed and the target's mana_factor will be added to the previous 
+//here, cast failed and the target's mana_factor will be added to the previous
 //damage to hurt yourself:(...note damage<0.
                         msg += HIC "\n谁知$n毫无反应，$N却被震的两耳欲聋，不知所措！\n" NOR;
      damage -= (int)target->query("mana_factor");
@@ -65,14 +65,14 @@ random((int)target->query("eff_sen") / 5);
                         me->receive_wound("sen", -damage/3, target);
                         me->improve_skill("dao", 1, 1);
        }
-             } 
+             }
    else
                 msg += "\n谁知$n毫无反应，依旧一心一意地和$N战斗。\n";
 
         message_vision(msg, me, target);
         if( damage > 0 ) COMBAT_D->report_sen_status(target);
         else if( damage < 0 ) COMBAT_D->report_sen_status(me);
-//damage=0 corresponding to "但是被$n躲开了。\n"--no report.   
+//damage=0 corresponding to "但是被$n躲开了。\n"--no report.
 
         if( !target->is_fighting(me) ) {
                 if( living(target) ) {
