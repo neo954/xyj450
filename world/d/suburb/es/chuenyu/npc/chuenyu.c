@@ -42,7 +42,7 @@ LONG
 
         setup();
 
-        add_money("gold", 50); 
+        add_money("gold", 50);
         carry_object(__DIR__"obj/chwhip")->wield();
 }
 void init()
