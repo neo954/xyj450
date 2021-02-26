@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // apprentice.c
 
 #include <dbase.h>
@@ -8,15 +8,15 @@
 int is_apprentice_of(object ob)
 {
    mapping family;
-   
+
    if( !mapp(family = query("family")) ) return 0;
 
    if( family["master_id"] == (string)ob->query("id")
-   &&   family["master_name"] == (string)ob->query("name") 
+   &&   family["master_name"] == (string)ob->query("name")
    &&   family["family_name"] == (string)ob->query("family/family_name") )
      return 1;
 
-   return 0;   
+   return 0;
 }
 
 void assign_apprentice(string title, int privs)
