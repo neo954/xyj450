@@ -26,6 +26,3 @@ void create()
         add_money("coin", 100);
         set("score",5-random(10));
 }
-
-
-
