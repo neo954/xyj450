@@ -52,4 +52,3 @@ int accept_object(object me, object obj)
 "，您一定会在这儿玩的开心的！");
         return 1;
 }
-
