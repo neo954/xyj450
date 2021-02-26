@@ -21,4 +21,3 @@ void create()
 	add_money("gold", 5);
         carry_object(__DIR__"obj/drinkcloth")->wear();
 }
-
