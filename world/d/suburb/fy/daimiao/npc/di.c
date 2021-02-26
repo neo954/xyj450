@@ -118,4 +118,3 @@ void re_rank(object student)
                 return ;
 
 }
-
