@@ -41,4 +41,3 @@ void disappear()
 {
         destruct(this_object());
 }
-
