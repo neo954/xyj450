@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //Changed by sjmao, 09-10-97
 #include <skill.h>
 
@@ -141,7 +141,7 @@ int do_learn(string arg)
    if( !master_skill = ob->query_skill(skill, 1) )
      return notify_fail("这项技能你恐怕必须找别人学了。\n");
 
-   if (skill != "unarmed" || !me->query_temp("temp/learn") ) 
+   if (skill != "unarmed" || !me->query_temp("temp/learn") )
      return notify_fail( ob ->name() + reject_msg[random(sizeof(reject_msg))] );
 
    notify_fail(ob->name() + "不愿意教你这项技能。\n");
@@ -180,7 +180,7 @@ int do_learn(string arg)
      tell_object(ob, "但是你太累了，没有办法教" + me->name() + "。\n");
      return 1;
    }
-     
+
 
    if( (int)me->query("sen") > sen_cost ) {
      if( (string)SKILL_D(skill)->type()=="martial"
@@ -202,12 +202,12 @@ int do_learn(string arg)
 }
 
 void attempt_apprentice(object ob)
-{   
+{
         if (((int)ob->query("combat_exp") < 100000)) {
    command("say " + RANK_D->query_respect(ob) +
      "还是先到小儿或小女处把基础打好了再来我这儿吧。\n");
    return;
-   }   
+   }
         command("smile");
         command("say 难得" + RANK_D->query_respect(ob) +
      "有此心志，还望日后多加努力，为我东海龙宫争光。\n");
