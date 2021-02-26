@@ -122,4 +122,3 @@ void unconcious()
 {
   die();
 }
-
