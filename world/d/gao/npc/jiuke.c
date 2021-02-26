@@ -31,4 +31,3 @@ int accept_fight(object me)
         command("say 打架？老子当年打遍长安无敌手！");
         return 1;
 }
-
