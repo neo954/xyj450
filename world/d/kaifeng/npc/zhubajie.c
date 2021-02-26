@@ -4,7 +4,7 @@
 inherit NPC;
 
 #include "quest_fd.h"
-#include <reporting.h>
+#include "reporting.h"
 
 int test_player();
 
