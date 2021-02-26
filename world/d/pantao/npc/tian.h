@@ -748,4 +748,3 @@ void unconcious()
 {
   //fully_recover (this_object());
 }
-
