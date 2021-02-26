@@ -1,6 +1,6 @@
 //girl_yu
 inherit NPC;
- 
+
 void create()
 {
         set_name("上官钰翎", ({ "yulin","yu-girl" }) );
