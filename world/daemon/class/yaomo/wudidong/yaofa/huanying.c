@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 妖法－－幻影
 
 #include <ansi.h>
@@ -70,7 +70,7 @@ int cast(object me, object target)
    env = environment(me);
    exit = env->query("exits");
 
-   if( !mapp(exit)) 
+   if( !mapp(exit))
      return notify_fail("你想将"+target->query("name")+"引到那儿去？\n");
 
    dirs = keys(exit);
