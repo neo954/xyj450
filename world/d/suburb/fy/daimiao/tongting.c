@@ -1,6 +1,6 @@
 //mac's tongting.c
-// 
-// 
+//
+//
 
 #include <room.h>
 inherit ROOM;
