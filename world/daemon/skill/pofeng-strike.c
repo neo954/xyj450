@@ -3,35 +3,35 @@
 inherit SKILL;
 
 mapping *action = ({
-        ([      "action":               
+        ([      "action":
 "$N使出一招「乱泼狂风」，右掌从肋下穿出击向$n的$l",
                 "dodge":                30,
                 "parry":                10,
                 "force":                200,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出一招「狂风突袭」，左掌化虚为实击向$n的$l",
                 "dodge":                10,
                 "parry":                30,
                 "force":                70,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出泼风掌法「风动天庭」，拔地而至$n身前，一掌拍向$n的$l",
                 "dodge":                30,
                 "parry":                10,
                 "force":                50,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N双掌一错，使出「风雨交加」，对准$n的$l拍出一排掌影",
                 "dodge":                10,
                 "parry":                30,
                 "force":                60,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N左掌画了个圈圈，右掌推出，一招「狂风扫叶」击向$n$l",
                 "dodge":                20,
                 "parry":                30,
@@ -65,7 +65,7 @@ int practice_skill(object me)
         return 1;
 }
 int effective_level() { return 10;}
- 
+
 string *parry_msg = ({
         "$n化掌为刀，一招「晓风残月」急切$N拿着$w的手。\n",
         "$n略一转身，一招「风动树梢」拍向$N拿着$w的手。\n",
