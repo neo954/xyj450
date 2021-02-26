@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // guang.c
 
 inherit NPC;
@@ -121,7 +121,7 @@ int accept_object(object who,object ob)
             call_out("destroy", 1, ob);
            return 1;
      }
-     else 
+     else
      say("广羲子笑道：多谢，多谢！\n");
            call_out("destroy", 1, ob);
      return 1;
@@ -129,7 +129,7 @@ int accept_object(object who,object ob)
    if (ob->query("id")=="daodejing") {
            if ( this_player()->query("pending/book") ){
                   say("广羲子哈哈笑了几声，好借好还，再借不难！\n");
-            who->set("pending/book", 0); 
+            who->set("pending/book", 0);
      this_object()->delete("daode");
            call_out("destroy", 1, ob);
            return 1;
