@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -14,14 +14,14 @@ void create ()
 正殿东西各有一座偏殿。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "out" : __DIR__"guangchang",
      "east" : __DIR__"epiandian",
      "west" : __DIR__"wpiandian",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      __DIR__"npc/qingfeng" : 1,
      __DIR__"npc/caoguojiu" : 1,
