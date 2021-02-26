@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /*
  * File    : gwizmsg.c
  * Creator : Pinkfish@Discworld
@@ -95,7 +95,7 @@ void incoming_request(mapping info)
         else
           tmsg = info["WIZNAME"]+"@"+info["NAME"]+": "+info["GWIZ"];
 
-        // Faked.  sheeze... 
+        // Faked.  sheeze...
         dns_log("dns_fake",sprintf( "Gwiz: %s %s\n%s", ctime(time()),
           info["HOSTADDRESS"],tmsg));
         DNS_MASTER->send_udp(info["HOSTADDRESS"], info["PORTUDP"],
