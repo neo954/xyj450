@@ -15,4 +15,3 @@ int valid_learn(object me)
                 return notify_fail("你的杀气太重，无法修炼道德经。\n");
         return 1;
 }
-
