@@ -1,4 +1,4 @@
-// qingshui-hulu.c 
+// qingshui-hulu.c
 
 inherit ITEM;
 inherit F_LIQUID;
