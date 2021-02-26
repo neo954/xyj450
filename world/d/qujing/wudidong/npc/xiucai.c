@@ -1,10 +1,10 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// xiucai.c 
+
+// xiucai.c
 
 inherit NPC;
- 
+
 void create()
 {
         set_name("张及第", ({ "xiucai", "zhang jidi", "zhang" }));
@@ -12,17 +12,17 @@ void create()
         set("title", "秀才");
         set("gender", "男性");
         set("age", 65);
- 
+
         set_skill("literate", 40);
- 
+
         set_skill("unarmed", 20);
         set_skill("dodge", 20);
         set_skill("parry", 20);
- 
+
         set("combat_exp", 4000);
         set("shen_type", 1);
         setup();
- 
+
         set("chat_chance", 6);
         set("chat_msg", ({
                 "张秀才说道：老夫写诗，别出心裁，不拘一格。就可惜没人能懂。唉。。。\n",
@@ -31,15 +31,15 @@ void create()
                 "张秀才说道：老夫胸怀安邦定国之策，至少也该请我到县衙门当个师爷呀！\n",
         }) );
 }
- 
+
 int recognize_apprentice(object ob)
 {
         if (!(int)ob->query_temp("mark/张"))
-                return 0; 
+                return 0;
         ob->add_temp("mark/张", -1);
         return 1;
 }
- 
+
 int accept_object(object who, object ob)
 {
         if (!(int)who->query_temp("mark/张"))
