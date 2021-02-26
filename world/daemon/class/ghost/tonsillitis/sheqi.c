@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 // sheqi.c 摄气，摄取阳气。weiqi...
 #include <ansi.h>
@@ -9,14 +9,14 @@ inherit SSERVER;
 int exert(object me, object target)
 {
    int qi_gain, qi_lost, ap, dp, success;
-   string msg;   
+   string msg;
 
    if( !target
    ||      !target->is_character()
    ||      target->is_corpse()
    ||      target==me)
    return notify_fail("你想摄取谁的阳气？\n");
-    
+
    if( target == me ) return notify_fail("你疯了？\n");
 
    if(target->query_temp("netdead")) return notify_fail("趁火打劫，不太像话吧？\n");
@@ -37,9 +37,9 @@ int exert(object me, object target)
 
    if(qi_lost < 5 )
      return notify_fail("对方马上就要断气，没有什么好榨的了。\n");
-   
+
    msg = HIC
-"$N面带狞笑，露出白森森的牙齿往$n的鼻孔凑了过去，张嘴就是一吸！\n" 
+"$N面带狞笑，露出白森森的牙齿往$n的鼻孔凑了过去，张嘴就是一吸！\n"
 NOR;
 
    success = 1;
@@ -49,7 +49,7 @@ NOR;
    ap += (int)me->query("combat_exp");
    dp = target->query("combat_exp");
    if( random(ap + dp) < dp ) success = 0;
-   //here we compared exp and force level. 
+   //here we compared exp and force level.
    //note: has nothing to do with target's force level.
 
    ap = (int)me->query("max_mana");
@@ -73,18 +73,18 @@ NOR;
      if( qi_gain > 0 ) me->add("kee", qi_gain);
 
      //here also add some tonsillit point.
-     if( qi_gain > 0 
-     && (int)me->query("combat_exp") < (int)target->query("combat_exp") 
+     if( qi_gain > 0
+     && (int)me->query("combat_exp") < (int)target->query("combat_exp")
      && (int)me->query_skill("tonsillit",1) <= 150
      && random((int)me->query_skill("tonsillit",1)-125) < 1 )
      {
         me->improve_skill("tonsillit", qi_gain);
 
      }else me->improve_skill("tonsillit", qi_gain, 1);
-   }       
+   }
    else {
-     msg +=  HIR "结果$n一扭头，避了开去！\n" NOR;   
-   } 
+     msg +=  HIR "结果$n一扭头，避了开去！\n" NOR;
+   }
 
    message_vision(msg, me, target);
    if( success == 1 ) COMBAT_D->report_status(target);
@@ -92,6 +92,6 @@ NOR;
 //he'll try kill you...
    if( living(target) ) target->kill_ob(me);
 
-   me->start_busy(5);        
+   me->start_busy(5);
    return 1;
 }
