@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/wiz/system.c
 
 inherit ROOM;
@@ -10,7 +10,7 @@ void create()
    set("short", "系统公告室");
    set("long", @LONG
 这是一间很普通的房间，房内贴着一些有关这个世界的资讯，
-往南可以回到国宾馆大厅，往东是巫师会议厅。   
+往南可以回到国宾馆大厅，往东是巫师会议厅。
 LONG
    );
 set("item_desc" , ([ /* sizeof() == 1 */
