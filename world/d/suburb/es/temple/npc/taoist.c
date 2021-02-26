@@ -21,7 +21,7 @@ void create()
      set("max_mana", 500);
      set("atman", 300);
      set("max_atman", 300);
-     
+
      set_skill("unarmed", 30);
      set_skill("dodge", 30);
      set_skill("force", 30);
