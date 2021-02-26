@@ -36,4 +36,3 @@ mixed hit_ob(object me, object victim, int damage_bonus)
 	me->add("bellicosity",10+random(30));
         return HIR "$N的眼里映着＂小楼一夜听春雨＂闪出的诡异红光．．．\n" NOR;
 }
-
