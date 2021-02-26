@@ -35,12 +35,12 @@ int valid_leave(object me, string dir)
 
 	if (dir == "northup")
 	{
-		if( mapp(fam = me->query("family")) 
-		&&  fam["family_name"] == "少林派" 
-		&&  fam["generation"] == 37  ) 
+		if( mapp(fam = me->query("family"))
+		&&  fam["family_name"] == "少林派"
+		&&  fam["generation"] == 37  )
 			return ::valid_leave(me, dir);
 		
-		if( me->query("guilty") == 0 
+		if( me->query("guilty") == 0
 		&&  me->query("id") != "seng bing" )
 		{
 			return notify_fail("僧兵挡住说道：你未经许可，不能进入戒律院。\n");
