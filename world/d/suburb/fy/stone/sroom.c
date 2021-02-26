@@ -14,7 +14,7 @@ LONG
   "south" : __DIR__"stone2",
 ]));
         set("objects", ([
-                __DIR__"npc/master": 1, 
+                __DIR__"npc/master": 1,
 ]) );
         set("valid_startroom", 1);
 
