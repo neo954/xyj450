@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat
 // search
 
@@ -81,7 +81,7 @@ void find_users(int i, object *list, string *dir, int count, int exp, object me)
     ppls = get_dir(DATA_DIR + "user/" + dir[i] + "/");
     for (j = 0; j < sizeof(ppls); j++) {
       reset_eval_cost();
-      if (sscanf(ppls[j], "%s.o", str)==1 && 
+      if (sscanf(ppls[j], "%s.o", str)==1 &&
           sscanf(ppls[j], "%s.oo.o", s)!=1) {
         seteuid(str);
         ob = new(USER_OB);
@@ -119,7 +119,7 @@ void display_result (int count, object *list, object me)
     if (member_array(ob->query("id"),wizs) >= 0 )
       wizstatus = " (wiz)";
     info = sprintf("%-7s%-14s%-14s%-26d\n",
-                   wizstatus, 
+                   wizstatus,
                    ob->query("id"),
                    ob->query("name"),
                    ob->query("combat_exp"));
