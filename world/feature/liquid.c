@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // liquid.c
 
 #include <dbase.h>
@@ -63,7 +63,7 @@ int do_drink(string arg)
    switch(query("liquid/type")) {
      case "alcohol":
         this_player()->apply_condition("drunk",
-          (int)this_player()->query_condition("drunk") 
+          (int)this_player()->query_condition("drunk")
           + (int)query("liquid/drunk_apply"));
         break;
      // added by snowcat jul 17 1997
@@ -91,7 +91,7 @@ int do_drink(string arg)
         break;
      }
    }
-   
+
    return 1;
 }
 
