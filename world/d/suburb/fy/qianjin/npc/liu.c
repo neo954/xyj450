@@ -89,4 +89,3 @@ int accept_object(object me, object obj)
 "，头一次见到象您这么大方的！");
         return 1;
 }
-
