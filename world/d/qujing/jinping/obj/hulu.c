@@ -173,4 +173,3 @@ void coming (object who)
   message_vision ("\n佛爷突然停下来，顺便将$N往地上一扔！\n",who);
   who->unconcious();
 }
-
