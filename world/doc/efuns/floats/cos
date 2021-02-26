@@ -9,7 +9,7 @@ Returns the cosine of its argument, `f', measured in radians.
 See also:
  acos,
  asin,
- atan, 
+ atan,
  sin,
  tan
 
