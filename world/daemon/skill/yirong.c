@@ -15,4 +15,3 @@ int valid_enable(string usage)
 {
         return  (usage=="move");
 }
-
