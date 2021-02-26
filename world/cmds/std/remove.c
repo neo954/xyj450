@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // remove.c
 
 #include <ansi.h>
@@ -61,11 +61,11 @@ int help(object me)
 {
   write(@HELP
 指令格式 : remove all | <物品名称>
- 
+
 这个指令让你脱掉身上某件防具.
- 
+
 HELP
     );
     return 1;
 }
- 
+
