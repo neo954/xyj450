@@ -16,4 +16,3 @@ void create()
 	carry_object(__DIR__"obj/silver_clasp")->wear();
 	add_money("silver", 10);
 }
-
