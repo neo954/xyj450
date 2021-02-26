@@ -122,4 +122,3 @@ int look_tai(string arg)
         }
         return 1;
 }
-
