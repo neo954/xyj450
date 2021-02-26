@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //anshi.c
 #include <room.h>
 inherit ROOM;
@@ -11,18 +11,18 @@ void create ()
    set ("long", @LONG
 
 这是牡丹亭底下的一间暗室。黑咕窿咚的什么也看不清。你试着
-到处摸了摸(mo)。 
+到处摸了摸(mo)。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      //"southwest" : __DIR__"juyuan",
      //"north" : __DIR__"southpool",
      "up" : __DIR__"mudanting",
      //"west" : __DIR__"westway6",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"obj/huangtong-key" : 1,
    ]));
