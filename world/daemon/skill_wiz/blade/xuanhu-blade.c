@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //玄狐长恨刀
 // dodge -10   parry -5   damage 25
 
