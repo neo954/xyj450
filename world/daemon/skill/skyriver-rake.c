@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // skyriver.c 【天河钯法】 by snowcat
 
 /*
@@ -10,7 +10,7 @@
 */
 
 // 三花聚顶  五气朝元
-// 意闲性拙  混沌迷心 
+// 意闲性拙  混沌迷心
 // 酒醉意沉  东撒西泼
 // 逞雄广寒  戏耍嫦娥
 inherit SKILL;
@@ -52,10 +52,10 @@ mapping *action = ({
      "damage_type":   "筑伤"
    ]),
    ([   "action":
-"$n忽然不见$N，猛一抬头只见$N轮园了$w一式「东撒西泼」，急风骤雨一般径直扫向$n$l",  
+"$n忽然不见$N，猛一抬头只见$N轮园了$w一式「东撒西泼」，急风骤雨一般径直扫向$n$l",
      "dodge":     -25,
      "parry":     -10,
-     "damage":     20, 
+     "damage":     20,
      "damage_type":   "筑伤"
    ]),
    ([   "action":
@@ -72,7 +72,7 @@ mapping *action = ({
      "damage":     25,
      "damage_type":   "筑伤"
    ]),
-   
+
 });
 
 int valid_learn(object me)
