@@ -36,4 +36,3 @@ void init()
      command("kick ");
    }
 }
-
