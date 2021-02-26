@@ -1,4 +1,4 @@
-// ding-dodge.c 丁字步 
+// ding-dodge.c 丁字步
 
 inherit SKILL;
 
