@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //wuchang-c.c
 
@@ -20,7 +20,7 @@ LONG);
    //set("item_desc", ([" *** " : " *** \n", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "south" : __DIR__"wuchang-s",
      "north" : __DIR__"wuchang-n",
@@ -29,8 +29,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      __DIR__"npc/xunshi" : 2,
      __DIR__"npc/yingwu-guai" : 1,
@@ -65,12 +65,12 @@ int do_skate(string arg)
    {
      message_vision("$N跳起来往冰上一滑...结果摔了个四脚朝天。\n", me);
      return 1;
-   }      
+   }
    if( me->query("sen") < (int)me->query("max_sen")/4 )
    {
      message_vision("$N跳起来往冰上一滑...结果原地转了几圈，头晕之下赶忙趴在冰上，再也不敢动弹。\n", me);
      return 1;
-   }      
+   }
 
 //need construct the followwing section as another function?dunno how yet...weiqi.
    //go north.
@@ -80,7 +80,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
@@ -95,7 +95,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
@@ -110,7 +110,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
@@ -125,7 +125,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
@@ -140,7 +140,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
@@ -155,7 +155,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
@@ -170,7 +170,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
@@ -185,7 +185,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
@@ -200,7 +200,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
@@ -215,7 +215,7 @@ int do_skate(string arg)
    me->improve_skill("dodge", (1+random(point/2))*gainfactor);
    message_vision("$N得意洋洋地从冰上冲了过来！\n", me);
 
-   if( (me->query("kee") < (int)me->query("max_kee")/4) || 
+   if( (me->query("kee") < (int)me->query("max_kee")/4) ||
        (me->query("sen") < (int)me->query("max_sen")/4) ){
      message_vision("结果叭哒！一声摔了个四脚朝天！\n", me);
      return 1;
