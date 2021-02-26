@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mimi/zhuziguo/ziyun.c    snowcat moved to /d/qujing/wuji
 inherit ROOM;
 
