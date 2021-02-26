@@ -23,4 +23,3 @@ varargs void init_sword(int damage, int flag)
      set("verbs", ({ "slash", "slice", "thrust", "pierce" }) );
    }
 }
-
