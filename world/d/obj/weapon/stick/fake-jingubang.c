@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //fake-jingubang.c
 //the real jingubang may be used to improve stick level.
 //this one is weapon only, less powerful,
