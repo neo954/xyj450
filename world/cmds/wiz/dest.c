@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // dest.c
 
 #include "/doc/help.h"
@@ -43,7 +43,7 @@ if ( option != "-r" && option != "-p" ) target = arg;
    if( environment(me)==environment(obj) )
    if( !stringp(msg = me->query("env/msg_dest")) )
      msg = "$N召唤出一个黑洞，将$n吞没了。\n";
-        else 
+        else
      message_vision(msg + "\n", me, obj);
 
    destruct(obj);
