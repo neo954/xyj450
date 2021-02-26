@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // skull.c
 #include <weapon.h>
 inherit HAMMER;
@@ -32,7 +32,7 @@ void init()
 int do_pull(string arg){
         object ob, me;
         me=this_player();
- 
+
         if (!arg || (arg != "scalp"))
                 return notify_fail("你要拉什么？\n");
              else {
