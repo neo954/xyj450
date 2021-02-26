@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// Room: snowcat 
+
+// Room: snowcat
 
 inherit ROOM;
 
@@ -15,7 +15,7 @@ void create ()
 
 LONG);
 
-  set("exits", ([ 
+  set("exits", ([
     "up" : __DIR__"well",
     "east" : __DIR__"shuijing",
     "west" : __DIR__"shuijing",
@@ -56,7 +56,7 @@ int do_all (string arg)
   longwang->command_function("hi");
   remove_call_out ("longwang_disappear");
   call_out ("longwang_disappear",10+random(30),where);
-  return 0;    
+  return 0;
 }
 
 void longwang_disappear(object where)
