@@ -100,7 +100,7 @@ int give_quest()
 		return 0;
 	else
 	{
-		message_vision("朱半仙向$N一甩袍袖，说道： 
+		message_vision("朱半仙向$N一甩袍袖，说道：
 真没用！不过看在你还回来见老夫的份上，就在给你一次机会．\n", me);
 		me->set("kee", me->query("kee")/2+1);
 	}
@@ -136,7 +136,7 @@ int give_quest()
         }
  	me->set("quest", quest);
 	me->set("task_time", (int) time()+(int) timep);
-	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)：%s", 
+	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)：%s",
 	me->query("name"),me->query("id"),sysmsg));
 
 return 1;
