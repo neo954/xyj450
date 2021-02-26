@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 void create()
@@ -25,7 +25,7 @@ set("inquiry", ([
         carry_object("/d/ourhome/obj/choupao")->wear();
 }
 void init()
-{       
+{
         object ob=this_player();
 
         ::init();
