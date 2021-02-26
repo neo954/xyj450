@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // moonforce.c  【圆月心法】
 inherit FORCE;
 
