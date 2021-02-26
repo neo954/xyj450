@@ -23,4 +23,3 @@ TEXT
         ob->set_amount(30);
         carry_object("/d/suburb/es/latemoon/obj/skirt")->wear();
 }
-
