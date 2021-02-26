@@ -33,7 +33,7 @@ void init()
         if (interactive(ob = this_player()) &&
                 random(ob->query_kar() + ob->query_per()) < 30) {
                         remove_call_out("kill_ob");
-                        call_out("kill_ob", 1, ob); 
+                        call_out("kill_ob", 1, ob);
         }
 }
 void die()
