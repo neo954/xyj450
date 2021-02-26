@@ -144,7 +144,7 @@ int do_read(string arg)
 	// Keep track which post we were reading last time.
 	if( !mapp(last_read_time) )
 		this_player()->set("board_last_read", ([ myid: notes[num]["time"] ]) );
-	else 
+	else
 		if( undefinedp(last_read_time[myid]) || notes[num]["time"] > last_read_time[myid] )
 			last_read_time[myid] = notes[num]["time"];
 
