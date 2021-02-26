@@ -50,4 +50,3 @@ void destroy()
 {
 destruct(this_object());
 }
-
