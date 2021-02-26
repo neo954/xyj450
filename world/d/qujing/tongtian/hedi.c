@@ -46,4 +46,3 @@ void cold (object where, object who)
     call_out ("cold",random(10)+5,where);
   }
 }
-
