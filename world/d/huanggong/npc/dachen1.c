@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat
 
 inherit NPC;
@@ -58,7 +58,7 @@ void reward (object who)
 /*
   command (channel+" "+who->query("name")+who->query("quest/reason")+"陛下有旨，赐"+
            chinese_number(points)+"点潜能！");
-*/                  
+*/
   who->add("quest/gain/potential",points);
   reporting (who, who->query("quest/reason"), points, "点潜能");
   who->add("potential",points);
