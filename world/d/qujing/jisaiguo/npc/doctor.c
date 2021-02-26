@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit F_VENDOR_SALE;
 
 void create()
@@ -40,7 +40,7 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !visible(ob) || environment(ob) != environment() ) return;
-        switch( random(3) ) { 
+        switch( random(3) ) {
                 case 0:
                 say( name()+"笑咪咪地说道：这位" +
 RANK_D->query_respect(ob)
