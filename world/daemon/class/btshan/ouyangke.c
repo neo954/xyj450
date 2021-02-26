@@ -73,7 +73,7 @@ void init()
 
 	::init();
 
-	if( interactive(ob = this_player()) && !is_fighting() ) 
+	if( interactive(ob = this_player()) && !is_fighting() )
        {
 		remove_call_out("greeting");
 		call_out("greeting", 1, ob);
@@ -90,7 +90,7 @@ void greeting(object ob)
 	  	case 1:command("kiss "+(string)ob->query("id"));break;
 	   	case 2:command("love "+(string)ob->query("id"));break;
 	   }
-     
+
 	}
 	else
            say("欧阳克叹了一口气说：这位"+RANK_D->query_respect(ob)+
@@ -105,7 +105,7 @@ void attempt_apprentice(object ob)
 	     if((int)ob->query("combat_exp")<10000)
 	       command("say 你的经验太低，我还不能收你。继续努力吧。\n");
 	     else
-               {command("say 你跟着我要好好学。\n");               
+               {command("say 你跟着我要好好学。\n");
 	        command("recruit "+ob->query("id"));
                  }
 	      return;
@@ -140,7 +140,7 @@ int accept_fight(object ob)
 
 	return 1;
 }
- 
+
 int accept_object(object who, object ob)
 {
 	object obn;
@@ -157,7 +157,7 @@ int accept_object(object who, object ob)
         if ( (int)ob->query("age") >40 )
 	{	 say("欧阳克轻蔑地一笑道：这种老古董还是留给你自己吧！\n"); return 0;}
 
-			  
+			
 	obn=new("/clone/money/silver");
         obn->set_amount(30);
         obn->move(who);
