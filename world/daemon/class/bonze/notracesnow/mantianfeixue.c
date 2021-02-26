@@ -31,4 +31,3 @@ void remove_effect(object me, int amount)
         me->delete_temp("feixue");
         tell_object(me, "你的［漫天飞雪］施展完毕，身行稳定了下来。\n");
 }
-
