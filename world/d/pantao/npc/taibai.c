@@ -1145,4 +1145,3 @@ int qualified(object me)
      return 0;
    return 1;
 }
-
