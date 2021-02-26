@@ -43,4 +43,3 @@ int do_climb(string arg)
 ({me}) );
                 return 1;
 }
-
