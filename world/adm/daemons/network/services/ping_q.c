@@ -72,4 +72,3 @@ void send_ping_q(string host, mixed port)
      "||PORTUDP:"+udp_port()+
      "@@@\n");
 }
-
