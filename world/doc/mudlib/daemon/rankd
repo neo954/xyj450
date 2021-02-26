@@ -1,6 +1,6 @@
 □ RANKD
 
-string query_rank(object ob) 
+string query_rank(object ob)
 传回物件的 rank
 
 string query_respect(object ob)
