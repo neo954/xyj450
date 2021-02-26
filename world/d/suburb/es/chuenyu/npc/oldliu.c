@@ -29,13 +29,13 @@ LONG
         set_skill("liuh-ken", 70);
         set_skill("six-chaos-sword", 150);
         set_skill("pyrobat-steps", 80);
-                        
+
         map_skill("dodge", "pyrobat-steps");
         map_skill("sword","six-chaos-sword");
         map_skill("unarmed","liuh-ken");
         setup();
 
-        add_money("coin", 50); 
+        add_money("coin", 50);
         carry_object("/obj/cloth")->wear();
         carry_object(__DIR__"obj/parrybook");
 
@@ -62,8 +62,8 @@ void greeting(object ob)
         object sword;
         if((int) ob->query("marks/murder") == 0)
         {
-        if( (int) ob->query("marks/老刘") == 0 ) 
-        say( "刘老农说道：“这位"+ RANK_D->query_respect(ob) 
+        if( (int) ob->query("marks/老刘") == 0 )
+        say( "刘老农说道：“这位"+ RANK_D->query_respect(ob)
 +"，可否见到小女娟儿？” \n");
         else
         {
@@ -71,9 +71,9 @@ void greeting(object ob)
         set_skill("six-chaos-sword",150);
         set_skill("pyrobat-steps", 80);
         map_skill("unarmed","liuh-ken");
-        say( "刘老农说道：“这位"+ RANK_D->query_respect(ob) 
+        say( "刘老农说道：“这位"+ RANK_D->query_respect(ob)
 +"，多谢答救小女娟儿。” \n");
-        say( "刘老农说道：“这口剑，这本密笈赠于"+ RANK_D->query_respect(ob) 
+        say( "刘老农说道：“这口剑，这本密笈赠于"+ RANK_D->query_respect(ob)
 +"。” \n");
         say( "刘老农说道：“这处非久留之地，我等去也。” \n");
         say( "刘老农领着娟儿匆匆离去。” \n");
@@ -82,7 +82,7 @@ void greeting(object ob)
         sword = new(__DIR__"obj/hengbing");
         book = new(__DIR__"obj/parrybook");
         sword->move(ob);
-        book->move(ob); 
+        book->move(ob);
         destruct(this_object());
         }
         }
@@ -95,8 +95,8 @@ void killhim(object ob)
         ob->set("marks/murder", 0);
         ob->set("marks/老刘", 0);
         set("title", "悲愤欲绝");
-        
-say("刘老农悲愤欲绝的骂道：你．．你．．你们居然杀了我女儿，纳命来！\n");  
+
+say("刘老农悲愤欲绝的骂道：你．．你．．你们居然杀了我女儿，纳命来！\n");
 
                 set("chat_msg_combat", ({
 "刘老农悲愤欲绝的骂道：你．．你．．你们居然杀了我女儿，纳命来！",
@@ -117,4 +117,4 @@ say("刘老农悲愤欲绝的骂道：你．．你．．你们居然杀了我女
         ob->kill_ob(this_object());
 
 }
- 
+
