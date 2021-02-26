@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //  fabao_status.c
 
 inherit F_CLEAN_UP;
@@ -13,27 +13,27 @@ int main(object me, string arg)
    mapping fabao;
    int  i;
    string series_no;
-   
+
     seteuid(getuid());
-    
+
     if(!arg)
-       ob = me; 
+       ob = me;
     else  {
        ob = find_player(arg);
        if( !ob )  ob = find_living(arg);
        if( !ob )  return notify_fail("你要察看谁的法宝状态？\n");
     }
-    
+
     if( ob!=me && !wizardp(me) )
-       return notify_fail("只有巫师能察看他人的法宝状态。\n"); 
+       return notify_fail("只有巫师能察看他人的法宝状态。\n");
 
     fabao = ob->query("fabao");
     if( !mapp(fabao) )
-       return notify_fail(ob->query("name")+"目前没有任何法宝。\n");           
- 
+       return notify_fail(ob->query("name")+"目前没有任何法宝。\n");
+
     inv = all_inventory(ob);
     ob_id = getuid(ob);
-    for(i=0; i<sizeof(inv); i++)  { 
+    for(i=0; i<sizeof(inv); i++)  {
        if( (series_no=inv[i]->query("series_no")) &&
         inv[i]->query("owner_id") == ob_id ) {
         if( series_no == "1" )  {
@@ -51,11 +51,11 @@ int main(object me, string arg)
                   inv[i]->query("armor_prop/spells") ));
               write(sprintf("%s魔法抵抗力为 %d。\n", inv[i]->query("name"),
                   inv[i]->query("armor_prop/armor_vs_spells") ));
-          } 
+          }
        }
     }
-    
-    return 1;          
+
+    return 1;
 }
 
 int help(object me)
