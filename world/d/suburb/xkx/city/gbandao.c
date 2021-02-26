@@ -37,4 +37,3 @@ int valid_leave(object me, string dir)
                 return notify_fail("简长老一把揪住你的衣领说：“慢着”\n");
         return ::valid_leave(me, dir);
 }
-
