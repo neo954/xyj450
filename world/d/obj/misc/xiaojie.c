@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <armor.h>
 inherit NECK;
 
@@ -18,7 +18,7 @@ void create()
      set("material", "steel");
      set("armor_prop/spells", 5);
      set("armor_prop/armor", 1);
-     
+
         }
    setup();
 }
