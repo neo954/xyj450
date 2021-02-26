@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 12/18/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("黄眉老佛", ({ "huangmei laofo", "huangmei", "laofo", "fo" }));
-  set("title", "小雷音寺");   
+  set("title", "小雷音寺");
   set("long", "一位面无表情却又精神焕发的老佛。\n");
   set("gender", "男性");
   set("age", 80);
@@ -88,7 +88,7 @@ void mile_appearing (object who)
   object mile = new ("/d/qujing/xiaoxitian/npc/mile");
 
   mile->announce_success (who);
-  destruct (mile); 
+  destruct (mile);
 }
 
 void unconcious ()
@@ -108,7 +108,7 @@ void kill_ob (object ob)
   object me = this_object();
 
   set_temp("my_killer",ob);
-  call_out ("hurting",random(5)+5,me,ob);  
+  call_out ("hurting",random(5)+5,me,ob);
   ::kill_ob(ob);
 }
 
@@ -119,7 +119,7 @@ void hurting (object me, object ob)
   if (fabao)
     fabao->ji_ob (ob);
 
-  remove_call_out ("hurting");  
-  call_out ("hurting",random(10)+10,me,ob);  
+  remove_call_out ("hurting");
+  call_out ("hurting",random(10)+10,me,ob);
 }
 
