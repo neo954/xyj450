@@ -10,7 +10,7 @@ void create()
 刨花油香。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "north" : __DIR__"street2",
   "east" : __DIR__"xiao",
 ]));
