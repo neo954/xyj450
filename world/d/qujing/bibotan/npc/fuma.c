@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 void create()
 {
@@ -44,8 +44,8 @@ void create()
 
 int recognize_apprentice(object who)
 {   who= this_player();
-   if( who->query("family/family_name")=="乱石山碧波潭" 
-     && who->query("can_learn_staff") ) { 
+   if( who->query("family/family_name")=="乱石山碧波潭"
+     && who->query("can_learn_staff") ) {
            return 1;
    }
    return 0;
