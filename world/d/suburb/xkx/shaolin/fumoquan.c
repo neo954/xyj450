@@ -42,9 +42,9 @@ void init()
 	}
 
 	if ( mapp(mine)
-	&& mine["generation"] > 2 
-	&& mine["family_name"] == "少林派" 
-	&& this_player()->query("kee") < 300 ) 
+	&& mine["generation"] > 2
+	&& mine["family_name"] == "少林派"
+	&& this_player()->query("kee") < 300 )
 	{
 		message_vision(HIR "$N被一道排山倒海般的劲气击中，顿时飞了出去 !\n" NOR, this_player());
 	}
