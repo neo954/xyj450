@@ -80,7 +80,7 @@ void init()
 int ask_me()
 {
         object me;
- 
+
         me = this_player();
 	   message("vision",
    HIY "李莫愁冷笑一声：『我这就送你去见她』\n"
@@ -89,14 +89,14 @@ int ask_me()
                    kill_ob(this_player());
    return 1;
 }
-  
+
 
 int do_look(string target)
 {
         object me;
- 
+
         me = this_player();
-        if (target=="li" || target=="li mochou" || target=="mochou" ) 
+        if (target=="li" || target=="li mochou" || target=="mochou" )
            if ((string)me->query("gender") != "女性") {
 		   message("vision",
    HIY "李莫愁大怒，喝道：我最恨你们这些薄情的臭男人！去死吧！\n"
@@ -104,4 +104,4 @@ int do_look(string target)
    NOR, environment(), this_object() );
                    kill_ob(this_player());
            }
-}       
+}
