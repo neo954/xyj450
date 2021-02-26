@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/hkgroup/cave
 inherit ROOM;
 
@@ -19,7 +19,7 @@ LONG);
   "south" : __DIR__"village",
 ]));
   set("outdoors", "/u/hkgroup");
-  
+
   set("objects", ([
    "/d/obj/misc/seed":1,
   ]));
