@@ -39,4 +39,3 @@ int valid_leave(object me, string dir)
 	me->set_temp("mark/朱", 0);
 	return 1;
 }
-
