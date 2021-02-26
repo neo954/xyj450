@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //震卦象征雷
 //震、东北
 
@@ -18,11 +18,11 @@ void create ()
 衬托之下显得非常雅致。
 LONG);
 
-//  set("objects", ([ /* sizeof() == 1*/ 
+//  set("objects", ([ /* sizeof() == 1*/
 //  __DIR__"npc/erlang" : 1,
 //]));
 //  set("outdoors", 1);
-  
+
   set("position", "震");
   set("exits", ([ /* sizeof() == 2 */
   "northwest" : __DIR__"hua_kun",
@@ -36,7 +36,7 @@ void init()
 }
 
 int do_jump(string arg)
-{       
+{
         object me;
         me=this_player();
 
