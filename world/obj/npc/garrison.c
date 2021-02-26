@@ -53,4 +53,3 @@ void create()
    carry_object("/obj/cloth")->wear();
    carry_object("/obj/longsword")->wield();
 }
-
