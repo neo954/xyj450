@@ -18,4 +18,3 @@ void reporting (object who, string reason, int points, string name)
   else
     MONITOR_D->report_system_object_msg (who, str);
 }
-
