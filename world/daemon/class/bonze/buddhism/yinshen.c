@@ -60,4 +60,3 @@ void free(object user, int howlong)
    message_vision(HIW"\n白光闪过之后，$N又现出了身形。\n\n"NOR, user);
    return;
 }
-
