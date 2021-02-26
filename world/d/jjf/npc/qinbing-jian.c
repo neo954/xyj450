@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //created 6-9-97 pickle
 //亲兵
 
@@ -15,7 +15,7 @@ void create()
 一个彪形大汉，看身上衣服大概是建府的亲兵，乃是高祖
 第三子李元吉的近身护卫。他除了保护李元吉外似乎还管
 发散钱财吃喝。
-LONG); 
+LONG);
   set("title", "建王府");
   set("gender", "男性");
   set("age", 25);
@@ -40,14 +40,14 @@ LONG);
         "拆房子" : "哼，除非把老子打发了，否则谁也别想来这儿撒野！",
          ]) );
   setup();
- 
+
   carry_object("/d/obj/weapon/blade/blade")->wield();
   carry_object("/d/obj/cloth/bingfu")->wear();
 }
 int accept_object(object me, object ob)
 {
   object npc=this_object();
- 
+
   if ((string)ob->query("name_recognized")!="建府令箭")
     {
       command ("say 哈哈！老子最爱受人贿络了！");
@@ -100,7 +100,7 @@ int do_ling(string arg)
                 kill_ob(me);
                 return 1;
             }
-          } 
+          }
    }
   if ((string)me->query("title") != "普通百姓")
     {
@@ -130,7 +130,7 @@ int do_ling(string arg)
   if (me->query("kee") < 60 || me->query("sen") < 60)
     return notify_fail("你太累了，挤不到亲兵边上。看来银子拿不到了。\n");
 
-  if( (int)npc->query("time") > 10 ) 
+  if( (int)npc->query("time") > 10 )
     return notify_fail("亲兵一拱手，说：今天的银子发完了，明天再来吧。\n");
 
 
