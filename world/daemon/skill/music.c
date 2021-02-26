@@ -17,4 +17,3 @@ void skill_improved(object me)
                 me->add("spi", 2);
         }
 }
-
