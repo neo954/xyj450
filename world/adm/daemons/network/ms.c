@@ -19,7 +19,7 @@
 #include "mailer.h"
 #include "daemons.h"
 #include <net/daemons.h>
-#include <uid.h>
+#include "uid.h"
 
 #define log(x)     log_file("MS", x)
 #define MS_SAVE     "mail-queue"
