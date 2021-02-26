@@ -48,5 +48,3 @@ void greeting(object me)
   if( !me || environment(me) != environment() ) return;
   say(CYN "圆清念了声佛，喜道：“原来是恩公驾到，请上坐，请上坐。”\n" NOR);
 }
-
-
