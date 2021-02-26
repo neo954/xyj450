@@ -26,7 +26,7 @@ void create()
         set("long",
 "李寻欢别号李探花，又有江湖绰号小李飞刀。
 一手飞刀绝技，在百晓生的兵器谱上排行第三。
-不发则已，但例无虚发。\n"                
+不发则已，但例无虚发。\n"
 	);
         create_family("风云一刀", 2, "人杰");
 	set("student_title","人杰");
@@ -85,7 +85,7 @@ void attempt_apprentice(object ob)
                 return;
         }
         command("sigh");
-        command("say 很好，" + RANK_D->query_respect(ob) + 
+        command("say 很好，" + RANK_D->query_respect(ob) +
 "他日切不可为非作歹。\n");
         command("recruit " + ob->query("id") );
 	ob->delete("betrayer");
@@ -100,7 +100,7 @@ void recruit_apprentice(object ob)
 void reset()
 {
 	set("already",0);
-} 
+}
 void init()
 {
         add_action("give_quest", "quest");
