@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // cd.c
 
 inherit F_CLEAN_UP;
@@ -17,7 +17,7 @@ int main(object me, string arg)
    if(dir[strlen(dir)-1]!='/') dir += "/";
    me->set("cwd", dir);
    write(dir + "\n");
-   return 1;   
+   return 1;
 }
 
 int help(object me)
