@@ -36,4 +36,3 @@ void remove_effect(object me, int amount)
         me->delete_temp("calm");
         tell_object(me, "你的静行心法运行完毕，将内力收回丹田。\n");
 }
-
