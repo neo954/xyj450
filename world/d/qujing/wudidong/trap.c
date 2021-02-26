@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // trap.c
 // created by mes, updated 6-21-97 pickle
 #include <ansi.h>
@@ -75,7 +75,7 @@ int valid_leave(object me, string dir)
   int damage, kee, maxkee;
   maxkee=(int)me->query("max_kee");
   kee=(int)me->query("kee");
-  if (dir =="north" && room->query("trap"))   
+  if (dir =="north" && room->query("trap"))
     {
       message_vision(RED "$N向北走去，突然间，墙里射出一阵箭雨。\n" NOR, me);
       call_out("playerdead", 1, me);
