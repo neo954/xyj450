@@ -1,9 +1,9 @@
 // tea_leaf.c
- 
+
 #include <weapon.h>
- 
+
 inherit THROWING;
- 
+
 void create()
 {
         set_name("茶叶", ({ "tea_leaf", "tea" }) );
