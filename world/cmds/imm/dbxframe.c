@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <globals.h>
 
 string print_vars(mixed *vars) {
@@ -42,8 +42,8 @@ int main(object me, string str)
     return 1;
   }
   frame = this_player()->query_temp("error");
-  
-  if(!frame) 
+
+  if(!frame)
     return notify_fail("No frames found.\n");
 
   if (num<0 || num>=sizeof(frame["trace"]))
