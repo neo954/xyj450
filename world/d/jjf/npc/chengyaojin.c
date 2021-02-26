@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //cheng yaojin, updated 5/7/97, pickle
 
 inherit NPC;
@@ -43,7 +43,7 @@ void create()
   set_temp("apply/armor", 10);
   set("max_sen", 300);
   set("max_kee", 2800);
-  set("force", 500); 
+  set("force", 500);
   set("max_force", 500);
   set("force_factor", 40);
   set("max_mana", 200);
