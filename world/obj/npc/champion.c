@@ -76,11 +76,11 @@ void loadall(object me)
                 {
 	thing = new( DATA_DIR + "login/" + id[0..0] + "/" + id +
  	"/" + name + ".c");
-                        if(thing->move(me)) 
+                        if(thing->move(me))
 			{
 			thing->wield();
 			thing->wear();
-			} 
+			}
                 }
 	me->reset_action();
         me->set_temp("already_loaded",1);
