@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // kongque-gongzhu.c...weiqi, 97.09.15.
 
 inherit NPC;
@@ -28,7 +28,7 @@ void create()
    set_skill("parry", 70);
    set_skill("blade", 90);
    set_skill("bingpo-blade", 120);
-   set_skill("force", 90);   
+   set_skill("force", 90);
    set_skill("ningxie-force", 90);
    set_skill("literate", 90);
    set_skill("spells", 80);
@@ -44,7 +44,7 @@ void create()
    set("force", 1600);
    set("max_force", 800);
    set("mana", 1000);
-   set("max_mana", 500);   
+   set("max_mana", 500);
    set("force_factor", 60);
    set("mana_factor", 25);
 
@@ -99,7 +99,7 @@ int recruit_apprentice(object ob)
 }
 
 void init()
-{       
+{
    object ob, me;
 
    me = this_player();
@@ -109,18 +109,18 @@ void init()
    set("chat_chance", 10);
    set("inquiry", ([
      "name" : "不告诉你。\n",
-     "here" : "你还没完了...别在这儿打搅！\n", 
+     "here" : "你还没完了...别在这儿打搅！\n",
      "大鹏王" : (: get_ice :),
      "大鹏明王" : (: get_ice :),
      "父王" : (: get_ice :),
     ]) );
 
    set("chat_msg", ({
-     "孔雀公主叹了口气。\n",   
+     "孔雀公主叹了口气。\n",
      "孔雀公主自言自语道：也不知道父王的病什么时候能好。\n",
      "孔雀公主皱了皱眉道：按说这种草性暖，父王怎么会认为可以提炼寒毒呢？\n",
      "孔雀公主又叹了口气：做了这么久还不成，肯定还差点什么...这么多花草混来混去也没用呀？\n",
-     "孔雀公主自言自语道：父王再弄不到寒毒，恐怕大事不妙了。\n",        
+     "孔雀公主自言自语道：父王再弄不到寒毒，恐怕大事不妙了。\n",
    }) );
 
    if ( ((string)me->query("gender") == "男性") && ((int)me->query("per") > 25) && ((int)me->query("combat_exp") < 10000) && (random(3) >1) )
@@ -168,8 +168,8 @@ string get_ice(object me)
 
 int accept_object(object me, object ob)
 {
-   if ( ((string)ob->query("id") != "lan bingkuai") && 
-     ((string)ob->query("id") != "shuangse bing") ) 
+   if ( ((string)ob->query("id") != "lan bingkuai") &&
+     ((string)ob->query("id") != "shuangse bing") )
    {
      command("say 去！去！去！别来烦你家姑奶奶我！\n");
      //command("drop " + ob->query("id"));
