@@ -13,4 +13,3 @@ void create()
   set("unit", "具");
   setup();
 }
-
