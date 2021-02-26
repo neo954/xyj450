@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xiaojie.c
 
 inherit NPC;
@@ -15,7 +15,7 @@ void create()
         set("force", 300);
         set("max_force", 300);
         set("force_factor", 15);
-   
+
         set("shen_type", 1);
         set("combat_exp", 15000+random(3000));
         set_skill("spear", 40);
