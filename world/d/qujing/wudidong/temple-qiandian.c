@@ -51,9 +51,3 @@ int do_knock()
   me->move(__DIR__"bedroom");
   return 1;
 }
-
-
-
-
-
-
