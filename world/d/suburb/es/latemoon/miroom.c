@@ -59,7 +59,7 @@ int do_dancing(string arg)
 int do_get(string arg)
 {
      object me;
-     
+
      me = this_player();
 
 	if (arg !="dance-book")
