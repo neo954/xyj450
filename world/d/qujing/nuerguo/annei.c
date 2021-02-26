@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat.c 4/4/1997
 // Room: /nuerguo/annei.c
 
@@ -23,7 +23,7 @@ LONG);
     "out" : __DIR__"juxianan",
   ]));
 
-  create_door("out","庵门","enter",DOOR_CLOSED); 
+  create_door("out","庵门","enter",DOOR_CLOSED);
 
   set("objects", ([
          __DIR__"npc/niuer" : 1,
