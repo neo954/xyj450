@@ -59,6 +59,3 @@ void create()
 
         carry_object("/d/suburb/xkx/shaolin/obj/dao-cloth")->wear();
 }
-
-
-
