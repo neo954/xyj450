@@ -28,4 +28,3 @@ void create()
         carry_object(__DIR__"obj/wcloth")->wear();
         add_money("coin", 100);
 }
-
