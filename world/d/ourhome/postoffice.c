@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/ourhome/mbox.c
 // 96/10/03 by none
 
