@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 
 inherit ROOM;
@@ -15,14 +15,14 @@ void create ()
 雕着一些山水人物。东面有一道小门通向西偏店。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "south" : __DIR__"westway1",
      "north" : __DIR__"westway3",
      "east" : __DIR__"wpiandian",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
