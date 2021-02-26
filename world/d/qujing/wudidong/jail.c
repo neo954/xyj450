@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mes/dong1.c
 
 inherit ROOM;
@@ -24,7 +24,7 @@ LONG);
   set("objects", ([ /* sizeof() == 1 */
         __DIR__"npc/ward" : 2,
         ]));
-  
+
   setup();
 }
 int valid_leave(object me, string dir)
