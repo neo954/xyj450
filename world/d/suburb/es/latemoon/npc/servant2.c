@@ -20,4 +20,3 @@ TEXT
         carry_object("/d/suburb/es/latemoon/obj/skirt")->wear();
         carry_object("/d/suburb/es/latemoon/obj/whip");
 }
-
