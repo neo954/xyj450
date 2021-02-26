@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //cglaem...12/17/96.
 
 #include <ansi.h>
@@ -59,7 +59,7 @@ notify_fail("你想飞起来，可是体力似乎有点不支。\n");
      || (string)me->query("family/family_name") == "陷空山无底洞" ) {
      message_vision(HIY"$N手一指，「呼」地一阵狂风刮起，吹的人都睁不开眼睛，\n"+
 "再吹一声口哨，随之飘去不见了。。。\n\n"NOR, me);
-   }else {   
+   }else {
         message_vision(HIY
 "$N手一指，召来一朵云彩，高高兴兴地坐了上去，\n"+
 "再吹一声口哨，随之往上冉冉地升起。。。\n\n"NOR, me);
@@ -223,14 +223,14 @@ notify_fail("你想飞起来，可是体力似乎有点不支。\n");
      write("咦？．．．怎么还在原来的地方？\n");
      return 1;
    }
-     
+
    if (ridee = me->ride()) {
      ridemsg = ridee->query("ride/msg")+"着"+ridee->name();
      ridee->move(loc);
-   }  
-   else  
+   }
+   else
      ridemsg = "";
-                                                 
+
    me->move(loc);
         write("\n\n到了！你按下云头跳了下来。\n");
 
@@ -271,14 +271,14 @@ dudi        ->毒敌山            firemount   ->火焰山
 jilei       ->积雷山            jisaiguo    ->祭赛国
 jingjiling  ->荆棘岭            xiaoxitian  ->小西天
 zhuzi       ->朱紫国            qilin       ->麒麟山
-pansi       ->盘丝岭            biqiu       ->比丘国 
+pansi       ->盘丝岭            biqiu       ->比丘国
 qinghua     ->清华庄            wudidong    ->无底洞
-qinfa       ->钦法国            fengxian    ->凤仙郡 
-yinwu       ->隐雾山            yuhua       ->玉华县 
+qinfa       ->钦法国            fengxian    ->凤仙郡
+yinwu       ->隐雾山            yuhua       ->玉华县
 baotou      ->豹头山            zhujie      ->竹节山
-jinping     ->金平府            qinglong    ->青龙山 
-tianzhu     ->天竺国            maoying     ->毛颖山 
-lingshan    ->灵山                   
+jinping     ->金平府            qinglong    ->青龙山
+tianzhu     ->天竺国            maoying     ->毛颖山
+lingshan    ->灵山
 
 如果是《西游记》扩充版，你可以飞到：
 es          ->东方故事          xkx         ->侠客行
