@@ -21,4 +21,3 @@ void create()
   set("chat_msg", ({ (: random_move :) }));
   carry_object("/d/obj/cloth/gongpao")->wear();
 }
-
