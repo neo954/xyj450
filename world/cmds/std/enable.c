@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // enable.c
 
 #include <ansi.h>
@@ -39,8 +39,8 @@ int main(object me, string arg)
    string check;
 
    seteuid(getuid());
-   if (arg) 
-     sscanf(arg, "-%s %s", check, arg); 
+   if (arg)
+     sscanf(arg, "-%s %s", check, arg);
    if (check=="check" && wizardp(me) && arg) {
      me = find_player(arg);
      if (!me) me = LOGIN_D->find_body(arg);
@@ -61,7 +61,7 @@ int main(object me, string arg)
         }
         if( !me->query_skill(skill[i]) ) continue;
         modify = me->query_temp("apply/" + skill[i]);
-        printf("  %-20s： %-20s  有效等级：%s%3d\n" NOR, 
+        printf("  %-20s： %-20s  有效等级：%s%3d\n" NOR,
           valid_types[skill[i]] + " (" + skill[i] + ")",
           undefinedp(map[skill[i]]) ? "无" : to_chinese(map[skill[i]]),
           (modify==0 ? "" : (modify>0 ? HIC : HIR)),
@@ -110,7 +110,7 @@ int main(object me, string arg)
    me->delete_temp("perf_quick");
    me->reset_action();
    write("Ok.\n");
-   
+
    if( ski=="magic" ) {
      write("你改用另一种魔法，灵力必须重新修炼。\n");
      me->set("atman", 0);
@@ -119,7 +119,7 @@ int main(object me, string arg)
      write("你改用另一种内功，内力必须重新修炼。\n");
      me->set("force", 0);
      me->set("force_factor", 0);
-     //need this to fix low special high factor. 
+     //need this to fix low special high factor.
      me->receive_damage("kee", 0);
    } else if( ski=="spells" ) {
      write("你改用另一种法术，法力必须重新修炼。\n");
@@ -140,7 +140,7 @@ int help(object me)
 这个指令让你指定所要用的技能，需指明技能种类和技能名称。如果不加参
 数则会显示出技能种类及你目前所使用的技能名称 ，如果加一个 ? 会列出
 所有能使用特殊技能的技能种类。
- 
+
 HELP
         );
         return 1;
