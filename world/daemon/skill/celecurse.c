@@ -1,9 +1,9 @@
-// 
-// 
+//
+//
 
 inherit FORCE;
-int valid_enable(string usage) 
-{ 
+int valid_enable(string usage)
+{
         return usage=="cursism" ||
 	       usage == "force" ;
 
