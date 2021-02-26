@@ -1,10 +1,10 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
- 
+
 void do_drink();
- 
+
 void create()
 {
         seteuid(getuid());
@@ -61,7 +61,7 @@ void create()
    carry_object("/d/obj/book/poem");
         add_money("silver", 40);
 }
- 
+
 void do_drink()
 {
     object *list, ob;
@@ -112,7 +112,7 @@ notify_fail("好象李白看不起你给他的酒。\n");
                         command("smile");
                         command("say 多谢!");
         if ((int)who->query_temp("mark/李白") < 1){
-        who->set_temp("mark/李白", 1 ); 
+        who->set_temp("mark/李白", 1 );
         }
                         if(present("jian pu", this_object())) {
         return 0;
@@ -121,7 +121,7 @@ notify_fail("好象李白看不起你给他的酒。\n");
                         call_out("destroy", 1, ob);
                 if ((int)who->query_temp("mark/李白") >= 5+random(5))
                         {
-command ( "whisper " + who->query("id") + 
+command ( "whisper " + who->query("id") +
 " 我看您也是位练功习武的人，也算咱们有缘，这本剑谱就送给你拿去研读吧。\n");
           m->move(who);
                                 who->set_temp("mark/李白", 0 );
