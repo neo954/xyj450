@@ -51,4 +51,3 @@ string perform_action_file(string action)
 {
         return CLASS_D("bandit") + "/ghosty-steps/" + action;
 }
-
