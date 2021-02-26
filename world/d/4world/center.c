@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/4world/center.c
 inherit ROOM;
 
@@ -38,20 +38,20 @@ void init()
 }
 
 int do_climb(string arg)
-{       
+{
         object me;
         me=this_player();
 
         if ( !arg || ((arg != "qigan") ))
                 return notify_fail("你要爬什么？\n");
-   
+
    message_vision("$N搓了搓手，腾地就顺着旗杆向上爬去。\n",me);
 
    if((int)me->query_skill("dodge",1) < 20) {
      me->improve_skill("dodge", 5);
      me->receive_damage("kee", 10);
 
-   }   
+   }
    else {
      message_vision("$N奋力爬到最顶，博得周围一阵喝采！\n", me);
    }
