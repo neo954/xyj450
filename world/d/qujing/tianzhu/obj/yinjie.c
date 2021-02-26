@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <armor.h>
 
 inherit FINGER;
@@ -19,5 +19,5 @@ void create()
     set("armor_prop/personality", 1);
   }
   setup();
-}       
+}
 
