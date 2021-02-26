@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rose_poison.c
 
 #include <ansi.h>
 
 int update_condition(object me, int duration)
 {
-   
+
    if( duration == 35) {
            object guard;
      seteuid(getuid());
@@ -40,7 +40,7 @@ int update_condition(object me, int duration)
                 guardb->set_leader(me);
                 message_vision("\n\n你眼前蓝光一现，$N从里边走了过来。\n", guardb);
                 message_vision("\n$N对$n喝道：阎王爷差我来抓你，跟我走吧！\n", guardb, me);
-                guardb->kill_ob(me); 
+                guardb->kill_ob(me);
                 me->fight_ob(guardb);
         }
 
@@ -52,10 +52,10 @@ int update_condition(object me, int duration)
                 guardw->set_leader(me);
      message_vision("\n\n你眼前蓝光一现，$N从里边走了过来。\n", guardw);
                 message_vision("\n$N对$n大喝一声，竟敢和我阴府作对，看招！\n", guardw, me);
-                guardw->kill_ob(me); 
+                guardw->kill_ob(me);
                 me->fight_ob(guardw);
         }
-   
+
 
    me->apply_condition("hell_duration", duration - 1);
    if( duration < 1 ) return 0;
