@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 12/15/1997
 
 inherit ROOM;
@@ -31,7 +31,7 @@ int valid_leave (object who, string dir)
 {
   object yao = present ("yao jing", this_object());
 
-  if (yao && 
+  if (yao &&
       living (yao) &&
       dir == "southeast")
     return notify_fail (yao->query("name")+"拉拉扯扯揪住你不放。\n");
@@ -63,7 +63,7 @@ int do_break ()
     else
       message_vision ("乓地一声砸在已经打开的门上！\n",who);
     if (who->query("force") <= 200 ||
-        who->query("mana") <= 200)        
+        who->query("mana") <= 200)
       who->unconcious();
     else
     {
