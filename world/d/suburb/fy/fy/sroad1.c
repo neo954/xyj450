@@ -36,4 +36,3 @@ if( !sizeof(inv))
 	item->move(con);
 	}	
 }
-
