@@ -9,7 +9,7 @@ void create()
 	set("title", "丐帮八袋弟子");
 	set("gender", "男性");
 	set("age", 30);
-	set("long", 
+	set("long",
 		"这是位笑眯眯的丐帮八袋弟子，生性多智，外号小吴用。\n");
 	set("attitude", "peaceful");
 	set("str", 20);
@@ -25,16 +25,16 @@ void create()
 	
 	set("combat_exp", 82000);
 	
-	set_skill("force", 78); 
-	set_skill("huntian-qigong", 76); 
-	set_skill("unarmed", 78); 
-	set_skill("xianglong-zhang", 80); 
-	set_skill("dodge", 70); 
-	set_skill("xiaoyaoyou", 82); 
-	set_skill("parry", 81); 
-	set_skill("begging", 80); 
-	set_skill("stealing", 90); 
-	set_skill("checking", 70); 
+	set_skill("force", 78);
+	set_skill("huntian-qigong", 76);
+	set_skill("unarmed", 78);
+	set_skill("xianglong-zhang", 80);
+	set_skill("dodge", 70);
+	set_skill("xiaoyaoyou", 82);
+	set_skill("parry", 81);
+	set_skill("begging", 80);
+	set_skill("stealing", 90);
+	set_skill("checking", 70);
 	
 	map_skill("force", "huntian-qigong");
 	map_skill("unarmed", "xianglong-zhang");
