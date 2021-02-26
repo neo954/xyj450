@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // mailbox.c
 // none changed send_mail(string rcvr, mapping mail) on 96/10/03;
 // mon add query_newmail and mail "status" on 97/1/8;
@@ -85,7 +85,7 @@ string query_save_file()
 }
 
 void receive_mail(mapping mail)
-{      
+{
    if( !pointerp(mails) ) mails = ({ mail });
    else mails += ({ mail });
    save();
@@ -111,7 +111,7 @@ void send_mail(string rcvr, mapping mail, int silent)
        if(!silent)
          write("\n您请千里眼通知 " + rcvr + " 收信!\n");
             tell_object(ppl, "千里眼跟您说：有您的信！快来一下！\n\n");
-        } 
+        }
    if( !mbx ) {
      mbx = new(MAILBOX_OB);
      mbx->set_owner(rcvr);
@@ -265,10 +265,9 @@ void owner_is_killed() { destruct(this_object()); }
 int query_new_mail()
 {
     int num=0,i;
-    if (!pointerp(mails)||!sizeof(mails)) 
+    if (!pointerp(mails)||!sizeof(mails))
        return num;
     for (i=0;i<sizeof(mails);i++)
        if (mails[i]["status"]=="N") num++;
     return num;
 }
-      
