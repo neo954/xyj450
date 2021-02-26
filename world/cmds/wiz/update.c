@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // update.c
 
 #include "/doc/help.h"
@@ -26,12 +26,12 @@ int main(object me, string file)
            return notify_fail("你不能更新等级比你高的巫师状态。\n");
      return update_player(obj);
     }
-           
+
    if( file == "me" )
      return update_player(me);
    else {
      file = resolve_path(me->query("cwd"), file);
-     if( !sscanf(file, "%*s.c") ) file += ".c"; 
+     if( !sscanf(file, "%*s.c") ) file += ".c";
    }
 
    if( file_size(file)==-1 )
@@ -65,7 +65,7 @@ int main(object me, string file)
           if( inv[i] && userp(inv[i]) ) inv[i]->move(obj, 1);
      }
    }
-     
+
    return 1;
 }
 
@@ -100,13 +100,13 @@ int help(object me)
 {
   write(@HELP
 指令格式 : update <档名|here|me|玩家名>
- 
+
 这个指令可以更新档案, 并将新档的内容载入记忆体内. 若目标为
 'here' 则更新所在环境. 若目标为 'me' 则更新自己的人物. 若目
 标为玩家则可更新玩家物件.
- 
+
 HELP
     );
     return 1;
 }
- 
+
