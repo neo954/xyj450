@@ -10,7 +10,7 @@ void create()
 	set("nickname", GRN"桃花岛开山祖师"NOR);
 	set("gender", "女性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他就是桃花岛的创始人「水灵儿」。\n");
 
 	setup();
