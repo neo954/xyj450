@@ -5,7 +5,7 @@
 inherit ROOM;
 
 void create()
-{ 
+{
        set("short","大沙漠");
        set("long", @LONG
 这是一片一望无际的大沙漠。你一进来就迷失了方向。
@@ -13,13 +13,13 @@ void create()
 LONG
      );
 //        set("outdoors", "xingxiuhai");
-    
+
 	set("exits", ([
 		"east" : __FILE__,
 		"west" : __DIR__"shamo2",
 		"south" : __DIR__"shamo3",
 		"north" : __DIR__"shamo4",
-	]));             
+	]));
         setup();
 
 //        replace_program(ROOM);
@@ -37,10 +37,10 @@ int valid_leave(object me, string dir)
      	    me->move("/d/suburb/xkx/xingxiu/btshan");
             me->delete_temp("mark/steps");
              return notify_fail("你累得半死，终於走出了沙漠。\n");
-         }  
+         }
 
      if (me->query_temp("mark/steps") == -10)
-	    {  
+	    {
 	       me->move("/d/suburb/xkx/xingxiu/silk4");
            me->delete_temp("mark/steps");
              return notify_fail("你累得半死，终於走出了沙漠。\n");
