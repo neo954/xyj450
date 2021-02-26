@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 #include <room.h>
 
@@ -23,7 +23,7 @@ LONG);
   "southdown" : __DIR__"penglai",
 ]));
 
-  set("objects", ([ 
+  set("objects", ([
   __DIR__"npc/shouxing" : 1,
   __DIR__"npc/luxing" : 1,
   __DIR__"npc/fuxing" : 1,
@@ -37,9 +37,9 @@ int valid_leave(object me, string dir)
      if(objectp(present("shou xing", environment(me))))
         return notify_fail("寿星伸手拦住你：里面是老夫卧室，你去干什么？\n");
            if(objectp(present("fu xing", environment(me))))
-                   return notify_fail("福星伸手拦住你：里面是老夫卧室，你去干什么？\n");  
+                   return notify_fail("福星伸手拦住你：里面是老夫卧室，你去干什么？\n");
            if(objectp(present("lu xing", environment(me))))
-                   return notify_fail("禄星伸手拦住你：里面是老夫卧室，你去干什么？\n");  
+                   return notify_fail("禄星伸手拦住你：里面是老夫卧室，你去干什么？\n");
    return ::valid_leave(me, dir);
    }
 
