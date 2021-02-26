@@ -44,4 +44,3 @@ void looking (object who)
 {
   command ("look "+who->query("id"));
 }
-
