@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //huangguadi.c
 
 inherit ROOM;
@@ -14,14 +14,14 @@ void create ()
 来种蔬菜瓜果。这里是黄瓜地。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "south" : __DIR__"northpool",
      "northeast" : __DIR__"qiezidi",
      "northwest" : __DIR__"luobodi",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      "/d/obj/food/dhg" : 3,
    ]));
