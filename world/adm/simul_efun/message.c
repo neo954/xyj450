@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // message.c
 
 varargs void message_vision(string msg, object me, object you)
@@ -14,7 +14,7 @@ varargs void message_vision(string msg, object me, object you)
    my_gender = me->query("gender");
 
    if(!my_name || !my_gender) return; //mon 10/23/97
-   
+
    str1 = replace_string(msg,  "$P", gender_self(my_gender));
    str1 = replace_string(str1, "$N", gender_self(my_gender));
    str3 = replace_string(msg,  "$P", my_name);
@@ -34,7 +34,7 @@ varargs void message_vision(string msg, object me, object you)
    }
    message("vision", str1, me);
    if(environment(me)) { //mon 10/23/97
-       if(you) 
+       if(you)
          message("vision", str3,  environment(me), ({ me, you}) );
      else
          message("vision", str3,  environment(me), ({ me}));
@@ -56,7 +56,7 @@ varargs void tell_room(mixed ob, string str, object *exclude)
        // broadcasting to remote rooms, snowcat feb 8 1998
        if(ob->query("broadcast"))
           ob->broadcast(str);
-   }       
+   }
 }
 
 void shout(string str)
@@ -77,16 +77,16 @@ void write(string str)
 varargs void say(string str, mixed exclude)
 {
    object ob = 0;
-   if( living(previous_object()) ) 
+   if( living(previous_object()) )
      ob = previous_object();
-   else if( this_player() ) 
+   else if( this_player() )
      ob = this_player();
-   if (ob && environment(ob)) {   
+   if (ob && environment(ob)) {
      message("say", str, environment(ob), ob);
        // broadcasting to remote rooms, snowcat feb 8 1998
        if(environment(ob)->query("broadcast"))
           environment(ob)->broadcast(str);
-     }     
+     }
 }
 
 varargs void printf (string msg, mixed a1, mixed a2, mixed a3, mixed a4,
@@ -94,7 +94,7 @@ varargs void printf (string msg, mixed a1, mixed a2, mixed a3, mixed a4,
     mixed a11, mixed a12, mixed a13, mixed a14, mixed a15, mixed a16)
 {
     msg = sprintf (msg,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16);
-    
+
 //    msg = CONVERT_D->output(msg,this_player());
     write (msg);
 }
