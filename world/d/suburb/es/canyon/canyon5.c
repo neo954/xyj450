@@ -4,7 +4,7 @@ inherit ROOM;
 void create()
 {
         set("short","关外小路");
-	set("long",@LONG                                   
+	set("long",@LONG
 南边即为天驼关的关口，两片诺大的铁门(door)，若非由关内打开恐
 怕难以进入，往东侧看去，铁栅的映满你整双眼眸，转向西侧，看到的还
 是一片光秃秃的山壁，不由得使你想早点离开这个地方。
