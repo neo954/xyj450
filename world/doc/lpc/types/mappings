@@ -120,7 +120,7 @@ sense that LPC arrays can be.
 
 so:
 
-   a = r1 * r2 
+   a = r1 * r2
 
 defines a to be a map with: a["driver"] == "castle";
 
