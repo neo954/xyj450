@@ -58,7 +58,7 @@ void init()
 	&& (int) me->query("combat_exp") > 20000) call_out("chase_him", 1,me );
 
 
-} 
+}
 
 int chase_him(object me)
 {
