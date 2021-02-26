@@ -219,5 +219,3 @@ void checking (object me, object ob)
     me->set("nb_heads",i);
   }
 }
-
-
