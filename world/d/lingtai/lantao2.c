@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: some place in 西牛贺洲
 // forrest.c
 
@@ -21,7 +21,7 @@ set("exits", ([ /* sizeof() == 4 */
 //
 //set("objects", ([ /* sizeof() == 2 */
 //"/d/lingtai/obj/shuzhi": 2]));
-//  
+//
       set("no_clean_up", 0);
    set("outdoors", 1);
         setup();
