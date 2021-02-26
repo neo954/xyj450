@@ -47,5 +47,3 @@ void init()
   me->setup();
 
 }
-
-
