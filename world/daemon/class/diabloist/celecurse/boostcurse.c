@@ -36,4 +36,3 @@ void remove_effect(object me, int amount)
         tell_object(me, "你身上的的降头失效了．\n");
 	me->add_temp("apply/agility",-amount);
 }
-
