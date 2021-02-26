@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// by snowcat 12/8/1997         
+
+// by snowcat 12/8/1997
 
 inherit NPC;
 
@@ -61,10 +61,10 @@ void check_king ()
     return;
 
   me->set("seen_king",1);
-  call_out ("reset_seen_king",600); 
+  call_out ("reset_seen_king",600);
   message_vision ("$N见到$n，慌忙俯伏接拜。\n",me,king);
   message_vision ("$N说道：方丈大师，公主何在？\n",king);
-  call_out ("following",5,me,king); 
+  call_out ("following",5,me,king);
 }
 
 void reset_seen_king ()
@@ -89,8 +89,8 @@ void check_room ()
   if (where->query("is_open"))
     return;
 
-  remove_call_out ("opening");  
-  call_out ("opening",1,me,where);  
+  remove_call_out ("opening");
+  call_out ("opening",1,me,where);
 }
 
 void opening (object me, object where)
