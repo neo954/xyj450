@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // call.c
 
 inherit F_CLEAN_UP;
@@ -35,7 +35,7 @@ int main(object me, string arg)
 
    if(wizardp(obj) && wiz_level(me) < wiz_level(obj))
       return notify_fail("你不能设定等级比你高的巫师状态。\n");
-      
+
    if( userp(obj) ){
      if( obj != me ) log_file("static/CALL_PLAYER",
         sprintf("%s(%s) call %s(%s)->%s(%s) on %s\n",
@@ -58,7 +58,7 @@ int main(object me, string arg)
    result = call_other(obj, args);
    for(i=1; i<sizeof(args); i++)
      args[i] = sprintf("%O",args[i]);
-   tell_object(me, sprintf("%O->%s(%s) = %O\n", obj, func, 
+   tell_object(me, sprintf("%O->%s(%s) = %O\n", obj, func,
      implode(args[1..sizeof(args)-1], ", "), result));
    return 1;
 }
@@ -67,9 +67,9 @@ int help(object me)
 {
 write(@HELP
 指令格式 : call <物件>-><函数>(<参数>, ...... )
- 
+
 呼叫<物件>里的<函数>并传入相关<参数>.
- 
+
 HELP
     );
     return 1;
