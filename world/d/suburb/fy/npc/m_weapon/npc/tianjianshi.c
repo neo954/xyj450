@@ -51,7 +51,7 @@ void create()
 
 	
 	set("attitude", "peaceful");
-        
+
 	set("inquiry", ([
             "铸剑"  : "铸剑可是件十分艰苦的事，要消耗人的精气和内力，你有决心和毅力吗？\n",
 	    "原料"  : "铸剑可用千年玄铁。。。你找到了我才能帮你铸剑。\n",
@@ -78,7 +78,7 @@ void init()
 
 int accept_object(object who, object ob)
 {	
-	switch ((string)ob->query("name") ) 
+	switch ((string)ob->query("name") )
 	{
 		case "菩提子"  :
 		case "叫化鸡"  :
@@ -103,9 +103,9 @@ int accept_object(object who, object ob)
 		say("欧冶子一脸茫然：您已经有一把自造的武器了，还来干什么？难到不可手么？\n");
 		return 2;
 	}
-	switch ((string)ob->query("name") ) 
+	switch ((string)ob->query("name") )
 	{
-		case "千年神木": 
+		case "千年神木":
 			who->set_temp("or",1);
 			who->set_temp("get_orc",1);
 			break;
@@ -113,7 +113,7 @@ int accept_object(object who, object ob)
 			who->set_temp("or",2);
 			who->set_temp("get_orc",1);
 			break;
-		case "寒丝羽竹": 
+		case "寒丝羽竹":
 			who->set_temp("or",3);
 			who->set_temp("get_orc",1);
 			break;
