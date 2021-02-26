@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // backup.c
 
 inherit F_CLEAN_UP;
@@ -16,19 +16,19 @@ int main(object me, string arg)
 
    if( !objectp(link_ob = me->query_temp("link_ob")) )
      return notify_fail("你不是经由正常连线进入，不能储存。\n");
-     
+
     cur_time = time();
-    if( (cur_time-me->query("last_backup")) < 600 )     
+    if( (cur_time-me->query("last_backup")) < 600 )
      return notify_fail("你迟点才可以储存。\n");
-   
+
     me->set("last_backup", cur_time);
-    
+
    if( (int)link_ob->save() && (int)me->save() && (int)me->backup()) {
      // backup for fabao
 
      inv = all_inventory(me);
      for(i=0; i<sizeof(inv); ++i)  {
-        if( inv[i]->query("owner_id") == getuid(me) && 
+        if( inv[i]->query("owner_id") == getuid(me) &&
         inv[i]->query("series_no") )   {
            inv[i]->unequip();
            if( !(int)inv[i]->backup() )   {
