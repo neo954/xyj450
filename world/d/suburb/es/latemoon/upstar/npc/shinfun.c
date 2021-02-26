@@ -1,6 +1,6 @@
 inherit NPC;
 string do_reply();
- 
+
 void create()
 {
         set_name("莫欣芳" , ({ "shinfun","fun","girl" }) );
