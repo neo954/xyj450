@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhting.c
 
 inherit ROOM;
@@ -33,7 +33,7 @@ void init()
         add_action("do_get","l");
         add_action("do_get","perform");
         add_action("do_get","steal");
-   
+
 }
 int do_get(string arg)
 {
