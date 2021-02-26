@@ -11,7 +11,7 @@ void create()
 旁边堆着他的货。墙上有个牌子，是个价目表(sign)。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
         "east" : __DIR__"beijiang",
 ]));
         set("objects", ([
@@ -33,4 +33,4 @@ LONG
         replace_program(ROOM);
 }
 
- 
+
