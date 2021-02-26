@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xunshi.c
 
 inherit NPC;
@@ -23,7 +23,7 @@ void create()
    set_skill("xiaoyaoyou", 50);
    set_skill("spells", 40);
    set_skill("dengxian-dafa", 40);
-   set_skill("force", 40);   
+   set_skill("force", 40);
    set_skill("ningxie-force", 40);
    map_skill("spells", "dengxian-dafa");
    map_skill("force", "ningxie-force");
