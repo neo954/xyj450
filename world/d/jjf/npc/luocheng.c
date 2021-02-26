@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //created 8-5-97 pickle
 //罗成 luocheng.c
 
@@ -63,10 +63,10 @@ LONG);
   set("force", 2000);
   set("max_force", 2000);
   set("force_factor", 100);
- 
+
   create_family("将军府", 2, "蓝");
   setup();
- 
+
   carry_object("/d/obj/weapon/spear/jinqiang")->wield();
   carry_object("/d/obj/armor/tiejia")->wear();
 }
@@ -126,7 +126,7 @@ int attempt_apprentice(object me)
 {
   string myname=RANK_D->query_respect(me);
 
-  if(me->query("mark/jjf_defeated_luocheng")) 
+  if(me->query("mark/jjf_defeated_luocheng"))
   {
     command("say 不错，不错。"+myname+"果然是可教之才！");
     command("say "+myname+"武艺过人。你我不妨切磋一番。");
@@ -153,7 +153,7 @@ void check_fight (object npc, object me)
 {
   int npc_kee, my_kee, my_ratio, npc_ratio;
   int npc_max_kee, my_max_kee;
- 
+
   my_kee = me->query("kee");
   npc_kee = npc->query("kee");
   my_max_kee = me->query("max_kee");
