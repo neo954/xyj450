@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // niu.c
 // 1996/10/31 by none
 
@@ -53,7 +53,7 @@ int set_status(mixed ob, string status)
         if( userp(ob) ) uid = getuid(ob);
         else if(stringp(ob)) uid = ob;
         else return 0;
-        
+
         if( status == "(NotMember)" )
                 map_delete(member_status, uid);
         else
@@ -75,7 +75,7 @@ int do_addlist(string arg)
         int my_level, ob_level, level;
         string *namelist, member_name, member_level;
         int i;
-   
+
    me = this_player();
    if ( memberhood(me)=="(NotMember)" ) {
      command("waggle " + me->query("id"));
@@ -84,7 +84,7 @@ int do_addlist(string arg)
         namelist = explode(read_file(NL), "\n");
         member_status = allocate_mapping(sizeof(namelist));
         for(i=0; i<sizeof(namelist); i++) {
-                if( namelist[i][0]=='#' 
+                if( namelist[i][0]=='#'
                 || sscanf(namelist[i], "%s %s", member_name, member_level)!=2 )
                          continue;
                 member_status[member_name] = member_level;
@@ -97,7 +97,7 @@ int do_addlist(string arg)
 
         if( member_level(new_status) < 0 ) return notify_fail("没有这种等级。\n");
 
-        if( !objectp(ob = present(arg, environment(me))) 
+        if( !objectp(ob = present(arg, environment(me)))
         ||      !userp(ob) )
                 return notify_fail("你只能改变使用者的权限。\n");
 
@@ -126,7 +126,7 @@ string *query_memberlist()
         namelist = explode(read_file(NL), "\n");
         member_status = allocate_mapping(sizeof(namelist));
         for(i=0; i<sizeof(namelist); i++) {
-                if( namelist[i][0]=='#' 
+                if( namelist[i][0]=='#'
                 || sscanf(namelist[i], "%s %s", member_name, member_level)!=2 )
                          continue;
                 member_status[member_name] = member_level;
