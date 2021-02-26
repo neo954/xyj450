@@ -1,7 +1,7 @@
 inherit NPC;
- 
+
 void do_drink();
- 
+
 void create()
 {
         seteuid(getuid());
@@ -37,7 +37,7 @@ void create()
         setup();
         carry_object(__DIR__"obj/jinzhuang")->wear();
 }
- 
+
 void do_drink()
 {
     object *list, ob;
@@ -57,11 +57,11 @@ void do_drink()
         if ((int)ob->query("liquid/remaining") == 0)
             command("drop wineskin");
     }
-    else 
+    else
 message_vision("$N用力吸了吸那因为酗酒而发红的鼻子．\n", this_object());
     return;
 }
- 
+
 int accept_object(object who, object ob)
 {
     if ((string)ob->query("liquid/type")=="alcohol") {
@@ -78,4 +78,4 @@ int accept_object(object who, object ob)
     }
     else return 0;
 }
- 
+
