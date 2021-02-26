@@ -7,7 +7,7 @@ void create()
 {
 	set_name("令狐冲", ({ "ling huchong", "ling", "huchong" }));
 	set("nickname", "大师兄");
-	set("long", 
+	set("long",
 "令弧冲身材较瘦，长的浓眉阔眼，气宇暄昂，他在\n"
 "同门中排行老大，是华山派年轻一代中的顶尖好手。\n"
 "目前掌门人岳不群不在，就由他执掌日常事物。\n");
