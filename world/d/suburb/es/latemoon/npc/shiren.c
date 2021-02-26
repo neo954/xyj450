@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
         set_name("袭人", ({ "Shi Ren", "shi ren","shi" }) );
