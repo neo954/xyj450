@@ -1,5 +1,5 @@
 // Room: /city/guangchang.c
-// YZC 1995/12/04 
+// YZC 1995/12/04
 
 inherit ROOM;
 
@@ -48,7 +48,7 @@ int do_enter(string arg)
 
         if( !arg || arg=="" ) return 0;
 
-        if( arg=="shudong" ) 
+        if( arg=="shudong" )
 	{
 		message("vision",
 			me->name() + "一弯腰往洞里走了进去。\n",
