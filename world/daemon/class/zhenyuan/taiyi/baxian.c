@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //baxian.c 【八仙大阵】weiqi...980307
 
 #include <ansi.h>
@@ -31,7 +31,7 @@ int cast(object me, object target)
 
    if((int)me->query_skill("taiyi", 1) < 20)
          return notify_fail("你的太乙仙法修为不深，请不动八仙。\n");
-   
+
    if((int)me->query("mana") < 200 )
      return notify_fail("你的法力不够，没办法知会八仙。\n");
 
@@ -41,7 +41,7 @@ int cast(object me, object target)
    me->add("mana", -200);
    me->receive_damage("sen", 10);
 
-   if( random(me->query("max_mana")) < 50 ) 
+   if( random(me->query("max_mana")) < 50 )
    {
      write("咦？这一次好像不灵。\n");
      return 1;
@@ -50,12 +50,12 @@ int cast(object me, object target)
    msg = HIC "$N大喝一声：八仙何在！\n"+
           "只听四周一连串的声音答道：乾位吕洞宾！"+
           "．．．坤位何仙姑！．．．震位铁拐李！．．．\n"+
-          "$N一指$n：拿人！\n\n" NOR;   
+          "$N一指$n：拿人！\n\n" NOR;
    message_vision(msg, me, target);
-   msg = HIC "$n对着$N高声骂道：好家伙，一拥而上了，我宰了你！\n" NOR;   
+   msg = HIC "$n对着$N高声骂道：好家伙，一拥而上了，我宰了你！\n" NOR;
    message_vision(msg, me, target);
    target->kill_ob(me);
-   
+
    where=environment(target);
    call_out("npc_attack", 2, me, target, npc_dir+"ludongbin", where);
    call_out("npc_attack", 3, me, target, npc_dir+"hexiangu", where);
@@ -84,13 +84,13 @@ void npc_attack(object invoker, object target, string npc, object where)
    attacker->move(environment(invoker));
 
    COMBAT_D->do_attack(attacker, target, attacker->query_temp("weapon"));
-   
+
    // give the killing credit to the invoker.
    // so this would be counted as PK if the invoker is user.
    // mon 4/11/98
    if(target->query_temp("last_damage_from")==attacker)
        target->set_temp("last_damage_from", invoker);
-   
+
    if(target->query_temp("last_fainted_from")==attacker)
        target->set_temp("last_fainted_from", invoker->query("id"));
 
