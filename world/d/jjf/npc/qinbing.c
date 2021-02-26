@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // qinbing.c
 // created 6-4-97 pickle
 
@@ -41,6 +41,6 @@ LONG);
 
   setup();
 }
-   
+
 
 
