@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 inherit ROOM;
 
@@ -16,7 +16,7 @@ LONG);
 
   set("no_fight", 1);
   set("item_desc", ([ /* sizeof() == 1 */
-  "bed" : "一张牙玉色的软榻，塌四周雕着竹叶格，看上去极为精致(gosleep,gobed,bed)。 
+  "bed" : "一张牙玉色的软榻，塌四周雕着竹叶格，看上去极为精致(gosleep,gobed,bed)。
 ",
 ]));
   set("exits", ([ /* sizeof() == 1 */
