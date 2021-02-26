@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // attribute.c
 
 #include <dbase.h>
@@ -23,8 +23,8 @@ int query_int()
    int final;
    final = (int)query("int") +query_temp("apply/intelligence");
    if((int)query_skill("literate",1)>20) final += ((int)query_skill("literate",1)-20)/10;
-   if(final>40) final=40; 
-   return final;   
+   if(final>40) final=40;
+   return final;
 }
 
 int query_spi()
@@ -32,7 +32,7 @@ int query_spi()
    int final;
    final = (int)query("spi") +query_temp("apply/spirituality");
    if((int)query_skill("spells",1)>20) final += ((int)query_skill("spells",1)-20)/10;
-   if(final>40) final=40; 
+   if(final>40) final=40;
    return final;
 }
 
@@ -53,7 +53,7 @@ int query_con()
    int final;
    final = (int)query("con") +query_temp("apply/constitution");
    if((int)query_skill("force",1)>20) final += ((int)query_skill("force",1)-20)/10;
-   if(final>40) final=40; 
+   if(final>40) final=40;
    return final;
 }
 
