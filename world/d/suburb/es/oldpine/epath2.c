@@ -56,4 +56,3 @@ int do_hold_vine(string arg)
 	}
 	return 1;
 }
-
