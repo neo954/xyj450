@@ -61,4 +61,3 @@ if( me && environment(me) == this_object())
 	}
 return;
 }
-
