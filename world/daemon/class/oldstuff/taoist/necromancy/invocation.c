@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // invocation.c
 
 inherit SSERVER;
@@ -11,7 +11,7 @@ int cast(object me, object target)
 
    if( !me->is_fighting() )
      return notify_fail("只有战斗中才能召唤天将！\n");
-   
+
    if( (int)me->query("mana") < 100 )
      return notify_fail("你的法力不够了！\n");
 
