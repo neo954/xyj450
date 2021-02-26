@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: some place in 西牛贺洲
 // cave1.c
 
@@ -30,7 +30,7 @@ set("objects", ([
 
 int valid_leave(object me, string dir)
 {
-        if ( dir == "west" && objectp(present("wolf", environment(me)))) 
+        if ( dir == "west" && objectp(present("wolf", environment(me))))
         return notify_fail("老狼猛的跳到你前面拦住你！\n");
 
         return ::valid_leave(me, dir);
