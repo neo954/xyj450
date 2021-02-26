@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -31,7 +31,7 @@ void create()
         set_skill("dodge", 20);
    set_skill("hammer", 20);
    set("chat_chance", 10);
-   set("chat_msg", ({   
+   set("chat_msg", ({
    "大肚虾婆挺了挺肚子。\n",
    (: random_move :)
 }));
