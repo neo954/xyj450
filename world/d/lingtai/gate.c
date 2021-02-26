@@ -29,5 +29,3 @@ set("objects", ([
         setup();
         "obj/board/shibei_b"->foo();
 }
-
-
