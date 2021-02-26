@@ -10,7 +10,7 @@ void create()
         set_name("阿凡提", ({ "afanti" }) );
         set("gender", "男性" );
         set("age", 48);
-        set("long", 
+        set("long",
             "他头上包着头巾，长着向上翘的八字胡，最喜欢捉弄巴依、帮助穷人。他常"
             "给别人出谜语。\n");
         set("str", 25);
@@ -67,7 +67,7 @@ int accept_object(object who, object ob)
                  return 1;
            }
            else {
-                 write("阿凡提笑得嘴都合不上了，说：多谢这位" + 
+                 write("阿凡提笑得嘴都合不上了，说：多谢这位" +
                        RANK_D->query_respect(who) +
                        "的帮助，咱们猜个谜语吧：\n");
                  switch(random(20)) {
@@ -238,7 +238,7 @@ int do_answer(string arg)
         else
           write ("谁把谜底告诉你的? 不对!!\n");
         return 1;
-} 
- 
+}
 
-   
+
+
