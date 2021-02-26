@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // vote.c
 // pickle 7-17-97
 // dream 7/29/97
@@ -9,7 +9,7 @@
 #include <login.h>
 #define SYNTAX  "指令格式：vote < open | close > <频道> <人名> \n"
 
-mapping votes_casted=([]), 
+mapping votes_casted=([]),
    voted_players=([]);
 void nullify_vote(string myvariable, string choice, string username);
 int determine_total();
@@ -25,7 +25,7 @@ void create() {
 #else
     max_voter=2;
 #endif
-    
+
     voter_site=0;
 #ifdef VOTER_SITE
     if(VOTER_SITE==1)
@@ -69,10 +69,10 @@ int main(object me, string arg)
         continue;
     }
     if (!chanmatch) return notify_fail("不能"+choicename+" "+chan+" 这个频道。请参照 help。\n");
-    if (!player = find_player(playerid) ) 
+    if (!player = find_player(playerid) )
    return notify_fail("目前找不到 "+playerid+" 这个人。\n");
 
-    if (!me->visible(player) ) 
+    if (!me->visible(player) )
    return notify_fail("目前找不到 "+playerid+" 这个人。\n");
 
 //    if (wizardp(player)) return notify_fail("Can't accuse wizard.\n");
@@ -97,18 +97,18 @@ int main(object me, string arg)
     else
    voted_player = ([]);
 
-    if (!undefinedp(voted_player[myid])) 
+    if (!undefinedp(voted_player[myid]))
    return notify_fail("你已经投过相同的票了。\n");
     else {
    ip=query_ip_number(me);
    if(ip && voter_site==0)
        ip=ip[0..strsrch(ip, ".", -1)];
-   voted_player += ([myid: (["obj":me, 
+   voted_player += ([myid: (["obj":me,
                        "ip":ip]) ]);
     }
 
     voted_players[myvariable] = voted_player;
-    
+
     total_votes_required = determine_total();
     votes_count = counting(voted_player, myvariable);
 
@@ -116,7 +116,7 @@ int main(object me, string arg)
         if(undefinedp(votes_casted[myvariable]))
         {
             votes_casted+=([myvariable:1]);
-       call_out("nullify_vote", nullify_vote_time, 
+       call_out("nullify_vote", nullify_vote_time,
          myvariable, choicename, playername);
         }
 
@@ -146,18 +146,18 @@ int counting(mapping players, string myvariable) {
     string *key;
     mapping site=([]);
     string ip;
-    
+
     if(!i) return 0;
     key=keys(players);
-    
+
     while(i--) {
    if(!players[key[i]]["obj"]) { // this player has logged out.
        map_delete(players, key[i]);
        continue;
    }
-   
+
    if(!ip=players[key[i]]["ip"]) continue;
-   
+
    if(undefinedp(site[ip])) {
        site[ip]=1;
    } else {
@@ -167,7 +167,7 @@ int counting(mapping players, string myvariable) {
    // each site can count to max_voter.
    if(site[ip]<=max_voter) count++;
     }
-    
+
     if(players)
       voted_players[myvariable] = players;
     else
@@ -189,7 +189,7 @@ int determine_total()
     i = sizeof(user);
     while (i--)
     {
-        if (user[i]->query("age") > age_limit && 
+        if (user[i]->query("age") > age_limit &&
      user[i]->query("combat_exp") > exp_limit ) {
 
        if(!ip=query_ip_number(user[i])) continue;
