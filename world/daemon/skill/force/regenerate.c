@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // regenerate.c
 
 //inherit SSERVER;
 
 int exert(object me, object target)
 {
-	if (target != me) 
+	if (target != me)
 		return notify_fail("你只能用内功恢复自己的精力。\n");
 	
 	if ((int)me->query("force") < 20)
