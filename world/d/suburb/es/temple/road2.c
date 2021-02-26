@@ -43,9 +43,9 @@ void reset()
 
 int valid_leave(object me, string dir)
 {
-     if ( dir=="enter" && (string)this_player()->query("family/family_name") != "茅山派")      
+     if ( dir=="enter" && (string)this_player()->query("family/family_name") != "茅山派")
           return notify_fail("\n一道无形的墙挡住了门口, 差点把你的鼻子给撞扁了。\n\n");
-     if ( dir=="enter" && (string)this_player()->query("family/family_name") == "茅山派") 
+     if ( dir=="enter" && (string)this_player()->query("family/family_name") == "茅山派")
          {
           message_vision("\n$N推开门走了进去, 顺手把门关了起来。\n\n", this_player());
           tell_room(__DIR__"book_room1", "你看到门被推了开来, 有人走了进来并随手把门带上。\n\n");
