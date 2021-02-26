@@ -19,4 +19,3 @@ void create()
 		set("armor_prop/dodge", 20);
 	}
 }
-
