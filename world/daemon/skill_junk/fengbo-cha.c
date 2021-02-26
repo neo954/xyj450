@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //风波十二叉 fengbo-cha.c
 //9-17-97 pickle
 
@@ -9,7 +9,7 @@
 因其有特别之处，建议各项暂设为中等。
 */
 
-//pickle, not changed yet, please try to be compatible. 
+//pickle, not changed yet, please try to be compatible.
 
 // 昔人已乘黄鹤去，此地空余黄鹤楼
 // 黄鹤一去不复返，白云千载空悠悠
