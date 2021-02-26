@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zombie.c
 
 #include <ansi.h>
@@ -18,7 +18,7 @@ void create()
    set("max_sen", 500);
    set("max_mana", 200);
    set("mana", 200);
-        set("max_force", 200); 
+        set("max_force", 200);
         set("force", 200);
    set("age", 50);
    set("str", 25);
@@ -60,8 +60,8 @@ int heal_up()
 {
    object master;
 
-   if( objectp(master = query("possessed")) 
-   &&   (int)master->query("mana") > 100 
+   if( objectp(master = query("possessed"))
+   &&   (int)master->query("mana") > 100
    &&   (int)master->query("kee") > 100) {
      message("tell",
         HIR + name() + "告诉你：我...需...要...你...的...力...量...\n" NOR,
@@ -73,7 +73,7 @@ int heal_up()
    } else {
      call_out("die", 1);
      return ::heal_up();
-   } 
+   }
 }
 
 void do_bite()
@@ -99,7 +99,7 @@ int do_attack(string arg)
    objectp(master = query("possessed"));
    if( wizardp(this_player()) )
      master = this_player();
-   if( (string)this_player()->query("name")!=(string)master->query("name") ) 
+   if( (string)this_player()->query("name")!=(string)master->query("name") )
    return notify_fail("僵尸口中呜呜两声，好像不愿理你！\n");
 
    if(!arg || !objectp(obj=present(arg,environment(this_player()))))
