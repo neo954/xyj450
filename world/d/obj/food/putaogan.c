@@ -44,5 +44,3 @@ int do_chi(string arg)
    destruct(this_object());
         return 1;
 }
-
-
