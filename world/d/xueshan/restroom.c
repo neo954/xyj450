@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //restroom.c
 
@@ -19,7 +19,7 @@ LONG);
    set("item_desc", (["paizi" : "女弟子卧房，男子严禁入内。\n", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "south" : __DIR__"girlroom",
      "north" : __DIR__"boyroom",
@@ -28,8 +28,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      "/d/obj/misc/seat" : 2,
      "/d/obj/misc/table" : 1,
@@ -53,22 +53,22 @@ void init()
 }
 
 int do_sit(string arg)
-{     
+{
    object me;
    me=this_player();
 
    if ( !arg || ((arg != "seat")&&(arg != "table") ))
-     return notify_fail("你要坐在什么上面？\n");   
-   
+     return notify_fail("你要坐在什么上面？\n");
+
    if (this_player()->query_temp("marks/sit"))
-     return notify_fail("你已经坐下了。\n");   
-      
-   if ( arg != "seat")   
+     return notify_fail("你已经坐下了。\n");
+
+   if ( arg != "seat")
      return notify_fail("坐桌子上？太不雅观了吧。\n");
-           
+
    this_player()->set_temp("marks/sit", 1);
    message_vision("$N舒舒服服地在石凳上坐下来，翘起了二郎腿。\n",me);
-   return 1;   
+   return 1;
 }
 
 int do_stand(string arg)
