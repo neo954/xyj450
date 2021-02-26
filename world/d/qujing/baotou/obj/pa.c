@@ -1,11 +1,11 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rake.c
 
 #include <weapon.h>
 
-inherit F_UNIQUE; 
+inherit F_UNIQUE;
 inherit RAKE;
 
 void create()
