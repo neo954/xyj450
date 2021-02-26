@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 
 inherit SSERVER;
@@ -8,7 +8,7 @@ inherit SSERVER;
 int perform(object me, object target)
 {
         object weapon;
-                
+
         if( !target ) target = offensive_target(me);
 
         if( !target
@@ -40,8 +40,8 @@ message_vision(HIC"\n$N运足精神，身形一转，霹雳间连续向$n攻出�
         me->set_temp("QJB_perform", 4);
         COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
 
-        me->set_temp("QJB_perform", 1);  
-        COMBAT_D->do_attack(me, target, me->query_temp("weapon")); 
+        me->set_temp("QJB_perform", 1);
+        COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
 
         me->set_temp("QJB_perform", 6);
         COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
