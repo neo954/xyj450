@@ -55,21 +55,21 @@ int do_cemote(string arg)
                 tell_room(environment(me), CYN+(string)me->name()+
                 "又深情的想念"+str1+"的爱侣"+ (string)couple_ob->name()+
                 "了。\n" +NOR, ({me, couple_ob}));
-                tell_object(couple_ob, sprintf(MAG "%s %s 
-                又在深情的想你了\n"NOR, tmpstr1,me->name(1) )); 
+                tell_object(couple_ob, sprintf(MAG "%s %s
+                又在深情的想你了\n"NOR, tmpstr1,me->name(1) ));
 
                 return 1;
         }
-        if (environment(me) == environment(couple_ob ) ) {       
+        if (environment(me) == environment(couple_ob ) ) {
            if (arg == "kiss") {
               write( MAG "你拥住你的爱侣，深深的一吻，许久...许久...\n" NOR);
               tell_room(environment(me), CYN+(string)me->name()+
-              "拥住"+(string)couple_ob->name()+"，深深的一吻。\n" 
+              "拥住"+(string)couple_ob->name()+"，深深的一吻。\n"
                 +NOR, ({me, couple_ob}));
                 tell_object(couple_ob, sprintf(MAG "%s %s
-                拥住你，深深的一吻，许久...许久...\n"NOR,tmpstr1,me->name(1) 
-));               }         
-        }                 
+                拥住你，深深的一吻，许久...许久...\n"NOR,tmpstr1,me->name(1)
+));               }
+        }
 
         return 1;
 }
@@ -91,7 +91,7 @@ int do_coupletalk(string arg)
 
         couple_ob = find_player(target);
         if( !couple_ob )
-                return 
+                return
         notify_fail("你的伴侣现在无法听见你，或者已经离开游戏了。\n");
         if ((string)couple_ob->query("gender") != "女性") {
                 tmpstr1 = "老婆";
@@ -103,7 +103,7 @@ int do_coupletalk(string arg)
 
         write(sprintf(MAG"你对%s %s 说：%s\n"NOR,
                 tmpstr2,couple_ob->name(1), arg ));
-        tell_object(couple_ob, sprintf(MAG "%s %s 对你说：%s\n"NOR, 
+        tell_object(couple_ob, sprintf(MAG "%s %s 对你说：%s\n"NOR,
                tmpstr1,me->name(1), arg ));
 
         return 1;
@@ -120,7 +120,7 @@ string query_autoload()
         cardname = present("marrycard")->query("name");
 
         sscanf(cardname,"你和%s的婚约" ,target);
-      
+
         return target;
 }
 
@@ -135,20 +135,20 @@ void autoload(string arg)
         couple_ob = find_player(arg);
         if (couple_ob){
                 if ((string)couple_ob->query("gender") != "女性"){
-                        tmpstr1 = "老公"; 
+                        tmpstr1 = "老公";
                         tmpstr = "老婆";
                 } else {
                         tmpstr1 = "老婆";
                         tmpstr = "老公";
                 }
-                
+
          write(sprintf( MAG "你的%s也在这里，快去找啦...\n"NOR,tmpstr1));
                 tell_object(couple_ob ,
                 sprintf( MAG "你的%s来啦,快去接...\n" NOR, tmpstr));
 
-//me->name(1)+"("+me->query("id")+")",environment(me))->query("name") ); 
-                
-                
+//me->name(1)+"("+me->query("id")+")",environment(me))->query("name") );
+
+
         }
         set("name","你和"+arg+"的婚约");
 
