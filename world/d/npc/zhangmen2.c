@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 10/05/1997
 // zhangmen.c 掌门
 
@@ -43,7 +43,7 @@ void init()
   add_action("do_perform", "perform");
 
   if (me->query("current_player")=="none of us")
-    me->reset_me(me);    
+    me->reset_me(me);
   me->restore();
   me->fully_recover(me);
   me->setup();
@@ -56,7 +56,7 @@ void reset_me (object me)
   object *inv;
   mapping skill_status, map_status;
   string *skillnames, *mapnames;
-    
+
   reset_eval_cost();
   if ( mapp(map_status = me->query_skill_map()) )
   {
@@ -70,7 +70,7 @@ void reset_me (object me)
   if ( mapp(skill_status = me->query_skills()) )
   {
     skillnames = keys(skill_status);
-   for(i=0; i<sizeof(skillnames); i++)  
+   for(i=0; i<sizeof(skillnames); i++)
     {
       me->delete_skill(skillnames[i]);
     }
@@ -97,8 +97,8 @@ void reset_me (object me)
   me->set("weapon", 0);
   me->set("armor", 0);
 
-  me->set_skill("force",  60); 
-  me->set_skill("spells", 60); 
+  me->set_skill("force",  60);
+  me->set_skill("spells", 60);
   me->set_skill("unarmed",60);
   me->set_skill("sword",  60);
   me->set_skill("dodge",  60);
@@ -187,7 +187,7 @@ int save_record(object me, object ob)
       me->set_skill(skillnames[i], skill_status[skillnames[i]]);
     }
   }
-  
+
   me->set("force_factor",me->query_skill("force")*3/4);
 
   reset_eval_cost();
@@ -209,7 +209,7 @@ int save_record(object me, object ob)
   }
 
   map_status = ob->query_skill_map();
-  if ( mapp(map_status) ) 
+  if ( mapp(map_status) )
   {
     mapnames  = keys(map_status);
 
@@ -217,7 +217,7 @@ int save_record(object me, object ob)
       me->map_skill(mapnames[i], map_status[mapnames[i]]);
     }
   }
-  
+
   inv = all_inventory(me);
   for(i=0; i<sizeof(inv); i++) {
     destruct(inv[i]);
@@ -243,7 +243,7 @@ int save_record(object me, object ob)
       me->set("weapon", base_name(inv[i]));
       weapon_cnt = 1;
     }
-    else if ( !inv[i]->query_unique() && !inv[i]->query("skill_type") && 
+    else if ( !inv[i]->query_unique() && !inv[i]->query("skill_type") &&
         inv[i]->query("equipped") && !armor_cnt ) {
       object obj = new(base_name(inv[i]));
       if (obj)
@@ -381,7 +381,7 @@ int fully_recover (object me)
   if (! player_name ||
       player_name == "none of us")
     return 1;
-  
+
   if (current_player = LOGIN_D->find_body(player_name))
   {
     save_record (me, current_player);
@@ -413,14 +413,14 @@ int fully_recover (object me)
   {
     ob = new(me->query("weapon"));
     if(ob->move(me))
-      ob->wield();  
+      ob->wield();
   }
 
   if (me->query("armor"))
   {
     ob = new(me->query("armor"));
     if(ob->move(me))
-      ob->wear(); 
+      ob->wear();
   }
 
   reset_eval_cost();
@@ -435,7 +435,7 @@ int accept_fight(object ob)
   object me = this_object();
   object who = this_player();
 
-  if (me->query("current_player") == ob->query("id")) 
+  if (me->query("current_player") == ob->query("id"))
   {
     command ("say 本弟子不可与己较量！\n");
     return notify_fail("你就是大弟子！\n");
@@ -455,7 +455,7 @@ int accept_fight(object ob)
 
   remove_call_out("check_result");
   call_out("check_result", 1, me, ob);
-  
+
   return 1;
 }
 
@@ -492,7 +492,7 @@ int check_result(object me, object ob)
     message_vision ("$N将$n扶起。\n",me,ob);
   }
 
-  return 1;  
+  return 1;
 }
 
 string query_save_file()
