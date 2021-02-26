@@ -28,11 +28,11 @@ void create()
 		"开药": (: heal_me :),
 	]) );
 	set("vendor_goods", ([
-		"人参" :		__DIR__"obj/ginseng", 
+		"人参" :		__DIR__"obj/ginseng",
 		"雪莲" :		__DIR__"obj/ice_lotus",
 		"灵芝" :		__DIR__"obj/agaric",
 	]) );
-      
+
 /*
         set("vendor_goods", ([
                 "金疮药": "/obj/drug/hurt_drug",
