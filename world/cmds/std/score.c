@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // score.c
 
 #include <ansi.h>
@@ -48,7 +48,7 @@ ob->short(1) );
    if( ob->query("fake_age")){
            line += sprintf(" 你是一%s%s岁的%s%s，%s生。\n",
                    ob->query("unit"),
-                   chinese_number(ob->query("age")), 
+                   chinese_number(ob->query("age")),
                    ob->query("gender"),
                    ob->query("race"),
                    CHINESE_D->chinese_date(((int)ob->query("birthday") - 14*365*24*60) * 60) );
@@ -176,8 +176,8 @@ ob->max_water_capacity(), ob->max_water_capacity(), CYN) + "\n";
 
         line += sprintf("\n 你到目前为止总共杀了 %d 个人，其中有 %d 个是其他玩家。\n\n",
                 my["MKS"] + my["PKS"], my["PKS"]);
-        
-   if(ob->query("kill/pkgain") ) { 
+
+   if(ob->query("kill/pkgain") ) {
           line +=sprintf(" ＰＫ道行增加： %s  \n",
        COMBAT_D->chinese_daoxing(ob->query("kill/pkgain")));
           if(!ob->query("kill/pklose") &&
