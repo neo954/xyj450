@@ -43,7 +43,7 @@ int do_enter(string arg)
 
 	if( arg=="gudui" )
 	{
-		if( (fam = me->query("family")) && fam["family_name"] == "丐帮" ) 
+		if( (fam = me->query("family")) && fam["family_name"] == "丐帮" )
 		{
 			message("vision",
 				me->name() + "运起丐帮缩骨功，一弯腰往谷堆里钻了进去。\n",
@@ -54,7 +54,7 @@ int do_enter(string arg)
                 		environment(me), ({me}) );
 			return 1;
 		}
-		else 
+		else
 			return notify_fail("这么小的洞，你钻得进去吗？\n");
 	}
 }	
