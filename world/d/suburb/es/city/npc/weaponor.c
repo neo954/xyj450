@@ -62,7 +62,7 @@ void greeting(object ob)
                         break;
                 case 1:
                         say( "万晓生冷冷地说：客官请付现钞。\n");
-                        break;                       
+                        break;
                 case 2:
 say( "万晓生忽然间似乎想起了远在美国的朋友和当年同闯江湖的情形。\n");
                         break;
