@@ -1,4 +1,4 @@
-// tang.c 唐老板 
+// tang.c 唐老板
 
 inherit NPC;
 //inherit F_VENDOR;
