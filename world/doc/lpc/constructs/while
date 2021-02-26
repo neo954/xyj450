@@ -37,4 +37,4 @@ int test(int limit)
 }
 
 The results of this code fragment will be to sum all of the even numbers
-from 0 to to limit - 1. 
+from 0 to to limit - 1.
