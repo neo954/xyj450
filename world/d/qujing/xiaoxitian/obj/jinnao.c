@@ -59,5 +59,3 @@ int do_out ()
   message_vision ("金铙被顶了起来，$N从里面吃力地爬了出来。\n",who,me);
   return 1;
 }
-
-
