@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 #include <room.h>
 inherit ROOM;
@@ -18,7 +18,7 @@ LONG);
   "northup" : "望上隐约看到山颠。\n",
 ]));
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
   __DIR__"npc/zhi" : 1,
   __DIR__"npc/guo" : 1,
 ]));
@@ -39,7 +39,7 @@ int valid_leave(object me, string dir)
         return notify_fail("郭申一横手中青锋剑，喝道：此为我梅山要地，闲杂人等闪开！\n");
         if (objectp(present("zhi jian", environment(me))))
         return notify_fail("直健将黄铜禅杖提了起来，对着你说：先问问它答应不！\n");
-        }   
+        }
         return ::valid_leave(me, dir);
 }
 
