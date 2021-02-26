@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/rainy/sea/jiashan1.c
 inherit ROOM;
 
@@ -42,7 +42,7 @@ int do_insert(string arg)
         if( !(mishi = find_object(__DIR__"mishi1")) )
                 mishi = load_object(__DIR__"mishi1");
 
-        if( mishi = find_object(__DIR__"mishi1") ) 
+        if( mishi = find_object(__DIR__"mishi1") )
         {
                 set("exits/enter", __DIR__"mishi1");
                 message_vision("$N将$n塞入小孔，只听喀喀几声，一座大石移开，露出向下一个通口。\n", me, ob);
