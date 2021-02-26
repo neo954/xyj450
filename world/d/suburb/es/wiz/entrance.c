@@ -44,7 +44,7 @@ int re_route_cmd(string str)
         int i;
         string *invalid_cmds;
         cmd = query_verb();
-        invalid_cmds = ({"meditate", "practice", "study", "exercise", "learn", 
+        invalid_cmds = ({"meditate", "practice", "study", "exercise", "learn",
                          "respirate"
                        });
         i = member_array(cmd, invalid_cmds);
