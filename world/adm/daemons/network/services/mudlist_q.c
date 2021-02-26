@@ -87,4 +87,3 @@ void incoming_request(mapping info)
           "@@@"+DNS_MUDLIST_A+ bits[i]+ "@@@\n");
    }
 }
-
