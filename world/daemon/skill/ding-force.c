@@ -14,5 +14,3 @@ int practice_skill(object me)
 {
 	return notify_fail("小丁气功只能跟小丁学来增加熟练度。\n");
 }
-
-
