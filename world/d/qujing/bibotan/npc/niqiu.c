@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -48,14 +48,14 @@ void relay_emote(object ob,string verb)
         case "wake":
                         command("wake");
      break;
-        case "poke":  
-                        command("poke xiao");                                        
+        case "poke":
+                        command("poke xiao");
                 break;
-        case "consider":  
-                        command("poor tian");                                        
+        case "consider":
+                        command("poor tian");
                 break;
-        case "grin":  
-                        command("hehe tian");                                        
+        case "grin":
+                        command("hehe tian");
                 break;
    case "lazy":
         command("lazy xiao");
