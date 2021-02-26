@@ -70,4 +70,3 @@ void create()
         add_money("gold", 3);
 
 }
-
