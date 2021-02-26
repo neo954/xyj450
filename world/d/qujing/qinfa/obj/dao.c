@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/22/1997
 #include <weapon.h>
 
@@ -39,10 +39,10 @@ int do_cut(string arg)
   ob = present (arg,environment(me));
   if (! ob)
     return notify_fail ("你要拿剃刀给谁剃头？\n");
-  
+
   if (! ob->is_character())
     return notify_fail ("你要拿剃刀给谁剃头？\n");
-  
+
   if (me == ob)
     return notify_fail ("你要给自己剃头？\n");
 
@@ -78,7 +78,7 @@ void cutting (object me, object ob)
     ob->kill_ob(me);
     return;
   }
-    
+
   if (interactive(ob))
     return;
 
@@ -93,4 +93,4 @@ void cutting (object me, object ob)
   me->add_temp("obstacle/qinfa_cut_times",1);
   ob->check_hair();
 }
- 
+
