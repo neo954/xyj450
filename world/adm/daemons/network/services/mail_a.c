@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /*
 //
 //  File    :  mail_a.c
@@ -9,25 +9,25 @@
 //  Purpose :  Part of the DNS mail system.
 //
 */
- 
+
 #define WHO find_player( "inspiral" )
 #define TELL( x ) if( WHO ) tell_object( WHO, x + "\n" )
- 
+
 #include <mudlib.h>
 #include <net/daemons.h>
 #include <net/dns.h>
- 
+
 inherit F_CLEAN_UP;
- 
+
 // We get here when we get affirmations from muds we are sending
 // mail packets to.
 void incoming_request( mapping info ) {
   int flag;
-  
+
   flag = 0;
-  
+
   if( !info["NAME"] || !info["PORTUDP"] ) return;
-  
+
   if( info["ENDMSG"] ) {
     // We've received an acknowledgement of an ENDMSG..meaning, they
     // affirm that they got the last part of a message we sent them.
@@ -41,7 +41,7 @@ void incoming_request( mapping info ) {
     TELL( "MAILA: Popped " + info["NAME"] + "." );
     flag = 2;
   }
-  
+
   else {
     if( info["RESEND"] ) {
       // They want us to resend the current message, because either
@@ -51,10 +51,10 @@ void incoming_request( mapping info ) {
       flag = 1;
     }
   }
-  
+
   // Let mail_q know that we are ready to either send a new message,
   // or resend the current one.
   MAIL_Q -> check_for_mail( info["NAME"], flag );
 }
- 
+
 /* EOF */
