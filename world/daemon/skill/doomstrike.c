@@ -3,49 +3,49 @@
 inherit SKILL;
 
 mapping *action = ({
-        ([      "action":               
+        ([      "action":
 "$N使出一招「大天星式」，右掌穿出击向$n的$l",
                 "dodge":                30,
                 "parry":                10,
                 "force":                100,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出一招「大天星式」，左掌化虚为实击向$n的$l",
                 "dodge":                10,
                 "parry":                30,
                 "force":                100,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出寒天掌法「小天星式」，如鬼魅般欺至$n身前，一掌拍向$n的$l",
                 "dodge":                30,
                 "parry":                10,
                 "force":                50,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N双掌一错，使出「雪寒三式」，对准$n的$l连续拍出三掌",
                 "dodge":                10,
                 "parry":                30,
                 "force":                60,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N左掌画了个圈圈，右掌推出，一招「寒气镇四方」击向$n$l",
                 "dodge":                20,
                 "parry":                30,
                 "force":                140,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出「风雷七星断」，身形散作七处同时向$n的$l出掌攻击",
                 "dodge":                70,
                 "parry":                10,
                 "force":                180,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N吐气扬声，一招「气撼九重天」双掌并力推出",
                 "parry":                40,
                 "force":                220,
@@ -58,7 +58,7 @@ int valid_learn(object me)
         if( me->query_temp("weapon") || me->query_temp("secondary_weapon") )
                 return notify_fail("练寒天神掌必须空手。\n");
         if( (int)me->query_skill("doomforce", 1) < 20 )
-                return 
+                return
 notify_fail("你的吹血神功火候不足，无法练寒天神掌。\n");
         if( (int)me->query("max_force") < 100 )
                 return notify_fail("你的内力太弱，无法练寒天神掌。\n");
@@ -83,7 +83,7 @@ int practice_skill(object me)
         return 1;
 }
 int effective_level() { return 10;}
- 
+
 string *parry_msg = ({
         "$n化掌为刀，一招「碧血五指挑」急切$N拿着$w的手。\n",
         "$n双掌交错，使出一招「童子拜寿」，「啪」的一声将$N的$w夹在双掌之间。\n",
