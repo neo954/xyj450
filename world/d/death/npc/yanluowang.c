@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 #include <ansi.h>
 
@@ -115,7 +115,7 @@ int accept_fight(object me)
 }
 
 string expell_me(object me)
-{       
+{
    me=this_player();
         if((string)me->query("family/family_name")=="阎罗地府") {
      message_vision("阎罗王胡子抖抖，好像非常生气。\n", me);
@@ -146,7 +146,7 @@ int do_true(string arg)
      message_vision("阎罗王伸出手将$N一推，$N化作一股青烟向东而去。。。\n", this_player());
      this_player()->move("/obj/void");
      tell_room( environment(this_player()),"房梁上噗噗嗦嗦几声响，掉下个人来！\n", ({this_player()}));
-     this_player()->unconcious();     
+     this_player()->unconcious();
                 return 1;
                 }
         return 0;
@@ -186,7 +186,7 @@ int start_job(object me)
 
         dirs = ({"/d/4world/","/d/city/","/d/gao/", "/d/jjf/",
 "/d/lingtai/", "/d/meishan/","/d/moon/", "/d/nanhai/", "/d/penglai/",
-"/d/sea/","/d/sky/", "/d/xueshan/", "/d/qujing/nuerguo/", 
+"/d/sea/","/d/sky/", "/d/xueshan/", "/d/qujing/nuerguo/",
 "/d/qujing/wudidong/", "/d/qujing/firemount/"});
 
         seteuid(getuid());
@@ -243,7 +243,7 @@ message_vision("$N对$n阴阴地笑了几声，说：天堂有路你不走，地
 
    command("grin");
    this_object()->move("/obj/void");
-   
+
 //   call_out("get_all",1,who);
    call_out("message",3,who);
    call_out("round_1",4, who);
@@ -273,14 +273,14 @@ int get_all(object who)
       destruct (ob);
     else
       ob->move(environment(who));
-  }  
+  }
     return 1;
 }
 
 */
 int check_status(object who)
 {
-   if( (int)who->query("kee") < 50 
+   if( (int)who->query("kee") < 50
    ||   (int)who->query("eff_kee") < 50 ) {
                 remove_call_out("round_2");
                 remove_call_out("round_3");
@@ -306,7 +306,7 @@ int check_status(object who)
    }
 }
 int failed(object who)
-{   
+{
    command("chat* 阎罗王狂笑了几声。");
    command("chat 果真有不怕死的，可惜还是逃不出俺的手掌心！\n");
    this_object()->delete_temp("SomeonePassing");
@@ -419,7 +419,7 @@ int round_3(object who)
         ghost->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_4", 3, who);  
+        call_out("round_4", 3, who);
         return 1;
 }
 int round_4(object who)
@@ -435,7 +435,7 @@ int round_4(object who)
         ghost->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_5", 3, who);  
+        call_out("round_5", 3, who);
         return 1;
 }
 int round_5(object who)
@@ -451,7 +451,7 @@ int round_5(object who)
         ghost->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_6", 3, who);  
+        call_out("round_6", 3, who);
         return 1;
 }
 int round_6(object who)
@@ -467,7 +467,7 @@ int round_6(object who)
         ghost->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_7", 3, who);  
+        call_out("round_7", 3, who);
         return 1;
 }
 int round_7(object who)
@@ -483,7 +483,7 @@ int round_7(object who)
         ghost->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_8", 3, who);  
+        call_out("round_8", 3, who);
         return 1;
 }
 int round_8(object who)
@@ -499,7 +499,7 @@ int round_8(object who)
         ghost->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_9", 3, who);  
+        call_out("round_9", 3, who);
         return 1;
 }
 int round_9(object who)
@@ -515,7 +515,7 @@ int round_9(object who)
         ghost->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_10", 3, who);  
+        call_out("round_10", 3, who);
         return 1;
 }
 int round_10(object who)
@@ -531,7 +531,7 @@ int round_10(object who)
         ghost->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_11", 3, who);  
+        call_out("round_11", 3, who);
         return 1;
 }
 int round_11(object who)
@@ -551,7 +551,7 @@ int round_11(object who)
         ghostb->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_12", 3, who);  
+        call_out("round_12", 3, who);
         return 1;
 }
 int round_12(object who)
@@ -571,7 +571,7 @@ int round_12(object who)
         ghostb->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_13", 3, who);  
+        call_out("round_13", 3, who);
         return 1;
 }
 int round_13(object who)
@@ -592,7 +592,7 @@ int round_13(object who)
         ghostb->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_14", 3, who);  
+        call_out("round_14", 3, who);
         return 1;
 }
 int round_14(object who)
@@ -612,7 +612,7 @@ int round_14(object who)
         ghostb->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_15", 3, who);  
+        call_out("round_15", 3, who);
         return 1;
 }
 int round_15(object who)
@@ -628,7 +628,7 @@ int round_15(object who)
         ghost->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_16", 3, who);  
+        call_out("round_16", 3, who);
         return 1;
 }
 int round_16(object who)
@@ -648,7 +648,7 @@ int round_16(object who)
         ghostb->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_17", 3, who);  
+        call_out("round_17", 3, who);
         return 1;
 }
 int round_17(object who)
@@ -668,7 +668,7 @@ int round_17(object who)
         ghostb->invocation(who);
         call_out("check_status",1,who);
         call_out("message",2,who);
-        call_out("round_18", 3, who);  
+        call_out("round_18", 3, who);
         return 1;
 }
 int round_18(object who)
@@ -687,7 +687,7 @@ int round_18(object who)
    ghostb->move(environment(who));
         ghostb->invocation(who);
         call_out("check_status",1,who);
-        call_out("winning", 3, who);  
+        call_out("winning", 3, who);
         return 1;
 }
 
