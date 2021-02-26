@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/qujing/wudidong/book_cave1
 // created 9-14-97 pickle
 /************************************************************/
