@@ -41,6 +41,3 @@ int valid_leave (object who, string dir)
     return can_enter (who);
   return ::valid_leave(who, dir);
 }
-
-
-
