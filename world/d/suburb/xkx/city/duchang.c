@@ -31,4 +31,3 @@ int valid_leave(object me, string dir)
                 return notify_fail("小毛孩子往这儿瞎凑合什么?!\n");
         return ::valid_leave(me, dir);
 }
-
