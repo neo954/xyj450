@@ -13,4 +13,3 @@ set("long", "一块留言壁，上面题满了来访者的留言。\n");
         setup();
         replace_program(BULLETIN_BOARD);
 }
-
