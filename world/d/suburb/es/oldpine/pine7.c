@@ -47,4 +47,3 @@ int valid_leave(object me, string dir)
         write("就是这个方向吧。\n");
         return 1;
 }
-
