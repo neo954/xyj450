@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/5/1997 by snowcat
 #include <ansi.h>
 
@@ -116,7 +116,7 @@ int accept_fight (object me)
   if (! ob->query("triplicate"))
   {
     object ob0, ob1, ob2, ob3;
-  
+
     ob0 = present("guai 2",environment(me));
     if (ob0)
       destruct (ob0);
