@@ -18,4 +18,3 @@ void create()
 	carry_object(__DIR__"obj/book");
 	carry_object("/obj/cloth")->wear();
 }
-
