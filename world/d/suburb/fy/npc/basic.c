@@ -9,7 +9,7 @@ void create()
 	set("nickname", HIM "铁掌降龙"NOR);
 	set("gender", "男性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他就是大侠花无缺。\n");
 
 	setup();
