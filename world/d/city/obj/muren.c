@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // muren.c 木人
 
 inherit NPC;
@@ -26,15 +26,15 @@ void create()
 
    set("combat_exp", 50000);
 
-   set_skill("force", 30); 
+   set_skill("force", 30);
    set_skill("unarmed", 30);
    set_skill("dodge", 30);
    set_skill("parry", 30);
 
-   set("fight_times", 0);   
+   set("fight_times", 0);
 
    setup();
-        
+
 }
 
 int accept_fight(object ob)
@@ -49,21 +49,21 @@ int accept_fight(object ob)
    if (is_fighting()) return 0;
 
    if (me->query("damaged"))
-     return notify_fail("这个木人已经被打坏了！\n");   
+     return notify_fail("这个木人已经被打坏了！\n");
 
    if (random(me->query("fight_times")) >= 10) {
      me->set("damaged", 1);
-     return notify_fail("这个木人已经被打坏了！\n");   
+     return notify_fail("这个木人已经被打坏了！\n");
    }
 
    if (me->query("last_fighter") == ob->query("id"))
-     return notify_fail("你刚跟这个木人练过功！\n");     
+     return notify_fail("你刚跟这个木人练过功！\n");
 
    me->set("last_fighter", ob->query("id"));
    me->add("fight_times", 1);
 
-   remove_call_out("renewing");   
-   call_out("renewing", 300 + random(300), me);   
+   remove_call_out("renewing");
+   call_out("renewing", 300 + random(300), me);
 
    me->delete_skill("unarmed");
    me->map_skill("unarmed");
@@ -76,14 +76,14 @@ int accept_fight(object ob)
    for(i=0; i<sizeof(skill_status); i++) {
      me->set_skill(sname[i], skill_status[sname[i]]);
    }
-   
+
    if ( !(map_status = ob->query_skill_map()) ) return 1;
    mname  = keys(map_status);
 
    for(i=0; i<sizeof(map_status); i++) {
      me->map_skill(mname[i], map_status[mname[i]]);
    }
-   
+
    hp_status = ob->query_entire_dbase();
 
      me->set("str", hp_status["str"]);
