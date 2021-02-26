@@ -58,4 +58,3 @@ int do_wield (string arg)
   }
   return 0; // to invoke standard function
 }
-
