@@ -62,4 +62,3 @@ void greeting(object ob)
    if( !ob || !present(ob, environment(this_object())) ) return;
    say( "知客僧热情地说道：这位" + RANK_D->query_respect(ob) + "，欢迎来到南海普陀山！\n");
 }
-
