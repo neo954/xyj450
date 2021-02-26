@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // added by snowcat
 
 void announce_success (object who)
@@ -34,9 +34,9 @@ void announce_success (object who)
 void player_win (object me, object who)
 {
   object obj;
-  
+
   who->set_temp("obstacle/jingjiling/"+me->query("id"),1);
-  message_vision("$N对$n一鞠躬：不错，不错！\n",me,who);  
+  message_vision("$N对$n一鞠躬：不错，不错！\n",me,who);
   me->announce_success(who);
 }
 
