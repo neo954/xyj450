@@ -173,5 +173,3 @@ void reset_busy ()
 {
   is_busy = 0;
 }
-
-
