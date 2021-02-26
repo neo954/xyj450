@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // object.c
 
 varargs int getoid(object ob)
@@ -82,7 +82,7 @@ void destruct(object ob)
    }
 }
 
-// added by xuy. 
+// added by xuy.
 int living(object ob)
 {
         if (ob && ob->query_temp("disabled") )
