@@ -14,6 +14,3 @@ void create()
 		set("value", 1000);
 	}
 }
-
-
-
