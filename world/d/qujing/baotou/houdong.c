@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 12/8/1997
 
 inherit ROOM;
@@ -36,10 +36,10 @@ int do_climb ()
   object who = this_player ();
   string midong = __DIR__"midong1";
 
-  message_vision ("$N攀住岩壁，向上爬去。\n",who);  
+  message_vision ("$N攀住岩壁，向上爬去。\n",who);
   if (who->is_fighting() || present ("yao guai",this_object()))
   {
-    message_vision ("$N从岩壁上滑了下来！\n",who);  
+    message_vision ("$N从岩壁上滑了下来！\n",who);
     return 1;
   }
   midong[strlen(midong)-1] = '1'+random(5);
@@ -56,11 +56,11 @@ int do_climb ()
 
 void sleeping (object who)
 {
-  message_vision ("秘洞里散发着一股刺鼻的腥气，$N顿时昏昏然。\n\n",who);  
-  message_vision ("$N勉强眨了眨惺忪的眼睛，打了个哈欠。\n",who);  
+  message_vision ("秘洞里散发着一股刺鼻的腥气，$N顿时昏昏然。\n\n",who);
+  message_vision ("$N勉强眨了眨惺忪的眼睛，打了个哈欠。\n",who);
   who->set("last_sleep",time()-270);
   who->interrupt_me();
-  who->command_function("sleep"); 
+  who->command_function("sleep");
 }
 void fainting (object who)
 {
