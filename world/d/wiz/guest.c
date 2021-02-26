@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/wiz/guest.c    snowcat
 
 inherit ROOM;
@@ -38,13 +38,13 @@ int nb_guests (object where)
   {
     if (userp(obs[j]) && !wizardp(obs[j]))
       i++;
-  } 
+  }
   return i;
 }
 
 void init()
-{  
-  object who = this_player(); 
+{
+  object who = this_player();
   object where = this_object();
 
   if (!wizardp(who)&&userp(who))
@@ -53,15 +53,15 @@ void init()
     {
       tell_object (who,"欢迎您进入西游记世界！\n");
       who->move(who->query("startroom"));
-      MONITOR_D->report_system_object_msg (who,  
-        "由被禁的IP进入，已被批准直入西游记世界。"); 
-      return; 
+      MONITOR_D->report_system_object_msg (who,
+        "由被禁的IP进入，已被批准直入西游记世界。");
+      return;
     }
     who->set("startroom","/d/wiz/guest");
     who->save();
-    add_action("block_cmd","",1);  
-    MONITOR_D->report_system_object_msg (who,  
-      "的IP被禁，现被引入西游记迎客厅(/d/wiz/guest.c)。");  
+    add_action("block_cmd","",1);
+    MONITOR_D->report_system_object_msg (who,
+      "的IP被禁，现被引入西游记迎客厅(/d/wiz/guest.c)。");
     if (nb_guests(where) > 10)
     {
       tell_object ("对不起，迎客厅里客人太多，请下次再来。\n",who);
@@ -90,7 +90,7 @@ void inform_wiz (object who)
 int block_cmd()
 {
   string verb = query_verb();
-  if (verb=="say") return 0; 
+  if (verb=="say") return 0;
   if (verb=="help") return 0;
   if (verb=="who") return 0;
   if (verb=="look") return 0;
