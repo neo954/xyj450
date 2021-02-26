@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhenyuan.c...weiqi, 98.02.24.
 // copied a lot of useful functions from "rulai.c"...thanks snowcat:)
 
@@ -40,7 +40,7 @@ void create()
    set_skill("kaishan-chui", 190);
    set_skill("blade", 160);
    set_skill("yange-blade", 190);
-   set_skill("force", 180);   
+   set_skill("force", 180);
    set_skill("zhenyuan-force", 180);
    set_skill("literate", 180);
    set_skill("spells", 200);
@@ -59,13 +59,13 @@ void create()
    set("force", 5000);
    set("max_force", 2500);
    set("mana", 7000);
-   set("max_mana", 3500);   
+   set("max_mana", 3500);
    set("force_factor", 100);
    set("mana_factor", 150);
 
    set("spell_qiankun_on", 1); //to use cast qiankun, must set this.
    set("chat_chance_combat", 60);
-   set("chat_msg_combat", 
+   set("chat_msg_combat",
    ({
      //(: cast_spell, "zhenhuo" :),
      (: cast_spell, "qiankun" :),
@@ -99,7 +99,7 @@ void attempt_apprentice(object ob)
      {
         command("say 福禄寿他们正想多收几个弟子，你先到那边看看吧。\n");
      }
-     else 
+     else
      {
         if( (int)ob->query("combat_exp") >= 300000 && (int)ob->query_skill("taiyi", 1) >= 120 )
         {
@@ -130,7 +130,7 @@ int recruit_apprentice(object ob)
 }
 
 string expell_me(object me)
-{       
+{
    me=this_player();
    if((string)me->query("family/family_name")=="五庄观") {
      message_vision("镇元大仙道：你既然要走，那也不能强留。但是太乙仙法是五庄观不传之秘，可不能带出观外。\n", me);
@@ -141,7 +141,7 @@ string expell_me(object me)
 }
 
 string keyword(object me)
-{       
+{
    me=this_player();
    if((string)me->query("family/family_name")=="五庄观") {
      message_vision("镇元大仙道：你是指袖里乾坤的六字真诀吧。\n", me);
@@ -188,7 +188,7 @@ int do_true(string arg)
 void announce (object me, string str)
 {
    if (DEBUG)
-   { 
+   {
      object weiqi = find_player ("weiqi");
      if (weiqi && wizardp(weiqi))
         tell_object (weiqi,"◆ "+str+"\n");
@@ -204,7 +204,7 @@ void start_renshen()
    object me;
 
    me = this_object();
-    
+
    set_temp("invite","public");
 
    announce (me, "五庄观人参果品尝大会即将开始！\n");
@@ -240,11 +240,11 @@ void ready2()
 }
 
 string asked_guo(object me)
-{ 
+{
    int i, total;
    object guo;
    object *inv ;
-      
+
    me=this_player();
 
    //if no renshenguo party at all...
@@ -252,7 +252,7 @@ string asked_guo(object me)
 
    //if not in the right place, no guo...
    //need the right name, also right outdoors(so ppls can not use fake room).
-   if( (environment(this_object()))->query("short") != "人参果园" || 
+   if( (environment(this_object()))->query("short") != "人参果园" ||
      (environment(this_object()))->query("outdoors") != "wuzhuang" )
    {
      return ("这里又不是果园，哪来的人参果。\n");
@@ -280,7 +280,7 @@ string asked_guo(object me)
    {
      for(i=0; i<sizeof(inv); i++)
      {
-        if( userp(inv[i]) && (!wizardp(inv[i]))  ) 
+        if( userp(inv[i]) && (!wizardp(inv[i]))  )
         {//wiz not counted...
           guo = new("/d/obj/drug/renshen-guo");
           guo->move(inv[i]);
@@ -295,7 +295,7 @@ string asked_guo(object me)
      return ("好！人参果分发完毕，诸位仙贤尽情享用吧。\n");
    }
    else return ("谁要人参果？\n");
-   
+
 }
 
 void finishing()
@@ -312,7 +312,7 @@ void inviting (object me)
 
    if (! me->query_temp("invite"))
    return;
-  
+
    remove_call_out ("inviting");
    call_out ("inviting",4+random(4),me);
 
@@ -323,25 +323,25 @@ void inviting (object me)
      string here, there;
 
      reset_eval_cost();
-    
+
      if (!environment(list[i]))
         continue;
-    
+
      if (environment(list[i])->query("unit")) // not a room
         continue;
-   
+
      if (list[i]->is_fighting())
         continue;
-    
+
      if (list[i]->is_busy())
         continue;
-    
+
      if (list[i]->query_temp("no_move"))
         continue;
-    
+
      if (!living(list[i]))
         continue;
-    
+
      if ((string)list[i]->query_temp("accept")!=me->query("id"))
         continue;
 
@@ -370,7 +370,7 @@ int do_back(string arg)
    string there = who->query_temp("wzg/from");
 
    message_vision("$N请求$n送$N回返。\n",who,me);
- 
+
     //if (!there)
    // there = "/d/city/kezhan";
    there = "/d/city/kezhan";
@@ -379,7 +379,7 @@ int do_back(string arg)
    message_vision("$N的大袖朝着$n轻轻一罩…\n",me,who);
    who->move(there);
    message_vision("…云中伸出一只巨大的衣袖轻轻一抖，只见$N从里面滑了出来。\n",who);
-  
+
    return 1;
 }
 
