@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //puti.c
 inherit NPC;
 inherit F_MASTER;
@@ -59,14 +59,14 @@ void create()
 //     (: perform_action, "whip", "three" :),
         }) );
   set("nk_gain", 600);
-   
+
   set_temp("apply/armor", 50);
   set_temp("apply/dodge", 50);
 
-  
+
   create_family("阎罗地府", 1, "你好");
   setup();
-  
+
   carry_object("/d/obj/cloth/baipao")->wear();
   carry_object("/d/obj/weapon/whip/longsuo")->wield();
 }
