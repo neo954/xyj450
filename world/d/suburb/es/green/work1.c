@@ -40,8 +40,8 @@ int do_fillwater(string arg)
                 while (i--) {
                   if (((string)list[i]->query("liquid/type") == "alcohol")
  || ((string)list[i]->query("liquid/type") == "water")         ) {
-                        ob = list[i];                         
-                        can_fillwater = 1;      
+                        ob = list[i];
+                        can_fillwater = 1;
                         ob->set("liquid", ([
                                 "type": "water",
                                 "name": "清水",
