@@ -45,4 +45,3 @@ int do_bed()
             message_vision(HIY "\n纱帐轻轻一动，$N钻了进来。\n" NOR, me);
                 return 1;
 }
-
