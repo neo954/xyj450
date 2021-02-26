@@ -56,4 +56,3 @@ int do_climb(string arg)
 	me->move(__DIR__"road");
         return 1;
 }
-
