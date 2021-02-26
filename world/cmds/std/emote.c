@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // emote.c (Mon  09-04-95)
 
 #include <ansi.h>
 #include "/cmds/std/block_tell.h";
 
 inherit F_CLEAN_UP;
- 
+
 int main(object me, string str)
 {
     if(!block_tell(me)) return 1;
@@ -23,7 +23,7 @@ int main(object me, string str)
         str+"\n"+NOR, me);
     return 1;
 }
- 
+
 int help(object me)
 {
    write(@HELP
