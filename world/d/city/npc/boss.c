@@ -336,4 +336,3 @@ int do_bian(string arg)
    message_vision("$N对$n说：这是喜宴，不可随意变化！\n",me,who);
         return 1;
 }
-
