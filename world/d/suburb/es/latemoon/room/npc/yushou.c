@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
          set_name("苗郁淑", ({ "yushou","yu","shou" }) );
