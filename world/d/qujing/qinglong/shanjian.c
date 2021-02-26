@@ -31,4 +31,3 @@ int valid_leave (object who, string dir)
     return notify_fail ("山涧早已将通向山凹的路淹没，很久就没人能过涧了。\n");
   return ::valid_leave(who,dir);
 }
-
