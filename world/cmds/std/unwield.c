@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // unwield.c
 
 inherit F_CLEAN_UP;
@@ -32,11 +32,10 @@ int help(object me)
 {
   write(@HELP
 指令格式 : unwield|fangxia <物品名>
- 
+
 这个指令让你放下手中的武器。
- 
+
 HELP
     );
     return 1;
 }
- 
