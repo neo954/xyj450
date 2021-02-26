@@ -42,4 +42,3 @@ int valid_leave(object me, string dir)
 			return notify_fail("慧空喝道：你不是少林出家弟子，不得进入后殿。\n");
 	return ::valid_leave(me, dir);
 }
-
