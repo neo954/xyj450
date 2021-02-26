@@ -37,7 +37,7 @@ int do_pretend(string arg)
 		message_vision("$N从脸上取下了一个人皮面具。\n", this_player());
 		return 1;
 	}
-	if(!objectp(who = present(arg, environment(this_player()))) || 
+	if(!objectp(who = present(arg, environment(this_player()))) ||
 		!living(who))
 		return notify_fail("你想假装谁？\n");
 	write("你开使假装" + who->name() + "。\n");
