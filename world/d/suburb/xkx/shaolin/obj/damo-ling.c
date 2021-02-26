@@ -15,4 +15,3 @@ void create()
                 set("material", "steel");
         }
 }
-
