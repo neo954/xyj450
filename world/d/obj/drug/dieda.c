@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // jinchuang.c 金创药
 
 inherit ITEM;
@@ -31,7 +31,7 @@ int do_eat(string arg)
 {
         if (!id(arg))
                 return notify_fail("你要吃什么药？\n");
-        if ((int)this_player()->query("eff_kee") == 
+        if ((int)this_player()->query("eff_kee") ==
             (int)this_player()->query("max_kee"))
                 return notify_fail("你现在不需要用跌打药。\n");
         else {
