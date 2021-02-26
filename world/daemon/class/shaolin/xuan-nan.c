@@ -80,4 +80,3 @@ void create()
 
 
 #include "/daemon/class/shaolin/xuan-nan.h"
-
