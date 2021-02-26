@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -13,7 +13,7 @@ void create ()
 六市，货殖通财，来往人等衣冠隆重，足显民富豪华。
 LONG);
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
   __DIR__"npc/laoban" : 1,
 ]));
   set("outdoors", 1);
