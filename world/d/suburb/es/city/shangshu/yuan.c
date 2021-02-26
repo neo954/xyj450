@@ -21,7 +21,7 @@ LONG
 		"south":	__DIR__"road3",
 		"north":	__DIR__"road2",
                 ]));
-       
+
 	set("outdoors", "city");
 
         create_door ("west", "大铁门", "east", DOOR_CLOSED);
@@ -33,7 +33,7 @@ int valid_leave(object me,string dir)
 {
         if ( (dir=="east" || dir == "west" )&&  !userp(this_player()))
         return 0;
-        
+
 	return ::valid_leave(me,dir);
 }
 
