@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/qujing/wudidong/temple-qiandian.c
 // created 6-20-97 pickle
 inherit ROOM;
