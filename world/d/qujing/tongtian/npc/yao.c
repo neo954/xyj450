@@ -56,4 +56,3 @@ void create()
   str[strlen(str)-1] = '0'+random(4);
   carry_object(str)->wield();
 }
-
