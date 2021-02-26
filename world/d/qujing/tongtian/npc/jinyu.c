@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 12/18/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("金鳞怪", ({ "jinlin guai", "jinglin", "guai" }));
-  set("title", "通天河");   
+  set("title", "通天河");
   set("long", "一位身着金甲的妖怪。\n");
   set("gender", "男性");
   set("age", 76);
@@ -71,7 +71,7 @@ void chen_appearing (object who)
   object chen = new ("/d/qujing/tongtian/npc/chen");
 
   chen->announce_success (who);
-  destruct (chen); 
+  destruct (chen);
 }
 
 void unconcious ()
