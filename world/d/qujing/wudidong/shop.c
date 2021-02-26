@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //shop.c
 #include <room.h>
 inherit ROOM;
@@ -37,5 +37,5 @@ int valid_leave(object me, string dir)
 {
         if ( !me->query_temp("rent_paid") && dir == "south" )
                 return notify_fail("没付房钱就想住店？\n");
-        return ::valid_leave(me, dir); 
+        return ::valid_leave(me, dir);
 }
