@@ -72,4 +72,3 @@ string show_dragon()
       tell_object(me,"『 沧海龙吟』是一首失传以久的舞曲。传说....\n");
       return "......\n";
 }
-
