@@ -9,7 +9,7 @@ void create()
 {
 	set_name("阿紫", ({ "azi" }));
 	set("nickname", "星宿派小师妹");
-	set("long", 
+	set("long",
 		"她就是丁春秋弟子阿紫。\n"
 		"她容颜俏丽，可眼神中总是透出一股邪气。\n");
 	set("gender", "女性");
