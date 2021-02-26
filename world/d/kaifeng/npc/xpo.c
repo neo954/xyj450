@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// by snowcat 
+
+// by snowcat
 
 inherit NPC;
 
@@ -67,7 +67,7 @@ int test_player()
     "$N对$n点头说道：相公刚说了，让妾身征集什么",
     "$N对$n一点头说道：这里尚缺些",
     "$N想想对$n说道：可否帮相府寻得",
-  });  
+  });
   string str;
   object me = this_object();
   object who = this_player();
