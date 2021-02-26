@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // mind_beast.c
 
 inherit NPC;
@@ -11,7 +11,7 @@ void create()
    set("race", "野兽");
    set("age", 3);
    set("long", "这是一只由修道人的杂念绮思所化的观想兽，会缠住人的魂魄。\n");
-   
+
    set("str", 48);
    set("cor", 52);
    set("cps", 22);
@@ -27,7 +27,7 @@ void create()
      set("combat_exp", this_player()->query_skill("spells", 1) * 2000);
      set("bellicosity", this_player()->query("bellicosity") );
    }
-   
+
    set_temp("apply/attack", 60);
    set_temp("apply/armor", 40);
 
