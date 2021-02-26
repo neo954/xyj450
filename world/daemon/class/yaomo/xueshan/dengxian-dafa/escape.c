@@ -1,8 +1,8 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //cast function: escape.c 可用于各种逃遁。
-//this one is for xueshan...weiqi, 
+//this one is for xueshan...weiqi,
 //useful only when fighting, other cases only waste fali.
 
 #include <ansi.h>
