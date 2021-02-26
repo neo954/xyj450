@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //xitian.c
 //created 4-8-97, pickle
 
@@ -44,10 +44,10 @@ create_door("east", "西天门", "west", DOOR_CLOSED);
 
 int valid_leave(object me, string dir)
 {
- 
+
         if (dir != "east") {
                 return ::valid_leave(me,dir);
         }
- 
+
 if (::valid_leave(me,dir)) return notify_fail("贵宾才能从西门出入，尊驾还是从南门进吧！\n");
 }
