@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // laozhang.c
 //
 
@@ -32,7 +32,7 @@ void create()
 void init()
 {
   object ob;
-  
+
   ::init();
   set("chat_chance", 7);
   set("inquiry", ([
@@ -44,7 +44,7 @@ void init()
         "铁骷髅" : "铁骷髅？老汉断了犁头你不说安慰安慰，来跟老汉要东西？年青人太不懂事啦！唉。。。",
         "犁头" : "犁头对门张铁匠那儿有。可是叫我哪里去凑这五十两白银哪！",
         ]) );
-  
+
   set("chat_msg", ({
     "老张哭道：我可怜的犁头啊！你才跟了老汉三十年不到，怎么就夭折啦！天哪！我不活啦！呜呜。。。\n",
     "老张骂道：这些老鼠虽大，就吓倒我了？没那么容易！懒猫，还不去捉耗子，今天别想晚饭了！\n",
@@ -54,7 +54,7 @@ void init()
 int accept_object(object me, object ob)
 {
   object skull;
-  
+
   if ((string)ob->query("id")!="li tou") {
     command("say 这怎么可以？折杀老汉了。");
     return 0;
