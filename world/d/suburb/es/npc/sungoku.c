@@ -106,8 +106,8 @@ int receive_damage(string type, int pts)
 	}
 
 	if( (int)query("pills")
-	&&	(((int)query("kee")) < 20 
-		|| ((int)query("gin") < 20) 
+	&&	(((int)query("kee")) < 20
+		|| ((int)query("gin") < 20)
 		|| ((int)query("sen") < 20) )) {
 		say( HIY "孙悟空从口袋摸出一粒花梨塔猫仙人给他的仙豆吞了下去。\n" NOR);
 		set("gin", query("eff_gin"));
