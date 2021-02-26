@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/5/1997 by snowcat
 #include <ansi.h>
 #include <dbase.h>
@@ -112,7 +112,7 @@ int do_remove (string arg)
   if (arg != "flower")
     return 0;
 
-  msg = "$N将"+name+"轻轻地摘下来……\n"; 
+  msg = "$N将"+name+"轻轻地摘下来……\n";
   //message_vision (msg,me);
   flower->set("unequip_msg",msg);
   return 0;
@@ -198,7 +198,7 @@ void need_water (object where)
     case 5:
       { msg = name+"终于干枯了。\n"; flower->set("name","干"+name); break; }
     default:   //added by mon 8/31/97
-      {  
+      {
         if(flower->query("water")>10 && random(10)==0) {
           message_vision(name+
      "随风而起，化作了片片花雨．．．\n"+
