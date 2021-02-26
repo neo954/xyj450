@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-/* weiqi playing room for Bugworld 
+
+/* weiqi playing room for Bugworld
   based on Chinese GB LPMud server
   written by Shaoyu Wang in Dec. 1996
 */
@@ -49,7 +49,7 @@ int *h_list = ({ 3*19+3, 15*19+15, 15*19+3, 3*19+15, 3*19+9,
 string *xindex = ({ "Ａ","Ｂ","Ｃ","Ｄ","Ｅ","Ｆ","Ｇ","Ｈ","Ｉ",
      "Ｊ","Ｋ","Ｌ","Ｍ","Ｎ","Ｏ","Ｐ","Ｑ","Ｒ","Ｓ" });
 string *yindex = ({ "⑴","⑵","⑶","⑷","⑸","⑹","⑺","⑻","⑼",
-     "⑽","⑾","⑿","⒀","⒁","⒂","⒃","⒄","⒅","⒆" }); 
+     "⑽","⑾","⑿","⒀","⒁","⒂","⒃","⒄","⒅","⒆" });
 string *Ucase = ({ "A","B","C","D","E","F","G","H","I","J","K",
    "L","M","N","O","P","Q","R","S" });
 string *lcase = ({ "a","b","c","d","e","f","g","h","i","j","k",
@@ -123,7 +123,7 @@ int do_sit(string arg)
      return notify_fail("你已经坐着了。\n");
 
    if(!arg || (arg != "black" && arg != "white"))
-     return notify_fail("你想玩黑棋还是白棋？\n");   
+     return notify_fail("你想玩黑棋还是白棋？\n");
 
    if (objectp(pl[arg]))
      return notify_fail("这个位子上已经有人了！\n");
@@ -146,7 +146,7 @@ int do_leave(string arg)
    message_vision("$N不想再下了，站了起来。\n",me);
    map_delete(pl,s);
    me->delete_temp("weiqi_seat");
-   status=WQ_NOT_PLAYING;   
+   status=WQ_NOT_PLAYING;
    return 1;
 }
 
@@ -186,7 +186,7 @@ int str_to_int(string s)
    return 0;
 }
 
-/* Here we allow handicapped game by specifying the number of 
+/* Here we allow handicapped game by specifying the number of
   handicap stones in the command line.  */
 
 int do_new(string arg)
@@ -234,7 +234,7 @@ int do_new(string arg)
       else for(i=0;i<handicap;i++) game[h_list[i]]=WQ_BLACK;
      turn = "white";
    }
-   WQ_Started=0;   
+   WQ_Started=0;
    WQ_Undoed=0;
    lastmove="";
    lastlastmove="";
@@ -253,7 +253,7 @@ int do_refresh(string arg)
 
    if(status==WQ_NOT_PLAYING) return notify_fail("棋盘上是空的。\n");
    if (WQ_Started)
-   {     
+   {
      if (turn=="black")
         { tell_object(me,"\n白棋上一步走在了"+lastmove+"\n");
         }
@@ -272,8 +272,8 @@ int do_refresh(string arg)
 
 
 /* Function 'no_qi' checks if the qi of stone (x,y) is 0.
-  The qi of stone (x,y) means the qi of the block which contains (x,y). 
-  no_qi works on the data of bd[19][19] with move (x,y) set. 
+  The qi of stone (x,y) means the qi of the block which contains (x,y).
+  no_qi works on the data of bd[19][19] with move (x,y) set.
   Returns 1(no qi) or 0(has qi).
 */
 
@@ -352,7 +352,7 @@ int remove_block(int * bd, int x, int y)
                 j=alist[aindex-1]%bsize;
                 aindex--;
                 blist[bindex]=i*bsize+j;   bindex++;
-                bd[i*bsize+j]=WQ_AUX_COLOR; 
+                bd[i*bsize+j]=WQ_AUX_COLOR;
                 if(i>0 && color==bd[(i-1)*bsize+j]) {
                         alist[aindex]=(i-1)*bsize+j; aindex++;
                 }
@@ -371,17 +371,17 @@ int remove_block(int * bd, int x, int y)
    while(bindex>0) { bd[blist[bindex-1]]=WQ_BLANK; bindex--; }
    return(num);
 }
-     
+
 
 /* Function 'eat' returns the number of stones eaten by move
  (x,y), according to the data of bd[19][19] with move (x,y) set.
- eat modifies bd[19][19] by removing stones eaten. 
+ eat modifies bd[19][19] by removing stones eaten.
  eat also stores the position of the last stone eaten in
  *x_eat_ptr, * y_eat_ptr.
 */
- 
+
 int eat(int * bd, int x, int y, int * x_eat_ptr, int * y_eat_ptr)
-{       
+{
    int mycolor, opcolor;
    int num=0;
 
@@ -389,14 +389,14 @@ int eat(int * bd, int x, int y, int * x_eat_ptr, int * y_eat_ptr)
    if(mycolor==WQ_BLACK) opcolor=WQ_WHITE;
      else opcolor=WQ_BLACK;
    if(x>0 && bd[(x-1)*bsize+y]==opcolor && no_qi(bd,x-1,y) ) {
-     num += remove_block(bd,x-1,y); 
+     num += remove_block(bd,x-1,y);
      x_eat_ptr[0]=x-1; y_eat_ptr[0]=y;
    }
-   if(x<bsize-1 && bd[(x+1)*bsize+y]==opcolor && no_qi(bd,x+1,y) ) {  
+   if(x<bsize-1 && bd[(x+1)*bsize+y]==opcolor && no_qi(bd,x+1,y) ) {
      num += remove_block(bd,x+1,y);
      x_eat_ptr[0]=x+1; y_eat_ptr[0]=y;
    }
-   if(y>0 && bd[x*bsize+y-1]==opcolor && no_qi(bd,x,y-1) ) { 
+   if(y>0 && bd[x*bsize+y-1]==opcolor && no_qi(bd,x,y-1) ) {
      num += remove_block(bd,x,y-1);
      x_eat_ptr[0]=x; y_eat_ptr[0]=y-1;
    }
@@ -412,7 +412,7 @@ int eat(int * bd, int x, int y, int * x_eat_ptr, int * y_eat_ptr)
 
 /* Function 'weiqi_rule' decides if the move (x,y) is legal under the
  weiqi rule. Return value 1(legal) or 0(illegal). */
- 
+
 int weiqi_rule(int x, int y)
 {
    int i,j;
@@ -422,18 +422,18 @@ int weiqi_rule(int x, int y)
    int *y_eat_ptr=allocate(1);
 
    if(x<0 || x>=bsize || y<0 || y>=bsize) return 0;
-     // This case is avoided by exact matching in 
+     // This case is avoided by exact matching in
      // translate_position().
-        if(game[x*bsize+y] != WQ_BLANK) 
+        if(game[x*bsize+y] != WQ_BLANK)
      return(WQ_POS_OCCUPIED);
-   
-   for(i=0;i<bsize;i++) for(j=0;j<bsize;j++) 
+
+   for(i=0;i<bsize;i++) for(j=0;j<bsize;j++)
      board[i*bsize+j] = game[i*bsize+j];
    if(turn == "black") board[x*bsize+y] = WQ_BLACK;
      else board[x*bsize+y] = WQ_WHITE;
    n = eat(board,x,y,x_eat_ptr,y_eat_ptr);
    if(n>1) {
-     for(i=0;i<bsize;i++) for(j=0;j<bsize;j++) 
+     for(i=0;i<bsize;i++) for(j=0;j<bsize;j++)
         game[i*bsize+j] = board[i*bsize+j];
      jie_flag = WQ_NO_JIE;
      return 1;
@@ -441,15 +441,15 @@ int weiqi_rule(int x, int y)
    else if(n==1) {
      if(jie_flag==WQ_JIE_POSSIBLE && x==jie_x_ban && y==jie_y_ban)
         return(WQ_JIE_BANNED);
-     for(i=0;i<bsize;i++) for(j=0;j<bsize;j++) 
+     for(i=0;i<bsize;i++) for(j=0;j<bsize;j++)
         game[i*bsize+j] = board[i*bsize+j];
      jie_flag = WQ_JIE_POSSIBLE;
-     jie_x_ban = x_eat_ptr[0]; 
+     jie_x_ban = x_eat_ptr[0];
      jie_y_ban = y_eat_ptr[0];
      return 1;
    }
    else { // (n==0)
-     if(no_qi(board,x,y)) 
+     if(no_qi(board,x,y))
         return(WQ_NO_QI_BANNED);
      game[x*bsize+y] = board[x*bsize+y];
      jie_flag = WQ_NO_JIE;
@@ -520,7 +520,7 @@ int translate_position(string s, int *x_ptr, int *y_ptr)
    if(match_flag) return 1;
    else return 0;
 }
-   
+
 int do_undo()
 {
     int *x_ptr=allocate(1);
@@ -530,7 +530,7 @@ int do_undo()
     object player;
     if(!me->query_temp("weiqi_seat"))
         return notify_fail("你是旁观者，怎么好意思瞎指挥？\n");
-    if(status==WQ_NOT_PLAYING) 
+    if(status==WQ_NOT_PLAYING)
         return notify_fail("还没新开一局棋呐。\n");
    if (status!=WQ_PLAYING_WUZI)
      return notify_fail("目前只提供五子棋的悔棋功能。\n");
@@ -549,7 +549,7 @@ int do_undo()
         if (lastlastmove=="")
           {
              WQ_Started=0;
-             lastmove="";   
+             lastmove="";
           }
         else
           {
@@ -559,13 +559,13 @@ int do_undo()
    else
      {
      }
-   if (turn=="black") 
+   if (turn=="black")
      {
         turn="white";
         if (lastmove!="")
           tell_room(rm,"\n黑棋上一步走在了"+lastmove+"\n");
      }
-   else { 
+   else {
      turn="black";
      if (lastmove!="")
         tell_room(rm,"\n白棋上一步走在了"+lastmove+"\n");
@@ -578,7 +578,7 @@ int do_undo()
 
    return 1;
 }
-        
+
 int do_play(string arg)
 {
    int *x_ptr=allocate(1);
@@ -591,7 +591,7 @@ int do_play(string arg)
 
    if(!me->query_temp("weiqi_seat"))
      return notify_fail("你是旁观者，怎么好意思瞎指挥？\n");
-   if(status==WQ_NOT_PLAYING) 
+   if(status==WQ_NOT_PLAYING)
      return notify_fail("还没新开一局棋呐。\n");
    if(me->query_temp("weiqi_seat") != turn)
      return notify_fail("还没轮到你走棋。\n");
