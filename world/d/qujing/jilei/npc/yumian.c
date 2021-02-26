@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 12/18/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("玉面公主", ({ "yumian gongzhu", "yumian", "gongzhu", "princess" }));
-  set("title", "积雷山");   
+  set("title", "积雷山");
   set("long", "一位娇柔万分的女子，伶俐地扭动着腰肢。\n");
   set("gender", "女性");
   set("age", 16);
@@ -76,7 +76,7 @@ void li_appearing (object who)
   object li = new ("/d/qujing/jilei/npc/li");
 
   li->announce_success (who);
-  destruct (li); 
+  destruct (li);
 }
 
 void unconcious ()
