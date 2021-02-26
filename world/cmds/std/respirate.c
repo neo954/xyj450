@@ -37,7 +37,7 @@ int main(object me, string arg)
 	me->receive_damage("gin", gin_cost);
 
 	// This function ranged from 1 to 15 when gin_cost = 30
-	atman_gain = gin_cost * ((int)me->query_skill("magic") 
+	atman_gain = gin_cost * ((int)me->query_skill("magic")
 		+ (int)me->query_spi() ) / 30;
 	atman_gain = atman_gain + random(atman_gain);
 
@@ -49,7 +49,7 @@ int main(object me, string arg)
 	me->add("atman", atman_gain );
 
 	if( (int)me->query("atman") > (int)me->query("max_atman") * 2) {
-		if( (int)me->query("max_atman") >= 
+		if( (int)me->query("max_atman") >=
                         ((int)me->query_skill("magic", 1) +
 me->query_skill("magic")/5) * 5 ) {
 			write("你忽然觉得一阵天旋地转，头涨得像要裂开一样，似乎灵力的修行已经遇到了瓶颈。\n");
@@ -67,7 +67,7 @@ int help(object me)
 {
         write(@HELP
 指令格式 : respirate [<耗费「精」的量，预设值 30>]
- 
+
 打坐修行，利用「炼精化气，炼气化神，炼神还虚」的方法将你的精力
 转变成灵力。
 
