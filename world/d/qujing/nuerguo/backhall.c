@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 4/4/1997
 // room: /d/nuerguo/backhall.c
 
@@ -33,8 +33,8 @@ LONG);
 int valid_leave (object me, string dir)
 {
   object princess;
-  princess = present("xiliang princess",environment(me)); 
-  if (princess && dir=="north") 
+  princess = present("xiliang princess",environment(me));
+  if (princess && dir=="north")
   {
     return notify_fail("小公主对你大喝一声大胆！\n");
   }
