@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //cast function: escape.c 可用于各种逃遁。
 //useful only when fighting, other cases only waste fali.
 //modified for wudidong, 10-4-97 pickle
