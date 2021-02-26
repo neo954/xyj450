@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <weapon.h>
 
 inherit SWORD;
@@ -27,7 +27,7 @@ void create()
   set("no_sell", "只听唰地一声，铁扇又自动地飞回你身上。\n");
   set("is_monitored",1);
   init_sword(25);
-  //changed from 100 to 25...weiqi,970927. though it's a fabao, 
+  //changed from 100 to 25...weiqi,970927. though it's a fabao,
   //not necessarily has high damage. actually, as a sword, should not.
   setup();
 }
