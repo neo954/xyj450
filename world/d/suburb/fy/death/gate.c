@@ -21,4 +21,3 @@ void create()
         setup();
         replace_program(ROOM);
 }
-
