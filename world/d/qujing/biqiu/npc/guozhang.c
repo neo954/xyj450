@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/22/1997 by snowcat
 #include <ansi.h>
 
@@ -69,7 +69,7 @@ void move_to_cave (object me)
   if (! where ||
       where->query("short") == "清华洞")
     return;
- 
+
   message_vision ("\n忽然间狂风四起，天昏地暗！\n",me);
   message_vision ("等你恍恍惚惚睁开眼时，$N已无踪无影！\n",me);
   me->move(room);
@@ -99,7 +99,7 @@ void king_appearing (object who)
   object king = new ("/d/qujing/biqiu/npc/king");
 
   king->announce_success (who);
-  destruct (king); 
+  destruct (king);
 }
 
 void destruct_me(object me)
