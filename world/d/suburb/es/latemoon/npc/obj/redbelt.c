@@ -4,7 +4,7 @@
 inherit WAIST;
 
 void create()
-{                              
+{
      set_name(HIG "碧玉"+ HIM "红裎带" NOR, ({"Red belt","belt"}) );
      set_weight(500);
      if ( clonep() )
