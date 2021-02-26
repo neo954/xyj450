@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // ban.c
 
 void create()
@@ -27,7 +27,7 @@ int main(object me, string arg)
    else write("指令格式：ban [+|- site]\n");
 
    return 1;
-   
+
 }
 
 int help(object me)
