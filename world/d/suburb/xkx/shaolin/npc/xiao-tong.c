@@ -42,6 +42,3 @@ void create()
 	setup();
 
 }
-
-
-
