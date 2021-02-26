@@ -10,7 +10,7 @@ LONG
         );
         set("exits", ([ /* sizeof() == 4 */
   "west" : __DIR__"nwind4",
-  "east"  : __DIR__"ghall", 
+  "east"  : __DIR__"ghall",
   "north" : __DIR__"gcang",
   "south" : __DIR__"gkitchen",
 ]));
