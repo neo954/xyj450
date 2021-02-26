@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4.12.1997
 
 inherit NPC;
@@ -54,12 +54,12 @@ void init()
        "芭蕉骨": (: allow_search :),
       ]));
 
-  if (interactive(ob = this_player()) && !is_fighting()&&       
+  if (interactive(ob = this_player()) && !is_fighting()&&
      ob->query_temp("push_nixiang")>0)
   {
     remove_call_out("greeting");
     call_out("greeting", 1, ob);
-  }       
+  }
 }
 
 void greeting(object ob)
