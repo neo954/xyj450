@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // tianwang.c
 
 inherit NPC;
@@ -30,7 +30,7 @@ void create()
    set("max_mana",1600);
    set("force_factor", 80);
    set("mana_factor",80);
-   
+
         set("eff_dx", 450000);
         set("nkgain", 500);
 
