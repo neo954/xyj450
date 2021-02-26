@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //qingfeng.c
 
 inherit NPC;
@@ -25,7 +25,7 @@ void create()
 }
 
 void init()
-{       
+{
    object ob=this_player();
    object me=this_object();
 
@@ -49,7 +49,7 @@ void greeting(object ob)
    else if ( (int)ob->query("combat_exp")>10000 )
      command("say 这位" + RANK_D->query_respect(ob) + "，请坐！用茶！\n");
    else if ( (int)ob->query("combat_exp")>1000 )
-     command("hi " + ob->query("id"));   
+     command("hi " + ob->query("id"));
    else
      return;
 }
