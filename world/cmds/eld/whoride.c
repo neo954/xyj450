@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 6/21/1997
 // whohave.c
 
@@ -16,12 +16,12 @@ mixed main(object me, string arg, int remote)
    while (i--) {
      object who = ulist[i];
      object ridee = ulist[i]->query_temp("ridee");
-     
+
      if (! ridee)
         continue;
      if (ridee->query_temp("rider") != who) {
         continue;
-     }   
+     }
      write ("  ");
      write (who->query("name")+"("+who->query("id")+")");
      write (ridee->query("ride/msg")+"在");
@@ -34,11 +34,11 @@ mixed main(object me, string arg, int remote)
 int help (object me)
 {
         write(@HELP
-指令格式 : whoride 
- 
+指令格式 : whoride
+
 可列出目前骑有坐骑的玩家。
- 
- 
+
+
 HELP
 );
         return 1;
