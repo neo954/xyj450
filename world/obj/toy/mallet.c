@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat
 
 #include <ansi.h>
@@ -26,8 +26,8 @@ void create()
   setup();
 }
 
-int init ()  
-{   
+int init ()
+{
   add_action ("do_hammer", "za");
   add_action ("do_faint", "yun");
   add_action ("do_maxfaint", "zayun");
@@ -70,7 +70,7 @@ int do_hammer (string arg)
   string name = this_object()->query("name");
 
   if (!arg) {
-    return notify_fail ("要砸哪一位妖精？\n"); 
+    return notify_fail ("要砸哪一位妖精？\n");
   }
   ob = is_present (arg,environment(me));
   if (! ob) {
@@ -104,7 +104,7 @@ int do_faint (string arg)
   if (!do_hammer(arg))
     return 0;
   if (!wizardp(this_player()))
-    return 1; 
+    return 1;
   set("value",0);
   if (this_player()->query("sen")>50)
   {
@@ -129,7 +129,7 @@ int do_maxfaint (string arg)
   if (!do_hammer(arg))
     return 0;
   if (!wizardp(this_player()))
-    return 1; 
+    return 1;
   set("value",0);
   if (this_player()->query("sen")>50)
   {
@@ -197,6 +197,6 @@ void display_fainted (object ob)
 
   message_vision(msgs[random(sizeof(msgs))],ob);
   call_out("display_fainted", random(20), ob);
-  
+
 }
 
