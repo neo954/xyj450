@@ -34,4 +34,3 @@ void reset()
         item->move(con);
         }
 }
-
