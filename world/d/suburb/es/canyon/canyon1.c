@@ -23,7 +23,7 @@ TEXT
 	
 	setup();
 	
-} 
+}
 
 void init()
 {
@@ -31,15 +31,15 @@ void init()
 }
 
 int do_climb(string arg)
-{ 
+{
         object me;
-        
+
         me=this_player();
-        
+
 	if ( arg != "chain" ) return 0;
 
         message_vision("$N手脚并用，努力地沿著铁索向上攀缘上去了\n",me);
-                       
+
 	me->receive_damage("gin", 30);
 	me->receive_damage("kee", 40);
 	me->receive_damage("sen", 20);
@@ -51,7 +51,7 @@ int do_climb(string arg)
             	me->move(__DIR__"road");
 	        return 1;
 	}
-        
+
         tell_room(__DIR__"road",me->name()+"平安的从下面爬了上来。\n");
 	me->move(__DIR__"road");
         return 1;
