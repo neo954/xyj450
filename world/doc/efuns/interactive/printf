@@ -20,16 +20,16 @@ meaningful with strings, all other types ignore this. Columns are
 auto-magically word wrapped.
 * "#" - table mode, print a list of '\\n' separated 'words' in a
 table within the field size.  only meaningful with strings.
-* a number - 
+* a number -
 specifies the field size, a '*' specifies to use the corresponding
 arg as the field size.  If n is prepended with a zero, then is padded
 zeros, else it is padded with spaces (or specified pad string).
-* "." followed by a number - 
+* "." followed by a number -
 precision of n, simple strings truncate after this (if precision is
 greater than field size, then field size = precision), tables use
 precision to specify the number of columns (if precision not specified
 then tables calculate a best fit), all other types ignore this.
-* ":" followed by a number - 
+* ":" followed by a number -
 n specifies the fs _and_ the precision, if n is prepended by a zero
 then it is padded with zeros instead of spaces.
 * "@" -
