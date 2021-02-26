@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //兑卦象征泽
 //兑、东南
 
@@ -18,11 +18,11 @@ void create ()
 衬托之下显得非常雅致。
 LONG);
 
-//  set("objects", ([ /* sizeof() == 1*/ 
+//  set("objects", ([ /* sizeof() == 1*/
 //  __DIR__"npc/erlang" : 1,
 //]));
 //  set("outdoors", 1);
-  
+
   set("position", "兑");
   set("exits", ([ /* sizeof() == 2 */
   "northeast" : __DIR__"hua_li",
@@ -37,7 +37,7 @@ void init()
 }
 
 int do_jump(string arg)
-{       
+{
         object me;
         me=this_player();
 
