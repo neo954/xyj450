@@ -113,9 +113,9 @@ mapping *action = ({
 });
 
 
-int valid_enable(string usage) 
-{ 
-    return usage == "sword" || usage == "dodge"; 
+int valid_enable(string usage)
+{
+    return usage == "sword" || usage == "dodge";
 }
 
 string query_skill_name(int level)
