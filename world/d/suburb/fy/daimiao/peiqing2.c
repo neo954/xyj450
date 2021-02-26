@@ -1,6 +1,6 @@
 //mac's peiqing1.c
-// 
-// 
+//
+//
 
 #include <room.h>
 inherit ROOM;
