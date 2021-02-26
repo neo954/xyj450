@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // tell.c
 
 #include <ansi.h>
@@ -34,9 +34,9 @@ int main(object me, string arg)
    if( !wizardp(me) && obj->query("env/block_tell") )
       return notify_fail(obj->name(1) + "眼下不想跟任何人说话。\n");
 
-        if(!living(obj) || obj->query_temp("netdead")) 
+        if(!living(obj) || obj->query_temp("netdead"))
      return notify_fail(obj->name(1)+"现在听不见你说的话。\n");
-     
+
    write(GRN "你告诉" + obj->name(1) + "：" + msg + "\n" NOR);
    tell_object(obj, sprintf( GRN "%s告诉你：%s\n" NOR,
      me->name(1)+"("+me->query("id")+")", msg));
@@ -56,7 +56,7 @@ string remote_tell(string cname, string from, string mud, string to, string msg)
            if( ob->query("env/block_tell") ) return
        ob->query("name")+"现在不想和任何人说话。";
 
-                if(!living(ob) || ob->query_temp("netdead")) 
+                if(!living(ob) || ob->query_temp("netdead"))
              return ob->query("name")+"现在听不见你说的话。\n";
 
      if( cname )
@@ -66,7 +66,7 @@ string remote_tell(string cname, string from, string mud, string to, string msg)
         tell_object(ob, sprintf(HIG "%s@%s 告诉你：%s\n" NOR,
           capitalize(from), mud, msg ));
      ob->set_temp("reply", from + "@" + mud);
-     return ob->query("name")+"收到了你的消息。";  
+     return ob->query("name")+"收到了你的消息。";
      // if succeed, return target's name.
    } else
      return "现在找不到这个人。";
