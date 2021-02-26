@@ -77,4 +77,3 @@ void close(object room)
         message("vision","轰隆隆的响声响过之后，石板又合上了。\n", room);
         room->delete("exits/enter");
 }
-
