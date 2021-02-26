@@ -14,7 +14,7 @@ void create()
 
         set("gender", "男性" );
         set("age", 43);
-        set("long", 
+        set("long",
 "买卖提是个中年维吾尔族商人，去过几次中原，能讲一点儿汉话。\n");
         set_skill("unarmed", 50);
         set_skill("dodge", 50);
@@ -24,7 +24,7 @@ void create()
         set("attitude", "friendly");
         set("rank_info/respect", "大叔");
 
- 
+
         set("vendor_goods", ({
                 __DIR__"obj/hu",
                 __DIR__"obj/nang",
