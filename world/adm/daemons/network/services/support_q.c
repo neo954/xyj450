@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /* File    : support_q.c
  * Creator : Pinkfish@Discworld
  *         : Grendel@Tmi-2
