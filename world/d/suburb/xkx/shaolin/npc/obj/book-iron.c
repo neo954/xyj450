@@ -42,8 +42,8 @@ int do_study(string arg)
 	if ( arg != "iron hand" && arg != "hand" )
 	return notify_fail("你要学什么？\n");
 
-	if ( me->is_fighting() 
-	&& (int)me->query_skill("parry", 1) >= 30 
+	if ( me->is_fighting()
+	&& (int)me->query_skill("parry", 1) >= 30
 	&& (int)me->query_skill("parry", 1) <= 100 )
 	{
 		me->receive_damage("gin", 20);
