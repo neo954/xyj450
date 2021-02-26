@@ -14,9 +14,9 @@ LONG
   "southdown" : __DIR__"eroad3",
 ]));
         set("objects", ([ /* sizeof() == 2 */
-                CLASS_D("taoist") + "/taolord":1,      
+                CLASS_D("taoist") + "/taolord":1,
                 __DIR__"npc/tao_first" : 1,
-               __DIR__"npc/tao_2" : 1        
+               __DIR__"npc/tao_2" : 1
          ]));
         set("valid_startroom", 1);
         setup();
