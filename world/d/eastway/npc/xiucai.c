@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 string *first_name = ({ "赵","钱","孙","李","周","吴","郑","王"});
