@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xjy04.c
 // created 7/7/1997 snowcat
 
@@ -32,7 +32,7 @@ int read_book(string arg)
 {
   object me = this_player();
   object ob = this_object();
-    
+
   if (!ob->id(arg))
       return notify_fail("你要读什么？\n");
   write("\n");
