@@ -127,5 +127,3 @@ int do_tiao(string arg)
   me->receive_damage("kee", (int)me->query("max_kee")/10);
   return 1;
 }
-
-
