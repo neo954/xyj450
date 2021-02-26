@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
- 
+
+
 inherit NPC;
- 
+
 void create()
 {
-   set_name("典簿", ({"dian bu"})); 
+   set_name("典簿", ({"dian bu"}));
         set("gender", "男性" );
    set("long", "御马监典簿。\n");
         set("age",40);
@@ -24,5 +24,5 @@ void create()
         setup();
         carry_object("/d/obj/cloth/xianpao")->wear();
 }
- 
+
 
