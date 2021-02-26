@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 10/21/1997
 // room: /d/qujing/chechi/tangchi.c
 
@@ -21,7 +21,7 @@ LONG);
         "east"         : __DIR__"jieshi2",
       ]));
 
-  set("objects", ([ 
+  set("objects", ([
         __DIR__"obj/yujin" : 1,
       ]));
 
