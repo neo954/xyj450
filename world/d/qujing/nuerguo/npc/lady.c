@@ -35,4 +35,3 @@ void init()
 {
   ::init();
 }
-
