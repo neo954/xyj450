@@ -12,7 +12,7 @@ void create()
 碗大的圆孔(hole)。石墙的后面传出“吱吱嘎嘎”的声音(noise)。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
         "south" : __DIR__"gate_castle",
         ]));
         set("item_desc", ([
@@ -23,7 +23,7 @@ LONG
 ]));
 
         set("outdoors", "chuenyu");
-        
+
         create_door("south", "城门", "north", DOOR_CLOSED);
         setup();
 }
@@ -53,6 +53,6 @@ int arrowing(object ob)
         call_out("arrowing",5, ob);
         }
         else
-        
+
         return 1;
 }
