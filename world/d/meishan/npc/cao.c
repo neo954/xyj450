@@ -102,4 +102,3 @@ int accept_fight (object me)
   }
   return 1;
 }
-
