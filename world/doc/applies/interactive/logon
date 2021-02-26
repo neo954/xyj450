@@ -1,6 +1,6 @@
 logon - initialize a logon connection
 
-object logon(); 
+object logon();
 
 This apply is called on the object returned by the connect() master
 apply, after that object has been made into an interactive object,
