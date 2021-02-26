@@ -3,49 +3,49 @@
 inherit SKILL;
 
 mapping *action = ({
-        ([      "action":               
+        ([      "action":
 "$N使出一招「穿心百抓」，右手抓向$n的$l",
                 "dodge":                -300,
                 "parry":                -110,
                 "force":                200,
                 "damage_type":  "抓伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出一招「残天九连抓」，左手化指为爪，连续击向$n的$l",
                 "dodge":                -100,
                 "parry":                -200,
                 "force":                170,
                 "damage_type":  "抓伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出九阴白骨爪的「爪底亡魂」，如鬼魅般欺至$n身前，一爪勾向$n的$l",
                 "dodge":                -300,
                 "parry":                -220,
                 "force":                150,
                 "damage_type":  "抓伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N双臂一错，使出「戕帝狂爪」，对准$n的$l连续抓出",
                 "dodge":                -510,
                 "parry":                -200,
                 "force":                290,
                 "damage_type":  "抓伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N左手指甲暴突，奋力推出，一招「九阴腐万象」，抓向$n$l",
                 "dodge":                -200,
                 "parry":                -200,
                 "force":                170,
                 "damage_type":  "抓伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出「九阴穿两仪」，双手同时向$n的$l出爪攻击",
                 "dodge":                -100,
                 "parry":                -100,
                 "force":                180,
                 "damage_type":  "抓伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N吐气扬声，一招「邪巫神天爪」双臂并力递出",
                 "parry":                -400,
                 "force":                320,
@@ -60,7 +60,7 @@ int valid_learn(object me)
         if( me->query_temp("weapon") || me->query_temp("secondary_weapon") )
                 return notify_fail("练九阴白骨爪必须空手。\n");
         if( (int)me->query_skill("nine-moon-force", 1) < 10 )
-                return 
+                return
 notify_fail("你的九阴心经火候不足，无法练九阴白骨爪。\n");
         if( (int)me->query("max_force") < 100 )
                 return notify_fail("你的内力太弱，无法练九阴白骨爪。\n");
@@ -98,7 +98,7 @@ mixed hit_ob(object me, object victim, int damage_bonus)
                 }
         }
 }
- 
+
 string perform_action_file(string action)
 {
         return CLASS_D("ninemoon") + "/ninemoonclaw/" + action;
