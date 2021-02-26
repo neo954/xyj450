@@ -41,4 +41,3 @@ void create()
         carry_object(__DIR__"obj/yafu")->wear();
         carry_object(__DIR__"obj/sawei")->wield();
 }
-
