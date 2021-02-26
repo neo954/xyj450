@@ -199,4 +199,3 @@ void display_fainted (object ob)
   call_out("display_fainted", random(20), ob);
 
 }
-
