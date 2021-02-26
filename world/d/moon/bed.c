@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create()
@@ -12,7 +12,7 @@ void create()
 衾鸳枕之间散发出一丝丝幽香．
 LONG
         );
-        
+
         set("exits", ([
                 "out": __DIR__"bedroom",
             ]));
@@ -20,7 +20,7 @@ LONG
         set("no_magic", 1);
         set("sleep_room",1);
         set("if_bed",1);
-                                              
+
         setup();
 }
 
