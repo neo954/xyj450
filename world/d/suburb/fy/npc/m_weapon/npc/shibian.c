@@ -33,7 +33,7 @@ void create()
 	set("score",0);
 	
 	set("attitude", "peaceful");
-        
+
 	set("inquiry", ([
 		"造鞭"  : "师傅命我帮助别人造鞭，但到现在也不见一个人影。谁要造鞭呢？\n",
 		"原料"  : "造鞭只能用寒丝羽竹。\n",
@@ -59,9 +59,9 @@ int accept_object(object who, object ob)
 	}
 	who->delete_temp("whip");
 	who->set_temp("m_whip",1);
-	switch ((string)ob->query("name") ) 
+	switch ((string)ob->query("name") )
 	{
-		case "寒丝羽竹": 
+		case "寒丝羽竹":
 			break;
 		default :
 			message("vision","这是什么！师傅说这不能用来打造长鞭！",who);
@@ -81,7 +81,7 @@ int do_zhu(string arg)
 	object whip,make_time;   //生成的武器句柄
 	object me;
 	me = this_player();
-	if(!(me->query_temp("m_whip")) ) 
+	if(!(me->query_temp("m_whip")) )
 		return notify_fail("什么?\n");
 	me->delete_temp("m_whip");
 	me->delete_temp("get_orc");
