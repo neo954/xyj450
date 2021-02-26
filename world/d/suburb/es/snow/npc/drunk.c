@@ -1,9 +1,9 @@
 inherit NPC;
- 
+
 void do_drink();
- 
+
 int has_alcohol;
- 
+
 void create()
 {
         seteuid(getuid());
@@ -26,7 +26,7 @@ TEXT
         carry_object("/obj/example/wineskin");
         has_alcohol = 1;
 }
- 
+
 void do_drink()
 {
     object *list, ob;
@@ -56,7 +56,7 @@ void do_drink()
     }
     return;
 }
- 
+
 int accept_object(object who, object ob)
 {
     if ((string)ob->query("liquid/type")=="alcohol") {
@@ -96,4 +96,4 @@ int accept_object(object who, object ob)
     }
     else return 0;
 }
- 
+
