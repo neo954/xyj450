@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhangchu.c 掌厨僧�
 // By Dream Dec. 20, 1996
 
@@ -47,7 +47,7 @@ void create()
         set("apply/danno", 10);
 
         create_family("南海普陀山", 4, "弟子");
-   
+
    setup();
    add_money("silver", 20);
    carry_object("/d/nanhai/obj/sengpao")->wear();
@@ -58,11 +58,11 @@ string ask_yao(object me)
    object ob, who = this_player();
    int number;
 
-        if (who->query("family/family_name") != "南海普陀山") 
+        if (who->query("family/family_name") != "南海普陀山")
      return RANK_D->query_respect(who) +"与本门毫无渊源，为什么问起这个？\n";
 
 if (present("yunnan baiyao", who)) return "你身上不是已经有云南白药了吗，怎么又来要？\n";
-   
+
    if (!(number = me->query("apply/yaono"))) return "对不起，云南白药已经全部发放出去了。\n";
    set("apply/yaono", --number);
 
