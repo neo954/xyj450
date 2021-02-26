@@ -104,6 +104,3 @@ void hurting (object me, object ob)
 
   call_out ("hurting",random(10)+10,me,ob);
 }
-
-
-
