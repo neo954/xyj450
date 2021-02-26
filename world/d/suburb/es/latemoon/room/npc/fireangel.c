@@ -1,6 +1,6 @@
 inherit NPC;
 #include <ansi.h>
- 
+
 void create()
 {
          set_name("凤凰", ({ "phoenix","fire" }) );
@@ -28,7 +28,7 @@ TEXT
         set("force_factor", 30);
         set("attitude", "friendly");
          set_temp("apply/armor", 100);
-        
+
         setup();
 }
 void init()
