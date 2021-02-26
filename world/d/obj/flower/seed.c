@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/5/1997 by snowcat
 #include <ansi.h>
 #include <dbase.h>
