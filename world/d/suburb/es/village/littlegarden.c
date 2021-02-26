@@ -22,4 +22,3 @@ LONG
         set("outdoors", "village");
         setup();
 }
-
