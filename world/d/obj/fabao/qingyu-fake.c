@@ -1,14 +1,14 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 青玉葫芦, created by mes
 // updated 6-9-97 pickle
- 
+
 #include <ansi.h>
 #include <weapon.h>
- 
+
 inherit ITEM;
- 
+
 void create()
 {
     set_name(HIC "青玉葫芦" NOR,({"qingyu hulu", "qingyu", "hulu", "qingyuhulu", "fabao"}));
@@ -35,7 +35,7 @@ int ji(string target)
     if(!me->is_fighting()) return notify_fail("只有战斗中才能祭"+objname+"。\n");
     if( (int)me->query("mana") < 300 ) return notify_fail("这么一点点法力也想驱动法宝？\n");
     if( (int)me->query("sen") < 100 ) return notify_fail("你无法集中精神念咒语。\n");
-    weapon = victim->query_temp("weapon"); 
+    weapon = victim->query_temp("weapon");
     if(!weapon) return notify_fail("你的敌人并没有使用武器。\n");
     return notify_fail("无论你怎么念咒，"+objname+"就是不动。\n");
 }
