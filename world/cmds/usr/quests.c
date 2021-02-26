@@ -243,5 +243,3 @@ int telling (object me, object who)
   write ("\n");
   return 1;
 }
-
-
