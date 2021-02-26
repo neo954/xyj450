@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // suicide.c
 
 #include <ansi.h>
@@ -17,7 +17,7 @@ int main(object me, string arg)
      return 1;
    }
 
-   if( arg!="-f" ) 
+   if( arg!="-f" )
      return notify_fail("自杀有两种，您是要永远死掉还是重新投胎？\n");
 
    write(
@@ -78,7 +78,7 @@ private int slow_suicide(object me)
    // remove mailbox.
    rm( "/data/mail/"+myid[0..0]+"/"+myid+ __SAVE_EXTENSION__ );
 
-   // remove couple's home as well. (the home is registered by the 
+   // remove couple's home as well. (the home is registered by the
    // couple.)
    couple=me->query("coupld/id");
    if(couple)
@@ -97,16 +97,16 @@ int help (object me)
 {
         write(@HELP
 指令格式: suicide [-f]
- 
+
 如果因为某种原因你不想活了, 你可以选择自杀.
 自杀分两种:
- 
+
 suicide    : 重新投胎
 suicide -f : 永远的除去玩家资料, 系统会要求你
              输入密码以确认身份.
- 
+
 请慎重选择 :)
- 
+
 HELP
 );
         return 1;
