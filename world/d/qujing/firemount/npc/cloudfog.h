@@ -111,4 +111,3 @@ void check_fight (object me, object who)
     player_lose (me, who);
 
 }
-
