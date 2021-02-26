@@ -1,8 +1,8 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //cast function: qiankun.c 袖里乾坤。
-//need to be activated by 镇元大仙 to use this cast...weiqi, 
+//need to be activated by 镇元大仙 to use this cast...weiqi,
 //weiqi, mon 1/98
 
 #include <ansi.h>
@@ -26,7 +26,7 @@ int cast(object me, object target)
 
 //   if( !target ) target = offensive_target(me);
 
-        if(!target) 
+        if(!target)
         {
           //see if I am fighting someone...this is useful for NPC...
           if(  (offensive_target(me)) ) target = offensive_target(me);
@@ -86,30 +86,30 @@ int cast(object me, object target)
 
    msg =  HIR "$N喃喃地念了几句咒语，突然大袖一挥朝$n罩了过去！\n" NOR;
    message_vision(msg, me, target);
-   
+
    target->kill_ob(me);
 
    success = 1;
    ap = me->query_skill("spells");
    ap = ap * ap * ap /10 ;
    ap += (int)me->query("combat_exp");
-   ap = 3*ap; 
+   ap = 3*ap;
    dp = target->query("combat_exp");
    if( random(ap + dp) < dp ) success = 0;
-//here we compared exp and spells level. 
+//here we compared exp and spells level.
 //note: has nothing to do with target's spells level.
 
    ap = (int)me->query("max_mana");
    dp = (int)target->query("max_mana");
    if( ap < random(dp) ) success = 0;
 //here we compared max_mana.
-//if the attacher has half of the max_mana of the target, 
+//if the attacher has half of the max_mana of the target,
 //he has 50% chance to success.
 
    if(success == 1 )
    {
      me->add("mana", -400);
-   
+
            sleeveroom=load_object("/d/wiz/sleeveroom");
      if(!sleeveroom) return notify_fail("你的袖子恐怕破了。\n");
 
@@ -136,7 +136,7 @@ int cast(object me, object target)
          me->query("name")+"的衣袖中",({sname,"sleeve"}));
                   sleeve->set("short",
          me->query("name")+"的衣袖中");
-       if(!sleeve->move(sleeveroom)) 
+       if(!sleeve->move(sleeveroom))
          return notify_fail("你的袖子恐怕破了。\n");
      }
 
@@ -148,15 +148,15 @@ int cast(object me, object target)
        msg+="$n对$N来说太沉了。\n";
        message_vision(msg, me, target);
      }
-     
+
    }
-   else 
+   else
    {
      msg =  HIR "结果被$n法力一逼，差点罩住$N自己的脑袋。\n" NOR;
      message_vision(msg, me, target);
 
      me->add("mana", -400);
-   } 
+   }
 
    return 3+random(5);
 }
