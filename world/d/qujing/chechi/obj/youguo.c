@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 15 1997
 
 inherit ITEM;
@@ -60,7 +60,7 @@ void disturbed (object me, object who)
     return;
   message_vision (msg,who);
   msg = replace_string (msg,"$N",who->name());
-  tell_room(where,"油锅中"+msg,who);    
+  tell_room(where,"油锅中"+msg,who);
   call_out("disturbed",5+random(20),me,who);
 }
 
@@ -80,7 +80,7 @@ void autoleave (object me, object who, int i)
   who->move(environment(me));
   message_vision ("几个内官上来用铁爪篱捞出$N。\n",who);
   if (interactive(who))
-    who->unconcious(); 
+    who->unconcious();
 }
 
 int do_look (string arg)
