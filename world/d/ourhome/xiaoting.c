@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/ourhome/xiaoting.c
 //cglaem...12/15/96.
 
@@ -19,11 +19,11 @@ void create()
 
    set("long", @LONG
 
---聚 见 亭-- 
+--聚 见 亭--
 
 秋风清，秋风明
 落叶聚还散
-寒鸦栖复惊 
+寒鸦栖复惊
 相思相见知何日
 此时此夜难为情
 
@@ -38,14 +38,14 @@ LONG
    "north" : __DIR__"kedian4",
    ]));
 
-  set("objects", ([ 
+  set("objects", ([
                __DIR__"obj/table" : 1,
                __DIR__"obj/seat" : 2,
         ]));
-                                              
+
    set("no_clean_up", 0);
-      
-   setup();     
+
+   setup();
 }
 
 void init()
@@ -56,23 +56,23 @@ void init()
 }
 
 int do_sit(string arg)
-{     
+{
       object me;
 
       me=this_player();
 
    if ( !arg || ((arg != "seat")&&(arg != "table") ))
-     return notify_fail("你要坐在什么上面？\n");   
-   
+     return notify_fail("你要坐在什么上面？\n");
+
    if (this_player()->query_temp("marks/sit"))
-     return notify_fail("你已经坐下了。\n");   
-      
-      if ( arg != "seat")   
+     return notify_fail("你已经坐下了。\n");
+
+      if ( arg != "seat")
          return notify_fail("坐桌子上？太不雅观了吧。\n");
-           
+
    this_player()->set_temp("marks/sit", 1);
    message_vision("$N舒舒服服地在石凳上坐下来，翘起了二郎腿。\n",me);
-      return 1;   
+      return 1;
 }
 
 int do_stand(string arg)
