@@ -97,4 +97,3 @@ mixed hit_ob(object me, object victim, int damage_bonus)
 		return HIR "你听到「喀啦」一声轻响，竟似是骨碎的声音！\n" NOR;
 	}
 }
-
