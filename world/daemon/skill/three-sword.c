@@ -3,35 +3,35 @@
 inherit SKILL;
 
 mapping *action = ({
-        ([      "action":               
+        ([      "action":
 "$N使出天字诀中的「日月互转」，$w交于左手，向$n的$l刺来",
                 "dodge":                20,
                 "damage":               30,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N左手握成天字诀，右手中的$w使出一招「风云突起」，斩向$n的$l",
                 "dodge":                20,
                 "damage":               30,
                 "damage_type":  "割伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出一招地字诀中的「山水相连」，身形婉如流水，手中$w有如泰山地斩向$n的$l",
                 "dodge":                40,
                 "damage":               20,
                 "damage_type":  "割伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N一式地字诀中的「水火无情」对准$n的$l刺出一剑",
                 "dodge":                40,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N手中$w一招人字诀中的「众生平等」，化出无数剑尖向$n刺出",
                 "dodge":                40,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N双手握剑，一招人字诀中的「生老病死」刺向$n的$l",
                 "dodge":                420,
                 "damage":               60,
@@ -78,7 +78,7 @@ string perform_action_file(string action)
 {
         return CLASS_D("wudang") + "/three-sword/" + action;
 }
- 
+
 int effective_level() { return 17;}
 
 string *parry_msg = ({
