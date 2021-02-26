@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 李建成 npc: /d/jjf/npc/lijiancheng.c
 // created 5-20-97 pickle
- 
+
 inherit NPC;
 string expell_me(object me);
- 
+
 void create()
 {
   set_name("李元吉", ({"li yuanji", "li", "yuanji", "liyuanji", "jianwang", "jian wang", "wang", "jian"}));
@@ -15,7 +15,7 @@ void create()
 为无用。他空有一身蛮力，但无恶不作，毫不以领地百姓为重。
 且在作战时屡失重要据点，实在令高祖大为头痛。
 LONG);
- 
+
   set("title", "建王");
   set("gender", "男性");
   set("age", 22);
@@ -46,11 +46,11 @@ LONG);
   set("force_factor", 50);
 
   setup();
-  carry_object("/d/jjf/obj/lingjian-jian.c"); 
+  carry_object("/d/jjf/obj/lingjian-jian.c");
   carry_object("/d/obj/weapon/blade/yanblade")->wield();
   carry_object("/d/obj/armor/tiejia")->wear();
 }
- 
+
 int accept_fight(object me)
 {
   string myrude=RANK_D->query_rude(me), player=me->query("id");
