@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhangchan.c 掌禅僧
 // By Dream Dec. 20, 1996
 
@@ -45,7 +45,7 @@ void create()
    set("apply/staffno", 10);
    set("apply/spearno", 10);
         create_family("南海普陀山", 4, "弟子");
-   
+
    setup();
    carry_object("/obj/money/gold");
    carry_object("/d/nanhai/obj/sengpao")->wear();
@@ -58,7 +58,7 @@ string ask_staff(object me)
    int number;
 
 
-   if (who->query("family/family_name") != "南海普陀山") 
+   if (who->query("family/family_name") != "南海普陀山")
      return RANK_D->query_respect(who) +"与本门毫无渊源，为什么问起这个？\n";
 
    if (present("tie zhang", who)) return "你身上不是已经有铁杖了吗，怎么又来要？\n";
