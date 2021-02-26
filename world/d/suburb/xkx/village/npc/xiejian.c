@@ -47,7 +47,7 @@ void create()
 	set("shen_type", -1);
 	set("env/wimpy", 60);
 
-	set_skill("force", 60); 
+	set_skill("force", 60);
 	set_skill("unarmed", 80);
 	set_skill("sword", 100);
 	set_skill("dodge", 100);
@@ -68,7 +68,7 @@ void init()
 
         ::init();
 
-	if( !me->query("waiting_target") && ob->query_temp("fee_paid") ) 
+	if( !me->query("waiting_target") && ob->query_temp("fee_paid") )
 		ob->delete_temp("fee_paid");
 
         add_action("do_name","杀");
@@ -84,20 +84,20 @@ int do_name(string target)
 {
 	object me, dest, *all;
 	int i;
- 
+
 	me = this_object();
 	all = users();
 
 	if(me->query("waiting_target"))
 		return notify_fail("李四嘿嘿一笑：我现在正忙着哪，您呆会儿在来吧！\n");
 	
-	if( !this_player()->query_temp("fee_paid") ) 
+	if( !this_player()->query_temp("fee_paid") )
 		return notify_fail("李四说道：不管叫我做什麽，您可得先付钱哪！\n");
 
-	if( !target || target==" ") 
+	if( !target || target==" ")
 		return notify_fail("李四恶狠狠地说道：快告诉我那家伙的名字，我可没功夫听你闲聊！\n");
 
-	for(i=0; i<sizeof(all); i++) 
+	for(i=0; i<sizeof(all); i++)
 	{
 		if( target == all[i]->name() || target == all[i]->id() )
 			dest = all[i];
@@ -142,15 +142,15 @@ int do_name(string target)
 int accept_object(object who, object ob)
 {
 	
-	if (ob->query("money_id") && ob->value() >= 1000000 
-		&& !this_object()->query("waiting_target")) 
+	if (ob->query("money_id") && ob->value() >= 1000000
+		&& !this_object()->query("waiting_target"))
 	{
 		tell_object(who, "李四沉下脸来：好，爽快说吧，你要我帮你杀谁？\n");
 		tell_object(who, "请键入：杀 目标中文名字\n");
 		who->set_temp("fee_paid",1);
 		return 1;
 	}
-	else if (ob->query("money_id") && ob->value() < 1000000) 
+	else if (ob->query("money_id") && ob->value() < 1000000)
 	{
 		tell_object(who, "李四嘿嘿一笑，说道：给我这麽多钱？ 将来我可没法还你啊。\n");
 		return 1;
@@ -204,7 +204,7 @@ int do_kill(object me, object dest)
 
 		call_out("checking", 0,  me); 	
 	}
-	else  
+	else
 		call_out("waiting", 1, me); 	
 	
 	return 1;
@@ -242,7 +242,7 @@ int checking(object me)
 {
 	object ob;
 
-	if (me->is_fighting()) 
+	if (me->is_fighting())
 	{
 		call_out("checking", 1, me);
         return 1;
@@ -265,7 +265,7 @@ int do_back(object me)
 
 	me->move("/d/suburb/xkx/village/shop");
 	message("vision", "李四走了进来，拍了拍身上的尘土，把剑上的血迹抹拭干净，\n"
-		"他接着一笑说道：老天爷保佑，活儿干得干净利落，您老以後有什麽事还可以找我。\n", 
+		"他接着一笑说道：老天爷保佑，活儿干得干净利落，您老以後有什麽事还可以找我。\n",
 		environment(), me );
 
 	me->set("title", "小店老板");
