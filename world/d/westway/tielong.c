@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -34,7 +34,7 @@ int do_break()
      return notify_fail("铁笼已经打开了，别费劲了。\n");
 
    message_vision("$N扯着铁栏杆，双手一较劲，大喊一声“开！”\n", me);
-   
+
    if( i > 300)
      tell_room(this_object(), "只听铁栏杆发出“咔，咔”的响声………\n");
    else if( i > 200)
@@ -47,7 +47,7 @@ int do_break()
    this_object()->add("break", i);
    me->receive_damage("kee", 30);
    me->add("force", -(int)me->query("force_factor"));
-   
+
    if( (int)me->query("force") < 0 ){
      me->set("force", 0);
    }
@@ -72,8 +72,8 @@ int valid_leave(object me, string dir)
         return notify_fail("这个方向没有出路。\n");
      message_vision("$N躬身从铁笼中钻了出去。\n", me);
      return 1;
-        }   
-   
+        }
+
 }
 
 
