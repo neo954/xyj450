@@ -35,4 +35,3 @@ void create()
 //        carry_object(__DIR__"obj/teablock");
 //        carry_object(__DIR__"obj/perfume");
 }
-
