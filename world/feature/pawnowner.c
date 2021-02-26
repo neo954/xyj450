@@ -268,4 +268,3 @@ int do_redeem(string arg)
 	me->start_busy(1);
 
 }
-
