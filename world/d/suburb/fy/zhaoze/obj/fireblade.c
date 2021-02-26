@@ -10,7 +10,7 @@ void create()
         else {
                 set("unit", "把");
                 set("long",
-                        
+
 "一把非金非木，通体暗红的长刀\n"
 );
                 set("value", 18000);
@@ -37,4 +37,4 @@ mixed hit_ob(object me, object victim, int damage_bonus)
 	return HIR "火焰长刀喷出一股猩红的火焰，燎烤着$n的全身。\n" NOR;
 	}
 }
- 
+
