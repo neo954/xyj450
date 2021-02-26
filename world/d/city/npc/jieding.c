@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 int give_book ();
@@ -71,10 +71,10 @@ int give_book ()
     command ("shake");
     return 1;
   }
-  
+
   book = new ("/d/obj/books-nonskill/book-qujing");
   add("books",-1);
   message_vision ("疥顶小僧给$N一本$n。\n",who,book);
   book->move(who);
-  return 1; 
+  return 1;
 }
