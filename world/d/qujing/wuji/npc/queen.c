@@ -55,4 +55,3 @@ void telling (object me, object who, object ob)
   me->command_function("sigh");
   me->command_function("give "+who->query("id")+" yu gui");
 }
-
