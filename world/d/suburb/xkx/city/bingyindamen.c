@@ -1,5 +1,5 @@
 // Room: /city/bingyindamen.c
-// YZC 1995/12/04 
+// YZC 1995/12/04
 
 inherit ROOM;
 
@@ -26,7 +26,7 @@ LONG
 
 int valid_leave(object me, string dir)
 {
-	if (!wizardp(me) && objectp(present("guan bing", environment(me))) && 
+	if (!wizardp(me) && objectp(present("guan bing", environment(me))) &&
 		dir == "south")
 		return notify_fail("官兵拦住了你的去路。\n");
 	return ::valid_leave(me, dir);
