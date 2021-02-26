@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // jinguzhou.c
 #include <ansi.h>
 
@@ -14,7 +14,7 @@ int cast(object me, object target)
 
         if( !target ) target = offensive_target(me);
 
-   if( !(ob = present("jingu zhou", me))) 
+   if( !(ob = present("jingu zhou", me)))
      return notify_fail("你身上没有紧箍咒、金箍咒或禁箍咒，无法施用咒语！\n");
    name="“"+ob->query("name")+"”";
 
@@ -43,7 +43,7 @@ int cast(object me, object target)
 
         msg = HIC
 "$N默默地将那"+name+"念了几遍。\n" NOR;
- 
+
         ap = me->query_skill("spells");
         ap = ( ap * ap * ap / (4 * 400) ) * (int)me->query("sen");
         ap += (int)me->query("combat_exp");
@@ -52,7 +52,7 @@ int cast(object me, object target)
                 damage = (int)me->query("max_mana") / 10 +
 random((int)me->query("eff_sen") / 5);
                 damage -= (int)target->query("max_mana") / 10 +
-random((int)target->query("eff_sen") / 5);         
+random((int)target->query("eff_sen") / 5);
                 damage+=(int)me->query("mana_factor")-random((int)target->query("mana_factor"));
 //here we can see if 2 players are at same status, the attacker has higher chance.
                 if( damage > 0 ) {
@@ -73,7 +73,7 @@ random((int)target->query("eff_sen") / 5);
 
                 }
      else msg += "但是什么也没发生。\n";
-             } 
+             }
         else
                 msg += "但是什么也没发生。\n";
 
@@ -100,7 +100,7 @@ target->kill_ob(me);
 
 void free(object target)
 {
-        if(target) target->delete_temp("no_move");      
+        if(target) target->delete_temp("no_move");
         return;
 }
 
