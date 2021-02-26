@@ -1,9 +1,9 @@
 // feihuangshi.c
- 
+
 #include <weapon.h>
- 
+
 inherit THROWING;
- 
+
 void create()
 {
 	set_name("飞蝗石", ({ "feihuangshi", "shi" }) );
