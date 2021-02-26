@@ -50,7 +50,7 @@ int boost_skill()
         if( !mapp(lrn) ) lrn = ([]);
 
        for(i=0; i<sizeof(skl); i++) {
-		if(skl[sname[i]] >= f_lvl) 
+		if(skl[sname[i]] >= f_lvl)
 		{
 			s_lvl = f_lvl;
 			s_ski = f_ski;
