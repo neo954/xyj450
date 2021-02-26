@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // gao.c
 
 inherit NPC;
@@ -63,7 +63,7 @@ void announce(object me, object who)
   {
     tell_object (who,"你已经过了这一关，什么都得不到了！\n");
     return;
-  }  
+  }
 
   i = random(600);
   who->add("obstacle/number",1);
