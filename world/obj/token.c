@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // token.c
 
 inherit ITEM;
@@ -36,7 +36,7 @@ string long()
     modify <项目> <字串>    修改信物的外观、门派名称等等
     assign                  将组织领袖的位置传给别人
     dismiss                 永久解散这个组织
-    
+
 TEXT
    ;
    else return @TEXT
@@ -86,7 +86,7 @@ int do_unseal(string arg)
         "只有巫师能解除领袖信物的封印，如果你要创立一个新的门派或帮会，请\n"
         "先找一位巫师做担保人，请他(她)为你解除封印。\n");
 
-   if(!arg) 
+   if(!arg)
      return notify_fail("指令格式：unseal <门派代号> <门派名称>\n");
 
    if( sscanf(arg, "%s %s", guild_id, guild_name)!= 2 ) {
@@ -125,7 +125,7 @@ int do_assign(string arg)
    string assign_msg;
 
    if( !arg || !objectp(ob = present(arg, environment(this_player())))
-   || !living(ob) ) 
+   || !living(ob) )
      return notify_fail("你要将掌门人之位传给谁？\n");
 
    family = this_player(1)->query("family");
@@ -161,7 +161,7 @@ int do_modify(string arg)
    string prop, str;
 
    if( !query("guild_id") ) return 0;
-   
+
    if( !arg || sscanf(arg, "%s %s", prop, str)!=2 )
      return notify_fail("指令格式：modify <项目> <讯息>\n");
    switch(prop) {
