@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // qiankun fake
 // created by bbs, 4-12-98.
 
@@ -34,7 +34,7 @@ int ji(string target)
     victim=present(target,environment(me));
     if(!victim) return notify_fail("这里没有 "+target+"。\n");
     if(!living(victim)) return notify_fail("你的目标不是活物！\n");
-    if(!me->is_fighting()) return notify_fail("只有战斗中才能祭"+objname+"。\n");  
+    if(!me->is_fighting()) return notify_fail("只有战斗中才能祭"+objname+"。\n");
     if( (int)me->query("mana") < 250)
         return notify_fail("你的法力不够了！\n");
     if( (int)me->query("sen") < 100)
