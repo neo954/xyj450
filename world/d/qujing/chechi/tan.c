@@ -31,4 +31,3 @@ LONG);
   set("outdoors","/d/qujing/chechi");
   setup();
 }
-
