@@ -32,4 +32,3 @@ int valid_leave(object me, string dir)
                 return notify_fail("巴依说: 我把阿凡提关在我的客厅里了，谁也不许进去。\n");
         return ::valid_leave(me, dir);
 }
-
