@@ -43,5 +43,3 @@ int do_all(string arg)
     set("exits/southwest", __DIR__"shanshi1");
   return 0;
 }
-
-
