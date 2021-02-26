@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
         set_name("圆春", ({ "yuan chung","yuan","chung" }) );
