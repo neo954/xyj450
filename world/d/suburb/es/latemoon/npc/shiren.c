@@ -26,4 +26,3 @@ TEXT
         carry_object(__DIR__"obj/belt")->wear();
         carry_object(__DIR__"obj/skirt4")->wear();
 }
-
