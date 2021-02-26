@@ -1,4 +1,4 @@
-// yadan.c 
+// yadan.c
 // Jay 5/23/96
 
 inherit ITEM;
