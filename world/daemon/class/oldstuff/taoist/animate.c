@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // animate.c
 
 inherit F_CLEAN_UP;
@@ -8,9 +8,9 @@ inherit F_CLEAN_UP;
 int cast(object me, object target)
 {
    if( me->is_fighting() )   return notify_fail("你正在战斗中！\n");
-   
+
    if( !target || !target->is_corpse() ) return notify_fail("你要驱动哪一具□体？\n");
-   
+
    if( (int)me->query("mana") < 50 ) return notify_fail("你的法力不够了！\n");
 
    message_vision(
