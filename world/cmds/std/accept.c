@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // accept.c
 // created by snowcat on 5/30/1997
 
@@ -26,7 +26,7 @@ int main(object me, string arg)
 
   obj = find_player(arg);
   if (!obj)
-    obj = find_living(arg);    
+    obj = find_living(arg);
   if (!obj)
     obj = LOGIN_D->find_body(arg);
   if (!obj)
