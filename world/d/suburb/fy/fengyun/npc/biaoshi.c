@@ -23,4 +23,3 @@ void create()
         carry_object(__DIR__"obj/jinzhuang")->wear();
 	carry_object(__DIR__"obj/stonehammer")->wield();
 }
-
