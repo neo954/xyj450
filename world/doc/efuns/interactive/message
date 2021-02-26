@@ -13,7 +13,7 @@ passed, though.
 Message is usually a string containing the text to send, though it
 can also be any value.
 
-Target is a list of objects to be sent the message. This can be either a 
+Target is a list of objects to be sent the message. This can be either a
 single object string or object pointer, or may be an array of either.
 If a target is non-living all objects in its environment will receive
 the message.
