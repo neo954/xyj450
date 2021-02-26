@@ -1,14 +1,14 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/death/inn1.c
 
 #include <login.h>
 
 inherit ROOM;
- 
+
 int do_stuff(object ob);
- 
+
 void create ()
 {
   set ("short", "小店");
@@ -17,7 +17,7 @@ void create ()
 你一进来就发现屋里异常的温暖，墙角壁炉里微弱的火光将你的影
 子投射在对面的墙上。几个人影(shadows)围在炉旁不知在讨论些
 什么。屋内有几张木桌，椅，墙上挂了几幅字画，一切看来非常的
-详和宁静，你几乎忘了自己身在何处。 
+详和宁静，你几乎忘了自己身在何处。
 LONG);
 
   set("exits", ([ /* sizeof() == 1 */
@@ -34,12 +34,12 @@ LONG);
 
   setup();
 }
- 
+
 void init()
 {
         add_action("redirect_ask","ask");
 }
- 
+
 int redirect_ask(string str)
 {
         object ob;
@@ -50,14 +50,14 @@ int redirect_ask(string str)
      return notify_fail("你正忙着呢，这就去问这问那的对人家也太不尊重了吧？\n");
    if (!str) return 0;
         if (sscanf(str,"%s about %s",tmp1, tmp2) == 2) {
-                if (tmp1 == name && tmp2 =="回家") 
+                if (tmp1 == name && tmp2 =="回家")
                         return do_stuff(ob);
                         else return 0;
         }
         else return 0;
         return 0;
 }
- 
+
 int do_stuff(object ob)
 {
         write("你走上前去, 低声的向那个长得跟你一样的人询问回家的事.\n");
