@@ -32,13 +32,13 @@ LONG
 }
 
 void init()
-{       
+{
 	object ob = this_player();
 
 	if( (int)ob->query_condition("bonze_jail") <= 0 )
 	{
 		message("vision",
-			HIY "只听牢房铁门匡地一响，一个昏昏沉沉的家伙被扔了进来！\n\n" NOR, 
+			HIY "只听牢房铁门匡地一响，一个昏昏沉沉的家伙被扔了进来！\n\n" NOR,
 			environment(ob), ob);
 
 		tell_object(ob, "狱卒嘿嘿地笑着：今儿个你可落在我手里了...！\n");
