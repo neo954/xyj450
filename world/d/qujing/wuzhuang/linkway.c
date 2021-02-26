@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -13,15 +13,15 @@ void create ()
 是松海一片，但闻松涛阵阵不绝。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "south" : __DIR__"secondgate",
      "northup" : __DIR__"guangchang",
 //     "east" : __DIR__"song1",
 //     "west" : __DIR__"zhu1",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
