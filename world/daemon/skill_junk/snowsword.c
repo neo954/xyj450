@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // snowsword. 【风回雪舞剑法】
 
 /*
@@ -52,10 +52,10 @@ mapping *action = ({
      "damage_type":   "刺伤"
    ]),
         ([      "action":
-"$n只觉得一缕冷香掠过，$N已悄然间飘至$n身后，剑心直指$n的后胸，正是一式「暗香浮动月黄昏」",  
+"$n只觉得一缕冷香掠过，$N已悄然间飘至$n身后，剑心直指$n的后胸，正是一式「暗香浮动月黄昏」",
                 "dodge":                -35,
                 "parry":                -5,
-                "damage":           20, 
+                "damage":           20,
                 "damage_type":  "刺伤"
         ]),
    ([      "action":
@@ -65,7 +65,7 @@ mapping *action = ({
                 "damage":          10,
                 "damage_type":  "刺伤"
         ]),
-   
+
 });
 
 int valid_learn(object me)
