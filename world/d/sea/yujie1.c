@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -32,11 +32,11 @@ int valid_leave(object me, string dir)
         if( present("yao pai", me) ) return 1;
 
         if (dir == "east"
-   || dir=="south" 
+   || dir=="south"
    || dir=="north") {
         if (objectp(present("li shi", environment(me))))
         return notify_fail("宫前护卫伸手挡住了你的去路。\n");
-        }   
+        }
         return ::valid_leave(me, dir);
 }
 
