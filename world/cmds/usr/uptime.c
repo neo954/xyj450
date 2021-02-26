@@ -1,11 +1,11 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // uptime.c
 
 inherit F_CLEAN_UP;
 
-// This command is also called by LOGIN_D, so we don't want it use 
+// This command is also called by LOGIN_D, so we don't want it use
 // arguments.
 int report()
 {
@@ -40,9 +40,9 @@ int help(object me)
 {
    write(@HELP
 指令格式 : uptime
- 
+
 这个指令告诉你西游记已经运行了多久。
- 
+
 HELP
     );
     return 1;
