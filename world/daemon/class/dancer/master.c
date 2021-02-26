@@ -16,7 +16,7 @@ void create()
         set("gender", "女性");
         set("age", 22);
         set("long",
-                
+
 "蓝止萍是一个十分出色的美女，她弹的一手琵琶更是闻名千里，许多\n"
                 "王侯子弟，富商豪客都为她天下无双的美貌与琴艺倾倒。\n");
         set("attitude", "peaceful");
@@ -38,11 +38,11 @@ void create()
 
         set("chat_chance_combat", 60);
         set("chat_msg_combat", ({
-                
+
 "蓝止萍嫣然一笑，一个转身迳自舞了起来，对眼前这场恶斗似乎全不放在心上。\n",
                 "蓝止萍脚步轻移，翩翩地转了几个圈，回眸一笑。\n",
                 "蓝止萍用手扶了扶自己的发簪，像是怕被对手碰歪似地。\n",
-                "蓝止萍笑嘻嘻地拾起地上一片从" HIM "魔鞭翩珑" NOR 
+                "蓝止萍笑嘻嘻地拾起地上一片从" HIM "魔鞭翩珑" NOR
 "上落下的花瓣。\n",
                 (: use_poison :),
                 (: exert_function, "chillgaze" :),
@@ -105,8 +105,8 @@ void do_recruit(object ob)
         else {
                 command("say 很好，只要你对本庄主忠心耿耿，好处是少不了的。");
                 if( (int)ob->query("per") > 25 && (int)ob->query("age") < 20 )
-                        
-message_vision("$N暧昧地抚摸著$n的脸，说道：特别是像你这样的女孩 ....\n", 
+
+message_vision("$N暧昧地抚摸著$n的脸，说道：特别是像你这样的女孩 ....\n",
 this_object(), ob);
                 command("recruit " + ob->query("id") );
         }
@@ -129,9 +129,9 @@ void use_poison()
 
         if( ob->query_condition("rose_poison") ) return;
 
-        tell_object(ob, 
+        tell_object(ob,
 "你觉得脸上似乎沾上了什麽东西，伸手一摸却什麽也没有。\n");
         if( random(query("combat_exp")) > (int)ob->query("combat_exp") )
                 ob->apply_condition("rose_poison", 20);
 }
- 
+
