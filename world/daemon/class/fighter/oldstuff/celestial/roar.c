@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // roar.c
 
 #include <ansi.h>
@@ -31,7 +31,7 @@ int exert(object me, object target)
    for(i=0; i<sizeof(ob); i++) {
      if( !living(ob[i]) || ob[i]==me ) continue;
      if( skill/2 + random(skill/2) < (int)ob[i]->query("cps") * 2 ) continue;
-     
+
      damage = skill - ((int)ob[i]->query("max_force") / 10);
      if( damage > 0 ) {
         ob[i]->receive_damage("sen", damage);
@@ -39,7 +39,7 @@ int exert(object me, object target)
           ob[i]->receive_wound("sen", damage/2);
         tell_object(ob[i], "你觉得眼前一阵金星乱冒，耳朵痛得像是要裂开一样！\n");
      }
-     
+
      if( userp(ob[i]) ) ob[i]->fight_ob(me);
      else if( !ob[i]->is_killing(me) ) ob[i]->kill_ob(me);
    }
