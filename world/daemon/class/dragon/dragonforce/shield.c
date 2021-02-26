@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 #include <ansi.h>
 
@@ -12,12 +12,12 @@ int exert(object me, object target)
 {
         int skill;
 
-        if( target != me ) 
+        if( target != me )
                 return notify_fail("你只能用龙神心法保护自己。\n");
 
-        if( (int)me->query("force") < 100 )     
+        if( (int)me->query("force") < 100 )
                 return notify_fail("你的内力不够。\n");
-        if( (int)me->query_temp("powerup") ) 
+        if( (int)me->query_temp("powerup") )
                 return notify_fail("你已经在运功中了。\n");
 
         skill = me->query_skill("dragonforce",1);
