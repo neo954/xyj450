@@ -8,7 +8,7 @@
 #define _FTPDCONF_H
 
 // The following defines are in <globals.h> which is included automatically.
-// #include <uid.h>        /* gets define for ROOT_UID on tmi-2 */
+// #include "uid.h"        /* gets define for ROOT_UID on tmi-2 */
 // #include "config.h"
 
 #include <net/socket.h> /* various socket defines from tmi-2 */
