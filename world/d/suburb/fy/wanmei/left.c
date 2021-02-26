@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit ROOM;
 void create()
