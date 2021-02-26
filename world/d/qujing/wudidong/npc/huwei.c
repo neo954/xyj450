@@ -1,16 +1,16 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // tian-jiang.c
 #include <ansi.h>
 inherit NPC;
 void create()
 {
-       
+
 
         set_name("护卫", ({ "long shi", "long", "shi" }) );
         set("gender", "男性" );
-        set("long", 
+        set("long",
                 "这是从海底各族里精选出来的武士\n"
                 "他细腰乍臂，双肩抱拢，一看就知武艺高强。\n"
         );
