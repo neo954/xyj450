@@ -155,7 +155,7 @@ int valid_leave(object me, string dir)
         write("壮年僧人合十为礼，侧身让开，说道：原来是贵客驾到，请进请进！\n");
         return 1;
     }
-    
+
     if (me->query("sen") >= 0)
     {
         if (me->query("gender") == "女性")
