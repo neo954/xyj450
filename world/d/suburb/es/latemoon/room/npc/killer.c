@@ -58,4 +58,3 @@ void create()
         carry_object("/d/suburb/es/snow/npc/obj/thin_sword")->wield();
         carry_object("/d/suburb/es/latemoon/room/npc/obj/token");
 }
-
