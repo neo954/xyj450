@@ -1,8 +1,8 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // magic sleeve for holding stuffs.
-// by mon. 1/11/98 
+// by mon. 1/11/98
 
 #include <ansi.h>
 
@@ -12,7 +12,7 @@ int do_quit();
 
 void create()
 {
-     set_name("衣袖中",({"in sleeve","sleeve"}));     
+     set_name("衣袖中",({"in sleeve","sleeve"}));
      set("short","衣袖中");
      set("long", @LONG
 这里漆黑一片．．．
