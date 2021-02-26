@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // steamer.c by mes
 // updated 9-18-97 pickle
 
@@ -31,16 +31,16 @@ void init()
   add_action("do_tao", "tao");
 }
 int do_tao()
-{   
+{
   object me, user, bao;
   string fainter;
   int kee,  mkee;
-  
+
   me=this_player();
   kee=(int)me->query("kee");
   mkee=(int)me->query("max_kee");
-  if (random(100)<80) 
-  {     
+  if (random(100)<80)
+  {
       if (kee<=mkee/5) {
    me->set_temp("death_msg","被蒸熟了。\n");
    bao = new(__DIR__"obj/renroubao.c");
@@ -69,7 +69,7 @@ int do_tao()
      me->receive_wound("kee", mkee/5-10);
      me->set("max_force", me->query("max_force")-5);
      return notify_fail("");;
-   }   
+   }
     }
   else
     {
