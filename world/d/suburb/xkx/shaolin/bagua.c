@@ -43,9 +43,9 @@ int do_enter(string arg)
 
         if( !arg || arg=="" ) return 0;
 
-        if( arg=="tan" ) 
+        if( arg=="tan" )
 	{
-                if( present("pishui zhu", me) ) 
+                if( present("pishui zhu", me) )
 		{
 			message_vision("$N取出辟水灵珠，含在嘴里，轻轻一纵，跃入寒潭之中。\n", me);
 	                me->move("/d/suburb/xkx/shaolin/hantan1");
