@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mon/poem/clubpoem by mon@xyj 7/25/97
 inherit ROOM;
 #include <ansi.h>;
@@ -61,10 +61,10 @@ LONG);
 }
 
 void init()
-{   
+{
      add_action("do_answer","answer");
      add_action("do_look","look");
-     
+
      call_out("do_init",1,this_player());
 
      if(running==0) {
@@ -77,16 +77,16 @@ void init()
 }
 
 void do_init(object me)
-{ 
+{
     return;
 }
 
 int do_answer(string arg)
-{ 
+{
     object me=this_player(),ob;
 
     if(!arg) return notify_fail("回答什么？\n");
-    
+
     if(me->is_busy())
       return notify_fail("你上一个动作还没有完成。\n");
 
@@ -109,7 +109,7 @@ int do_answer(string arg)
        return 1;
       }
       ans_curr=1;
-      
+
       //change to a new poem once this one is answered.
       index=length-1;
 
@@ -149,7 +149,7 @@ void poem_reward(object me,string arg)
 }
 
 void poem_reward1(object me)
-{  
+{
    int dx,pot,lite;
     switch(random(3)) {
      case 0: dx=4+random(6);
@@ -171,7 +171,7 @@ void poem_reward1(object me)
 }
 
 void do_test()
-{  
+{
    int newt;
    object ob;
    string first,second,quest;
@@ -183,7 +183,7 @@ void do_test()
      last_all=current_all;
      ans_last=0;
    }
-   
+
    newt=0;
    while(newt==0) {
     if(!find_newline()) {
@@ -191,12 +191,12 @@ void do_test()
      new_poem();
     } else {
       if(sscanf(poem[index],"%s  %s",first,second)==2 &&
-       !sscanf(poem[index],"%*s［") && 
+       !sscanf(poem[index],"%*s［") &&
        !sscanf(poem[index],"%*s（") &&
        !sscanf(poem[index],"%*s□") ) {
          if(strlen(first)>2&&strlen(second)>2) {
       newt=1;
-         } 
+         }
       }
     }
    }
@@ -217,7 +217,7 @@ void do_test()
      quest=mixup(quest);   // the question
      curr_show=quest;
      switch(random(1)) {
-       case 0: 
+       case 0:
          tell_room(this_object(),
       "茶博士提笔在墙上写道："+quest+"\n");
          break;
@@ -244,7 +244,7 @@ string mixup(string str)
        l=k; k=j; j=l;
      } // so j<k
      j=j+j; k=k+k;
-     if(j>0) ans=str[0..j-1]; 
+     if(j>0) ans=str[0..j-1];
      else ans="";
      ans+=str[k..k+1]+str[j+2..k-1]+str[j..j+1];
      if(k<len+len-2) ans+=str[k+2..len+len-1];
@@ -257,7 +257,7 @@ int do_look(string arg)
 {   int i;
 
     if(!arg) return 0;
- 
+
     if(arg=="poem") {
      write("\n\n    "+author1+"："+title1+"\n");
      for (i=0;i<length1;i++) {
