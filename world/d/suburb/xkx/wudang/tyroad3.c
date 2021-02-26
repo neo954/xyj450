@@ -1,5 +1,5 @@
 // tyroad3.c 石阶
-// by Marz 
+// by Marz
 
 inherit ROOM;
 
