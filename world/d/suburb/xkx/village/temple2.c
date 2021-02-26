@@ -25,4 +25,4 @@ int valid_leave()
 		this_player()->set_temp("marks/王", 0);
 	}
 	return 1;
-} 
+}
