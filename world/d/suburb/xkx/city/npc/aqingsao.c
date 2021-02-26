@@ -56,7 +56,7 @@ void greeting(object ob)
 			"，快请进来喝杯热茶。\n");
 		break;
 	case 1 :
-		say("阿庆嫂说道：哟！这位" + RANK_D->query_respect(ob) + 
+		say("阿庆嫂说道：哟！这位" + RANK_D->query_respect(ob) +
 			"您来了啊！本店有刚炸好的五香花生出售。\n");
 		break;
 	}
