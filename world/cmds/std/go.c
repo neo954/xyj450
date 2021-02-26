@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // go.c
 
 inherit F_CLEAN_UP;
@@ -85,10 +85,10 @@ int main(object me, string arg, int silent)
         // snowcat 12/20/97
         if (ridee = me->ride())
           ridemsg = ridee->query("ride/msg")+"着"+ridee->name();
-        else  
+        else
           ridemsg = "";
 
-        if(ridee && !valid_move(ridee)) 
+        if(ridee && !valid_move(ridee))
            return notify_fail("你的座骑走动不了。\n");
 
    if( me->is_fighting() ) {
@@ -106,7 +106,7 @@ int main(object me, string arg, int silent)
      if( !wizardp(me) || !me->query("env/invisibility") )
         message( "vision", me->name() + min, environment(me), ({me}) );
      me->set_temp("pending", 0);
-     // added by snowcat, to fix the bug of recursive move of mutual follow + move to same room 
+     // added by snowcat, to fix the bug of recursive move of mutual follow + move to same room
      if (env != obj)
         all_inventory(env)->follow_me(me, arg);
      if (ridee)
@@ -145,9 +145,9 @@ int help(object me)
 {
    write(@HELP
 指令格式 : go <方向>
- 
+
 让你往指定的方向移动。
- 
+
 HELP
     );
     return 1;
