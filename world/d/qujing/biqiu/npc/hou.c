@@ -68,4 +68,3 @@ void unconcious ()
 {
   die ();
 }
-
