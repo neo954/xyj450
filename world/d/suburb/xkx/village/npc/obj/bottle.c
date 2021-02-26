@@ -1,4 +1,4 @@
-// water_bottle.c 
+// water_bottle.c
 
 inherit ITEM;
 inherit F_LIQUID;
