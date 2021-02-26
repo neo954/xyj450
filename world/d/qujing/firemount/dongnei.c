@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4/11/1997
 // Room: dongnei
 
@@ -41,7 +41,7 @@ int do_koujian (string arg)
     message_vision("只见$N伏下身去……\n",me);
     tell_object(me,"你想叩见谁？\n");
     return 1;
-  }  
+  }
 
   message_vision("只见$N伏下身去喊道："+
                  RANK_D->query_self(me)+
