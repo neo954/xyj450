@@ -62,4 +62,3 @@ int do_zuan(string arg)
       }
       return 1;
 }
-
