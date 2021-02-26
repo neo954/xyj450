@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhike.c 知客僧�
 // By Dream Dec. 20, 1996
 
@@ -39,7 +39,7 @@ void create()
 //   }) );
 
         create_family("南海普陀山", 4, "弟子");
-   
+
    setup();
    add_money("silver", 20);
    carry_object("/d/nanhai/obj/sengpao")->wear();
