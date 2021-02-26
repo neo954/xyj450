@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // pk_counter.c
 // by mon. 9/22/97
 
@@ -13,7 +13,7 @@ int update_condition(object me, int duration)
 {
 
         object env=environment(me);
-   
+
    if(env) {
        if(!env->query("no_fight") && !env->query("no_magic"))
           me->apply_condition("no_pk_time", duration - 1);
