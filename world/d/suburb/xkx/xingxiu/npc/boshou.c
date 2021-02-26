@@ -5,7 +5,7 @@ inherit NPC;
 void create()
 {
         set_name("星宿派钹手", ({ "boshou"}));
-        set("long", 
+        set("long",
                 "他是星宿派的吹鼓手。\n"
                 "他手中拿着一对铜钹，一边敲一边扯着嗓子唱些肉麻的话。\n");
         set("gender", "男性");
