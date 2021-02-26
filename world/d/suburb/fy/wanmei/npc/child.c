@@ -8,7 +8,7 @@ void create()
         set("long",
 "西门吹雪乃是当代绝顶高手之一．剑法已经到达了＂无剑＂的境界．．
 当然，他儿子很小，还没有很高的武功。\n"
-               ); 
+               );
 
         set("attitude", "peaceful");
         set("combat_exp", 10);
