@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 12/2/1997
 
 inherit ROOM;
@@ -36,7 +36,7 @@ int do_dive (string arg)
   if (! who->query_temp("apply/name") ||
       who->query_temp("apply/name")[0] != "水老鼠")
   {
-    message_vision ("\n只见$N又手忙脚乱地爬上岸来。\n",who);    
+    message_vision ("\n只见$N又手忙脚乱地爬上岸来。\n",who);
   }
   else
     who->move(__DIR__"tianjing");
