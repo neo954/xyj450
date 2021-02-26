@@ -58,4 +58,3 @@ int get(string arg)
        return notify_fail("什么？\n");
    return 1;
 }
-
