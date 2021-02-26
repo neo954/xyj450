@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/jjf/gate.c
 
 inherit ROOM;
@@ -32,7 +32,7 @@ LONG
 int valid_leave(object me, string dir)
 {
     if (dir == "south" ) {
-   if (((string)me->query("family/family_name")=="将军府") 
+   if (((string)me->query("family/family_name")=="将军府")
    ||   wizardp(me)
    ||   me->query_temp("pending/jiangjun_answer")) {
      return ::valid_leave(me, dir);
