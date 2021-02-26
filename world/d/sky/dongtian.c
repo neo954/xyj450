@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //dongtian.c
 //created 4-8-97, pickle
 
@@ -43,7 +43,7 @@ create_door("west", "东天门", "east", DOOR_CLOSED);
 
 int valid_leave(object me, string dir)
 {
- 
+
         if (dir == "west") {
      if(member_array("zengzhang tianwang", me->parse_command_id_list())==-1
      && member_array("huguo tianwang", me->parse_command_id_list())==-1 ){
