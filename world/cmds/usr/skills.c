@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // skills.c
 
 #include <ansi.h>
@@ -58,7 +58,7 @@ int main(object me, string arg)
      ob = me;
    else{
      ob = present(arg, environment(me));
-//        if ( ob->query("SPSKILLS",1)  ) return ob->skills();      
+//        if ( ob->query("SPSKILLS",1)  ) return ob->skills();
      if (!ob) ob = find_player(arg);
      if (!ob) ob = find_living(arg);
      if (!ob) return notify_fail("你要察看谁的技能？\n");
@@ -66,9 +66,9 @@ int main(object me, string arg)
    if( ob!=me && ob->query("env/invisibility")&&!wizardp(me) )
      return notify_fail("你要察看谁的技能？\n");
 
-   if( ob!=me && !wizardp(me) 
-   && !ob->is_apprentice_of(me) 
-   && !me->is_apprentice_of(ob) 
+   if( ob!=me && !wizardp(me)
+   && !ob->is_apprentice_of(me)
+   && !me->is_apprentice_of(ob)
    && getuid(ob)!=me->query("bonze/dadangid")
    && getuid(ob)!=me->query("couple/id"))
      return notify_fail("只有巫师或有师徒关系的人能察看他人的技能。\n");
@@ -80,16 +80,16 @@ int main(object me, string arg)
    }
    write( (ob==me ? "你" : ob->name()) +"目前所掌握的技能：\n\n");
    sname  = sort_array( keys(skl), (: strcmp :) );
-   
+
    map = ob->query_skill_map();
    if( mapp(map) ) mapped = values(map);
    if( !mapped ) mapped = ({});
 
    lrn = ob->query_learned();
    if( !mapp(lrn) ) lrn = ([]);
-   
+
    for(i=0; i<sizeof(skl); i++) {
-     printf("%s%s%-40s" NOR " - %-10s %3d/%5d\n", 
+     printf("%s%s%-40s" NOR " - %-10s %3d/%5d\n",
         (lrn[sname[i]] >= (skl[sname[i]]+1) * (skl[sname[i]]+1)) ? HIM : "",
         (member_array(sname[i], mapped)==-1? "  ": "□"),
         to_chinese(sname[i]) + " (" + sname[i] + ")",
