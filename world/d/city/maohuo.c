@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //changan city
 
 inherit ROOM;
@@ -34,12 +34,12 @@ LONG);
                "白色猴毛：可变饮料\n",
       ]));
 
-        set("exits", 
+        set("exits",
         ([ //sizeof() == 4
                 "east" : __DIR__"zhuque-s3",
         ]));
 
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
                 __DIR__"npc/laosun" : 1,
                 "/d/obj/misc/tables" : 1,
