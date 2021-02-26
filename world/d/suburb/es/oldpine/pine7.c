@@ -12,7 +12,7 @@ void create()
 LONG
         );
         set("outdoors", "oldpine");
- 	set("objects", ([ 
+ 	set("objects", ([
             __DIR__"npc/wolf_dog" : 1,
 	    ]));
 
