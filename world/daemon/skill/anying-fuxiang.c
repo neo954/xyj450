@@ -11,8 +11,8 @@ string *dodge_msg = ({
     "$n双足一点，斜斜飞起，使出「斜日杏花飞」已闪到$N身侧。\n",
 });
 
-int valid_enable(string usage) 
-{ 
+int valid_enable(string usage)
+{
     return (usage == "dodge") ;
 }
 
