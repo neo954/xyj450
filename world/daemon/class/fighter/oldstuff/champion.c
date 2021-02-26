@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // servant.c
 
 inherit NPC;
@@ -83,21 +83,21 @@ int do_accept(string arg)
    if( arg== "test" ) {
      say("\n於兰天武点了点头，说道：很好，这是第一招....\n\n");
      COMBAT_D->do_attack(this_object(), this_player(), query_temp("weapon"));
-     if( (int)this_player()->query("kee") < 0 
+     if( (int)this_player()->query("kee") < 0
      || !present(this_player(), environment())) {
         say("於兰天武叹了口气，说道：连第一招都撑不过，真是自不量力....\n");
         return 1;
      }
      say("\n於兰天武说道：这是第二招....\n\n");
      COMBAT_D->do_attack(this_object(), this_player(), query_temp("weapon"));
-     if( (int)this_player()->query("kee") < 0 
+     if( (int)this_player()->query("kee") < 0
      || !present(this_player(), environment())) {
         say("於兰天武「哼」地一声，说道：便是有这许\多不怕死的家伙....\n");
         return 1;
      }
      say("\n於兰天武说道：第三招来了....\n\n");
      COMBAT_D->do_attack(this_object(), this_player(), query_temp("weapon"));
-     if( (int)this_player()->query("kee") < 0 
+     if( (int)this_player()->query("kee") < 0
      || !present(this_player(), environment())) {
         say("於兰天武叹道：可惜，难道老夫一身武功\竟无传人....\n");
         return 1;
