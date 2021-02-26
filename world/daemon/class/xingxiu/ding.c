@@ -7,7 +7,7 @@ void create()
 {
 	set_name("丁春秋", ({ "ding chunqiu", "ding" }));
 	set("nickname", "星宿老怪");
-	set("long", 
+	set("long",
 		"他就是星宿派开山祖师、令正派人士深恶痛绝的星宿老怪丁春秋。\n"
 		"可是他看起来形貌清奇，仙风道骨。\n");
 	set("gender", "男性");
