@@ -29,4 +29,3 @@ void create()
   carry_object("/d/obj/cloth/changpao")->wear();
   carry_object("/d/obj/weapon/blade/jidao")->wield();
 }
-
