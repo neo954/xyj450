@@ -40,4 +40,3 @@ int valid_leave(object me, string dir)
 		return notify_fail("官兵拦住了你的去路。\n");
 	return ::valid_leave(me, dir);
 }
-
