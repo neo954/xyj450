@@ -19,7 +19,7 @@ LONG
 
         set("objects", ([
               __DIR__"npc/weaponor" : 1, ]) );
-        
+
         set("item_desc", ([
                 "sign": (: look_sign :),]) );
 
