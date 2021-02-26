@@ -1,5 +1,5 @@
 // tyroad4.c 崎岖山路
-// by Marz 
+// by Marz
 
 inherit ROOM;
 
@@ -36,10 +36,10 @@ LONG
     set("item_desc", ([
         "feng" : (:look_feng:),
     ]));
-    
+
 	set("objects", ([
 	__DIR__"npc/"+npcs[i] : 1]));
-                                    
+
 
 	setup();
 }
