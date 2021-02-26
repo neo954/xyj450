@@ -171,7 +171,7 @@ void defeated_enemy(object ob)
 {
         say(CYN "老者作出一个 V 字型的手势，说道：我赢了！" NOR);
         remove_killer(ob);
-}      
+}
 
 
 
