@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 string *first_name = ({ "花皮", "绿背", "双头", "虎齿"});
 string *name_words = ({ "龟"});
