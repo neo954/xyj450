@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //海上三星
 
 inherit NPC;
@@ -67,17 +67,17 @@ void create()
 
    set("time", 1);
    setup();
-   carry_object("/d/obj/cloth/baipao")->wear();   
+   carry_object("/d/obj/cloth/baipao")->wear();
    carry_object("/d/penglai/npc/obj/ruyi")->wield();
 }
 
 string ask_me()
 {
         object ob;
-           
+
    if((int)this_player()->query("combat_exp") < 20000 )
      return "没见老夫正下棋呢吗，以后再说吧！\n";
-    
+
        // added by snowcat on 6/22/1997
        if (this_object()->is_fighting())
          return "没见老夫正打着吗，以后再说吧！\n";
@@ -129,7 +129,7 @@ void player_win (object me, object who)
         if (me->query("time")<=0)
                 return;
    obj=new("/d/obj/drug/jiaoli");
-   command("sigh");   
+   command("sigh");
    say("禄星叹了一口气：年纪大了，到底气力还是不济！\n");
    say("禄星笑道：当真是英雄倍出，我辈老矣！\n");
         obj->move(who);
@@ -139,7 +139,7 @@ void player_win (object me, object who)
 }
 int reg()
 {
-   object me, obj; 
+   object me, obj;
    me=this_object();
    me->set("time",1);
 
@@ -148,14 +148,14 @@ int reg()
      obj=new("/d/obj/weapon/dagger/dagger");
      obj->move(me);
      command("wield all");
-   }   
+   }
    return 1;
 }
 void player_lose (object me, object who)
 {
      string msg;
      msg = RANK_D->query_respect(who);
-   
+
    command("jump");
    say("禄星哈哈大笑："+msg+"莫要不高兴，回去好好练武吧，来日方长嘛！\n");
 }
@@ -214,7 +214,7 @@ void attempt_apprentice(object ob)
         command("say 呵呵，是" + ob->query("family/master_name") + "老头的徒弟，那我就不客气了。\n");
         command("recruit " + ob->query("id") );
      }
-     else 
+     else
      {
         if( ob->query_skill("taiyi", 1) >= 80 )
         {
