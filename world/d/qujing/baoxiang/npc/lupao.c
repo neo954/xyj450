@@ -163,4 +163,3 @@ void die()
   message_vision ("\n$N呼地一声化作股烟向天上飞去。\n",this_object());
   destruct(this_object());
 }
-
