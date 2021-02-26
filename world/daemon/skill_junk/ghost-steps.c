@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // ghost-dodge.c 鬼影迷踪步法
 #include <ansi.h>
 
