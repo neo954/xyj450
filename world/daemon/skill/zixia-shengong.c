@@ -22,12 +22,12 @@ int valid_learn(object me)
 
 	if(i<=100)
 	{
-		if (i > 10 && (int)me->query("shen") < t * 100) 
+		if (i > 10 && (int)me->query("shen") < t * 100)
 			return notify_fail("你的侠义正气太低了，无法领会更高深的紫霞神功。\n");
 	}
 	else
 	{
-		if ((int)me->query("shen") < (51200 + (i - 100) * 1000)) 
+		if ((int)me->query("shen") < (51200 + (i - 100) * 1000))
 			return notify_fail("你的侠义正气太低了，无法领会更高深的紫霞神功。\n");
 	}
 
@@ -42,7 +42,7 @@ int valid_learn(object me)
 	|| me->query_skill("jiuyang-shengong",1)
 	|| me->query_skill("taiji-shengong",1)
 	|| me->query_skill("xiaowuxiang",1)
-//	|| me->query_skill("zixia-shengong",1) 
+//	|| me->query_skill("zixia-shengong",1)
 	|| me->query_skill("yunlong-shengong",1))
 		return notify_fail("你不先散了别派内功，怎能学紫霞神功？！\n");
 
