@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 枯骨刀－－〖血书〗3
 // pickle 9/8/97
 #include <ansi.h>
