@@ -11,7 +11,7 @@ void create()
 这家的主人一定很有钱。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
         "west" : __DIR__"house",
 ]));
         set("objects", ([
