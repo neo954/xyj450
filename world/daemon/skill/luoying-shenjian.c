@@ -101,4 +101,3 @@ int practice_skill(object me)
     write("你按著所学练了一遍落英神剑。\n");
 	return 1;
 }
-
