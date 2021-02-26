@@ -40,4 +40,3 @@ message_vision("$N口中喷出一股黑风，整个人也随着黑风散去．�
 //        me->start_busy(1+random(2));
         return 5+random(5);
 }
-
