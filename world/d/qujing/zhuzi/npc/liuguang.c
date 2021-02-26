@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 15 1997
 
 inherit F_VENDOR_SALE;
@@ -9,7 +9,7 @@ void create()
 {
   reload("zhuzi_liu_guangtou");
   set_name("柳光头", ({"liu guangtou", "liu", "boss"}));
-  
+
   set("shop_title","光头柳");
   set("shop_id", ({"guangtou", "liu"}));
   set("gender", "男性");
