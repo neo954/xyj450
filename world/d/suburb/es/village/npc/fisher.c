@@ -7,7 +7,7 @@ void create()
 	set_name("渔夫", ({ "fisher" }) );
 	set("gender", "男性" );
 	set("age", 35);
-       	set("long", @LONG 
+       	set("long", @LONG
 一个精壮的汉子，头戴斗笠，身披蓑衣。偶尔抬头一看的眼神
 中精光大盛，很有可能是江湖中人。
 LONG
