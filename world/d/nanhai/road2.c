@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/nanhai/road1
 inherit ROOM;
 
@@ -8,7 +8,7 @@ void create ()
 {
   set ("short", "小路");
   set ("long", @LONG
- 
+
 这是一条通往后山的小路。
 LONG);
 
