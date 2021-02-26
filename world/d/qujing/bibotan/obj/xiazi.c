@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 
 void create()
@@ -16,7 +16,7 @@ void create()
      if(i >=2) {
         ob=new("/d/qujing/bibotan/obj/tooth");
      ob->move(this_object());
-     } 
+     }
 /*
 else if(i>=1) {
                         ob=new("/d/obj/book/baguatu");
