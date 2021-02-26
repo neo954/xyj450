@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // blueice.c...weiqi, 970926
 //this ice contains posion...
 
@@ -39,7 +39,7 @@ void melt(int count)
      {
         message_vision("$N觉得身上凉凉的，湿湿的，原来是冰块化了。\n", env);
         env->apply_condition("ice_poison", 10);
-        //note, 中毒了。        
+        //note, 中毒了。
         destruct(this_object());
         return;
      }
@@ -59,7 +59,7 @@ void melt(int count)
 }
 
 void init()
-{                                             
+{
    add_action("do_make", "make");
    add_action("do_make", "zuo");
    add_action("do_chi", "chi");
@@ -84,7 +84,7 @@ int do_make(string arg)
      //note, 中毒了。
      destruct(this_object());
      return 1;
-   }   
+   }
 
    ob=new("/d/obj/weapon/blade/handudao-blue");
    ob->move(me);
@@ -96,7 +96,7 @@ int do_make(string arg)
 }
 
 int do_chi(string arg)
-{   
+{
    if( !this_object()->id(arg) ) return 0;
    if( this_player()->is_busy() )
      return notify_fail("你上一个动作还没有完成。\n");
