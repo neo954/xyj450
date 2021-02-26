@@ -9,7 +9,7 @@ void create()
 看看这些人，再看看这一片水晶玻璃世界，你几乎分不出这究竟是人间，还是天上？
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "east" : __DIR__"street2",
   "west" : __DIR__"street",
   "north" : __DIR__"bar",
