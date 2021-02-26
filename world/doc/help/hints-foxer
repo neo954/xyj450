@@ -109,7 +109,7 @@ yourself, use unarmed fight。这些方法哪些该用哪些不该，最
 好在哪个阶段用，各自人是很不一样的，需要自己去体会，从道
 行和潜能速度上体会。道行速度一般应该在8-12day/min,潜能速
 度大概在6-10/min左右。这个阶段学什么，就很自由了，我觉得
-先学100parry读到141,然后学force,spells,特殊force,spells. 
+先学100parry读到141,然后学force,spells,特殊force,spells.
 enable高了还有好果子吃。 chat* chan
 
 以上是我对人物成长的一点经验，对于新手，应该多转转，多看
@@ -270,7 +270,7 @@ tin应该也类似，不过我不太熟悉。首先，我觉得应该trigger on
 自己的严重受伤情形。注意严重受伤有很多种的，空手伤和武器
 伤，法术伤和工夫伤又有不同。自己登个dummy到处找找死，把
 受伤情况记录下来。我在严重受伤的情况下是退出的，注意退出
-不能简单quit了事，可能正在busy. 我的方法是，wear all, 
+不能简单quit了事，可能正在busy. 我的方法是，wear all,
 unwield jitui, wield all, enforce max, enchant max, 然后
 每隔半秒quit一次。这样应该可以跑掉。其次，可以针对player
 下kill命令做trigger. 但是现在一些混蛋PKer大多是用steal,
