@@ -12,7 +12,7 @@ void create()
 道的大门。
 LONG
 	);
-	set("exits", ([ 
+	set("exits", ([
   "south" : "/d/suburb/es/city/street8",
 ]));
 
