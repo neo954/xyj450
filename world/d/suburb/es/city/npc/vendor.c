@@ -32,4 +32,3 @@ void init()
 
         add_action("do_vendor_list", "list");
 }
-
