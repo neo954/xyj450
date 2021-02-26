@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 10/14/1997
 // room: /d/qujing/baoxiang/yelu2.c
 
@@ -28,7 +28,7 @@ LONG);
 
 int valid_leave(object who, string dir)
 {
-  if ((! interactive(who)) && 
+  if ((! interactive(who)) &&
       dir=="northwest" &&
       who->query("id")=="huangjia bing")
     return 0;
