@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 5/27/1997
 // room: /d/pantao/pan1e.c
 
@@ -22,8 +22,8 @@ LONG);
   set("exits", ([
         "east"       : __DIR__"pan1f",
         "west"       : __DIR__"pan1d",
-        "north"      : __DIR__"yaoc",  
-        "south"      : __DIR__"pan2e",  
+        "north"      : __DIR__"yaoc",
+        "south"      : __DIR__"pan2e",
       ]));
 
   set("outdoors",1);
