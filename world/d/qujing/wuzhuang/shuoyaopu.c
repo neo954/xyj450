@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //shuoyaopu.c
 
 inherit ROOM;
@@ -15,15 +15,15 @@ void create ()
 一口气。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "southeast" : __DIR__"juyuan",
      "north" : __DIR__"southpool",
      //"south" : __DIR__"houyuan",
      //"west" : __DIR__"westway6",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      __DIR__"npc/hexiangu" : 1,
      __DIR__"npc/girl" : 3,
