@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //【烈火鞭】hellfire-whip.c
 
 /*
@@ -26,7 +26,7 @@ mapping *action = ({
                 "damage_type":  "刺伤"
         ]),
         ([      "name":                 "地狱烈火",
-                "action":               
+                "action":
 "$N大喝一声，手中$w宛若矫龙飞在半空，大有「横空出世」的气概。\n$n只觉得全身俱在$w笼罩之下",
                 "dodge":                -20,
                 "parry":                -20,
@@ -112,7 +112,7 @@ mapping query_action(object me, object weapon)
    return action[i];
    }
 }
-     
+
 
 int practice_skill(object me)
 {
