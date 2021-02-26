@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // tuying-zunzhe.c...weiqi, 97.09.15.
 
 #include <ansi.h>
@@ -27,7 +27,7 @@ void create()
    set_skill("parry", 70);
    set_skill("blade", 70);
    set_skill("bingpo-blade", 70);
-   set_skill("force", 90);   
+   set_skill("force", 90);
    set_skill("ningxie-force", 90);
    set_skill("literate", 60);
    set_skill("spells", 90);
@@ -42,7 +42,7 @@ void create()
    set("force", 1600);
    set("max_force", 800);
    set("mana", 1000);
-   set("max_mana", 500);   
+   set("max_mana", 500);
    set("force_factor", 50);
    set("mana_factor", 25);
 
@@ -103,7 +103,7 @@ int recruit_apprentice(object ob)
 }
 
 string expell_me(object me)
-{       
+{
    me=this_player();
    if((string)me->query("family/family_name")=="大雪山") {
      message_vision("秃鹰尊者面色一沉，道：现在正是本门危急之时...\n", me);
