@@ -6,7 +6,7 @@ void create()
         set("age", 74);
         set("long",
 "这是一个满脸风霜的老人，但他双目有神，太阳穴高高隆起！\n"
-               ); 
+               );
 
         set("attitude", "peaceful");
         set("combat_exp", 1000000);
