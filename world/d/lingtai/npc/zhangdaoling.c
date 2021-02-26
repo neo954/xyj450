@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //puti.c
 inherit NPC;
 inherit F_MASTER;
@@ -89,7 +89,7 @@ int accept_fight(object me)
 {   me= this_object();
    if( (int)me->query("kee")*100/(int)me->query("max_kee") >= 50 ) {
      if( (int)me->query("kee")*100/(int)me->query("max_kee") >= 90 ) {
-     
+
         command("say 好吧，不过老夫马上就要走了，只斗片刻！\n");
              command("unwield sword");
              command("enable unarmed none");
