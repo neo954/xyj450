@@ -24,4 +24,3 @@ int cast(object me, object target)
         me->receive_damage("sen", 10);
         return 1;
 }
-
