@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mon/poem/yard by mon@xyj 5/9/97
 inherit ROOM;
 #include <ansi.h>;
@@ -64,11 +64,11 @@ LONG);
 }
 
 void init()
-{   
+{
      add_action("do_answer","answer");
      add_action("do_author","author");
      add_action("do_look","look");
-     
+
      call_out("do_init",1,this_player());
 
      if(running==0) {
@@ -81,27 +81,27 @@ void init()
 }
 
 void do_init(object me)
-{ 
+{
     tell_object(me,"\n探春告诉你：你可以用answer <...>来对诗句，author <...>来回答作者姓名。\n\n");
     return;
 }
 
 int do_author(string arg)
 {   object me=this_player();
-    
+
     if(!arg) return notify_fail("作者是谁？\n");
 
     if( living(me) ) me->receive_damage("sen",5+random(15));
 
     arg=replace_string(arg," ","");
-    if(me->query_temp("poem/index")!=poem_index ) 
+    if(me->query_temp("poem/index")!=poem_index )
       return notify_fail("只有对出诗句后才能回答作者是谁。\n");
 
     if(answerd==1) return
       notify_fail("别人已经回答过这首诗的作者了。\n");
-      
+
     message_vision("$N说道：这首诗的作者是"+arg+"？\n",me);
-    if(arg==author) { 
+    if(arg==author) {
          answerd=1;
          write("探春说道：对了！\n");
          poem_reward1(me);
@@ -113,7 +113,7 @@ int do_author(string arg)
 }
 
 int do_answer(string arg)
-{ 
+{
     object me=this_player();
 
     if(!arg) return notify_fail("回答什么？\n");
@@ -133,7 +133,7 @@ int do_answer(string arg)
        return 1;
       }
       ans_curr=1;
-      
+
       //change to a new poem once this one is answered.
       index=length-1;
 
@@ -175,7 +175,7 @@ void poem_reward(object me,string arg)
 }
 
 void poem_reward1(object me)
-{  
+{
    int dx,pot,lite;
     switch(random(3)) {
      case 0: dx=3+random(6);
@@ -206,7 +206,7 @@ void poem_reward1(object me)
 }
 
 void do_test()
-{  
+{
    int newt;
    string first,second,quest;
 
@@ -215,7 +215,7 @@ void do_test()
      last_all=current_all;
      ans_last=0;
    }
-   
+
    newt=0;
    while(newt==0) {
     if(!find_newline()) {
@@ -223,12 +223,12 @@ void do_test()
      new_poem();
     } else {
       if(sscanf(poem[index],"%s  %s",first,second)==2 &&
-       !sscanf(poem[index],"%*s［") && 
+       !sscanf(poem[index],"%*s［") &&
        !sscanf(poem[index],"%*s（") &&
        !sscanf(poem[index],"%*s□") ) {
          if(strlen(first)>2&&strlen(second)>2) {
       newt=1;
-         } 
+         }
       }
     }
    }
@@ -242,7 +242,7 @@ void do_test()
      current=second;
      curr_show=quest+enscript("．．．");
      switch(random(2)) {
-       case 0: 
+       case 0:
          tell_room(this_object(),"探春道：“"+quest+"”的后半句是什么？\n");
          break;
        case 1:
