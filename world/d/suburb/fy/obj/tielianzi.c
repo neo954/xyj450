@@ -1,9 +1,9 @@
 // tielianzi.c
- 
+
 #include <weapon.h>
- 
+
 inherit THROWING;
- 
+
 void create()
 {
 	set_name("铁莲子", ({ "tie lianzi", "lianzi", "zi" }) );
