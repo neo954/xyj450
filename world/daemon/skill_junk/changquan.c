@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //长拳 changquan.c
 //menpai skill(can also be used by non-menpai NPCs)
 
