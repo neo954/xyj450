@@ -3,47 +3,47 @@
 inherit SKILL;
 
 mapping *action = ({
-        ([      "action":               
+        ([      "action":
 "$N使一招「峰回路转」，手中$w如一条银蛇般刺向$n的$l",
                 "dodge":                -20,
                 "damage":               30,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出飞仙剑法中的「空山鸟语」，剑光霍霍斩向$n的$l",
                 "dodge":                -20,
                 "damage":               30,
                 "damage_type":  "割伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N一招「御风而行」，身形陡然滑出数尺，手中$w斩向$n的$l",
                 "dodge":                -30,
                 "damage":               20,
                 "damage_type":  "割伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N手中$w中宫直进，一式「旭日东升」对准$n的$l刺出一剑",
                 "dodge":                -40,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N纵身一跃，手中$w一招「金光泻地」对准$n的$l斜斜刺出一剑",
                 "dodge":                -40,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N的$w凭空一指，一招「一剑西来」刺向$n的$l",
                 "dodge":                20,
                 "damage":               40,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N手中$w向外一分，使一招「柳暗花明」反手对准$n$l一剑刺去",
                 "dodge":                -20,
                 "damage":               20,
                 "damage_type":  "刺伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N横剑上前，身形一转手中$w使一招「仙云密布」画出一道光弧刺向$n的$l",
                 "dodge":                -30,
                 "damage":               50,
@@ -82,7 +82,7 @@ int practice_skill(object me)
 {
         if( (int)me->query("kee") < 30
         ||      (int)me->query("force") < 3 )
-                return 
+                return
 notify_fail("你的内力或气不够，没有办法练习飞仙剑法。\n");
         me->receive_damage("kee", 30);
         me->add("force", -3);
@@ -94,7 +94,7 @@ string perform_action_file(string action)
 {
         return CLASS_D("swordsman") + "/feixian-sword/" + action;
 }
- 
+
 int effective_level() { return 15;}
 
 string *parry_msg = ({
