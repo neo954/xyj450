@@ -31,4 +31,3 @@ void init()
        (: random_move :)
         }) );
 }
-
