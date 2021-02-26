@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // npc.c
 
 #include <command.h>
@@ -179,7 +179,7 @@ int exert_function(string func)
      SKILL_D(force_skill)->exert_function(this_object(), func);
 }
 
-// Default chat function: Let the npc perform special action with 
+// Default chat function: Let the npc perform special action with
 // his/her enabled martial art
 int perform_action(string skill, string action)
 {
@@ -188,6 +188,6 @@ int perform_action(string skill, string action)
 
    martial_skill = query_skill_mapped(skill);
    if( stringp(martial_skill) )
-     return SKILL_D(martial_skill)->perform_action(this_object(), action);     
+     return SKILL_D(martial_skill)->perform_action(this_object(), action);
 }
 
