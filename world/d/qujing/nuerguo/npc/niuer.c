@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat.c 4/4/1997
 // niuer.c
 #define NAME "牛二先生"
@@ -54,18 +54,18 @@ void return_object (object who, object ob, string id, int amount)
     {
       ob = new("/obj/money/gold");
       ob->set_amount(amount/10000);
-    } 
+    }
     else if (id == "silver")
     {
       ob = new("/obj/money/silver");
       ob->set_amount(amount/100);
-    } 
+    }
     else if (id == "coin")
     {
       ob = new("/obj/money/coin");
       ob->set_amount(amount);
-    } 
-    
+    }
+
     if (ob)
     {
       ob->move(who);
@@ -73,7 +73,7 @@ void return_object (object who, object ob, string id, int amount)
     }
   }
   else
-    command("give "+who->query("id")+" "+id);  
+    command("give "+who->query("id")+" "+id);
 }
 
 int accept_object (object who, object ob)
@@ -83,7 +83,7 @@ int accept_object (object who, object ob)
   int amount;
   msg = NAME+"拱手道：这位"+RANK_D->query_respect(who);
 
-  amount = ob->value(); 
+  amount = ob->value();
   id = ob->query("money_id");
   if (! id)
   {
@@ -102,21 +102,21 @@ int accept_object (object who, object ob)
     say(msg+"，咳……说的也是。\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/nuerguo") == "marriage")
   {
     say(msg+"还是先去见公主吧。\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/nuerguo") == "company")
   {
     say(msg+"还是先去见公主吧。\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
-  }  
+  }
 
   if (who->query("obstacle/nuerguo") != "stomachache")
   {
@@ -124,26 +124,26 @@ int accept_object (object who, object ob)
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
   }
-  
-  if ( ob->value() < 30000) 
+
+  if ( ob->value() < 30000)
   {
     say(msg+"，咳……这个……怕是不妥吧。\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
-  }  
+  }
 
   if (is_busy)
   {
     say(msg+"，真对不起，我不正在忙着治病吗？\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
-  }  
+  }
   if (is_empty)
   {
     say(msg+"，对不起，治病的泉水用完了，等一会儿再来吧。\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
-  }  
+  }
 
   say(msg+"真是太客气了，我这就给您治病。\n");
   is_busy = 1;
