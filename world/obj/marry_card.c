@@ -153,4 +153,3 @@ void autoload(string arg)
         set("name","你和"+arg+"的婚约");
 
 }
-
