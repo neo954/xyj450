@@ -50,4 +50,3 @@ int valid_leave(object me, string dir)
                 "树下的" + me->name() + "往" + to_chinese(dir) + "离开了。\n");
         return 1;
 }
-
