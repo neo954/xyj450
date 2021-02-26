@@ -94,4 +94,3 @@ string ask_me(object who)
 	set("revealed", 1);
 	return 0;
 }
-
