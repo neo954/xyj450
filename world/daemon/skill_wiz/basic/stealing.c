@@ -4,4 +4,3 @@
 // perception.c
 
 inherit SKILL;
-
