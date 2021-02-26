@@ -21,4 +21,3 @@ void create()
        add_money("coin", 20+random(50));
    carry_object("/d/obj/cloth/sengyi")->wear();
 }
-
