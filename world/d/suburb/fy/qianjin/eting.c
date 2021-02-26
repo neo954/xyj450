@@ -73,4 +73,3 @@ void close_path()
         sect->delete("exits/up");
 
 }
-
