@@ -17,7 +17,7 @@
 
 #include "config.h"
 #include <mailer.h>
-#include <daemons.h>
+#include "daemons.h"
 #include <net/daemons.h>
 #include <uid.h>
 
