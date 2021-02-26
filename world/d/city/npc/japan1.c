@@ -1,10 +1,10 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
- 
+
 void do_drink();
- 
+
 int exp, lvl;
 
 void create()
@@ -19,7 +19,7 @@ void create()
         set("per",10);
         set("str",25);
         set("int",25);
-        
+
         exp=100000+random(40)*10000;
         lvl=60+exp/10000;
 
@@ -52,7 +52,7 @@ void create()
         carry_object("/obj/cloth")->wear();
         carry_object("/d/obj/weapon/blade/blade")->wield();
 }
-/* 
+/*
 void init()
 {
     object ob=this_player();
