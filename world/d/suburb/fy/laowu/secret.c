@@ -10,7 +10,7 @@ void create()
 桌有椅，四面都挂着厚厚的乱毡，还有个极精致的黄铜火炉。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "up" : __DIR__"xiao",
 ]));
         set("objects", ([
