@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 5/3/1997
 
 #include <ansi.h>
@@ -14,7 +14,7 @@ mapping chinese_dirs = ([
   "west":         "西",
   "northup":      "北边",
   "southup":      "南边",
-  "eastup":       "东边",  
+  "eastup":       "东边",
   "westup":       "西边",
   "northdown":    "北边",
   "southdown":    "南边",
@@ -132,7 +132,7 @@ int test_busy ()
 
   if (me->query_temp("is_busy"))
   {
-    tell_object (who,"动作别太猛，车子会搞坏的！\n");    
+    tell_object (who,"动作别太猛，车子会搞坏的！\n");
     return 1;
   }
   me->set_temp("is_busy",1);
@@ -143,14 +143,14 @@ int test_busy ()
 
 void reset_busy_temp (object me)
 {
-  me->set_temp("is_busy",0);  
+  me->set_temp("is_busy",0);
 }
 
 int is_in ()
 {
   object me = this_object();
   object who = this_player();
-  return environment(who) == me; 
+  return environment(who) == me;
 }
 
 int is_driver ()
@@ -160,7 +160,7 @@ int is_driver ()
 
   if (me->query("driver") != who)
   {
-    tell_object (who,"别乱动，你又不是司机！\n");  
+    tell_object (who,"别乱动，你又不是司机！\n");
     return 0;
   }
   return 1;
@@ -177,13 +177,13 @@ int report_outside_objects ()
   if (sizeof(inv) <= 1)
     return 1;
 
-  tell_object (who,"外面有：");  
+  tell_object (who,"外面有：");
   for (i=0; i < sizeof(inv); i++)
   {
     if (inv[i] != me)
-      tell_object (who,inv[i]->query("name")+"("+inv[i]->query("id")+") ");    
+      tell_object (who,inv[i]->query("name")+"("+inv[i]->query("id")+") ");
   }
-  tell_object (who,"\n");  
+  tell_object (who,"\n");
   return 1;
 }
 
@@ -197,12 +197,12 @@ int report_inside_objects ()
   if (sizeof(inv) == 0)
     return 1;
 
-  tell_object (who,"车里有：");  
+  tell_object (who,"车里有：");
   for (i=0; i < sizeof(inv); i++)
   {
-    tell_object (who,inv[i]->query("name")+"("+inv[i]->query("id")+") ");    
+    tell_object (who,inv[i]->query("name")+"("+inv[i]->query("id")+") ");
   }
-  tell_object (who,"\n");  
+  tell_object (who,"\n");
   return 1;
 }
 
@@ -220,13 +220,13 @@ int report_dir ()
 
   dirs = keys(exits);
 
-  tell_object (who,"四面的出口是：");  
+  tell_object (who,"四面的出口是：");
   for (i=0; i < sizeof(dirs); i++)
   {
-    tell_object (who,chinese_dirs[dirs[i]]+"("+dirs[i]+")");    
+    tell_object (who,chinese_dirs[dirs[i]]+"("+dirs[i]+")");
   }
   tell_object (who," [车头朝向："+chinese_dirs[me->query("dir")]+
-                   "("+me->query("dir")+")]\n");  
+                   "("+me->query("dir")+")]\n");
   return 1;
 }
 
@@ -236,13 +236,13 @@ int report_view ()
   object who = this_player();
   object where = environment(me);
 
-  tell_object (who,"≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡\n");  
-  tell_object (who,"从车窗里可以看到：");  
-  tell_object (who,where->query("short")+"\n");  
-  tell_object (who,where->query("long")+"\n");  
+  tell_object (who,"≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡\n");
+  tell_object (who,"从车窗里可以看到：");
+  tell_object (who,where->query("short")+"\n");
+  tell_object (who,where->query("long")+"\n");
   report_outside_objects();
   report_dir();
-  tell_object (who,"≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡\n");  
+  tell_object (who,"≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡\n");
   return 1;
 }
 
@@ -262,19 +262,19 @@ int report_short ()
     strfuel = strfuel + " ";
   for (i = sizeof(strmiles); i < len; i++)
     strmiles = strmiles + " ";
-  tell_object (who,"\n");  
-  tell_object (who,"  □□□□□□□□□□□□□□□□□□□□□□\n");  
-  tell_object (who,"  □"+ strspeed + " 7[手导] 8[加速] 9[自导] □\n");  
-  tell_object (who,"  □"+ strfuel  + " 4[左转] 5[刹车] 6[右转] □\n");  
-  tell_object (who,"  □"+ strmiles + "         2[减速]         □\n");  
-  tell_object (who,"  □□□□□□□□□□□□□□□□□□□□□□\n");  
+  tell_object (who,"\n");
+  tell_object (who,"  □□□□□□□□□□□□□□□□□□□□□□\n");
+  tell_object (who,"  □"+ strspeed + " 7[手导] 8[加速] 9[自导] □\n");
+  tell_object (who,"  □"+ strfuel  + " 4[左转] 5[刹车] 6[右转] □\n");
+  tell_object (who,"  □"+ strmiles + "         2[减速]         □\n");
+  tell_object (who,"  □□□□□□□□□□□□□□□□□□□□□□\n");
   if (me->query("autodrive") > 0)
-    tell_object (who,"  方向控制：全自动");  
+    tell_object (who,"  方向控制：全自动");
   else
-    tell_object (who,"  方向控制：手动");  
+    tell_object (who,"  方向控制：手动");
   if (me->query("driver"))
-    tell_object (who,"  司机："+me->query("driver")->query("name"));  
-  tell_object (who,"\n");  
+    tell_object (who,"  司机："+me->query("driver")->query("name"));
+  tell_object (who,"\n");
   report_inside_objects();
   return 1;
 }
@@ -292,7 +292,7 @@ int do_enter (string arg)
 
   if (me->query("speed") > 0)
   {
-    tell_object (who,"跳进正在行驶的车子会有生命危险！\n");  
+    tell_object (who,"跳进正在行驶的车子会有生命危险！\n");
     return 1;
   }
 
@@ -319,7 +319,7 @@ int do_out (string arg)
 
   if (me->query("speed") > 0)
   {
-    tell_object (who,"跳出正在行驶的车子会有生命危险！\n");  
+    tell_object (who,"跳出正在行驶的车子会有生命危险！\n");
     return 1;
   }
 
@@ -372,11 +372,11 @@ int do_left (string arg)
   if (me->query("speed") == 0)
   {
     tell_object (who,"先将车子发动起来再转弯。\n");
-    return 1;  
+    return 1;
   }
 
   dir = left_dirs[dir];
-  tell_object (who,"你将方向盘向左一转。\n");  
+  tell_object (who,"你将方向盘向左一转。\n");
   message_vision (me->query("name")+"车头朝"+chinese_dirs[dir]+
                   "一拐……\n",me);
   me->set("dir",dir);
@@ -401,11 +401,11 @@ int do_right (string arg)
   if (me->query("speed") == 0)
   {
     tell_object (who,"先将车子发动起来再转弯。\n");
-    return 1;  
+    return 1;
   }
 
   dir = right_dirs[dir];
-  tell_object (who,"你将方向盘向右一转。\n");  
+  tell_object (who,"你将方向盘向右一转。\n");
   message_vision (me->query("name")+"车头朝"+chinese_dirs[dir]+
                   "一拐……\n",me);
   me->set("dir",dir);
@@ -430,25 +430,25 @@ int do_speedup (string arg)
   if (s == 0)
   {
     s += 2+random(4);
-    tell_object (who,"你点火发动车子。\n");  
+    tell_object (who,"你点火发动车子。\n");
     message_vision (me->query("name")+"轻吼了一声，排气管吐出一股青烟\n",me);
   }
   else if (s < 45)
   {
     s += 4+random(8);
-    tell_object (who,"你踩了一踩油门。\n");  
+    tell_object (who,"你踩了一踩油门。\n");
     message_vision (me->query("name")+"轻轻地加速。\n",me);
   }
   else if (s < 90)
   {
     s += 8+random(16);
-    tell_object (who,"你用力踩了一踩油门。\n");  
+    tell_object (who,"你用力踩了一踩油门。\n");
     message_vision (me->query("name")+"嗖地一声加快了时速！\n",me);
   }
-  else 
+  else
   {
     s += 16+random(32);
-    tell_object (who,"你使劲地了踩了一踩油门。\n");  
+    tell_object (who,"你使劲地了踩了一踩油门。\n");
     message_vision (me->query("name")+"发疯似地加速！\n",me);
   }
   if (s > 320)
@@ -474,24 +474,24 @@ int do_slowdown (string arg)
 
   if (s == 0)
   {
-    tell_object (who,"车子已经停了。\n");  
+    tell_object (who,"车子已经停了。\n");
   }
   else if (s < 45)
   {
     s -= 4+random(8);
-    tell_object (who,"你轻轻地踩了踩闸。\n");  
+    tell_object (who,"你轻轻地踩了踩闸。\n");
     message_vision (me->query("name")+"慢慢减速。\n",me);
   }
   else if (s < 90)
   {
     s -= 8+random(16);
-    tell_object (who,"你踩了踩闸。\n");  
+    tell_object (who,"你踩了踩闸。\n");
     message_vision (me->query("name")+"明显地慢了下来。\n",me);
   }
-  else 
+  else
   {
     s -= 16+random(32);
-    tell_object (who,"你使劲地踩了一踩闸。\n");  
+    tell_object (who,"你使劲地踩了一踩闸。\n");
     message_vision (me->query("name")+"在飞弛中减速。\n",me);
   }
   if (s < 0)
@@ -517,37 +517,37 @@ int do_stop (string arg)
 
   if (s == 0)
   {
-    tell_object (who,"车子已经停了。\n");  
+    tell_object (who,"车子已经停了。\n");
   }
   else if (s < 20)
   {
     s = 0;
-    tell_object (who,"你猛地一刹车。\n");  
+    tell_object (who,"你猛地一刹车。\n");
     message_vision (me->query("name")+"轻轻一颠，停了。\n",me);
   }
   else if (s < 45)
   {
     s = 0;
-    tell_object (who,"你一个急刹车！\n");  
+    tell_object (who,"你一个急刹车！\n");
     message_vision (me->query("name")+"突然急剧地减速！\n",me);
     message_vision (me->query("name")+"发出一声长长的尖叫，吱一声停了！\n",me);
-    tell_object (who,"你猛地跄了一下！\n");  
+    tell_object (who,"你猛地跄了一下！\n");
   }
   else if (s < 100)
   {
     s -= 40+random(40);
-    tell_object (who,"你疯狂地踩闸急刹车！\n");  
+    tell_object (who,"你疯狂地踩闸急刹车！\n");
     message_vision (me->query("name")+"突然急剧地减速！\n",me);
     message_vision (me->query("name")+"剧烈地震动着！\n",me);
-    tell_object (who,"你一阵头晕，差一点吐了出来！\n");  
+    tell_object (who,"你一阵头晕，差一点吐了出来！\n");
   }
-  else 
+  else
   {
     s -= 60+random(60);
-    tell_object (who,"你不顾一切地地踩闸急刹车！\n");  
+    tell_object (who,"你不顾一切地地踩闸急刹车！\n");
     message_vision (me->query("name")+"突然急剧地减速！\n",me);
     message_vision (me->query("name")+"可怕地震动着，地上划出两道黑印！\n",me);
-    tell_object (who,"强烈的震动中你一阵剧烈头痛！\n");  
+    tell_object (who,"强烈的震动中你一阵剧烈头痛！\n");
     //who->unconcious();
   }
   if (s < 0)
@@ -572,7 +572,7 @@ int do_handdrive (string arg)
     return 1;
 
   me->set("autodrive",0);
-  tell_object (who,"现在手动控制行车方向。\n");  
+  tell_object (who,"现在手动控制行车方向。\n");
   return 1;
 }
 
@@ -592,7 +592,7 @@ int do_autodrive (string arg)
     return 1;
 
   me->set("autodrive",1);
-  tell_object (who,"现在全自动控制行车方向。\n");  
+  tell_object (who,"现在全自动控制行车方向。\n");
   return 1;
 }
 
@@ -626,7 +626,7 @@ void collision ()
     how = "象脱缰野马一样地";
   else if (s < 150)
     how = "极疯狂地";
-  else 
+  else
     how = "天塌地裂般地";
 
   if (s < 50)
@@ -640,7 +640,7 @@ void collision ()
     message_vision (me->query("name")+how+hits[random(sizeof(hits))]+
                     "！\n",me);
     message_vision (me->query("name")+"在一阵强烈的震动中停了下来！\n",me);
-    tell_object (who,"你一阵目眩！\n");  
+    tell_object (who,"你一阵目眩！\n");
   }
   else
   {
@@ -648,7 +648,7 @@ void collision ()
                     "！\n",me);
     message_vision (me->query("name")+"在一阵极可怕的震动中发出巨响！\n",me);
     message_vision ("一切又突然安静了下来停了下来。\n",me);
-    tell_object (who,"你一刹那觉得窗外的所有东西向你猛地扑来又突然停止！\n");  
+    tell_object (who,"你一刹那觉得窗外的所有东西向你猛地扑来又突然停止！\n");
     //who->unconcious();
   }
   me->set("speed",0);
@@ -663,7 +663,7 @@ void display_me ()
 
   if (s == 0)
   {
-    set("short", "停在路上的"+name+"(Car)");    
+    set("short", "停在路上的"+name+"(Car)");
   }
   else if (s < 30)
   {
@@ -680,12 +680,12 @@ void display_me ()
     set("short", "飞驶的"+name+"(Car)");
     msg = name+"飞快地行驶着。\n";
   }
-  else 
+  else
   {
     set("short", "狂驶中的"+name+"(Car)");
     msg = name+"发疯似地狂驶着。\n";
   }
-  if (msg && 
+  if (msg &&
       random(10) == 0)
     message_vision (msg,me);
 }
@@ -721,7 +721,7 @@ void check_fuel ()
   {
     int f = me->query("fuel");
 
-    f -= (me->query("speed")/10+1); 
+    f -= (me->query("speed")/10+1);
     if (f < 0)
       f = 0;
     me->set("fuel",f);
@@ -761,7 +761,7 @@ object find_exit ()
   if (!mapp(dirs = where->query("exits")))
   {
     tell_object (who,"这里好象没有什么路可行了。\n");
-    return 0;  
+    return 0;
   }
 
   while (obj == 0)
@@ -797,7 +797,7 @@ object find_exit ()
           tell_object (who,"前方("+chinese_dirs[dir]+
                            ")没有什么路可行了。\n");
         return 0;
-      }  
+      }
     }
 
     if (! obj->query("outdoors"))
@@ -816,9 +816,9 @@ object find_exit ()
           tell_object (who,"前方("+chinese_dirs[dir]+
                            ")不是汽车可行的路。\n");
         return 0;
-      }  
+      }
     }
-    
+
     if (me->query("car_from/"+where->query("short"))==obj->query("short") &&
         me->query("autodrive") &&
         random(20))
@@ -866,10 +866,10 @@ void automate ()
 {
   check_speed ();
   check_fuel ();
-  check_miles (); 
+  check_miles ();
   display_me ();
   remove_call_out("check_move");
-  call_out("check_move",2); 
+  call_out("check_move",2);
   remove_call_out("automate");
   call_out("automate",5);
 }
