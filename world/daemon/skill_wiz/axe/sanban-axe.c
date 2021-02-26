@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 【宣花三斧】, sanban-axe
 // updated 6-16-97 pickle
- 
+
 /*
 三板斧    dodge  20    parry  -15    damage  35
 三板斧以奇见长，令人防不胜防，碰到使三板斧者以远距
@@ -28,7 +28,7 @@ mapping *action = ({
                 "dodge":                20,
                 "parry":                -15,
                 "damage_type":      "刺伤",
-     "name":        "剔牙", 
+     "name":        "剔牙",
 //     "post_action":      (:takeforce:),
        ]),
         ([      "action":
@@ -37,7 +37,7 @@ mapping *action = ({
                 "dodge":                20,
                 "parry":                -15,
                 "damage_type":      "劈伤",
-     "name":        "掏耳朵", 
+     "name":        "掏耳朵",
 //     "post_action":      (:takeforce:),
         ]),
    ([       "action":
@@ -46,7 +46,7 @@ mapping *action = ({
                 "dodge":                -20,
                 "parry":                15,
                 "damage_type":      "刺伤", //pickle, 戳伤 not deifined.
-     "name":        "捅", 
+     "name":        "捅",
 //     "post_action":     (: takeforce :),
         ]),
 });
@@ -96,11 +96,11 @@ mapping query_action(object me, object weapon)
     return action[current];
 */
 }
- 
+
 int practice_skill(object me)
 {
         object weapon;
- 
+
    if (me->query("betray/count"))
      return notify_fail("你求学之心不专，无缘学宣花三斧。\n");
    if(me->query("family/master_id") != "lao ren")
@@ -110,8 +110,8 @@ int practice_skill(object me)
         if( !objectp(weapon = me->query_temp("weapon"))
         ||      (string)weapon->query("skill_type") != "axe" )
                 return notify_fail("手中无斧，如何练习斧法？\n");
- 
-        if( (int)me->query("kee") < 50 
+
+        if( (int)me->query("kee") < 50
         ||    (int)me->query("force") < 30)
                 return notify_fail("你的体力不够练宣花三斧，还是先休息休息吧。\n");
         me->receive_damage("kee", 50);
@@ -119,14 +119,14 @@ int practice_skill(object me)
         write("你按着所学练了一遍宣花三斧。\n");
         return 1;
 }
- 
+
 string perform_action_file(string action)
 {
         return CLASS_D("fighter") + "/sanban-axe/" + action;
 }
 void skill_improved(object me)
 {
-      if( (int)me->query_skill("sanban-axe", 1) % 10 == 0 ) 
+      if( (int)me->query_skill("sanban-axe", 1) % 10 == 0 )
         {
    tell_object(me, "\n你练斧过勤，受了点内伤。");
             me->add("max_force", -(int)(me->query_skill("sanban-axe",1)/10));
