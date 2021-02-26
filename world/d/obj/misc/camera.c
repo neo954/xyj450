@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //camera.c     by Crab, Dec 15, 96
 
 #include <ansi.h>
@@ -93,24 +93,24 @@ void init()
 
 
 string per_status_msg(int per, string gender)
-{                                                                               
-   if ( gender == "男性" ) {                                               
-       if ( per>=25 )                                                  
-           return ( per_msg_male1[random(sizeof(per_msg_male1))]); 
+{
+   if ( gender == "男性" ) {
+       if ( per>=25 )
+           return ( per_msg_male1[random(sizeof(per_msg_male1))]);
      else if ( per>=20 )
-           return ( per_msg_male2[random(sizeof(per_msg_male2))]); 
+           return ( per_msg_male2[random(sizeof(per_msg_male2))]);
      else if ( per<20 )
-           return ( per_msg_male3[random(sizeof(per_msg_male3))]); 
-    }                                                               
+           return ( per_msg_male3[random(sizeof(per_msg_male3))]);
+    }
    if ( gender == "女性" ) {
      if ( per>=25 )
-           return ( per_msg_female1[random(sizeof(per_msg_female1))]); 
+           return ( per_msg_female1[random(sizeof(per_msg_female1))]);
      else if ( per>=20 )
         return ( per_msg_female2[random(sizeof(per_msg_female2))]);
      else if ( per<20 )
-           return ( per_msg_female3[random(sizeof(per_msg_female3))]);                                                                             
-    }                                                               
-}                                                                               
+           return ( per_msg_female3[random(sizeof(per_msg_female3))]);
+    }
+}
 
 
 int do_shoot(string arg)
@@ -151,7 +151,7 @@ int do_shoot(string arg)
           if ( inv[i]->is_character() )
           {
              if( !me->visible(inv[i]) ) {
-               if(!wizardp(inv[i])) 
+               if(!wizardp(inv[i]))
                  str += "  " + BLU + inv[i]->name() + NOR;
                                           else continue;
                                         }
@@ -207,7 +207,7 @@ int do_shoot(string arg)
 
      if( (string)obj->query("race")=="人类"
      &&   intp(obj->query("age")) )
-        str += sprintf("%s看起来约%s多岁。\n", pro, 
+        str += sprintf("%s看起来约%s多岁。\n", pro,
         chinese_number( ( ( obj->query("always_young") && (obj->query("age")>obj->query("fake_age")) )?
           obj->query("fake_age"):obj->query("age")) / 10 * 10) );
 
