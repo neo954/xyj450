@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // entrance.c
 
 #include <login.h>
@@ -33,7 +33,7 @@ LONG);
 /*
 int valid_leave(object me, string dir)
 {
-     
+
    if(me->query("id")=="clock") return ::valid_leave(me, dir);
    if(me->query("id")=="net") return ::valid_leave(me, dir);
    if(me->query("id")=="weiqi") return ::valid_leave(me, dir);
