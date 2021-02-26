@@ -16,8 +16,8 @@ LONG
    create_door("north", "铜钉大门", "south", DOOR_CLOSED);   	
         set("no_clean_up", 0);
         set("objects", ([
-                __DIR__"npc/magistra" : 4     
-                         ]) ); 
+                __DIR__"npc/magistra" : 4
+                         ]) );
 	setup();
       replace_program(ROOM);
 }
