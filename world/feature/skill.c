@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // skill.c
 
 #include <ansi.h>
@@ -22,7 +22,7 @@ void set_skill(string skill, int val)
 
   if( !mapp(skills) ) skills = ([ skill: val ]);
   else skills[skill] = val;
-  
+
   if( !mapp(learned) ) learned = ([ skill: 0]);
    else if(undefinedp(learned[skill]))
      (int)learned[skill] = 0;
@@ -57,7 +57,7 @@ varargs void map_skill(string skill, string mapped_to)
 
   if( !mapp(skills) || undefinedp(skills[mapped_to]) )
    return;
-   
+
   if( !mapp(skill_map) ) skill_map = ([ skill: mapped_to ]);
   else skill_map[skill] = mapped_to;
 }
@@ -100,7 +100,7 @@ varargs int query_skill(string skill, int raw)
 {
   if( !raw ) {
    int s;
-   
+
    s = query_temp("apply/" + skill);
    if( mapp(skills) ) {
     s += skills[skill] / 2;
@@ -155,7 +155,7 @@ int skill_death_penalty()
 
 int skill_death_recover()
 {
-  
+
   string *sk;
   int i, amount;
 
@@ -166,9 +166,9 @@ int skill_death_recover()
    learned = ([]);
    for(i = 0; i<sizeof(sk); i++) {
     amount = (skills[sk[i]]+1) * (skills[sk[i]]+1) * 3 / 4;
-    learned += ([ sk[i] : amount ]); 
+    learned += ([ sk[i] : amount ]);
    }
-  }  
+  }
   else {
    for(i = 0; i<sizeof(sk); i++) {
     if( undefinedp(learned[sk[i]]) ) {
@@ -179,7 +179,7 @@ int skill_death_recover()
      skills[sk[i]]++;
     }
    }
-  }  
+  }
   return 1;
 }
 
