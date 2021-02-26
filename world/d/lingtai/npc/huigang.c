@@ -40,4 +40,3 @@ void create()
         setup();
         carry_object("/d/lingtai/obj/cloth")->wear();
 }
-
