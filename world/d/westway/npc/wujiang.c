@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // wujiang.c 武将
 
 inherit NPC;
@@ -21,7 +21,7 @@ void create()
         set_skill("parry", 110);
    set("max_kee", 800);
    set("max_sen", 800);
-        set("force", 600); 
+        set("force", 600);
         set("max_force", 600);
         set("force_factor", 30);
 
