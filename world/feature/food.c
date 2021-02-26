@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // food.c
 
 #include <dbase.h>
@@ -40,7 +40,7 @@ int do_eat(string arg)
         message_vision("$N将剩下的" + name() + "吃得干干净净。\n", this_player());
      if( !this_object()->finish_eat() )
         destruct(this_object());
-   } else 
+   } else
    {
      string msg = query("eat_msg");
      if (msg)
