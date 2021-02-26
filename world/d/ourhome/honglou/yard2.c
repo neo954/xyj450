@@ -362,4 +362,3 @@ string enscript(string arg)
 
      return result;
 }
-
