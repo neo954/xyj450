@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // learn.c
 
 #include <skill.h>
@@ -26,9 +26,9 @@ int main(object me, string arg)
    if(!arg) return notify_fail
          ("指令格式：learn <技能> from <某人> for <次数>\n");
 
-   if(sscanf(arg, "%s for %d", arg, time)!=2 ) 
+   if(sscanf(arg, "%s for %d", arg, time)!=2 )
        time=1;
-   
+
    if(time<1) time=1;
    if(time>25) time=25;
 
@@ -48,11 +48,11 @@ int main(object me, string arg)
    if( !living(ob) )
      return notify_fail("嗯．．．你得先把" + ob->name() + "弄醒再说。\n");
 
-   if( !me->is_apprentice_of(ob) && getuid(ob)!=me->query("couple/id") 
+   if( !me->is_apprentice_of(ob) && getuid(ob)!=me->query("couple/id")
      && getuid(ob)!=me->query("bonze/dadangid") ) {
 
      notify_fail( ob ->name() + reject_msg[random(sizeof(reject_msg))] );
-     if( (string)me->query("family/family_name") != 
+     if( (string)me->query("family/family_name") !=
         (string)ob->query("family/family_name")
      ||   (int)ob->query("family/privs") != -1 ) {
         if( !(ob->recognize_apprentice(me)) ) return 0;
@@ -70,7 +70,7 @@ int main(object me, string arg)
      return 0;
 
    my_skill = me->query_skill(skill, 1);
-   
+
    notify_fail("依你目前的能力，没有办法学习这种技能。\n");
    if( !SKILL_D(skill)->valid_learn(me) ) return 0;
 
@@ -80,7 +80,7 @@ int main(object me, string arg)
      sen_cost *= 2;
      me->set_skill(skill,0);
    }
-   
+
    upper= (int)me->query("potential")-(int)me->query("learned_points");
    if(time>upper) time=upper;
 
@@ -101,12 +101,12 @@ int main(object me, string arg)
       for(i=0; i<time; i++)   {
          amount += random(me->query_int())+1;
          if( amount > qskill )  break;
-       }   
+       }
    }
-   
+
    amount -= qlearned;
    time = i;
-   
+
    sen_cost *= time;
 
    printf("你向%s请教有关「%s」的疑问。\n", ob->name(),
@@ -133,7 +133,7 @@ int main(object me, string arg)
      tell_object(ob, "但是你太累了，没有办法教" + me->name() + "。\n");
      return 1;
    }
-     
+
 
    if( (int)me->query("sen") > sen_cost ) {
      if( (string)SKILL_D(skill)->type()=="martial"
@@ -178,7 +178,7 @@ int help(object me)
 {
         write(@HELP
 指令格式 : learn|xue <技能> from <某人> for <次数>
- 
+
 这个指令可以让你向别人请教有关某一种技能的疑难问题，当然，你请教的对象在这
 项技能上的造诣必须比你高，而你经由这种方式学习得来的技能也不可能高于你所请
 教的人，然而因为这种学习方式相当于一种「经验的传承」，因此学习可以说是熟悉
@@ -186,7 +186,7 @@ int help(object me)
 
 通常，一个人刚学到一种新技能是不会有什么疑难问题的，而是经由实际上的应用中
 遭遇问题，这些问题对于学习一种新技能的过程是很重要的，尤其是各种作为其他技
-能基础的基本技能，更需要经由「发现问题─解决问题」的过程才能得到较好的效果
+能基础的基本技能，更需要经由「发现问题──解决问题」的过程才能得到较好的效果
 因此我们将这种发现问题的过程用「潜能」的观念表示，一个人能够自己发现某些问
 题，表示他(她)有解决这项问题的潜能，当你具有这样的潜能时就可以利用这个指令
 来向其他人请教，而获得进步。

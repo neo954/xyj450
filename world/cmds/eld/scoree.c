@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // score.c
 
 #include <ansi.h>
@@ -15,7 +15,7 @@ string *gift_ranking = ({"下下之选","下等", "中下", "中等", "中上",
 string bar_string = "■■■■■■■■■■■■■■■■■■■■■■■■■";
 string blank_string ="□□□□□□□□□□□□□□□□□□□□□□□□□";
 //string bar_string ="●〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓〓";
-//string blank_string="●────────────────────────";
+//string blank_string="●────────────────────────────────────────────────";
 
 string display_attr(int gift, int value);
 string status_color(int current, int max);
@@ -53,12 +53,12 @@ int main(object me, string arg)
 ob->short(1) );
         line += sprintf(" 你是一%s%s岁的%s%s，%s生。\n",
                 ob->query("unit"),
-                chinese_number(ob->query("age")), 
+                chinese_number(ob->query("age")),
                 ob->query("gender"),
                 ob->query("race"),
                 CHINESE_D->chinese_date(((int)ob->query("birthday") -
 14*365*24*60) * 60) );
-    
+
            year = my["combat_exp"] / 1000;
           if(year)
           line += sprintf(" 你有"RED"%s年"NOR"的道行。\n\n",

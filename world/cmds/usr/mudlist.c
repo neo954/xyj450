@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // mudlist.c
 
 #include <net/daemons.h>
@@ -39,7 +39,7 @@ int main(object me, string arg)
    //    If mudname provided, search server's database for a match
    //   and display its cooresponding address
    if(arg && arg != "") {
-           if(arg=="-a") 
+           if(arg=="-a")
         show_all=1;
            else {
      arg = htonn(arg);
@@ -55,21 +55,21 @@ int main(object me, string arg)
 
    output = "\n\n"+
 "   Ｍｕｄ名称              国际网路位址   埠号      当地时间     在线玩家\n"+
-"─────────────────────────────────────\n";
+"──────────────────────────────────────────────────────────────────────────\n";
 
    total = 0;
    //   Loop through mud list and store one by one
    for(loop = 0, size = sizeof(muds); loop<size; loop++) {
            string mudname, mudtime;
-     
+
                 mudname=undefinedp(mud_list[muds[loop]]["MUDNAME"])?
              upper_case(muds[loop]):
         mud_list[muds[loop]]["MUDNAME"] +
-        "("+upper_case(muds[loop])+")"; 
+        "("+upper_case(muds[loop])+")";
                 if(strlen(mudname)>25) mudname=mudname[0..24];
      mudtime=mud_list[muds[loop]]["TIME"];
-           
-         output1 = sprintf("%-25s %-16s%-5s %15s %5s\n", 
+
+         output1 = sprintf("%-25s %-16s%-5s %15s %5s\n",
         mudname,
         mud_list[muds[loop]]["HOSTADDRESS"],
         mud_list[muds[loop]]["PORT"],
@@ -83,7 +83,7 @@ int main(object me, string arg)
         pplno = 0;
          else
         sscanf(mud_list[muds[loop]]["USERS"], "%d", pplno);
-         if ((show_all==1) || 
+         if ((show_all==1) ||
         (mud_list[muds[loop]]["MUDLIB"]==
          "A Journey to the West") )
         total += pplno;
@@ -95,7 +95,7 @@ int main(object me, string arg)
         }
    output+=output2;
    output+=
-"─────────────────────────────────────\n";
+"──────────────────────────────────────────────────────────────────────────\n";
    output+="共有 " + sprintf("%d", total) + " 位使用者连线中。\n";
 
    //   Display dumped mudlist output through user's more pager
