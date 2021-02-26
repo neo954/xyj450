@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit NPC;
 inherit F_MASTER;
