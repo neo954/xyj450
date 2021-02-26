@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /moon/ontop.c
 //cglaem...12/13/96.
 
@@ -34,7 +34,7 @@ int valid_leave(object me, string dir)
 int do_dig(string arg)
 {
   object me=this_player();
-  object m; 
+  object m;
   if( (!arg) || !((arg == "lotusroot") || (arg == "root") || (arg == "ou")))
     return notify_fail("挖什么？\n");
   else
@@ -44,7 +44,7 @@ int do_dig(string arg)
         {
              message_vision("$N刨啊刨，刨到一棵大莲藕．\n", me);
       m = new(__DIR__"obj/ou.c");
-                m->move(this_player()); 
+                m->move(this_player());
    }
     }
   me->receive_damage("sen", (int)me->query("max_sen")*10/100);
