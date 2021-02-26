@@ -133,4 +133,3 @@ void attempt_apprentice(object ob)
 	command("say °¢ÃÖÍÓ·ð£¬ÉÆÔÕ£¡ÉÆÔÕ£¡");
 	command("recruit " + ob->query("id"));
 }
-
