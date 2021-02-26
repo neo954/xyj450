@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 12/18/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("老奶奶", ({ "lao nainai", "lao", "nainai", "queen" }));
-  set("title", "压龙洞");   
+  set("title", "压龙洞");
   set("long", "一位扭腰摆臀的压龙洞妖后，身上隐隐地发出狐臭。\n");
   set("gender", "女性");
   set("age", 86);
@@ -71,7 +71,7 @@ void taishang_appearing (object who)
   object taishang = new ("/d/qujing/pingding/npc/taishang");
 
   taishang->announce_success (who);
-  destruct (taishang); 
+  destruct (taishang);
 }
 
 void unconcious ()
