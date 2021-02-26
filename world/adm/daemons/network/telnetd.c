@@ -114,4 +114,3 @@ int telnet_permission(object caller, string func, mixed *info) {
    }
 
 return 0; }
-
