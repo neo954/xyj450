@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //xiaomuwu.c
 
@@ -21,7 +21,7 @@ LONG);
    //set("item_desc", ([" *** " : " *** ", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      //"south" : __DIR__"xiaomuwu",
      "north" : __DIR__"eroad2",
@@ -30,8 +30,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      __DIR__"npc/kongque-gongzhu" : 1,
    ]));
@@ -49,7 +49,7 @@ LONG);
 
 //int do_jump(string arg)
 //{
-       
+
 //}
 
 void open_down()
@@ -59,7 +59,7 @@ void open_down()
    if( !(downroom = find_object(__DIR__"dixiashi")) )
      downroom = load_object(__DIR__"dixiashi");
 
-   //if( downroom = find_object(__DIR__"dixiashi") ) 
+   //if( downroom = find_object(__DIR__"dixiashi") )
    //{
      set("exits/down", __DIR__"dixiashi");
      downroom->set("exits/up", __FILE__);
@@ -78,7 +78,7 @@ void close_down()
 
    message("vision", "桌子底下发出轧轧的声音，洞口又封上了。\n", this_object() );
 
-   if( downroom = find_object(__DIR__"dixiashi") ) 
+   if( downroom = find_object(__DIR__"dixiashi") )
    {
      message("vision", "天花板上发出轧轧的声音，软梯被收了上去。\n", downroom );
      downroom->delete("exits/up");
