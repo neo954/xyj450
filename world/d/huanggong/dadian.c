@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat
 
 inherit ROOM;
@@ -38,7 +38,7 @@ LONG);
 
 int valid_leave (object who, string dir)
 {
-  if (dir == "east" || 
+  if (dir == "east" ||
       dir == "west" ||
       dir == "north")
   {
