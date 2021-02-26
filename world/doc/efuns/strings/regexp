@@ -10,11 +10,11 @@ In the first version, regexp() returns true (1) if the string str contains
 a substring which matches the regular expression 'pattern'.  If a complete
 match is wanted, the pattern should begin with ^ and end with $.
 
-When presented with an array of lines of text and a regular 
-expression, regexp() returns an array containing those lines which 
+When presented with an array of lines of text and a regular
+expression, regexp() returns an array containing those lines which
 match the pattern specified by the regular expression. If the (flag & 2)
 is nonzero, (flag defaults to zero), then non-matches will be returned
-instead of matches. If (flag & 1) is nonzero, the array returned will be of 
+instead of matches. If (flag & 1) is nonzero, the array returned will be of
 the form ({ index1 + 1, match1, ..., indexn + 1, matchn }) where indexn
 is the index of nth match/non match in the array lines.
 
