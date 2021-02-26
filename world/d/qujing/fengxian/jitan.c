@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 12/2/1997
 
 inherit ROOM;
@@ -37,7 +37,7 @@ void create ()
 一座由楠木建筑的坛场，地上铺有青砖，上有无数蒲团。坛台
 由红砖砌成，分下中上三层坛阶。台上供有紫铜香鼎，烟火不
 断，青雾袅袅。
-    
+
 LONG);
 
   set("no_fight",1);
@@ -78,8 +78,8 @@ int do_nianxiang ()
     message_vision ("$N取过一根香将其点燃，诚心拈香。\n",who);
   else if (i >= size)
   {
-    message_vision ("\n祭官赶紧将$N扶起。\n",who); 
-  }  
+    message_vision ("\n祭官赶紧将$N扶起。\n",who);
+  }
   else
   {
     j = i*18+10;
@@ -92,13 +92,13 @@ int do_nianxiang ()
 
 void start_nianxiang (object who, int i)
 {
-  message_vision ("\n"+msgs[i]+"\n",who); 
+  message_vision ("\n"+msgs[i]+"\n",who);
 }
 
 void finish_nianxiang (object who, int i)
 {
   who->interrupt_me ();
-  message_vision ("\n$N香毕，又一俯拜。\n",who); 
-  message_vision ("\n"+strs[i]+"\n",who); 
+  message_vision ("\n$N香毕，又一俯拜。\n",who);
+  message_vision ("\n"+strs[i]+"\n",who);
   who->set_temp("obstacle/fengxian_nianxiang",i+1);
 }
