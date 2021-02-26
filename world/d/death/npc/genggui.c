@@ -30,4 +30,3 @@ setup();
 
         carry_object("/d/obj/weapon/hammer/gucui")->wield();
 }
-
