@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 5/30/1997 by snowcat
 #include <ansi.h>
 
@@ -63,7 +63,7 @@ void create()
 
 int execute_help();
 int execute_ask();
-int qualified(object me); 
+int qualified(object me);
 //More than 1/4 of real players with 10k+ experience is required
 //to attend the meeting. Modified by Wuliao
 
@@ -121,7 +121,7 @@ string get_respect (object who)
 void announce (object me, string str)
 {
   if (DEBUG)
-  { 
+  {
     object snowcat = find_player ("snowcat");
     if (snowcat && wizardp(snowcat))
       tell_object (snowcat,"◆ "+str+"\n");
@@ -297,14 +297,14 @@ int execute_ask ()
                     "此乃大事非同小可，老夫须先启奏玉帝，"+
                     get_respect(who)+"若愿意请使confirm。\n",me,who);
     me->set_temp("pantao/confirm",1);
-    return 1;  
+    return 1;
   }
   // LEVEL_ASKED, LEVEL_RANKED
   if(me->query_temp("pantao/level") < LEVEL_FEAST)
   {
     remove_call_out ("continue_asked");
     call_out ("continue_asked",1,me,who);
-    return 1;  
+    return 1;
   }
   message_vision ("$N对$n说道："+get_respect(who)+
                   "，蟠桃会已经开宴。\n",me,who);
@@ -472,7 +472,7 @@ int execute_approve_fight(object who, object ob)
   j = sizeof(filter_array(list, (:qualified:))) - 1;
   // only interactive players count.
 
-  if ((i/4-j) > 0 && (! DEBUG)) 
+  if ((i/4-j) > 0 && (! DEBUG))
   {
     message_vision ("$N对$n摇摇头：西游记现有"+chinese_number(i)+"位高手，"
                     "此处仅有数位仙贤在邀，"+
@@ -482,7 +482,7 @@ int execute_approve_fight(object who, object ob)
   }
   announce (me,"封神榜演礼："+who->query("name")+"与"+ob->query("name")+
             "于"+environment(me)->query("short")+"争榜较量！\n");
-  
+
   me->set_temp("pantao/is_busy",1);
   me->set_leader(0);
   return 1;
@@ -786,7 +786,7 @@ void auto_gifts (object me)
   object *list;
   int i;
   string room_dir;
-  
+
 /*
   room_dir = __DIR__;
   room_dir[strlen(room_dir)-4] = 0;
@@ -968,7 +968,7 @@ int execute_back(object me, object who)
   string  there;
 
   if(!who) return 1;
-  
+
   there = who->query("pantao/from");
 
   //if (!there)
@@ -986,7 +986,7 @@ int execute_back(object me, object who)
   message_vision("太白金星复又纵起祥云缓缓飞离。\n",who);
   //me->move(here);
   message_vision("……祥云飞回，$N从里面走出。\n",me);
-  
+
   return 1;
 }
 
@@ -1003,7 +1003,7 @@ int do_back(string arg)
     return 1;
   }
   execute_back (me,who);
-  
+
   return 1;
 }
 
@@ -1093,7 +1093,7 @@ int execute_finish (object me)
 
   if (me == 0)
     me = this_object();
- 
+
   list = all_inventory(environment(me));
   i = sizeof(list);
   while  (i--)
@@ -1106,7 +1106,7 @@ int execute_finish (object me)
 
     j = random(100)+1;
     list[i]->add("potential",j);
-    tell_object(list[i],"你的潜能增加了"+chinese_number(j)+"点！\n"); 
+    tell_object(list[i],"你的潜能增加了"+chinese_number(j)+"点！\n");
     call_out ("execute_back",i*2,me,list[i]);
   }
   remove_call_out ("send_back_girls");
