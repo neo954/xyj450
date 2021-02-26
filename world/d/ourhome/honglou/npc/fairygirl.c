@@ -49,5 +49,3 @@ int send_back(object me)
    else me->move((string)me->query("dream_place"));
    return 1;
 }
-
-
