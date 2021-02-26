@@ -23,4 +23,3 @@ varargs void init_whip(int damage, int flag)
      set("verbs", ({ "whip","wave" }) );
    }
 }
-
