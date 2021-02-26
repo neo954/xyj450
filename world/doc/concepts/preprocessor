@@ -23,12 +23,12 @@ Sharing Definitions and Code
 
 This facility is provided through the #include directive.
 
-    Syntax 1:   #include "file.h"
+    Syntax 1:   #include <file.h>
 
     Syntax 2:   #include "file.h"
 
 Notes:
-    The '#include "file.h"' form looks for the file, 'file.h' in the
+    The '#include <file.h>' form looks for the file, 'file.h' in the
     system's standard include directories.
                        (On TMI this is just '/include'.)
 
