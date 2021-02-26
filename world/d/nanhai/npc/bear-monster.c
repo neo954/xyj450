@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bear-monster.c 黑熊怪□
 // By Dream Dec. 20, 1996
 
@@ -10,7 +10,7 @@ inherit F_MASTER;
 void create()
 {
    set_name("黑熊怪", ({ "bear monster", "bear", "monster" }));
-   set("title", "南海观音之徒");   
+   set("title", "南海观音之徒");
    set("long", @LONG
 黑熊怪本是山间野兽，不知从哪里学到一身好本领。
 后遇见南海观音，被南海观音收为徒弟。
