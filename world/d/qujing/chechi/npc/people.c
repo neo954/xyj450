@@ -64,5 +64,3 @@ void create()
   carry_object("/d/qujing/chechi/obj/changpao")->wear();
   add_money("silver", random(5));
 }
-
-
