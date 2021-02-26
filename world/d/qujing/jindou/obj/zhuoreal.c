@@ -1,14 +1,14 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 12/17/1997
 
 #include <ansi.h>
 #include <weapon.h>
- 
+
 inherit F_UNIQUE;
 inherit ITEM;
- 
+
 void create()
 {
   set_name("金刚琢",({"jingang zhuo", "jingang", "zhuo", "fabao"}));
@@ -29,7 +29,7 @@ void create()
   set("replace_file", "/d/qujing/jindou/obj/zhuofake.c");
   set("is_monitored",1);
   setup();
-} 
+}
 
 int ji_ob (object victim)
 {
@@ -82,7 +82,7 @@ int ji_ob (object victim)
     return notify_fail("你祭"+zhuoname+"失败。\n");
   }
 
-  ob = victim->query_temp("weapon"); 
+  ob = victim->query_temp("weapon");
   if(!ob)
   {
     tell_object (me, "对方没有使用武器盔甲。\n");
