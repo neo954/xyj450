@@ -13,7 +13,7 @@ void create()
 	set("nickname", "掌棒龙头");
 	set("gender", "男性");
 	set("age", 45);
-	set("long", 
+	set("long",
 		"鲁有脚虽然武功算不得顶尖高手，可是在江湖上却颇有声望。\n"
 		"因为他在丐帮中有仁有义，行事光明磊落，深得洪七公的器重。\n");
 	set("attitude", "peaceful");
@@ -54,7 +54,7 @@ void create()
 void attempt_apprentice(object ob)
 {
 	if ( (int)ob->query("int") >= 25 ) {
-		command("say 我们丐帮的武艺一向以刚猛为主，" + 
+		command("say 我们丐帮的武艺一向以刚猛为主，" +
 		RANK_D->query_respect(ob) + "聪慧过人，似乎不宜学丐帮的功夫？");
 		return;
 	}
