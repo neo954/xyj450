@@ -1,9 +1,9 @@
 // Room: /d/death/inn1.c
- 
+
 inherit ROOM;
- 
+
 int do_stuff(object ob);
- 
+
 void create()
 {
         set("short", "小店");
@@ -12,13 +12,13 @@ void create()
 的影子投射在对面的墙上. 几个人影(shadows)围在炉旁不知在讨
 论些什麽. 屋内有几张木桌, 椅, 墙上挂了几幅字画, 一切看来非
 常的详和宁静, 你几乎忘了自己身在何处.
- 
+
 LONG
         );
         set("exits", ([ /* sizeof() == 1 */
   "east" : "/d/suburb/fy/death/road1",
 ]));
- 
+
         set("item_desc", ([
         "shadows" : @SHADOWS
 从你站的位置很难辨别出那几个人的容貌, 四个披著黑斗蓬的人斜靠在壁
@@ -30,12 +30,12 @@ SHADOWS
         setup();
 //        replace_program(ROOM);
 }
- 
+
 void init()
 {
         add_action("redirect_ask","ask");
 }
- 
+
 int redirect_ask(string str)
 {
         object ob;
@@ -44,14 +44,14 @@ int redirect_ask(string str)
         name=(string)ob->query("id");
         if (!str) return 0;
         if (sscanf(str,"%s about %s",tmp1, tmp2) == 2) {
-                if (tmp1 == name && (tmp2 =="回家" || tmp2=="home")) 
+                if (tmp1 == name && (tmp2 =="回家" || tmp2=="home"))
                         return do_stuff(ob);
                         else return 0;
         }
         else return 0;
         return 0;
 }
- 
+
 int do_stuff(object ob)
 {
         write("你走上前去, 低声的向那个长得跟你一样的人询问回家的事.\n");
