@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/20/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("道士", ({ "dao shi", "dao", "shi" }));
-  set("title", "黄花五公");   
+  set("title", "黄花五公");
   set("long", "一位欲神欲仙的黄花观五公道士。");
   set("gender", "男性");
   set("age", 40);
@@ -48,7 +48,7 @@ void die ()
 {
   object me = this_object();
   object ob = query_temp("my_killer");
-  if (ob && 
+  if (ob &&
       ! ob->query_temp("obstacle/pansi_killed_"+me->query("name")))
   {
     ob->set_temp("obstacle/pansi_killed_"+me->query("name"),1);
@@ -72,7 +72,7 @@ void daogu_appearing (object who)
   object daogu = new ("/d/qujing/pansi/npc/daogu");
 
   daogu->announce_success (who);
-  destruct (daogu); 
+  destruct (daogu);
 }
 
 void destruct_me(object me)
@@ -90,8 +90,8 @@ void fight_ob (object ob)
 {
   object me = this_object();
 
-  call_out ("recovering",1,me,ob);  
-  call_out ("hurting",random(5)+5,me,ob);  
+  call_out ("recovering",1,me,ob);
+  call_out ("hurting",random(5)+5,me,ob);
 }
 */
 
@@ -107,8 +107,8 @@ void kill_ob (object ob)
   object me = this_object();
 
   set_temp("my_killer",ob);
-  call_out ("recovering",1,me,ob);  
-  call_out ("hurting",random(5)+5,me,ob);  
+  call_out ("recovering",1,me,ob);
+  call_out ("hurting",random(5)+5,me,ob);
   ::kill_ob(ob);
 }
 
@@ -142,7 +142,7 @@ void recovering (object me, object ob)
     me->set("eff_kee",me->query("max_kee"));
     me->set("eff_sen",me->query("max_sen"));
   }
-  call_out ("recovering",1,me,ob);  
+  call_out ("recovering",1,me,ob);
 }
 
 void hurting (object me, object ob)
@@ -171,9 +171,9 @@ void hurting (object me, object ob)
 
   if (environment(ob) != environment(me))
     return;
- 
+
   message_vision ("\n"+msgs[random(sizeof(msgs))],me,ob);
-  
+
   needle = present("xiuhua zhen",ob);
   if (! needle ||
       needle != ob->query_temp("weapon") ||
@@ -181,16 +181,16 @@ void hurting (object me, object ob)
   {
     message_vision (strs[random(sizeof(strs))],ob);
     damage = ob->query("max_kee")/(6+random(4));
-    ob->add("kee",-damage); 
-    ob->add("eff_kee",-damage); 
-    ob->add("sen",-damage); 
-    ob->add("eff_sen",-damage); 
+    ob->add("kee",-damage);
+    ob->add("eff_kee",-damage);
+    ob->add("sen",-damage);
+    ob->add("eff_sen",-damage);
   }
   else
   {
     message_vision ("但见$N手上绣花针一闪，"+
                     "$n嚎叫一声，胁下几只眼睛顿时灭去！\n",ob,me);
   }
-  remove_call_out ("hurting");  
-  call_out ("hurting",random(10)+10,me,ob);  
+  remove_call_out ("hurting");
+  call_out ("hurting",random(10)+10,me,ob);
 }
