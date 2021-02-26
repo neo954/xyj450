@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mimi/zhuziguo/well.c  snowcat moved to /d/qujing/wuji
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create ()
 
 LONG);
 
-  set("exits", ([ 
+  set("exits", ([
     "up" : __DIR__"yuhua",
     "down" : __DIR__"shuijing",
   ]));
