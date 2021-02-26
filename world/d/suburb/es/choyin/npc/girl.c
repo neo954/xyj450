@@ -17,7 +17,7 @@ void create()
 		"name": "我 ... ？ 你们外地人都做兴这么问陌生姑娘的闺名吗？",
 		"here": "这里啊？这里就是乔阴县有名的翠柳湖啊！",
 		"闺名": "真是没有礼貌的家伙，我才不告诉你！",
-		"游晋" : (: ask_youngman :), 
+		"游晋" : (: ask_youngman :),
 	]) );
 	setup();
 	carry_object(__DIR__"obj/lady_dress")->wear();
