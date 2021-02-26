@@ -119,4 +119,3 @@ string perform_action_file(string action)
 {
 	return __DIR__"huoyan-dao/" + action;
 }
-
