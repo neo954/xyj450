@@ -18,7 +18,7 @@ LONG
   "north" : "/d/suburb/es/oldpine/secrectpath1",
   "south" : "/d/suburb/es/oldpine/waterfall",
 ]));
-/*	set("objects", ([ 
+/*	set("objects", ([
   "/d/suburb/es/oldpine/npc/maniac" : 1,
 ]));
 */
