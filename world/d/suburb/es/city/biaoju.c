@@ -23,4 +23,3 @@ LONG
         set("valid_startroom", 1);
         replace_program(ROOM);
 }
-
