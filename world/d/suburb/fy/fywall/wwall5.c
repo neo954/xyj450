@@ -10,7 +10,7 @@ LONG
         );
         set("exits", ([ /* sizeof() == 4 */
   "north" : __DIR__"wwall4",
-  "south"  : __DIR__"wupgate", 
+  "south"  : __DIR__"wupgate",
 ]));
         set("outdoors", "fengyun");
         setup();
