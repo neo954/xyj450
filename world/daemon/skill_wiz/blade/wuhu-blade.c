@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //五虎断门刀, wuhu-blade.c
 //modified 4-17-97 pickle
 
@@ -32,7 +32,7 @@ mapping *action = ({
      "parry":     0,
                 "damage":     20,
                 "damage_type":  "砍伤"
-        ]),   
+        ]),
         ([      "name":                 "狐假虎威",
                 "action":
 "$N一声巨吼，震得$n耳中回声不止。趁此机会，$N一刀削向$n的$l。\n"
@@ -41,7 +41,7 @@ mapping *action = ({
      "parry":     0,
                 "damage":     25,
                 "damage_type":  "割伤"
-        ]),   
+        ]),
         ([      "name":                 "虎落平阳",
                 "action":
 "$N左掌护身，滚倒在地上，右手$w连连向$n的双脚削去",
@@ -49,7 +49,7 @@ mapping *action = ({
      "parry":     0,
                 "damage":     10,
                 "damage_type":  "劈伤"
-        ]),   
+        ]),
         ([      "name":                 "骑虎难下",
                 "action":
 "$N站稳马步，运起浑身之力，逼入$w中，向$n发出雷霆一击！\n"
