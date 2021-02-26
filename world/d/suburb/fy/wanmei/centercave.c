@@ -67,4 +67,3 @@ void close_path()
                 delete("exits/south");
 		set("frozen",10+random(5));
 }
-
