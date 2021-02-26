@@ -63,4 +63,3 @@ void create()
 
 
 #include "/daemon/class/shaolin/cheng.h"
-
