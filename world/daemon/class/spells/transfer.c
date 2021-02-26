@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // transfer.c
 #include <ansi.h>
 inherit SSERVER;
@@ -10,10 +10,10 @@ int cast(object me, object target)
   int neiligain, manacost, diff;
   int eff, forcelev, spellslev, mymaxmana, mymaxforce;
   int myforce, mymana, temp;
-  
-  if(!target) target=me;    
+
+  if(!target) target=me;
   if( target != me ) return notify_fail("你只能以法力恢复自己的真气。\n");
-  
+
   forcelev=me->query_skill("force");
   if (forcelev > 300) forcelev=300;
   spellslev=me->query_skill("spells");
@@ -22,15 +22,15 @@ int cast(object me, object target)
   if( forcelev < 20 ) return notify_fail("你的内功修为太低。\n");
   mymana=me->query("mana");
   if( mymana< 50 ) return notify_fail("你的法力不够了。\n");
-  
+
   mymaxforce=me->query("max_force");
   myforce=me->query("force");
   diff = mymaxforce - myforce;
   if( diff<1 ) return notify_fail("你现在真气充盈。\n");
-  
+
   manacost = diff;
   if( manacost>mymana) manacost = mymana;
-  
+
   me->add("mana", -manacost);
   mymaxmana=me->query("max_mana");
   neiligain = manacost*mymaxmana/(1+mymaxforce);
@@ -51,11 +51,11 @@ int cast(object me, object target)
       me->set("force", mymaxforce);
       //to prevent possible bug, set neili always smaller than max neili.
     }
-  
+
   message_vision("$N嘴里嘀咕了几句，觉得真气充盈多了。\n", me);
-  
+
   if(me->is_fighting())me->start_busy(1);
   else me->start_busy(random(30/me->query_kar()));
-  
+
   return 1;
 }
