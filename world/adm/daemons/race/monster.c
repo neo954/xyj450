@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // monster.c
 
 #include <race/monster.h>
@@ -12,7 +12,7 @@ void setup_monster(object ob)
    my = ob->query_entire_dbase();
 
    my["unit"] = "只";
-   
+
    if( undefinedp(my["gender"]) ) my["gender"] = "雄性";
    if( undefinedp(my["age"]) ) my["age"] = random(80) + 5;
 
