@@ -11,7 +11,7 @@ void create()
         set("gender","女性" );
         set("age",23);
         set("long",
-                
+
 "这是个蒙面杀手，眉眼看起来有些面熟。\n");
 
 //        set("vendetta_mark", "authority");
