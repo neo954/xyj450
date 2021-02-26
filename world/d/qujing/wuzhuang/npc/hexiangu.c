@@ -85,7 +85,3 @@ int recruit_apprentice(object ob)
    if( ::recruit_apprentice(ob) )
      ob->set("class", "xian");
 }
-
-
-
-
