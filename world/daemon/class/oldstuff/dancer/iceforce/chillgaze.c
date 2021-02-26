@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // chillgaze.c
 
 #include <ansi.h>
@@ -31,7 +31,7 @@ int exert(object me, object target)
 
    message_vision(
      HIB "$N眼神忽然发出异光，双瞳犹如两把利刃般盯著$n！\n" NOR, me, target);
-   
+
    if( random(target->query("combat_exp")) > (int)me->query("combat_exp") / 2 ) {
      message_vision("$N很快地转过头去，避开了$n的目光。\n", target, me);
      return 1;
