@@ -36,4 +36,3 @@ int accept_fight(object me)
         command("say 好吧，砌搓技艺，点到为止！\n");
         return 1;
 }
-
