@@ -68,4 +68,3 @@ int do_drink (string arg)
   destruct(ob);
   return 1;
 }
-
