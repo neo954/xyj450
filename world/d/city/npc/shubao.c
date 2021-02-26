@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //shubao.c, updated 5-7-97, pickle
 
 inherit NPC;
