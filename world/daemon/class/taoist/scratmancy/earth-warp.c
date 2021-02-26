@@ -58,4 +58,3 @@ int do_warp(string target, object who)
         this_player()->move(DEATH_ROOM);
         return 1;
 }
-
