@@ -1,4 +1,4 @@
-// yang.c 杨老板 
+// yang.c 杨老板
 
 inherit NPC;
 //inherit F_VENDOR;
