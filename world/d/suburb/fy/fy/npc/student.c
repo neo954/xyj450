@@ -21,4 +21,3 @@ void create()
 	add_money("silver", 1);
         carry_object(__DIR__"obj/fycloth")->wear();
 }
-
