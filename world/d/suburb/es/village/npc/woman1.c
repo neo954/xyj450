@@ -11,13 +11,13 @@ void create()
         set_name("农妇",({"woman"}));
         set("gender","女性");
         set("age",30);
-       
+
 	set("chat_chance",20);
 	set("chat_msg", ({
 		"农妇道：我可怜的儿啊，你到那里去了？\n",
 		"农妇道：你有见到我的儿吗？，他头上梳着两个小抓揪，只有七岁。\n",
 	"农妇叹道：儿啊！\n",
-	}) ); 
+	}) );
 	set("inquiry",([
 		"儿":"我的儿前两天不见了，我和他爹到处找都找不到。听说黑松山总抓小孩子。\n",
 	]) );
@@ -29,7 +29,7 @@ void create()
         set("chat_msg_combat", ({
         (: wield_weapon :),
         (: converse_one :) }) );
-        
+
 	setup();
         carry_object("/obj/cloth")->wear();
         //carry_object(__DIR__"obj/ricewine");
