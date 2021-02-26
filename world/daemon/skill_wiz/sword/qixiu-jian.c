@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // qixiu-jian.c, 【七修剑】
 // edited 4-16-97 pickle
 
@@ -46,7 +46,7 @@ mapping *action = ({
       "name":      "「七窍生烟」",
 //      "post_action":   (:set_busy:),
       ]),
-   
+
     ([
       "action":
 "$N奋不顾身，手中$w如狂风暴雨般向$n乱劈！\n"
@@ -85,16 +85,16 @@ mapping *action = ({
 int valid_learn(object me)
 {
     object ob;
-    
+
     if (me->query("family/family_name") != "陷空山无底洞")
    return notify_fail("你还未习惯血腥，无法学七修剑。\n");
     if ((int)me->query("max_force") < 100)
    return notify_fail("你的真气不足，难以领悟剑法的精妙之处。\n");
-    
+
     if (!(ob = me->query_temp("weapon"))
    ||   (string)ob->query("skill_type") != "sword" )
    return notify_fail("你必须先找一把剑才能练剑法。\n");
-    
+
     return 1;
 }
 
