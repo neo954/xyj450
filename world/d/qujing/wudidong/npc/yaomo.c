@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // jiading.c
 
 inherit NPC;
@@ -25,7 +25,7 @@ set("long","一个相貌凶险的盗贼, 你仔细一看, 只见他股后似
         set("max_sen", 800);
    set_skill("dodge", 65);
    set_skill("blade", 60);
-   
+
 
    setup();
         add_money("silver", 20);
