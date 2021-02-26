@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bianfu.c 蝙蝠精
 // 9-18-97 pickle
 
@@ -58,7 +58,7 @@ void create()
   set("per", 10);
   set("con", 40);
   set("kar", 20);
-  
+
   set("env/wimpy", 70);
 
   set("max_kee", 400);
@@ -74,7 +74,7 @@ void create()
         "老鼠精": "我听说他们是个什么什么山什么什么洞的，也不知咋回事。",
         "陷空山": (: ask_me :),
         "无底洞": (: ask_me :),
-                 ]) );  
+                 ]) );
 
   setup();
   carry_object("/d/obj/cloth/pobuyi")->wear();
