@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //talkroom
 
 #include <ansi.h>
@@ -31,7 +31,7 @@ void init()
         int i, num;
 
         person = all_inventory(room);
-                                
+
         for ( i=0; i<sizeof(person); i++ ) {
                 if ( person[i]->is_character() && userp(person[i]) ) num++;
         }
@@ -67,27 +67,27 @@ int do_lock()
 
         if ( room->query("locked") )
                 return notify_fail("门正锁着哪！\n");
-                                       
+
         person = all_inventory(room);
-                                
+
         for ( i=0; i<sizeof(person); i++ ) {
                 if ( person[i]->is_character() && userp(person[i]) ) num++;
-        }                                                               
-         
-        if ( num < 2 ) 
+        }
+
+        if ( num < 2 )
                 return notify_fail("房里只有你一个人，向谁说悄悄话呢？不必把门锁上吧。\n");
-       
+
         room->set("locked", 1);
-                               
+
         remove_call_out("unlock_door");
         call_out("unlock_door", 1800, room);
-                                                                     
-        message_vision("$N将门拴一旋一按锁好，满脸笑容的转过身来。\n", this_player());                                                           
+
+        message_vision("$N将门拴一旋一按锁好，满脸笑容的转过身来。\n", this_player());
         write("你数了数屋里一共" + num + "个人。\n");
         return 1;
 }
-                                                                                
-                                                                        
+
+
 int unlock_door(object room)
 {
         room->delete("locked");
