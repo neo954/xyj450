@@ -64,4 +64,3 @@ void create()
 
 
 #include "/daemon/class/shaolin/hui.h"
-
