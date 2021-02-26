@@ -46,4 +46,3 @@ void converse_one()
         command("say 以大欺小啊你...");
     return;
 }
-
