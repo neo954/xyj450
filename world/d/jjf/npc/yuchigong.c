@@ -139,16 +139,3 @@ void dropthing(string thing)
   command("drop "+thing);
   return;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
