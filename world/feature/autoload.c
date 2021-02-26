@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // autoload.c
 
 string *autoload;
@@ -54,7 +54,7 @@ void restore_autoload()
    }
 // Not sure how count works, it isn't initialized (to be 0?) Dream 8/24/97
 //        if (count==0)
-        {     
+        {
            object user,cloth;
            user=this_object();
            if (user->query("gender")=="女性")
