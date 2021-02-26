@@ -39,5 +39,3 @@ TEXT
   set("no_clean_up", 0);
   setup();
 }
-
-
