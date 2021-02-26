@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // yinqiang.c
 // updated 5-30-97, pickle
 
 #include <ansi.h>
 #include <weapon.h>
 
-inherit F_UNIQUE; 
+inherit F_UNIQUE;
 inherit SPEAR;
 
 void create()
