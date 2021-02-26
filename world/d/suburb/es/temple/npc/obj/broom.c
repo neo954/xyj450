@@ -16,7 +16,7 @@ void create()
           set("material", "bamboo");
           set("wield_msg", "$N拿起一把$n握在手中。\n");
           set("unwield_msg", "$N放下手中的$n。\n");
-         } 
+         }
    init_staff(3);
 
    setup();
