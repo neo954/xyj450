@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 #include <ansi.h>
 
@@ -38,7 +38,7 @@ void reset_balance(object me)
   string NPCNAME=this_object()->name();
   if(myexp<1) myexp=1;
   if(myexp>100) myexp=100;
-  allowed=myexp*1000000;//each year can have 100 gold, range 100-10000. 
+  allowed=myexp*1000000;//each year can have 100 gold, range 100-10000.
   if (me->query("balance") > allowed)
   {
     me->set("balance_old", me->query("balance"));
