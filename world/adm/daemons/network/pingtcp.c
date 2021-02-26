@@ -12,7 +12,7 @@
 
 #include <mudlib.h>
 #include <net/socket.h>
-#include <uid.h>
+#include "uid.h"
 #include <net/daemons.h>
 
 inherit DAEMON;
