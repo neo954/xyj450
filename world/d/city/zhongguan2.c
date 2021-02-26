@@ -80,5 +80,3 @@ student_msg[random(sizeof(student_msg))] + "\n");
 
         return 1;
 }
-
-
