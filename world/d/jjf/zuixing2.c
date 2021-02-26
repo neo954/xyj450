@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/jjf/zuixing2
 inherit ROOM;
- 
+
 void create ()
 {
   set ("short", "醉星楼二楼");
@@ -21,29 +21,29 @@ LONG);
   "down" : __DIR__"zuixing",
 ]));
   set("light_up", 1);
- 
+
   setup();
 }
 void init()
 {
   add_action("do_kan", "砍");
   add_action("do_kan", "chop");
-  add_action("do_kan", "kan3"); 
-} 
+  add_action("do_kan", "kan3");
+}
 int do_kan(string arg)
 {
   object me=this_player(), here=this_object(), ob;
   int kar=me->query_kar();
- 
+
   if( (!arg || arg != "柱子") && (arg != "zhuzi" && arg!="pillar"))
     return notify_fail("你要从哪里下手？\n");
   if( !(ob = me->query_temp("weapon")) || (string)ob->query("skill_type") != "axe" )
     return notify_fail("没有顺手的家伙怎么拆得动？\n");
- 
+
  if(objectp(present("li jiancheng", environment(me))) || objectp(present("li yua
 nji", environment(me))))
     return notify_fail("当朝达贵在此，不怕砸伤了担责任吗？\n");
-  
+
   here->add("pending/breakdown", 1);
   if (here->query("already_breakdown"))
     return notify_fail("柱子都塌了，还砍什么砍？要命的快下楼去吧！\n");
