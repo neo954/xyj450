@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/qujing/wudidong/dong1.c
 
 inherit ROOM;
@@ -27,7 +27,7 @@ LONG);
 \t\t\t无
 \t\t\t底
 \t\t\t洞
- 
+
 ",
 ]));
   set("outdoors", 0);
