@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // drift_sense.c
 
 #include <ansi.h>
@@ -48,7 +48,7 @@ void select_target(object me, string name)
 
    me->add("atman", -75);
    me->receive_damage("gin", 30);
-   
+
    message_vision( HIY "$N低头闭目，开始施展游识神通 ....\n" NOR, me);
    if( random(ob->query("max_atman")) < (int)me->query("atman") / 2 ) {
      write("你感受到对方的灵力，但是不够强烈。\n");
@@ -58,7 +58,7 @@ void select_target(object me, string name)
      write("你因为不够熟练而失败了。\n");
      return;
    }
-   message( "vision", HIY "\n一道耀眼的光芒忽然罩住" + me->name() 
+   message( "vision", HIY "\n一道耀眼的光芒忽然罩住" + me->name()
      + "，几秒钟後，光芒和人一齐消失得无影无踪！\n\n", environment(me), ({ me }) );
    me->move(environment(ob));
    message( "vision", HIY "\n你的眼前突然出现一团耀眼的光芒，光芒中浮现出一个人影！\n\n" NOR,
