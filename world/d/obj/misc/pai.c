@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 
 //int query_autoload () { return 1; }
@@ -38,10 +38,10 @@ int do_jiebai(string arg)
 
    if( obj->query_temp("pending/jiebai") != me) {
      message_vision("\n$N对着$n说道："
-        + RANK_D->query_self(me)+ me->name() 
+        + RANK_D->query_self(me)+ me->name()
         + "，欲与"
-        + RANK_D->query_respect(obj) 
-        + "结为异姓" 
+        + RANK_D->query_respect(obj)
+        + "结为异姓"
         + (obj->query("gender")=="男性" ? "兄":"姐" )
         + (me->query("gender")=="男性"? "弟" : "妹")
         + "，不知" + RANK_D->query_respect(obj)
@@ -55,7 +55,7 @@ int do_jiebai(string arg)
      + RANK_D->query_self(me)+ me->name()
      + "，愿与"
      + RANK_D->query_respect(obj)
-     + "结为异姓" 
+     + "结为异姓"
                 + (obj->query("gender")=="男性" ? "兄":"姐")
                 + (me->query("gender")=="男性"? "弟" : "妹")
      + "！\n\n", me, obj);
