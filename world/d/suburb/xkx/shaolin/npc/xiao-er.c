@@ -44,7 +44,7 @@ void greeting(object ob)
 int accept_object(object who, object ob)
 {
 	
-	if (ob->query("money_id") && ob->value() >= 500) 
+	if (ob->query("money_id") && ob->value() >= 500)
 	{
 		tell_object(who, "小二一哈腰，说道：多谢您老，客官请上楼歇息。\n");
 
