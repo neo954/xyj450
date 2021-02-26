@@ -90,4 +90,3 @@ int do_eat(string stone)
 	destruct(this_object() );
 	return 1;
 }
-
