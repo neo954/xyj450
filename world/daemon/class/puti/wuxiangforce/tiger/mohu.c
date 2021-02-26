@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //bula, 1/22
 #include <ansi.h>
 
@@ -19,7 +19,7 @@ int exert(object me, object target)
                 return notify_fail("你的内力不够。\n");
 
         skill = me->query_skill("force");
-   
+
     msg = HIR
 "$N突然脸色一变，现出一个虎形，又尖又长的利齿向$n的颈部刺去！\n";
    me->start_busy(2);
