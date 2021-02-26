@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //changan city
 
 inherit ROOM;
@@ -20,13 +20,13 @@ set("item_desc",(["gaoshi":"
        ***********************\n"
 ]));
 
-        set("exits", 
+        set("exits",
         ([ //sizeof() == 4
      "south" : __DIR__"baihu-w2",
                 "north" : __DIR__"datang",
         ]));
 
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
                 __DIR__"npc/yayi" : 6,
         ]));
@@ -40,7 +40,7 @@ set("item_desc",(["gaoshi":"
 int valid_leave(object me, string dir)
 {       if (dir == "north") {
         if (objectp(present("yayi", environment(me)))) {
-                if(!present("zhuang zi", me)) 
+                if(!present("zhuang zi", me))
 return notify_fail("衙役喝道：公堂岂可乱闯，还不退下！\n");
                 }
         return ::valid_leave(me, dir);
