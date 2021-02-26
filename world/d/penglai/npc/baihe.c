@@ -43,5 +43,3 @@ void create()
    set_temp("apply/dodge", 100);
         setup();
 }
-
-
