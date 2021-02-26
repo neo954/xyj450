@@ -22,4 +22,3 @@ LONG);
   set("light_up", 1);
   setup();
 }
-
