@@ -13,9 +13,9 @@ string *dodge_msg = ({
         "$n身形微晃，有惊无险地避开了$N这一招。\n"
 });
 
-int valid_enable(string usage) 
-{ 
-	return (usage == "dodge") || (usage == "move"); 
+int valid_enable(string usage)
+{
+	return (usage == "dodge") || (usage == "move");
 }
 
 int valid_learn(object me) { return 1; }
