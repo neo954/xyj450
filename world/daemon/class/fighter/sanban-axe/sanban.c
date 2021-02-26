@@ -1,11 +1,11 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //sanban, 无敌三板斧
 //created 6-10-97 pickle
- 
+
 #include <ansi.h>
- 
+
 inherit SSERVER;
 
 int perform(object me, object target)
@@ -53,7 +53,7 @@ int perform(object me, object target)
     RED"$N狂笑道：就凭你这点本事，也来跟我斗？\n"NOR,
   });
   string *miss;
-  
+
   if( !target ) target = offensive_target(me);
   if( !target
      ||      !target->is_character()
