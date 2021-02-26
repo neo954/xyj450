@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //qinping.c
 //created 5-10-97 pickle
 
@@ -38,7 +38,7 @@ void create()
   set("combat_exp", 75000);
 
   setup();
-  
+
   create_family("将军府", 3, "蓝");
   carry_object("/d/obj/armor/tenjia")->wear();
   carry_object("/d/obj/weapon/spear/tieqiang")->wield();
