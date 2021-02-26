@@ -61,4 +61,3 @@ int fliping(object me)
         message_vision("$N用手一撑墙头儿，轻巧的跳了过来。\n", me);
         return 1;
 }
-
