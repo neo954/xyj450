@@ -58,5 +58,3 @@ int do_find ()
 
 	return notify_fail ("白忙了半天，一无所获。\n");
 }
-
-
