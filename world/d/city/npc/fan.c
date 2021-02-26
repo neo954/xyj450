@@ -43,5 +43,3 @@ int accept_object(object who,object ob)
    }
    return 0;
 }
-
-
