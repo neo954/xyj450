@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 4/4/1997
 // room: /d/nuerguo/townc3.c
 
@@ -18,7 +18,7 @@ void create ()
 
 LONG);
 
-  set("exits", ([ 
+  set("exits", ([
         "north" : __DIR__"townb3",
         "west"  : __DIR__"townc2",
         "southeast" : __DIR__"sanchalu",
