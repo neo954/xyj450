@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bank.c
 
 inherit ROOM;
@@ -36,7 +36,7 @@ int do_convert(string arg)
 
    if( !from_ob )     return notify_fail("你身上没有这种货币。\n");
    if( amount < 1 )   return notify_fail("兑换货币一次至少要兑换一个。\n");
-     
+
    if( (int)from_ob->query_amount() < amount )
      return notify_fail("你身上没有那么多" + from_ob->query("name") + "。\n");
 
@@ -102,7 +102,7 @@ int do_deposit(string arg)
                 return notify_fail("你带的" + what_ob->query("name") + "不够。\n");
         }
 
-   
+
    me->start_busy(3);
         message_vision(sprintf("$N拿出%s%s%s，存进了钱庄。\n",
            chinese_number(amount), what_ob->query("base_unit"),
@@ -180,13 +180,13 @@ int do_withdraw(string arg)
 
         message_vision(sprintf("$N从银号里取出%s。\n", money_str(rv)),
                 me);
-   
+
    return 1;
 }
 
 
 string money_str(int amount)
-{        
+{
    // returns a chinese string of `amount` of money
         string output;
 
