@@ -1,13 +1,13 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 12/17/1997
 
 #include <ansi.h>
 #include <weapon.h>
- 
+
 inherit ITEM;
- 
+
 void create()
 {
   set_name("旧白布搭包",({"da bao", "bao", "fabao"}));
@@ -29,7 +29,7 @@ void create()
   set("no_give", "旧白布搭包乃法宝不可赠人也。\n");
   set("is_monitored",1);
   setup();
-} 
+}
 
 void init ()
 {
@@ -131,7 +131,7 @@ int ji_ob (object victim)
     tell_object(me, GRN "进攻："+ap+"，防守："+dp+"。\n" NOR);
 
   if(random(ap+dp)>dp ||
-     (!interactive(me) && 
+     (!interactive(me) &&
       (!victim->query_temp("obstacle/xiaoxitian_entered") ||
        strsrch(victim->query("nickname"),"禁")==-1)))
   {
