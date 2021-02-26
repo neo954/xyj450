@@ -50,7 +50,7 @@ int do_value(string arg)
 
 	value = ob->query("value");
 	if( !value ) printf("%s一文不值。\n", ob->query("name"));
-	else 
+	else
 		printf("%s价值%s。\n如果你要典当(pawn)，可以拿到%s及一张当票。\n如果卖断(sell)，可以拿到%s。\n",
 			ob->query("name"), value_string(value),
 			value_string(value * 60 / 100), value_string(value * 80 / 100));
