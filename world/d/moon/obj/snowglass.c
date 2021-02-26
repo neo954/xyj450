@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 inherit F_LIQUID;
 
@@ -14,7 +14,7 @@ void create()
     set("long", "杯体碧绿通透，玲珑可爱．\n");
     set("unit", "个");
     set("value", 120);
-    set("max_liquid", 100); 
+    set("max_liquid", 100);
     set("liquid_supply", 80);
   }
 
