@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/6/1997
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create()
 西是护宫河。
 
 LONG);
-  set("exits", ([ 
+  set("exits", ([
     "west" : __DIR__"hugong1",
     "east" : __DIR__"hugong2",
     "north" : __DIR__"zhuzi5",
