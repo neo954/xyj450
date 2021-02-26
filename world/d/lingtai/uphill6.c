@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: some place in 西牛贺洲
 // uphill6.c
 
@@ -19,7 +19,7 @@ set("exits", ([ /* sizeof() == 4 */
 "northup" : __DIR__"gate",
 "southdown": __DIR__"uphill5",
 ]));
-   set("objects", 
+   set("objects",
    ([ //sizeof() == 1
      "/d/xueshan/npc/qingshi-laomo" : 1,
    ]));
