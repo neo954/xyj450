@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 
 inherit F_CLEAN_UP;
@@ -11,13 +11,13 @@ int exert(object me, object target)
 {
         int skill;
 
-        if( target != me ) 
+        if( target != me )
                 return
 notify_fail("你只能用静心诀提高自己的警觉。\n");
 
-        if( (int)me->query("force") < 200 )     
+        if( (int)me->query("force") < 200 )
                 return notify_fail("你的内力不够。\n");
-        if( (int)me->query_temp("powerup") ) 
+        if( (int)me->query_temp("powerup") )
                 return notify_fail("你已经在运功中了。\n");
 
         skill = me->query_skill("lengquan-force",1);
