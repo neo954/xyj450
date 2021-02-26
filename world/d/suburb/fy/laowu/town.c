@@ -10,7 +10,7 @@ void create()
 各式各样的房子，就在江上盖了起来。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "north" : __DIR__"daroad",
   "south" : __DIR__"laowu",
   "east" : __DIR__"town1",
