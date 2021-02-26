@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -13,13 +13,13 @@ void create ()
 凤舞的大字。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "southdown" : __DIR__"shaoxiang",
      "north" : __DIR__"linkway",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/***" : 1,
    ]));
