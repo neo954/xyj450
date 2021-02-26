@@ -113,4 +113,3 @@ int dest_trash()
        for(i=0; i<j; i++)
 	destruct(inv[i]);
 }
-
