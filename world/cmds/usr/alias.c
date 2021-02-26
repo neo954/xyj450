@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // alias.c
 
 inherit F_CLEAN_UP;
@@ -42,15 +42,15 @@ int help (object me)
 {
    write(@HELP
 指令格式 : alias <欲设定之指令> <系统提供之指令>
- 
+
 有时系统所提供之指令需要输入很长的字串, 在使用时(尤其是经常用到的)
 或许会感觉不方便, 此时你(□)即可用此一指令设定并替代原有之指令。
- 
+
 □例:
    'alias sc score' 会以 sc 取代 score 指令。
    'alias' 後不加参数则列出你所有的替代指令。
    'alias sc' 会消除 sc 这个替代指令。 (如果你有设的话)
- 
+
 其中可以用 $1, $2, $3 .... 来取代第一、第二、第三个参数，或是 $* 取代
 所有的参数，如：
    'alias pb put $1 in $2'
@@ -60,7 +60,7 @@ int help (object me)
 
 就会取代成：
    put bandage in bag
-   
+
 HELP
 );
         return 1;
