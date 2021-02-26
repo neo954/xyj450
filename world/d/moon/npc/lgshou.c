@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // lgshou.c 锣鼓手
 
 #include <ansi.h>
@@ -37,7 +37,7 @@ int do_kill(string arg)
 {
    if ((arg=="shou" || arg=="luogu shou")
      && environment()!=find_object("/d/moon/yltw")) {
-     message_vision(HIR 
+     message_vision(HIR
 "你突然听到天上一个巨大的声音吼道：“$N企图破坏婚礼，乱人好事，天理难容！去死吧！”\n"
 "话音未落，耳边“轰隆隆”一声雷鸣，一道闪电直劈下来正中$N的头顶，$N登时化成了灰烬！\n" NOR, this_player());
      this_player()->die();
