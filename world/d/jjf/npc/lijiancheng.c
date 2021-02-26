@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 李建成 npc: /d/jjf/npc/lijiancheng.c
 // created 5-20-97 pickle
- 
+
 inherit NPC;
 string expell_me(object me);
- 
+
 void create()
 {
   set_name("李建成", ({"li jiancheng", "li", "jiancheng", "lijiancheng", "qiwang", "qi wang", "wang", "qi"}));
@@ -15,7 +15,7 @@ void create()
 时颇立战功。虽无二弟李世民显赫，但也非老三李元吉一般屡
 吃败仗。
 LONG);
- 
+
   set("title", "齐王");
   set("gender", "男性");
   set("age", 36);
@@ -44,11 +44,11 @@ LONG);
   set("force_factor", 30);
 
   setup();
-  carry_object("/d/jjf/obj/lingjian-qi.c"); 
+  carry_object("/d/jjf/obj/lingjian-qi.c");
   carry_object("/d/obj/weapon/spear/tiespear")->wield();
   carry_object("/d/obj/armor/tiejia")->wear();
 }
- 
+
 int accept_fight(object me)
 {
   string myrude=RANK_D->query_rude(me), player=me->query("id");
