@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // condition.c
 
 #include <condition.h>
@@ -53,7 +53,7 @@ nomask int update_condition()
      // that don't cause error in users's heart beat.
      // If condition daemon returns 0 (or update_condition() not defined),
      // we can just assume the condition expired and remove it.
-     
+
      flag = call_other(cnd_d, "update_condition", this_object(), conditions[cnd[i]]);
      if( !( flag & CND_CONTINUE ) ) map_delete(conditions, cnd[i]);
      update_flag |= flag;
@@ -65,7 +65,7 @@ nomask int update_condition()
 
 // apply_condition()
 //
-// This function applies the specific condition to the character. Note we 
+// This function applies the specific condition to the character. Note we
 // don't check if the condition already exist before setting condition info.
 // It is condition giver's reponsibility to check if the condition should
 // override the old one if same condition already exists.(Use query_condition
@@ -93,4 +93,4 @@ nomask void clear_condition()
 {
    conditions = 0;
 }
- 
+
