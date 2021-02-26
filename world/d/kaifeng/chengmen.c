@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat jan 21 1998
 
 inherit ROOM;
@@ -21,7 +21,7 @@ LONG);
         "east" : __DIR__"chen1",
       ]));
 
-  set("objects", 
+  set("objects",
       ([
          __DIR__"npc/wujiang" : 1,
          __DIR__"npc/bing" : 3,
