@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 12/2/1997
 
 #include <ansi.h>
@@ -42,9 +42,9 @@ void init()
 int do_eat(string arg)
 {
   object me = this_player();
-  if (arg!="pigu wan" && arg!="wan") 
+  if (arg!="pigu wan" && arg!="wan")
     return 0;
-  
+
   me->set("food", (int)me->max_food_capacity()*3+random(100));
   me->set("water", (int)me->max_water_capacity()*3+random(100));
   message_vision(HIG "$N捏起一颗小小的辟谷丸往舌下一放。\n" NOR, me);
