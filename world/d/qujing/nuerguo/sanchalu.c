@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 4/4/1997
 // room: /d/nuerguo/sanchalu.c
 
@@ -28,7 +28,7 @@ LONG);
 int valid_leave (object me, string dir)
 {
   if ((string)me->query("id")=="woman" &&
-      (dir=="east" || dir=="south")) 
+      (dir=="east" || dir=="south"))
     return 0;
   return 1;
 }
