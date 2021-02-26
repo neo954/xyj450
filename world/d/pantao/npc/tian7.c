@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 5/6/1997
 // tian7.c 天神
 #include "tian.h"
@@ -39,7 +39,7 @@ void init()
   add_action("do_bian", "bian");
 
   if (me->query("current_player")=="none of us")
-    me->reset_me(me);    
+    me->reset_me(me);
   me->restore();
   //if (! me->restore())
   //  me->reset_me(me);
