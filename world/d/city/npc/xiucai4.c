@@ -62,4 +62,3 @@ string apply_gongming(object me)
                 else    return "以阁下的才识，做个大学士没问题。\n";
         }
 }
-
