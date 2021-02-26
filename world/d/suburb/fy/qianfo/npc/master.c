@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 #include <ansi.h>
 inherit NPC;
