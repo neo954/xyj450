@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //【菩提指】puti-zhi.c
 // cglaem...12/10/96.
 //menpai skill
@@ -34,7 +34,7 @@ mapping *action = ({
      "parry":     10,
      "force":     60,
      "damage_type":   "刺伤",
-                        "weapon":     "左手食指", 
+                        "weapon":     "左手食指",
    ]),
             ([   "action":     "只见$N面带微笑，负手而立。但是$n觉得有一道指力直扑$l而来",
      "dodge":     15,
@@ -54,7 +54,7 @@ mapping *action = ({
 
 int valid_learn(object me)
 {
-   
+
    if( me->query_temp("weapon") || me->query_temp("secondary_weapon") )
      return notify_fail("练菩提指必须空手。\n");
    return 1;
