@@ -16,7 +16,7 @@ void create()
 	set("gender", "男性");
 	set("nickname",HIR"恶贯满盈"NOR);
 	set("age", 45);
-	set("long", 
+	set("long",
 		"他就是四大恶人之首，人称恶贯满盈的段延庆。\n"
 		"他本是大理段氏皇子，由于大臣反叛作乱而双腿残废、罹\n"
 		"毒甚深。流落江湖后与叶二娘、南海鳄神、云中鹤和称四\n"
@@ -53,7 +53,7 @@ void create()
 	
 	set("combat_exp", 180000);
 	set("score", -18000);
-	 
+	
 	set_skill("force", 120);
 	set_skill("hunyuan-yiqi", 120);
 	set_skill("hand", 120);              // 基本手法
@@ -90,7 +90,7 @@ void init()
 
 void check_skills(object ob)
 {
-	mapping skl; 
+	mapping skl;
 	object  me;
 	string *sname;
 	int i, counter, ob_shen;
@@ -138,7 +138,7 @@ int do_kill(object me, object dest)
 
 		call_out("checking", 0,  me, dest);
 	}
-	else  
+	else
 		call_out("waiting", 1, me, dest);
 	
 	return 1;
@@ -174,7 +174,7 @@ int checking(object me, object dest)
 {
 	object ob;
 
-	if (me->is_fighting()) 
+	if (me->is_fighting())
 	{
 		call_out("checking", 1, me);
 	        return 1;
@@ -195,7 +195,7 @@ int do_back(object me)
 {
 
 	me->move("/d/suburb/fy/city/xidajie2");
-	message("vision", "段延庆走了过来，嗤地一声冷笑，说道：又除了一个道貌岸然的伪君子。\n", 
+	message("vision", "段延庆走了过来，嗤地一声冷笑，说道：又除了一个道貌岸然的伪君子。\n",
 		environment(), me );
 
 	me->set_leader(0);
