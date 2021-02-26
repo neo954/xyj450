@@ -22,7 +22,7 @@ int perform(object me, object target)
 		msg += "$p已显吃力。\n" NOR;
 		for (i=0; i<random (3)+1; i++)
 			COMBAT_D->do_attack(me, target, me->query("weapon"));
-		} 
+		}
 	    else {
 		msg += "$p从容化解\n" NOR;
 		}
