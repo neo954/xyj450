@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 12/15/1997
 
 inherit ROOM;
@@ -47,21 +47,21 @@ int do_dig (string arg)
 
   if (where->query("has_digged"))
   {
-    message_vision ("$N在洞角的土中胡乱扒拉了一番，什么也没有找到。\n",who);  
+    message_vision ("$N在洞角的土中胡乱扒拉了一番，什么也没有找到。\n",who);
     return 1;
   }
 
   if (random(10))
   {
-    message_vision ("$N在洞角的土中仔细地扒拉了一番，没有找到东西。\n",who);  
+    message_vision ("$N在洞角的土中仔细地扒拉了一番，没有找到东西。\n",who);
     who->start_busy(1);
   }
   else
   {
     sha = new (__DIR__"obj/jindan");
-    message_vision ("$N在洞角的泥土中双手一扒，捧出一包东西。\n",who);  
+    message_vision ("$N在洞角的泥土中双手一扒，捧出一包东西。\n",who);
     message_vision ("$N将纸包揭开，取出$n揣在怀里。\n",who,sha);
-    sha->move(who);  
+    sha->move(who);
     where->set("has_digged",1);
   }
   return 1;
