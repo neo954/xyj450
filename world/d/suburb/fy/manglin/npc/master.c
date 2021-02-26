@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit NPC;
 inherit F_MASTER;
@@ -64,7 +64,7 @@ void recruit_apprentice(object ob)
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "diabloist");
 }
- 
+
 void init()
 {
         add_action("give_quest", "quest");
