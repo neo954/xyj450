@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat jan 22 1998
 
 #include <ansi.h>
@@ -9,10 +9,10 @@
 // the quest format is the following mapping:
 // daoxing :     type     name     id            object         amount
 //--------------------------------------------------------------------
-//  1000   : ({ "find",  "秘笈",   "mi ji" ,     "",             "1" }), 
-//  5000   : ({ "give",  "灾民",   "zai min" ,   "白银(silver)", "5" }), 
+//  1000   : ({ "find",  "秘笈",   "mi ji" ,     "",             "1" }),
+//  5000   : ({ "give",  "灾民",   "zai min" ,   "白银(silver)", "5" }),
 // 12000   : ({ "kill",  "白骨精", "baigu jing", "",             "3" });
- 
+
 //找一本秘笈，救济灾民五两银子，三打白骨精．．．．．．
 
 mapping quests_weapon = ([
@@ -188,7 +188,7 @@ mapping quests_weapon = ([
   960000 : ({ "find", "龙头杖",       "dragon staff",       "", "1" }),
   970000 : ({ "find", "盘龙棍",       "dragon stick",       "", "1" }),
   980000 : ({ "find", "龙泉剑",       "dragon sword",       "", "1" }),
-  990000 : ({ "find", "软龙筋",       "dragon whip",        "", "1" }), 
+  990000 : ({ "find", "软龙筋",       "dragon whip",        "", "1" }),
  1000000 : ({ "find", "钺斧",         "yue fu",             "", "1" }),
  1100000 : ({ "find", "大刀",         "da dao",             "", "1" }),
  1200000 : ({ "find", "大棍",         "da gun",             "", "1" }),
