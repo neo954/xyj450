@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bawang-qiang.c 【霸王枪法】
 
 /*
@@ -104,7 +104,7 @@ int practice_skill(object me)
                 return
 notify_fail("你必须先找一柄长枪或者是类似的武器，才能练枪法。\n");
 
-        if( (int)me->query("kee") < 30 
+        if( (int)me->query("kee") < 30
         ||    (int)me->query("force") < 5  )
                 return
 notify_fail("你的体力不够练这门枪法，还是先休息休息吧。\n");
