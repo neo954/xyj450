@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit F_CLEAN_UP;
 
@@ -22,7 +22,7 @@ int main(object me, string arg)
    } else if (wizardp (me)) {
      ob = find_player(arg);
      if(!ob) ob = find_living(arg);
-   
+
      if(!ob) ob = LOGIN_D->find_body(arg);
 
      if(!ob || !me->visible(ob)) return notify_fail("没有这个人。\n");
@@ -42,7 +42,7 @@ int help()
    write(@TEXT
 指令格式：obstacles <某人>
 
-显示某人西行求取真经的资料。 
+显示某人西行求取真经的资料。
 
 请见：help qujing
 TEXT
