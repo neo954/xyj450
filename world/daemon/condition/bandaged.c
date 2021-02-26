@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bandaged.c
 
 #include <condition.h>
@@ -11,7 +11,7 @@ int update_condition(object me, int duration)
 {
    if( (int)me->query("eff_kee") < (int)me->query("max_kee") )
      me->receive_curing("kee", 3);
-   
+
    me->apply_condition("bandaged", duration - 1);
    if( !duration ) return 0;
 
