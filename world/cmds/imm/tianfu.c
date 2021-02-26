@@ -1,9 +1,9 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // gift.c
 // 8-13-97 pickle
- 
+
 #include <ansi.h>
 
 inherit F_CLEAN_UP;
@@ -21,7 +21,7 @@ int main(object me, string arg)
     string line, player_id, flag;
 //  int i;
     object player;
- 
+
     seteuid(getuid(me));
 
     if (!arg) player=me;
@@ -60,14 +60,14 @@ int main(object me, string arg)
 
 /*            my["str"], my["cor"], my["int"], my["spi"],
             my["cps"], my["per"], my["con"], my["kar"]);
- 
+
             gift_evaluation(my["str"]), gift_evaluation(my["cor"]),
             gift_evaluation(my["int"]), gift_evaluation(my["spi"]),
             gift_evaluation(my["cps"]), gift_evaluation(my["per"]),
             gift_evaluation(my["con"]), gift_evaluation(my["kar"]));
 */
     line += sprintf(" 综合评价： " HIC "%d\n\n" NOR,player->query("score") );
- 
+
     write(line);
     return 1;
 }
@@ -92,7 +92,7 @@ int help(object me)
 {
     write(@HELP
 指令格式：gift [-o] <对象名称>
- 
+
 这个指令可以显示你或指定对象（含怪物）的天赋。
 
 -o (original) 显示最初天赋（不算literate等的效果）。
