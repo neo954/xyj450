@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/4world/northgate.c
 inherit ROOM;
 
@@ -35,7 +35,7 @@ int valid_leave(object me, string dir)
 
     if (dir == "south" ) {
         if ((int)me->query("combat_exp") < 15000
-   && (int)me->query("PKS") < 2 ) 
+   && (int)me->query("PKS") < 2 )
      return ::valid_leave(me, dir);
    return notify_fail("武士将手中长剑一横，喝道：看你贼眉鼠眼的样子，不许进！\n");
    }
