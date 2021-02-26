@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -38,9 +38,9 @@ int valid_leave(object me, string dir)
    return notify_fail("薛仁贵铁枪一横，喝道：此乃皇宫，禁行！\n");
         if (objectp(present("wei shi", environment(me))))
         return notify_fail("金甲卫士喊道：我家将军不在，小人不敢放您进去！\n");
-        }   
+        }
         return ::valid_leave(me, dir);
 }
 
- 
+
 
