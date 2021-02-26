@@ -81,4 +81,3 @@ void del_sucked(object me)
 	if ( me->query_temp("sucked"))
 	me->delete_temp("sucked");
 }
-
