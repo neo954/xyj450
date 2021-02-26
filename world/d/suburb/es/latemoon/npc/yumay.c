@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
 	object ob;
@@ -71,7 +71,7 @@ void greeting(object ob)
 	if( !ob || environment(ob)!=environment() ) return;
 	switch( random(2) ) {
 		case 0:
-			say( "雨梅对你微笑，和善的对你说：\n  这位" + 
+			say( "雨梅对你微笑，和善的对你说：\n  这位" +
 				RANK_D->query_respect(ob)
 				+ "，你好！欢迎来到晚月庄。请坐！\n");
 			break;
@@ -80,7 +80,7 @@ void greeting(object ob)
 			say( "雨梅对你微笑，纤细的双手捧著茶，\n 说道：这位" +
 				RANK_D->query_respect(ob)
 				+ "，你好！欢迎来到晚月庄。请用茶！\n");
-             if ( ob->query_temp("latemoon/茶") ) 
+             if ( ob->query_temp("latemoon/茶") )
                  command("smile");
                  else  {
                 teacup = new("/d/suburb/es/latemoon/obj/teacup");
