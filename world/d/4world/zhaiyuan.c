@@ -34,4 +34,3 @@ int valid_leave()
             return notify_fail("吃完包子再走是这的规矩！\n");
     return ::valid_leave();
 }
-
