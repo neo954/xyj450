@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // washing.c
 
 inherit ROOM;
@@ -15,7 +15,7 @@ LONG);
 set("exits", ([ /* sizeof() == 4 */
 "west" :__DIR__"houyuan",
 ]));
-set("objects", ([ 
+set("objects", ([
      __DIR__"npc/washer": 1]));
         set("no_clean_up", 0);
         setup();
