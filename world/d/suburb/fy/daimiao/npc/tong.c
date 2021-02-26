@@ -68,4 +68,3 @@ void attempt_apprentice(object me)
 {
         command("recruit " + me->query("id") );
 }
-
