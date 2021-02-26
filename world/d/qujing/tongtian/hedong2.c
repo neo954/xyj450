@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 12/15/1997
 
 inherit ROOM;
@@ -18,7 +18,7 @@ LONG);
 
   set("exits", ([
         "north"   : __DIR__"hedong1",
-        "west" : __DIR__"bing2", 
+        "west" : __DIR__"bing2",
         "south"   : __DIR__"hedong3",
       ]));
   set("outdoors", __DIR__);
