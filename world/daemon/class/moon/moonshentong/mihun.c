@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // mihun.c 迷魂术
 #include <ansi.h>
 
@@ -22,10 +22,10 @@ int cast(object me, object target)
    ||      !target->is_character()
    ||      target->is_corpse()
    ||      target==me)
-     return notify_fail("你想迷谁的魂？\n");  
+     return notify_fail("你想迷谁的魂？\n");
 
    if(target->query_temp("no_move"))
-   return notify_fail(target->query("name")+"已经魂不守舍，呆若木鸡了！\n");  
+   return notify_fail(target->query("name")+"已经魂不守舍，呆若木鸡了！\n");
 
    if((int)me->query("mana") < 200 )
      return notify_fail("你的法力不够！\n");
@@ -37,7 +37,7 @@ int cast(object me, object target)
    me->receive_damage("sen", 10);
 
    msg = HIC
-"$N低头轻声念了句咒文，又抬起头来朝$n妩媚地一笑！\n" 
+"$N低头轻声念了句咒文，又抬起头来朝$n妩媚地一笑！\n"
 NOR;
 
    success = 1;
@@ -46,7 +46,7 @@ NOR;
    ap += (int)me->query("combat_exp");
    dp = target->query("combat_exp");
 //   if( random(ap + dp) < dp ) success = 0;
-//here we compared exp and spells level. 
+//here we compared exp and spells level.
 //note: has nothing to do with target's spells level.
 
    ap2 = (int)me->query_per();
@@ -64,16 +64,16 @@ NOR;
    if(success == 1 ){
      msg +=  HIR "$n神不守舍地看着$N，怜香惜玉之心由然而起，竟然忘了自己在战斗之中。\n" NOR;
      target->set_temp("no_move", 1);
-   
+
      howlong = random((me->query_skill("spells") -100))+1;
      if(howlong>60) howlong=60;
      call_out("free", howlong, target);
-   }       
+   }
    else {
-     msg +=  HIR "$n鄙夷地看了$N一眼，毫不为所动！\n" NOR;   
-     me->start_busy(1+random(2));        
+     msg +=  HIR "$n鄙夷地看了$N一眼，毫不为所动！\n" NOR;
+     me->start_busy(1+random(2));
            if( living(target) ) target->kill_ob(me);
-   } 
+   }
 
    message_vision(msg, me, target);
 
@@ -83,7 +83,7 @@ NOR;
 void free(object target)
 {
    if (target)
-   target->delete_temp("no_move");      
+   target->delete_temp("no_move");
    return;
 }
 
