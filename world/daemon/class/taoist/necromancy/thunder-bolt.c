@@ -33,14 +33,14 @@ int thunderspell(object me, object obj)
 	 		COMBAT_D->report_status(obj);
 			if( !obj->is_fighting(me) ) {
                 		if( living(obj) ) {
-                        		if( userp(obj) ) 
+                        		if( userp(obj) )
 						obj->fight_ob(me);
 					else
 						obj->kill_ob(me);
                 		}
                 		me->kill_ob(obj);
         		}
-		} else 
+		} else
 			message_vision(RED "但被$N躲过了！\n" NOR, obj);
 		return 1;
 	}
@@ -55,14 +55,14 @@ int thunderspell(object me, object obj)
  		COMBAT_D->report_status(obj);
 		if( !obj->is_fighting(me) ) {
                		if( living(obj) ) {
-                       		if( userp(obj) ) 
+                       		if( userp(obj) )
 					obj->fight_ob(me);
 				else
 					obj->kill_ob(me);
                		}
                		me->kill_ob(obj);
        		}
-	} else 
+	} else
 			message_vision(RED "但被$N躲过了！\n" NOR, obj);
 	return 1;
 	
