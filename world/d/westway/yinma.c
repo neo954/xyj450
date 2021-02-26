@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 4/8/1997
 // room: /d/westway/yinma.c
 
@@ -35,7 +35,7 @@ LONG);
 int valid_leave (object me, string dir)
 {
   object madao;
-  madao = present("ma dao",environment(me)); 
+  madao = present("ma dao",environment(me));
   if (madao &&
       living(madao) &&
       (string)me->query("family/family_name")!="五庄观" &&
