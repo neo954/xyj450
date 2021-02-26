@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/qujing/wudidong/lock.c
 #include <ansi.h>
 inherit ROOM;
@@ -9,7 +9,7 @@ void create()
 {
   set("short", "石洞");
   set("long", @LONG
-      
+
 踏进门来，已无半点光亮，你只得摸索前进。四下阴冷潮湿，阵阵霉
 臭之气扑面而来。远处突然传来微弱的声响，似是有人在低声呻吟，
 又似野兽低嗥，令你毛发直竖。
