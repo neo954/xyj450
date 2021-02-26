@@ -62,7 +62,7 @@ int accept_object(object who, object ob)
         else if( val > 100 ) {
                 if( (who->query("bellicosity") > 0)
                 &&      (random(val/10) > (int)who->query("kar")) )
-                        who->add("bellicosity", - 
+                        who->add("bellicosity", -
 (random((int)who->query("kar")) + val/1000) );
         }
         say( "颜慧如说道：多谢这位" + RANK_D->query_respect(who)
