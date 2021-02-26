@@ -1,11 +1,11 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //created 5-20-97 pickle
- 
+
 inherit NPC;
 inherit F_MASTER;
- 
+
 void create()
 {
   set_name("魏徵", ({"wei zheng", "wei", "zheng", "weizheng", "shifu", "master"}));
@@ -14,7 +14,7 @@ void create()
 劝告，终为太宗所杀。太宗爱魏徵之才，将其收罗，并
 封为郑国公。
 LONG);
- 
+
   set("title", "郑国公");
   set("gender", "男性");
   set("age", 55);
@@ -45,15 +45,15 @@ LONG);
   set("mana", 700);
   set("max_mana", 700);
   set("mana_factor", 70);
- 
+
   create_family("将军府", 2, "文人");
   setup();
- 
+
   carry_object("/d/obj/weapon/spear/gangqiang");
   carry_object("/d/obj/weapon/mace/malemace")->wield();
   carry_object("/d/obj/armor/tiejia")->wear();
 }
- 
+
 int accept_fight(object me)
 {
   command("say 老夫手重，若是伤人反而不美了。\n");
