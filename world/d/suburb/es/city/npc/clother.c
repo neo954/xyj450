@@ -11,16 +11,16 @@ void create()
 //        set("long", "李掌柜是不难看的女人，一直经营着祖传鞋店生意。\n");
         set("combat_exp", 300000);
         set("attitude", "friendly");
-        set("max_atman", 1000); 
-        set("atman", 1000);        
+        set("max_atman", 1000);
+        set("atman", 1000);
         set("atman_factor", 3);
-        set("max_force", 1000); 
+        set("max_force", 1000);
         set("force", 1000);
         set("force_factor", 3);
-        set("max_mana", 1000); 
-        set("mana", 1000); 
+        set("max_mana", 1000);
+        set("mana", 1000);
         set("mana_factor", 3);
-        
+
         set_skill("dodge", 120);
         set_skill("sword", 120);
         set_skill("force", 120);
@@ -36,7 +36,7 @@ void create()
                 "name": "在下谐陶，闺名不能告诉你。\n",
                 "衣服": "您需要什么样的？",
         ]) );
-        
+
         set("vendor_goods", ([
                 "轻罗绸衫": __DIR__"obj/lady_dress",
                 "淡青长袍": __DIR__"obj/green_cloth",
