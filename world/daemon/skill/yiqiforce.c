@@ -129,4 +129,3 @@ void skill_improved(object me)
 		me->unconcious();
         }
 }
-
