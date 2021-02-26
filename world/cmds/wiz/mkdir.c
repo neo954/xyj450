@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // mkdir.c
 
 inherit F_CLEAN_UP;
@@ -20,7 +20,7 @@ int main(object me, string arg)
      write("Ok.\n");
    else
      write("你没有在这里建子目录的权利。\n");
-   return 1;   
+   return 1;
 }
 
 int help(object me)
