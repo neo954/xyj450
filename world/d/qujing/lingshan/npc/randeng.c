@@ -92,4 +92,3 @@ void reset_give ()
   object me = this_object();
   me->set_temp("given_book",0);
 }
-
