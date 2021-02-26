@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xiyouxiji.c
 // created 4-26-97 pickle
 
@@ -76,7 +76,7 @@ void create()
      // please do not price them lower than 10 silver each.
      // if you want to set it higher, i have no problems
      // that. :PPP
-     set("value", 1000);   
+     set("value", 1000);
    }
 }
 
