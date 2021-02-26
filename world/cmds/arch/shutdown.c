@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // shutdown.c
 
 #include <net/daemons.h>
@@ -14,7 +14,7 @@ int main(object me, string arg)
    int i;
 
    if( me != this_player(1) ) return 0;
-   
+
    wiz_status = SECURITY_D->get_status(me);
    if( wiz_status != "(admin)" && wiz_status != "(arch)" )
      return notify_fail("只有 (arch) 以上的巫师才能重新启动" + MUD_NAME + "\n");
@@ -38,11 +38,11 @@ int help (object me)
 {
         write(@HELP
 指令格式: shutdown
- 
+
 马上重新起动游戏。
- 
+
 HELP
 );
         return 1;
 }
- 
+
