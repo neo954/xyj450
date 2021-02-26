@@ -85,7 +85,7 @@ int do_open(string arg)
 		{
 		message("vision", "吱地一声，"+me->query("name")+"精神焕发地从里面把门打开了。\n",
 		room);
-		} else 
+		} else
 		{
 		message("vision", "梆地一声，"+me->query("name")+"从里面把门打开，一脸的不耐烦。\n",
 			 room);
@@ -103,7 +103,7 @@ int valid_leave(object me, string dir)
 {
 	object room;
 
-	if ( !::valid_leave(me, dir) ) 
+	if ( !::valid_leave(me, dir) )
 		return 0;
 	
 	if(!(room = find_object(__FILE__)) )
