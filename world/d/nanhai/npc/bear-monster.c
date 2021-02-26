@@ -81,4 +81,3 @@ void attempt_apprentice(object ob)
    command("say " + "菩萨不让我随便收外人为徒。\n");
    return;
 }
-
