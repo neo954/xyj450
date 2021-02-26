@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/moon/xiaoyuan.c
 
 #include <ansi.h>
@@ -45,23 +45,23 @@ void init()
 }
 
 int do_sit(string arg)
-{     
+{
       object me;
 
       me=this_player();
 
    if ( !arg || ((arg != "seat")&&(arg != "deng")&&(arg != "table") ))
-     return notify_fail("你要坐在什么上面？\n");   
-   
+     return notify_fail("你要坐在什么上面？\n");
+
    if (this_player()->query_temp("marks/sit"))
-     return notify_fail("你已经坐下了。\n");   
-      
-      if ( arg != "seat"&&arg != "deng")   
+     return notify_fail("你已经坐下了。\n");
+
+      if ( arg != "seat"&&arg != "deng")
          return notify_fail("坐桌子上？太不雅观了吧。\n");
-           
+
    this_player()->set_temp("marks/sit", 1);
    message_vision("$N轻轻巧巧地坐上了小木凳。\n",me);
-      return 1;   
+      return 1;
 }
 
 int do_stand(string arg)
