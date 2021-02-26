@@ -32,7 +32,7 @@ void create()
 	set("score",0);
 	
 	set("attitude", "peaceful");
-        
+
 	set("inquiry", ([
 		"铸刀"  : "师傅命我帮助别人铸刀，但到现在也不见一个人影。谁要铸刀呢？\n",
 		"原料"  : "铸刀可用寒丝羽竹，海底金母，千年神木。但效果各不一样。\n",
@@ -58,15 +58,15 @@ int accept_object(object who, object ob)
 	}
 	who->delete_temp("blade");
 	who->set_temp("m_blade",1);
-	switch ((string)ob->query("name") ) 
+	switch ((string)ob->query("name") )
 	{
-		case "千年神木": 
+		case "千年神木":
 			who->add_temp("shenmu",1);
 			break;
 		case "海底金母":
 			who->add_temp("jinmu",1);
 			break;
-		case "寒丝羽竹": 
+		case "寒丝羽竹":
 			who->add_temp("hanzhu",1);
 			break;
 		default :
