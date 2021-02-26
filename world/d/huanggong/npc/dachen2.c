@@ -70,4 +70,3 @@ void reward (object who)
   reporting (who, who->query("quest/reason"), points, "点道行");
   who->add("combat_exp",points);
 }
-
