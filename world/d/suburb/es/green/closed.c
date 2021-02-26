@@ -26,15 +26,15 @@ void init()
 int do_push(string arg)
 {
         object me;
-        
+
         if ( !arg || arg != "stone" )
                 return notify_fail("你要推什麽?\n");
-        
+
         me=this_player();
-        
+
         if ( ((int)me->query("force") < 560) ||
              ((int)me->query("max_force") < 560) ||
-             ((int)me->query("force_factor") < 40 ) ) { 
+             ((int)me->query("force_factor") < 40 ) ) {
                 tell_object(me, "你出力不太够喔！\n");
                 return 1;
         }
@@ -43,7 +43,7 @@ int do_push(string arg)
         me->receive_damage("kee",60);
         me->receive_damage("sen",20);
         message_vision("$N用力推活动的大岩石,大岩石动了一下\n",me);
-        
+
         if ( random(3) == 0 ) {
                 message_vision("大岩石滚开了,$N从大岩石后面的小洞钻了出去\n",me);
                 this_player()->move(__DIR__"entrance");
