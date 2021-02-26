@@ -14,7 +14,7 @@ void create()
                 set("unit", "把");
 		set("value", 200);
                 set("material", "bamboo");
-                set("long", 
+                set("long",
 "这是一把练习剑法用的竹剑，剑尖处用布包了起来以免误伤同伴。\n");
                 set("wield_msg", "$N拿出一把练剑用的$n，握在手中。\n");
                 set("unequip_msg", "$N放下手中的$n。\n");
@@ -22,4 +22,4 @@ void create()
         init_sword(10);
         setup();
 }
- 
+
