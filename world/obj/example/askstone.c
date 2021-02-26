@@ -74,4 +74,3 @@ int askabout ( string arg)
         }
         return 1;
 }
-
