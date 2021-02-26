@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // /d/qujing/wudidong/mishi.c
 // created by mes, updated 6-20-97 pickle
 
@@ -35,7 +35,7 @@ LONG);
   set("sleep_room", 1);
   set("outdoors", 0);
   setup();
-}       
+}
 void init()
 {
   add_action("do_climb", "climb");
@@ -78,7 +78,7 @@ int do_lian()
      && !wizardp(me))
     return notify_fail("不知为何你的先天灵气不能与天魔台的魔魂交合，也许
 你现有的魔法已学得太深了。\n");
-  myspells=(int)me->query_skill("spells", 1);        
+  myspells=(int)me->query_skill("spells", 1);
   if(me->query_skill("yaofa", 1)>=myspells)
     return notify_fail("你的法术修为不够高深，难以与天魔台的魔魂交合。\n");
   myspi=(int)me->query_spi();
@@ -92,7 +92,7 @@ int do_lian()
   me->delete_temp("apply/name");
   me->delete_temp("apply/id");
   me->delete_temp("apply/short");
-  me->delete_temp("apply/long"); 
+  me->delete_temp("apply/long");
   me->receive_damage("sen", 30);
   me->add("mana", -15);
   tell_object (me, "你的「妖法」略有进展。\n");
