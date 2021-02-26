@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create ()
 行大宴，传出阵阵觥酬交错的声音。
 LONG);
 
-  set("objects", ([ /* sizeof() == 1*/ 
+  set("objects", ([ /* sizeof() == 1*/
   __DIR__"npc/bie" : 1,
   __DIR__"npc/gui" : 1,
 ]));
@@ -37,7 +37,7 @@ int valid_leave(object me, string dir)
         return notify_fail("西波儿古嚷道：宫中有贵客，闲人免进！\n");
         if (objectp(present("guboer xi", environment(me))))
         return notify_fail("古波儿西嚷道：宫中有贵客，闲人免进！\n");
-        }   
+        }
         return ::valid_leave(me, dir);
 }
 
