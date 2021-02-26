@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void wield_knife();
@@ -36,7 +36,7 @@ void create()
 void wield_knife()
 {
     object knife;
-    
+
     knife = present("cai dao", environment(this_object()));
     if(!knife) return;
 
