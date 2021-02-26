@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //weiqi...97/12/11
 
 inherit NPC;
@@ -59,13 +59,13 @@ void create()
 void do_something()
 {
    command(sprintf("bet %d silver", 1+random(5)));
-   call_out ("do_something", 120);   
+   call_out ("do_something", 120);
 }
 
 string apply_dancer(object me)
 {
    me=this_player();
-   if( (string)me->query("gender") == "男性" ) 
+   if( (string)me->query("gender") == "男性" )
    {
      return "这就要看阁下的本事了，我可帮不上多少忙。\n";
    }
@@ -77,7 +77,7 @@ string apply_dancer(object me)
      if( (int)me->query("age") >= 30 )
         return "岁月不饶人，姑娘还是另寻它路吧。\n";
 
-     message_vision("公孙大娘看了$N一眼叹道：这碗饭可不是容易吃的。\n", me);   
+     message_vision("公孙大娘看了$N一眼叹道：这碗饭可不是容易吃的。\n", me);
      me->set_temp("dancer_applied", 1);
      return "姑娘果真是下了决心？(yes)\n";
    }
@@ -86,7 +86,7 @@ string apply_dancer(object me)
 string answer_leaving(object me)
 {
    me=this_player();
-   if( (string)me->query("gender") == "男性" ) 
+   if( (string)me->query("gender") == "男性" )
    {
      return "快滚，滚得远远的！老娘这地方还怕没人来吗？\n";
    }
@@ -103,7 +103,7 @@ void init()
    ::init();
 
    remove_call_out("do_something");
-   call_out ("do_something", 120);     
+   call_out ("do_something", 120);
 
    add_action("do_yes", "yes");
 }
@@ -113,8 +113,8 @@ int do_yes(string arg)
    object me;
 
    me=this_player();
-   
-   if(me->query_temp("dancer_applied")) 
+
+   if(me->query_temp("dancer_applied"))
    {
      message_vision("$N答道：我都想清楚了！\n\n", me);
      message_vision("公孙大娘拍了拍$N的头道：好好干！只要能碰上好运气，荣华富贵垂手可得！\n", me);
