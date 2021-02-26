@@ -44,4 +44,3 @@ void create()
         carry_object("/d/obj/armor/tiejia")->wear();
    carry_object("/d/obj/weapon/fork/fork")->wield();
 }
-
