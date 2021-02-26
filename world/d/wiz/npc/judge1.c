@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // judge.c
 
 #include <login.h>
@@ -48,21 +48,21 @@ void chat()
 {
    int a, b, c;
    string oper;
-   
+
    if( in_ask || random(20) > 10 ) return;
    delete_temp("wrong");
    a = random(100) + 1;
    b = random(100) + 1;
    switch(random(5)) {
-     case 0: 
+     case 0:
         answer = a + b;
         oper = chinese_number(a) + "加上" + chinese_number(b)+ "等於多少？";
         break;
-     case 1: 
+     case 1:
         answer = a - b;
         oper = chinese_number(a) + "减去" + chinese_number(b)+ "等於多少？";
         break;
-     case 2: 
+     case 2:
         if( a * b < 200 ) {
           answer = a * b;
           oper = chinese_number(a) + "乘上" + chinese_number(b)+ "等於多少？";
@@ -71,7 +71,7 @@ void chat()
           oper = chinese_number(a) + "乘上" + chinese_number(b)+ "，个位数等於多少？";
         }
         break;
-     case 3: 
+     case 3:
         answer = a % b;
         oper = chinese_number(a) + "除以" + chinese_number(b)+ "馀於多少？";
         break;
@@ -94,7 +94,7 @@ void chat()
 void say_answer()
 {
    command("say 这麽简单都不会？答案等於" + chinese_number(answer) + "。");
-   in_ask = 0;   
+   in_ask = 0;
 }
 
 int do_answer(string arg)
@@ -106,7 +106,7 @@ int do_answer(string arg)
    if( !arg ) return notify_fail("请你回答一个数字。\n");
 
    message_vision( CYN "$N答道：" + arg + "\n" NOR, this_player());
-   
+
    if( sscanf(arg, "%d", ans)==1 ) {
      if( ans==answer ) {
         this_player()->add_temp("robot_check", 1);
