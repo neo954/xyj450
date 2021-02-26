@@ -24,7 +24,7 @@ void reset()
 	set("exits", ([ /* sizeof() == 4 */
 	  "south" : __DIR__"pine" + (random(5)+2),
 	///  "north" : __DIR__"pine" + (random(6)+1),
-	  "north" :__DIR__"pine6", 
+	  "north" :__DIR__"pine6",
           "west" : __DIR__"pine" + (random(5)+2),
 	  "east" : __DIR__"pine" + (random(5)+2),
 	]));
