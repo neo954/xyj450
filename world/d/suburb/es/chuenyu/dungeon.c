@@ -20,8 +20,8 @@ LONG
                 __DIR__"npc/chuenyu" : 1,
                 __DIR__"xiaojuan2" : 1,
         ]) );
-                
-                
+
+
         setup();
 }
- 
+
