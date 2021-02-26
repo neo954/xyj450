@@ -31,7 +31,7 @@ void create()
 int accept_object(object me, object obj)
 {
         command("smile");
-        command("say 多谢这位" + RANK_D->query_respect(me) + 
+        command("say 多谢这位" + RANK_D->query_respect(me) +
 "，您一定会在这儿玩的开心的！");
         return 1;
 }
