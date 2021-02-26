@@ -1,4 +1,4 @@
-//saveme.c 
+//saveme.c
 
 inherit SSERVER;
 
