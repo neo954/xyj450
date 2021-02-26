@@ -6,7 +6,7 @@
 inherit NPC;
 
 #include "quest_fn.h"
-#include <reporting.h>
+#include "reporting.h"
 
 int test_player();
 
