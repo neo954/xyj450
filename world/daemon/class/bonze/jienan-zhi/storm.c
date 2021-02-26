@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 暴风骤雨
 // dream 7/17/97
 #include <ansi.h>
@@ -48,7 +48,7 @@ int perform(object me, object target)
         ap = ap*250 + (int)me->query("combat_exp");
         dp = target->query_skill("parry");
    dp = ( dp * dp * dp / (4 * 400) ) + (int)target->query("kee");
-   dp = dp*250 + target->query("combat_exp"); 
+   dp = dp*250 + target->query("combat_exp");
         if( random(ap + dp) > dp ) {
                 damage = (int)me->query("max_force") / 10 +
         random((int)me->query("eff_kee") /50);
@@ -67,7 +67,7 @@ int perform(object me, object target)
                         me->improve_skill("jienan-zhi", 1, 1);
                 }
        else {
-//here, cast failed and the target's force_factor will be added to the previous 
+//here, cast failed and the target's force_factor will be added to the previous
 //damage to hurt yourself:(...note damage<0.
      msg += HIC "结果被$n以内力反激，$N反而自受其苦，双手受伤不轻！\n" NOR;
      damage -= (int)target->query("force_factor");
@@ -78,14 +78,14 @@ int perform(object me, object target)
                         me->receive_wound("kee", -damage/3, target);
                         me->improve_skill("jienan-zhi", 1, 1);
        }
-             } 
+             }
    else
                 msg += "但是被$n躲开了。\n";
 
         message_vision(msg, me, target);
         if( damage > 0 ) COMBAT_D->report_status(target);
         else if( damage < 0 ) COMBAT_D->report_status(me);
-//damage=0 corresponding to "但是被$n躲开了。\n"--no report.   
+//damage=0 corresponding to "但是被$n躲开了。\n"--no report.
 
         if( !target->is_fighting(me) ) {
                 if( living(target) ) {
