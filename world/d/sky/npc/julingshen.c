@@ -54,5 +54,3 @@ void create()
         carry_object("/d/obj/armor/tongjia")->wear();
    carry_object("/d/obj/weapon/axe/huafu")->wield();
 }
-
-
