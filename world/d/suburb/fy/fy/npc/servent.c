@@ -54,4 +54,3 @@ void die()
         me->set_temp("marks/servant",1);
 ::die();
 }
-
