@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // quit.c
 
 #include <command.h>
@@ -10,7 +10,7 @@ inherit F_CLEAN_UP;
 
 int do_drop(object me, object obj);
 
-void create() 
+void create()
 {
    seteuid(getuid());
    set("name", "离线指令");
@@ -32,7 +32,7 @@ int main(object me, string arg)
      return notify_fail("( 你上一个动作还没有完成，不能退出。)\n");
         } //to allow halt suicide :D by mon 9/9/97
 
-        if( !wizardp(me) && environment(me) && 
+        if( !wizardp(me) && environment(me) &&
      environment(me)->query("no_quit") && link_ob )
                         return notify_fail("这里不准退出游戏。\n");
 
@@ -77,7 +77,7 @@ int main(object me, string arg)
 
 int do_drop(object me, object obj)
 {
-           
+
         if( obj->query("no_drop") ){
                 destruct(obj);
                 return 0;
