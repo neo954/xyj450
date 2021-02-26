@@ -56,5 +56,3 @@ skill :), skill);
 	me->start_busy(1);
         return 1;
 }
-
-
