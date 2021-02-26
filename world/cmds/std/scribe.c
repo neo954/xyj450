@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // scribe.c
 
 #include <skill.h>
@@ -35,7 +35,7 @@ int main(object me, string arg)
         return 1;
      }
      return 0;
-   } else 
+   } else
      return notify_fail("你请先用 enable 指令选择你要使用的咒文系。\n");
 
    return 1;
@@ -50,7 +50,7 @@ int help (object me)
 先用 enable 指令来指定你要使用的咒文系。
 
 注：画符会消耗若干气(要咬破手指用鲜血画)与神。
- 
+
 HELP
         );
         return 1;
