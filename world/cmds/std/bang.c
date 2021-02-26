@@ -40,7 +40,7 @@ int main(object me, string arg)
 			t2="marks/"+s1;
 			s2=ob->query(t2);
 		}
-	       	if( me==(object)ob->query_temp("pending/bang") ) 
+	       	if( me==(object)ob->query_temp("pending/bang") )
 		{
 			if ((ss!=0)&&(s1!=0))
 			{
@@ -89,7 +89,7 @@ int help(object me)
 帮会指令使用方法:
 
 bang with <某人> - 跟某人同帮. 必须要双方都同意加入且其中一人是舵主才会生效。
-bang dismiss     - 离开帮会. 
+bang dismiss     - 离开帮会.
 HELP
 	);
 	return 1;
