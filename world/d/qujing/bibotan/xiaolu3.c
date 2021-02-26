@@ -53,4 +53,3 @@ void greeting(object me)
         me->fight_ob(guai);
 
 }
-
