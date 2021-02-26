@@ -9,7 +9,7 @@ void create()
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
-  "west"  : __DIR__"nwind5", 
+  "west"  : __DIR__"nwind5",
 ]));
         set("item_desc", ([
                 "kan": "这个神龛开口很窄，正好可扔下一张纸(throw)。\n",
@@ -54,7 +54,7 @@ int do_throw(string arg)
 	killer = new(__DIR__"npc/killer");
 	killer->set("possessed",who);
 	killer->set_leader(who);
-	killer->set("haunttar", target); 
+	killer->set("haunttar", target);
 	targetprice = (int)paper->query("targetprice");
 	destruct(paper);
 	killer->set("combat_exp", targetprice/10 );
