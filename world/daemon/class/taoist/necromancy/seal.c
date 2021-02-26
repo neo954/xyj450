@@ -30,10 +30,10 @@ add_action("do_warp", "burn");
 
 
 int do_warp(string tar)
-{       
+{
         object env,who;
-       
-       
+
+
         who=this_player();
     //  if( who && who!=this_player() )
           //  return notify_fail("阴界传送符只能对自己使用。\n");
@@ -41,19 +41,19 @@ int do_warp(string tar)
     //  env = environment(this_player());
       message("vision",
               HIB + this_player()->name() + "祭起一张阴界传送符。\n\n"
-                
+
    "忽然四周吹起了一阵凉飕飕的阴风，阴风之中彷佛有许多人影在晃动...\n\n"
                 "然後一阵火光突然爆起！\n" NOR, env);
         //OP_CMD->main(this_player(), "all");
-     
+
            who->move(DEATH_ROOM);
         message("vision",
-                CYN "可是...." + who->name() + "已经不见了。\n" 
+                CYN "可是...." + who->name() + "已经不见了。\n"
 NOR, env);
         message("vision",
-                CYN 
+                CYN
 "你只觉得身子不断下坠，一直下坠，一直下坠，一直下坠，一直下坠 .....\n\n"
-                NOR     
+                NOR
 "不知道什麽时候，你发现你其实一直都站在坚硬的地面上，可是四周的景物\n\n"
                         "却不一样了....\n", this_player() );
         destruct(this_object());
@@ -93,7 +93,7 @@ int do_attach(string arg)
 			set("no_drop", "这样东西不能丢弃，必须用 detach。\n");
 		} else destruct(this_object());
 		return 1;
-	} else 
+	} else
 		return 0;
 }
 */
