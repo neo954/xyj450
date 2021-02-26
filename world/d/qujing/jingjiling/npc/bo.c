@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 #include "allnpc.h"
@@ -60,11 +60,11 @@ int accept_fight(object ob)
    command("say 且待老夫考你一考。\n");
    who->set_temp("answer_bo", 1);
    call_out("ask_poem", 3, who);
-   return 0;   
+   return 0;
 }
 
 void ask_poem(object who)
-{   
+{
    object me=this_object();
    message_vision("$N对$n问道：“君不见，黄河之水天上来”的下句是什么？\n", me, who);
    message_vision("$N说：老夫限你三十秒内回答(answer)。\n", me);
@@ -81,7 +81,7 @@ void say_answer(object who)
    who->delete_temp("answer_bo");
    return ;
 }
-   
+
 void init()
 {
         add_action("do_answer", "answer");
