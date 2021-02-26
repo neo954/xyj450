@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mimi/zhuziguo/eastgate  snowcat moved to /d/qujing/wuji
 inherit ROOM;
 
@@ -10,7 +10,7 @@ void create ()
   set ("long", @LONG
 
 这是乌鸡国的东门城楼，青石筑成两层楼台坚固异常，巍峨
-宽阔的拱行城门上方镂着「乌鸡国」三个红漆大字。 
+宽阔的拱行城门上方镂着「乌鸡国」三个红漆大字。
 LONG);
 
   set("exits", ([ /* sizeof() == 2 */
