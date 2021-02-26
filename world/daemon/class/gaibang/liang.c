@@ -11,7 +11,7 @@ void create()
 	set("nickname", "传功长老");
 	set("gender", "男性");
 	set("age", 55);
-	set("long", 
+	set("long",
 		"梁长老是丐帮出道最久，武功最高的长老，在武林中享名已久。\n"
 		"丐帮武功向来较强，近来梁长老一力整顿，更是蒸蒸日上。\n");
 
@@ -32,16 +32,16 @@ void create()
 	
 	set("combat_exp", 100000);
 	
-	set_skill("force", 90); 
-	set_skill("huntian-qigong", 95); 
-	set_skill("unarmed", 85); 
-	set_skill("xianglong-zhang", 90); 
-	set_skill("dodge", 93); 
-	set_skill("xiaoyaoyou", 90); 
-	set_skill("parry", 80); 
-	set_skill("staff", 80); 
-	set_skill("dagou-bang", 80); 
-	set_skill("begging", 80); 
+	set_skill("force", 90);
+	set_skill("huntian-qigong", 95);
+	set_skill("unarmed", 85);
+	set_skill("xianglong-zhang", 90);
+	set_skill("dodge", 93);
+	set_skill("xiaoyaoyou", 90);
+	set_skill("parry", 80);
+	set_skill("staff", 80);
+	set_skill("dagou-bang", 80);
+	set_skill("begging", 80);
 	set_skill("checking", 90);
 	
 	map_skill("force", "huntian-qigong");
@@ -57,9 +57,9 @@ void init()
 {
         object ob;
 	mapping myfam;
-        
+
         ::init();
-        if (interactive(ob = this_player()) && !is_fighting()) 
+        if (interactive(ob = this_player()) && !is_fighting())
 	{
 		myfam = (mapping)ob->query("family");
 		if (!myfam || myfam["family_name"] != "丐帮")
@@ -90,7 +90,7 @@ void kicking(object ob)
 void attempt_apprentice(object ob)
 {
 	if ((int)ob->query("str") < 25) {
-		command("say 我们丐帮的武艺一向以刚猛为主，" + 
+		command("say 我们丐帮的武艺一向以刚猛为主，" +
 		RANK_D->query_respect(ob) + "臂力太弱，似乎不宜学丐帮的功夫？");
 		return;
 	}
