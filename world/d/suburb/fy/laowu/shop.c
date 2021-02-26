@@ -10,7 +10,7 @@ void create()
 阳光下的海浪一样。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "north" : __DIR__"street1",
 ]));
         set("objects", ([
