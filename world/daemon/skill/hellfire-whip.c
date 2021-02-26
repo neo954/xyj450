@@ -134,4 +134,3 @@ string perform_action_file(string func)
 {
 return CLASS_D("ghost") + "/hellfire-whip/" + func;
 }
-
