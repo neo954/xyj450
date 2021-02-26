@@ -28,4 +28,3 @@ void down(object me)
 	tell_object(me, "只觉脚底水流盘旋，一股强大的吸力把你往下拉去...\n");
 	me->move(__DIR__"hantan3");
 }
-
