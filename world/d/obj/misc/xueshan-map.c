@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 
 void create()
@@ -12,7 +12,7 @@ void create()
   set("long", @LONG
           【大雪山图】
 
-   
+
           _/\_
            北
 
@@ -22,7 +22,7 @@ void create()
 
 
    ※昆仑※
-          
+
                ※※※※
                ※长安※
                ※※※※
