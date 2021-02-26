@@ -61,4 +61,3 @@ message_vision(HIC"\n$N运足精神，身形一转，霹雳间连续向$n攻出�
         me->start_busy(3);
         return 1;
 }
-
