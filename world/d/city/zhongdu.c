@@ -47,4 +47,3 @@ return notify_fail("衙役喝道：公堂岂可乱闯，还不退下！\n");
         }
         return 1;
 }
-
