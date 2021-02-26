@@ -83,4 +83,3 @@ enemy[i]->fight_ob(this_object());
         }
         set_leader(who);
 }
-
