@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat
 
 inherit NPC;
@@ -67,10 +67,10 @@ void reward (object who)
   points = points * (who->query("kar")/2+1);
   message_vision ("$N对$n一拜：陛下有旨，赐"+RANK_D->query_respect(who)+
                   chinese_number(points)+"点"+to_chinese(name)+"技能！\n",me,who);
-/*  
+/*
   command (channel+" "+who->query("name")+who->query("quest/reason")+"陛下有旨，赐"+
            chinese_number(points)+"点"+to_chinese(name)+"技能！");
-*/                  
+*/
   who->add("quest/gain/skills/"+name,points);
   reporting (who, who->query("quest/reason"), points, "点"+to_chinese(name)+"技能");
 
