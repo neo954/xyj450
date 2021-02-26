@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/death/road3.c
 
 inherit ROOM;
@@ -34,7 +34,7 @@ void init()
 }
 
 int do_open(string arg)
-{       
+{
         object me;
         int sen,damage;
         me=this_player();
