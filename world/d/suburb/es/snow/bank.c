@@ -30,7 +30,7 @@ LONG
 这里是钱庄，目前我们提供的服务有：
 
 convert     兑换钱币。
- check      查帐。      
+ check      查帐。
  cun        存钱。
  qu         取钱。
 TEXT
