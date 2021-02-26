@@ -22,5 +22,3 @@ create_door("up", "雕花竹门", "down", DOOR_CLOSED);
         setup();
         replace_program(ROOM);
 }
-
-
