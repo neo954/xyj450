@@ -49,7 +49,7 @@ int do_study(string arg)
 
 	message_vision("$N正专心研读石桌上的古怪图形。\n", me);
 
-	switch( random(5) ) 
+	switch( random(5) )
 	{
 	    case 0:
 		if ( (int)me->query_skill("finger", 1) < 100)
