@@ -15,4 +15,3 @@ void create()
 	set_skill("literate", 40);
 	setup();
 }
-
