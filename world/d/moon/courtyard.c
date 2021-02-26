@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 #include <room.h>
 inherit ROOM;
@@ -20,20 +20,20 @@ LONG);
 
   set("exits", ([ /* sizeof() == 4 */
   "southeast" : __DIR__"junkroom.c",
-  "west" : __DIR__"huilang1.c", 
+  "west" : __DIR__"huilang1.c",
          ]));
 
-  set("objects", ([ 
+  set("objects", ([
       __DIR__"npc/fairy5.c" : 1,
-    "/d/obj/flower/rose.c":2, 
+    "/d/obj/flower/rose.c":2,
         ]));
    set("no_clean_up", 0);
    set("resource", ([ /* sizeof() == 1 */
      "water" : 1,
    ]));
   set("outdoors", 1);
-      
-   setup();     
+
+   setup();
 //   "obj/board/moon_b"->foo();
 }
 
