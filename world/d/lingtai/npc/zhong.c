@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // worker.c
 
 inherit NPC;
@@ -16,7 +16,7 @@ void create()
         set_skill("dodge", 20);
    set("class", "taoist");
         set_skill("parry", 30);
-        set_skill("unarmed", 30);  
+        set_skill("unarmed", 30);
         set("per", 30);
         set("max_kee", 300);
         set("max_sen", 300);
