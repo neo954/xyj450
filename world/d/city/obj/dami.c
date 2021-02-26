@@ -29,5 +29,3 @@ void create()
         init_unarmed(5);
         setup();
 }
-
-
