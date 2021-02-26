@@ -18,7 +18,7 @@ LONG
                ]));
           set("objects", ([
                 __DIR__"npc/master3" : 1,
-       ]) ); 
+       ]) );
 set("valid_startroom", 1);
   setup();
   replace_program(ROOM);
