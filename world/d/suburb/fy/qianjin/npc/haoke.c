@@ -19,4 +19,3 @@ void create()
 	add_money("gold", 5);
         carry_object("/obj/cloth")->wear();
 }
-
