@@ -98,7 +98,7 @@ int give_quest(string arg)
         if( arg == "-hhh" ) fft = 16;
         if( arg == "-hhhh" ) fft = 32;
         if( arg == "-x" ) fft = 500;
-        if( arg == "-xx" ) fft = 1000; 
+        if( arg == "-xx" ) fft = 1000;
         if( arg == "-xxx" ) fft = 2000;
         if( arg == "-l" ) fft = 1;
 	me = this_player();
@@ -115,7 +115,7 @@ int give_quest(string arg)
 		return 0;
 	else
 	{
-		message_vision("天机老人向$N一甩袍袖，说道： 
+		message_vision("天机老人向$N一甩袍袖，说道：
 真没用！不过看在你还回来见老夫的份上，就在给你一次机会．\n", me);
 		me->set("kee", me->query("kee")/2+1);
 	}
@@ -153,7 +153,7 @@ int give_quest(string arg)
         }
  	me->set("quest", quest);
 	me->set("task_time", (int) time()+(int) timep);
-	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)：%s", 
+	CHANNEL_D->do_channel(this_object(), "qst", sprintf("%s(%s)：%s",
 	me->query("name"),me->query("id"),sysmsg));
 
 return 1;
