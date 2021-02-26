@@ -32,7 +32,7 @@ int apply_medicine()
 	diff = this_player()->query("max_sen")-this_player()->query("eff_sen");
 	if(!(diff))    return notify_fail("你没有受伤！\n");
 	if(value > diff) value = diff;
-	    
+	
 	message_vision("$N用熊掌增神．\n",this_player());
 	this_player()->add("eff_sen",value);
 	destruct(this_object());
