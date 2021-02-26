@@ -51,5 +51,3 @@ void create()
 	carry_object("/d/suburb/es/latemoon/park/npc/obj/guihua")->wield();
         	}
 }
-
-
