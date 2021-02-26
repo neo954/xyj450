@@ -127,5 +127,3 @@ mapping quests_give = ([
   100020 : ({ "give", "小真",         "ban niang",   "金戒指(jin jie)",      "1" }),
   100020 : ({ "give", "珠怜",         "ban niang",   "描龙玉佩(yu pei)",     "1" }),
 ]);
-
-
