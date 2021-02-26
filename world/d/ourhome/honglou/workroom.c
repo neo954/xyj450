@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/hkgroup/workroom
 
 #include <room.h>
@@ -86,7 +86,7 @@ int do_knock2(string arg)
           this_player());
      }
    else message_vision("$N轻轻敲了敲门，门上的信箱晃了几晃。\n",
-          this_player()); 
+          this_player());
    return 1;
    }
 }
