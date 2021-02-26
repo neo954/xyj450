@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -38,10 +38,10 @@ void create()
   map_skill("dodge", "dragonstep");
   map_skill("force", "dragonforce");
   map_skill("spells", "seashentong");
-  set_weight(5000000);  
+  set_weight(5000000);
   setup();
   carry_object("/d/obj/cloth/mangpao")->wear();
-  
+
 }
 
 void init ()
@@ -76,19 +76,19 @@ void test_player (object who)
     // mon 4/5/98 changed range to 32 from 16
     {
       case 0: case 1: case 2: case 3: case 4: case 5: case 6:
-      case 16: case 17: case 18: case 19: case 20: case 21: case 22: 
+      case 16: case 17: case 18: case 19: case 20: case 21: case 22:
       {
         str = "duan zhixian";
         break;
       }
       case 7: case 8:
       {
-        str = "du ruhui";       
+        str = "du ruhui";
         break;
       }
       case 9:
       {
-        str = "zhang shiheng";  
+        str = "zhang shiheng";
         break;
       }
       case 10: case 11:
@@ -98,7 +98,7 @@ void test_player (object who)
       }
       default:
       {
-        str = "xu maogong";     
+        str = "xu maogong";
         break;
       }
     }
