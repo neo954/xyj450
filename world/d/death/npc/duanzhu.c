@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //puti.c
 inherit NPC;
 
@@ -65,7 +65,7 @@ int accept_object(object who, object ob)
    }
    call_out("destroy", 1, ob);
    return 1;
-   
+
 }
 void destroy(object ob)
 {
