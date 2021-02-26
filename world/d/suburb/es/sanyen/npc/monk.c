@@ -52,4 +52,3 @@ void create()
 	carry_object(__DIR__"obj/eye_patch")->wear();
 	carry_object(__DIR__"obj/shoe")->wear();
 }
-
