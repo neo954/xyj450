@@ -97,4 +97,3 @@ void reset()
 	delete("liftid");
         ::reset();
 }
-
