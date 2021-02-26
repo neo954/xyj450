@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // master.c
 
 inherit NPC;
@@ -70,7 +70,7 @@ void create()
 
 void attempt_apprentice(object ob)
 {
-   if( ((int)ob->query("cor") < 20) 
+   if( ((int)ob->query("cor") < 20)
    ||   ((int)ob->query("cps") < 20)) {
      command("say 学剑之人必须胆大心细，依我看" + RANK_D->query_respect(ob) + "的资质似乎不宜？");
      return;
