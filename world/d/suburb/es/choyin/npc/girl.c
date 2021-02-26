@@ -35,4 +35,3 @@ string ask_youngman()
         return "小女子有一事相求 ... 请您将这个交给游 ... 游公子。\n";
         delete("inquiry/游晋");
 }
-
