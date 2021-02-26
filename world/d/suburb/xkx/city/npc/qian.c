@@ -18,7 +18,7 @@ void create()
 	set("dex", 18);
 	set("con", 18);
 
-	set("kee", 500); 
+	set("kee", 500);
 	set("max_kee", 500);
 	set("gin", 100);
 	set("max_gin", 100);
@@ -71,7 +71,7 @@ int do_check()
 		this_player()->set("balance", 0);
 		return notify_fail("您在敝商号没有存钱。\n");
 	}
-	write("钱眼开悄悄告诉你：您在弊商号共存有" + 
+	write("钱眼开悄悄告诉你：您在弊商号共存有" +
 		MONEY_D->money_str(total) + "\n");
 
 	return 1;
@@ -145,7 +145,7 @@ int do_convert(string arg)
 	
 	message_vision(sprintf("$N从身上取出%s%s%s，换成了%s%s%s。\n",
 	chinese_number(amount), from_ob->query("base_unit"), from_ob->query("name"),
-	chinese_number(amount * bv1 / bv2), to_ob->query("base_unit"), 
+	chinese_number(amount * bv1 / bv2), to_ob->query("base_unit"),
 	to_ob->query("name")), me);
 
 //	from_ob->add_amount(-amount);
@@ -191,8 +191,8 @@ int do_deposit(string arg)
 
 	me->add("balance", what_ob->query("base_value") * amount);
 	what_ob->add_amount(-amount);
-	message_vision(sprintf("$N拿出%s%s%s，存进了银号。\n", 
-	chinese_number(amount), what_ob->query("base_unit"), 
+	message_vision(sprintf("$N拿出%s%s%s，存进了银号。\n",
+	chinese_number(amount), what_ob->query("base_unit"),
 	what_ob->query("name")), me);
 
 	remove_call_out("enough_rest");
