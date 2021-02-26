@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // hanxiangzi.c...weiqi, 98.02.24.
 
 inherit NPC;
@@ -23,7 +23,7 @@ void create()
    set_skill("parry", 80);
    set_skill("sword", 90);
    set_skill("xiaofeng-sword", 100);
-   set_skill("force", 70);   
+   set_skill("force", 70);
    set_skill("zhenyuan-force", 70);
    set_skill("literate", 120);
    set_skill("spells", 80);
@@ -39,7 +39,7 @@ void create()
    set("force", 1000);
    set("max_force", 800);
    set("mana", 1600);
-   set("max_mana", 800);   
+   set("max_mana", 800);
    set("force_factor", 40);
    set("mana_factor", 40);
 
@@ -62,7 +62,7 @@ void attempt_apprentice(object ob)
         if ( (string)ob->query("gender") == "男性" ) command("say 师兄太客气了。\n");
         else command("say 师妹太客气了。\n");
      }
-     else 
+     else
      {
         command("consider");
         command("say 是你自己要拜的，你师父打上门来我可得拿你挡。\n");
