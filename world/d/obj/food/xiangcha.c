@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 //xiangcha.c
 inherit ITEM;
@@ -17,7 +17,7 @@ void create()
     set("unit", "只");
     set("max_liquid", 2);
 }
-  
+
   set("liquid", ([
        "type": "water",
        "name": "云雾山香茶",
