@@ -18,7 +18,7 @@ LONG
                 __DIR__"npc/bigmonk" : 1,
        ]) );
 
-   
+
   setup();
   replace_program(ROOM);
 }
