@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -15,14 +15,14 @@ LONG);
 
         //set("item_desc", ([" *** " : " *** ", ]));
 
-        set("exits", 
+        set("exits",
         ([ //sizeof() == 4
                 "northeast" : __DIR__"wangnan1",
                 "south" : __DIR__"wangnan3",
      "west": __DIR__"jinshi",
         ]));
 
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
 //                __DIR__"npc/libai" : 1,
         ]));
