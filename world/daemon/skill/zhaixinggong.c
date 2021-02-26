@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // zhaixinggong.c based on xiaoyaoyou.c
 
 inherit SKILL;
@@ -12,9 +12,9 @@ string *dodge_msg = ({
         "$n一招「织女穿梭」，姿态美妙地躲了开去。\n"
 });
 
-int valid_enable(string usage) 
-{ 
-	return (usage == "dodge") || (usage == "move"); 
+int valid_enable(string usage)
+{
+	return (usage == "dodge") || (usage == "move");
 }
 
 int valid_learn(object me) { return 1; }
@@ -32,7 +32,7 @@ int practice_skill(object me)
 	        me->receive_damage("kee", 10);
 	else if (me->query_skill("zhaixinggong", 1) < 60)
 		me->receive_damage("kee", 20);
-	else 
+	else
 		me->receive_damage("kee", 30);
         return 1;
 }
