@@ -390,5 +390,3 @@ mapping quests_ask = ([
  1700000 : ({ "ask", "圆清",         "yuan qing",          "讲授佛学",           "1" }),
 
 ]);
-
-
