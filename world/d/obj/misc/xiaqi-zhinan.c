@@ -46,4 +46,3 @@ int do_read(string arg)
    }
     else return 0;
 }
-
