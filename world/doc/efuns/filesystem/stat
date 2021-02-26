@@ -1,4 +1,4 @@
-stat - returns information pertaining to a file or a directory 
+stat - returns information pertaining to a file or a directory
 
 mixed stat(string str);
 mixed stat(string str, int x);
