@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat on 4/12/1997
 
 inherit F_VENDOR_SALE;
@@ -24,7 +24,7 @@ void create()
          "jiudai"      : "/d/obj/food/niupi-jiudai",
        ]) );
   set("chat_chance",40);
-  set("chat_msg",({ 
+  set("chat_msg",({
         "卖西瓜！～～\n",
         "卖烤鸡！～～\n",
         "卖葡萄干！～～\n",
