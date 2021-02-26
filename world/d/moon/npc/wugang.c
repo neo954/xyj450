@@ -41,4 +41,3 @@ int accept_fight(object me)
         command("say 正好！我砍了半天树，也该换换了。");
         return 1;
 }
-
