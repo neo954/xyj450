@@ -18,5 +18,3 @@ void create()
         set("material", "paper");
         }
 }
-
-
