@@ -1,14 +1,14 @@
 call_other - call a function in another object
 
-mixed call_other(mixed ob, string func, ...); 
+mixed call_other(mixed ob, string func, ...);
 
-mixed call_other(mixed ob, array args); 
+mixed call_other(mixed ob, array args);
 
-mixed call_other(array obs, string func, ...); 
+mixed call_other(array obs, string func, ...);
 
-mixed call_other(array obs, array args); 
+mixed call_other(array obs, array args);
 
-ob is either an object pointer, or a string filename (suitable for 
+ob is either an object pointer, or a string filename (suitable for
 find_object()).  obs is an array of object pointers and strings.
 Using an array as the first argument does a call_other for each element of
 the array, and returns an array of the results.
