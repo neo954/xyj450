@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/changan/duchang4
 // by snowcat 7/5/1997
 inherit ROOM;
@@ -11,11 +11,11 @@ object qn_gui = 0;
 object bl_gui = 0;
 int *res = allocate(3);
 
-mapping guis = ([ 
+mapping guis = ([
   "cs"  : "长寿龟",
   "qn"  : "千年龟",
   "bl"  : "不老龟",
- ]); 
+ ]);
 
 int random2 (int i)
 {
@@ -34,10 +34,10 @@ void create()
 LONG);
 
   set("item_desc",([
-    "paizi" : "押长寿龟： sai cs <amount> <money>\n"+ 
-              "押千年龟： sai qn <amount> <money>\n"+ 
-              "押不老龟： sai bl <amount> <money>\n", 
-  ])); 
+    "paizi" : "押长寿龟： sai cs <amount> <money>\n"+
+              "押千年龟： sai qn <amount> <money>\n"+
+              "押不老龟： sai bl <amount> <money>\n",
+  ]));
   set("objects", ([ /* sizeof() == 1 */
     __DIR__"npc/guitong" : 1,
   ]));
@@ -124,7 +124,7 @@ int valid_leave(object me, string dir)
 {
   if (dir == "north")
   {
-    if (me->query_temp ("gamble_gui/amount") > 0) 
+    if (me->query_temp ("gamble_gui/amount") > 0)
       message_vision ("$N扔下押龟的钱不要了。\n",me);
     me->delete_temp("gamble_gui");
   }
@@ -157,7 +157,7 @@ void gamble_prepare ()
   room_status = 1;
   call_out ("gamble_start",20);
 }
- 
+
 void gamble_start ()
 {
   object room = this_object();
@@ -250,7 +250,7 @@ void gamble_perform ()
   }
 
   call_out ("gamble_finish",1);
-  
+
 }
 
 void player_wins (object who, int total)
