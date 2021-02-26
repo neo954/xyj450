@@ -7,7 +7,7 @@ void create()
 	set("title","心有灵犀一点通");
         set("long",
 "四条眉毛的陆小凤\n"
-               ); 
+               );
 
         set("attitude", "peaceful");
         set("combat_exp", 1000000);
