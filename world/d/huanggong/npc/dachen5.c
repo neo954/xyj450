@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat
 
 inherit NPC;
@@ -53,13 +53,13 @@ void reward (object who)
   points = points * 10;
   message_vision ("$N对$n一拜：陛下有旨，赐"+RANK_D->query_respect(who)+
                   chinese_number(points)+"两白银！\n",me,who);
-/*  
+/*
   command (channel+" "+who->query("name")+who->query("quest/reason")+"陛下有旨，赐"+
            chinese_number(points)+"两白银！\n");
-*/  
+*/
   who->add("quest/gain/silver",points);
   reporting (who, who->query("quest/reason"), points, "两白银");
-  
+
   silver->set_amount(points);
   if(!(silver->move(who)))
     silver->move(environment(who));
