@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // waiter.c
 
 inherit NPC;
@@ -27,7 +27,7 @@ void create()
 }
 
 void init()
-{   
+{
    object ob;
 
    ::init();
@@ -43,7 +43,7 @@ void greeting(object ob)
    if( !ob || !visible(ob) || environment(ob) != environment() ) return;
      if((string)ob->query("startroom")=="/d/ourhome/kedian"){
                      ob->set("startroom","/d/city/kezhan");
-     }   
+     }
    switch( random(3) ) {
      case 0:
         say( "店小二笑咪咪地说道：这位" + RANK_D->query_respect(ob)
