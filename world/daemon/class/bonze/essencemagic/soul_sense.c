@@ -29,4 +29,3 @@ void remove_effect(object me)
         me->add_temp("apply/astral_vision", -1);
         tell_object(me, "你的灵识失效了。\n");
 }
-
