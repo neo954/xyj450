@@ -66,7 +66,7 @@ void init()
 	if (interactive(ob))
 	{
 		remove_call_out("kill_ob");
-		call_out("kill_ob", 1, ob); 
-	}       
+		call_out("kill_ob", 1, ob);
+	}
 }
 
