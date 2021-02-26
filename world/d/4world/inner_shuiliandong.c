@@ -66,4 +66,3 @@ int regenerate()
 set("not_generating_jingbubang", 0);
 return 1;
 } */
-
