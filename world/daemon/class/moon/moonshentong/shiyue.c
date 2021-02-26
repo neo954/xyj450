@@ -81,4 +81,3 @@ NOR;
    message_vision(msg, me, target);
    return 1;
 }
-
