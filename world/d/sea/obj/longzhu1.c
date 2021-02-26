@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 # include <skill.h>
 
 inherit ITEM;
@@ -64,7 +64,7 @@ int do_combine()
    if( (int)me->query("mana") < 1000)
      return notify_fail("你的法力不足，不能支配龙珠的动向。\n");
 
-   if ( !(b=present("yin longzhu",me))) 
+   if ( !(b=present("yin longzhu",me)))
      return notify_fail("你将手中龙珠摆弄了几下，却一无所获，大概还没有收集够。\n");
         if ( !(c=present("chi longzhu",me)))
                 return notify_fail("你将手中龙珠摆弄了几下，却一无所获，大概还没有收集够。\n");
