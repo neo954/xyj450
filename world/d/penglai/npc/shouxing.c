@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //海上三星
 
 inherit NPC;
@@ -33,7 +33,7 @@ void create()
    set("max_mana", 800);
    set("mana", 800);
    set("mana_factor", 50);
-   
+
    set_skill("spells", 120);
    set_skill("taiyi", 120);
    set_skill("force",120);
@@ -65,14 +65,14 @@ void create()
 
    set("time", 1);
    setup();
-   carry_object("/d/obj/cloth/baipao")->wear();   
+   carry_object("/d/obj/cloth/baipao")->wear();
    carry_object("/d/penglai/npc/obj/guai")->wield();
 }
 
 string ask_me()
 {
         object ob;
-           
+
    if((int)this_player()->query("combat_exp") < 50000 )
      return "没见老夫正下棋呢吗，以后再说吧！\n";
 
@@ -121,13 +121,13 @@ int accept_fight(object who)
 }
 
 void player_win (object me, object who)
-{   
+{
    object obj;
    // added by snowcat on 6/22/1997
    if (me->query("time")<=0)
            return;
    obj = new("/d/obj/drug/biou");
-   command("sigh");   
+   command("sigh");
    say("寿星叹了一口气：年纪大了，到底气力还是不济！\n");
    say("寿星说道：当真是英雄倍出，我辈老矣！\n");
    obj->move(who);
@@ -152,7 +152,7 @@ void player_lose (object me, object who)
 {
      string msg;
      msg = RANK_D->query_respect(who);
-   
+
    command("jump");
    say("寿星哈哈大笑："+msg+"莫要不高兴，回去好好练武吧，来日方长嘛！\n");
 }
@@ -175,7 +175,7 @@ void check_fight (object me, object who)
 
      if (!present(who, environment(me)))
          return;
-   
+
    // changed by snowcat on 6/24/1997
    // bug abuse: player can exert recover when fight stops,
    //if ((my_kee*100/my_max_kee) <=(whos_kee*100/whos_max_kee) )
@@ -212,7 +212,7 @@ void attempt_apprentice(object ob)
         command("say 呵呵，是" + ob->query("family/master_name") + "老头的徒弟，那我就不客气了。\n");
         command("recruit " + ob->query("id") );
      }
-     else 
+     else
      {
         if( ob->query_skill("taiyi", 1) >= 80 )
         {
