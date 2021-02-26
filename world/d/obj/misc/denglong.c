@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/5/1997 by snowcat
 #include <ansi.h>
 #include <dbase.h>
@@ -28,7 +28,7 @@ void create()
 {
   seteuid(getuid());
 
-  set_name(names[random(sizeof(names))], ({ "deng long", "deng", "long"})); 
+  set_name(names[random(sizeof(names))], ({ "deng long", "deng", "long"}));
   set_weight(900);
   set("long","一杆紫竹把儿的"+query("name")+"。\n");
   set("unit", "个");
