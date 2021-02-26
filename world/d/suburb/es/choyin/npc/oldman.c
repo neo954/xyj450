@@ -193,6 +193,3 @@ void defeated_enemy(object ob)
         say(CYN "老者骨碌碌就地打了个滚，说道：我赢了！" NOR);
         remove_killer(ob);
 }
-
-
-
