@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/20/1997 by snowcat
 
 inherit NPC;
@@ -8,7 +8,7 @@ inherit NPC;
 void create()
 {
   set_name("美后", ({ "mei hou", "hou", "queen" }));
-  set("title", "比丘国");   
+  set("title", "比丘国");
   set("long", "一位娇俊无比，貌似观音的王后。\n");
   set("gender", "女性");
   set("age", 17);
