@@ -7,9 +7,9 @@ object add_money(string type, int amount)
 设定 NPC 身上所携带的钱币及种类.
 
 int accept_fight(object who)
-判定 NPC 是否接受挑战 (fight). 首先检查 NPC 的战斗行为 (attitude), 
+判定 NPC 是否接受挑战 (fight). 首先检查 NPC 的战斗行为 (attitude),
 判定是否可以被围殴. 再来判定 NPC 自身的体力, 并依 attitude 的设定决
-定是否接受挑战. 
+定是否接受挑战.
 
 int chat()
 如果 NPC 有设定任何固定时间会执行的事项, 则此函数会依照 chat_chance
