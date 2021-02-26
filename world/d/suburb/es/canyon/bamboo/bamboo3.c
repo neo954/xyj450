@@ -36,7 +36,7 @@ int do_move(string arg)
 	
 	if ( ((int)me->query("force") < 560) ||
 	     ((int)me->query("max_force") < 560) ||
-	     ((int)me->query("force_factor") < 40 ) ) { 
+	     ((int)me->query("force_factor") < 40 ) ) {
 		tell_object(me, "你出力不太够喔！\n");
 		return 1;
 	}
@@ -66,7 +66,7 @@ int do_enter()
 int go_enter(string arg)
 {
 	if( !query("exits/enter") ) return 0;
-	        
+	
 	if( arg!="enter" ) return 0;
 	
 	message_vision("当$N通过隙缝，大黄石又急速地合闭。\n",this_player());
