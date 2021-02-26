@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // status.c
 
 inherit F_CLEAN_UP;
@@ -19,11 +19,11 @@ int help(object me)
 {
   write(@HELP
 指令格式 : status [detail]
- 
+
 这个指令可以显示出目前游戏的一些相关资料及状况.
- 
+
 HELP
     );
     return 1;
 }
- 
+
