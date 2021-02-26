@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 void create()
@@ -13,16 +13,16 @@ void create()
         set("per", 18);
         set("max_kee", 200);
         set("max_sen", 200);
-        set("force", 200);  
-   set("inquiry", 
-([ "大花": "大花是我养的老母猪。\n", 
+        set("force", 200);
+   set("inquiry",
+([ "大花": "大花是我养的老母猪。\n",
 ]) );
 
         setup();
         carry_object("/d/obj/cloth/shoes")->wear();
 }
 void init()
-{       
+{
         object ob=this_player();
 
         ::init();
