@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 
 void create()
@@ -47,7 +47,7 @@ notify_fail("车把式对你说：我只装货行里的货柜！\n");
         return 1;
 }
 int put(string arg)
-{           
+{
    if( sscanf(arg, "%s in che"))
      return notify_fail("什么？\n");
    return 1;
