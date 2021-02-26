@@ -7,7 +7,7 @@ void create()
 再通江南海口。这条干线上商旅不绝。一条车痕向南方和北方伸展。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "north" : __DIR__"road1",
   "south" : "/d/suburb/fy/fy/ngate",
 ]));
