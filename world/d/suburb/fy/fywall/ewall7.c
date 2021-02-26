@@ -10,7 +10,7 @@ LONG
         );
         set("exits", ([ /* sizeof() == 4 */
   "north" : __DIR__"ewall6",
-  "south"  : __DIR__"ewall8", 
+  "south"  : __DIR__"ewall8",
 ]));
         set("outdoors", "fengyun");
         setup();
