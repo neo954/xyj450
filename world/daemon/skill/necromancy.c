@@ -2,8 +2,8 @@
 
 inherit SKILL;
 
-int valid_enable(string usage) 
-{ 
+int valid_enable(string usage)
+{
         return usage=="spells" ;
 
 }
