@@ -47,4 +47,3 @@ int black_white_ness()
 {
 	return 0;
 }
-
