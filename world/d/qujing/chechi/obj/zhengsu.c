@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 15 1997
 
 inherit ITEM;
@@ -50,7 +50,7 @@ int do_eat (string arg)
   {
     message_vision ("$N将$n吃了下去。\n",who,me);
     destruct(me);
-    return 1;     
+    return 1;
   }
   // not valid sanqing
   if (! yuanshi1 || ! lingbao1 || ! taishang1)
@@ -58,45 +58,45 @@ int do_eat (string arg)
     where->daoshi_appear(who);
     message_vision ("$N饥不择食地将$n吃了下去。\n",who,me);
     destruct(me);
-    return 1;     
-  }   
+    return 1;
+  }
   // too many sheng xiangs
   if (yuanshi2 || lingbao2 || taishang2)
   {
     where->daoshi_appear(who);
     message_vision ("$N狼吞虎咽地将$n吃了下去。\n",who,me);
     destruct(me);
-    return 1;     
-  }   
+    return 1;
+  }
   // haven't thrown sheng xiang away
   if (yuanshi3 || lingbao3 || taishang3)
   {
     where->daoshi_appear(who);
     message_vision ("$N风卷残云一般将$n吃了下去。\n",who,me);
     destruct(me);
-    return 1;     
-  }   
+    return 1;
+  }
   // player hasn't become one of sanqing
   if (who!=yuanshi1 && who!=lingbao1 && who!=taishang1)
   {
     where->daoshi_appear(who);
     message_vision ("$N囫囵吞枣一般将$n吃了下去。\n",who,me);
     destruct(me);
-    return 1;     
-  }   
+    return 1;
+  }
   // player is too weak to solve the quest
   if (who->query("combat_exp")<50000)
   {
     where->daoshi_appear(who);
     message_vision ("$N急急忙忙地将$n吃了下去。\n",who,me);
     destruct(me);
-    return 1;     
-  }   
+    return 1;
+  }
   if (! who->query("obstacle/chechi"))
     who->set("obstacle/chechi","eaten");
   who->set_temp("obstacle/chechi","eaten");
   message_vision ("$N一本正经地将$n吃了下去。\n",who,me);
   where->daotong_appear(who);
   destruct(me);
-  return 1;     
+  return 1;
 }
