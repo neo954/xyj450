@@ -56,4 +56,3 @@ void quest_kill (object me)
 
    killer->set("quest/pending/kill/done",1);
 }
-
