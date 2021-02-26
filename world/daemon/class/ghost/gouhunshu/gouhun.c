@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // gouhun.c
 #include <ansi.h>
 
@@ -58,7 +58,7 @@ random((int)target->query("eff_sen") / 5);
                         me->improve_skill("gouhunshu", 1, 1);
                 }
        else {
-//here, cast failed and the target's mana_factor will be added to the previous 
+//here, cast failed and the target's mana_factor will be added to the previous
 //damage to hurt yourself:(...note, damage<0.
                         msg += HIC "结果$n眼一瞪，$N反而有点魂不守舍了！\n" NOR;
      damage -= (int)target->query("mana_factor");
@@ -69,7 +69,7 @@ random((int)target->query("eff_sen") / 5);
 //                        me->receive_wound("kee", -damage/4, target);
                         me->improve_skill("gouhunshu", 1, 1);
        }
-             } 
+             }
    else
                 msg += "但是$n神情专注，对$N理都不理。\n";
 
@@ -77,7 +77,7 @@ random((int)target->query("eff_sen") / 5);
         if( damage > 0 ) COMBAT_D->report_sen_status(target);
         else if( damage < 0 ) COMBAT_D->report_sen_status(me);
 //cuz here only sen damage, we report sen_status.
-//damage=0 corresponding to "对$N理都不理。\n"--no report.   
+//damage=0 corresponding to "对$N理都不理。\n"--no report.
 
         if( !target->is_fighting(me) ) {
                 if( living(target) ) {
