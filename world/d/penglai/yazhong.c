@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 #include <room.h>
 
@@ -29,12 +29,12 @@ void init()
 int do_climb(string arg)
 {
    object me=this_player();
-   
+
    if( !arg || (arg!="高崖" && arg!="悬崖" && arg!="cliff") )
      return notify_fail("你要爬什么？\n");
    if( me->is_busy())
      return notify_fail("你现在很忙，爬什么呀！\n");
-   
+
    message_vision("$N搓了搓手，扒着石头的缝隙向崖上爬去。。。\n", me);
    me->start_busy(3);
 
@@ -52,7 +52,7 @@ int do_climb(string arg)
      call_out("faila", 3, me);
      return 1;
    }
- 
+
    call_out("success", 3, me);
    return 1;
 }
@@ -70,6 +70,6 @@ int faila(object me)
    tell_object(me, "你手上一个不稳，从崖上掉了下来。。。\n");
    tell_room(environment(me), me->name()+"晃悠悠的从崖上掉了下来。\n", ({me, me}));
    me->unconcious();
-   
+
    return 1;
 }
