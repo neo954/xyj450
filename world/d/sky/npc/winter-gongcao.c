@@ -1,10 +1,10 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 冬值功曹
 //created 4-8-97 pickle
 inherit NPC;
- 
+
 void create()
 {
         set_name("时值功曹", ({ "shizhi gongcao", "shi", "hour",
