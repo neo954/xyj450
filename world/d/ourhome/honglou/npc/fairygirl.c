@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // fairygirl.c
 // 1996/10/31 by none...modified:)
 
@@ -30,7 +30,7 @@ void create()
      "醒" : "木头！木头！世人以你未醒，你道世人皆梦。",
      "梦醒" : "木头！木头！世人以你未醒，你道世人皆梦。",
      "回去" : (: send_back :),
-     
+
    ]) );
    set_skill("literate", 100);
    set_skill("dodge", 100);
