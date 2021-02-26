@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /*
  * File    : rhow_q.c
  * Creator : Pinkfish@Discworld
@@ -44,7 +44,7 @@ void incoming_request(mapping info)
      }
 
 //     str = WHO_CMD->main(0, info["VERBOSE"] ? "-l -i": "-i", 1);
-                
+
      str = WHO_CMD->main(0, strlen(info["VERBOSE"])>1 ?
            info["VERBOSE"]: "", 1);
 // the above line check strlen is because some MUD send
@@ -62,7 +62,7 @@ void incoming_request(mapping info)
         "@@@" + DNS_RWHO_A +
         "||NAME:" + Mud_name() +
         "||PORTUDP:" + udp_port() +
-        "||RWHO:" + str[i..j] + 
+        "||RWHO:" + str[i..j] +
         "||ASKWIZ:" + info["ASKWIZ"] +
         "@@@\n");
                   i=j+1;
