@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit F_VENDOR_SALE;
 void create()
 {
@@ -23,8 +23,8 @@ void create()
         set("vendor_goods", ([
                 "boots": "/d/obj/cloth/huazheboots",
      "jin": "/d/obj/cloth/wulingjin",
-                "shoes": "/d/obj/cloth/bullboots", 
-                "choupao": "/d/obj/cloth/choupao", 
+                "shoes": "/d/obj/cloth/bullboots",
+                "choupao": "/d/obj/cloth/choupao",
         ]) );
         setup();
    add_money("silver", random(5));
@@ -67,7 +67,7 @@ void accept_kill(object me)
                 ob=new("/d/city/npc/xunluobing");
                 ob->move(environment());
         }
-        message_vision("\n忽然从门外冲进来个巡逻官兵，对$N大喊一声“干什么？想杀人谋财么！\n\n",me);        
+        message_vision("\n忽然从门外冲进来个巡逻官兵，对$N大喊一声“干什么？想杀人谋财么！\n\n",me);
 
         ob->kill_ob(me);
         ob->set_leader(me);
