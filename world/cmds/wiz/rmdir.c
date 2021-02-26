@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rmdir.c
 
 inherit F_CLEAN_UP;
@@ -20,7 +20,7 @@ int main(object me, string arg)
      write("Ok.\n");
    else
      write("删除失败。\n");
-   return 1;   
+   return 1;
 }
 
 int help(object me)
