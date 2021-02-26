@@ -66,4 +66,3 @@ string try_me()
                 me->add("money_get", 100);
      return ("月钱刚送过，怎么又来要了？\n");
 }
-
