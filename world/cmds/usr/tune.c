@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // tune.c
 
 inherit F_CLEAN_UP;
@@ -44,7 +44,7 @@ int help(object me)
 
 例子：
   chat hello everyone!
-  
+
 你可以用 help channels 查询目前有哪些频道可以收听。
 
 see also : shout
