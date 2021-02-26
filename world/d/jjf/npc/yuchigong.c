@@ -1,8 +1,8 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //created 5-20-97 pickle
- 
+
 inherit NPC;
 inherit F_MASTER;
 
@@ -14,7 +14,7 @@ void create()
 十二条好汉。起初他是反王刘武州殿前元帅，后因兵败
 降唐。他惯使一条点钢枪，且喜使一对雌雄竹节钢鞭。
 LONG);
- 
+
   set("title", "开国元勋");
   set("gender", "男性");
   set("age", 43);
@@ -46,15 +46,15 @@ LONG);
   set("force", 1000);
   set("max_force", 2500);
   set("force_factor", 100);
- 
+
   create_family("将军府", 2, "蓝");
   setup();
- 
+
   carry_object("/d/obj/weapon/spear/gangqiang");
   carry_object("/d/obj/weapon/mace/malemace")->wield();
   carry_object("/d/obj/armor/tiejia")->wear();
 }
- 
+
 int accept_fight(object me)
 {
   command("say 老夫手重，若是伤人反而不美了。\n");
@@ -85,7 +85,7 @@ int accept_object(object me, object ob)
   string myname=RANK_D->query_rude(me), thing=(string)ob->query("id");
   object book, npc=this_object();
   int kar=me->query_kar(), diff;
- 
+
   if ((string)ob->query("name_recognized")!="醉星楼柱子")
     {
       command ("say 这是什么破烂？");
