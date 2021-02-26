@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/wiz/wizroom.c
 
 inherit ROOM;
@@ -32,9 +32,9 @@ LONG);
 }
 
 void init()
-{   
+{
         if (!wizardp(this_player()))
-          add_action("block_cmd","",1);   
+          add_action("block_cmd","",1);
 }
 
 int block_cmd()
