@@ -44,7 +44,7 @@ void init()
 	inv = all_inventory(room);
         for(i=0; i<sizeof(inv); i++) {
 
-	if( userp( inv[i]) ) 
+	if( userp( inv[i]) )
 	{
 	if ( !random(5))
 	set_leader(inv[i]);
@@ -64,7 +64,7 @@ int randommove()
         mapping exits;
         string *dirs;
 	string thisdir;
-        if( !mapp(exits = environment()->query("exits")) ) 
+        if( !mapp(exits = environment()->query("exits")) )
 	{
 	destruct(this_object());
 	return 0;
@@ -83,7 +83,7 @@ int clean_trash()
 	string last_dir;
 	if( last_dir = this_object()->query("last_dir"))
 	{
-        if( !mapp(exits = environment()->query("exits")) ) 
+        if( !mapp(exits = environment()->query("exits")) )
 	{
 	destruct(this_object());
 	return 0;
@@ -110,7 +110,7 @@ int dest_trash()
 	int i,j;
 	inv = all_inventory(this_object());
 	j = sizeof(inv);
-       for(i=0; i<j; i++) 
+       for(i=0; i<j; i++)
 	destruct(inv[i]);
 }
 
