@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // worker.c
 
 inherit NPC;
@@ -17,8 +17,8 @@ void create()
         set_skill("dodge", 60);
         set_skill("parry", 30);
         set_skill("literate", 40);
-        set_skill("puti-zhi", 20);  
-        set_skill("force", 60);   
+        set_skill("puti-zhi", 20);
+        set_skill("force", 60);
         set_skill("wuxiangforce", 60);
         map_skill("unarmed", "puti-zhi");
         map_skill("force", "wuxiangforce");
