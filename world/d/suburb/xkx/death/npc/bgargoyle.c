@@ -77,5 +77,3 @@ void death_stage(object ob, int stage)
 		"你忽然发现前面多了一个人影，不过那人影又好像已经在那里\n"
 		"很久了，只是你一直没发觉。\n", environment(ob), ob);
 }
-
-
