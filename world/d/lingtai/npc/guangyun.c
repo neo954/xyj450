@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 inherit F_MASTER;
@@ -23,15 +23,15 @@ void create()
         set_skill("unarmed", 80);
         set_skill("dodge", 80);
         set_skill("parry", 80);
-        set_skill("spells", 80);  
+        set_skill("spells", 80);
         set_skill("dao", 80);
         set_skill("literate", 70);
-        set_skill("stick", 80);  
+        set_skill("stick", 80);
         set_skill("qianjun-bang", 80);
-        set_skill("puti-zhi", 80);  
+        set_skill("puti-zhi", 80);
         set_skill("jindouyun", 80);
         set_skill("dodge", 80);
-        set_skill("force", 80);   
+        set_skill("force", 80);
         set_skill("wuxiangforce", 80);
 
         map_skill("spells", "dao");
