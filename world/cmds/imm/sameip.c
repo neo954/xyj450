@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat
 // sameip
 // modified by dream
@@ -88,7 +88,7 @@ void search_dir (int count, string *dir, int i, string address, object me)
     for(j=0; j<sizeof(ppls); j++) {
       reset_eval_cost();
       if (sscanf(ppls[j], "%s.o", str)==1) {
-// What are these for??? Where was "name" assigned? 
+// What are these for??? Where was "name" assigned?
 //        if (name == str)
 //          continue;
         ob = new(LOGIN_OB);
@@ -107,7 +107,7 @@ void search_dir (int count, string *dir, int i, string address, object me)
           continue;
         }
 
-        info = sprintf("%-10s%-14s%-11s%-6s%s\n", 
+        info = sprintf("%-10s%-14s%-11s%-6s%s\n",
                        ob->query("id"),
                        ob->query("name"),
                        ctime(ob->query("last_on"))[0..10],
