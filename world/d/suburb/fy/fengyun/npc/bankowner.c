@@ -22,17 +22,17 @@ void create()
         set("kar", 25);
         set("no_arrest",1);
         set("long",
-                
+
                 "中原南宫世家，家财万贯，产业不可胜数，南宫灵乃钱庄大少\n");
 
         set("combat_exp", 200000);
         set("attitude", "friendly");
 
-        set("max_atman", 1000);         set("atman", 1000);             
+        set("max_atman", 1000);         set("atman", 1000);
 set("atman_factor", 3);
-        set("max_force", 1000);         set("force", 1000);             
+        set("max_force", 1000);         set("force", 1000);
 set("force_factor", 3);
-        set("max_mana", 1000);          set("mana", 1000);              
+        set("max_mana", 1000);          set("mana", 1000);
 set("mana_factor", 3);
 
         set("chat_chance", 3 );
@@ -56,14 +56,14 @@ set("mana_factor", 3);
         map_skill("force", "celestial");
         map_skill("unarmed", "celestrike");
         map_skill("dodge", "chaos-steps");
-        
+
         set("inquiry", ([
                 "抢劫" : "唉！这群山西匪真厉害！来无影，去无踪！\n",
                 "rob" : "唉！这群山西匪真厉害！来无影，去无踪！\n",
         ]) );
 
         setup();
-        
+
         carry_object(__DIR__"obj/jinzhuang")->wear();
 
         add_money("gold", 10);
