@@ -29,5 +29,3 @@ void create()
   carry_object("/d/qujing/tianzhu/obj/tiekui")->wear();
   carry_object("/d/obj/cloth/zhanpao")->wear();
 }
-
-
