@@ -232,4 +232,3 @@ int accept_object()
 {
 	return 1;
 }
-
