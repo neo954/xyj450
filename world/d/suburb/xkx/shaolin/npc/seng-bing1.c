@@ -69,4 +69,3 @@ void init()
 		call_out("kill_ob", 1, ob);
 	}
 }
-
