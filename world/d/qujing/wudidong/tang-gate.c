@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/qujing/wudidong/tang-gate.c
 #include <ansi.h>
 inherit ROOM;
@@ -27,7 +27,7 @@ LONG);
 }
 int valid_leave(object me, string dir)
 {
-  if (dir == "north" && 
+  if (dir == "north" &&
       member_array("tian shu",me->parse_command_id_list())==-1 &&
       member_array("yu shu",me->parse_command_id_list())==-1 &&
       me->query("family/family_name") != "陷空山无底洞" &&
