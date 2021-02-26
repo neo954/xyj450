@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
      //accuse.c
 //Feb/01/97 wuliao@xyj
 #include <login.h>
@@ -40,7 +40,7 @@ int main(object me, string arg){
                 return notify_fail("你已经暂时地失去了检举权！ \n");
             me->add("robot_accusing",1);
        if( 2*(me->query("robot_accusing"))>( year + 2) ){
-                me->move("/d/wiz/gongtang"); 
+                me->move("/d/wiz/gongtang");
      return notify_fail("你滥用检举权利，想来捣乱吧？！ \n");
              }
         else{
@@ -50,7 +50,7 @@ int main(object me, string arg){
                   obj->set_temp("accuser/"+getuid(me), me->name() );
                   if( sizeof(obj->query_temp("accuser"))>4 ){
                   ROBOT_CHECK->test_me(obj);
-                  tell_object(obj, HIW+"你被人检举了，请你接受一个小小的测验。\n" NOR);     
+                  tell_object(obj, HIW+"你被人检举了，请你接受一个小小的测验。\n" NOR);
        tell_object(me, HIW+"你投了最后一票。" + obj->name() + "被抓进了法院！ \n" NOR);
                   obj->start_busy(20);
                   obj->delete_temp("accuser");
@@ -68,10 +68,10 @@ int main(object me, string arg){
             tell_object(obj, HIW+"你被人检举了，请你接受一个小小的测验。\n" NOR);
             obj->start_busy(20);
             obj->delete_temp("accuser");
-            present("judge",environment(obj))->command("chat* hehe "+obj->query("id")); 
+            present("judge",environment(obj))->command("chat* hehe "+obj->query("id"));
    }
       return 1;
-} 
+}
 
 int help(object me)
 {
@@ -88,4 +88,4 @@ accuse 别人：    检举别人。
 HELP
 );
    return 1;
-} 
+}
