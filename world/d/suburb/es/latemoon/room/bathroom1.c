@@ -18,7 +18,7 @@ LONG
        __DIR__"npc/shinyu" : 1,
     ]) );
 
-      set("exits", ([ 
+      set("exits", ([
         "west" :__DIR__"flower1",
         "east" :__DIR__"bathroom",
       ]));
