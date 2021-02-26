@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // wield.c
 
 inherit F_CLEAN_UP;
@@ -55,9 +55,9 @@ int help(object me)
 {
    write(@HELP
 指令格式：wield|zhuangbei <装备名称>
- 
+
 这个指令让你装备某件物品作武器, 你必需要拥有这样物品.
- 
+
 HELP
     );
     return 1;
