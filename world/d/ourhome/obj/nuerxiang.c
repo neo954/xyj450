@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // nuerxiang.c 女儿香
 // By Marz 04/02/96
 
@@ -22,7 +22,7 @@ void create()
         set("remaining", 1);
         set("drink_supply", 25);
     }
-   
+
    setup();
 }
 
@@ -36,7 +36,7 @@ int do_drink(string arg)
 {
 
    int heal, recover, jing, e_jing, m_jing;
-   
+
     if( !this_object()->id(arg) ) return 0;
     if( this_player()->is_busy() )
         return notify_fail("你上一个动作还没有完成。\n");
@@ -50,31 +50,31 @@ int do_drink(string arg)
     m_jing = (int)this_player()->query("max_jing");
    heal = (int)this_player()->query_con();
     e_jing = (int)this_player()->query("eff_jing");
-   
+
     if ( e_jing < m_jing )
-   {    
+   {
      if ( (e_jing + heal) >= m_jing )
      {
         this_player()->set("eff_jing", m_jing);
      } else
-     {   
+     {
         this_player()->add("eff_jing", heal);
-     }   
-   } 
+     }
+   }
 
     e_jing = (int)this_player()->query("eff_jing");
     jing = (int)this_player()->query("jing");
    recover = 30+heal;
-    
+
    if (jing < e_jing )
    {
         if ( (jing + recover) >= e_jing )
         {
             this_player()->set("jing", e_jing);
         } else
-        {   
+        {
             this_player()->add("jing", recover);
-        }   
+        }
    }
 
     if( this_player()->is_fighting() ) this_player()->start_busy(2);
@@ -84,11 +84,11 @@ int do_drink(string arg)
    {
          message_vision("$N端起杯香茶，有滋有味地品了几口。\n"+
            "一股香气直入心脾，$N觉得精神好多了。\n", this_player());
-   } else 
-   { 
+   } else
+   {
          message_vision("$N端起雕花小杯，把里面的「女儿香」一饮而尽。\n"+
            "一股幽香直入心脾，$N顿时觉得精神大振。\n", this_player());
-     
+
      destruct(this_object());
    }
 
