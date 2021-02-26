@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // recover.c
 
 inherit SSERVER;
@@ -14,16 +14,16 @@ int exert(object me, object target)
    if( (int)me->query("force") < 20 )
      return notify_fail("你的内力不够。\n");
     if( (int)me->query_skill("force") < 10 )
-     return notify_fail("你的内功修为不够。\n"); 
+     return notify_fail("你的内功修为不够。\n");
 
    diff = me->query("eff_kee") - me->query("kee");
    neilineed = diff * 50 / (int)me->query_skill("force");
     if(neilineed < 1)
       return notify_fail("你现在气力充沛，不需吸气。\n");
-    
+
    if(neilineed > me->query("force")) neilineed = me->query("force");
     diff = neilineed * (int)me->query_skill("force") / 50;
-    
+
    me->receive_heal("kee", diff );
    me->add("force", -neilineed);
 
