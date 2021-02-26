@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // literate.c
 
 inherit ITEM;
@@ -11,7 +11,7 @@ void create()
         set_name("〖旧书〗", ({"book"}));
         set_weight(500);
         i=random(11);
-   if( clonep() ) 
+   if( clonep() )
                 set_default_object(__FILE__);
         else {
      set("long","一本破旧不堪的小册子。\n");
@@ -20,8 +20,8 @@ void create()
            set("material", "paper");
    if( i>=10)
                 set("skill", ([
-                        "name":"whip",  
-                        "sen_cost": 20,  
+                        "name":"whip",
+                        "sen_cost": 20,
                         "difficulty": 20,
                         "max_skill": 20,
                 ]) );
@@ -37,64 +37,64 @@ void create()
                         "name":"blade",
                         "sen_cost": 20,
                         "difficulty": 20,
-                        "max_skill": 20, 
+                        "max_skill": 20,
                 ]) );
         else if(i>=7)
                 set("skill", ([
                         "name":"fork",
-                        "sen_cost": 20,   
-                        "difficulty": 20, 
+                        "sen_cost": 20,
+                        "difficulty": 20,
                         "max_skill": 20,
-                ]) ); 
+                ]) );
         else if(i>=6)
                 set("skill", ([
                         "name":"hammer",
-                        "sen_cost": 20,   
-                        "difficulty": 20, 
+                        "sen_cost": 20,
+                        "difficulty": 20,
                         "max_skill": 20,
-                ]) ); 
+                ]) );
         else if(i>=5)
                 set("skill", ([
                         "name":"mace",
-                        "sen_cost": 20,   
-                        "difficulty": 20, 
+                        "sen_cost": 20,
+                        "difficulty": 20,
                         "max_skill": 20,
-                ]) ); 
+                ]) );
         else if(i>=4)
                 set("skill", ([
                         "name":"rake",
-                        "sen_cost": 20,   
-                        "difficulty": 20, 
+                        "sen_cost": 20,
+                        "difficulty": 20,
                         "max_skill": 20,
-                ]) ); 
+                ]) );
         else if(i>=3)
                 set("skill", ([
                         "name":"spear",
-                        "sen_cost": 20,   
-                        "difficulty": 20, 
+                        "sen_cost": 20,
+                        "difficulty": 20,
                         "max_skill": 20,
-                ]) ); 
+                ]) );
         else if(i>=2)
                 set("skill", ([
                         "name":"staff",
-                        "sen_cost": 20,   
-                        "difficulty": 20, 
+                        "sen_cost": 20,
+                        "difficulty": 20,
                         "max_skill": 20,
-                ]) ); 
+                ]) );
         else if(i>=1)
                 set("skill", ([
                         "name":"stick",
-                        "sen_cost": 20,   
-                        "difficulty": 20, 
+                        "sen_cost": 20,
+                        "difficulty": 20,
                         "max_skill": 20,
-                ]) ); 
-        else 
+                ]) );
+        else
                 set("skill", ([
                         "name":"sword",
-                        "sen_cost": 20,   
-                        "difficulty": 20, 
+                        "sen_cost": 20,
+                        "difficulty": 20,
                         "max_skill": 20,
-                ]) ); 
+                ]) );
 
    }
 }
