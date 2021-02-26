@@ -199,5 +199,3 @@ mapping quests_weapon = ([
  2200000 : ({ "find", "菩提杖",       "puti zhang",         "", "1" }),
  2300000 : ({ "find", HIY"九环锡杖"NOR, "nine-ring staff",  "", "1" }),
 ]);
-
-
