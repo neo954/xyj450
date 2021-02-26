@@ -29,4 +29,3 @@ int valid_leave(object me, string dir)
 "陆大有喝道：后面是家师寝室，这位" + RANK_D->query_respect(me) + "请止步。\n");
         return ::valid_leave(me, dir);
 }
-
