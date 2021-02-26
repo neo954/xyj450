@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 
 inherit ROOM;
@@ -12,7 +12,7 @@ void create()
 中漂浮着段段枯木，有些还散发着袅袅黑烟。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "west" : __DIR__"zhaoze4",
 ]));
         set("objects", ([
