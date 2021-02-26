@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //girlroom.c
 
@@ -19,7 +19,7 @@ LONG);
    set("item_desc", (["bed" : "一张精致的床铺(gosleep, gobed, bed)。\n", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      //"south" : __DIR__"binggu",
      "north" : __DIR__"restroom",
@@ -28,8 +28,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/xunshi" : 2,
      __DIR__"npc/huanhua" : 1,
@@ -49,7 +49,7 @@ void init()
 }
 
 int do_bed()
-{       
+{
    object me;
    me=this_player();
 
