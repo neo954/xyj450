@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 
 #include <ansi.h>
@@ -89,7 +89,7 @@ int  do_ji(string arg)
 	me->add("bellicosity",cost);
 	file = base_name(ob) + ".c";
 	filestring = read_file(file);
-	filestring = replace_string( filestring, 
+	filestring = replace_string( filestring,
 		sprintf("%d",current), sprintf("%d",current+j));
 	newfile = DATA_DIR+"login/" + id[0..0] + "/" + id + "/" + id +
 		sprintf("%d",time()) + ".c";	
