@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /changan/nanchengkou.c
 //cglaem...12/12/96.
 
@@ -26,7 +26,7 @@ LONG);
   //"east" : __DIR__"eside1",
 //  "southeast" : "/d/eastway/jinshi",
 ]));
-        set("objects", 
+        set("objects",
         ([ //sizeof() == 1
                 "/d/city/npc/wujiang" : 1,
                 "/d/city/npc/bing" : 3,
