@@ -10,7 +10,7 @@ void create()
 	set("nickname", GRN"白驼山开山祖师"NOR);
 	set("gender", "男性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他就是白驮山的创始人「五叶」。\n");
 	setup();
 	
