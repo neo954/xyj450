@@ -47,4 +47,3 @@ void create()
   carry_object("/d/qujing/dudi/obj/cloth")->wear();
   carry_object("/d/qujing/dudi/obj/fork")->wield();
 }
-
