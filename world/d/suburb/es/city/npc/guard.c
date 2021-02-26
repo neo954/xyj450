@@ -129,4 +129,3 @@ int accept_object(object who, object ob)
 	ob->destruct();
         return 1;
 }
-
