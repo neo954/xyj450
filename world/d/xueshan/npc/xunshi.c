@@ -42,4 +42,3 @@ void create()
    carry_object("/d/obj/cloth/xueshan-pao")->wear();
    carry_object("/d/obj/weapon/blade/iceblade")->wield();
 }
-
