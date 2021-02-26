@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/hkgroup/path1
 
 #include <room.h>
@@ -92,7 +92,7 @@ int do_push(string arg)
                 message_vision("$N轻轻地推了推门，只听吱地一声，角门慢慢地开了一条缝。\n",
                         this_player());
                 room->set("exits/enter", __FILE__);
-                message("vision", "\n里面有人推门，只听吱地一声，角门慢慢地开了一条缝。\n", 
+                message("vision", "\n里面有人推门，只听吱地一声，角门慢慢地开了一条缝。\n",
                         room);
                 remove_call_out("close_door2");
                 call_out("close_door2", 10);
