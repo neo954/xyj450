@@ -82,4 +82,3 @@ void destroy(object ob)
 //	if (this_object()->is_fighting() )
 //             carry_object(__DIR__"obj/hammer")->wield();
 // }
-
