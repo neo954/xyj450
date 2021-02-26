@@ -20,7 +20,7 @@ int query_amount()
   断一个物件是否是这类「可合并表示」的物件，query_amount()在大多数的情况下
   传回的都是一个大於等於 1 的整数，传回零的情形请见下面 set_amount()的说明
   。
- 
+
 void set_amount(int v)
 
   设定物件的逻辑数量，其中传入值 v 不得小於零，若等於零则物件会被用一个
@@ -29,8 +29,8 @@ void set_amount(int v)
   物件的逻辑数量不会等於零，最好呼叫後再用 query_amount() 检查一次。
 
   set_amount() 同时也会根据物品的逻辑数量更新它的重量，以及环境的负重。
- 
-void add_amount(int v) 
+
+void add_amount(int v)
 
   改变物品的逻辑数量，v 值会被加到目前的数量上，一个常用的呼叫方式是
   add_amount(-1); 表示物品被「用掉」，一个。
