@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ROOM;
 
 void create ()
@@ -27,9 +27,9 @@ LONG);
 
 int valid_leave(object me, string dir)
 {      object gui;
-       if (dir=="enter" && 
+       if (dir=="enter" &&
            objectp(gui=present("gui pan",environment(me)))
-           && living(gui) && 
+           && living(gui) &&
       member_array("gui pan",me->parse_command_id_list())==-1 )
       return notify_fail("鬼判朝你大喝一声：呔！二郎爷爷的庙宇，谁敢乱闯！\n");
        return ::valid_leave(me,dir);
