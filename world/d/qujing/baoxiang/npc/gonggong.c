@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/5/1997 by snowcat
 #include <ansi.h>
 
@@ -60,7 +60,7 @@ void init()
       load_object("/obj/empty");
       me->move("/obj/empty");
     }
-    call_out ("destruct_me",1,me);  
+    call_out ("destruct_me",1,me);
   }
   else
   {
@@ -112,4 +112,4 @@ void kill_ob (object ob)
   set_temp("my_killer",ob);
   ::kill_ob(ob);
 }
- 
+
