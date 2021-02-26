@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xiudao.c
 
 #include <skill.h>
@@ -19,14 +19,14 @@ int main(object me, string arg)
 
    if(where->query("no_fight") || where->query("no_magic") )
         return notify_fail("安全区内禁止练功。\n");
-   
+
 //   if (!where->query("jingzuo_room"))
 //     return notify_fail("此处不宜静坐修练！\n");
 
-   if ( (int)me->query_skill("chanting") < 20 ) 
+   if ( (int)me->query_skill("chanting") < 20 )
      return notify_fail("你的诵经修为太低，不能行功修炼！\n");
-   
-   if( (string)me->query("class")!="bonze") 
+
+   if( (string)me->query("class")!="bonze")
      return notify_fail("你又没有出家，诵什么经哪！\n");
 
    if (me->is_busy() || me->query_temp("pending/exercising"))
@@ -40,7 +40,7 @@ int main(object me, string arg)
 
    if( (int)me->query("kee") * 100 / (int)me->query("max_kee") < 50 )
      return notify_fail("你现在体力不够，再练就要累死了！\n");
-   
+
    if( (int)me->query("water") < 10 )
      return notify_fail("你现在口干舌燥，还是歇歇吧。\n");
 
@@ -84,7 +84,7 @@ void finish(object me,int exp_gain, int pot_gain)
 
    me->add("combat_exp", exp_gain);
    tell_object(me, HIC "你的道行增加了" + chinese_number(exp_gain*3) + "时辰！\n" NOR);
-   me->add("chanting/exp", exp_gain); 
+   me->add("chanting/exp", exp_gain);
         if ((me->query("potential") - me->query("learned_points")) < 100){
                 me->add("potential", pot_gain);
      me->add("chanting/pot", pot_gain);
