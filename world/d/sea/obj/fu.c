@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit ITEM;
 int do_apply (string arg);
 void create()
@@ -13,7 +13,7 @@ void create()
     set("no_sell", 1);
     set("no_drop", 1);
     set("unit", "张");
-  
+
   set("long", "一张黄色的纸符，上面画了尾喷云吐雾的金龙。
 可用来显化(apply)咒语。\n");
     }
