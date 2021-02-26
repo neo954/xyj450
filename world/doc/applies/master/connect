@@ -4,7 +4,7 @@ object connect(int port);
 
 The driver calls connect() in the master object whenever a new user logs
 into the driver.  port is the actual port connected to; for example if
-you have two login ports defined as 2000 and 3000, either 2000 or 3000 
+you have two login ports defined as 2000 and 3000, either 2000 or 3000
 will be passed to this routine.
 
 The object returned by connect() is used as the initial
