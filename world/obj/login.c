@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <login.h>
 
 #include <dbase.h>
@@ -59,7 +59,7 @@ string query_save_file()
 void receive_message(string type, string str)
 {
    if( type!= "write" ) return;
-   
+
    str = CONVERT_D->output(str,this_object());
 
    receive(str);
