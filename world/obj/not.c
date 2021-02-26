@@ -14,5 +14,3 @@ void create()
 
 string query_save_file()
 {return this_object()->query("file_name");}
-
-
