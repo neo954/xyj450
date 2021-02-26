@@ -79,15 +79,15 @@ void create()
 
 string ask_me_1(string name)
 {
-	mapping fam; 
+	mapping fam;
 	object ob;
 	
 	if (!(fam = this_player()->query("family")) || fam["family_name"] != "少林派")
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"与本派素无来往，不知此话从何谈起？";
 
 	if (  present(name, this_player()) )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"你现在身上不是有这样防具吗，怎麽又来要了？ 真是贪得无餍！";
 
 	if (query("huju_count") < 1)
@@ -105,11 +105,11 @@ string ask_me_1(string name)
 
 string ask_me_2(string name)
 {
-	mapping fam; 
+	mapping fam;
 	object ob;
 	
 	if (!(fam = this_player()->query("family")) || fam["family_name"] != "少林派")
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"与本派素无来往，不知此话从何谈起？";
 
 	if (query("beixin_count") < 1)
