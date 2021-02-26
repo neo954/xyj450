@@ -11,7 +11,7 @@ void create()
 院子东面是巴依的客厅，西边就是小镇大街。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
         "west" : __DIR__"beijiang",
         "east" : __DIR__"house1",
 ]));
@@ -27,7 +27,7 @@ LONG
 
 int valid_leave(object me, string dir)
 {
-        if (!wizardp(me) && objectp(present("bayi", environment(me))) && 
+        if (!wizardp(me) && objectp(present("bayi", environment(me))) &&
                 dir == "east")
                 return notify_fail("巴依说: 我把阿凡提关在我的客厅里了，谁也不许进去。\n");
         return ::valid_leave(me, dir);
