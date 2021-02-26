@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 4/5/1997 by snowcat
 #include <ansi.h>
 #include <dbase.h>
@@ -54,14 +54,14 @@ void disappear_fail (object me)
 
   if (!lace)
     lace = present("icedew lace",environment(me));
-  
+
   if (!lace)
     return;
-  
+
   message_vision ("只见"+NAME+"在$N手中融化为一串亮晶晶的水珠，"+
                   "滴在地上不见了。\n",me);
   tell_object (me,"真可惜！\n");
-  
+
   destruct (lace);
 }
 
@@ -114,26 +114,26 @@ int do_wear (string arg)
     queen = new (dir+"npc/queen");
     queen->refuse_player (me);
     destruct (queen);
-    disappear_fail (me); 
+    disappear_fail (me);
     return 1;
-  }  
+  }
 
   if (me->query("obstacle/nuerguo") == "stomachache")
   {
     disappear_fail (me);
     return 1;
-  }  
+  }
 
   if (me->query("combat_exp")<2000)
   {
     disappear_fail (me);
     return 1;
-  }  
+  }
 
   if (random(5) == 0)
     disappear_success (me);
   else
-    disappear_fail (me); 
- 
+    disappear_fail (me);
+
   return 1;
 }
