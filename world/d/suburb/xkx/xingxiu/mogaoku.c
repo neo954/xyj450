@@ -13,7 +13,7 @@ void create()
 还有很多佛像和经书。你被这些瑰丽的文化之宝惊呆了。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
              "north" : __DIR__"yueerquan",
 ]));
         set("no_clean_up", 0);
