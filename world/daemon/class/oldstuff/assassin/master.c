@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // master.c
 
 inherit NPC;
@@ -26,7 +26,7 @@ void create()
    set("combat_exp", 1000000);
    set("score", 200000);
    set("env/wimpy", 50);
-   
+
 /*
    set("chat_chance_combat", 80);
    set("chat_msg_combat", ({
