@@ -129,4 +129,3 @@ void attempt_apprentice(object ob)
 
 	return;
 }
-
