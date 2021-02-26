@@ -15,16 +15,16 @@ LONG
         set("item_desc", ([
         "wall": "城墙虽陡，但长满了蔓藤。你似乎可以试着爬(climb)上去。\n",
         "城墙": "城墙虽陡，但长满了蔓藤。你似乎可以试着爬(climb)上去。\n",
-        
+
         "蔓藤": "蔓藤长满了城墙，你似乎可以试着爬(climb)上去。\n"
          ]) );
          set("objects", ([
           __DIR__"npc/gardener" : 1,
           __DIR__"npc/bee" : 2,
           ]) );
-          
+
           set("outdoors", "chuenyu");
-          
+
           setup();
 }
 
@@ -63,5 +63,5 @@ int fliping(object me)
         me->move(__DIR__"west_castle.c");
         message_vision("$N用手一撑墙头儿，轻巧的跳了过来。\n", me);
         return 1;
-        
+
 }
