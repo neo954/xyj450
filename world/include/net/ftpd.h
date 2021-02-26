@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /* ftpd.h */
 #ifndef __FTPD_H
 #define __FTPD_H
