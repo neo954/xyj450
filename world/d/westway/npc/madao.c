@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat on 4/9/1997
 // madao.c
 
@@ -50,11 +50,11 @@ int accept_object (object who, object ob)
   me = this_object();
 
   if ((! ob) ||
-       ob->value() < 200) 
+       ob->value() < 200)
   {
     message_vision ("$N一瞪眼：就这点东西？不想活了？？？\n", me);
     return 1;
-  }  
+  }
   who->set_temp("has_paid", 2);
   me->remove_all_killer();
   message_vision ("$N嘿嘿嘿几声怪笑，闪身让道。\n",me);
@@ -71,7 +71,7 @@ void asking(object who)
   if (! living (me))
     return;
 
-  if ((who && who->query_temp("has_paid") <= 0) 
+  if ((who && who->query_temp("has_paid") <= 0)
    && (string)who->query("family/family_name")!="五庄观" )
   {
     message_vision ("$N冲过来，对$n大喝一声：要钱还是要命？\n",me,who);
@@ -84,7 +84,7 @@ void asking(object who)
     call_out("killing", 25+random(5), who);
   }
   else
-  { 
+  {
     message_vision ("$N对$n一拱手，闪身让道。\n",me,who);
     me->remove_all_killer();
   }
