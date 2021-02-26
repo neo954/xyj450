@@ -1,5 +1,5 @@
 // Room: /shaolin/kedian.c
-// YZC 1995/12/04 
+// YZC 1995/12/04
 
 inherit ROOM;
 
