@@ -61,12 +61,12 @@ void select_target(object me, string name)
 		write("你因为不够熟练而失败了。\n");
 		return;
 	}
-        if( random(50) > 
+        if( random(50) >
 	(int)(me->query_skill("essencemagic",1))){
                 write("你因为不够熟练而失败了。\n");
                 return;
         }
-	message( "vision", HIY "\n一道耀眼的光芒忽然罩住" + me->name() 
+	message( "vision", HIY "\n一道耀眼的光芒忽然罩住" + me->name()
 		+ "，几秒钟後，光芒和人一齐消失得无影无踪！\n\n", environment(me), ({ me }) );
 	me->move(environment(ob));
 	message( "vision", HIY "\n你的眼前突然出现一团耀眼的光芒，光芒中浮现出一个人影！\n\n" NOR,
