@@ -101,4 +101,3 @@ int do_sell(string arg)
 
 	return 1;
 }
-
