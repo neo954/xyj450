@@ -15,7 +15,7 @@ LONG
 ]));
         set("objects", ([
         __DIR__"npc/wind_solider" : 2,
-        __DIR__"npc/cloud_solider": 2, 
+        __DIR__"npc/cloud_solider": 2,
 			]) );
         set("outdoors", "fengyun");
         setup();
@@ -27,7 +27,7 @@ int valid_leave(object me, string dir)
 	int i;
 	if( userp(me))
 	{
-	if( dir == "north" 
+	if( dir == "north"
 	&& !random(10) && ob=present("garrison", this_object()))
 	{
 		inv = all_inventory(me);
