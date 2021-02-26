@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-//Changed 
+
+//Changed
 #include <skill.h>
 
 inherit NPC;
@@ -59,7 +59,7 @@ void create()
 }
 
 string show_king (object who)
-{  
+{
   object me = this_object();
   object where = environment(me);
   object king;
