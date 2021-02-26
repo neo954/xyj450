@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // honglou.c by none at 96/11/10
 
 #include <ansi.h>
@@ -46,12 +46,12 @@ string get_status(mixed ob)
         namelist = explode(read_file(NL), "\n");
         member_status = allocate_mapping(sizeof(namelist));
         for(i=0; i<sizeof(namelist); i++) {
-                if( namelist[i][0]=='#' 
+                if( namelist[i][0]=='#'
                 || sscanf(namelist[i], "%s %s", member_name, member_level)!=2 )
                          continue;
                 member_status[member_name] = member_level;
         }
-        
+
         if( objectp(ob) ) {
                 euid = geteuid(ob);
                 if( !euid ) euid = getuid(ob);
