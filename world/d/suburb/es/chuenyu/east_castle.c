@@ -12,7 +12,7 @@ LONG
         set("exits", ([
                 "west" : __DIR__"gate_castle",
         ]));
-        
+
         set("item_desc", ([
         "wall": "城墙虽陡，但长满了蔓藤。你似乎可以试着爬(climb)上去。\n",
         "城墙": "城墙虽陡，但长满了蔓藤。你似乎可以试着爬(climb)上去。\n",
@@ -21,10 +21,10 @@ LONG
         "蔓藤": "蔓藤长满了城墙，你似乎可以试着爬(climb)上去。\n"
         ]) );
         set("outdoors", "chuenyu");
-        
+
         setup();
 }
-        
+
 void init()
 {
         add_action("climbing", "climb");
