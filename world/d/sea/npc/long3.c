@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // long3.c
 // created 6-6-97 pickle
 
@@ -60,7 +60,7 @@ void create()
     "睚眦阴笑道：杀！杀！杀！\n,"
   }) );
 
-  setup();  
+  setup();
 
   carry_object("/d/obj/armor/yinjia")->wear();
   carry_object("/d/sea/obj/dragonfork")->wield();
