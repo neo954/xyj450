@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // study.c
 
 #include <skill.h>
@@ -14,11 +14,11 @@ int main(object me, string arg)
    object ob;
    mapping skill;
    int cost, my_skill;
-   
-    if(environment(me)->query("no_fight") || 
+
+    if(environment(me)->query("no_fight") ||
        environment(me)->query("no_magic") )
           return notify_fail("安全区内禁止练功。\n");
-                        
+
    if( me->is_fighting() )
      return notify_fail("你无法在战斗中专心下来研读新知！\n");
 
@@ -36,7 +36,7 @@ int main(object me, string arg)
 
    message("vision", me->name() + "正专心地研读" + ob->name()
      + "。\n", environment(me), me);
-  
+
         my_skill=me->query_skill(skill["name"],1);
 
    if( (int)me->query("combat_exp") < skill["exp_required"] ||
@@ -49,7 +49,7 @@ int main(object me, string arg)
    notify_fail("以你目前的能力，还没有办法学这个技能。\n");
    if( !SKILL_D(skill["name"])->valid_learn(me) ) return 0;
 
-   cost = skill["sen_cost"] + skill["sen_cost"] 
+   cost = skill["sen_cost"] + skill["sen_cost"]
      * (skill["difficulty"] - (int)me->query_int())/20;
    if( (int)me->query("sen") < cost ) {
      write("你现在过于疲倦，无法专心下来研读新知。\n");
