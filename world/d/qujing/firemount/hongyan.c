@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat on 4/11/1997
 // room: hongyan
 
@@ -29,7 +29,7 @@ LONG);
 int valid_leave (object me, string dir)
 {
 /*
-  if (dir=="northwest" && 
+  if (dir=="northwest" &&
       me->query("obstacle/firemount") != "done")
   {
     tell_object(me,"你抬起脚，却怎么也迈不开步子……\n");
