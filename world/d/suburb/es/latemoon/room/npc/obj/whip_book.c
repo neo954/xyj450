@@ -16,13 +16,13 @@ void create()
                 set("value", 260);
                 set("material", "paper");
                 set("skill", ([
-                        "name":                 "snowwhip",        
+                        "name":                 "snowwhip",
                         "exp_required": 1000,
-                        "sen_cost":             30,       
-                        "difficulty":   20,   
-                        "max_skill":    20    
+                        "sen_cost":             30,
+                        "difficulty":   20,
+                        "max_skill":    20
                 ]) );
         }
 }
 
- 
+
