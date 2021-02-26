@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // dog.c
 
 inherit NPC;
@@ -11,7 +11,7 @@ void create()
    set("race", "野兽");
    set("age", 3);
    set("long", "一只长得很精神的黑狗。\n");
-   
+
    set("str", 32);
    set("dex", 36);
 
@@ -25,7 +25,7 @@ void create()
      "黑狗在你的脚边挨挨擦擦的，想讨东西吃。\n",
      "黑狗对着你摇了摇尾巴。\n",
      "黑狗用后腿抓了抓自己的耳朵。\n" }) );
-     
+
    set_temp("apply/attack", 10);
    set_temp("apply/armor", 3);
 
