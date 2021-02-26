@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit ITEM;
 inherit F_LIQUID;
