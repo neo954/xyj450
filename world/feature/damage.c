@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // damage.c
 
 #include <ansi.h>
@@ -18,7 +18,7 @@ int self_purge()
 {
     object me=this_object();
 //      object link_ob = me->query_temp("link_ob");
- 
+
         if( !userp(me) ) return 0;
         if (
        // Removed since we don't use this part. Dream 12/11/97.
@@ -30,10 +30,10 @@ int self_purge()
     ghost =1;
     me->move("/d/death/block.c");
     CHANNEL_D->do_channel(me, "rumor", me->query("name")
-      + "因为年纪太大，心力交瘁，不幸与世长辞，永远离开了我们！"); 
+      + "因为年纪太大，心力交瘁，不幸与世长辞，永远离开了我们！");
         return 1;
 }
- 
+
 varargs int receive_damage(string type, int damage, object who)
 {
    int val;
@@ -48,7 +48,7 @@ varargs int receive_damage(string type, int damage, object who)
    if( val >= 0 ) set(type, val);
    else {
      set( type, -1 );
-     
+
      //added by mon for pk and nk.
      if(living(this_object())&&objectp(who)&&userp(who)
         &&!query_temp("last_fainted_from")
@@ -152,11 +152,11 @@ int receive_curing(string type, int heal)
    }
 }
 
-// snowcat feb 8 1998 
+// snowcat feb 8 1998
 void remove_ride ()
 {
    object rider, ridee;
-   
+
    if (ridee = query_temp("ridee"))
      ridee->delete_temp("rider");
           delete_temp("ridee");
@@ -175,7 +175,7 @@ void unconcious()
      environment()->alternative_die(this_object());
      return;
    }
-   
+
    if( !living(this_object()) ) return;
    if( wizardp(this_object()) && query("env/immortal") ) return;
 
@@ -235,8 +235,8 @@ void die()
      environment()->alternative_die(this_object());
      return;
    }
-   
-        if (query_temp("last_fainted_from")) 
+
+        if (query_temp("last_fainted_from"))
       last_fainted_from=query_temp("last_fainted_from");
 
    if( !living(this_object()) ) revive(1);
@@ -246,7 +246,7 @@ void die()
    this_object()->clear_condition();
 
         //needed because last_fainted_from is cleared in revive()
-   if (last_fainted_from) 
+   if (last_fainted_from)
      set_temp("last_fainted_from",last_fainted_from);
 
    // destroy all self-made fabao here
@@ -262,7 +262,7 @@ void die()
    COMBAT_D->announce(this_object(), "dead");
 
 
-        if( (int)this_object()->query("max_gin") > 0 && 
+        if( (int)this_object()->query("max_gin") > 0 &&
        (int)this_object()->query("max_kee") > 0 &&
             (int)this_object()->query("max_sen") > 0 ) {
        //no damage to self_purged people.
@@ -278,7 +278,7 @@ void die()
                //for example, by poison.
           if(userp(this_object())) {
             COMBAT_D->victim_penalty(this_object());
-       if(str=this_object()->query_temp("death_msg"))  
+       if(str=this_object()->query_temp("death_msg"))
             //can set customized death message to death_msg.
          str=this_object()->name(1)+str;
        else  str=this_object()->name(1)+"莫名其妙地死了。\n";
@@ -300,7 +300,7 @@ void die()
       } else if ((int) killer->query("task_time") < time() ) {
         tell_object(killer,"真可惜！你没有在指定的时间内完成！\n");
       } else {
-        tell_object(killer,"恭喜你！你又完成了一项任务！\n");      
+        tell_object(killer,"恭喜你！你又完成了一项任务！\n");
         exp = quest["exp_bonus"]/2 + random(quest["exp_bonus"]/2)+1;
         if(exp > 150) exp = 150;
         exp = exp * (int) killer->query_temp("quest_number");
@@ -349,8 +349,8 @@ void reincarnate()
    set("eff_sen", query("max_sen"));
 }
 
-int max_food_capacity() 
-{ 
+int max_food_capacity()
+{
    int final;
    final=(int)query_weight()/200;
    if (final < 100 ){
@@ -359,14 +359,14 @@ int max_food_capacity()
    return final;
 }
 
-int max_water_capacity() 
-{    
+int max_water_capacity()
+{
    int final;
    final=(int)query_weight()/200;
    if( final< 100 ) {
      final=100;
    }
-   return final; 
+   return final;
 }
 
 int heal_up()
@@ -385,7 +385,7 @@ int heal_up()
    if( my["food"] > 0 ) { my["food"] -= 1; update_flag++; }
 
    if( my["water"] < 1 && userp(this_object()) ) return update_flag;
-   
+
    my["gin"] += my["con"] / 3 + my["atman"] / 10;
    if( my["gin"] >= my["eff_gin"] ) {
      my["gin"] = my["eff_gin"];
