@@ -17,4 +17,3 @@ LONG
         replace_program(ROOM);
         setup();
 }
-
