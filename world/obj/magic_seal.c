@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // magic_seal.c
 
 inherit ITEM;
@@ -33,7 +33,7 @@ int do_attach(string arg)
 
    if( !arg || sscanf(arg, "%s to %s", sheet, dest)!=2 )
      return notify_fail("指令格式：attach <符咒> to <目标>\n");
-   
+
    if( !id(sheet) ) return 0;
 
    ob = present(dest, this_player());
@@ -52,6 +52,6 @@ int do_attach(string arg)
         set("no_drop", "这样东西不能丢弃，必须用 detach。\n");
      } else destruct(this_object());
      return 1;
-   } else 
+   } else
      return 0;
 }
