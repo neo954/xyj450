@@ -1,44 +1,44 @@
-// 
-// 
+//
+//
 
 inherit SKILL;
 mapping *action = ({
-        ([      "action":               
+        ([      "action":
 "$N使出一招「苦海端无涯」，左掌虚幌，右掌穿出击向$n的$l",
                 "dodge":                -100,
                 "parry":                100,
                 "force":                100,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出一招「地狱似有门」，左掌化虚为实击向$n的$l",
                 "dodge":                -100,
                 "parry":                100,
                 "force":                 70,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出密宗大手印中的「天堂却无路」，一掌拍向$n的$l",
                 "dodge":                -100,
                 "parry":                100,
                 "force":                50,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N双掌一错，使出「密宗为独尊」，对准$n的$l连续拍出",
                 "dodge":                -100,
                 "parry":                100,
                 "force":                150,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N左掌立于胸前，右掌推出，一招「万念皆是空」击向$n$l",
                 "dodge":                -100,
                 "parry":                100,
                 "force":                140,
                 "damage_type":  "瘀伤"
         ]),
-        ([      "action":               
+        ([      "action":
 "$N使出「佛云以杀止杀」，身形凌空飞起，从空中当头向$n的$l出掌攻击",
                 "dodge":                -200,
                 "parry":                200,
@@ -72,7 +72,7 @@ int practice_skill(object me)
         return 1;
 }
 int effective_level() { return 10;}
- 
+
 string *parry_msg = ({
         "$n双掌微合，使出一招「千里迎刹佛」，「啪」的一声将$N的$w夹在双掌之间。\n",
         "$n略一转身，一招「撒手离红尘」拍向$N拿着$w的手。\n",
