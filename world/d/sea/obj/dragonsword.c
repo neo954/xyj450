@@ -22,4 +22,3 @@ void create()
         init_sword(50);
         setup();
 }
-
