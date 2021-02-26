@@ -1,5 +1,5 @@
 inherit NPC;
- 
+
 void create()
 {
         int has_game;
@@ -24,13 +24,13 @@ TEXT
         carry_object("/obj/example/dagger");
         add_money("coin",100);
 }
- 
+
 void wield_something()
 {
 	if (!query_temp("weapon")) command("wield dagger");
         return;
 }
- 
+
 void ask_for_help()
 {
         object helper;
@@ -41,7 +41,7 @@ void ask_for_help()
         helper->kill_ob(query_temp("killer"));
         return;
 }
- 
+
 void kill_ob(object ob)
 {
         set_temp("killer",ob);
