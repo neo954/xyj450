@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 string try_me(object me);
 
@@ -32,7 +32,7 @@ void init()
 }
 
 int do_answer(string arg)
-{   
+{
         if( !arg ) return notify_fail("你说什么？\n");
         this_player()->set_temp("pending/jiangjun_answer", 0);
         message_vision("$N答道：" + arg + "\n", this_player());
