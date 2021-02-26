@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // skin.c
 
 inherit ITEM;
@@ -34,7 +34,7 @@ void init()
 {
         add_action("do_tear", "tear");
 }
- 
+
 int do_tear(string arg){
         object ob,me;
         me=this_player();
@@ -43,5 +43,5 @@ int do_tear(string arg){
         ob->move(me);
         message_vision("$N撕开人皮，从中拿出了一个纸卷，展了开来。\n", me);
         destruct(this_object());
-        return 1;               
+        return 1;
 }
