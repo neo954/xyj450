@@ -1,14 +1,14 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// title.c (Mon  09-04-95) 
+
+// title.c (Mon  09-04-95)
 //mofied for set title...Weiqi 09/31/97.
 
 #include <ansi.h>
 inherit F_CLEAN_UP;
 
 int check_legal_title(string, int);
- 
+
 int main(object me, string arg)
 {
    int titlelength=0;
@@ -20,7 +20,7 @@ int main(object me, string arg)
        printf("其中头衔自设部份：%s\n", (string)me->query("added_title"));
          return 1;
    }
-   
+
    if( arg=="none" ) {
      me->delete("added_title");
      printf("好，删掉头衔自设部份。\n");
@@ -34,14 +34,14 @@ int main(object me, string arg)
      titlelength=4;
    }
    else titlelength=0;
-   
-   if(check_legal_title(arg, titlelength) == 0) return 1;   
-   
+
+   if(check_legal_title(arg, titlelength) == 0) return 1;
+
    me->set("added_title", arg);
 
        return 1;
 }
- 
+
 int check_legal_title(string addtitle, int titlelength)
 {
           int i;
@@ -76,7 +76,7 @@ int help(object me)
 {
     write(@HELP
 指令格式: title ***
- 
+
 自己设定头衔。道行超过500年可以设4个中文字，
 超过100年可以设2个中文字，少于100年还得加油:)
 
@@ -87,4 +87,4 @@ HELP
     );
    return 1;
 }
- 
+
