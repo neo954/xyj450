@@ -78,5 +78,3 @@ int regenerate()
    set("no_xiaocao", 0);
    return 1;
 }
-
-
