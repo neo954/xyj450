@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //standroom.c used by weiqi...others may hate this format:D
 //binggu.c
 
@@ -22,7 +22,7 @@ LONG);
    //set("item_desc", ([" *** " : " *** \n", ]));
    //for look something.
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      //"south" : __DIR__"***",
      "north" : __DIR__"wuchang-s",
@@ -31,8 +31,8 @@ LONG);
      //"up" : __DIR__"***",
      //"down" : __DIR__"***",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      __DIR__"npc/zhangmen" : 1,
    ]));
