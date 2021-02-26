@@ -18,10 +18,10 @@ LONG
         __DIR__"obj/qiwine" : 3,
         __DIR__"npc/cook" : 1,
         ]) );
-        
-        
+
+
         create_door("north", "玉帘门", "south", DOOR_CLOSED);
-        
+
         setup();
 }
 
