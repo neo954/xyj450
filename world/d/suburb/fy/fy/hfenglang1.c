@@ -28,4 +28,3 @@ int valid_leave(object me, string dir)
 	return notify_fail("这是女人浴室，你冲进去作什么？\n");
 	return 1;
 }
-
