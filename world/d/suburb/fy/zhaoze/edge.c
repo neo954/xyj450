@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 
 inherit ROOM;
@@ -12,9 +12,9 @@ void create()
 在一瞬间随时喷射的毒火泉。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "north" : "/d/suburb/fy/manglin/edge4",
- 
+
 ]));
 
         set("item_desc", ([
@@ -44,7 +44,7 @@ int do_cut(string arg)
 	{
 	me = this_player();
 	obj = me->query_temp("weapon");
-	if( !obj ) 
+	if( !obj )
 	{
 	write("你空着手，怎么砍？\n");
 	return 1;
