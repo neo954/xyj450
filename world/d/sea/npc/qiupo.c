@@ -22,4 +22,3 @@ set("long","一位老婆婆，是龙女的贴身仆人．\n");
 //        carry_object("/d/gao/obj/blade")->wield();
 
 }
-
