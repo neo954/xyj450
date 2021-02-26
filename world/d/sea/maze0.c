@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // under2.c
 
 inherit ROOM;
@@ -25,12 +25,12 @@ LONG);
 }
 
 void init()
-{       
+{
         object me=this_player();
 
                 remove_call_out("greeting");
                 call_out("greeting",5, me);
-        
+
 }
 
 void greeting(object me)
