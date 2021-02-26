@@ -29,10 +29,10 @@ int do_burn(string arg)
 	me = this_player();
 	score = (int) me->query("combat_exp");
 	pot = (int) me->query("potential");
-	if( !arg || arg == "") 
+	if( !arg || arg == "")
                 return notify_fail("你烧啥东西．\n");
 	tar = present(arg, me);
-	if( !tar) 
+	if( !tar)
 		return notify_fail("你身上没有这东西．\n");
 	if( userp(tar))
 		return notify_fail("你不可烧活的东西．\n");
