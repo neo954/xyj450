@@ -37,4 +37,3 @@ int do_eat(string arg)
   tell_object(me, "坏药还能吃吗？\n");
   return 1;
 }
-
