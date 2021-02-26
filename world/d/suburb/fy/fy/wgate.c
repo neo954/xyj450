@@ -14,7 +14,7 @@ LONG
   "up"   : "/d/suburb/fy/fywall/wupgate",
 ]));
         set("objects", ([
-        __DIR__"npc/wind_solider": 2, 
+        __DIR__"npc/wind_solider": 2,
 			]) );
         set("outdoors", "fengyun");
         setup();
