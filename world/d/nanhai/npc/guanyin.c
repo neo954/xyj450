@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // guanyin.c 观音菩萨
 // By Dream Dec. 19, 1996
 
@@ -73,7 +73,7 @@ void attempt_apprentice(object ob)
      command("say 我佛门神通广大，" + RANK_D->query_respect(ob) + "欲成正果，先入我门。\n");
      write("看样子观音菩萨对你未剃度出家颇为不快。\n");
      return;
-   }   
+   }
    if (((int)ob->query_skill("buddhism", 1) < 80 )) {
      command("say " + RANK_D->query_respect(ob) + "不在佛法上苦修，恐怕难成正果。\n");
      return;
@@ -82,7 +82,7 @@ void attempt_apprentice(object ob)
    command("say 好！这才是我佛门的好弟子。只要多加努力，定可早成正果。\n");
 
    command("recruit " + ob->query("id") );
-   return;   
+   return;
 }
 void die()
 {
@@ -98,7 +98,7 @@ void die()
    for(i=0; i<sizeof(inv); i++) {
      if (inv[i]->query("no_drop")) continue;
      do_drop(this_object(), inv[i]);
-//     if (stringp(file = find_command("drop")) && 
+//     if (stringp(file = find_command("drop")) &&
 //        call_other(file, "do_drop", this_object(), inv[i])) ;
    }
    }
