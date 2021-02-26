@@ -9,7 +9,7 @@ void create()
 	set("nickname", HIG "吸血鬼、恶赌棍" NOR);
 	set("gender", "无性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他就是首席公公「黄咏蝶」。\n");
 
 	setup();
