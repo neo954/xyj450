@@ -1,5 +1,5 @@
 // tynroad.c 桃园小路
-// by Marz 
+// by Marz
 
 inherit ROOM;
 
@@ -11,12 +11,12 @@ string* npcs = ({
 	"bee",
 	"little_bee",
 });
-                                
+
 
 void create()
 {
 	int i = random(sizeof(npcs));
-	    
+	
 	set("short", "桃园小路");
 	set("long", @LONG
 	眼前豁然开朗，你轻松地走在桃园边的小路上。路上落英缤纷，一边是桃树林，
@@ -32,6 +32,6 @@ LONG
 	
 	set("objects", ([
 		__DIR__"npc/"+npcs[i] : 1]));
-	        
+	
 	setup();
 }
