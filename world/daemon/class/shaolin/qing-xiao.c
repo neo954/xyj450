@@ -61,4 +61,3 @@ void create()
 
 
 #include "/daemon/class/shaolin/qing.h"
-
