@@ -26,7 +26,7 @@ LONG
                 "west"          : __DIR__"street9" ]) );
 
         set("objects", ([
-                __DIR__"npc/guard" : 3, ]) );  
+                __DIR__"npc/guard" : 3, ]) );
 
 //        create_door("out", "城门", "enter");
         setup();
