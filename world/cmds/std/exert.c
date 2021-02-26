@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // exert.c
 
 #include <skill.h>
@@ -11,7 +11,7 @@ int main(object me, string arg)
 {
    string force;
 // int result;
-   
+
    seteuid(getuid());
 
    if( me->is_busy() )
@@ -22,7 +22,7 @@ int main(object me, string arg)
    if( stringp(force = me->query_skill_mapped("force")) ) {
      notify_fail("你所学的内功中没有这种功能。\n");
      if( SKILL_D(force)->exert_function(me, arg) ) {
-// force skill gain removed by mon. 7/18/98     
+// force skill gain removed by mon. 7/18/98
 // Since there exists a command threshold, force gain is enabled now. Dream.
         if( random(120) < (int)me->query_skill("force") )
           me->improve_skill(force, 1, 1);
@@ -52,7 +52,7 @@ int help (object me)
 
 注：如果你改变自己的内功，你原本蓄积的内力并不能直接转换过去，必须
     从 0 开始。
- 
+
 HELP
         );
         return 1;
