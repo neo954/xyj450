@@ -51,5 +51,3 @@ void create()
         carry_object("/d/obj/weapon/whip/fuchen")->wield();
         carry_object("/d/lingtai/obj/cloth")->wear();
 }
-
-
