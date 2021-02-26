@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // chard.c
 
 #include <race.h>
@@ -16,7 +16,7 @@ void setup_char(object ob)
      race = "人类";
      ob->set("race", "人类");
    }
-     
+
    switch(race) {
      case "赛亚人":
      case "人类":
@@ -65,11 +65,11 @@ varargs object make_corpse(object victim, object killer)
 
    corpse = new(CORPSE_OB);
 //   corpse->set_name( victim->name(1) + "的尸体", ({ "corpse" }) );
-   
+
    // mon changed name(1) to name(), 5/9/98
    corpse->set_name( victim->name() + "的尸体", ({ "corpse" }) );
    corpse->set("long", victim->long()
-     + "然而，" + gender_pronoun(victim->query("gender")) 
+     + "然而，" + gender_pronoun(victim->query("gender"))
      + "已经死了，只剩下一具尸体静静地躺在这里。\n");
    corpse->set("age", victim->query("age"));
    corpse->set("gender", victim->query("gender"));
@@ -77,7 +77,7 @@ varargs object make_corpse(object victim, object killer)
    corpse->set_weight( victim->query_weight() );
    corpse->set_max_encumbrance( victim->query_max_encumbrance() );
    corpse->move(environment(victim));
-   
+
    // Don't let wizard left illegal items in their corpses.
    if( !wizardp(victim) ) {
      inv = all_inventory(victim);
