@@ -103,4 +103,3 @@ string perform_action_file(string action)
 	if ( this_player()->query_skill("qiufeng-chenfa", 1) >= 40 )
 		return __DIR__"qiufeng-chenfa/" + action;
 }
-
