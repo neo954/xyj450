@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // mind_bug.c
 
 inherit NPC;
@@ -11,7 +11,7 @@ void create()
    set("race", "野兽");
    set("age", 3);
    set("long", "这是一只由修道人的杂念绮思所化的观想□，会缠住人的魂魄。\n");
-   
+
    set("str", 24);
    set("cor", 26);
 
@@ -21,7 +21,7 @@ void create()
 
    set("limbs", ({ "头部", "身体", "前脚", "后脚", "尾巴" }) );
    set("verbs", ({ "bite", "claw" }) );
-   
+
    if( this_player() ) {
      set("combat_exp", (int)this_player()->query_skill("spells", 1) * 500);
      set("bellicosity", this_player()->query("bellicosity"));
