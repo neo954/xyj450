@@ -19,4 +19,3 @@ TEXT
         setup();
         carry_object("/d/suburb/es/latemoon/obj/skirt")->wear();
 }
-
