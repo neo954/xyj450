@@ -4,4 +4,3 @@
 // blade.c
 
 inherit SKILL;
-
