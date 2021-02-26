@@ -71,34 +71,34 @@ void create()
 
 string ask_me_1()
 {
-	mapping fam, skl; 
+	mapping fam, skl;
 	object ob;
 	string *sname;
 	int i;
 	
 	if (!(fam = this_player()->query("family")) || fam["family_name"] != "少林派")
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"与本派素无来往，不知此话从何谈起？";
 
         if ( (int)this_player()->query("guilty") > 0 )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"你累犯数戒，身带重罪，我如何能给你这手谕！";
 
         if ( (int)this_player()->query_int() < 30 )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"资质不够，不能进入藏经楼。";
 
 	skl = this_player()->query_skills();
 	sname  = sort_array( keys(skl), (: strcmp :) );
 
 	for(i=0; i<sizeof(skl); i++) {
-		if (skl[sname[i]] < 50) 
-		return RANK_D->query_respect(this_player()) + 
+		if (skl[sname[i]] < 50)
+		return RANK_D->query_respect(this_player()) +
 		"功力不够，不够资格领取手谕。";
 	}
 
         if ( (int)this_player()->query_skill("buddhism",1) < 80 )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"想学习上乘武功，先要以高深佛法化解它们的戾气。";
 
 	ob = new("/d/suburb/xkx/shaolin/obj/allow-letter");
@@ -111,21 +111,21 @@ string ask_me_1()
 
 string ask_me_2()
 {
-	mapping fam, skl; 
+	mapping fam, skl;
 	object ob;
 	string *sname;
 	int i;
 	
 	if (!(fam = this_player()->query("family")) || fam["family_name"] != "少林派")
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"与本派素无来往，不知此话从何谈起？";
 
 	skl = this_player()->query_skills();
 	sname  = sort_array( keys(skl), (: strcmp :) );
 
 	for(i=0; i<sizeof(skl); i++) {
-		if (skl[sname[i]] < 30) 
-		return RANK_D->query_respect(this_player()) + 
+		if (skl[sname[i]] < 30)
+		return RANK_D->query_respect(this_player()) +
 		"功力不够，不能领取达摩令。";
 	}
 
