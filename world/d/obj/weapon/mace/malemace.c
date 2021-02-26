@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //malemace.c
 //created 5-30-97 pickle
 //please do not use, this weapon reserved for /d/jjf/npc/yuchigong.c
@@ -26,7 +26,7 @@ void create()
     set("unwield_msg", "$N拿起布袋擦了擦$n，又把它小心翼翼地包了起来。\n");
    set("replace_file", "/d/obj/weapon/mace/ironmace");
   }
-  
+
   init_mace(85);
   setup();
 }
