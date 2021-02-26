@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/22/1997
 
 inherit ITEM;
@@ -27,7 +27,7 @@ int is_container()
 
 void init ()
 {
-  add_action ("do_fill","fill");  
+  add_action ("do_fill","fill");
 }
 
 int do_fill (string arg)
@@ -44,7 +44,7 @@ int do_fill (string arg)
     return 0;
 
   if (! horse)
-    return 0;  
+    return 0;
 
   if (interactive(horse))
     return 0;
@@ -110,7 +110,7 @@ void make_drug ()
   }
   if (name2!="药")
     check_valid_drug (yao2,name2);
-  check_valid_drug (yao2,name1);  
+  check_valid_drug (yao2,name1);
   yao2->set("name","药");
   yao2->set("unit","剂");
 }
