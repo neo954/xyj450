@@ -11,7 +11,7 @@
  * 93-07-30 Grendel@tmi-2 Removed defines, replaced with inetd.h
  */
  
-#include <config.h>
+#include "config.h"
 #include <net/daemons.h>
 #include <net/socket.h>
 #include <net/inetd.h>
