@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 4/4/1997
 // room: /d/nuerguo/greenyard.c
 
@@ -70,7 +70,7 @@ int valid_leave (object me, string dir)
     {
       me->set_temp("lost_in_greenyard",0);
       me->set_temp("out_of_greenyard",0);
-      
+
       call_out("leave_here",1,me);
 
       return 1;
