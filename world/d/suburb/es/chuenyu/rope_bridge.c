@@ -18,10 +18,10 @@ LONG
           set("objects", ([
           __DIR__"npc/jiading3" : 2,
           ]) );
-          
-          
+
+
           set("outdoors", "chuenyu");
-          
+
           setup();
 }
 
@@ -32,7 +32,7 @@ void init()
 
 int do_climb(string arg)
 {
-        if( !arg || arg!="chain" ) 
+        if( !arg || arg!="chain" )
 	{
 	     write("这里只有一条铁链（chain）。\n");
              return 1;
@@ -44,4 +44,4 @@ int do_climb(string arg)
 
         return 1;
 }
-                  
+
