@@ -131,4 +131,3 @@ void reset()
    delete("left_trigger");
    delete("right_trigger");
 }
-
