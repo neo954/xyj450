@@ -27,4 +27,3 @@ set("long","龙王的老婆，东海的太后．\n");
         carry_object("/d/obj/cloth/jinpao")->wear();
 
 }
-
