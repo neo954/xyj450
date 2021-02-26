@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// by snowcat on 11/5/1997 
+
+// by snowcat on 11/5/1997
 inherit NPC;
 
 void create()
@@ -65,17 +65,17 @@ void emoting (object me, object who)
   call_out ("emoting",random(60)+20,me,who);
   switch (random(3))
   {
-    case 0 : 
+    case 0 :
     {
       me->command_function("giggle "+who->query("id"));
       break;
     }
-    case 1 : 
+    case 1 :
     {
       me->command_function("giggle "+me->query("id"));
       break;
     }
-    case 0 : 
+    case 0 :
     {
       me->command_function("giggle");
       break;
