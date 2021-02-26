@@ -1,8 +1,8 @@
 // tmp cave room until the cave section is done.
 #include <room.h>
- 
+
 inherit ROOM;
- 
+
 void create()
 {
         set("short", "洞口");
@@ -16,11 +16,11 @@ LONG
   "south" : "/d/suburb/es/green/path0",
   "north" : "/d/suburb/es/green/cave1",
 ]));
-	create_door("north","木门","south",DOOR_CLOSED); 
+	create_door("north","木门","south",DOOR_CLOSED);
 	set("objects", ([
 		"/d/suburb/es/green/npc/kid4" : 2,
 		]) );
         setup();
         replace_program(ROOM);
 }
- 
+
