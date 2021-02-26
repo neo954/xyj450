@@ -28,7 +28,7 @@
 
 // for security checking
 #ifndef ROOT_UID
-#include <uid.h>
+#include "uid.h"
 #endif
 
 //#define ACCESS_CHECK(x) ((!x)||(geteuid((x)) == ROOT_UID))
