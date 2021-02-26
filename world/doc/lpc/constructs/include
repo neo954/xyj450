@@ -1,10 +1,10 @@
 The LPC #include directive:
 
-Syntax: #include "file.h"
+Syntax: #include <file.h>
 Alternate: #include "file.h"
 
 Note: the '#include "file.h"' form looks for file.h in the current directory.
-The '#include "file.h"' form looks for file.h in one of the standard
+The '#include <file.h>' form looks for file.h in one of the standard
 system include directories (on TMI these directories are /include and
 /local/include).
 
