@@ -30,7 +30,7 @@ LONG
 }
 void init()
 {
-	add_action("do_ring", "ring"); 
+	add_action("do_ring", "ring");
 	add_action("do_push", "push");
 }
 
