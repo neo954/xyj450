@@ -18,7 +18,7 @@ int main(object me, string arg)
 
     if( wiz_level(new_status) < 0 ) return notify_fail("没有这种等级。\n");
 
-    if( !objectp(ob = present(arg, environment(me))) 
+    if( !objectp(ob = present(arg, environment(me)))
     ||   !userp(ob) )
         return notify_fail("你只能改变使用者的权限。\n");
 
