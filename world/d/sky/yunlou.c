@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -33,7 +33,7 @@ LONG);
 
 
 int valid_leave(object me, string dir)
-{       
+{
         object a;
         if( wizardp(me)) return 1;
 
