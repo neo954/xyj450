@@ -1,12 +1,12 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //  File  :  /include/net/daemons.h
 //
 //  Mudlib Network Daemon Macro defines
 #ifndef __NET_DAEMONS_H
 #define __NET_DAEMONS_H
- 
+
 #define CMWHO_D        "/adm/daemons/network/cmwhod"
 #define MAIL_SERVER             "/adm/daemons/network/ms"
 #define NAME_SERVER     "/adm/daemons/network/name_server"
