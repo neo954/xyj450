@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit NPC;
 
@@ -41,14 +41,14 @@ void init()
    ::init();
    add_action("do_apply", "apply");
 }
-       
+
 int do_apply(string arg)
 {
    object me,spouse,officer,room;
    string str, partner, *householder,laotou;
    int i,j;
    me = this_player();
-   officer = present("officer", environment(me)); 
+   officer = present("officer", environment(me));
    laotou = officer->query("name");
      if(!arg)
    return notify_fail("你要申请什么？\n");
@@ -66,16 +66,16 @@ RANK_D->query_respect(me)
         return 3;
    }
         if(file_size("/data/playerhomes/h_"+me->query("id")+".o") != -1)
-        {      
+        {
                 message_vision(laotou+"瞟了"+me->query("name")+"一眼，叹道：" +
-RANK_D->query_respect(me)       
+RANK_D->query_respect(me)
 +"不是已经有了房子吗？\n",officer,me);
-        return 1;       
+        return 1;
         }
    if((me->query("gender")) == "男性")
    {       str = "妻子";
    }
-        else 
+        else
    {    str = "丈夫";
    }
         partner = me->query("couple/id");
@@ -96,7 +96,7 @@ RANK_D->query_respect(me)
         message_vision(laotou+"笑眯眯地对$N道：娶妻、领房、生子，人生三大事耶！\n", me);
      me->set_temp("is_applying_house",1);
 //   officer->set_temp("house_applied",1);
-   
+
         room=new("/obj/home.c");
         room->set("file_name","h_"+me->query("id"));
         room->set("home_host",({me->query("id")})+({partner}));
@@ -136,7 +136,7 @@ int accept_object(object who, object ob)
    command("say "+RANK_D->query_respect(who)
 +"这么客气，我这就给您办。\n");
    }
-   else{ 
+   else{
         if(who->query_temp("is_applying_house"))
         command("say "+RANK_D->query_respect(who)
 +"出手这么大方。府上保准富丽堂皇。\n");
@@ -144,15 +144,15 @@ int accept_object(object who, object ob)
     command("say "+RANK_D->query_respect(who)
 +"若是想申请房子，尽管说。\n");
    who->set_temp("rental_paid", 1);
-   }}   
+   }}
                 remove_call_out("destroying");
                 call_out("destroying", 1, this_object(), ob);
                 return 1;
-       
+
 }
-   
-   
-   
+
+
+
 void destroying(object me, object obj)
 {
         destruct(obj);
