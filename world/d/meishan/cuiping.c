@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 #include <room.h>
 inherit ROOM;
@@ -33,7 +33,7 @@ void init()
 }
 
 int do_study(string arg)
-{   
+{
    object me=this_player();
    int sen_cost, kee_cost, force_cost, gain;
 
