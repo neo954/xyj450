@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //摩云手
 
 
@@ -33,7 +33,7 @@ mapping *action = ({
      "parry":     20,
      "force":     140,
      "damage_type":   "内伤",
-                        "weapon":     "左手", 
+                        "weapon":     "左手",
    ]),
             ([   "action":     "$N一招『乌龙翻江』，左手在空中虚划了个半弧，拍向$n的$l",
      "dodge":     30,
@@ -53,7 +53,7 @@ mapping *action = ({
 
 int valid_learn(object me)
 {
-   
+
    if( me->query_temp("weapon") || me->query_temp("secondary_weapon") )
      return notify_fail("练摩云手必须空手。\n");
    return 1;
@@ -73,7 +73,7 @@ int practice_skill(object me)
 {
    if( (int)me->query("mud_age") > 100 )
      return notify_fail("摩云手只能学，不能练。\n");
-   
+
    return 1;
 }
 void skill_improved(object me)
