@@ -39,4 +39,3 @@ void incoming_request(mapping info)
         index_call(idx, info);
    }
 }
-
