@@ -18,4 +18,3 @@ void create()
         setup();
        add_money("silver", 5);
 }
-
