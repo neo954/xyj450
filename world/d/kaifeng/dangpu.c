@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 
 inherit HOCKSHOP;
@@ -22,10 +22,10 @@ LONG);
   set("item_desc", ([ /* sizeof() == 1 */
     "bian" : "
 客官可以在本当铺：
-  典当(pawn)         
-  卖断(sell)       
-  估价(value)         
-  赎回(retrieve stamp) 
+  典当(pawn)
+  卖断(sell)
+  估价(value)
+  赎回(retrieve stamp)
   购买(buy) 用list查看。
 
   "]));
