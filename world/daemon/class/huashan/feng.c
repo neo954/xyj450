@@ -7,7 +7,7 @@ void create()
 {
 	set_name("风清扬", ({ "feng qingyang", "feng", "qingyang" }));
 //	set("nickname", "大师兄");
-	set("long", 
+	set("long",
 "他就是华山剑宗的长老风清扬。他身材瘦长，眉宇间一直笼罩着一股淡淡的忧伤\n"
 "神色，显然对当年的剑宗气宗之争一直难以忘怀。\n");
 	set("gender", "男性");
