@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // virtuald.c
 //
 // This object is the virtual object server of ES2 mudlib.
