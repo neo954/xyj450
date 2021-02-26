@@ -434,4 +434,3 @@ int do_recover()
 
 	return 1;
 }
-
