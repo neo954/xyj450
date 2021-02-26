@@ -31,4 +31,3 @@ TEXT
         carry_object("/d/suburb/es/latemoon/obj/redbelt")->wear();
         carry_object("/d/suburb/es/latemoon/obj/clasp")->wear();
 }
-
