@@ -90,4 +90,3 @@ string ask_dan(object me)
    command("give " + who->query("id") + " lingdan");
    return "灵丹得之不易，要节约着用。\n";
 }
-
