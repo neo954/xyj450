@@ -239,7 +239,3 @@ void rewarding (object who, object ob)
   who->delete("quest/pending/wearing");
   call_out ("quest_done",1,who);
 }
-
-
-
-
