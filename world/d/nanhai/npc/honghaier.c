@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // honghaier.c 红孩儿
 // By Dream Dec. 20, 1996
 
@@ -10,7 +10,7 @@ inherit F_MASTER;
 void create()
 {
    set_name("红孩儿", ({ "honghaier" }));
-   set("title", "南海观音之徒");   
+   set("title", "南海观音之徒");
    set("long", @LONG
 他本是牛魔王之子，生性好斗；后被南海观音收服，脾气却不见有什么好转。
 他使得一手的好枪法，火云枪更是鲜有敌手，寻常人是不敢碰他的。
