@@ -33,7 +33,7 @@ mapping Note_Msg = ([
 string	*notemsg;
 int 	msg_no;
 // int tl_steps;
- 
+
 void create()
 {
         set("short", "桃林");
@@ -49,7 +49,7 @@ LONG
                 "note": "这是一张指示路径的字条.似乎可以读(read)它.\n",
         ]) );
 
-        set("exits", ([ 
+        set("exits", ([
                 "south" : 	__DIR__"taolin",
                 "north" : 	__DIR__"taolin",
                 "west" : 	__DIR__"taolin",
@@ -75,10 +75,10 @@ void init()
 
 int do_read(string arg)
 {
-	if (arg != "note") 
+	if (arg != "note")
 		return notify_fail("你要读什么?\n");
 	    else {
-		message_vision("$N看见:"+notemsg[msg_no]+"\n", this_player()); 
+		message_vision("$N看见:"+notemsg[msg_no]+"\n", this_player());
 		return (1);
 		}
 }
@@ -101,7 +101,7 @@ int do_go(string dir)
 			return 1;
 			}
 		    else {
-			steps -= 1;  
+			steps -= 1;
 			me->set("taolin_steps", steps);
 			}
 		}
