@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // buy.c
 
 inherit F_CLEAN_UP;
@@ -14,13 +14,13 @@ int main(object me, string arg)
 
    if(!(ob=present(arg, me)))
      return notify_fail("You don't have it!\n");
-   
+
    if( (string)ob->query("skill_type") != "sword" )
      return notify_fail("Need to wield sword!\n");
 
    me->set_temp("weapon_second", ob);
    ob->set("equipped", "second_wield");
-   
+
                    if( !stringp(str = ob->query("wield_msg")) )
                         str = "$N装备$n作武器。\n";
                    message_vision(str, me, ob);
