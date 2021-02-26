@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 2/8/1997
 
 inherit ROOM;
@@ -44,13 +44,13 @@ int do_take (string arg)
   if (! arg)
     return notify_fail ("您要拿什么？\n");
   if (arg == "jinchuang")
-    ob = new ("/d/obj/drug/jinchuang");    
+    ob = new ("/d/obj/drug/jinchuang");
   else if (arg == "hunyuan")
-    ob = new ("/d/obj/drug/hunyuandan");    
+    ob = new ("/d/obj/drug/hunyuandan");
   else if (arg == "dan")
-    ob = new ("/d/obj/drug/dan");    
+    ob = new ("/d/obj/drug/dan");
   else if (arg == "huanyang")
-    ob = new ("/d/obj/drug/huanyang");    
+    ob = new ("/d/obj/drug/huanyang");
   else
     return notify_fail ("您要拿什么？\n");
   message_vision ("$N从台上拿起$n。\n",who,ob);
