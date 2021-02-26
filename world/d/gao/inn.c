@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // gate.c
 
 inherit ROOM;
@@ -18,7 +18,7 @@ set("exits", ([ /* sizeof() == 4 */
 "north" : __DIR__"road1",
 ]));
 set("objects", ([
-                __DIR__"npc/wang": 1, 
+                __DIR__"npc/wang": 1,
      __DIR__"npc/jiuke": 1]) );
 
         set("no_clean_up", 0);
