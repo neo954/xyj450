@@ -1,6 +1,6 @@
 //girl_yu
 inherit NPC;
- 
+
 void create()
 {
         set_name("梦玉楼", ({ "yu lou", "yulou","lou" }) );
