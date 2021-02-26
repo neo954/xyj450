@@ -1,6 +1,6 @@
 valid_compile_to_c - determine whether LPC->C compilation may take place
 
-int valid_compile_to_c(); 
+int valid_compile_to_c();
 
 valid_compile_to_c() is called when the generate_source() efun is used to
 generate C files or to do runtime compilation of an object.  One might
