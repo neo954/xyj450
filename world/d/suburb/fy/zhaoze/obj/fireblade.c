@@ -37,4 +37,3 @@ mixed hit_ob(object me, object victim, int damage_bonus)
 	return HIR "火焰长刀喷出一股猩红的火焰，燎烤着$n的全身。\n" NOR;
 	}
 }
-
