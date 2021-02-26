@@ -39,4 +39,3 @@ void create()
    add_money("silver", random(2)+1);
         carry_object("/d/obj/cloth/skirt")->wear();
 }
-
