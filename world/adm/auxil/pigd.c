@@ -220,4 +220,3 @@ int count_score(int *fcl, int bid_flag) // support for single pig ONLY
 	}
 	return r;
 }
-
