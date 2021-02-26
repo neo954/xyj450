@@ -14,7 +14,7 @@ void remove_effect(object me, object target, int amount)
         	me->add_temp("apply/attack",  -(12-amount) * 10 );
                 me->add_temp("apply/damage", -(12-amount)*3);
 	}
-	else 
+	else
 		me->add_temp("apply/attack",amount*3);
         me->add_temp("apply/dodge", - (12-amount) * 5 );
         me->delete_temp("fonxansword");
@@ -57,4 +57,4 @@ skill :), skill);
         return 1;
 }
 
- 
+
