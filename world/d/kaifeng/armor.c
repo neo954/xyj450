@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 2/8/1997
 
 inherit ROOM;
@@ -50,25 +50,25 @@ int do_take (string arg)
   if (! arg)
     return notify_fail ("您要拿什么？\n");
   if (arg == "armor")
-    ob = new ("/d/obj/armor/standard/armor");    
+    ob = new ("/d/obj/armor/standard/armor");
   else if (arg == "shield")
-    ob = new ("/d/obj/armor/standard/shield");    
+    ob = new ("/d/obj/armor/standard/shield");
   else if (arg == "boots")
-    ob = new ("/d/obj/armor/standard/boots");    
+    ob = new ("/d/obj/armor/standard/boots");
   else if (arg == "finger")
-    ob = new ("/d/obj/armor/standard/finger");    
+    ob = new ("/d/obj/armor/standard/finger");
   else if (arg == "hands")
-    ob = new ("/d/obj/armor/standard/hands");    
+    ob = new ("/d/obj/armor/standard/hands");
   else if (arg == "head")
-    ob = new ("/d/obj/armor/standard/head");    
+    ob = new ("/d/obj/armor/standard/head");
   else if (arg == "neck")
-    ob = new ("/d/obj/armor/standard/neck");    
+    ob = new ("/d/obj/armor/standard/neck");
   else if (arg == "surcoat")
-    ob = new ("/d/obj/armor/standard/surcoat");    
+    ob = new ("/d/obj/armor/standard/surcoat");
   else if (arg == "waist")
-    ob = new ("/d/obj/armor/standard/waist");    
+    ob = new ("/d/obj/armor/standard/waist");
   else if (arg == "wrists")
-    ob = new ("/d/obj/armor/standard/wrists");    
+    ob = new ("/d/obj/armor/standard/wrists");
   else
     return notify_fail ("您要拿什么？\n");
   message_vision ("$N从架子上拿起$n。\n",who,ob);
