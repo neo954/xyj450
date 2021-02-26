@@ -1,4 +1,4 @@
-restore_variable - restore value of a variable from a string 
+restore_variable - restore value of a variable from a string
 
 mixed restore_variable( string value );
 
