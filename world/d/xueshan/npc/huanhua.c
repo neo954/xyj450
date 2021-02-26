@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //huanhua.c
 //hehe, this npc is interesting:D...weiqi, 97.09.15
 
@@ -21,7 +21,7 @@ void create()
    set_skill("blade", 30);
    set_skill("bingpo-blade", 30);
    set_skill("xiaoyaoyou", 30);
-   set_skill("force", 30);   
+   set_skill("force", 30);
    set_skill("ningxue", 30);
    map_skill("force", "ningxue");
    map_skill("blade", "bingpo-blade");
@@ -44,7 +44,7 @@ void create()
    carry_object("/d/obj/weapon/blade/iceblade")->wield();
 }
 void init()
-{       
+{
         object ob=this_player();
    object me=this_object();
 
