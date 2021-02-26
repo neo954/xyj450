@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 轩辕箭
 // updated 5-30-97 pickle
 
@@ -91,11 +91,11 @@ mapping *action = ({
     "name":       "犀牛望月",
     ]),
 });
- 
+
 int valid_learn(object me)
 {
   object ob;
-  
+
   if(me->query_skill("archery",1) < 20)
     return notify_fail("如果弓箭不熟，怎能在激战中上箭开弓射敌？\n");
   if( (int)me->query("max_force") < 50 )
@@ -108,7 +108,7 @@ int valid_learn(object me)
 mapping query_action(object me)
 {
   int max=me->query_skill("archery") / 15;
-  
+
   if (max>sizeof(action)) max=sizeof(action);
   return action[random(max)];
 }
