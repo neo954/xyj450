@@ -12,7 +12,7 @@ void create()
 		 ({ "trainer"}));
 	set("title", "尚书府护院");
         set("gender", "男性");
-        set("age", 30+random(30)); 
+        set("age", 30+random(30));
 
         set("attitude", "peaceful");
 
@@ -28,7 +28,7 @@ void create()
         set("max_force", 400 + random(200));
         set("force_factor", 3+random(3));
 
-	set("inquiry", ([  
+	set("inquiry", ([
 		"客人":"我也不知道，主人吩咐我守着的。\n"
 		]) );
 
