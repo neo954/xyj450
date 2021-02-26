@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //ironmace.c
 //created 5-30-97 pickle
 
@@ -23,7 +23,7 @@ void create()
     set("wield_msg", "$N操起一根$n，摆了个架式。\n");
     set("unwield_msg", "$N将$n别回腰间。\n");
   }
-  
+
   init_mace(15);
   setup();
 }
