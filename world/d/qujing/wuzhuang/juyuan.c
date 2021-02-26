@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //juyuan.c
 #include <room.h>
 inherit ROOM;
@@ -15,15 +15,15 @@ void create ()
 亭俏立，隐约可见“牡丹亭”几字。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "northeast" : __DIR__"mudanting",
      "northwest" : __DIR__"shuoyaopu",
      "south" : __DIR__"houyuan",
      //"west" : __DIR__"westway6",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      //__DIR__"npc/qingfeng" : 1,
      //__DIR__"npc/mingyue" : 1,
