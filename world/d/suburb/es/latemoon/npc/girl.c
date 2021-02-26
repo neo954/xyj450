@@ -1,7 +1,7 @@
 inherit NPC;
  string show_dance();
 string show_dragon();
- 
+
 void create()
 {
         set_name("昭仪", ({ "zauyi", "joe" }) );
