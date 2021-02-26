@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 inherit SKILL;
 mapping *action = ({
