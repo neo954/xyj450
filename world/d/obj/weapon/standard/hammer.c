@@ -22,4 +22,3 @@ void create()
         init_hammer(15);
         setup();
 }
-
