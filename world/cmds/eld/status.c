@@ -26,4 +26,3 @@ HELP
     );
     return 1;
 }
-
