@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // parrybook2.c,level 100-140
 // by pickle
 inherit ITEM;
@@ -51,9 +51,9 @@ int do_read(string arg)
     return notify_fail("你的道行不够，再怎么读也没用。\n");
   sen_cost=10+(40-(int)me->query_int())+(35-(int)me->query_kar())+(int)lev/5;
   if( (int)me->query("sen")<sen_cost )
-    return notify_fail("你现在头晕脑胀，该休息休息了。\n");   
+    return notify_fail("你现在头晕脑胀，该休息休息了。\n");
    me->receive_damage("sen", sen_cost);
-  
+
   gain = (int)me->query_skill("literate",1)/5;
   gain -= random(me->query_int());
   gain +=random(me->query_kar());
