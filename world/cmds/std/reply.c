@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // reply.c
 
 #include <ansi.h>
@@ -34,10 +34,10 @@ int main(object me, string arg)
    obj = find_player(target);
    if( !obj ) return notify_fail(
      "刚才和你说话的人现在无法听见你，或者已经离开游戏了。\n");
-     
-   if(!living(obj) || obj->query_temp("netdead")) 
+
+   if(!living(obj) || obj->query_temp("netdead"))
      return notify_fail(obj->name(1)+"现在听不见你说的话。\n");
-       
+
    write(GRN "你回答" + obj->name(1) + "：" + arg + "\n" NOR);
    tell_object(obj, sprintf(GRN"%s回答你：%s\n"NOR,
      me->name(1), arg ));
