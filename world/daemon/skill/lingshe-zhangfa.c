@@ -114,7 +114,7 @@ int practice_skill(object me)
 
 mixed hit_ob(object me, object victim, int damage_bonus, int factor)
 {
-        if( random(me->query_skill("hamagong")) > 10 ) 
+        if( random(me->query_skill("hamagong")) > 10 )
 	{
 	victim->apply_condition("snake_poison", random(me->query_skill("hamagong")/10) + 1 +
 	victim->query_condition("snake_poison"));
