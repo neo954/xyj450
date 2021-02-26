@@ -62,5 +62,3 @@ int do_study(string arg)
 
 	return 1;
 }
-
-
