@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /moon/ontop.c
 //cglaem...12/13/96.
 
@@ -40,7 +40,7 @@ void init()
 int do_cai(string arg)
 {
   object me=this_player();
-  object m; 
+  object m;
 
   if( (!arg) || !((arg == "lotus") || (arg == "lian")))
     return notify_fail("采什么？\n");
@@ -54,12 +54,12 @@ int do_cai(string arg)
    return 1;
    }
   else if (me->query("gender") == "男性")
-   return notify_fail("你突然意识到采莲不免有失英雄本色，不禁又把手缩了回来\n");   
+   return notify_fail("你突然意识到采莲不免有失英雄本色，不禁又把手缩了回来\n");
   else{
    if ((int)me->query_skill("moondance", 1)< 60){
           me->improve_skill("moondance", 40-me->query("str"));
       message_vision(
-      "$N试着运用所学的轻功纵身跳上荷叶，发现不妙又敢紧跳了回来．\n", me);   
+      "$N试着运用所学的轻功纵身跳上荷叶，发现不妙又敢紧跳了回来．\n", me);
           tell_object(me, "你领悟出一些冷月凝香舞的技巧。\n");
      this_player()->start_busy(1);
         }
@@ -70,7 +70,7 @@ int do_cai(string arg)
          tell_object(me,"可是你身上已经装不下了。\n");
      else {
             m = new(__DIR__"obj/lianzi.c");
-       m->move(this_player()); 
+       m->move(this_player());
        this_player()->start_busy(1);
      }
    }
