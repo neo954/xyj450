@@ -9,7 +9,7 @@ void create()
 	set("nickname", HIY"乖孩子"NOR);
 	set("gender", "男性");
 	set("age", 20);
-	set("long", 
+	set("long",
 		"他就是乖孩子oscar。\n");
 
 	setup();
