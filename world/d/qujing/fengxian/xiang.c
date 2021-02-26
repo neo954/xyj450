@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 12/2/1997
 
 inherit ROOM;
@@ -37,7 +37,7 @@ void create ()
 香庙建在城墙角下，红砖青瓦木檐。庙里面墙壁上挂着雷神，
 雨神，龙神等各种神龛。靠背墙有一长长的旧彩木仙桌，上面
 几个香炉正在冒着丝丝香烟。
-    
+
 LONG);
 
   set("no_fight",1);
@@ -78,8 +78,8 @@ int do_ketou ()
     message_vision ("$N虔诚地伏在地上，慢慢地磕头。\n",who);
   else if (i >= size)
   {
-    message_vision ("\n庙祝笑着将$N扶起。\n",who); 
-  }  
+    message_vision ("\n庙祝笑着将$N扶起。\n",who);
+  }
   else
   {
     j = i*18+10;
@@ -92,13 +92,13 @@ int do_ketou ()
 
 void start_ketou (object who, int i)
 {
-  message_vision ("\n"+msgs[i]+"\n",who); 
+  message_vision ("\n"+msgs[i]+"\n",who);
 }
 
 void finish_ketou (object who, int i)
 {
   who->interrupt_me ();
-  message_vision ("\n$N缓缓起身。\n",who); 
-  message_vision ("\n"+strs[i]+"\n",who); 
+  message_vision ("\n$N缓缓起身。\n",who);
+  message_vision ("\n"+strs[i]+"\n",who);
   who->set_temp("obstacle/fengxian_ketou",i+1);
 }
