@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /changan/phomes
 //cglaem...12/31/96.
 //mon. 2/23/97.
@@ -31,8 +31,8 @@ void init()
 }
 
 int show_name(string arg)
-{     
-      mixed *files; 
+{
+      mixed *files;
       string who,result,content,chinese;
       int n,i,j,k;
 
@@ -65,12 +65,12 @@ int show_name(string arg)
       }
       write("\n                        玩家之家 \n");
       write("\n"+result+"\n");
-      
+
       return 1;
 }
 
 int enter_home(string arg)
-{     
+{
       string name,*files;
       object me=this_player();
 
@@ -82,6 +82,6 @@ int enter_home(string arg)
    return 1;
       }
       else return 0;
-   
+
 }
 
