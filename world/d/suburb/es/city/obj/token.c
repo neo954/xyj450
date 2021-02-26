@@ -13,4 +13,3 @@ void create()
                 set("material", "copper");
         }
 }
-
