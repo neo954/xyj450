@@ -311,7 +311,7 @@ int number_of_users;
 
 // #include "daemons.h"
 #ifdef FILE_LOCKING
-#include <flock.h>
+#include "flock.h"
 #endif
 
 /*
