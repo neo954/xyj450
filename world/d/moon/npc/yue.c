@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // yuelao.c 月下老人
 // AceP
 // mon 1/2/97
@@ -14,7 +14,7 @@ int do_divorce(string);
 void create()
 {
    set_name("月下老人", ({ "yuexia laoren", "yuelao", "laoren" }));
-   set("long", 
+   set("long",
 "他就是专管天上地下姻缘的月下老人了。
 他满脸红光，须眉皆白，正坐在那儿翻看一本书，
 手上黏着一根红绳，口中正自言自语着些什么。\n");
@@ -26,7 +26,7 @@ void create()
    set("int", 30);
    set("con", 30);
    set("per", 25);
-      
+
    set("max_kee", 1200);
    set("max_gin", 1000);
    set("max_sen", 1200);
@@ -120,7 +120,7 @@ int do_marry(string arg)
         if (me->query("gender")=="男性")
                 return notify_fail("只有女人才能答应别人的求婚！\n");
 
-        if (!arg) 
+        if (!arg)
      return notify_fail("你要嫁给谁？\n");
 
         if (!me->query("proposed"))
@@ -144,7 +144,7 @@ int do_marry(string arg)
 
         if (who->query("propose_target")!=getuid(me))
                 return notify_fail("对不起，"+who->name()+"已经改变主意不向你求婚了。\n");
-   
+
    if(!me->query("meiren"))
      return notify_fail("大姑娘家的，还是请个媒人来保亲吧！\n");
 
@@ -197,7 +197,7 @@ int do_zuomei(string arg)
    if (arg==me->query("id"))
      return notify_fail("啊？给自己做媒？听说过吗？！？\n");
 
-   if (!who->query("proposed")) 
+   if (!who->query("proposed"))
      return notify_fail("嗯？这人没打算结婚啊，你瞎起什么哄？！？\n");
 
    message_vision("$N笑嘻嘻的说：我想给女方做媒。\n", me);
@@ -250,7 +250,7 @@ int do_divorce(string arg)
         message_vision("$N冲着月下老人大声嚷嚷着：这日子没法过了，我要离婚！\n", me);
         command("say 唉，你当真想抛弃你的丈夫吗？如果是，请再向我申请一次。");
         me->set_temp("divorcing",1);
-        return 1; 
+        return 1;
         }
 
      who->delete("married");
