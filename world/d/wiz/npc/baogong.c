@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //baogong.c
 
 inherit NPC;
@@ -24,12 +24,12 @@ void create()
 }
 
 void init()
-{       
+{
         object ob=this_player();
    string id;
    object me=this_object();
         ::init();
-   if (!wizardp(ob)) 
+   if (!wizardp(ob))
    {
     command("chat* 只听"+me->query("name")+"一声暴喝："+ob->query("name")+"，你这"+ RANK_D->query_rude(ob)+"！还不给我从实招来！\n");
     me->set("id",getuid(ob));
