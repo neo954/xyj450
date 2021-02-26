@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 15 1997
 
 inherit ITEM;
@@ -117,7 +117,7 @@ int do_apply (string arg)
 
 void king_wake (object king, object who)
 {
-  message_vision ("\n呼的一声响亮，国王气聚神归，翻身坐起。\n",who);  
+  message_vision ("\n呼的一声响亮，国王气聚神归，翻身坐起。\n",who);
 }
 
 void follow_player (object king, object who, object me)
@@ -126,8 +126,8 @@ void follow_player (object king, object who, object me)
     return;
   if (environment(who) != environment(king))
     return;
-  message_vision ("\n国王对$N拜道：“昨夜鬼魂拜谒，今朝晓返阳神！”\n",who);  
-  message_vision ("说罢国王又是一拜。\n",who);  
+  message_vision ("\n国王对$N拜道：“昨夜鬼魂拜谒，今朝晓返阳神！”\n",who);
+  message_vision ("说罢国王又是一拜。\n",who);
 
   if (who->query("obstacle/wuji") == "done")
     return;
@@ -135,5 +135,5 @@ void follow_player (object king, object who, object me)
   king->command_function("follow "+who->query("id"));
   king->set("my_saver",who->query("id"));
   who->set_temp("obstacle/wuji","saved");
-  destruct (me);    
+  destruct (me);
 }
