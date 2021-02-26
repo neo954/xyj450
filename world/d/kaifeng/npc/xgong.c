@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// by snowcat 
+
+// by snowcat
 
 inherit NPC;
 
@@ -69,7 +69,7 @@ int test_player()
     "$N对$n说道：老夫即将遣人送兵器去京城，尚缺",
     "$N对$n一点头说道：老夫清点了一下兵器库，发现还少",
     "$N想想对$n说道：最近有些兵器来货不足，尤其是少了",
-  });  
+  });
   string str;
   object me = this_object();
   object who = this_player();
@@ -173,7 +173,7 @@ int accept_object(object who, object ob)
   }
 
   if (ob->is_character()) return 0;
-  
+
   if (who->query("quest/pending/weapon/name") != ob->query("name"))
   {
     message_vision ("$N对$n说道：这位"+RANK_D->query_respect(who)+
