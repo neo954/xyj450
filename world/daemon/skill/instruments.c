@@ -1,4 +1,4 @@
-// instruments.c 
+// instruments.c
 
 inherit SKILL;
 
