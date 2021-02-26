@@ -56,7 +56,7 @@ message_vision("$N把手里的几角玉璧摆弄了几下．＂咯嚓＂一声�
 	destruct(this_object());
 
 }
-else 
+else
 message_vision("$N把手里的几角玉璧摆弄了几下．\n",this_player());
 
 return 1;
