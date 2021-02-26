@@ -12,7 +12,7 @@ int update_condition(object me, int duration)
 	tell_object(me, HIW "你中的" HIG "碧血蛊" HIW "终于发作光了！\n" NOR );
 	else
 	tell_object(me, HIW "你中的" HIG "碧血蛊" HIW "发作了！\n" NOR );
-	if( duration < 1 ) 
+	if( duration < 1 )
 		return 0;
 	return 1;
 }
