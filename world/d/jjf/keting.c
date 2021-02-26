@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/jjf/keting.c
 
 inherit ROOM;
@@ -43,7 +43,7 @@ int valid_leave(object me, string dir)
      &&  objectp(present("qin qiong", environment(me)))
 )
    return notify_fail("将军府内堂，企可随便出入？\n");
-      return ::valid_leave(me, dir); 
+      return ::valid_leave(me, dir);
     }
   return 1;
 }
