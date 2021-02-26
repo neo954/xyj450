@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // tmpbank.c
 //cglaem...12/19/96.
 
@@ -35,6 +35,6 @@ TEXT
 set("objects",([
   __DIR__"npc/tiesp" : 1,
  ]));
-    
+
    setup();
 }
