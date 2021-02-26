@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // recruit.c
 
 #include <ansi.h>
@@ -83,7 +83,7 @@ int main(object me, string arg)
         chinese_number(family["generation"]) ));
 
      return 1;
-   
+
 
    } else {
 
@@ -107,9 +107,9 @@ int help(object me)
 {
         write(@HELP
 指令格式 : recruit [cancel]|<对象>
- 
+
 这个指令能让你收某人为弟子, 如果对方也答应要拜你为师的话.
- 
+
 HELP
         );
         return 1;
