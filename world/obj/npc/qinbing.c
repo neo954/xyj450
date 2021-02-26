@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 // qinbing.c
 //亲兵, used for jjf people.
@@ -20,7 +20,7 @@ void create()
    set("max_kee", 500);
    set("max_sen", 300);
    set("max_force", 300);
-   
+
    set("str", 40);
    set("cor", 30);
    set("cps", 25);
@@ -62,12 +62,12 @@ void show(object who)
      return;
    }
 
-   this_object()->set_name(cname[current-1], ({ (string)who->query("id")+ename[current-1] }) );   
+   this_object()->set_name(cname[current-1], ({ (string)who->query("id")+ename[current-1] }) );
 
    message_vision("随着一阵跑步声，一位身披铠甲，手执长枪的兵丁冲到$N面前行了个礼，大声说道：在下随时听调！\n", who);
 
     //set the leader of this bing.
-   set("owner_id", (string)who->query("id")); 
+   set("owner_id", (string)who->query("id"));
    set_leader(who);
 }
 
@@ -75,17 +75,17 @@ void relay_whisper(object me, string msg)
 {
    if (query("owner_id") != me->query("id"))
    {
-     message_vision((string)this_object()->query("name") 
+     message_vision((string)this_object()->query("name")
         + "对着$N冷哼了一声。\n", me);
      return;
    }
-   
+
    //note, do not allow the order contain "chat", "tell"...
    //may need disable more later...
    if( strsrch(msg, "chat") != -1 ||
        strsrch(msg, "tell") != -1 ||
        strsrch(msg, "apprentice") != -1 ||
-       strsrch(msg, "recruit") != -1 ) 
+       strsrch(msg, "recruit") != -1 )
      return;
 
    message_vision((string)this_object()->query("name") + "对着$N点了点头。\n", me);
@@ -102,7 +102,7 @@ void relaying (string msg)
 }
 
 void init()
-{       
+{
    object me=this_player();
    object owner;
 
@@ -125,6 +125,6 @@ void init()
         call_out ("leave", 1);
      }
    }
-     
+
 }
 
