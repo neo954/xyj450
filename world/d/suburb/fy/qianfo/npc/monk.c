@@ -1,10 +1,10 @@
-// 
-// 
+//
+//
 
 inherit NPC;
 void create()
 {
-	string *order=({"朝拜", "扫地", "烧饭", "挑水", 
+	string *order=({"朝拜", "扫地", "烧饭", "挑水",
 "砍柴","淘米","打杂","念经"});
         set_name((order[random(8)]) +"的和尚", ({ "monk", "heshang"}) );
         set("gender", "男性" );
