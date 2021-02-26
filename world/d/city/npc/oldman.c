@@ -47,4 +47,3 @@ RANK_D->query_respect(ob)
                         break;
         }
 }
-
