@@ -107,4 +107,3 @@ int do_dream(string arg)
 	
 	return notify_fail("你做了一个美梦，梦中见到了" + arg + "。\n");
 }
-
