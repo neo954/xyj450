@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //枯骨刀法, kugu-blade.c
 //modified 4-17-97 pickle
 
@@ -10,7 +10,7 @@
 枯骨刀才能发挥出威力，因其重招不重力，用普通的刀
 伤害力不大。
 */
-//pickle, haven't changed settings yet, please try to be compatible 
+//pickle, haven't changed settings yet, please try to be compatible
 //with above parameters...weiqi.
 
 // 尸横遍野，行尸走肉，尸山血海，借尸还魂，马革裹尸，毁尸灭迹
@@ -77,7 +77,7 @@ mapping *action = ({
      "parry_msg":
 "$n看准来势，举$W迎去。只听「噗」地一声闷想，$n的人影已不见了。\n",
      "parry_power":     10,
-        ]), 
+        ]),
         ([      "name":                 "马革裹尸",
                 "action":
 "只见$N运起轻功，好似一堵无形的墙壁，向$n徐徐推近。\n"
