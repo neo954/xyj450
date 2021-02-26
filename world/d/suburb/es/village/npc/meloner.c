@@ -33,8 +33,8 @@ LONG
 
 	set("vendor_goods", ([
                 "西瓜": "/d/suburb/es/village/obj/melon",
-        ]) );      
-        
+        ]) );
+
 	set("force", 500);
         set("max_force", 500);
 
