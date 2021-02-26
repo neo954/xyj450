@@ -16,7 +16,7 @@ void create()
         set_skill("throwing", 50);
 
         set("inquiry", ([
-                "小娟" : "这要到黑松山去问。", 
+                "小娟" : "这要到黑松山去问。",
         ]) );
 
         setup();
