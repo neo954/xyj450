@@ -1,8 +1,8 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/sky/nantianmen
- 
+
 #include <room.h>
 #include <ansi.h>
 inherit ROOM;
@@ -46,17 +46,17 @@ create_door("north", "南天门", "south", DOOR_CLOSED);
 
   setup();
 }
- 
+
 int valid_leave(object me, string dir)
 {
- 
+
         if (dir != "north") {
                 return ::valid_leave(me,dir);
         }
- 
- 
+
+
         if (objectp(present("zengzhang tianwang", environment(me)))) {
- 
+
                 if (me->query("combat_exp")<100000) {
 return notify_fail(HIY"增长天王对你说道：" + RANK_D->query_respect(me) +"似乎还未入仙道，回去多下点苦功吧。\n你满怀失望的离开了。\n"NOR);
 
