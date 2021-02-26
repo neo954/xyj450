@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // yushu.c, 玉鼠精
 // created by mes, updated 6-20-97 pickle
 // updated again by pickle on 9-2-97, to open her menpai
@@ -23,7 +23,7 @@ void create()
   set_name("玉鼠精", ({"yu shu","yushu", "shu", "monster"}));
   set("gender", "女性" );
   set("age", 23);
-  set("long", 
+  set("long",
 "她就是这无底洞的洞主了。她从修道成人行以来，吃人无数，\n"
 "也不知为什么玉皇还未曾派兵来围剿。听说她在天宫有亲，也\n"
 "不知真假。\n");
@@ -36,7 +36,7 @@ void create()
   set_skill("unarmed", 100);
   set_skill("dodge", 150);
   set_skill("parry", 150);
-  set_skill("spells", 150); 
+  set_skill("spells", 150);
   set_skill("yaofa", 120);
   set_skill("sword", 150);
   set_skill("qixiu-jian", 100);
@@ -44,7 +44,7 @@ void create()
   set_skill("kugu-blade", 150);
   set_skill("lingfu-steps", 100);
   set_skill("yinfeng-zhua", 100);
-  set_skill("force", 150);   
+  set_skill("force", 150);
   set_skill("huntian-qigong", 150);
   map_skill("force", "huntian-qigong");
   map_skill("spells", "yaofa");
@@ -260,7 +260,7 @@ void greeting(object me)
       me->delete_temp("apply/name");
       me->delete_temp("apply/id");
       me->delete_temp("apply/short");
-      me->delete_temp("apply/long"); 
+      me->delete_temp("apply/long");
       kill_ob(me);
       return;
     }
