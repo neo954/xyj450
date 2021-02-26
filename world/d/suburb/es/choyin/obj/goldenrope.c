@@ -14,7 +14,7 @@ void create()
 LONG );
                 set("value", 1000);
                 set("no_drop", 1);
-              
+
         }
 }
 
@@ -31,7 +31,7 @@ int do_tie(string arg)
     if( !arg ) return notify_fail("你要缚何物? \n");
     {
         if ( arg == "crane" )
-        
+
             message_vision("$N双手合掌，随风而起，落于仙鹤背上......\n",
             this_player() );
             this_player()->receive_damage("sen",50);
