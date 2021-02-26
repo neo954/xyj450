@@ -164,4 +164,3 @@ int regenerate()
    set("no_map", 0);
    return 1;
 }
-
