@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 24 1997
 
 inherit NPC;
@@ -14,7 +14,7 @@ void create()
   set("combat_exp", 9500);
   set("str", 25);
   set("attitude","heroism");
-  
+
   set("force_factor",5);
   set("max_gin",300);
   set("max_kee",300);
