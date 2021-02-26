@@ -86,5 +86,3 @@ int pay_money(int amount)
         me->save();
         return 1;
 }
-
-
