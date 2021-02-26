@@ -82,7 +82,7 @@ void setup_human(object ob)
 			if (my["age"] <= 30) qi_age -= my["age"];
 			else qi_age -= 30;
 			
-			if (qi_age > 0) my["max_kee"] += qi_age *((int)ob->query_skill("taiji-shengong", 1)/10); 
+			if (qi_age > 0) my["max_kee"] += qi_age *((int)ob->query_skill("taiji-shengong", 1)/10);
 		}
 		
 		if( my["max_force"] > 0 ) my["max_kee"] += my["max_force"] / 4;
