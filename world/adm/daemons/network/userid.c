@@ -12,7 +12,7 @@
 //      This daemon will connect up to an authorization daemon and
 //      and return a user's login name.
 
-#include <priv.h>
+#include "priv.h"
 #include "config.h"
 #include <net/socket.h>
 #include <net/daemons.h>
