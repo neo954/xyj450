@@ -21,9 +21,9 @@ int help(object me)
 {
         write(@HELP
 指令格式 : transfer
- 
+
 这个指令可以让你将潜能转为经验（１：２）.
- 
+
 HELP
     );
     return 1;
