@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/6/1997
 inherit ROOM;
 
@@ -14,7 +14,7 @@ void create()
 彩雾千条。
 
 LONG);
-  set("exits", ([ 
+  set("exits", ([
     "north" : __DIR__"gongmen",
     "southwest" : __DIR__"yuhua",
     "south" : __DIR__"zheng",
