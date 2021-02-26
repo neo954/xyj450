@@ -46,4 +46,3 @@ void create()
 }
 	create_family("侠客岛", 3, "弟子");
 	
-
