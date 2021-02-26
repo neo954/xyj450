@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // mon. 4/30/97
 
 inherit ROOM;
@@ -38,7 +38,7 @@ string look_zi()
   object me=this_player();
 
   if(me->query("kill")) {
-    str="\n\n        如何杀死其他玩家以增长道行\n"; 
+    str="\n\n        如何杀死其他玩家以增长道行\n";
     str+="\n\n1．杀死(who -k)所显示的玩家，可以获得对方的部分道行。\n";
     str+="2．对方道行比你高出越多，得到的道行越多。\n";
     str+="3．如果对方道行比你低很多，则很难得到道行。\n";
