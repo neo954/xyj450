@@ -9,7 +9,7 @@ void create()
 {
 	set_name("出尘子", ({ "chuchen zi", "chuchen" }));
 	set("nickname", "星宿派八师兄");
-	set("long", 
+	set("long",
 		"他就是丁春秋的八弟子出尘子。\n"
 		"他身才矮胖，可手中握的钢杖又长又重。\n");
 	set("gender", "男性");
@@ -56,7 +56,7 @@ void init()
 {
         object ob;
         mapping myfam;
-        
+
         ::init();
         if (interactive(ob = this_player()) && !is_fighting()) {
                 myfam = (mapping)ob->query("family");
