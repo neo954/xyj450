@@ -78,4 +78,3 @@ void applying (object ob)
   }
   destruct (this_object());
 }
-
