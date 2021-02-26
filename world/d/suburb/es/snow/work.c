@@ -42,7 +42,7 @@ int do_work(string arg)
 
         me = this_player();
 
-message_vision("$N辛苦的工作终于结束了，可人也累的要死\n", 
+message_vision("$N辛苦的工作终于结束了，可人也累的要死\n",
 me);
 me->add("gin",-30);
 me->add("sen",-30);
