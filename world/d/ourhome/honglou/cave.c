@@ -33,4 +33,3 @@ int valid_leave(object me, string dir)
      return notify_fail("楼上闲人免进。\n");
    return ::valid_leave(me, dir);
 }
-
