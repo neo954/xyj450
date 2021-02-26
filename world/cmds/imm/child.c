@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // child.c
 // written by mon 4/5/98
 
@@ -13,11 +13,11 @@ int main(object me, string str)
 
      if (!str) str = me->query("cwf");
      if(!str) return notify_fail("你要查看哪个文件？\n");
- 
+
      str = resolve_path(me->query("cwd"), str);
         if( sscanf(str, "%*s.c") != 1 ) str += ".c";
         me->set("cwf", str);
-   
+
      if( file_size(str) < 0 )
                 return notify_fail("没有这个文件：" + str + ")\n");
 
