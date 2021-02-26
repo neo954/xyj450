@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/nanhai/fanting
 inherit ROOM;
 #include <room.h>
@@ -35,6 +35,6 @@ int valid_leave(object me, string dir)
 {
 if (me->query("family/family_name") != "南海普陀山" && dir == "east")
 if(objectp(present("zhangchu seng", environment(me))))
-return notify_fail("掌厨僧伸手拦住你：里面是本派厨房，" + RANK_D->query_respect(me) + "请留步！\n");   
+return notify_fail("掌厨僧伸手拦住你：里面是本派厨房，" + RANK_D->query_respect(me) + "请留步！\n");
 return ::valid_leave(me, dir);
 }
