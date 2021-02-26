@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat.c 2/8/1997
 
 #include <command.h>
@@ -25,7 +25,7 @@ void write_objects (object room, object who)
     if (! who->visible(ob) || ob == who)
       continue;
 
-    write ("  "+ob->short()+"\n");    
+    write ("  "+ob->short()+"\n");
   }
 }
 
@@ -44,10 +44,10 @@ int do_look (string arg)
     return 1;
 
   write ("\n        －－－－－－－〖赛场内〗－－－－－－－\n");
-  write (room->query("long"));    
+  write (room->query("long"));
   write_objects(room, who);
   write ("\n        －－－－－－－－－－－－－－－－－－－\n");
-  return 1;    
+  return 1;
 }
 
 int can_enter (object who)
@@ -59,7 +59,7 @@ int can_enter (object who)
 
   if (! ground)
     return notify_fail ("对不起，您不能进入比赛场地。\n");
-  
+
   step = ground->query("match/step");
   mode = ground->query("match/mode");
   teams = ground->query("match/teams");
@@ -89,7 +89,7 @@ int can_enter (object who)
     if (! teams)
       return notify_fail ("对不起，场上已尚未组队，您不能进去。\n");
     if (teams["current_player0_id"] != who->query("id") &&
-        teams["current_player1_id"] != who->query("id")) 
+        teams["current_player1_id"] != who->query("id"))
       return notify_fail ("对不起，您不是选手，不能进入场地。\n");
  }
   return 1;
