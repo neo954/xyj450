@@ -80,4 +80,3 @@ string show_king (object who)
   king->move(where);
   return ("可怜可怜也！\n");
 }
-
