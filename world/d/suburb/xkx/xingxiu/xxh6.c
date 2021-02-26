@@ -11,11 +11,11 @@ void create()
 种说不出来的香味。路边有个石洞。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
             "east" : __DIR__"xxh4",
             "enter" : __DIR__"xiaoyao",
         ]));
-        set("objects", ([ 
+        set("objects", ([
             __DIR__"npc/caihua" : 1,
          ]) );
 
@@ -30,9 +30,9 @@ int valid_leave(object me, string dir)
 
    if (dir =="enter" ) {
 	if (present("caihua zi", environment(me))) {
-            if (!myfam || myfam["family_name"] != "星宿派") 
+            if (!myfam || myfam["family_name"] != "星宿派")
 		return notify_fail("采花子挡住了你：我的小妞可不是给你们邪派弟子准备的！\n");
-            if  (me->query("gender")=="无性") 
+            if  (me->query("gender")=="无性")
                 return notify_fail("采花子挡住了你，一脸讥笑：您这小身板还想玩妞？别开玩笑了。\n");
             if (!(int)this_player()->query_temp("marks/花"))
                 return notify_fail("采花子挡住了你：喂，你总该意思意思吧？\n");
