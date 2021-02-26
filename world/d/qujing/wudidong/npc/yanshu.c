@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // cook.c, created by mes
 // updated 9-5-97 pickle
 
@@ -195,7 +195,7 @@ int check_base_reward(object baozi, int ratio)
     int adjust=ratio/10;
 
     if (baoziexp > 2000000)
-   base_reward=500; 
+   base_reward=500;
     else if(baoziexp>1000000)
         base_reward=400;
     else if(baoziexp>500000)
@@ -295,10 +295,10 @@ int do_tellme(string arg)
     if (!baozi) baozi=find_living(meat);
     if (!baozi) return notify_fail("目前游戏中找不到这位 "+meat+" 。\n");
     if (!butcher) seller=this_player();
-    else 
+    else
     {
    seller=find_player(butcher);
-   if (!seller) return notify_fail("这位 "+butcher+" 现在不在游戏中。\n");    
+   if (!seller) return notify_fail("这位 "+butcher+" 现在不在游戏中。\n");
     }
     ratio=check_ratio(seller, baozi);
     base_reward=check_base_reward(baozi, ratio);
