@@ -37,7 +37,7 @@ void init()
 	object me;
 	mapping skill_status;
 	string *sname;
-	int i, level; 
+	int i, level;
 	float exper;
 
 	me = this_player();
@@ -47,14 +47,14 @@ void init()
 	if ( !(skill_status = me->query_skills()) ) return;
 	sname  = keys(skill_status);
 
-	for(i=0; i<sizeof(skill_status); i++) 
+	for(i=0; i<sizeof(skill_status); i++)
 	{
 		level = skill_status[sname[i]];
-		if( pow(to_float(level), 3.0) / 10.0 > exper 
+		if( pow(to_float(level), 3.0) / 10.0 > exper
 		&& exper > 100.0
 		&& sname[i] != "buddhism"
 		&& sname[i] != "literate"
-		&& sname[i] != "taoism" ) 
+		&& sname[i] != "taoism" )
 		{
 			level = ceil( pow( exper*10.0, 0.333333) );
 			me->set_skill(sname[i], level);
