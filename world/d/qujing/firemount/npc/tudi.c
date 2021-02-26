@@ -68,4 +68,3 @@ void greeting(object ob)
     return;
   say ("土地作了作揖：不知"+RANK_D->query_respect(ob)+"召老朽来有何贵干？\n");
 }
-
