@@ -1,11 +1,11 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //dongmenting.c
 //created 4-8-97 pickle
 #include <room.h>
 inherit ROOM;
- 
+
 void create()
 {
         set("short", "东门厅");
@@ -17,17 +17,17 @@ void create()
 嘶马鸣。
 LONG
         );
- 
+
         set("exits", ([
                 "east" : __DIR__"dongtian",
      "north":__DIR__"yumajian",
         ]));
- 
+
         create_door("east", "东天门", "west", DOOR_CLOSED);
- 
+
         set("objects", ([
                 __DIR__"npc/tong-nan" : 2,
         ]));
- 
+
         setup();
 }
