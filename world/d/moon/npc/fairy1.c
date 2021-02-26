@@ -53,5 +53,3 @@ setup();
         carry_object("/d/obj/cloth/luoyi")->wear();
    carry_object("/d/obj/weapon/sword/snow_sword")->wield();
 }
-
-
