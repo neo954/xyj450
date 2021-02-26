@@ -55,13 +55,13 @@ int do_open(string arg)
 
 	if( arg=="brick" && !query("exits/down") )
 	{
-		message_vision( 
+		message_vision(
 		"$N走到楼梯下，趴在地上，试着用戒刀伸进青砖缝里，慢慢的撬着……\n"
 		"等到青砖一块块地起了出来，地上露出一个大洞，几排石阶往下伸去，\n"
 		"从这里分明通向一个暗道。\n", this_player());
 
 		set("exits/down", __DIR__"andao3");
-		if( room = find_object(__DIR__"andao3") ) 
+		if( room = find_object(__DIR__"andao3") )
 		{
 			room->set("exits/up", __FILE__);
 			message("vision", "天花板忽然发出轧轧的声音，露出一个向上的阶梯。\n",
@@ -82,7 +82,7 @@ void close_passage()
 	if( !query("exits/down") )
 		return;
 
-	message("vision", 
+	message("vision",
 	"只听乒地一声响，钟楼小门被推了开来，一群僧兵一涌而入。\n"
 	"他们有的砌砖，有的拌浆，七手八脚地用砖块把洞口封了起来，\n"
 	"再在砖缝间浇入烧红的铁汁。\n", this_object() );
@@ -99,7 +99,7 @@ void close_passage()
 	ob = all_inventory(this_object());
 	for(i=0; i<sizeof(ob); i++) {
 		if( !living(ob[i]) || !userp(ob[i]) || ob[i]==man ) continue;
-		if( userp(ob[i]) ) { 
+		if( userp(ob[i]) ) {
 			man->set_leader(ob[i]);
 			man->kill_ob(ob[i]);
 			ob[i]->fight_ob(man);
@@ -108,7 +108,7 @@ void close_passage()
 
 	if( room = find_object(__DIR__"andao3") ) {
 //		room->delete("exits/up");
-		message("vision", 
+		message("vision",
 	"只听乒，乓几声巨响，接着几滴滚烫的铁水滴了下来。\n"
 	"向上的洞口被人用砖块严严实实地封了起来。\n", room );
 	}
