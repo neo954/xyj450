@@ -50,4 +50,3 @@ void create()
         setup();
    carry_object("/d/obj/weapon/sword/changjian")->wield();
 }
-
