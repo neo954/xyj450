@@ -137,4 +137,3 @@ void destroy(object ob)
         destruct(ob);
         return;
 }
-
