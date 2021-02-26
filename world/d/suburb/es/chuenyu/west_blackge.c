@@ -20,8 +20,8 @@ LONG
           set("objects", ([
           __DIR__"npc/guard" : 2,
           ]) );
-          
+
           create_door("south", "木门", "north", DOOR_CLOSED);
-          
+
           setup();
 }
