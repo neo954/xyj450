@@ -32,4 +32,3 @@ void remove_effect(object me, int amount)
         me->delete_temp("daoqian");
         tell_object(me, "你的［刀枪不入］的功效散光了。\n");
 }
-
