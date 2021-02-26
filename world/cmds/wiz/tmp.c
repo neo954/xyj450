@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 #include <net/daemons.h>
 #include <net/macros.h>
@@ -32,7 +32,7 @@ int main(object me, string arg)
    for(loop = 0, size = sizeof(muds); loop<size; loop++) {
                 if(mud_list[muds[loop]]["MUDLIB"]=="A Journey to the West") {
         sscanf (mud_list[muds[loop]]["USERS"],"%d",nb);
-        total += nb; 
+        total += nb;
      }
         }
 
