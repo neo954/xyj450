@@ -15,7 +15,7 @@
  * Grendel, 930904  Fixed a bug in mailing to remote groups
  */
 
-#include <config.h>
+#include "config.h"
 #include <mailer.h>
 #include <daemons.h>
 #include <net/daemons.h>
