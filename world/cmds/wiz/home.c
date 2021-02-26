@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // home.c
 
 #include "/doc/help.h"
@@ -20,7 +20,7 @@ int main(object me, string arg)
    loc = user_path(geteuid(me)) + "workroom";
    if (ridee = me->ride())
      ridee->move(loc);
-   me->move(loc);   
+   me->move(loc);
    return 1;
 }
 
