@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit SKILL;
 
 string *dodge_msg = ({
@@ -14,9 +14,9 @@ string *dodge_msg = ({
 //        "$n身形微晃，有惊无险地避开了$N这一招。\n"
 });
 
-int valid_enable(string usage) 
-{ 
-	return (usage == "dodge") || (usage == "move"); 
+int valid_enable(string usage)
+{
+	return (usage == "dodge") || (usage == "move");
 }
 
 int valid_learn(object me) { return 1; }
