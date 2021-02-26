@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // profiled.c
 
 #define MAX_ENTRIES 300
@@ -49,10 +49,10 @@ void make_profile(string sort_by)
 
    entry = keys(command_log);
    sorting_by = sort_by;
-   
+
    if( !stringp(sort_by) )   entry = sort_array(entry, 1);
    else              entry = sort_array(entry, "sort_entry", this_object() );
-   msg = 
+   msg =
 "名称           次数    记忆体         系统时间  使用者时间     指令数\n";
 // ecost is eval_cost.
    for(i=0; i<sizeof(entry); i++) {
