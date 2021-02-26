@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/huanggong/ywc5c
 // by snowcat 10/05/1997
 
@@ -18,7 +18,7 @@ void create ()
 
 LONG);
 
-  set("exits", ([ 
+  set("exits", ([
     "west" : __DIR__"ywc5b.c",
   ]));
   set("objects",([
