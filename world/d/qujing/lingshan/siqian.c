@@ -48,4 +48,3 @@ int valid_leave (object who, string dir)
     return notify_fail ("迦叶将你轻拦：我佛祖暂不待客也。\n");
   return ::valid_leave (who, dir);
 }
-
