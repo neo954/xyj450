@@ -46,7 +46,7 @@ int do_dancing(string arg)
              return notify_fail("你在卦象中跳起舞来。但似乎不得要领！\n");
 
        if ( arg=="yu-fong" ) {
-                
+
 message_vision("$N在卦象中跳起舞来..一曲"+HIM"「 有凤来仪 」"+NOR"突然...\n",
                         this_player() );
          this_player()->receive_damage("sen", 50);
