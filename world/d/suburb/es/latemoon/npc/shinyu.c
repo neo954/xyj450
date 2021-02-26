@@ -1,7 +1,7 @@
 inherit NPC;
 
 #include <ansi.h>
- 
+
 void create()
 {
         set_name("阮欣郁", ({ "shinyu","shin" }) );
