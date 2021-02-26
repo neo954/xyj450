@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
  // ji.c 祭法宝
  // created 7-4-97 pickle
 
@@ -35,7 +35,7 @@ int main(object me, string arg)
        return notify_fail("你上一个动作还没有完成，无暇分身祭法宝。\n");
    if(!target) return notify_fail("这里没有 " + targetname + "。\n");
    return fabao->ji(targetname);
-   
+
 }
     fabao=present(arg, me);
     if(!fabao) return notify_fail("你没有" + arg +"这样法宝。\n");
