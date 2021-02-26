@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 6/5/1997 by snowcat
 #include <ansi.h>
 
@@ -10,7 +10,7 @@ inherit ITEM;
 
 void create()
 {
-  set_name("紫授录", ({ "zishou lu", "zishou",  "lu" }) );   
+  set_name("紫授录", ({ "zishou lu", "zishou",  "lu" }) );
   set_weight(10);
   setup();
   set("unit", "帖");
