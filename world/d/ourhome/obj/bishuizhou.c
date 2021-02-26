@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bishuizhou.c
 
 inherit ITEM;
@@ -15,7 +15,7 @@ void create()
                 set("unit", "张");
    set("long",
    "一张小纸片。上面写着“避水咒”三个字，不知道有什么用没有。\n");
-        set("material", "paper");       
+        set("material", "paper");
         }
 }
 
