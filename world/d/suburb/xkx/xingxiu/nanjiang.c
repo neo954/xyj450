@@ -45,7 +45,7 @@ int valid_leave(object me, string dir)
         if (current_water>20) {
             me->set("water",current_water-20);
         }
-        if (dir=="east" || dir=="south" || dir=="west" || dir=="north") 
+        if (dir=="east" || dir=="south" || dir=="west" || dir=="north")
            return notify_fail("你向那边走去，结果发现那是沙漠中的海市蜃楼。\n");
         return ::valid_leave(me, dir);
 }
