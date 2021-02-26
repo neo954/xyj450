@@ -67,13 +67,13 @@ void attempt_apprentice(object ob)
         	command("say 很好，" + RANK_D->query_respect(ob) +
 "多加努力，他日必定有成。\n");
         	command("recruit " + ob->query("id") );
-		ob->set("marks/书生", 0); 
+		ob->set("marks/书生", 0);
 		ob->set("marks/桃林", 0);	
 		}
 	    else {
 		command ("say 你还是先走一趟东边的桃林吧。\n");
 		ob->set("marks/书生", 1);
-		} 
+		}
 }
 
 void recruit_apprentice(object ob)
