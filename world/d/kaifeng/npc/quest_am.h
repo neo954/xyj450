@@ -206,5 +206,3 @@ mapping quests_armor = ([
  2100000 : ({ "find", "皂罗袍",         "purple cloth",       "", "1" }),
  2200000 : ({ "find", HIY"锦镧袈裟"NOR, "jinlan jiasha",      "", "1" }),
 ]);
-
-
