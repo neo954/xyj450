@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // rewritten by snowcat.c 4/4/1997
 // room: /d/nuerguo/maowu.c
 
@@ -16,7 +16,7 @@ void create ()
 老妇人的姐姐。
 LONG);
 
-  set("exits", ([ 
+  set("exits", ([
         "south" : __DIR__"westriver",
       ]));
 
