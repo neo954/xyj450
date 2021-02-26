@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // bian.c
 // by mon. 1/3/97
 
@@ -20,11 +20,11 @@ int main(object me, string arg)
         return notify_fail("你正在战斗，无暇变身。\n");
       if( me->is_busy() || me->query_temp("pending/exercising"))
    return notify_fail("你正忙着呢，没工夫变身。\n");
- 
-      if (!arg || arg=="me" || arg==me->query("id")) 
+
+      if (!arg || arg=="me" || arg==me->query("id"))
    who=me;
       else {
-   if(!objectp(who=present(arg,environment(me)))) 
+   if(!objectp(who=present(arg,environment(me))))
       return notify_fail("你想变成谁？\n");
       }
 
@@ -49,7 +49,7 @@ int main(object me, string arg)
       else {
         spells=me->query_skill("spells");
    mana=me->query("mana");
-   if (me->query("combat_exp") < 30000) 
+   if (me->query("combat_exp") < 30000)
       return notify_fail("你的道行还不够。\n");
    if (spells<25)
       return notify_fail("你的法术不够。\n");
@@ -57,9 +57,9 @@ int main(object me, string arg)
       return notify_fail("你的法力不足。\n");
         if (wizardp(who) && !wizardp(me))
       return notify_fail("你的法术不足以变成巫师。\n");
-   
-   dmana=15+400/(spells-20); 
-   
+
+   dmana=15+400/(spells-20);
+
    message_vision(HIY "$N手捻口诀，念动真言，摇身一变，变得和$n一模一样！\n" NOR,me,who);
         me->set_temp("spellslevel",spells);
    me->set_temp("apply/name",({who->name()}));
@@ -83,14 +83,14 @@ int main(object me, string arg)
 }
 
 int do_bian(object me)
-{  
+{
     int dmana,mana,spells;
 
     if(!me) return 1;
 
     dmana=me->query_temp("d_mana");
     spells=me->query_temp("spellslevel");
-   
+
 //    tell_object(me,"Mana, d_mana, spells:"+me->query("mana")+
 //     ","+dmana+","+spells+"\n");
 
@@ -111,7 +111,7 @@ int do_bian(object me)
       me->delete_temp("apply/long");
       while( environment(me)->is_character() )
                    me->move(environment(environment(me)));
-      if (dmana>0) 
+      if (dmana>0)
         message_vision(HIY
         "只见$N面色苍白，一个恍惚之间，已经现了原形。\n" NOR,me);
     }
