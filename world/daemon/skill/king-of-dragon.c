@@ -55,4 +55,3 @@ mixed hit_ob(object me, object victim, int damage_bonus)
 	if ( ! userp (victim))
 	if ( living (victim)) victim -> unconcious () ;
 }
-
