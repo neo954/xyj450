@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // xuy
 #include <ansi.h>
 inherit ROOM;
@@ -19,7 +19,7 @@ LONG
 
 void init()
 {
-   if (!wizardp(this_player())){ 
+   if (!wizardp(this_player())){
         add_action("do_quit","get");
         call_out("force_quit",1,this_player());
         //use delayed quit to avoid the error message
