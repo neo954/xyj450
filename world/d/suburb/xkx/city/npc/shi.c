@@ -30,7 +30,7 @@ void create()
 	set_temp("apply/damage", 20);
 
 	set("max_kee", 700);
-	set("force", 700); 
+	set("force", 700);
 	set("max_force", 700);
 	set("jiali", 20);
 
