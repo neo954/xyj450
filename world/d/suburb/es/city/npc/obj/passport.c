@@ -9,4 +9,3 @@ void create()
         set("base_weight", 200);
         set("no_sell", 1);
 }
-
