@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: some place in 西牛贺洲
 // inside2.c
 
@@ -21,7 +21,7 @@ set("exits", ([ /* sizeof() == 4 */
 "south": __DIR__"sleep",
 ]));
 set("objects", ([
-                __DIR__"npc/xiao": 3, 
+                __DIR__"npc/xiao": 3,
                 __DIR__"npc/zhangmen": 1,
      __DIR__"obj/rack": 1,
 ]) );
