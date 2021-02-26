@@ -30,4 +30,3 @@ int valid_leave(object me, string dir)
 	}
 	return 1;
 }
-
