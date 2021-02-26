@@ -93,4 +93,3 @@ nomask void clear_condition()
 {
    conditions = 0;
 }
-
