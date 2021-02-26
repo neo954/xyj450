@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 11/21/1997
 
 inherit ROOM;
@@ -60,8 +60,8 @@ int do_zuochan ()
   message_vision ("$N盘膝而坐，合掌闭目。\n",who);
   if (i >= size)
   {
-    message_vision ("\n$N沉思少顷，觉得禅意似乎已尽。\n",who); 
-  }  
+    message_vision ("\n$N沉思少顷，觉得禅意似乎已尽。\n",who);
+  }
   else
   {
     j = i*18+10;
@@ -74,8 +74,8 @@ int do_zuochan ()
 
 void start_zhuochan (object who, int i)
 {
-  message_vision ("\n$N念道："+msgs[i]+"\n",who); 
-  message_vision ("\n片刻，$N开始低首坐禅。\n",who); 
+  message_vision ("\n$N念道："+msgs[i]+"\n",who);
+  message_vision ("\n片刻，$N开始低首坐禅。\n",who);
   who->set_temp("obstacle/biqiu_zuochan",i+1);
 }
 
@@ -84,7 +84,7 @@ void finish_zhuochan (object who)
   object where = environment(who);
 
   who->interrupt_me ();
-  message_vision ("\n$N坐禅完毕，起身。\n",who); 
+  message_vision ("\n$N坐禅完毕，起身。\n",who);
   // much slower than normal speed, just a symbolic reward
   where->add("times",1);
   if (where->query("times") < 200)
