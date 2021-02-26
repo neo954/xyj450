@@ -1,14 +1,14 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // cp.c
- 
+
 inherit F_CLEAN_UP;
- 
+
 int main(object me, string arg)
 {
    string src, dst, *dirs;
- 
+
    seteuid(geteuid(me));
    if (!arg || sscanf(arg, "%s %s", src, dst)!=2 ) return
      notify_fail("指令格式: cp <原档名> <目标档名> \n");
@@ -27,15 +27,15 @@ int main(object me, string arg)
      write("你没有足够的读写权利。\n");
    return 1;
 }
- 
+
 int help(object me)
 {
   write(@HELP
 指令格式 : cp <原档名> <目标档名>
- 
+
 此指令可让你拷贝档案。
 HELP
     );
     return 1;
 }
- 
+
