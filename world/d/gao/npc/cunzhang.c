@@ -35,5 +35,3 @@ set("inquiry", ([
         carry_object("/obj/cloth")->wear();
 
 }
-
-
