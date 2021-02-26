@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // jiading.c 家丁
 
 inherit NPC;
@@ -10,7 +10,7 @@ void create()
   set_name("家将", ({ "jia jiang", "jia", "jiang"}));
   set("gender", "男性");
   set("age", 19+random(30));
-  
+
   set("combat_exp", 200000+random(50000));
   set_skill("spear", 70);
   set_skill("dodge", 70);
@@ -25,4 +25,4 @@ void create()
   add_money("silver", 2+random(5));
 
 }
-   
+
