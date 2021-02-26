@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // honglou_b.c by none on 96/10/25
 
 inherit BULLETIN_BOARD;
