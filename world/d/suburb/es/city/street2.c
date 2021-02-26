@@ -16,7 +16,7 @@ LONG
 		__DIR__"npc/walker":	2,
 		]) );
 
-        set("exits", ([ 
+        set("exits", ([
 		"north":	__DIR__"street1",
 		"south":	__DIR__"street3",
 		]));
