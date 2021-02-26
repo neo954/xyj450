@@ -121,4 +121,3 @@ else
         write("都被人拿光了！！\n");
         return 1;
 }
-
