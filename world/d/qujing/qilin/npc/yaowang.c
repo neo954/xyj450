@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat 11/6/1997
 
 inherit NPC;
@@ -40,10 +40,10 @@ void create()
   map_skill("spells", "gouhunshu");
   set("eff_dx",-150000);
   set("nkgain",200);
-  
+
   setup();
   carry_object("/d/obj/cloth/shoupiqun")->wear();
-  
+
 }
 
 void kill_ob (object ob)
@@ -60,7 +60,7 @@ void die()
   if (where)
   {
     message("sound","\n\n只听得半空厉声高叫：“手下留情，观音来也！”\n",where);
-    message("sound", "\n妖王打了一个滚，现了金毛兽原形，被一道金光罩去。\n\n", 
+    message("sound", "\n妖王打了一个滚，现了金毛兽原形，被一道金光罩去。\n\n",
             where);
   }
   if (ob)
