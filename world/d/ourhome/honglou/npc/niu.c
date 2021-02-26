@@ -152,4 +152,3 @@ int do_getlist()
    }
    return 1;
 }
-
