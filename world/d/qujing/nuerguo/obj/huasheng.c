@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat oct 15 1997
 
 inherit ITEM;
@@ -19,7 +19,7 @@ string *names = ({
 
 void create()
 {
-  set_name("各式花生", 
+  set_name("各式花生",
           ({"hua sheng", "huasheng", "sheng", "peanut"}));
   set_weight(100);
   if (clonep())
@@ -37,7 +37,7 @@ void create()
 void init()
 {
   if (query("name")=="各式花生")
-    set_name(names[random(sizeof(names))], 
+    set_name(names[random(sizeof(names))],
             ({"hua sheng", "huasheng", "sheng", "peanut"}));
   ::init();
 }
