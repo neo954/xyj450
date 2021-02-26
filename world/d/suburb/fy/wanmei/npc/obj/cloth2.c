@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 
 #include <armor.h>
