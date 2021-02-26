@@ -49,5 +49,3 @@ void roadgone()
 	message("vision","茅草晃了晃，又遮住了向西的路。\n",this_object() );
 	delete("exits/west");
 }
-
-
