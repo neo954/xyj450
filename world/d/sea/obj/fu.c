@@ -56,4 +56,3 @@ int do_apply (string arg)
   destruct (me);
   return 1;
 }
-
