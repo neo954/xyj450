@@ -208,7 +208,7 @@ mapping *quest = ({
                 "quest_type":           "寻",
                 "exp_bonus":            15,
         ]),
-        
+
         ([      "quest":                "竹筷子",
                 "quest_type":           "寻",
                 "exp_bonus":            15,
@@ -233,7 +233,7 @@ mapping *quest = ({
                 "quest_type":           "寻",
                 "exp_bonus":            15,
         ]),
-        
+
         ([      "quest":                "铁盒",
                 "quest_type":           "寻",
                 "exp_bonus":            55,
