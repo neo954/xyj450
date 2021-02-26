@@ -34,17 +34,17 @@ void create()
 	set("thief", 0);
 	set("combat_exp", 50000);
 
-	set_skill("force", 40); 
+	set_skill("force", 40);
 	set_skill("unarmed", 40);
 	set_skill("sword", 50);
 	set_skill("dodge", 50);
 	set_skill("parry", 50);
 	set_skill("stealing", 100);
 	set_skill("begging", 100);
-	set_skill("checking", 80); 
-	set_skill("huntian-qigong", 40); 
+	set_skill("checking", 80);
+	set_skill("huntian-qigong", 40);
 	set_skill("xianglong-zhang", 40);
-	set_skill("xiaoyaoyou", 50); 
+	set_skill("xiaoyaoyou", 50);
 
 	map_skill("force", "huntian-qigong");
 	map_skill("unarmed", "xianglong-zhang");
@@ -65,7 +65,7 @@ void create()
         carry_object("/d/obj/clone/food/jitui");
         carry_object("/d/obj/clone/food/jiudai");
 	add_money("silver", 10);
-        
+
 }
 
 void attempt_apprentice(object ob)
@@ -88,9 +88,9 @@ void init()
 
 void stealing(object ob)
 {
-	mapping fam; 
- 
-	if( !ob || environment(ob) != environment() 
+	mapping fam;
+
+	if( !ob || environment(ob) != environment()
                 || ((fam = ob->query("family")) && fam["family_name"] == "丐帮")
                 || (int)ob->query_skill("taoism", 1) > 30
                 || ob->query_int() > 30
