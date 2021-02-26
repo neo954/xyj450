@@ -5,7 +5,7 @@ inherit NPC;
 void create()
 {
 	set_name("红娘", ({ "hong niang", "hong" }));
-	set("long", 
+	set("long",
 		"她是一个长得很好看的小姑娘。\n"
 		"因为被关在此处，脸上露出一丝倦容。\n");
 	set("gender", "女性");
