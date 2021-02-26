@@ -45,4 +45,3 @@
 // this defines what is one voting site. can either be 0 or 1.
 // 0: use the first 3 fields of numerical IP as a site.
 // 1: use the full 4 fileds of numerical IP as a site.
-
