@@ -26,4 +26,3 @@ void kill_ob(object ob)
 	ob->die();
 	return;
 }
-
