@@ -4,7 +4,7 @@
 按照新设战斗系统重新设置了unarmed skills参数，
 如再想调整请跟围棋商量一下。
 
-unarmed skills: 
+unarmed skills:
 menpai skill---can be used by players.
 non-menpaiskills---mainly for NPCs.
 
@@ -30,7 +30,7 @@ force: 每招(0, 150),  平均(50, 100).
 阴风爪　　0     0     73
 鹰爪功　　5     5     79
 
- 
+
 百花掌
 -5    -5    50
 -10   -10   120
