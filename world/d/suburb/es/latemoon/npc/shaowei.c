@@ -1,6 +1,6 @@
 inherit NPC;
 #include <ansi.h>
- 
+
 string *make_msg = ({
     HIY "筱薇微笑的看著你说：你要作竹蜻蜓呀!\n\n" NOR,
     HIY "筱薇将你给她的竹子仔细的看了一下。说道：不错是根玉竹! \n\n" NOR,
