@@ -43,12 +43,12 @@ void init()
 
 	if( interactive(ob = this_player()) )
 	{
-		if( mapp(fam = ob->query("family")) 
-		&&  fam["family_name"] == "少林派" 
+		if( mapp(fam = ob->query("family"))
+		&&  fam["family_name"] == "少林派"
 		&&  fam["generation"] == 37
-		&&  ob->query("guilty") == 0 ) 
+		&&  ob->query("guilty") == 0 )
 			return;
-		else 
+		else
 		{
 			message_vision(HIY "$N一进戒律院，...只听几声大喝，如同炸雷般在大殿里回响。"
 			"$N不禁浑身发抖，再也站立不住，腿一软，扑通一声跪了下来。\n\n" NOR, ob);
@@ -74,7 +74,7 @@ void processing(object ob)
 	message_vision(HIY "玄痛一声大喝：尔等大胆狂徒，擅闯本寺护法松林，意在不轨，该当何罪！"
 	"堂堂少林寺，岂能容你等宵小如此胡作非为！执法僧兵何在！\n\n" NOR, ob);
 
-	if ( (fam = ob->query("family")) && fam["family_name"] == "少林派" ) 
+	if ( (fam = ob->query("family")) && fam["family_name"] == "少林派" )
 	{
 		if (ob->query("guilty") == 1)
 		message_vision(HIY "玄痛一声大喝：$N！你离寺仅有数日，却在外杀人越货，胡作非为，"
@@ -82,7 +82,7 @@ void processing(object ob)
 
 		if (ob->query("guilty") == 3)
 		message_vision(HIY "玄痛一声大喝：$N！本寺护法松林历代向来不许门人弟子擅入，"
-		"你擅闯此地，意在不轨，该当何罪！执法僧兵何在！\n\n" NOR, ob); 
+		"你擅闯此地，意在不轨，该当何罪！执法僧兵何在！\n\n" NOR, ob);
 
 		if (ob->query("guilty") == 2)
 		{
@@ -110,7 +110,7 @@ void responsing(object ob, int i)
 	i--;
 	j = random(3);
 
-	if (i == 0) 
+	if (i == 0)
 	{	
 		remove_call_out("beating");
 		call_out("beating", 3, ob);
@@ -142,9 +142,9 @@ int valid_leave(object me, string dir)
 
 	if ( userp(me) && dir == "southdown" )
 	{
-		if( mapp(fam = me->query("family")) 
-		&&  fam["family_name"] == "少林派" 
-		&&  fam["generation"] == 37  ) 
+		if( mapp(fam = me->query("family"))
+		&&  fam["family_name"] == "少林派"
+		&&  fam["generation"] == 37  )
 			return ::valid_leave(me, dir);
 		else
 			return notify_fail("玄痛说道: 大胆，你还敢逃跑！执法僧兵何在！\n");
