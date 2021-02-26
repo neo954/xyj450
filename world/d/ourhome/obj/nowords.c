@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // nowords.c
 //cglaem...12/16/96.
 
@@ -45,6 +45,6 @@ int do_tear(string arg){
    ob->move(me);
    message_vision("$N撕开无字天书的背页，从里面小心翼翼地取出一张小纸片。\n", me);
    destruct(this_object());
-   return 1;     
+   return 1;
 }
 
