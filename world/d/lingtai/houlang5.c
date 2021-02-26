@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: some place in 西牛贺洲
 // inside2.c
 
@@ -30,14 +30,14 @@ void init()
 }
 
 int do_knock(string arg)
-{       
+{
         object me;
         me=this_player();
 
         if ( !arg || ((arg != "door") ))
                 return notify_fail("你要敲什么？\n");
 
-   message_vision("$N轻轻的拉起门上的铜环，＂啪，啪＂地扣了两下。\n",me); 
+   message_vision("$N轻轻的拉起门上的铜环，＂啪，啪＂地扣了两下。\n",me);
    message_vision("门被轻轻拉开，走出位中年道人，上下打量了$N一番。\n",me);
    if((string)me->query("family/family_name")=="方寸山三星洞") {
         if(((int)me->query("combat_exp") < 100000)) {
