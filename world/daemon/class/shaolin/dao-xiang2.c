@@ -74,19 +74,19 @@ void create()
 
 string ask_me_1()
 {
-	mapping fam; 
+	mapping fam;
 	object ob;
 	
 	if (!(fam = this_player()->query("family")) || fam["family_name"] != "少林派")
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"与本派素无来往，不知此话从何谈起？";
 
 	if ( (int)this_player()->query_condition("bonze_drug" ) > 0 )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"你是不是刚吃过药，怎麽又来要了？ 灵药多吃有害无宜，过段时间再来吧。";
 
 	if (  present("jin chuangyao", this_player()) )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"你现在身上不是有颗药丸吗，怎麽又来要了？ 真是贪得无餍！";
 
 	if (query("jin_count") < 1) return "对不起，金创药已经发完了";
@@ -103,19 +103,19 @@ string ask_me_1()
 
 string ask_me_2()
 {
-	mapping fam; 
+	mapping fam;
 	object ob;
 	
 	if (!(fam = this_player()->query("family")) || fam["family_name"] != "少林派")
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"与本派素无来往，不知此话从何谈起？";
 
 	if ( (int)this_player()->query_condition("bonze_drug" ) > 0 )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"你是不是刚吃过药，怎麽又来要了？ 灵药多吃有害无宜，过段时间再来吧。";
 
 	if (  present("xiaohuan dan", this_player()) )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"你现在身上不是有颗药丸吗，怎麽又来要了？ 真是贪得无餍！";
 
 	if (query("xiao_count") < 1) return "对不起，小还丹已经发完了";
@@ -132,19 +132,19 @@ string ask_me_2()
 
 string ask_me_3()
 {
-	mapping fam; 
+	mapping fam;
 	object ob;
 	
 	if (!(fam = this_player()->query("family")) || fam["family_name"] != "少林派")
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"与本派素无来往，不知此话从何谈起？";
 
       if ( (int)this_player()->query_condition("bonze_drug" ) > 0 )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"你是不是刚吃过药，怎麽又来要了？ 灵药多吃有害无宜，过段时间再来吧。";
 
 	if (  present("dahuan dan", this_player()) )
-		return RANK_D->query_respect(this_player()) + 
+		return RANK_D->query_respect(this_player()) +
 		"你现在身上不是有颗药丸吗，怎麽又来要了？ 真是贪得无餍！";
 
 	if (query("da_count") < 1) return "对不起，大还丹已经发完了";
