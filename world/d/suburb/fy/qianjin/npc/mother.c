@@ -33,4 +33,3 @@ LONG
 	carry_object(__DIR__"obj/color_cloth")->wear();
 	carry_object("/obj/toy/poison_dust.c");
 }
-
