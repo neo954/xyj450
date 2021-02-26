@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // purge.c
 
 #include <ansi.h>
@@ -30,7 +30,7 @@ int main(object me, string arg)
    if( file_size(DATA_DIR + "playerhomes/h_" + name + __SAVE_EXTENSION__)<0 )
      return notify_fail("没有这位使用者。\n");
    if( (string)SECURITY_D->get_status(name)!="(player)" )
-     return notify_fail("非玩家的房屋档案不能被删除。\n"); 
+     return notify_fail("非玩家的房屋档案不能被删除。\n");
 
    rm(DATA_DIR + "playerhomes/h_" + name + __SAVE_EXTENSION__);
    write( "使用者 " + capitalize(name) + " 的房屋档案被删除掉了。\n");
