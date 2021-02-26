@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 11/16/1997
 
 inherit ROOM;
@@ -60,7 +60,7 @@ void boiling (object where)
   tell_room (where,msgs[random(sizeof(msgs))]+"。\n");
   remove_call_out ("boiling");
   call_out ("boiling",random(10)+20,where);
- 
+
 }
 
 object finding (object where, int find_npc)
@@ -77,7 +77,7 @@ object finding (object where, int find_npc)
   if (interactive(ob) && find_npc)
     return 0;
 
-  return ob; 
+  return ob;
 }
 
 void playing (object where)
