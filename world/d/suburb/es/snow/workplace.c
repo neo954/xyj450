@@ -2,7 +2,7 @@
 #include <room.h>
 
 inherit ROOM;
- 
+
 string look_sign ();
 
 void create ()
