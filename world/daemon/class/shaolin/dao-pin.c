@@ -66,4 +66,3 @@ void create()
 
 
 #include "/daemon/class/shaolin/dao.h"
-
