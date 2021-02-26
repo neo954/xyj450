@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 /*
  * File    : affirmation_a.c
  * Creator : Pinkfish@Discworld
@@ -38,7 +38,7 @@ void incoming_request(mapping info)
 }
 
 void send_affirmation_a(string host, string port, string from, string to,
-   string msg, string type) 
+   string msg, string type)
 {
    if(!ACCESS_CHECK(previous_object())) return;
 
