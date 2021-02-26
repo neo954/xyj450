@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // guihuageng.c 桂花雪莲羹
 
 inherit ITEM;
@@ -21,7 +21,7 @@ void create()
         set("remaining", 5);
         set("food_supply", 30);
     }
-   
+
    setup();
 }
 
@@ -35,7 +35,7 @@ int do_chi(string arg)
 {
 
    int heal, recover, sen, e_sen, m_sen,remaining;
-   
+
     if( !this_object()->id(arg) ) return 0;
     if( this_player()->is_busy() )
         return notify_fail("你上一个动作还没有完成。\n");
@@ -48,31 +48,31 @@ int do_chi(string arg)
     m_sen = (int)this_player()->query("max_sen");
    heal = (int)this_player()->query_con();
     e_sen = (int)this_player()->query("eff_sen");
-   
+
     if ( e_sen < m_sen )
-   {    
+   {
      if ( (e_sen + heal) >= m_sen )
      {
         this_player()->set("eff_sen", m_sen);
      } else
-     {   
+     {
         this_player()->add("eff_sen", heal);
-     }   
-   } 
+     }
+   }
 
     e_sen = (int)this_player()->query("eff_sen");
     sen = (int)this_player()->query("sen");
    recover = 30+heal;
-    
+
    if (sen < e_sen )
    {
         if ( (sen + recover) >= e_sen )
         {
             this_player()->set("sen", e_sen);
         } else
-        {   
+        {
             this_player()->add("sen", recover);
-        }   
+        }
    }
 
     if( this_player()->is_fighting() ) this_player()->start_busy(2);
@@ -81,10 +81,10 @@ int do_chi(string arg)
    if ( query("remaining") )
    {
          message_vision("$N拿起一碗桂花雪莲羹吃了几口。一股清香直入心脾，$N觉得精神好多了。\n", this_player());
-   } else 
-   { 
+   } else
+   {
          message_vision("$N把碗里的桂花雪莲羹舔得干乾净净，仍是意尤未尽。\n", this_player());
-     
+
      destruct(this_object());
    }
 
