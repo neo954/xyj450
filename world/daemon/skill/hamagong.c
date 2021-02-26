@@ -22,12 +22,12 @@ int valid_learn(object me)
 
 	if(i<=100)
 	{
-		if (i > 10 && -(int)me->query("shen") < t * 100) 
+		if (i > 10 && -(int)me->query("shen") < t * 100)
 			return notify_fail("学蛤蟆功，要心狠手辣，奸恶歹毒，你可做得不够呀！\n");
 	}
 	else
 	{
-		if (-(int)me->query("shen") < (51200 + (i - 100) * 1000)) 
+		if (-(int)me->query("shen") < (51200 + (i - 100) * 1000))
 			return notify_fail("学蛤蟆功，要心狠手辣，奸恶歹毒，你可做得不够呀！\n");
 	}
 
