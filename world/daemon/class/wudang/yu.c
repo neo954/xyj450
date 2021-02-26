@@ -7,7 +7,7 @@ void create()
 {
 	set_name("俞莲舟", ({ "yu lianzhou", "yu" }));
 	set("nickname", "武当二侠");
-	set("long", 
+	set("long",
 		"他就是张三丰的二弟子俞莲舟。\n"
 		"他今年五十岁，身材魁梧，气度凝重。\n"
 		"虽在武当七侠中排名第二，功夫却是最精。\n");
