@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 
 #include <ansi.h>
@@ -17,7 +17,7 @@ void create()
 鼻气味。
 LONG
 	);
-	set("exits", ([ 
+	set("exits", ([
   "east" : __DIR__"zhaoze3",
 ]));
 
