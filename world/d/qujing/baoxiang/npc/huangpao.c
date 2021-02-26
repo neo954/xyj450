@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // create by snowcat 10/16/1997
 
 inherit NPC;
@@ -48,10 +48,10 @@ void create()
        "舍利子": (: give_dan :),
        "舍利子内丹": (: give_dan :),
       ]));
-  
+
   setup();
   carry_object("/d/qujing/baoxiang/obj/sppifeng")->wear();
-  
+
 }
 
 int give_dan ()
@@ -59,7 +59,7 @@ int give_dan ()
   object me = this_object();
   object who = this_player();
   string *names = who->query_temp("apply/name");
-  
+
   if (! names ||
       sizeof(names)==0 ||
       names[0]!="百花羞")
