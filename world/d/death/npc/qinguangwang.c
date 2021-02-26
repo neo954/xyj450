@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //puti.c
 inherit NPC;
 inherit F_MASTER;
@@ -40,7 +40,7 @@ void create()
   map_skill("spells", "gouhunshu");
   create_family("阎罗地府", 2, "你好");
   setup();
-  
+
   carry_object("/d/obj/cloth/mangpao")->wear();
   //        carry_object("/d/lingtai/obj/shoe")->wear();
   //        carry_object("/d/lingtai/obj/putibang")->wield();
