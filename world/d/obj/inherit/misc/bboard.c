@@ -143,7 +143,7 @@ int do_read(string arg)
 	// Keep track which post we were reading last time.
 	if( !mapp(last_read_time) )
 		this_player()->set("board_last_read", ([ myid: notes[num]["time"] ]) );
-	else 
+	else
 		if( undefinedp(last_read_time[myid]) || notes[num]["time"] > last_read_time[myid] )
 			last_read_time[myid] = notes[num]["time"];
 
@@ -163,7 +163,7 @@ int do_discard(string arg)
 		return notify_fail("没有这张留言。\n");
 	num--;
 	if( notes[num]["author"] != (string) this_player(1)->query("name")
-	&&	(string)SECURITY_D->get_status(this_player(1)) != "(admin)" 
+	&&	(string)SECURITY_D->get_status(this_player(1)) != "(admin)"
 	&&      (string)SECURITY_D->get_status(this_player(1)) != "(arch)")
 		return notify_fail("这个留言不是你写的。\n");
 
