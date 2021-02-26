@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// created by snowcat 
+
+// created by snowcat
 
 inherit ITEM;
 
@@ -41,7 +41,7 @@ int do_donate (string arg)
     if( !objectp(obj = present(item, who)) )
       return notify_fail("你身上没有这样东西。\n");
 
-    if(!obj->value()) 
+    if(!obj->value())
        return notify_fail("这里只接受钱币捐款。\n");
 
     if( amount < 1 )
