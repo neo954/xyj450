@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // equip.c
 
 inherit ITEM;
@@ -13,4 +13,4 @@ void setup()
    if( !query("weapon_prop/dodge") && (weight() >= 3000) )
      set("weapon_prop/dodge", - weight() / 3000 );
 }
-int query_autoload() { return 0; }      
+int query_autoload() { return 0; }
