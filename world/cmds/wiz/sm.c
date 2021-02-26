@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // self-made fabao
 
 #include <ansi.h>
@@ -37,31 +37,31 @@ int main(object me, string arg)
 
    if( me->query("combat_exp") < 20000)
      return notify_fail("你的道行不够，不能自造法宝。\n");
-   
+
    if( me->query("max_force") < 300 )
      return notify_fail("你的内力不够，不能自造法宝。\n");
-     
+
    if( me->query("max_mana") < 300)
      return notify_fail("你的法力不够，不能自造法宝。\n");
-   
+
    if( me->query("force") < (me->query("max_force")+100) )
      return notify_fail("你的真气不足，不能自造法宝。\n");
-   
+
    if( me->query("mana") < (me->query("max_mana")+100) )
      return notify_fail("你的魔力不足，不能自造法宝。\n");
-   
+
    if( me->query("kee") != me->query("max_kee") ||
-       me->query("sen") != me->query("max_sen") ) 
+       me->query("sen") != me->query("max_sen") )
      return notify_fail("你的精气不足，不能自造法宝。\n");
 
-    fabao_num = 0;     
+    fabao_num = 0;
    if( me->query("fabao/weapon") )     fabao_num++;
    if( me->query("fabao/armor1") )     fabao_num++;
    if( me->query("fabao/armor2") )     fabao_num++;
-   
+
    if( fabao_num >= MAX_FABAO )
      return notify_fail("你不能再自制法宝了，请用 dispose 毁灭不要的法宝。\n");
-     
+
    write("您要造哪类法宝：\n");
    if( !me->query("fabao/weapon") )
      write("w. 武器\n");
@@ -72,8 +72,8 @@ int main(object me, string arg)
    // we can use as a default object.
    write("请选择：");
    input_to( (: get_type :), me );
-   
-   return 1;   
+
+   return 1;
 }
 
 void get_type(string arg, object ob)
@@ -100,7 +100,7 @@ void get_type(string arg, object ob)
      write("请选择：");
    }
    else if( arg == "a" )   {
-     fabao_type = "armor";   
+     fabao_type = "armor";
      write("\n");
      write("可选择防具种类：\n");
      write("1. 甲  2. 鞋  3. 衣服  4. 指套  5. 护掌  6. 头罩\n");
@@ -113,9 +113,9 @@ void get_type(string arg, object ob)
 void get_subtype(string arg, object ob)
 {
     int  order;
-    
+
     sscanf(arg, "%d", order);
-    
+
    if( (fabao_type == "weapon" && order <= 0 && order > 10) ||
      (fabao_type == "armor" && order <= 0 && order > 11) )  {
      if( arg == "w" )    {
@@ -127,7 +127,7 @@ void get_subtype(string arg, object ob)
         write("请选择：");
      }
      else if( arg == "a" )   {
-        fabao_type = "armor";   
+        fabao_type = "armor";
         write("\n");
         write("可选择防具种类：\n");
         write("1. 甲  2. 鞋  3. 衣服  4. 指套  5. 护掌  6. 头罩\n");
@@ -137,12 +137,12 @@ void get_subtype(string arg, object ob)
      input_to( (: get_subtype :), ob);
      return;
    }
-   
+
    fabao_subtype = order;
 
    write("\n");
    write("请设定英文 id ：");
-   input_to( (: get_id :), ob ); 
+   input_to( (: get_id :), ob );
 }
 
 
@@ -150,7 +150,7 @@ int check_legal_id(string id)
 {
    int i;
    string   *legalid;
-   
+
    i = strlen(id);
     if( (strlen(id) < 3) || (strlen(id) > 20 ) ) {
      write("对不起，英文 id 必须是 3 到 20 个英文字母。\n");
@@ -161,7 +161,7 @@ int check_legal_id(string id)
          write("对不起，英文 id 只能用英文字母。\n");
          return 0;
        }
-    
+
     legalid = explode(read_file(BANNED_ID), "\n");
     for(i=0; i<sizeof(legalid); i++)   {
        if( id == legalid[i] )   {
@@ -169,7 +169,7 @@ int check_legal_id(string id)
          return 0;
        }
     }
-    
+
     return 1;
 }
 
@@ -178,7 +178,7 @@ int check_legal_name(string name, int max_len)
 {
    int i;
 // string   *legalname;     //not implemented..may add later
-   
+
    i = strlen(name);
     if( (strlen(name) < 3) || (strlen(name) > max_len ) ) {
        write( sprintf("对不起，法宝中文名字必须是 2 到 %d 个中文字。\n",
@@ -195,8 +195,8 @@ int check_legal_name(string name, int max_len)
          return 0;
        }
     }
-   
-    return 1; 
+
+    return 1;
 }
 
 
@@ -205,12 +205,12 @@ void get_id(string arg, object ob)
    arg = lower_case(arg);
    if( !check_legal_id(arg) )   {
      write("请设定英文 id ：");
-     input_to( (: get_id :), ob ); 
+     input_to( (: get_id :), ob );
      return;
    }
-   
+
    fabao_id = arg;
-   
+
    write("\n");
    write("请设定中文名：");
    input_to( (: get_name :), ob);
@@ -262,9 +262,9 @@ void get_name(string arg, object ob)
         arg = replace_string(arg, "$HIC$", HIC);
         arg = replace_string(arg, "$HIW$", HIW);
         arg = replace_string(arg, "$NOR$", NOR);
-   
+
    fabao_name = arg + NOR;
-   
+
    write("\n");
    write("请描述法宝：");
    input_to( (: get_desc :), ob);
@@ -277,13 +277,13 @@ void get_desc(string arg, object ob)
      input_to( (: get_desc :), ob);
      return;
    }
-   
+
    fabao_desc = arg;
-   
+
    if( fabao_type == "weapon" )
-     build_weapon(ob);   
+     build_weapon(ob);
    else if( fabao_type == "armor" )
-     build_armor(ob);   
+     build_armor(ob);
    // may have more later
 }
 
@@ -293,21 +293,21 @@ void build_weapon(object ob)
    string weapon_dir, ob_file;
    string *id_list, *t_list;
    int rev;
-   
+
    newob = new("/obj/fabao");
    if(!newob)
      return;
-     
+
    seteuid(fabao_id);
    rev = export_uid(newob);
    seteuid(getuid());
 
    newob->set("value", 1);
-   newob->set("no_get", 1);   
-   newob->set("no_sell", 1);   
-   newob->set("no_drop", 1);   
-   newob->set("no_put", 1);   
-   
+   newob->set("no_get", 1);
+   newob->set("no_sell", 1);
+   newob->set("no_drop", 1);
+   newob->set("no_put", 1);
+
    weapon_dir = "/d/obj/weapon/";
    newob->set("weapon_prop/damage", 1);
    newob->set("flag", TWO_HANDED);
@@ -345,14 +345,14 @@ void build_weapon(object ob)
    }
 
    newob->set_default_object( ob_file );
-   
+
    newob->set("long", fabao_desc);
    id_list = ({ fabao_id });
    t_list = explode( fabao_id, " ");
    if( sizeof(t_list) > 1 )   {
      id_list += t_list;
    }
-   newob->set_name( fabao_name, id_list ); 
+   newob->set_name( fabao_name, id_list );
 
    // set owner of fabao
    newob->set("owner_id", getuid(ob));
@@ -360,7 +360,7 @@ void build_weapon(object ob)
    newob->set("default_file", ob_file);
 
 
-    newob->save();   
+    newob->save();
 
    ob->add("max_force", -50);
    ob->add("max_mana", -50);
@@ -385,25 +385,25 @@ void build_armor(object ob)
    newob = new("/obj/fabao");
    if(!newob)
      return;
-   
+
    seteuid(fabao_id);
    rev = export_uid(newob);
    seteuid(getuid());
 
    newob->set("value", 1);
-   newob->set("no_get", 1);   
-   newob->set("no_sell", 1);   
-   newob->set("no_drop", 1);   
-   newob->set("no_put", 1);   
+   newob->set("no_get", 1);
+   newob->set("no_sell", 1);
+   newob->set("no_drop", 1);
+   newob->set("no_put", 1);
 
    armor_dir = "/d/obj/";
-   newob->set("armor_prop/armor", 1);     
-   newob->set("armor_prop/dodge", 0);     
+   newob->set("armor_prop/armor", 1);
+   newob->set("armor_prop/dodge", 0);
    newob->set("armor_prop/spells", 0);
    // anything else need to be set?
-   
+
    switch( fabao_subtype )   {
-   
+
    // Add ob_file if you can find the same kind of file
      case 1:
         ob_file = armor_dir + "armor/tenjia";
@@ -453,16 +453,16 @@ void build_armor(object ob)
         return;
         break;
    }
-   
+
    newob->set_default_object( ob_file );
-   
+
    newob->set("long", fabao_desc);
    id_list = ({ fabao_id });
    t_list = explode( fabao_id, " ");
    if( sizeof(t_list) > 1 )   {
      id_list += t_list;
    }
-   newob->set_name( fabao_name, id_list ); 
+   newob->set_name( fabao_name, id_list );
 
    // set owner of fabao
    newob->set("owner_id", getuid(ob));
@@ -472,21 +472,21 @@ void build_armor(object ob)
      newob->set("series_no", "3");
    newob->set("default_file", ob_file);
 
-    newob->save();   
+    newob->save();
       write("Error" + getuid(newob) + "\n");
 
    ob->add("max_force", -50);
    ob->add("max_mana", -50);
    ob->add("force", -200);
    ob->add("mana", -200);
-   
+
    if( !ob->query("fabao/armor1") )
      ob->set("fabao/armor1",  newob->query("series_no"));
    else if( !ob->query("fabao/armor2") )
      ob->set("fabao/armor2",  newob->query("series_no"));
-   
+
    newob->setup();
    newob->move(ob);
-   
+
    return;
 }
