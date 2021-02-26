@@ -46,4 +46,3 @@ int valid_leave (object who, string dir)
   }
   return 1;
 }
-
