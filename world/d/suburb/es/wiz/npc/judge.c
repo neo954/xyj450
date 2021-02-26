@@ -50,15 +50,15 @@ void chat()
 	a = random(100) + 1;
 	b = random(100) + 1;
 	switch(random(5)) {
-		case 0: 
+		case 0:
 			answer = a + b;
 			oper = chinese_number(a) + "加上" + chinese_number(b)+ "等于多少？";
 			break;
-		case 1: 
+		case 1:
 			answer = a - b;
 			oper = chinese_number(a) + "减去" + chinese_number(b)+ "等于多少？";
 			break;
-		case 2: 
+		case 2:
 			if( a * b < 200 ) {
 				answer = a * b;
 				oper = chinese_number(a) + "乘上" + chinese_number(b)+ "等于多少？";
@@ -67,7 +67,7 @@ void chat()
 				oper = chinese_number(a) + "乘上" + chinese_number(b)+ "，个位数等于多少？";
 			}
 			break;
-		case 3: 
+		case 3:
 			answer = a % b;
 			oper = chinese_number(a) + "除以" + chinese_number(b)+ "馀于多少？";
 			break;
