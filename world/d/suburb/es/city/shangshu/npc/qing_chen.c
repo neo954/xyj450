@@ -60,5 +60,3 @@ void create()
         carry_object(__DIR__"obj/white_cloth")->wear();
 	carry_object(__DIR__"obj/sword")->wield();
 }
-
-
