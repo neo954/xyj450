@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // niu.c
 // 1996/10/31 by none
 
@@ -24,7 +24,7 @@ void create()
    ]) );
    set_skill("literate", 100);
    setup();
-   carry_object("/d/obj/cloth/skirt.c")->wear(); 
+   carry_object("/d/obj/cloth/skirt.c")->wear();
    carry_object("/d/obj/cloth/shoes")->wear();
 }
 
