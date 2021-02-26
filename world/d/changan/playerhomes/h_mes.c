@@ -1,11 +1,11 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // /d/changan/playerhomes/stdhome.c
 // this room is a standard home for married couples.
 // wiz should modify /d/changan/phomes.c to set a exit
-// and copy this room for them then let the players tell you 
-// the descriptions of the room.  
+// and copy this room for them then let the players tell you
+// the descriptions of the room.
 
 #include <ansi.h>
 inherit ROOM;
@@ -15,16 +15,16 @@ void create()
         set("short", "小草屋");
         set("long", @LONG
 
-一切都设置好了，只等一些室内装修。 
+一切都设置好了，只等一些室内装修。
 LONG
         );
 
             set("valid_startroom",1);
-        
+
         set("exits", ([
                 "out": "/d/changan/phomes",
             ]));
-                                              
+
         setup();
 }
 
