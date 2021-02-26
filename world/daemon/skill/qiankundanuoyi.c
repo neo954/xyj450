@@ -25,8 +25,8 @@ string *dodge_msg = ({
 	"$n轻轻一转，$N一招击在地上，只打得尘土飞扬。\n",
 });
 
-int valid_enable(string usage) 
-{ 
+int valid_enable(string usage)
+{
     return (usage == "parry") || (usage == "dodge");
 }
 
