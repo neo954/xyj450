@@ -36,4 +36,3 @@ void remove_effect(object me, int amount)
         me->delete_temp("speedup");
         tell_object(me, "你的净衣心法运行完毕，整个人又松懈了下来。\n");
 }
-
