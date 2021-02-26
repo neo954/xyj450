@@ -10,7 +10,7 @@ void create()
 栋水晶宫殿。无论谁第一次看到这种景象，都一定会目眩情迷，心动神驰。
 LONG
         );
-        set("exits", ([ 
+        set("exits", ([
   "northwest" : __DIR__"downtown",
   "south" : __DIR__"town",
 ]));
