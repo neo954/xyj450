@@ -1,6 +1,6 @@
 //mac's houzai.c
-// 
-// 
+//
+//
 
 
 #include <room.h>
