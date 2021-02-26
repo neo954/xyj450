@@ -46,7 +46,7 @@ int do_take(string arg)
 	object obj;
 
 	if( !arg ) return notify_fail("你要拿什么 ? \n");
-	if( arg !="cloth" ) { 
+	if( arg !="cloth" ) {
 		if ( query("make_cockroach") ) {
 			message_vision("$N一声尖叫 ! 突然出现一只大蟑螂。\n",this_player());
 			obj = new(__DIR__"npc/cockroach");
