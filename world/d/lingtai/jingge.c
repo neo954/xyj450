@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: some place in 西牛贺洲
 // jingge.c
 
@@ -15,7 +15,7 @@ void create()
 夫和一些道教经典供弟子们平时研读。一排排的书架整齐的摆在
 屋中。
 LONG);
-set("item_desc",(["shelf": 
+set("item_desc",(["shelf":
 "远处的看不清楚，最近的一个上好象有些千字文，道德经之类．\n"]));
 set("exits", ([ /* sizeof() == 4 */
 "south": __DIR__"houyuan",
