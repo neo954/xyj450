@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 #include <ansi.h>
 
@@ -12,7 +12,7 @@ void create()
         set("title", "钱庄掌柜");
         set("gender", "男性");
         set("age", 54);
-        set("kee", 800); 
+        set("kee", 800);
         set("max_kee", 800);
         set("sen", 200);
         set("max_sen", 200);
@@ -54,7 +54,7 @@ void reset_balance(object me)
 
     if(myexp<1) myexp=1;
     if(myexp>100) myexp=100;
-    allowed=myexp*1000000;//each year can have 100 gold, range 100-10000. 
+    allowed=myexp*1000000;//each year can have 100 gold, range 100-10000.
     if (me->query("balance") > allowed)
     {
    me->set("balance_old", me->query("balance"));
@@ -83,7 +83,7 @@ void accept_kill(object me)
                 ob=new("/d/city/npc/xunluobing");
                 ob->move(environment());
         }
-        message_vision("\n忽然从门外冲进来个巡逻官兵，对$N大喊一声“干什么？想杀人谋财么！\n\n",me);        
+        message_vision("\n忽然从门外冲进来个巡逻官兵，对$N大喊一声“干什么？想杀人谋财么！\n\n",me);
 
         ob->kill_ob(me);
         ob->set_leader(me);
