@@ -34,7 +34,7 @@ void create()
 	set("no_clean_up",1);
 	set("combat_exp", 50000);
 
-	set_skill("force", 80); 
+	set_skill("force", 80);
 	set_skill("unarmed", 100);
 	set_skill("dodge", 80);
 	set_skill("parry", 80);
@@ -42,7 +42,7 @@ void create()
 	set("fight_times", 0);	
 
 	setup();
-        
+
 }
 
 int accept_fight(object ob)
@@ -74,14 +74,14 @@ int checking(object me, object ob)
 	object obj;
 	int my_max_qi, his_max_qi;
 
-	if ( !present(ob, environment()) ) return 1; 
+	if ( !present(ob, environment()) ) return 1;
 
 	my_max_qi  = me->query("max_kee");
 	his_max_qi = ob->query("max_kee");
 
-	if( me->is_fighting() ) 
+	if( me->is_fighting() )
 	{
-		if (( (int)me->query("kee")*100 / my_max_qi) <= 80 ) 
+		if (( (int)me->query("kee")*100 / my_max_qi) <= 80 )
 		{
 			say(GRN "\n江百胜说道： 魏盟主泽被天下，福济苍生， 他老人家算无遗策，功无不克，克无不胜！\n" NOR);
 			say(GRN "\n江百胜说道： 魏盟主一句话，属下办事戳力，勇往直前！ 冰天雪地往里闯，刀山火海就敢去！\n" NOR);
@@ -92,7 +92,7 @@ int checking(object me, object ob)
 			me->set("gin",   me->query("max_gin"));
 			me->set("force",  me->query("max_force"));
 		}
-		else if (( (int)ob->query("kee")*100 / his_max_qi) < 50 ) 
+		else if (( (int)ob->query("kee")*100 / his_max_qi) < 50 )
 		{
 			say(GRN "\n江百胜说道： 看来你小子跟我还差着一大截呢，回去练上十年再来吧！\n");
 			return 1;
@@ -101,5 +101,5 @@ int checking(object me, object ob)
 		if ( present(ob, environment()) ) call_out("checking", 1, me, ob);
 	}
 
-	return 1;  
+	return 1;
 }
