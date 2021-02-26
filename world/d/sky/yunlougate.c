@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <room.h>
 inherit ROOM;
 
@@ -42,7 +42,7 @@ int valid_leave(object me, string dir)
         return notify_fail("鱼师将伸手将你拦住，说：此乃天王府，闲杂人等闪开！\n");
         if (objectp(present("yaocha jiang", environment(me))))
         return notify_fail("药叉将伸手将你拦住，说：此乃天王府，闲杂人等闪开！\n");
-        }   
+        }
         return ::valid_leave(me, dir);
 }
 
