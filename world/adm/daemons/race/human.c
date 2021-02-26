@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // human.c
 
 // A normal human is at least 40 kg weight
@@ -39,7 +39,7 @@ void setup_human(object ob)
    my = ob->query_entire_dbase();
 
    ob->set("default_actions", (: call_other, __FILE__, "query_action" :));
-   
+
    if( undefinedp(my["age"]) ) my["age"] = random(30) + 15;
 
    if( undefinedp(my["str"]) ) my["str"] = random(21) + 10;
@@ -67,7 +67,7 @@ void setup_human(object ob)
    if( userp(ob) || undefinedp(my["max_kee"]) ) {
      if( my["age"] <= 14 ) my["max_kee"] = 100;
      else if( my["age"] <= 30 ) my["max_kee"] = 100 + (my["age"] - 14) * qi;
-     else my["max_kee"] = 100 + 16 * qi; 
+     else my["max_kee"] = 100 + 16 * qi;
      if( my["max_force"] > 0 ) my["max_kee"] += my["max_force"] / 4;
 
      if(my["max_kee"]<1) my["max_kee"]=1;//mon 1/28/98
@@ -79,18 +79,18 @@ void setup_human(object ob)
      else if( my["age"] <= 40 ) my["max_sen"] = 100 + 16 * shen;
      else {
      //when age>40, max_sen will drop...but if you have
-     //"always_young"(defined in "look.c"), only drop 
+     //"always_young"(defined in "look.c"), only drop
      //to atmost your "faked_age"...weiqi,062897.
         if( my["always_young"] ){
            if( my["fake_age"] <= 40 )
               my["max_sen"] = 100 + 16 * shen;
-           else 
+           else
               my["max_sen"] = 100 +16 * shen - (my["fake_age"] - 40) * 5;
         }
-        else 
+        else
               my["max_sen"] = 100 +16 * shen -
               (my["age"] - 40) * 5;
-     }   
+     }
      if( my["max_mana"] > 0 ) my["max_sen"] += my["max_mana"]*2 / 5;
      //here we make mana very useful, so set divided by 2.5, instead of 4.
      if(my["max_sen"]<1) my["max_sen"]=1;//mon 1/28/98
