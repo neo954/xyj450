@@ -19,4 +19,3 @@ void create()
   setup();
   carry_object("/d/qujing/baoxiang/obj/gongpao")->wear();
 }
-
