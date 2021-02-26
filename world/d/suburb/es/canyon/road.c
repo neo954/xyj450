@@ -56,4 +56,3 @@ int do_climb(string arg)
 	me->move(__DIR__"canyon1");
         return 1;
 }
-
