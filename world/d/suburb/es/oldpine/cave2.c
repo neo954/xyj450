@@ -17,7 +17,7 @@ LONG
 void reset()
 {
         ::reset();
-        
+
 	set("exits", ([ /* sizeof() == 4 */
         	"south" : __DIR__"cave" + (random(4)+1),
           	"north" : __DIR__"cave" + (random(4)+1),
