@@ -29,4 +29,3 @@ setup();
 
         carry_object("/d/obj/weapon/whip/tielian")->wield();
 }
-
