@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // 肉包子 renroubao.c
 // 9-16-97 pickle
 
@@ -15,7 +15,7 @@ void create()
   if( clonep() )
     set_default_object(__FILE__);
   else {
-    set("long", 
+    set("long",
 "一个香喷喷、热腾腾的大包子。\n");
     set("unit", "个");
     set("value", 0);
