@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // by snowcat 11/6/1997
 inherit ROOM;
 
@@ -12,7 +12,7 @@ void create()
 ……你站在齐胸深的护宫河水里……
 
 LONG);
-  set("exits", ([ 
+  set("exits", ([
     "east" : __DIR__"gongmen",
   ]));
   set("outdoors", __DIR__"");
