@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 string *first_name = ({ "青", "黄", "白", "紫", "银", "金"});
 string *name_words = ({ "贝宫女"});
