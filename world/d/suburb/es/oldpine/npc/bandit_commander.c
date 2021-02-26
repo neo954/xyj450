@@ -34,4 +34,3 @@ void create()
 	carry_object(__DIR__"obj/bamboo_pipe");
 	add_money("silver", 50);
 }
-
