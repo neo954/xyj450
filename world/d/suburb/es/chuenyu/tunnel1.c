@@ -14,9 +14,9 @@ LONG
           "north" : __DIR__"tunnel2",
           ]));
           set("objects", ([
-           __DIR__"npc/highrat": 1 
+           __DIR__"npc/highrat": 1
            ]) );
-           
+
            setup();
            replace_program(ROOM);
 }
