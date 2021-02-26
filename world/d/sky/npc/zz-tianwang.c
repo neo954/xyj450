@@ -74,4 +74,3 @@ string send_me(object me)
    write("你从天上摔了下来，搞了个鼻青脸肿！\n");
    return ("老夫脚正痒痒。。。\n");
 }
-
