@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 
 void create()
@@ -9,10 +9,10 @@ void create()
    set("title", "粮店掌柜");
    set("gender", "男性");
    set("age", 35);
-   set("kee", 350); 
+   set("kee", 350);
    set("max_kee", 350);
    set("sen", 200);
-   set("max_sen", 200);   
+   set("max_sen", 200);
    set("combat_exp", 10000);
    set("attitude", "friendly");
    set("env/wimpy", 50);
