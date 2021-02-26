@@ -23,4 +23,3 @@ void create()
         set("liquid_type", "water");
         setup();
 }
-
