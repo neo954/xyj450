@@ -49,7 +49,7 @@ void select_target(object me, string name)
 			new->move(room);	
 			new->set("title",HIB "拘魂"NOR);
 	msg +=  "浓雾似乎在$N身边渐渐得浓缩成一个黑影．．．\n" NOR;
-		new->start_call_out((: call_other, __FILE__, "melt", new :), 
+		new->start_call_out((: call_other, __FILE__, "melt", new :),
 (int)me->query_skill("cursism")/10 + 5);
 		}
 	else
