@@ -1,10 +1,10 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
- 
+
 void do_drink();
- 
+
 int exp, lvl;
 
 void create()
@@ -19,7 +19,7 @@ void create()
         set("per",10+10*(query("gender")=="女性"));
         set("str",25);
         set("int",15);
-        
+
         exp=10000+random(40)*1000;
         lvl=20+exp/2000;
 
@@ -52,7 +52,7 @@ void create()
         carry_object("/obj/cloth")->wear();
         carry_object("/d/obj/weapon/blade/blade")->wield();
 }
- 
+
  /*
 void init()
 {
