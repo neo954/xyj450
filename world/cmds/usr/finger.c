@@ -44,4 +44,3 @@ HELP
     );
     return 1;
 }
-
