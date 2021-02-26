@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // apprentice.c
 
 #include <ansi.h>
@@ -78,7 +78,7 @@ int main(object me, string arg)
         chinese_number( me->query("family/generation")));
 
      return 1;
-   
+
    } else {
 
      old_app = me->query_temp("pending/apprentice");
@@ -93,9 +93,9 @@ int main(object me, string arg)
      me->set_temp("pending/apprentice", ob );
      if( userp(ob) ) {
         tell_object(ob, YEL "如果你愿意收" + me->name() + "为弟子，用 recruit 指令。\n" NOR);
-     } else 
+     } else
         ob->attempt_apprentice(me);
-   
+
      return 1;
    }
 }
@@ -105,7 +105,7 @@ int help(object me)
 {
         write(@HELP
 指令格式 : apprentice|bai [cancel]|<对象>
- 
+
 这个指令能让你拜某人为师，如果对方也答应要收你为徒的话，就会立即行
 拜师之礼，否则要等到对方用 recruit 指令收你为弟子才能正式拜师。
 
@@ -113,7 +113,7 @@ int help(object me)
 评价会降到零。
 
 如果对你的师父使用这个指令，会变成向师父请安。
- 
+
 请参考相关指令 expell、recruit
 HELP
         );
