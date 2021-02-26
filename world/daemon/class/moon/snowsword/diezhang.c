@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 #include <ansi.h>
 
@@ -74,17 +74,17 @@ void check_fight(object me, object target, object victim, int amount)
 {
    object weapon;
 
-   if( !living(victim) || !present(victim->query("id"), environment(me)) ) 
+   if( !living(victim) || !present(victim->query("id"), environment(me)) )
      remove_effect(me, target, amount);
 
-   else if( (!present(victim->query("id"), environment(me)) 
+   else if( (!present(victim->query("id"), environment(me))
        && target->is_fighting(victim))
-     || (!present(target->query("id"), environment(me)) 
-         && me->is_fighting(victim)) ) 
+     || (!present(target->query("id"), environment(me))
+         && me->is_fighting(victim)) )
      remove_effect(me, target, amount);
 
    else if( !present(target->query("id"), environment(me))
-     || !target->is_fighting() || !me->is_fighting() 
+     || !target->is_fighting() || !me->is_fighting()
      || !living(target) )
      remove_effect(me, target, amount);
 
