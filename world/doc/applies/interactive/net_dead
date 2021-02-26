@@ -1,6 +1,6 @@
 net_dead - called by the MudOS driver when an interactive object drops its connection
 
-void net_dead( void ); 
+void net_dead( void );
 
 If an interactive object (i.e. a user object) suddenly loses its
 connection (i.e. it goes "net dead"), then the driver calls this
