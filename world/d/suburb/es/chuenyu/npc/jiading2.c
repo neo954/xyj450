@@ -61,4 +61,3 @@ string kill_passenger(object who)
         kill_ob(who);
         return 0;
 }
-
