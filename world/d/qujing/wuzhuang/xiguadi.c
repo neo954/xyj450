@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 //huludi.c
 
 inherit ROOM;
@@ -15,13 +15,13 @@ void create ()
 篱笆上开了一道简陋的杏木门，门上挂着一把黄铜锁。
 LONG);
 
-   set("exits", 
+   set("exits",
    ([ //sizeof() == 4
      "southeast" : __DIR__"baicaidi",
      "southwest" : __DIR__"huludi",
    ]));
-   
-   set("objects", 
+
+   set("objects",
    ([ //sizeof() == 1
      "/d/obj/food/watermellon" : 3,
    ]));
@@ -43,10 +43,10 @@ int do_open(string arg)
 
    me = this_player();
 
-   if( !arg || arg != "door" ) 
+   if( !arg || arg != "door" )
      return notify_fail("你要打开什么？\n");
 
-   if( !(key = present("huangtong key", me)) ) 
+   if( !(key = present("huangtong key", me)) )
      return notify_fail("你没有开这道门的钥匙。\n");
 
    //now we are ready to open...
