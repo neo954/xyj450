@@ -20,8 +20,8 @@ int valid_learn(object me)
 		return notify_fail("学化功大法，要心狠手辣，奸恶歹毒，你可做得不够呀！\n");
 	if ( me->query_skill("buddhism",1) || me->query_skill("taoism",1) )
 		return notify_fail("你练了秃驴牛鼻子们的心法，还学化功大法做什麽！\n");
-	if ( me->query_skill("hunyuan-yiqi",1) 
-	|| me->query_skill("huntian-qigong",1) 
+	if ( me->query_skill("hunyuan-yiqi",1)
+	|| me->query_skill("huntian-qigong",1)
 	|| me->query_skill("taiji-shengong",1) )
 		return notify_fail("你不先散了别派内功，怎能学化功大法？！\n");
 	return 1;
