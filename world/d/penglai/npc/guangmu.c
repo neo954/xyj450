@@ -128,4 +128,3 @@ int do_back(object me)
    message_vision("$N愤愤的哼了一声道：下次别让老子逮到！\n", me);
         return 1;
 }
-
