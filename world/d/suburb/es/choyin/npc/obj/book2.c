@@ -15,9 +15,9 @@ void create()
         set("value", 100);
         set("skill", ([
                 "name":                 "dodge",
-                "exp_required": 100, 
-                "sen_cost":     20, 
+                "exp_required": 100,
+                "sen_cost":     20,
                 "difficulty":   30,
-                "max_skill":    80,  
+                "max_skill":    80,
         ]) );
-} 
+}
