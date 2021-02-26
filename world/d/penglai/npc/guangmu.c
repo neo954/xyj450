@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 int waiting(object me);
 int checking(object me);
@@ -61,7 +61,7 @@ void greeting(object ob)
    object me;
    me=this_object();
 
-        if( !ob || environment(ob) != environment() ) 
+        if( !ob || environment(ob) != environment() )
      return;
    if( (string)ob->query("id") == (string)me->query("revenge_target")){
      command("say 大胆" + ob->query("name") + "，胆敢谋害仙家，那里跑！\n");
@@ -106,7 +106,7 @@ int checking(object me)
 {
         object ob;
 
-        if (me->is_fighting()) 
+        if (me->is_fighting())
         {
                 call_out("checking", 1, me);
         return 1;
