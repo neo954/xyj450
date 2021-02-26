@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 #include <ansi.h>
 
 inherit F_CLEAN_UP;
@@ -42,7 +42,7 @@ NOR, me);
                                 ob[i]->receive_wound("sen", damage/2);
                         tell_object(ob[i], "你觉得眼前一阵金星乱冒，耳朵痛得像是要裂开一样！\n");
                 }
-     COMBAT_D->report_sen_status(ob[i]);     
+     COMBAT_D->report_sen_status(ob[i]);
                 if( userp(ob[i]) ) ob[i]->fight_ob(me);
                 else if( !ob[i]->is_killing(me) ) ob[i]->kill_ob(me);
 
