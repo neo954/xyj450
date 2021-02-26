@@ -45,4 +45,3 @@ int do_push(string arg)
      write("「漱嗦」几声嫌诏，泥像后蹦出个泥娃娃来！\n");
                 return 1;
 }
-
