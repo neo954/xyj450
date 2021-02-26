@@ -1,14 +1,14 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// 杜过瘾，duguoyin.c 
+
+// 杜过瘾，duguoyin.c
 // 5-3-97, pickle
 
 inherit NPC;
 
 void create()
 {
-  set_name("杜过瘾", ({"du guoyin", "du", "guoyin", "duguoyin", "boss"})); 
+  set_name("杜过瘾", ({"du guoyin", "du", "guoyin", "duguoyin", "boss"}));
   set("gender", "男性" );
   set("age", 52);
   set("title", "赌场老板");
