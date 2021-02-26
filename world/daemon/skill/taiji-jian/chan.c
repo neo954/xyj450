@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // chan.c 太极剑法「缠」字诀
 
 #include <ansi.h>
