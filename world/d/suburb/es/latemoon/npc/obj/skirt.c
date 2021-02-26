@@ -24,4 +24,3 @@ int wear()
           }
      return 1;
 }
-
