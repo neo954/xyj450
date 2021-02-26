@@ -91,6 +91,3 @@ string direction_rev(string arg)
    else if ( arg == "right" ) return "左";
    else return "不知道哪儿";
 }
-
-
-
