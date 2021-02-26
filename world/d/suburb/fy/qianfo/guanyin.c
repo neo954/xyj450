@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
 
 #include <room.h>
 inherit ROOM;
@@ -21,7 +21,7 @@ LONG
           set("objects", ([
                 __DIR__"npc/bonze8" : 1,
        ]) );
-	set("NONPC",1);   
+	set("NONPC",1);
   setup();
   replace_program(ROOM);
 }
