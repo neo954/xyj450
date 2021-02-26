@@ -63,4 +63,3 @@ int do_agree(string arg)
      return 1;
    }
 }
-
