@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /u/mimi/zhuziguo/zhengyangmen.c    snowcat moved to /d/qujing/wuji
 inherit ROOM;
 
@@ -50,7 +50,7 @@ void weishis_out (object where, object who)
     return;
   shi1 = new (__DIR__"npc/weishi");
   shi2 = new (__DIR__"npc/weishi");
-  shi1->move(where); 
-  shi2->move(where); 
+  shi1->move(where);
+  shi2->move(where);
   who->set_temp("obstacle/wuji_seen_weishi_gate",1);
 }
