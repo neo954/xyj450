@@ -56,7 +56,7 @@ int help(object me)
 {
         write(@HELP
 指令格式 : quest
- 
+
 这个指令可以显示出你当前的风云任务。请使用quests来察看
 解迷系统的所有任务。
 
