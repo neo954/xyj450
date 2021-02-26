@@ -32,7 +32,7 @@ int apply_medicine()
 	diff = this_player()->query("max_gin")-this_player()->query("eff_gin");
 	if(!(diff))    return notify_fail("你没有受伤！\n");
 	if(value > diff) value = diff;
-	    
+	
 	message_vision("$N用野人参补精 ．\n",this_player());
 	this_player()->add("eff_gin",value);
 	destruct(this_object());
