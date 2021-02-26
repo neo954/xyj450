@@ -62,15 +62,15 @@ void init()
 	fae = ob3->query("winner");
 
 	if( this_player()->query("id") == mengzhu ) {
-		message_vision(HIY "红衣武士举起长剑，向$N齐声大喊：盟主万岁，万岁，万万岁！\n" NOR, 
+		message_vision(HIY "红衣武士举起长剑，向$N齐声大喊：盟主万岁，万岁，万万岁！\n" NOR,
 		this_player());
 	}	
 	else if( this_player()->query("id") == shangshan ) {
-		message_vision(HIY "红衣武士举起长剑，向$N齐声大喊：赏善使者好！\n" NOR, 
+		message_vision(HIY "红衣武士举起长剑，向$N齐声大喊：赏善使者好！\n" NOR,
 		this_player());
 	}	
 	else if( this_player()->query("id") == fae ) {
-		message_vision(HIY "红衣武士举起长剑，向$N齐声大喊：罚恶使者好！\n" NOR, 
+		message_vision(HIY "红衣武士举起长剑，向$N齐声大喊：罚恶使者好！\n" NOR,
 		this_player());
 	}	
 }
