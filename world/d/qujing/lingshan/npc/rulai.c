@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // snowcat 12 14 1997
 
 inherit NPC;
@@ -88,7 +88,7 @@ void init ()
 void announce (object me, string str)
 {
   if (DEBUG)
-  { 
+  {
     object snowcat = find_player ("snowcat");
     if (snowcat && wizardp(snowcat))
       tell_object (snowcat,"◆ "+str+"\n");
@@ -288,7 +288,7 @@ int reward_player ()
     message_vision ("$N对$n摇摇头：西游记现有"+chinese_number(i)+"位玩家，"
                     "此处仅有数位仙贤在邀，可否再邀"+chinese_number(i/4-j)+
                     "位仙贤前来观礼？\n",me,who);
-    if (! DEBUG)                 
+    if (! DEBUG)
       return 1;
   }
   announce (me,"西游记西天取真经观礼："+who->query("name")+"大雄宝殿拜礼！\n");
@@ -305,7 +305,7 @@ void inviting (object me)
 
   if (! me->query_temp("invite"))
     return;
-  
+
   remove_call_out ("inviting");
   call_out ("inviting",4+random(4),me);
 
@@ -363,7 +363,7 @@ int do_back(string arg)
   message_vision("$N的手掌轻轻托起$n向远方伸去……\n",me,who);
   who->move(there);
   message_vision("……云中伸出一只巨大的佛手轻轻一翻，只见$N从里面跳出来。\n",who);
-  
+
   return 1;
 }
 
