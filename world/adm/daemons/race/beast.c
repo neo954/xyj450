@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // beast.c
 
 #include <race/beast.h>
@@ -51,7 +51,7 @@ void setup_beast(object ob)
           "action": "$N攻击$n的%s，%s\n",
         ]);
    }
-   
+
    if( undefinedp(my["gender"]) ) my["gender"] = "雄性";
    if( undefinedp(my["age"]) ) my["age"] = random(40) + 5;
 
