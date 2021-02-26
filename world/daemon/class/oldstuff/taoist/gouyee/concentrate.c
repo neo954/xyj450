@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // concentrate.c
 
 #include <ansi.h>
@@ -15,7 +15,7 @@ int exert(object me, object target)
    if( (int)me->query("force") < 30 )
      return notify_fail("你的内力不够。\n");
 
-   
+
    mana_gain =  10 + (int)me->query_skill("force")/5;
    if( mana_gain + (int)me->query("mana") > (int)me->query("max_mana") )
      me->set("mana", (int)me->query("max_mana"));
