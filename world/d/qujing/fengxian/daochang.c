@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 12/2/1997
 
 inherit ROOM;
@@ -37,7 +37,7 @@ void create ()
 道场乃新建的施法布道之处，四周是通明窗，南边有一宽槛门，
 北面是颂法台。场地为拼花木头，上面铺开素布地毯。场外有
 一铜钟，每两时辰便鸣钟数响。
-    
+
 LONG);
 
   set("no_fight",1);
@@ -78,8 +78,8 @@ int do_zhanbai ()
     message_vision ("$N默默地低头，口中念念有辞地瞻拜。\n",who);
   else if (i >= size)
   {
-    message_vision ("\n法师慌忙将$N搀起。\n",who); 
-  }  
+    message_vision ("\n法师慌忙将$N搀起。\n",who);
+  }
   else
   {
     j = i*18+10;
@@ -92,13 +92,13 @@ int do_zhanbai ()
 
 void start_zhanbai (object who, int i)
 {
-  message_vision ("\n"+msgs[i]+"\n",who); 
+  message_vision ("\n"+msgs[i]+"\n",who);
 }
 
 void finish_zhanbai (object who, int i)
 {
   who->interrupt_me ();
-  message_vision ("\n$N呼出一口气，抬起头来。\n",who); 
-  message_vision ("\n"+strs[i]+"\n",who); 
+  message_vision ("\n$N呼出一口气，抬起头来。\n",who);
+  message_vision ("\n"+strs[i]+"\n",who);
   who->set_temp("obstacle/fengxian_zhanbai",i+1);
 }
