@@ -21,7 +21,7 @@
   当您有了 MudOS 执行档之後，就可以开始架设 ES2 mudlib，在 es2目录下
   /adm/etc/config.ES2 是用来当作 MudOS driver 参数的 runtime config
   file，请您将这个档案拷贝到 driver 的目录下，然後用文书编辑器修改里
-  面 mudlib directory 跟 binary directory 这两个路径为您存放 ES2 
+  面 mudlib directory 跟 binary directory 这两个路径为您存放 ES2
   mudlib 以及 driver 可执行档的绝对路径，这个档案中除了前面所说的两
   个路径以外，其他有关路径的设定都是相对於 mudlib 的路径，如果您对
   mudlib 还不是很熟悉，请勿更改。
