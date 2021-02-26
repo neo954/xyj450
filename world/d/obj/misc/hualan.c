@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 
 inherit EQUIP;
 
@@ -16,8 +16,8 @@ void create()
    if(a=new("/d/obj/flower/juhua") )
      a->move(this_object());
    seteuid(getuid());
-        if(b=new("/d/obj/flower/rose") ) 
-                b->move(this_object()); 
+        if(b=new("/d/obj/flower/rose") )
+                b->move(this_object());
     set_default_object(__FILE__);
 }  else {
     set("unit", "只");
