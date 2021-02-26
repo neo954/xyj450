@@ -130,4 +130,3 @@ string perform_action_file(string func)
 {
 return CLASS_D("puti") + "/qianjun-bang/" + func;
 }
-
