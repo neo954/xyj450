@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat 12/2/1997
 
 inherit ROOM;
@@ -13,7 +13,7 @@ void create ()
 斋栈原为凤仙郡迎客栈，因久旱无雨，栈主便将此栈改为斋栈
 以示皈依之诚心。斋栈里为客免费提供饮用水，里屋为斋室，
 为路客提供垫饥的小食。
-    
+
 LONG);
 
   set("exits", ([
