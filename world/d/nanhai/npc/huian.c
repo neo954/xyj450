@@ -167,5 +167,3 @@ void init()
 {
    add_action("do_dadang", "dadang");
 }
-
-
