@@ -12,7 +12,7 @@ void create()
 		 ({ "trainer"}));
 	set("title", "尚书府护院");
         set("gender", "男性");
-        set("age", 30+random(30)); 
+        set("age", 30+random(30));
 
         set("attitude", "peaceful");
 
