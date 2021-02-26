@@ -60,4 +60,3 @@ int do_swear(string arg)
     	return 1;
 
 } // EOF
-
