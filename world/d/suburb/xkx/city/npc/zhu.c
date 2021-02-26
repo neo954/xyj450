@@ -35,7 +35,7 @@ void create()
 int recognize_apprentice(object ob)
 {
 	if (!(int)ob->query_temp("mark/朱"))
-		return 0; 
+		return 0;
 	ob->add_temp("mark/朱", -1);
 	return 1;
 }
