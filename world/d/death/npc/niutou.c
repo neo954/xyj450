@@ -38,4 +38,3 @@ setup();
         carry_object("/d/obj/armor/shoupi")->wear();
         carry_object("/d/obj/weapon/whip/tielian")->wield();
 }
-
