@@ -96,5 +96,3 @@ string ask_me(string name)
 
 	return "拿去吧。不过要记住，武器只可防身练武，不可凭此杀害生灵。";
 }
-
-
