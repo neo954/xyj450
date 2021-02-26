@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created by snowcat.c 10/14/1997
 // room: /d/qujing/baoxiang/luochi1.c
 
@@ -37,7 +37,7 @@ int do_down(string arg)
 
   if (arg)
     return 0;
-   
+
   tell_object (who,"你脚下一陷！\n");
   who->move(__DIR__"shana");
   return 1;
