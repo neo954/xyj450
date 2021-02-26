@@ -7,7 +7,7 @@ void create()
 	set("race", "野兽");
 	set("gender", "雄性");
 	set("age", 200);
-	set("long", 
+	set("long",
 "这是一条全身赤红，吸天地之间的火气而长大的孽龙！
 它全身散发着赤红色的火焰\n");
 	
