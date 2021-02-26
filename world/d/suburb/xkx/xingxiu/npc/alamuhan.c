@@ -69,7 +69,7 @@ int accept_fight()
         ob = this_player();
 
         if( ob->query_temp("marks/马1") ) {
-        say(ob->name() + "对阿拉木罕说：好吧，那" 
+        say(ob->name() + "对阿拉木罕说：好吧，那"
              "我就同你切搓几招吧，点到为止。\n");
 	  remove_call_out("checking");
           call_out("checking", 1, me, ob);
@@ -88,27 +88,27 @@ int checking(object me, object ob)
         my_max_qi  = (int)me->query("max_kee");
         his_max_qi = (int)ob->query("max_kee");
 
-        if (me->is_fighting()) 
+        if (me->is_fighting())
         {
                 call_out("checking",2, me, ob);
                 return 1;
         }
 
-        if ( !present(ob, environment()) ) return 1; 
+        if ( !present(ob, environment()) ) return 1;
 
-        if (( (int)me->query("kee")*100 / my_max_qi) <= 50 ) 
+        if (( (int)me->query("kee")*100 / my_max_qi) <= 50 )
         {
                 say(
                   "阿拉木罕说：中原武学果然不一般，小女子十分佩服。\n"
                   "送你一匹伊犁马略表寸心。\n"
                 );
-                horse = new(__DIR__"obj/horse"); 
+                horse = new(__DIR__"obj/horse");
                 horse->move(ob);
                 ob->set_temp("marks/马", 1);
                 message_vision("$N交给$n一匹马。\n", me, ob);
                 return 1;
         }
-        if (( (int)ob->query("kee")*100 / his_max_qi) < 50 ) 
+        if (( (int)ob->query("kee")*100 / his_max_qi) < 50 )
         {
                 say(
                    "阿拉木罕冲着" + ob->name() + "撇了撇嘴，说道：中原武学不过如此。\n"
