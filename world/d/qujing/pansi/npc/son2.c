@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/20/1997 by snowcat
 
 inherit NPC;
@@ -41,7 +41,7 @@ void die ()
   object me = this_object();
   object ob = query_temp("my_killer");
   message_vision ("\n$N变成一只小虫儿嘤嘤地飞走了。\n",this_object());
-  if (ob && 
+  if (ob &&
       ! ob->query_temp("obstacle/pansi_killed_"+me->query("name")))
   {
     ob->set_temp("obstacle/pansi_killed_"+me->query("name"),1);
