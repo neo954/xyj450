@@ -1,7 +1,7 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
-// hulu.c 
+
+// hulu.c
 
 inherit ITEM;
 inherit F_LIQUID;
@@ -67,19 +67,19 @@ int do_fill (string arg)
   object ob;
 
   if (! arg)
-    return notify_fail ("你要灌什么？\n");    
+    return notify_fail ("你要灌什么？\n");
   ob = present (arg,who);
   if (! ob)
-    return notify_fail ("你想要灌什么？\n");    
+    return notify_fail ("你想要灌什么？\n");
 
   if (! where->query("has_oil"))
   {
     if (where->query("has_oil_pot"))
-      return notify_fail ("罐子里已没有酥合香油了。\n");    
+      return notify_fail ("罐子里已没有酥合香油了。\n");
     else
-      return notify_fail ("这里没有酥合香油可灌。\n");    
+      return notify_fail ("这里没有酥合香油可灌。\n");
   }
- 
+
   if (query("liquid/remaining") > 0)
   {
     //message_vision ("$N将$n里剩下的"+query("liquid/name")+"倒掉。\n",who,me);
@@ -131,16 +131,16 @@ int do_pour (string arg)
     if (i < 10)
       i = 10;
     i -= who->query_temp("obstacle/jinping_oil");
-    
+
     if (i > 0)
       message_vision ("$N告诉$n：再倒"+chinese_number(i)+"次便可。\n",
                       guan,who);
-    else     
+    else
     {
       message_vision ("$N告诉$n：佛爷要来了！\n",guan,who);
       call_out ("coming",random(3)+3,who);
     }
-  }  
+  }
   return 1;
 }
 
@@ -167,7 +167,7 @@ void coming (object who)
       destruct (ob);
     else
       ob->move(environment(who));
-  }  
+  }
   message_vision ("\n佛爷携着$N飞上天空！\n",who);
   who->move("/d/qujing/qinglong/shantou");
   message_vision ("\n佛爷突然停下来，顺便将$N往地上一扔！\n",who);
