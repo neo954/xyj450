@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // Room: /d/changan/duchang1
 // by snowcat 7/5/1997
 inherit ROOM;
@@ -13,14 +13,14 @@ int random2 (int i)
   return (random(i)+uptime()) % i;
 }
 
-mapping qians = ([ 
+mapping qians = ([
   "dqq" : "大乾签",
   "dkq" : "大坤签",
   "xqq" : "小乾签",
   "xkq" : "小坤签",
   "qq"  : "乾签",
   "kq"  : "坤签",
- ]); 
+ ]);
 
 void create()
 {
@@ -43,13 +43,13 @@ void create()
 LONG);
 
   set("item_desc",([
-    "paizi" : "押大乾签： qian dqq <amount> <money>\n"+ 
-              "押大坤签： qian dkq <amount> <money>\n"+ 
-              "押小乾签： qian xqq <amount> <money>\n"+ 
-              "押小坤签： qian xkq <amount> <money>\n"+ 
-              "押乾签：   qian qq <amount> <money>\n"+ 
+    "paizi" : "押大乾签： qian dqq <amount> <money>\n"+
+              "押大坤签： qian dkq <amount> <money>\n"+
+              "押小乾签： qian xqq <amount> <money>\n"+
+              "押小坤签： qian xkq <amount> <money>\n"+
+              "押乾签：   qian qq <amount> <money>\n"+
               "押坤签：   qian kq <amount> <money>\n",
-  ])); 
+  ]));
   set("exits", ([ /* sizeof() == 1 */
     "east" : __DIR__"clubup",
   ]));
@@ -132,7 +132,7 @@ int valid_leave(object me, string dir)
 {
   if (dir == "east")
   {
-    if (me->query_temp ("gamble_qian/amount") > 0) 
+    if (me->query_temp ("gamble_qian/amount") > 0)
       message_vision ("$N扔下押签的钱。\n",me);
     me->delete_temp("gamble_qian");
   }
@@ -147,7 +147,7 @@ void gamble_prepare ()
 
   tell_room (room,"签客将一大束签在桌上哗啦啦地迅速洗了一遍。\n");
   tell_room (room,"洗签之后，签客啪地一声将签装入镶金黑盒，叫道：开押！\n");
-  
+
   inv=all_inventory();
   i=sizeof(inv);
   while(i--) {
@@ -160,7 +160,7 @@ void gamble_prepare ()
   room_status=0;
   return;
 }
- 
+
 void gamble_start ()
 {
   object room = this_object();
@@ -250,7 +250,7 @@ void gamble_finish ()
     total = 16;
     win = "xkq";
   }
-  else 
+  else
   {
     int r = 0;
     total = 2;
