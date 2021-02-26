@@ -38,7 +38,7 @@ int do_bury (string arg)
 {
 	object obbook, obsk;
 	int ikar;
- 
+
         if( !arg ) return notify_fail("你要埋什么？\n");
         if( arg != "skeleton" || !objectp(obsk = present(arg, environment(this_player()))) )
                 return notify_fail("这里没有这样东西。\n");
@@ -47,14 +47,14 @@ int do_bury (string arg)
 
 	obsk->move("/obj/void");
 
-	ikar = (int ) random((int) (this_player()->query("kar"))+10); 
-	if (ikar > 25) { 
+	ikar = (int ) random((int) (this_player()->query("kar"))+10);
+	if (ikar > 25) {
 		message_vision("$N听见山洞顶部的石壁「喀喇」地一声响，一本书坠落下来。\n", this_player());
 		obbook = new(__DIR__"npc/obj/parrybook");
 		obbook->move(__DIR__"cave5");
 		return 1;
 		}
-	    else if (ikar > 20) 
+	    else if (ikar > 20)
 		message_vision("$N只看见山洞顶部纷纷扬扬飘下几张纸片来。\n",this_player());
 			
 	message_vision ("$N听得「轰」的一声响，已经从这摔了下去\n", this_player());
@@ -70,4 +70,4 @@ string look_wall ()
 埋骨于此。男子汉大丈夫死不足惜, 只可恨一身武学尚无传人!
 葬(bury)我遗骨者老夫将赠以过招要旨, 唉......
 ");
-} 
+}
