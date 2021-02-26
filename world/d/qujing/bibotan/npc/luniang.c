@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 inherit NPC;
 void create()
 {
@@ -60,8 +60,8 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-   
-   if((string)ob->query("family/family_name")=="陷空山无底洞" 
+
+   if((string)ob->query("family/family_name")=="陷空山无底洞"
    && (string)ob->query("family/family_name")=="乱石山碧波潭"
         && (string)ob->query("family/family_name")=="大雪山") {
    command("xixi " + ob->query("id"));
