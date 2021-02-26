@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // tian-jiang.c
 #include <ansi.h>
 inherit NPC;
@@ -16,7 +16,7 @@ void create()
 
         set_name(name, ({ "tian jiang", "tian", "jiang" }) );
         set("gender", "男性" );
-        set("long", 
+        set("long",
                 "能在这里混上个天将的位子肯定会有两下子。\n"
                 "他细腰乍臂，双肩抱拢，一看就知武艺高强。\n"
         );
