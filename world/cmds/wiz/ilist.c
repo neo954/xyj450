@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // ilist.c
 
 inherit F_CLEAN_UP;
@@ -25,11 +25,11 @@ int help (object me)
 {
         write(@HELP
 指令格式: ilist <物件或档名>
- 
+
 列出一个物件所继承的所有物件。
- 
+
 HELP
 );
         return 1;
 }
- 
+
