@@ -28,7 +28,7 @@ LONG
 
 void init()
 {
- 
+
 if(!random(1000)) call_out("lucky", 1, this_player());
 
 }
