@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // hill.c
 
 inherit ROOM;
@@ -52,6 +52,6 @@ int do_dodge()
    tell_object(me, "你的「基本轻功」进步了。\n");
    me->improve_skill("dodge", (int)me->query_int()/5);
    me->receive_damage("kee", 20);
-   
+
    return 1;
 }
