@@ -1,6 +1,6 @@
 // 神话世界·西游记·版本４．５０
 /* <SecCrypt CPL V3R05> */
- 
+
 // created 11/1/1997 by snowcat
 #include <ansi.h>
 #include <dbase.h>
@@ -10,7 +10,7 @@ inherit ITEM;
 
 void create()
 {
-  set_name("鱼", ({ "fish"})); 
+  set_name("鱼", ({ "fish"}));
   set_weight(100);
   set("long","一条成精的鱼。\n");
   set("unit", "条");
