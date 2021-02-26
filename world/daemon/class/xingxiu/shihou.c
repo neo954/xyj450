@@ -9,7 +9,7 @@ void create()
 {
 	set_name("狮吼子", ({ "shihou zi", "shihou" }));
 	set("nickname", "星宿派二师兄");
-	set("long", 
+	set("long",
 		"他就是丁春秋的二弟子狮吼子。\n"
 		"他三十多岁，狮鼻阔口，一望而知不是中土人士。\n");
 	set("gender", "男性");
