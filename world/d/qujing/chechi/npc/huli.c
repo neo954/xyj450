@@ -118,4 +118,3 @@ void die()
   ob->move(where);
   destruct(me);
 }
-
