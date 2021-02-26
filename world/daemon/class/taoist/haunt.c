@@ -59,4 +59,3 @@ int do_haunt(string target, object who)
         }
         return 1;
 }
-
