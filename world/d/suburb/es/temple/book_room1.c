@@ -27,7 +27,7 @@ int valid_leave(object me,string dir)
           {
            message_vision("\n$N拉开门大步走了出去, 随手把门带上。\n\n", this_player());
            tell_room(__DIR__"road2", "你看到藏经楼的门从里打开, 有人走了出来并顺手把门带上。\n\n");
-           ::valid_leave(me, dir); 
+           ::valid_leave(me, dir);
           }
      return 1;
 }
