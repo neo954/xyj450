@@ -37,4 +37,3 @@ string look_gaoshi()
 {
 	return FINGER_D->get_killer() + "\n扬州知府\n程药发\n";
 }
-
