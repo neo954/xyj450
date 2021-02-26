@@ -53,5 +53,3 @@ int do_push(string arg)
         }
         return(1);
 }
-
-
