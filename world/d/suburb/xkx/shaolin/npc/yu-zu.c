@@ -54,4 +54,3 @@ void close_door(object room)
 	message("vision","狱卒飞快地站起身，上前一下把小门关了起来。\n", room);
 	room->delete("exits/south");
 }	
-
