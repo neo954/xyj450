@@ -36,4 +36,3 @@ string exert_function_file(string func)
 {
 	return __DIR__"huagong-dafa/" + func;
 }
-
