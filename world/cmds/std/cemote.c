@@ -2,7 +2,7 @@
 
 #include <ansi.h>
 inherit F_CLEAN_UP;
-int  check_legal_name(string name); 
+int  check_legal_name(string name);
 int main(object me, string str)
 {
     if (!str) {
@@ -35,7 +35,7 @@ int main(object me, string str)
 
     return 1;
 }
- 
+
 int help(object me)
 {
 	write(@HELP
