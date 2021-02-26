@@ -12,7 +12,7 @@ void create()
 LONG
 	);
 	set("exits", ([ /* sizeof() == 2 */
-                      "west" : __DIR__"club.c", 
+                      "west" : __DIR__"club.c",
                       "eastup" : __DIR__"rockyu.c",
 ]));
         set("item_desc", ([
@@ -20,7 +20,7 @@ LONG
 一间草堂．．．．．．\n",
           ]) );
 create_door("west", "柴门", "east", DOOR_CLOSED);
-        set("no_clean_up", 0);      
+        set("no_clean_up", 0);
 	setup();
 	replace_program(ROOM);
 }
