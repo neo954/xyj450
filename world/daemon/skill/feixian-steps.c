@@ -58,4 +58,3 @@ string perform_action_file(string action)
 {
         return CLASS_D("swordsman") + "/feixian-steps/" + action;
 }
-
